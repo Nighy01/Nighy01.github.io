@@ -1,0 +1,107 @@
+/* This is Nighy01's Krunker Editor Custom CSS */
+/* Updated: 2020/11/14 */
+
+/* Top Bar, Left/Right Panels etc */
+#hotbar, .panel, .toolbarDropDown, .toolbarSubDropDown, .qs_textarea, .qs_title_bar, #menuWindow { /* Changed Background Color rgb(53 53 53 / 82%), Box Shadow 1px 0px 20px 0px rgba(0,0,0,.5) */
+    background-color: rgb(53 53 53 / 82%) !important;
+    box-shadow: 1px 0px 20px 0px rgba(0,0,0,.5) !important;
+}
+
+/* "Spawn Points" etc Map Stat */
+#canvasInfo .statTitle { /* Changed Full White Color */
+    color: #fff !important;
+}
+
+/* Slider Checked Buttons */
+input:checked+.slider { /* Changed rgb(248 96 96) Color */
+    background: rgb(248 96 96) !important;
+}
+
+/* Slider Hover Buttons */
+.slider:hover { /* Changed #757575 Color */
+    background-color: #757575 !important;
+}
+
+/* Slider Checked Hover Buttons */
+input:checked+.slider:hover { /* Changed rgb(164 64 64) Color */
+    background-color: rgb(164 64 64) !important;
+}
+
+/* Main Button */
+.button { /* Background Color Changed rgb(248 96 96) */
+    background-color: rgb(248 96 96) !important;
+}
+
+/* Main Hover Button */
+.button:hover { /* Background Color Changed rgb(164 64 64) */
+    background-color: rgb(164 64 64) !important;
+}
+
+/* Pages Background */
+#instructionHolder { /* Changed Full Transparent */
+    background-color: rgb(0 0 0 / 0%) !important;
+}
+
+/* "translate" "rotat" "scale" Buttons */
+#canvasUI .button {
+    background-color: rgb(53 53 53 / 82%) !important;
+    box-shadow: 1px 0px 20px 0px rgba(0,0,0,.5) !important;
+}
+
+/* "Delete" "Duplicate" Buttons */
+#canvasObjEdit .button {
+    background-color: rgb(53 53 53 / 82%) !important;
+    box-shadow: 1px 0px 20px 0px rgba(0,0,0,.5) !important;
+}
+
+/* "translate" "rotat" "scale" Hover Buttons */
+#canvasUI .button:hover {
+    background-color: rgb(53 53 53) !important;
+    box-shadow: 1px 0px 20px 0px rgb(0 0 0 / 83%) !important;
+}
+
+/* "Delete" "Duplicate" Hover Buttons */
+#canvasObjEdit .button:hover {
+    background-color: rgb(53 53 53) !important;
+    box-shadow: 1px 0px 20px 0px rgb(0 0 0 / 83%) !important;
+}
+
+/* Slider-Thumb */
+input[type=range]::-webkit-slider-thumb {
+    background: rgb(248 96 96) !important;
+}
+
+/* Arrow Icon Buttons */
+.qs_title_bar, .header>i, .subheader>i, .hide>i, .restore>i { /* Changed Whiter Color */
+    color: #ffffff !important;
+}
+
+/* "General" etc Tabs Hover Buttons On Settings Page */
+.menuShortTabNew:hover {
+    box-shadow: inset 0 -5px #bbbbbb !important;
+}
+
+/* "Default" etc Tabs Hover Buttons On Controls Page */
+.menuTabsNew>div:hover {
+    box-shadow: inset 0 -5px #bbbbbb !important;
+}
+
+/* Selected Tab Hover Button */
+.tabANew:hover {
+    box-shadow: inset 0 -5px #c0c0c0 !important;
+}
+
+/* Selected Tab Button */
+.tabANew {
+    box-shadow: inset 0 -5px #ffffff !important;
+}
+
+/* Tab On Pages */
+.menuShortTabNew {
+    background-color: rgb(101 101 101 / 80%) !important;
+}
+
+/* All Mains Text etc */
+.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .header>a, .subheader>a, .qs_textarea, #versionTxt, .windowHeader>div, .menuTabsNew>div, .inlineLabel, .mapListItem>*>a { /* Changed Full White Color */
+    color: #ffffff !important;
+}
