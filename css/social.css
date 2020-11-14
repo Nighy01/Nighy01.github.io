@@ -1213,11 +1213,6 @@ img:hover {
 }
 
 /*  */
-#searchPInput {
-    color: white !important;
-}
-
-/*  */
 .bottomBtn:hover {
     transform: scale(1);
     filter: none;
