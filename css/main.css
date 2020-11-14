@@ -717,8 +717,8 @@ a:active {
     color: var(--hud-bold-text-color) !important;
 }
 
-/*  */
-#killsVal, #deathsVal, #streakVal, #myScoreVal, #ammoMax, .weapKey, #pingDisplay, #fpsDisplay, #ingressDisplay, #egressDisplay, #pingText, #ingressPacketCount, #ingressDataSize, #egressPacketCount, #egressDataSize, #curGameInfo div, .tScoreT, #voteKickNum, #voteKickName, #voteKickKeys, #maxHP {
+/* "AmmoMax" etc Display */
+#ammoMax, .weapKey, #pingDisplay, #fpsDisplay, #ingressDisplay, #egressDisplay, #pingText, #ingressPacketCount, #ingressDataSize, #egressPacketCount, #egressDataSize, #curGameInfo div, .tScoreT, #voteKickNum, #voteKickName, #voteKickKeys, #maxHP {
     color: var(--hud-text-color) !important;
 }
 
@@ -3024,4 +3024,9 @@ input:hover + .tSubCheck {
 /* "To Recover your Account Contact us on recovery@yendis.ch Recovery is only possible if certain information can be provided." Message On Contact Page */
 [style="color:rgba(0,0,0,0.4);margin-top:0px"] { /* Changed Blacker Message Color */
     color: black !important;
+}
+
+/* "Kills" "Deaths" etc Counts */
+#killsVal, #deathsVal, #streakVal, #myScoreVal { /* Changed Full White Color */
+    color: rgb(255 255 255) !important;
 }
