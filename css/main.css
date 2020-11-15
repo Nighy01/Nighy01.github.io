@@ -1,6 +1,6 @@
 /* This is Nighy01's Krunker Custom CSS */
 /* Enjoy! */
-/* Updated: 2020/11/14 */
+/* Updated: 2020/11/15 */
 
 /* Variables */
 :root {
@@ -3029,4 +3029,9 @@ input:hover + .tSubCheck {
 /* "Kills" "Deaths" etc Counts */
 #killsVal, #deathsVal, #streakVal, #myScoreVal { /* Changed Full White Color */
     color: rgb(255 255 255) !important;
+}
+
+/* "Season 4" Text */
+#seasonLabel {
+    display: none !important;
 }
