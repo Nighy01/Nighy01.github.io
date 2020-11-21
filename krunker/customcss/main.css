@@ -3060,11 +3060,6 @@ input:hover + .tSubCheck {
     background-color: rgb(255 255 255 / 82%) !important;
 }
 
-/* "Count" KR Text On Spin */
-[style="color:rgba(255,255,255,0.6)"] { /* Changed Full White Color */
-    color: white !important;
-}
-
 /* "?" Button On Spined */
 #spinRespinInfo { /* Changed rgb(248 96 96) Background Color And rgb(164 64 64) Shadow Color */
     background-color: var(--main-button-color) !important;
