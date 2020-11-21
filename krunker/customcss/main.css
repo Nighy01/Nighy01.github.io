@@ -3080,8 +3080,8 @@ input:hover + .tSubCheck {
 }
 
 /* "Free for All" etc Current Game Mode Text In Spectate Mode */
-#specGameInfo { /* Changed To rgb(248 96 96) Color */
-    color: rgb(248 96 96) !important;
+#specGameInfo { /* Changed To Full White Color */
+    color: white !important;
 }
 
 /* "Prev[LM]" etc Text */
