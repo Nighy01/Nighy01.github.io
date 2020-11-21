@@ -1698,10 +1698,18 @@ input:checked + .optCheck:hover {
     border-left: 4px solid rgba(255, 255, 255, 0) !important;
 }
 
-/*  */
-#braveWarning {
-    display: none;
-    color: rgb(255, 255, 255) !important;
+/* "Using Brave may cause performance issues" Text On Bottom */
+#braveWarning { /* Hide "Using Brave may cause performance issues" Text */
+    font-size: 0px;
+    color: white !important;
+}
+
+/* "Using Brave may cause performance issues" Text On Bottom After */
+#braveWarning:after { /* "Using Brave may cause performance issues" Changed To "Using Other Browser may cause performance issues" Text */
+    content: "Using Other Browser may cause performance issues";
+    text-transform: var(--text-transform);
+    font-size: 18px !important;
+    color: white !important;
 }
 
 /*  */
@@ -3048,6 +3056,11 @@ input:hover + .tSubCheck {
 /* "FREE KR AVAILABLE" Popup */
 #claimPop { /* Changed Transparent White Background Color */
     background-color: rgb(255 255 255 / 82%) !important;
+}
+
+/* "Count" KR Text On Spin */
+[style="color:rgba(255,255,255,0.6)"] { /* Changed Full White Color */
+    color: white !important;
 }
 
 /* "?" Button On Spined */
