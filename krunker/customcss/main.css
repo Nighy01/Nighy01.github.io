@@ -1993,9 +1993,11 @@ a:hover {
     background: rgba(0, 0, 0, 0) !important;
 }
 
-/*  */
-#specSUS {
+/* "SUSPECT" Text */
+#specSUS { /* Changed White Color And It Has Background Also Less Width */
     color: white !important;
+    background-color: rgba(0,0,0,.3) !important;
+    width: 138px;
 }
 
 /*  */
@@ -3080,4 +3082,19 @@ input:hover + .tSubCheck {
     color: white !important;
     animation-duration: 0ms !important;
     text-shadow: -1px -1px 0 #202020, 1px -1px 0 #202020, -1px 1px 0 #202020, 1px 1px 0 #202020, -2px -2px 0 #202020, 2px -2px 0 #202020, -2px 2px 0 #202020, 2px 2px 0 #202020 !important;
+}
+
+/* "Free for All" etc Current Game Mode Text In Spectate Mode */
+#specGameInfo { /* Changed To rgb(248 96 96) Color */
+    color: rgb(248 96 96) !important;
+}
+
+/* "Prev[LM]" etc Text */
+.specContrI { /* Changed To rgb(248 96 96) Color */
+    color: rgb(248 96 96) !important;
+}
+
+/* "NO [N]" "YES[Y]" Text In Was this report helpful Popup */
+.specKPDContrI { /* Changed To rgb(248 96 96) Color */
+    color: rgb(248 96 96) !important;
 }
