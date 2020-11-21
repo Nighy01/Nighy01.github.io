@@ -3050,11 +3050,6 @@ input:hover + .tSubCheck {
     background-color: rgb(255 255 255 / 82%) !important;
 }
 
-/* "Count" KR Text On Spin */
-[style="color:rgba(255,255,255,0.6)"] { /* Changed Full White Color */
-    color: white !important;
-}
-
 /* "?" Button On Spined */
 #spinRespinInfo { /* Changed rgb(248 96 96) Background Color And rgb(164 64 64) Shadow Color */
     background-color: var(--main-button-color) !important;
@@ -3071,5 +3066,5 @@ input:hover + .tSubCheck {
 #spinRespin>i { /* Disabled Spin Icon Animation And Changed Full White Color Also Has Text Shadow */
     color: white !important;
     animation-duration: 0ms !important;
-    text-shadow: -1px -1px 0 #202020, 1px -1px 0 #202020, -1px 1px 0 #202020, 1px 1px 0 #202020, -2px -2px 0 #202020, 2px -2px 0 #202020, -2px 2px 0 #202020, 2px 2px 0 #202020; !important;
+    text-shadow: -1px -1px 0 #202020, 1px -1px 0 #202020, -1px 1px 0 #202020, 1px 1px 0 #202020, -2px -2px 0 #202020, 2px -2px 0 #202020, -2px 2px 0 #202020, 2px 2px 0 #202020 !important;
 }
