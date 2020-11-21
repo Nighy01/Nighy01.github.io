@@ -1,6 +1,5 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Enjoy! */
-/* Updated: 2020/11/15 */
+/* Updated: 2020/11/21 */
 
 /* Variables */
 :root {
@@ -1798,9 +1797,9 @@ input:checked + .slider2 {
     color: rgb(255, 255, 255) !important;
 }
 
-/*  */
+/* Skin/Hair/Chat Name Color Add Icon Hover Buttons */
 .premiumSkinCol:hover {
-    color: rgb(176, 135, 30) !important;
+    color: rgb(148 96 96) !important;
 }
 
 /*  */
@@ -2996,11 +2995,6 @@ input:hover + .tSubCheck {
     color: black !important;
 }
 
-/* "Manage Preferences" Button */
-#ot-sdk-btn-floating.ot-floating-button { /* Hide "Manage Preferences" Button */
-    display: none;
-}
-
 /* Download Offical Krunker.io Client Button */
 .downloadClient {
     background-image: url(https://i.imgur.com/CJ8tcaP.png);
@@ -3022,7 +3016,7 @@ input:hover + .tSubCheck {
 }
 
 /* "To Recover your Account Contact us on recovery@yendis.ch Recovery is only possible if certain information can be provided." Message On Contact Page */
-[style="color:rgba(0,0,0,0.4);margin-top:0px"] { /* Changed Blacker Message Color */
+[style="color:rgba(0,0,0,0.4);margin-top:0px"] { /* Changed Full Black Message Color */
     color: black !important;
 }
 
@@ -3031,7 +3025,17 @@ input:hover + .tSubCheck {
     color: rgb(255 255 255) !important;
 }
 
-/* "Season 4" Text */
-#seasonLabel {
+/* "Season 4!" Text In Main Menu Top Krunker Logo */
+#seasonLabel { /* Hide "Season 4!" Text */
     display: none !important;
+}
+
+/* "Disable Adblock to Support Krunker" Text */
+#supportKrunker { /* Changed The Full White Color */
+    color: rgb(255 255 255) !important;
+}
+
+/* Skin/Hair/Chat Name Color Add Icon Buttons */
+.premiumSkinCol { /* Changed rgb(248 96 96) Color */
+    color: rgb(248 96 96) !important;
 }
