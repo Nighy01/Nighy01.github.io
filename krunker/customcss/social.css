@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Hub Custom CSS */
-/* Updated: 2020/11/21 */
+/* Updated: 2020/11/22 */
 
 /* Variables */
 :root {
@@ -1880,5 +1880,17 @@ input:checked + .slider2::before {
 
 /* "Open Model Viewer" Hover Button */
 #itemInfoBtn:hover {
-    background-color: rgb(0 0 0 / 64%) !important;
+    background-color: rgb(0 0 0 / 0.75) !important;
+}
+
+/* "3D" Button */
+.popupImgInfo:hover { /* Full White Color And Underline Decoration */
+    color: rgb(255 255 255) !important;
+    text-decoration: underline;
+}
+
+/* "Find" Button */
+.buyBtn:hover { /* Full White Color And Underline Decoration */
+    color: rgb(255 255 255) !important;
+    text-decoration: underline;
 }

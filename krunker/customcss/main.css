@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2020/11/21 */
+/* Updated: 2020/11/22 */
 
 /* Variables */
 :root {
@@ -1125,9 +1125,9 @@ input:checked + .slider:hover {
     color: rgb(125, 125, 125) !important;
 }
 
-/*  */
-#settSearch:hover {
-    background-color: rgb(175, 175, 175) !important;
+/* Search Input Hover In Settings Page */
+#settSearch:hover { /* rgb(152 152 152) Color */
+    background-color: rgb(152 152 152) !important;
 }
 
 /*  */
@@ -3092,4 +3092,20 @@ input:hover + .tSubCheck {
 /* "NO [N]" "YES[Y]" Text In Was this report helpful Popup */
 .specKPDContrI { /* Changed To rgb(248 96 96) Color */
     color: rgb(248 96 96) !important;
+}
+
+/* "waiting for players" Message In Spectate Mode */
+#specGMessage { /* Full White Color And Some Bigger Font */
+    color: rgb(255 255 255) !important;
+    font-size: 15px;
+}
+
+/* "More Information" Hover Button */
+#itemInfoBtn:hover { /* rgb(0 0 0 / 70%) Color */
+    background-color: rgb(0 0 0 / 70%) !important;
+}
+
+/* "Loading..." Message On Games Page */
+.loadMoreW { /* Full White Color */
+    color: rgb(255 255 255) !important;
 }
