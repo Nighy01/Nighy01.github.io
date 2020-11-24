@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2020/11/22 */
+/* Updated: 2020/11/24 */
 
 /* Variables */
 :root {
@@ -3108,4 +3108,9 @@ input:hover + .tSubCheck {
 /* "Loading..." Message On Games Page */
 .loadMoreW { /* Full White Color */
     color: rgb(255 255 255) !important;
+}
+
+/* Bottom Left Class Profile Picture */
+#hudClassIcon { /* Hide Bottom Left Class Profile Profile */
+    display: none !important;
 }
