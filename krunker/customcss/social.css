@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Hub Custom CSS */
-/* Updated: 2020/11/22 */
+/* Updated: 2020/11/24 */
 
 /* Variables */
 :root {
@@ -1903,4 +1903,25 @@ input:checked + .slider2::before {
 /* CookiePro Settings Background */
 .onetrust-pc-dark-filter { /* Transparent Background */
     background: rgb(0 0 0 / 0%) !important;
+}
+
+/* Twitch Button On Profile Page */
+#twitchBtn { /* No Transition, Transform & Changed Padding 3px 13px, Border Radius Are Same Of Report And Share Button, 4px Marign Right, White Twitch Logo Button */
+    transition: none;
+    transform: scale(1);
+    padding: 3px 13px;
+    border-radius: 5px;
+    background: rgb(108 35 151) !important;
+    margin-right: 4px !important;
+    content: url("https://i.imgur.com/Mhf6jkd.png");
+}
+
+/* Twitch Hover Button On Profile Page */
+#twitchBtn:hover { /* No Animations & No Opacity And rgb(80 26 111) Background Color */
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    filter: none;
+    -webkit-filter: contrast(1);
+    opacity: 999 !important;
+    background-color: rgb(80 26 111) !important;
 }
