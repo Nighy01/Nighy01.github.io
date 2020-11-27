@@ -3111,6 +3111,6 @@ input:hover + .tSubCheck {
 }
 
 /* Bottom Left Class Profile Picture */
-#hudClassIcon { /* Hide Bottom Left Class Profile Profile */
+#hudClassIcon { /* Hide Bottom Left Class Profile */
     display: none !important;
 }
