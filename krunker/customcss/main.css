@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2020/11/24 */
+/* Updated: 2020/11/28 */
 
 /* Variables */
 :root {
@@ -3085,13 +3085,13 @@ input:hover + .tSubCheck {
 }
 
 /* "Prev[LM]" etc Text */
-.specContrI { /* Changed To rgb(248 96 96) Color */
-    color: rgb(248 96 96) !important;
+.specContrI { /* Changed To Full White Color */
+    color: rgb(255 255 255) !important;
 }
 
 /* "NO [N]" "YES[Y]" Text In Was this report helpful Popup */
-.specKPDContrI { /* Changed To rgb(248 96 96) Color */
-    color: rgb(248 96 96) !important;
+.specKPDContrI { /* Changed To Full White Color */
+    color: rgb(255 255 255) !important;
 }
 
 /* "waiting for players" Message In Spectate Mode */
@@ -3111,6 +3111,6 @@ input:hover + .tSubCheck {
 }
 
 /* Bottom Left Class Profile Picture */
-#hudClassIcon { /* Hide Bottom Left Class Profile */
+#hudClassIcon { /* Hide Bottom Left Class Profile Profile */
     display: none !important;
 }
