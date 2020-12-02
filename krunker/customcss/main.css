@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2020/11/28 */
+/* Updated: 2020/12/02 */
 
 /* Variables */
 :root {
@@ -3113,4 +3113,14 @@ input:hover + .tSubCheck {
 /* Bottom Left Class Profile Picture */
 #hudClassIcon { /* Hide Bottom Left Class Profile Profile */
     display: none !important;
+}
+
+/* "We are discontinuing this version of the Krunker Client as we are preparing for the steam release. If you want to update your client to the latest version. Please download and install the new client" Text Of Notice Client Popup */
+#clientPop { /* Black Background */
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* "No Messages" In Inbox Page */
+#mailList { /* Full Black Color */
+    color: rgb(0, 0, 0) !important;
 }
