@@ -1937,7 +1937,7 @@ input:checked + .slider2::before {
 }
 
 /* [CLAN] Text */
-#postHolder > div:nth-child(3) > div.postHead > div.postInfo > div > span > span:nth-child(2) { /* #424242 Color */
+#postHolder > div > div.postHead > div.postInfo > div > span > span:nth-child(2) { /* #424242 Color */
     color: #424242 !important;
 }
 
