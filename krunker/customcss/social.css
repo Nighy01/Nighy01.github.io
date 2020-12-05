@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Hub Custom CSS */
-/* Updated: 2020/11/24 */
+/* Updated: 2020/12/05 */
 
 /* Variables */
 :root {
@@ -1924,4 +1924,24 @@ input:checked + .slider2::before {
     -webkit-filter: contrast(1);
     opacity: 999 !important;
     background-color: rgb(80 26 111) !important;
+}
+
+/* "LOADING" Message */
+#loadMessage > div > div:nth-child(2) { /* Full White Color */
+    color: #fff !important;
+}
+
+/* "You will be charged a 10% KR Fee to post make a Giveaway Post" Message On Say something Page */
+#krInptHol > div { /* Full Black Color */
+    color: #000 !important;
+}
+
+/* [CLAN] Text */
+#postHolder > div:nth-child(3) > div.postHead > div.postInfo > div > span > span:nth-child(2) { /* #424242 Color */
+    color: #424242 !important;
+}
+
+/* [CLAN] Text On Activity Page */
+#pTabContent_activity > div > div.postHead > div.postInfo > div > span > span:nth-child(2) { /* #424242 Color */
+    color: #424242 !important;
 }

@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2020/12/02 */
+/* Updated: 2020/12/05 */
 
 /* Variables */
 :root {
@@ -1628,8 +1628,8 @@ input:checked + .optCheck:hover {
 }
 
 /* "Count" Games */
-[style="color:rgba(0,0,0,0.6)"] {
-    color: rgb(107 107 107) !important;
+#menuWindow > div:nth-child(3) > span {
+    color: rgb(0 0 0) !important;
 }
 
 /*  */
@@ -3123,4 +3123,9 @@ input:hover + .tSubCheck {
 /* "No Messages" In Inbox Page */
 #mailList { /* Full Black Color */
     color: rgb(0, 0, 0) !important;
+}
+
+/* "By" Text On Games/Mods Page */
+.mapByTxt { /* Full Black Color */
+    color: rgb(0 0 0) !important;
 }
