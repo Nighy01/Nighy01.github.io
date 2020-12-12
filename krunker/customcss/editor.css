@@ -1,10 +1,10 @@
 /* This is Nighy01's Krunker Editor Custom CSS */
-/* Updated: 2020/11/21 */
+/* Updated: 2020/12/12 */
 
 /* Top Bar, Left/Right Panels etc */
 #hotbar, .panel, .toolbarDropDown, .toolbarSubDropDown, .qs_textarea, .qs_title_bar, #menuWindow { /* Changed Background Color rgb(53 53 53 / 82%), Box Shadow 1px 0px 20px 0px rgba(0,0,0,.5) */
     background-color: rgb(53 53 53 / 82%) !important;
-    box-shadow: 1px 0px 20px 0px rgba(0,0,0,.5) !important;
+    box-shadow: none !important;
 }
 
 /* "Spawn Points" etc Map Stat */
@@ -44,26 +44,26 @@ input:checked+.slider:hover { /* Changed rgb(164 64 64) Color */
 
 /* "translate" "rotat" "scale" Buttons */
 #canvasUI .button {
-    background-color: rgb(53 53 53 / 82%) !important;
-    box-shadow: 1px 0px 20px 0px rgba(0,0,0,.5) !important;
+    background-color: rgb(0 0 0 / .5) !important;
+    box-shadow: none !important;
 }
 
 /* "Delete" "Duplicate" Buttons */
 #canvasObjEdit .button {
-    background-color: rgb(53 53 53 / 82%) !important;
-    box-shadow: 1px 0px 20px 0px rgba(0,0,0,.5) !important;
+    background-color: rgb(0 0 0 / .5) !important;
+    box-shadow: none !important;
 }
 
 /* "translate" "rotat" "scale" Hover Buttons */
 #canvasUI .button:hover {
-    background-color: rgb(53 53 53) !important;
-    box-shadow: 1px 0px 20px 0px rgb(0 0 0 / 83%) !important;
+    background-color: rgb(167 167 167) !important;
+    box-shadow: none !important;
 }
 
 /* "Delete" "Duplicate" Hover Buttons */
 #canvasObjEdit .button:hover {
-    background-color: rgb(53 53 53) !important;
-    box-shadow: 1px 0px 20px 0px rgb(0 0 0 / 83%) !important;
+    background-color: rgb(167 167 167) !important;
+    box-shadow: none !important;
 }
 
 /* Slider-Thumb */
@@ -104,4 +104,177 @@ input[type=range]::-webkit-slider-thumb {
 /* All Mains Text etc */
 .material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .header>a, .subheader>a, .qs_textarea, #versionTxt, .windowHeader>div, .menuTabsNew>div, .inlineLabel, .mapListItem>*>a { /* Changed Full White Color */
     color: #ffffff !important;
+}
+
+/* "File" etc Top Hover Buttons */
+.toolbarItem:hover, .toolbarDropDownItem:hover, .toolbarDropDownItem:hover, .publishAsset:hover {  /* #919191 Color */
+    background-color: #919191 !important;
+}
+
+/* "Spawn Points" etc Text Page */
+#canvasInfo { /* No Box Shadow */
+    box-shadow: none !important;
+}
+
+/* "Yendis Entertainment" Text */
+#versionTxt > span { /* White Color */
+    color: #fff !important;
+}
+
+/* "Play" "Host" Buttons On Top Bar */
+.playbarItemL:hover, .playbarItemR:hover { /* rgb(167 167 167) Background Color */
+    background-color: rgb(167 167 167) !important;
+}
+
+/* by"Made" Text */
+a:visited { /* White Color */
+    color: #ffffff !important;
+}
+
+/* by"Made" Text */
+a { /* White Color */
+    color: #ffffff !important;
+}
+
+/* "by" Text */
+#modList > div > div > span { /* White Color */
+    color: #fff !important;
+}
+
+/* "Search" Button */
+.searchBtn { /* rgb(248 96 96) Background Color */
+    background-color: rgb(248 96 96) !important;
+}
+
+/* "Search" Hover Button */
+.searchBtn:hover { /* rgb(164 64 64) Background Color */
+    filter: none;
+    -webkit-filter: none;
+    background-color: rgb(164 64 64) !important;
+}
+
+/* "Import" etc Buttons On Templates Popup */
+.editInfoI:hover { /* .6 Opacity #616161 Background Color */
+    opacity: .6;
+    background-color: #616161 !important;
+}
+
+/* Quick GUI Menu */
+.qs_main { /* No Box Shadow */
+    box-shadow: none !important;
+}
+
+/* "Use these templates to Quickstart your Project" Text */
+#menuWindow > div { /* White Color */
+    color: #ffffff !important
+}
+
+/* Horizontal Rule */
+hr { /* Hide Horizontal Rule */
+    border-color: rgb(0 0 0 / 0) !important;
+}
+
+/* Input Text */
+.inlineInput { /* White Background Color */
+    background-color: #fff !important;
+}
+
+/* Input Hover Text */
+.inlineInput:hover { /* #a3a3a3 Color */
+    background-color: #a3a3a3 !important;
+}
+
+/* Slider Val */
+.sliderVal { /* rgb(248 96 96) Background Color */
+    background: rgb(248 96 96) !important;
+}
+
+/* Slider Hover Val */
+.sliderVal:hover { /* rgb(164 64 64) Background Color */
+    background: rgb(164 64 64) !important;
+}
+
+/* SliderM Hover */
+.sliderM:hover { /* #888 Background Color */
+    background-color: #888 !important;
+}
+
+/* SliderM */
+.sliderM { /* White Background Color */
+    background-color: #fff !important;
+}
+
+/* Select */
+select { /* White Background Color */
+    background-color: #fff !important;
+}
+
+/* Select Hover */
+select:hover { /* #888 Background Color */
+    background-color: #888 !important;
+}
+
+/* "Back" Hover Button On Controls */
+#menuWindow > div:nth-child(1) > div.windowHeader > div:nth-child(1) > i:hover {
+    color: #888 !important;
+}
+
+/* Quick Add Buttons */
+.previewDesc { /* White Transparent 50% Background Color */
+    background-color: rgb(255 255 255 / 50%) !important;
+}
+
+/* Quick Add Hover Buttons */
+.previewDesc div { /* Black Text Color */
+    color: #000;
+}
+
+/* Quick Add Button */
+#canvasAdd { /* rgb(0 0 0 / .5) Background Color And No Box Shadow */
+    background-color: rgb(0 0 0 / .5);
+    box-shadow: none;
+}
+/* Quick Add Hover Button */
+#canvasAdd:hover { /* rgb(167 167 167) Background Color */
+    background-color: rgb(167 167 167) !important;
+}
+
+/* Assets "Clutter" etc Text */
+#assetList > div > div > span { /* White Text Color */
+    color: white !important;
+}
+
+/* Assets "by" Text */
+#assetList > div > div { /* White Text Color */
+    color: white !important;
+}
+
+/* "by" Text Assets Search Results */
+#searchResultsA > div > div > span { /* White Text Color */
+    color: white !important;
+}
+
+/* "Clutter" etc Text Assets Search Results */
+#searchResultsA > div > div { /* White Text Color */
+    color: white !important
+}
+
+/* "Loading..." On Search Assets Page */
+[style="color:rgba(0,0,0,0.5);margin-top:10px"] { /* White Text Color */
+    color: white !important;
+}
+
+/* "Loading..." On My Assets Page */
+.loadMoreW { /* White Text Color */
+    color: rgb(255 255 255) !important;
+}
+
+/* "by" Text On Mods Page */
+#searchResultsM > div > div > span { /* White Text Color */
+    color: white !important;
+}
+
+/* "Loading..." On Mods Page */
+[style="color:rgba(0,0,0,0.5);margin-top:10px"] { /* White Text Color */
+    color: white !important;
 }

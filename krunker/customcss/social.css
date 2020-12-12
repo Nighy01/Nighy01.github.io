@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Hub Custom CSS */
-/* Updated: 2020/12/05 */
+/* Updated: 2020/12/12 */
 
 /* Variables */
 :root {
@@ -1944,4 +1944,9 @@ input:checked + .slider2::before {
 /* [CLAN] Text On Activity Page */
 #pTabContent_activity > div > div.postHead > div.postInfo > div > span > span:nth-child(2) { /* #424242 Color */
     color: #424242 !important;
+}
+
+/* "Manage Preferences" Button */
+#ot-sdk-btn-floating .ot-floating-button__front { /* Hide "Manage Preferences" Button */
+    display: none !important;
 }
