@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2020/12/05 */
+/* Updated: 2020/12/12 */
 
 /* Variables */
 :root {
@@ -1561,7 +1561,7 @@ input:checked + .optCheck:hover {
 }
 
 /* "Choose a Display name & more with Krunker Premium" Text On Profile Page */
-[style="color:rgba(0,0,0,0.3);margin-top:-5px;margin-bottom:10px"] {
+[style="color:rgba(0,0,0,0.3);margin-top:-5px;margin-bottom:10px"] { /* Hide Krunker Premium Message On Profile Page */
     display: none;
 }
 
@@ -3128,4 +3128,21 @@ input:hover + .tSubCheck {
 /* "By" Text On Games/Mods Page */
 .mapByTxt { /* Full Black Color */
     color: rgb(0 0 0) !important;
+}
+
+/* "Count" Views/Youtuber Text */
+.strmViews { /* Changed Full White Color */
+    color: #ffffff !important;
+}
+
+/* "Manage Preferences" Button */
+#ot-sdk-btn-floating.ot-floating-button { /* Hide "Manage Preferences" Button */
+    display: none;
+}
+
+/* Left Of "Advertise" Button */
+#termsInfo::before { /* Show "Made By Nighy01" Text */
+    content: 'Made By Nighy01';
+    font-size: 16px;
+    color: #ffffffba !important;
 }
