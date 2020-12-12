@@ -278,3 +278,9 @@ select:hover { /* #888 Background Color */
 [style="color:rgba(0,0,0,0.5);margin-top:10px"] { /* White Text Color */
     color: white !important;
 }
+
+
+/* "Reset All" Hover Button In Settings Page */
+[style="cursor:pointer;margin-top:5px;font-size:14px;float:right;color:#FFF;user-select:none"]:hover { /* #888 Text Color */
+    color: #888 !important;
+}
