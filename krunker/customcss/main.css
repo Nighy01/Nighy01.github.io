@@ -2775,10 +2775,11 @@ input:hover + .tSubCheck {
 }
 
 /* "Featured Creators/Streaming Now!/Now Live" etc Creator Ads */
-#streamContainer { /* White Text Color, 18px Left, Transparent Background Color */
+#streamContainer { /* White Text Color, 0px Left, Transparent Background Color, 63px Top */
     color: rgb(255, 255, 255) !important;
-    left: 18px;
+    left: 5px;
     background-color: rgb(0 0 0 / 0%) !important;
+    top: 63px;
 }
 
 /*  */
@@ -3176,4 +3177,9 @@ input:hover + .tSubCheck {
 /* "[M1] Change Prop" etc Text */
 #propInstruct > span { /* rgb(248 96 96) Text Color */
     color: rgb(248 96 96) !important;
+}
+
+/* "Streaming Now!" Text */
+.strmCat { /* 2400px Margin Right */
+    margin-right: 2400px !important;
 }
