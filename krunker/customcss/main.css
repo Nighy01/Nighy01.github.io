@@ -3185,8 +3185,8 @@ input:hover + .tSubCheck {
 }
 
 /* "Kills" "Deaths" etc Count Display On Leadboard */
-.countIcon { /* 7px Padding, 14px Padding Right/Left */
-    padding: 7px;
-    padding-right: 14px;
-    padding-left: 14px;
+.countIcon { /* 4px Padding, 8px Padding Right, 9px Padding Left */
+    padding: 4px;
+    padding-right: 8px;
+    padding-left: 9px;
 }
