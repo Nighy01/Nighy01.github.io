@@ -1950,3 +1950,14 @@ input:checked + .slider2::before {
 #ot-sdk-btn-floating .ot-floating-button__front { /* Hide "Manage Preferences" Button */
     display: none !important;
 }
+
+/* "Share" Hover Button In Post */
+.shareBtnHol:hover { /* #b300b3 Background Color */
+    background-color: #b300b3 !important;
+    opacity: 999;
+}
+
+/* "[Count] Members" Text */
+#clanRoster > div > div > span { /* Black Text Color */
+    color: black !important;
+}

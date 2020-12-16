@@ -2775,9 +2775,10 @@ input:hover + .tSubCheck {
 }
 
 /* "Featured Creators/Streaming Now!/Now Live" etc Creator Ads */
-#streamContainer {
+#streamContainer { /* White Text Color, 18px Left, Transparent Background Color */
     color: rgb(255, 255, 255) !important;
     left: 18px;
+    background-color: rgb(0 0 0 / 0%) !important;
 }
 
 /*  */
@@ -3137,7 +3138,7 @@ input:hover + .tSubCheck {
 
 /* "Manage Preferences" Button */
 #ot-sdk-btn-floating.ot-floating-button { /* Hide "Manage Preferences" Button */
-    display: none;
+    display: none !important;
 }
 
 /* Left Of "Advertise" Button */
@@ -3145,4 +3146,34 @@ input:hover + .tSubCheck {
     content: 'Made By Nighy01';
     font-size: 16px;
     color: #ffffffba !important;
+}
+
+/* "on New Krunker Map" Text On Left Top */
+#curGameInfo > div {
+    color: #fff !important;
+}
+
+/* "Make sure you use Offical Client or Chrome at 60 FPS" In "Network Lag Detected!" Popup */
+#networkLag>div { /* White Text Color */
+    color: rgb(255 255 255) !important;
+}
+
+/* "Network Lag Detected!" Text On Left Top */
+#networkLagHed { /* rgb(248 96 96) Text Color */
+    color: rgb(248 96 96) !important;
+}
+
+/* "[FPS]FPS" Text */
+#fpsDisplay { /* White Text Color */
+    color: rgb(255 255 255) !important;
+}
+
+/* "[Ping]ms" Text */
+#pingText { /* White Text Color */
+    color: rgba(255,255,255) !important;
+}
+
+/* "[M1] Change Prop" etc Text */
+#propInstruct > span { /* rgb(248 96 96) Text Color */
+    color: rgb(248 96 96) !important;
 }
