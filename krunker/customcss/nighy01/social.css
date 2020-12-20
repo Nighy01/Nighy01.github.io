@@ -16,7 +16,7 @@
     /* Premium Icon Color */
     --pic: rgb(255, 153, 0);
 
-   /* Profile Page Buttons Color */
+    /* Profile Page Buttons Color */
     --ppbc: rgb(248 96 96);
 
     /* Profile Page Buttons Hover Color */
@@ -1056,15 +1056,15 @@ img:hover {
 }
 
 /* [Gift KR] Button */
-#giftBtn {
+#giftBtn { /* White Text Color, rgb(248 96 96) Background/Border Color */
     color: white !important;
     background: var(--ppbc) !important; /* Variables To Profile Page Buttons Color */
     border-color: var(--ppbc) !important; /* Variables To Profile Page Buttons Color */
 }
 
 /* [Gift KR] Hover Button */
-#giftBtn:hover {
-    border-color: var(--ppbhc);
+#giftBtn:hover { /* No Animation, rgb(164 64 64) Background/Border Color */
+    border-color: var(--ppbhc) !important;
     transform: scale(1);
     background-color: var(--ppbhc) !important;
 }
@@ -1117,30 +1117,32 @@ img:hover {
     border-bottom: none;
 }
 
-/*  */
-#tradeBtn {
-    background: rgb(33, 150, 243) !important;
+/* "Trade" Button On Profile Page */
+#tradeBtn { /* rgb(248 96 96) Background/Border Color, White Text Color */
+    background: var(--ppbc) !important;
+    border-color: var(--ppbc) !important;
     color: white !important;
 }
 
-/*  */
-#tradeBtn:hover {
+/* "Trade" Hover Button On Profile Page */
+#tradeBtn:hover { /* No Animation, rgb(164 64 64) Background/Border Color */
     transform: scale(1);
-    background-color: rgb(26, 117, 189) !important;
-    border-color: rgb(26, 117, 189) !important;
+    background-color: var(--ppbhc) !important;
+    border-color: var(--ppbhc) !important;
 }
 
-/*  */
-.unfollow {
+/* "Unfollow" Button On Profile Page */
+.unfollow { /* White Text Color, rgb(248 96 96) Background/Border Color */
     color: white !important;
-    background: rgb(255, 71, 71) !important;
+    border-color: var(--ppbc) !important;
+    background: var(--ppbc) !important;
 }
 
-/*  */
-.unfollow:hover {
+/* "Unfollow" Hover Button On Profile Page */
+.unfollow:hover { /* No Animation, rgb(164 64 64) Background/Border Color */
     transform: scale(1);
-    background-color: rgb(201, 56, 56) !important;
-    border-color: rgb(201, 56, 56) !important;
+    background-color: var(--ppbhc) !important;
+    border-color: var(--ppbhc) !important;
 }
 
 /*  */
@@ -1149,17 +1151,17 @@ img:hover {
     box-shadow: rgba(255, 255, 255, 0.47) 0px 7px 0px 0px !important;
 }
 
-/*  */
-#verifyBtn {
-    background: rgb(0, 176, 255) !important;
-    border-color: rgb(0, 176, 255) !important;
+/* "Verify" "Unverify" Hover Button On Profile Page */
+#verifyBtn:hover { /* rgb(164 64 64) Background/Border Color, White Text Color */
+    background: var(--ppbhc) !important;
+    border-color: var(--ppbhc) !important;
     color: white !important;
 }
 
-/* "Verify" Hover Button On Profile */
-#verifyBtn:hover {
-    background: rgb(0, 134, 194) !important;
-    border-color: rgb(0, 134, 194) !important;
+/* "Verify" "Unverify" Button On Profile Page */
+#verifyBtn { /* rgb(248 96 96) Background/Border Color, White Text Color */
+    background: var(--ppbc) !important;
+    border-color: var(--ppbc) !important;
     color: white !important;
 }
 
@@ -1179,21 +1181,21 @@ img:hover {
     color: rgb(160, 0, 160) !important;
 }
 
-/*  */
-#flagBtn {
+/* Flag Button On Profile Page */
+#flagBtn { /* No Animation, 1px 10px Padding, 5px Border Radius, 5px Marign Right, rgb(248 96 96) Background Color, White Icon Color */
     transition: none 0s ease 0s;
     padding: 1px 10px;
     border-radius: 5px;
     margin-right: 5px;
-    background: rgb(255, 169, 0) !important;
+    background: var(--ppbc) !important;
     color: rgb(255, 255, 255) !important;
     transform: scale(1) !important;
 }
 
-/*  */
-#flagBtn:hover {
+/* Flag Hover Button On Profile Page */
+#flagBtn:hover { /* White Icon Color, rgb(164 64 64) Background Color */
     color: rgb(255, 255, 255) !important;
-    background: rgb(197, 131, 0) !important;
+    background: var(--ppbhc) !important;
 }
 
 /*  */
@@ -1221,17 +1223,18 @@ img:hover {
     background-color: rgb(248 96 96) !important;
 }
 
-/*  */
-.follow {
+/* "Follow" Button On Profile Page */
+.follow { /* White Text Color, rgb(248 96 96) Background/Border Color */
     color: white !important;
-    background: rgb(64, 196, 255) !important;
+    background: var(--ppbc) !important;
+    border-color: var(--ppbc) !important;
 }
 
-/*  */
-.follow:hover {
+/* "Follow" Hover Button On Profile Page */
+.follow:hover { /* No Animation, rgb(164 64 64) Background/Border Color */
     transform: scale(1);
-    background: rgb(53, 159, 206) !important;
-    border-color: rgb(53, 159, 206) !important;
+    background: var(--ppbhc) !important;
+    border-color: var(--ppbhc) !important;
 }
 
 /*  */
@@ -2067,4 +2070,14 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
 /* [Post] Button On Feed Page */
 #postButton { /* rgb(248 96 96) Background Color */
     background-color: var(--mb) !important;
+}
+
+/* [Sort] Button On Market Page */
+#invSortB { /* rgb(248 96 96) Background Color */
+    background-color: var(--mb) !important;
+}
+
+/* [Sort] Hover Button On Market Page */
+#invSortB:hover { /* rgb(164 64 64) Background Color */
+    background-color: var(--mhb) !important;
 }
