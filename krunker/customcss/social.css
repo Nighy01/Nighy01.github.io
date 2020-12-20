@@ -1,14 +1,35 @@
 /* This is Nighy01's Krunker Hub Custom CSS */
-/* Updated: 2020/12/16 */
+/* Updated: 2020/12/19 */
 
 /* Variables */
 :root {
-    
+
+    /* Main Buttons */
+    --mb: rgb(248 96 96);
+
+    /* Main Hover Buttons */
+    --mhb: rgb(164 64 64);
+
     /* Verified Icon Color */
-    --verified-icon-color: rgb(0, 154, 255);
+    --vic: rgb(0, 154, 255);
 
     /* Premium Icon Color */
-    --premium-icon-color: rgb(255, 153, 0);
+    --pic: rgb(255, 153, 0);
+
+   /* Profile Page Buttons Color */
+    --ppbc: rgb(248 96 96);
+
+    /* Profile Page Buttons Hover Color */
+    --ppbhc: rgb(164 64 64);
+
+    /* XP Bars Color On Profile Page */
+    --xpbcopp: rgb(248 96 96);
+
+    /* Slider Input Color */
+    --sic: rgb(248 96 96);
+
+    /* Slider Hover Input Color */
+    --shic: rgb(164 64 64);
 
 }
 
@@ -282,14 +303,14 @@ html, body { /* Change To Very Clean Background */
     background-color: rgb(65, 155, 63) !important;
 }
 
-/*  */
-.classLvl {
-    color: rgb(255, 207, 0) !important;
+/* Class Level Of Class Stats */
+.classLvl { /* White Text Color */
+    color: rgb(255 255 255) !important;
 }
 
-/*  */
-.clsXPBarC {
-    background-color: rgb(255, 207, 0) !important;
+/* Class Stats XP Bars On Profile Page */
+.clsXPBarC { /* rgb(248 96 96) Background Color */
+    background-color: var(--xpbcopp) !important; /* Variables To XP Bars Color On Profile Page */
 }
 
 /*  */
@@ -299,7 +320,7 @@ html, body { /* Change To Very Clean Background */
 
 /*  */
 .clsXPBarV {
-    color: rgb(0, 0, 0) !important;
+    color: rgb(0 0 0) !important;
 }
 
 /*  */
@@ -307,9 +328,9 @@ html, body { /* Change To Very Clean Background */
     background-color: rgb(195, 195, 195) !important;
 }
 
-/*  */
-.xpBarB {
-    background-color: rgb(255, 207, 0) !important;
+/* XP Bar Of Overall Stats On Profile Page */
+.xpBarB { /* rgb(248 96 96) Background Color */
+    background-color: rgb(248 96 96) !important;
 }
 
 /*  */
@@ -452,12 +473,12 @@ img:hover {
 
 /*  */
 [style="margin-right:5px;font-size:26px;color:#40C4FF"] {
-    color: var(--verified-icon-color) !important;
+    color: var(--vic) !important;
 }
 
 /*  */
 [style="color:#fbc02d"] {
-    color: var(--premium-icon-color) !important;
+    color: var(--pic) !important;
 }
 
 /*  */
@@ -483,17 +504,17 @@ img:hover {
 
 /*  */
 [style="margin-right:-2px;font-size:32px;color:#FBC02D;vertical-align:middle;margin-top:-6px;"] {
-    color: var(--premium-icon-color) !important;
+    color: var(--pic) !important;
 }
 
 /*  */
 [style="margin-right:1px;font-size:32px;color:#40C4FF;vertical-align:middle;margin-top:-6px;"] {
-    color: var(--verified-icon-color) !important;
+    color: var(--vic) !important;
 }
 
 /*  */
 [style="color:#FBC02D"] {
-    color: var(--premium-icon-color) !important;
+    color: var(--pic) !important;
 }
 
 /*  */
@@ -534,12 +555,12 @@ img:hover {
 
 /*  */
 [style="color:#FBC02D;margin-top:-8px;font-size:28px;vertical-align:middle;"] {
-    color: var(--premium-icon-color) !important;
+    color: var(--pic) !important;
 }
 
 /*  */
 [style="color:#40C4FF;margin-top:-8px;margin-right: 4px;font-size:28px;vertical-align:middle;"] {
-    color: var(--verified-icon-color) !important;
+    color: var(--vic) !important;
 }
 
 /*  */
@@ -588,7 +609,7 @@ img:hover {
 
 /*  */
 [style="color:#40C4FF;margin-top:4px;margin-right: 4px;font-size:28px;vertical-align:baseline;"] {
-    color: var(--verified-icon-color) !important;
+    color: var(--vic) !important;
 }
 
 /* Old "HACKER" Text On Hacker Account Profile */
@@ -598,7 +619,7 @@ img:hover {
 
 /*  */
 [style="margin-right:2px;font-size:26px;color:#40C4FF"] {
-    color: var(--verified-icon-color) !important;
+    color: var(--vic) !important;
 }
 
 /*  */
@@ -606,9 +627,9 @@ img:hover {
     color: rgb(255, 255, 255) !important;
 }
 
-/*  */
-[style="color:#fff"] {
-    color: rgb(255, 193, 0) !important;
+/* "KR" etc Text */
+[style="color:#fff"] { /* White Text Color */
+    color: white !important;
 }
 
 /*  */
@@ -845,10 +866,10 @@ img:hover {
     color: rgb(181, 49, 40) !important;
 }
 
-/*  */
-#postButton:hover {
+/* [Post] Hover Button On Feed Page */
+#postButton:hover { /* No Filter, rgb(164 64 64) Background Color, No Opacity */
     filter: none;
-    background-color: rgb(49, 97, 174) !important;
+    background-color: var(--mhb) !important;
     opacity: 999 !important;
 }
 
@@ -865,7 +886,7 @@ img:hover {
 
 /*  */
 [style="margin-bottom:3px;font-size:25px;color:#40C4FF;vertical-align:middle"] {
-    color: var(--verified-icon-color) !important;
+    color: var(--vic) !important;
 }
 
 /*  */
@@ -924,9 +945,9 @@ img:hover {
     color: rgba(0, 0, 0, 0.73) !important;
 }
 
-/*  */
-.reqFollB:hover {
-    background-color: rgb(0, 86, 154) !important;
+/* [Follow] Hover Buttons On "Who to Follow" Popup */
+.reqFollB:hover { /* rgb(164 64 64) Background Color */
+    background-color: rgb(164 64 64) !important;
 }
 
 /*  */
@@ -948,9 +969,9 @@ img:hover {
     font-size: 27px !important;
 }
 
-/*  */
-[style="font-size:33px;vertical-align:middle;margin-top:-4px;margin-right:20px"]:hover {
-    color: rgb(0, 189, 255) !important;
+/* Reply Hover Button */
+[style="font-size:33px;vertical-align:middle;margin-top:-4px;margin-right:20px"]:hover { /* White Icon Color */
+    color: #ffffff !important;
 }
 
 /*  */
@@ -960,17 +981,17 @@ img:hover {
 
 /*  */
 [style="margin-bottom:5px;font-size:25px;color:#FBC02D;vertical-align:middle;margin-left:-2px"] {
-    color: var(--premium-icon-color) !important;
+    color: var(--pic) !important;
 }
 
 /*  */
 [style="margin-bottom:5px;font-size:25px;color:#40C4FF;vertical-align:middle;margin-left:-2px"] {
-    color: var(--verified-icon-color) !important;
+    color: var(--vic) !important;
 }
 
-/*  */
-.replyBtn:hover {
-    background-color: rgb(49, 97, 174) !important;
+/* [Reply] Hover Button */
+.replyBtn:hover { /* rgb(164 64 64) Background Color */
+    background-color: rgb(164 64 64) !important;
 }
 
 /*  */
@@ -1034,17 +1055,18 @@ img:hover {
     background-color: rgba(0, 0, 0, 0.14) !important;
 }
 
-/*  */
+/* [Gift KR] Button */
 #giftBtn {
     color: white !important;
-    background: rgb(65, 195, 0) !important;
+    background: var(--ppbc) !important; /* Variables To Profile Page Buttons Color */
+    border-color: var(--ppbc) !important; /* Variables To Profile Page Buttons Color */
 }
 
-/*  */
+/* [Gift KR] Hover Button */
 #giftBtn:hover {
-    border-color: rgb(45, 134, 0);
+    border-color: var(--ppbhc);
     transform: scale(1);
-    background-color: rgb(45, 134, 0) !important;
+    background-color: var(--ppbhc) !important;
 }
 
 /*  */
@@ -1057,7 +1079,7 @@ img:hover {
     transition: none 0s ease 0s;
     transform: scale(1);
     color: rgb(255, 255, 255) !important;
-    background: rgb(183, 51, 51) !important;
+    background: var(--ppbhc) !important;
 }
 
 /*  */
@@ -1065,17 +1087,17 @@ img:hover {
     transition: none 0s ease 0s;
     transform: scale(1);
     color: rgb(255, 255, 255) !important;
-    background: rgb(27, 118, 190) !important;
+    background: var(--ppbhc) !important;
 }
 
-/*  */
-#reprtBtn {
+/* Report Button On Profile Page */
+#reprtBtn { /* No Animations, 1px 10px Padding, 5px Border Radius, 5px Marign Right, rgb(248 96 96) Background Color, White Icon Color */
     transition: none 0s ease 0s;
     transform: scale(1);
     padding: 1px 10px;
     border-radius: 5px;
     margin-right: 5px;
-    background: rgb(255, 71, 71) !important;
+    background: var(--ppbc) !important; /* Variables To Profile Page Buttons Color */
     color: rgb(255, 255, 255) !important;
 }
 
@@ -1086,7 +1108,7 @@ img:hover {
     padding: 1px 10px;
     border-radius: 5px;
     font-size: 31.8px;
-    background: rgb(33, 150, 243) !important;
+    background: var(--ppbc) !important; /* Variables To Profile Page Buttons Color */
     color: rgb(255, 255, 255) !important;
 }
 
@@ -1185,8 +1207,8 @@ img:hover {
     font-size: 20px !important;
 }
 
-/*  */
-.reqFollB {
+/* [Follow] Buttons On "Who to Follow" Popup */
+.reqFollB { /* 4px Border Radius, 53px Width, 14px Marign Left, 13px Font Size, Center Text Align, 10px Padding, 20px Line Height, 20px Height, White Text Color, rgb(248 96 96) Background Color */
     border-radius: 4px;
     width: 53px;
     margin-left: 14px;
@@ -1196,7 +1218,7 @@ img:hover {
     line-height: 20px;
     height: 20px;
     color: rgb(255, 255, 255);
-    background-color: rgb(0, 142, 255) !important;
+    background-color: rgb(248 96 96) !important;
 }
 
 /*  */
@@ -1228,9 +1250,9 @@ img:hover {
     transform: scale(1);
 }
 
-/*  */
+/* "Hub" Text On Top */
 #hubBox {
-    background-color: rgb(35, 120, 255) !important;
+    background-color: rgb(248 96 96) !important;
     color: white !important;
 }
 
@@ -1272,7 +1294,7 @@ img:hover {
 
 /* Custom Display Name(Premium) Text */
 [style="color: rgb(251, 192, 45);"] {
-    color: var(--premium-icon-color) !important;
+    color: var(--pic) !important;
 }
 
 /*  */
@@ -1339,29 +1361,29 @@ img:hover {
     width: 335px !important;
 }
 
-/*  */
+/* Settings Popup */
 #settingsPop {
     background-color: rgba(213, 213, 213, 0.82) !important;
 }
 
-/*  */
-input:checked + .slider {
-    background-color: rgb(0, 147, 255) !important;
+/* Slider Input Checked In Settings Popup */
+input:checked + .slider { /* rgb(248 96 96) Background Color */
+    background-color: var(--sic) !important;
 }
 
-/*  */
-input:checked + .slider:hover {
-    background-color: rgb(0, 119, 206) !important;
+/* Slider Hover Input Checked In Settings Popup */
+input:checked + .slider:hover { /* rgb(164 64 64) Background Color */
+    background-color: var(--shic) !important;
 }
 
-/*  */
+/* Slider Hover Input In Settings Popup */
 .slider:hover {
     background-color: rgb(113, 113, 113) !important;
 }
 
-/*  */
-.sliderVal:hover {
-    background: rgb(26, 113, 183) !important;
+/* Slider Val Hover Input In Settings Popup */
+.sliderVal:hover { /* rgb(164 64 64) Background Color */
+    background: var(--shic) !important;
 }
 
 /*  */
@@ -1369,9 +1391,24 @@ input:checked + .slider:hover {
     background-color: rgb(118, 118, 118) !important;
 }
 
-/*  */
-.inputGrey2:hover {
+/* Slider Grey2 Hover Input In Settings Popup */
+.inputGrey2:hover { /* rgb(158 158 158) Background Color */
     background: rgb(158, 158, 158) !important;
+}
+
+/* Slider Val In Settings Popup */
+.sliderVal { /* rgb(248 96 96) Background Color */
+    background: var(--sic) !important;
+}
+
+/* Slider M Input Thumb In Settings Popup */
+.sliderM::-webkit-slider-thumb { /* rgb(248 96 96) Background Color */
+    background-color: var(--sic) !important;
+}
+
+/* Slider M Input In Settings Popup */
+.sliderM { /* #949494 Background Color */
+    background-color: #949494;
 }
 
 /* Settings of "Region Stats" "UI Scale" "Disable Rarity Animations" "Show Profile Pictures" "Master Volume" Text */
@@ -1384,14 +1421,14 @@ input:checked + .slider:hover {
     color: rgba(0, 0, 0, 0.74) !important;
 }
 
-/*  */
+/* Slider Sml2 Hover Input In Settings Page */
 .sliderSml2:hover {
     background-color: rgb(113, 113, 113) !important;
 }
 
-/*  */
-input:checked + .sliderSml2:hover {
-    background: rgb(26, 113, 183) !important;
+/* Slider Sml2 Hover Input Checked In Settings Page */
+input:checked + .sliderSml2:hover { /* rgb(164 64 64) Background Color */
+    background: var(--shic) !important;
 }
 
 /*  */
@@ -1503,22 +1540,22 @@ input:checked + .slider2::before {
 
 /*  */
 .blueLink:visited {
-    color: rgb(0, 142, 255) !important;
+    color: rgb(248 96 96) !important;
 }
 
 /*  */
 .blueLink {
-    color: rgb(0, 142, 255) !important;
+    color: rgb(248 96 96) !important;
 }
 
-/*  */
-#marketSearchB:hover {
-    background-color: rgba(24, 123, 201, 0.85) !important;
+/* [Search] Hover Button On Market Page */
+#marketSearchB:hover { /* rgb(164 64 64 / 0.85) Background Color */
+    background-color: rgba(164 64 64 / 0.85) !important;
 }
 
-/*  */
-#marketSearchB {
-    background-color: rgba(33, 150, 243, 0.84) !important;
+/* [Search] Button On Market Page */
+#marketSearchB { /* rgb(248 96 96 / 0.85) Background Color */
+    background-color: rgba(248 96 96 / 0.85) !important;
 }
 
 /*  */
@@ -1582,7 +1619,7 @@ input:checked + .slider2::before {
     animation-delay: 0s;
 }
 
-/*  */
+/* Reply... Button After */
 .lds-ringm div::after {
     content: "Reply...";
     font-size: 18px;
@@ -1807,13 +1844,13 @@ input:checked + .slider2::before {
 }
 
 /* KR Giveaway Button */
-#givaButton {
-    background-color: rgb(66, 135, 245) !important;
+#givaButton { /* rgb(248 96 96) Background Color */
+    background-color: var(--mb) !important;
 }
 
 /* KR Giveaway Hover Button */
-#givaButton:hover {
-    background-color: rgb(49, 97, 174) !important;
+#givaButton:hover { /* rgb(164 64 64) Background Color, No Opacity */
+    background-color: var(--mhb) !important;
     opacity: 999 !important;
 }
 
@@ -1833,13 +1870,13 @@ input:checked + .slider2::before {
 }
 
 /* "[Follow] and Like to Enter" Text of [Follow] Hover Button */
-.follBtnGiv:hover {
-    background-color: #1a5ac1 !important;
+.follBtnGiv:hover { /* rgb(164 64 64) Background Color */
+    background-color: rgb(164 64 64) !important;
 }
 
 /* "[Follow] and Like to Enter" Text of [Follow] Button */
-.follBtnGiv {
-    background-color: #2277ff !important;
+.follBtnGiv { /* rgb(248 96 96) Background Color */
+    background-color: rgb(248 96 96) !important;
 }
 
 /*  */
@@ -1911,7 +1948,7 @@ input:checked + .slider2::before {
     transform: scale(1);
     padding: 3px 13px;
     border-radius: 5px;
-    background: rgb(108 35 151) !important;
+    background: var(--ppbc) !important; /* Variables To Profile Page Buttons Color */
     margin-right: 4px !important;
     content: url("https://i.imgur.com/Mhf6jkd.png");
 }
@@ -1923,7 +1960,7 @@ input:checked + .slider2::before {
     filter: none;
     -webkit-filter: contrast(1);
     opacity: 999 !important;
-    background-color: rgb(80 26 111) !important;
+    background-color: var(--ppbhc) !important;
 }
 
 /* "LOADING" Message */
@@ -1951,13 +1988,83 @@ input:checked + .slider2::before {
     display: none !important;
 }
 
+/* "Share" Button In Post */
+.shareBtnHol { /* rgb(248 96 96) Background Color */
+    background-color: rgb(248 96 96) !important;
+}
+
 /* "Share" Hover Button In Post */
-.shareBtnHol:hover { /* #b300b3 Background Color */
-    background-color: #b300b3 !important;
+.shareBtnHol:hover { /* rgb(164 64 64) Background Color */
+    background-color: rgb(164 64 64) !important;
     opacity: 999;
 }
 
 /* "[Count] Members" Text */
 #clanRoster > div > div > span { /* Black Text Color */
     color: black !important;
+}
+
+/* Market Sales Of "Count" KR */
+.graphHeaderTotal {
+    color: rgb(255 255 255) !important;
+}
+
+/* Market Sales Bar */
+.graphHeader {
+    background-color: rgb(248 96 96) !important;
+}
+
+/* "Kills" Text On Clan War */
+#clanwarsInfo > div > div > div > span { /* Black Text Color */
+    color: black !important;
+}
+
+/* "Clan" Text On Clan War */
+#clanwarsInfo > div > div > span { /* Black Text Color */
+    color: black !important;
+}
+
+/* [Reply] Button */
+.replyBtn { /* rgb(248 96 96) Background Color */
+    background-color: rgb(248 96 96) !important;
+}
+
+/* "Keyword: Sniper, Plasma, Wings" Hover Input In Search Market Popup */
+#marketFiltTxt:hover { /* #cacaca Background Color */
+    background-color: #cacaca !important;
+}
+
+/* Filter/Sort Of Hover Select */
+#sortFilt:hover { /* #b7b7b7 Background Color */
+    background-color: #b7b7b7 !important;
+}
+
+/* [Toggle] Button On Search Market Popup */
+#filterTog, #sortTog { /* rgb(248 96 96) Background Color */
+    background-color: var(--mb) !important;
+}
+
+/* [Toggle] Hover Button On Search Market Popup */
+#filterTog:hover { /* rgb(164 64 64) Background Color */
+    background-color: var(--mhb) !important;
+}
+
+/* Slider Sml2 Input Checked In Search Market Popup */
+input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
+    background-color: var(--sic) !important;
+}
+
+/* Season Of Hover Select */
+#seaFilt:hover {
+    background-color: #b7b7b7 !important;
+}
+
+/* "Melee Item" etc Text On Market Page */
+.itemOwn { /* White Text Color */
+    color: rgb(255 255 255) !important;
+}
+
+/* [Post] Button On Feed Page */
+#postButton { /* rgb(248 96 96) Background Color */
+    background-color: var(--mb) !important;
 }
