@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2020/12/16 */
+/* Updated: 2020/12/21 */
 
 /* Variables */
 :root {
@@ -2775,11 +2775,12 @@ input:hover + .tSubCheck {
 }
 
 /* "Featured Creators/Streaming Now!/Now Live" etc Creator Ads */
-#streamContainer { /* White Text Color, 0px Left, Transparent Background Color, 63px Top */
+#streamContainer { /* White Text Color, 0px Left, Transparent Background Color, 63px Top, 1 z-index */
     color: rgb(255, 255, 255) !important;
     left: 5px;
     background-color: rgb(0 0 0 / 0%) !important;
     top: 63px;
+    z-index: 1;
 }
 
 /*  */
@@ -3189,4 +3190,76 @@ input:hover + .tSubCheck {
     padding: 4px;
     padding-right: 8px;
     padding-left: 9px;
+}
+
+/* "Create Games on the Krunker Editor" Hover Button */
+#editorBtnM:hover { /* No Animation, No Opacity */
+    transform: scale(1);
+    opacity: 999;
+}
+
+/* "Create Games on the Krunker Editor" Button */
+#editorBtnM { /* Hide "Create Games on the Krunker Editor" Button */
+    display: none;
+}
+
+/* "* timeframes are estimates" Text */
+#menuWindow > div:nth-child(1) > span { /* Black Text Color */
+    color: #000 !important;
+}
+
+/* 2021 Krunker Roadmap Vis */
+.vis-item { /* Black Text Color, White Background/Border Color, 6px Border Radius */
+    color: #000 !important;
+    border-color: #ffffff !important;
+    background-color: #ffffff !important;
+    border-radius: 6px !important;
+}
+
+/* 2021 Krunker Roadmap Vis Selected */
+.vis-item.vis-selected { /* #c1c1c1 Background/Border Color */
+    border-color: #c1c1c1 !important;
+    background-color: #c1c1c1 !important;
+}
+
+/* [Place Bid] Button */
+.bidPlace { /* rgb(164 64 64) Box Shadow Color, rgb(248 96 96) Background Color */
+    box-shadow: inset 0 -10px 0 0 rgb(164 64 64) !important;
+    background-color: rgb(248 96 96) !important;
+}
+
+/* [Place Bid] Hover Button */
+.bidPlace:hover { /* rgb(199 199 199) Box Shadow Color, White Background Color */
+    box-shadow: inset 0 -7px 0 0 rgb(199 199 199) !important;
+    background-color: white !important;
+}
+
+/* "Count" Text */
+#hiBBbid { /* Black Text Color */
+    color: #000 !important;
+}
+
+/* "KR" Text In Advertise Page */
+#hiBBbid > span { /* Black Text Color */
+    color: #000 !important;
+}
+
+/* Estimated Views Text */
+#menuWindow > div:nth-child(11) > span, #menuWindow > div:nth-child(11) > span > span { /* Black Text Color */
+    color: #000 !important
+}
+
+/* "Time Remaining" Text */
+#tiBBbid, #tiBBbid > span { /* Black Text Color */
+    color: #000 !important;
+}
+
+/* "Minimum Bid" Text */
+#miBBbid, #miBBbid > span { /* Black Text Color */
+    color: #000 !important;
+}
+
+/* "Your Last Bid" Text */
+#yBBbid, #yBBbid > span { /* Black Text Color */
+    color: #000 !important;
 }
