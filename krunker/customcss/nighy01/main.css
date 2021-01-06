@@ -3263,3 +3263,20 @@ input:hover + .tSubCheck {
 #yBBbid, #yBBbid > span { /* Black Text Color */
     color: #000 !important;
 }
+
+/* "Get Vouchers from certain Streamers & Events" On Purchase KR Tab Page */
+[style="color:rgba(0,0,0,0.3);font-size:19px;margin-bottom:5px;margin-top: 15px;"] { /* Black Text Color */
+    color: #000 !important;
+}
+
+/* Settings Hover Button In Servers Browser Page */
+#hostMenuBtn:hover { /* No Hover Animation, rgb(164 64 64) Background Color */
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: rgb(164 64 64) !important;
+}
+
+/* Settings Button In Servers Browser Page */
+#hostMenuBtn { /* rgb(248 96 96) Background Color */
+    background-color: rgb(248 96 96) !important;
+}
