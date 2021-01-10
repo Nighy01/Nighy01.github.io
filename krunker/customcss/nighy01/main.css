@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2020/12/21 */
+/* Updated: 2021/1/10 */
 
 /* Variables */
 :root {
@@ -193,8 +193,8 @@
     /* Ammo Icon */
     --ammo-icon-display: none;
     
-    /*  */
-    --hud-background-color: rgba(0, 0, 0, 0.13);
+    /* Background Color Hud */
+    --hud-background-color: rgb(0 0 0 / 0.14);
     
     /*  */
     --hud-text-color: rgba(255, 255, 255, 0.7);
@@ -215,10 +215,10 @@
     --leaderboard-enemy-color: rgb(255, 0, 0);
     
     /* Premium Icon Color */
-    --premium-color: rgb(255, 153, 0);
+    --premium-color: rgb(255 166 33);
     
     /* Verified Icon Color */
-    --verified-color: rgb(0, 154, 255);
+    --verified-color: rgb(38 169 255);
     
     /*  */
     --enemy-score-color: rgb(255, 0, 0);
@@ -3286,4 +3286,34 @@ input:hover + .tSubCheck {
     text-shadow: none;
     color: rgb(0, 0, 0) !important;
     background-color: rgb(194, 194, 194) !important;
+}
+
+/* "[B] to Reset" Text Message Of "[B]" Key Text */
+#speedRunRstKey { /* White Text Color */
+    color: #fff !important;
+}
+
+/* "[B] to Reset" Text Message */
+#speedRunReset { /* rgb(0 0 0 / .3 ) Background Color */
+    background-color: rgba(0,0,0,.3) !important;
+}
+
+/* Speed Run Timer */
+#speedRunTimer { /* White Text Color */
+    color: white !important;
+}
+
+/* "Point [Count]" Text Message */
+.sriAct { /* rgb(255 255 255 / 50%) Background Color */
+    background-color: rgb(255 255 255 / 50%) !important;
+}
+
+/* Speed Run Box */
+#speedRunBox { /* rgb(0 0 0 / .3 ) Background Color */
+    background-color: rgba(0,0,0,.3) !important;
+}
+
+/* "No Score Zones" Text */
+#speedRunList > div { /* White Text Color */
+    color: #fff !important;
 }
