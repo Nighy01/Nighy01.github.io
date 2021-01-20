@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Hub Custom CSS */
-/* Updated: 2020/12/20 */
+/* Updated: 2021/01/20 */
 
 /* Variables */
 :root {
@@ -1701,9 +1701,9 @@ input:checked + .slider2::before {
     background-color: rgba(0, 0, 0, 0) !important;
 }
 
-/*  */
-#androidDB {
-    display: none;
+/* Get it on Google Play Button */
+#androidDB { /* Hide That Button */
+    display: none !important;
 }
 
 /*  */
@@ -1773,9 +1773,9 @@ input:checked + .slider2::before {
     background-color: rgba(0, 0, 0, 0.3) !important;
 }
 
-/*  */
-#iosDB {
-    display: none;
+/* Download on the App Store Button */
+#iosDB { /* Hide That Button */
+    display: none !important;
 }
 
 /*  */
@@ -1829,8 +1829,8 @@ input:checked + .slider2::before {
     background-color: rgb(237, 66, 66) !important;
 }
 
-/*  */
-#editorDB {
+/* Krunker Editor Button */
+#editorDB { /* Hide */
     display: none;
 }
 
@@ -1935,7 +1935,7 @@ input:checked + .slider2::before {
 
 /* "Wishlist it on STEAM" Message */
 #steamDB { /* Hide "Wishlist it On STEAM" Message */
-    display: none;
+    display: none !important;
 }
 
 /* "Open Model Viewer" Hover Button */
