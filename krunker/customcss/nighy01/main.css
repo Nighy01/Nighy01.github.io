@@ -2624,9 +2624,9 @@ a:active {
     bottom: 422px;
 }
 
-/*  */
-input, textarea:hover {
-    background-color: rgb(180, 180, 180) !important;
+/* Enter Server Password Input */
+input, textarea:hover { /* White Background Color */
+    background-color: rgb(255 255 255) !important;
 }
 
 /*  */
