@@ -3317,3 +3317,13 @@ input:hover + .tSubCheck {
 #speedRunList > div { /* White Text Color */
     color: #fff !important;
 }
+
+/* "By [Default/Req lvl [Count]/Krunker.io... etc]" Text */
+.itemOwn { /* White Color */
+    color: rgb(255, 255, 255) !important;
+}
+
+/* "Season [1/2/3/4... etc]" Text */
+.itemSea { /* White Color */
+    color: rgb(255, 255, 255) !important;
+}
