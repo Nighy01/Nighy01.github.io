@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Hub Custom CSS */
-/* Updated: 2021/01/20 */
+/* Updated: 2021/1/27 */
 
 /* Variables */
 :root {
@@ -1180,11 +1180,7 @@ img:hover {
 /* "HACKER" Text On Hacker Account Profile */
 #hackText {
     z-index: 0;
-    font-size: 23px;
-    padding: 66px;
-    left: -160px;
-    top: -30px;
-    color: rgb(255, 0, 0) !important;
+    color: rgb(255 108 108) !important;
     background-color: rgba(0, 0, 0, 0) !important;
 }
 
@@ -2169,4 +2165,24 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
 /* "Reward" Of "Country" Card In Clan Wars Page */
 #clanwarsInfo > div > div:nth-child(1) > div { /* Black Text Color */
     color: black !important;
+}
+
+/* Search Button */
+#filterRBtn { /* rgb(248 96 96) Background Color */
+    background-color: var(--mb) !important;
+}
+
+/* Reset Button */
+#resetFBtn { /* rgb(248 96 96) Background Color */
+    background-color: var(--mb) !important;
+}
+
+/* Search Hover Button */
+#filterRBtn:hover { /* rgb(164 64 64) Background Color */
+    background-color: var(--mhb) !important;
+}
+
+/* Reset Hover Button */
+#resetFBtn:hover { /* rgb(164 64 64) Background Color */
+    background-color: var(--mhb) !important;
 }

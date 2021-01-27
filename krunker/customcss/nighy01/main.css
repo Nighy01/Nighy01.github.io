@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2021/1/24 */
+/* Updated: 2021/1/27 */
 
 /* Variables */
 :root {
@@ -3326,4 +3326,86 @@ input:hover + .tSubCheck {
 /* "Season [1/2/3/4... etc]" Text */
 .itemSea { /* White Color */
     color: rgb(255, 255, 255) !important;
+}
+
+/* "KR" Text In Shop Page */
+#menuWindow > div.limitedSplit > div > div.saleTag > span, #limitedList > div > div.saleTag > span { /* Black Text Color */
+    color: #000 !important;
+}
+
+/* Limited Of Arrow Button */
+.limitedArrowH { /* rgb(113 113 113 / 80%) Background Color */
+    background-color: rgb(113 113 113 / 80%) !important;
+}
+
+/* Items Vaulted in [Days]d [Hours]h [Minutes]m Bar */
+#limitedBarProg { /* rgb(248 96 96) Background Color */
+    background-color: rgb(248 96 96) !important;
+}
+
+/* Limited Card */
+.limitedSplit .skinCard, #limitedList .skinCard { /* No Background Image */
+    background-image: none !important;
+}
+
+/* [Weapon/Skin...etc] Text */
+#itemPurcPop > div.itemViewName { /* White Text Color */
+    color: white !important;
+}
+
+/* View/Purchase Weapon/Skin...etc Popup */
+#itemViewPop, #itemPurcPop { /* No Background Image, rgb(156 156 156 / 97%) Background Color */
+    background-image: none !important;
+    background-color: rgb(156 156 156 / 97%) !important;
+}
+
+/* Limited Of Arrow Hover Button */
+.limitedArrowH:hover { /* rgb(59 59 59 / 80%) Background Color */
+    background-color: rgb(59 59 59 / 80%) !important;
+}
+
+/* Limited Of Arrow Hover Button */
+.limitedArrowH:active { /* rgb(40 40 40 / 80%) Background Color */
+    background-color: rgb(40 40 40 / 80%) !important;
+}
+
+/* Limited Items Card Image */
+.limitedSplit .skinCard img, #limitedList .skinCard img, .skinImg { /* No Animation */
+    animation: none !important;
+}
+
+/* [VSS, Dummy Grenade...etc] Text */
+#menuWindow > div.limitedSplit > div { /* White Text Color */
+    color: #fff !important;
+}
+
+/* Try your luck and spin for a chance to win some new skins! */
+#menuWindow > div:nth-child(2) { /* Black Text Color */
+    color: black !important;
+}
+
+/* Spin Cards */
+.shopCard, .shopCard:hover { /* No Hover Animation */
+    transition: none !important;
+    background-size: 101% !important;
+}
+
+/* Shop Page Premium Tab of Time Remaining */
+#premTime { /* Black Color */
+    color: rgb(0 0 0) !important;
+}
+
+/* By purchasing you agree to the Terms. Consider Support your favorite Content Creator by using a Creator Code */
+#menuWindow > div:nth-child(4) > div:nth-child(1) { /* Black Text Color */
+    color: black !important;
+}
+
+/* Get Vouchers from certain Streamers & Events */
+#menuWindow > div:nth-child(4) > div:nth-child(3) { /* Black Text Color */
+    color: black !important;
+}
+
+/* Reversing a payment can result in the termination of your krunker account. */
+#purchaseSelector > div:nth-child(2) { /* Black Text Color */
+    color: black !important;
 }
