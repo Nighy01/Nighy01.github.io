@@ -1,5 +1,15 @@
 /* This is Nighy01's Krunker Editor Custom CSS */
-/* Updated: 2021/1/27 */
+/* Updated: 2021/1/28 */
+
+/* Variables */
+:root {
+
+    /* Main Color */
+    --main: rgb(248 96 96);
+
+    /* Main Hover Color */
+    --mainhover: rgb(164 64 64);
+}
 
 /* Top Bar, Left/Right Panels etc */
 #hotbar, .panel, .toolbarDropDown, .toolbarSubDropDown, .qs_textarea, .qs_title_bar, #menuWindow { /* Changed Background Color rgb(53 53 53 / 82%), Box Shadow 1px 0px 20px 0px rgba(0,0,0,.5) */
@@ -341,4 +351,37 @@ select:hover { /* #888 Background Color */
 .welcomeButton:hover, .welcomeButton { /* No Hover Animation */
     transform: scale(1) !important;
     transition: none !important;
+}
+
+/* [The Krunker Editor allows... etc] Info Background */
+#menuWindow > div:nth-child(4) { /* rgb(23 23 23 / 0.95) Background Color */
+    background-color: rgb(23 23 23 / 0.95) !important;
+}
+
+/* [Plan and... etc] Text */
+.editInfoItem .edInfBody { /* White Text Color */
+    color: rgb(255 255 255) !important;
+}
+
+/* [The Krunker Editor allows... etc] Text */
+#editInfoBody div { /* rgb(255 255 255 / 68%) Text Color */
+    color: rgb(255 255 255 / 68%) !important;
+}
+
+/* Join Now! Link */
+.popupLink { /* rgb(248 96 96) Text Color, No Text Decoration */
+    color: rgb(248 96 96) !important;
+    text-decoration: none;
+}
+
+/* Join Now! Hover Link */
+.popupLink:hover { /* White Text Color, No Text Decoration */
+    color: rgb(255 255 255) !important;
+    text-decoration: none;
+}
+
+/* Join Now! Active Link */
+.popupLink:active { /* rgb(125 125 125) Text Color, No Text Decoration */
+    color: rgb(125, 125, 125) !important;
+    text-decoration: none;
 }

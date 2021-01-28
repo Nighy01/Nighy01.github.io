@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2021/1/27 */
+/* Updated: 2021/1/28 */
 
 /* Variables */
 :root {
@@ -3380,8 +3380,8 @@ input:hover + .tSubCheck {
 }
 
 /* Try your luck and spin for a chance to win some new skins! */
-#menuWindow > div:nth-child(2) { /* Black Text Color */
-    color: black !important;
+[style="color:rgba(0,0,0,0.3);"] { /* Black Text Color */
+    color: #000 !important;
 }
 
 /* Spin Cards */
@@ -3408,4 +3408,9 @@ input:hover + .tSubCheck {
 /* Reversing a payment can result in the termination of your krunker account. */
 #purchaseSelector > div:nth-child(2) { /* Black Text Color */
     color: black !important;
+}
+
+/* Select a Server Type */
+.serverHostOp { /* White Text Color */
+    color: #fff !important;
 }
