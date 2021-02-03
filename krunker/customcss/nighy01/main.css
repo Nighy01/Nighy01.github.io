@@ -1,5 +1,17 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2021/1/31 */
+/* Updated: 2021/2/3 */
+
+/*
+
+   Note:
+   This CSS file It's Not Recommended use Krunker Steam Version, Because It has Display Issue.
+   You Can use Browser or Other Krunker Client(If Possible)
+
+   Example:
+     GameUI: https://i.imgur.com/gknMPDP.jpg
+     InGame: https://i.imgur.com/A5FF74Z.jpg
+
+*/
 
 /* Variables */
 :root {
@@ -3434,3 +3446,16 @@ input:hover + .tSubCheck {
     color: #000 !important;
     margin-left: -43px;
 }
+
+/* "Success! Share the link" Text */
+#hostGameMsg {
+    color: #000 !important;
+}
+
+/* 
+
+   Pictures:
+    GameUI: https://i.imgur.com/cKUoZK3.png
+    Prfile Menu Window: https://i.imgur.com/JRfPWKT.png
+
+*/

@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Editor Custom CSS */
-/* Updated: 2021/1/28 */
+/* Updated: 2021/2/3 */
 
 /* Variables */
 :root {
@@ -385,3 +385,11 @@ select:hover { /* #888 Background Color */
     color: rgb(125, 125, 125) !important;
     text-decoration: none;
 }
+
+/*
+
+    Pictures:
+     EditorUI: https://i.imgur.com/1XRpLI7.png
+     Editor Mods Popup: https://i.imgur.com/GYJbp6R.png
+
+*/
