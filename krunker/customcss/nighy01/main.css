@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2021/2/3 */
+/* Updated: 2021/2/4 */
 
 /*
 
@@ -2789,9 +2789,9 @@ input:hover + .tSubCheck {
 /* "Featured Creators/Streaming Now!/Now Live" etc Creator Ads */
 #streamContainer { /* White Text Color, 0px Left, Transparent Background Color, 63px Top, 1 z-index */
     color: rgb(255, 255, 255) !important;
-    left: 5px;
+    margin-left: -135px;
     background-color: rgb(0 0 0 / 0%) !important;
-    top: 63px;
+    margin-top: -15px;
     z-index: 1;
 }
 
@@ -3194,7 +3194,7 @@ input:hover + .tSubCheck {
 
 /* "Streaming Now!" Text */
 .strmCat { /* 1000px Margin Right */
-    margin-right: 1000px !important;
+    margin-right: 100px !important;
 }
 
 /* "Kills" "Deaths" etc Count Display On Leadboard */
@@ -3428,7 +3428,7 @@ input:hover + .tSubCheck {
 }
 
 /* Things you get with Premium Page */
-[style="background-color:#333;padding:15px;border-radius:6px;border:5px solid var(--yellow)"] {
+[style="background-color:#333;padding:15px;border-radius:6px;border:5px solid var(--yellow)"] { /* No Dark Background, And No Stars, Better View */
     background-color: #fff0 !important;
     border-color: #fff0 !important;
     margin-left: -5px;
@@ -3448,8 +3448,71 @@ input:hover + .tSubCheck {
 }
 
 /* "Success! Share the link" Text */
-#hostGameMsg {
+#hostGameMsg { /* Black Text Color */
     color: #000 !important;
+}
+
+/* Guide Popup Yellow Texts */
+#guidePopup > div > div.guideInfoT > span { /* rgb(248 96 96) Text Color */
+    color: rgb(248 96 96) !important;
+}
+
+/* Check the Guide Link Button of the New to Krunker? */
+#helpGuidOpn { /* rgb(248 96 96) Text Color */
+    color: rgb(248 96 96) !important;
+}
+
+/* Check the Guide Link Hover Button of the New to Krunker? */
+#helpGuidOpn:hover { /* White Text Color */
+    color: rgb(255 255 255) !important;
+}
+
+/* New to Krunker? Box */
+#youNewDiv { /* -133px Margin Left, -6px Margin Top, transparent Background Color */
+    margin-top: -6px;
+    background-color: rgb(255 255 255 / 0%) !important;
+    margin-left: -133px;
+}
+
+/* New to Krunker? Picture Icon */
+#helpPIcon { /* Hide */
+    display: none !important;
+}
+
+/* New to Krunker? Text Box */
+#helpTxtHol { /* -1px Margin Left */
+    margin-left: -1px;
+}
+
+/* New to Krunker? Text Hover Box */
+#helpTxtHol:hover { /* No Opacity */
+    opacity: 999;
+}
+
+/* Guide Popup */
+#guidePopupH { /* Transparent Background */
+    background-color: rgb(0 0 0 / 0%) !important;
+}
+
+/* [ALT] Text of Guide Popup */
+#guidePopup > div > div > span > span { /* rgb(248 96 96) Text Color */
+    color: rgb(248 96 96) !important;
+}
+
+/* "Krunker is a Move...etc" Text of Guide Popup */
+.guideInfoT { /* White Text Color */
+    color: rgb(255 255 255) !important;
+}
+
+/* Guide Popup */
+#guidePopup { /* 790px Height, rgb(73 73 73 / 90%) Background Color */
+    height: 790px;
+    background-color: rgb(73 73 73 / 90%);
+}
+
+/* "Ping can be...etc" Text of Guide Popup */
+.guideStepV { /* White Text Color */
+    color: rgb(255 255 255) !important;
 }
 
 /* 
