@@ -3516,13 +3516,13 @@ input:hover + .tSubCheck {
 }
 
 /* XP Bar In Match Ended */
-.xpEndBarB { /* rgb(248 96 96) Background Color */
-    background-color: var(--class-level-color) !important;
+.xpEndBarB { /* White Background Color */
+    background-color: #ffffff !important;
 }
 
 /* +[Count] KR Text In Match Ended */
 #fundsLayout > div > span { /* rgb(248 96 96) Text Color */
-    color: rgb(248, 96, 96) !important;
+    color: #fff !important;
 }
 
 /* Server Cost */
@@ -3575,6 +3575,31 @@ input:hover + .tSubCheck {
 /* Must be at least lvl 20/10 In Create/Join, "LOADING" Clan Page */
 #clanErr { /* rgb(56 56 56) Text Color */
     color: rgb(56, 56, 56) !important;
+}
+
+/* Match Ended KR Count */
+#endTable > tbody > tr > td > span { /* White Text Color */
+    color: rgb(255, 255, 255) !important;
+}
+
+/* VICTORY/DEFEAT/DRAW In Match Ended */
+.modeStatus { /* White Text Color */
+    color: #fff !important;
+}
+
+/* +[Count]KR/NONE Text In Match Ended */
+.fundsVal { /* White Text Color */
+    color: rgb(255, 255, 255) !important;
+}
+
+/* Score etc In Match Ended Display */
+.crLabel { /* White Text Color */
+    color: rgb(255, 255, 255) !important;
+}
+
+/* Count XP Level In Match Ended */
+.xpLvl { /* White Text Color */
+    color: rgb(255, 255, 255) !important;
 }
 
 /* 
