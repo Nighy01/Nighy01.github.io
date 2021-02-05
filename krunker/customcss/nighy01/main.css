@@ -1,11 +1,11 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2021/2/4 */
+/* Updated: 2021/2/5 */
 
 /*
 
    Note:
-   This CSS file It's Not Recommended use Krunker Steam Version, Because It has Display Issue.
-   You Can use Browser or Other Krunker Client(If Possible)
+    This CSS file It's Not Recommended use Krunker Steam Version, Because It has Display Issue.
+    You Can use Browser or Other Krunker Client(If Possible)
 
    Example:
      GameUI: https://i.imgur.com/gknMPDP.jpg
@@ -41,10 +41,10 @@
     --top-bar-roundness: 8px;
     
     /* Main Menu FPS Text Color */
-    --menu-fps-color: rgb(158, 235, 86);
+    --menu-fps-color: rgb(255 255 255);
 
     /* Main Menu Ping Text Color */
-    --menu-ping-color: rgb(158, 235, 86);
+    --menu-ping-color: rgb(255 255 255);
     
     /* Unknown */
     --topbar-counters-text-color: rgba(255, 255, 255, 0.75);
@@ -239,10 +239,10 @@
     --team-score-color: rgb(255, 255, 255);
     
     /* FPS Text Color */
-    --fps-color: rgb(123, 255, 0);
+    --fps-color: rgb(255 255 255);
     
     /* Ping Text Color */
-    --ping-color: rgb(123, 255, 0);
+    --ping-color: rgb(255 255 255);
     
     /* Unknown */
     --votekick-keys-color: rgb(248 96 96);
@@ -733,8 +733,8 @@ a:active {
     color: var(--hud-text-color) !important;
 }
 
-/* Unknown */
-#ingameFPS {
+/* FPS Display InGame */
+#ingameFPS { /* White Text Color */
     color: var(--fps-color) !important;
 }
 
@@ -789,8 +789,8 @@ a:active {
     background-color: var(--home-progress-bar-background) !important;
 }
 
-/* Unknown */
-#menuFPS {
+/* FPS GameUI */
+#menuFPS { /* White Text Color */
     color: var(--menu-fps-color) !important;
 }
 
@@ -811,13 +811,13 @@ a:active {
     color: var(--advertise-color) !important;
 }
 
-/* Unknown */
-#menuPingIcon {
+/* Ping Icon GameUI */
+#menuPingIcon { /* White Text Color */
     color: var(--menu-ping-color) !important;
 }
 
-/* Unknown */
-#pingIcon {
+/* Ping Icon InGame */
+#pingIcon { /* White Text Color */
     color: var(--ping-color) !important;
 }
 
@@ -3448,8 +3448,8 @@ input:hover + .tSubCheck {
 }
 
 /* "Success! Share the link" Text */
-#hostGameMsg { /* Black Text Color */
-    color: #000 !important;
+#hostGameMsg { /* rgba(0, 0, 0, 0.76) Text Color */
+    color: rgba(0, 0, 0, 0.76) !important;
 }
 
 /* Guide Popup Yellow Texts */
@@ -3515,10 +3515,72 @@ input:hover + .tSubCheck {
     color: rgb(255 255 255) !important;
 }
 
+/* XP Bar In Match Ended */
+.xpEndBarB { /* rgb(248 96 96) Background Color */
+    background-color: var(--class-level-color) !important;
+}
+
+/* +[Count] KR Text In Match Ended */
+#fundsLayout > div > span { /* rgb(248 96 96) Text Color */
+    color: rgb(248, 96, 96) !important;
+}
+
+/* Server Cost */
+#hostActionH > span, #hCustCost { /* rgba(0, 0, 0, 0.76) Text Color */
+    color: rgba(0, 0, 0, 0.76) !important;
+}
+
+/* Comp Server Setup Info */
+#krRewardsInfo > div > div > span { /* Black Text Color */
+    color: black !important;
+}
+
+/* Select Server Type */
+.serverHostOpH { /* Hide */
+    display: none !important;
+}
+
+/* Comp Server Setup etc */
+#menuWindow > div.settName.b { /* Hide */
+    display: none !important;
+}
+
+/* Team 1/2 Link */
+#teamLink1, #teamLink2 { /* Black Text Color */
+    color: black !important;
+}
+
+/* Team 1/2 Hover Slider */
+.sliderCent:hover {
+    background-color: rgb(144 144 144) !important;
+}
+
+/* Mod Dropper Border */
+#modDropper { /* rgb(67 67 67) Border Color */
+    border: 4px dashed rgb(67 67 67) !important;
+}
+
+/* drop mod file here or click */
+#modDropper p { /* rgb(67 67 67) Text Color */
+    color: rgb(67 67 67) !important;
+}
+
+/* Settings Active Button In Servers Browser Page */
+#hostMenuBtn:active { /* No Animation, rgb(125 67 67) Background Color */
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: rgb(125 67 67) !important;
+}
+
+/* Must be at least lvl 20/10 In Create/Join, "LOADING" Clan Page */
+#clanErr { /* rgb(56 56 56) Text Color */
+    color: rgb(56, 56, 56) !important;
+}
+
 /* 
 
    Pictures:
     GameUI: https://i.imgur.com/cKUoZK3.png
-    Prfile Menu Window: https://i.imgur.com/JRfPWKT.png
+    Profile Menu Window: https://i.imgur.com/JRfPWKT.png
 
 */
