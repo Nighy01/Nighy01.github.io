@@ -3602,6 +3602,11 @@ input:hover + .tSubCheck {
     color: rgb(255, 255, 255) !important;
 }
 
+/* Enter Text Input */
+.accountInput { /* White Background Color */
+    background-color: rgb(255 255 255) !important;
+}
+
 /* 
 
    Pictures:
