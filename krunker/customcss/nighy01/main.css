@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2021/2/5 */
+/* Updated: 2021/2/6 */
 
 /*
 
@@ -936,12 +936,12 @@ a:active {
     color: var(--menu-player-name-color);
 }
 
-/* Leadboard Premium Icon */
+/* Leaderboard Premium Icon */
 #leaderContainer i[style*="color:#FBC02D"] {
     color: var(--premium-color) !important;
 }
 
-/* Leadboard Verified Icon */
+/* Leaderboard Verified Icon */
 #leaderContainer i[style*="color:#40C4FF"] {
     color: var(--verified-color) !important;
 }
@@ -1287,9 +1287,9 @@ input:checked + .sliderSml:hover {
     border-radius: 10px;
 }
 
-/* Unknown */
-.tabHeader.selected {
-    color: rgb(172, 172, 172) !important;
+/* Match Ended Selected Tab */
+.tabHeader.selected { /* rgb(153 153 153) Text Color, No Border */
+    color: rgb(153, 153, 153) !important;
     border-bottom: 4px solid rgba(172, 172, 172, 0) !important;
 }
 
@@ -1492,9 +1492,9 @@ input:checked + .optCheck:hover {
     border-radius: 10px;
 }
 
-/* Unknown */
-.tabHeader:hover {
-    color: rgb(255, 255, 255) !important;
+/* Match Ended Hover Tab */
+.tabHeader:hover { /* rgb(180, 180, 180, 1) Text Color, No Border */
+    color: rgba(180, 180, 180, 1) !important;
     border-bottom: 4px solid rgba(255, 255, 255, 0) !important;
 }
 
@@ -1509,9 +1509,9 @@ input:checked + .optCheck:hover {
     color: rgb(255, 255, 255) !important;
 }
 
-/* Unknown */
-.tabHeader.selected:hover {
-    color: rgb(172, 172, 172) !important;
+/* Match Ended Selected Hover Tab */
+.tabHeader.selected:hover { /* rgb(153 153 153) Text Color, No Border */
+    color: rgb(153, 153, 153) !important;
     border-bottom: 4px solid rgba(172, 172, 172, 0) !important;
 }
 
@@ -3197,7 +3197,7 @@ input:hover + .tSubCheck {
     margin-right: 100px !important;
 }
 
-/* "Kills" "Deaths" etc Count Display On Leadboard */
+/* "Kills" "Deaths" etc Count Display On Leaderboard */
 .countIcon { /* 4px Padding, 8px Padding Right, 9px Padding Left */
     padding: 4px;
     padding-right: 8px;
@@ -3607,10 +3607,26 @@ input:hover + .tSubCheck {
     background-color: rgb(255 255 255) !important;
 }
 
+/* K/D Count */
+#killsVal, #deathsVal, #streakVal, #myScoreVal, #kdVal { /* White Text Color */
+    color: rgba(255,255,255) !important;
+}
+
+/* Match Ended Tab */
+.tabHeader { /* White Text Color */
+    color: rgb(255, 255, 255) !important;
+}
+
+/* Match Ended Active Tab */
+.tabHeader:active { /* rgb(149 149 149) Text Color */
+    color: rgb(149 149 149) !important;
+}
+
 /* 
 
    Pictures:
     GameUI: https://i.imgur.com/cKUoZK3.png
     Profile Menu Window: https://i.imgur.com/JRfPWKT.png
+    Match Ended Leaderboard: https://i.imgur.com/vy2NAmz.png
 
 */
