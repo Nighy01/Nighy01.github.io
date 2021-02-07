@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Editor Custom CSS */
-/* Updated: 2021/2/3 */
+/* Updated: 2021/2/7 */
 
 /* Variables */
 :root {
@@ -384,6 +384,44 @@ select:hover { /* #888 Background Color */
 .popupLink:active { /* rgb(125 125 125) Text Color, No Text Decoration */
     color: rgb(125, 125, 125) !important;
     text-decoration: none;
+}
+
+/* Popup Background */
+#popupBack { /* Transparent Background */
+    background-color: rgb(0 0 0 / 0%) !important;
+}
+
+/* Login Hover Button */
+.accountButton:hover { /* White Text Color, rgb(164 64 64) Background Color */
+    color: rgb(255, 255, 255) !important;
+    background-color: var(--mainhover) !important;
+}
+
+/* Login Button */
+.accountButton { /* 3px Border Radius, White Text Color, rgb(248 96 96) Background Color */
+    border-radius: 3px;
+    color: rgb(255, 255, 255) !important;
+    background-color: var(--main) !important;
+}
+
+/* Success Popup Icon */
+[style="font-size:80px;color:#3be354!important;"] { /* Hide */
+    display: none !important;
+}
+
+/* Popup Content */
+#popupContent > div > div:nth-child(2) { /* White Text Color */
+    color: #fff !important;
+}
+
+/* Error Popup Icon */
+[style="font-size:80px;color:#e33b3b!important;"] { /* Hide */
+    display: none !important;
+}
+
+/* Popup */
+#popupContent { /* rgba(0, 0, 0, 0.76) Background Color */
+    background-color: rgba(0, 0, 0, 0.76) !important;
 }
 
 /*
