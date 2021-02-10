@@ -801,14 +801,16 @@ img:hover {
     display: none;
 }
 
-/* Unknown */
-[style="background-color:#5699EB"] {
-    background-color: rgb(0, 115, 255) !important;
+/* [UPDATED] Map */
+[style="background-color:#5699EB"] { /* White Background, Black Text */
+    background-color: rgb(255, 255, 255) !important;
+    color: black !important;
 }
 
-/* Unknown */
-[style="background-color:#E040FB"] {
-    background-color: rgb(218, 0, 255) !important;
+/* [NEW] Map */
+[style="background-color:#E040FB"] { /* White Background, Black Text */
+    background-color: rgb(255 255 255) !important;
+    color: black !important;
 }
 
 /* Unknown */
@@ -2193,8 +2195,13 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
 }
 
 /* by/kb */
-#pTabContent_creations > div > div > div > div > span, #pTabContent_creations > div > div > div > div > div > span { /* rgb(47 47 47) Text Color */
+[style="color:rgba(0,0,0,0.2);font-size:15px"], [style="color: rgba(0,0,0,0.6);"] { /* rgb(47 47 47) Text Color */
     color: rgb(47 47 47) !important;
+}
+
+/* Like/Plays/Persons Icon Map/Mod */
+[style="margin-left: 5px;color:rgba(255, 255, 255, 0.5);vertical-align: middle;margin-top: -3px;font-size: 18px;"], [style="margin-left: 8px;color:rgba(255, 255, 255, 0.5);vertical-align: middle;margin-top: -3px;font-size: 18px;"], [style="margin-right: 8px;color:rgba(255, 255, 255, 0.5);vertical-align: middle;margin-top: -3px;font-size: 18px;"] {
+    color: white !important;
 }
 
 /*

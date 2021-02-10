@@ -258,7 +258,7 @@ select:hover { /* #888 Background Color */
 
 /* Assets "by" Text */
 #assetList > div > div { /* White Text Color */
-    color: white !important;
+    color: white;
 }
 
 /* "by" Text Assets Search Results */
@@ -268,7 +268,7 @@ select:hover { /* #888 Background Color */
 
 /* "Clutter" etc Text Assets Search Results */
 #searchResultsA > div > div { /* White Text Color */
-    color: white !important
+    color: white;
 }
 
 /* "Loading..." On Search Assets Page */
@@ -551,6 +551,18 @@ input:checked+.slider2 { /* rgb(248 96 96) Background Color */
 .pubTabP:hover { /* No Box Shadow, White Text Color */
     box-shadow: none !important;
     color: #fff !important;
+}
+
+/* [UPDATED] Map */
+[style="background-color:#5699EB"] { /* White Background, Black Text */
+    background-color: rgb(255, 255, 255) !important;
+    color: black !important;
+}
+
+/* [NEW] Map */
+[style="background-color:#E040FB"] { /* White Background, Black Text */
+    background-color: rgb(255 255 255) !important;
+    color: black !important;
 }
 
 /*

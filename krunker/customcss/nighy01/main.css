@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2021/2/6 */
+/* Updated: 2021/2/10 */
 
 /* Variables */
 :root {
@@ -3608,6 +3608,18 @@ input:hover + .tSubCheck {
 /* Match Ended Active Tab */
 .tabHeader:active { /* rgb(149 149 149) Text Color */
     color: rgb(149 149 149) !important;
+}
+
+/* [UPDATED] Map */
+[style="background-color:#5699EB"] { /* White Background, Black Text */
+    background-color: rgb(255, 255, 255) !important;
+    color: black !important;
+}
+
+/* [NEW] Map */
+[style="background-color:#E040FB"] { /* White Background, Black Text */
+    background-color: rgb(255 255 255) !important;
+    color: black !important;
 }
 
 /*
