@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Editor Custom CSS */
-/* Updated: 2021/2/9 */
+/* Updated: 2021/2/10 */
 
 /* Variables */
 :root {
@@ -433,6 +433,124 @@ select:hover { /* #888 Background Color */
 /* Restore Buttons */
 .restore { /* rgb(0 0 0 / .5) Background Color */
     background-color: rgb(0 0 0 / .5) !important;
+}
+
+/* Publish or Updated Game/Asset */
+#publishPop > div > div:nth-child(1) { /* Hide */
+    display: none !important;
+}
+
+/* Publish Game/Asset Popup */
+#publishPop { /* rgb(213 213 213 / 89%) Background Color */
+    background-color: rgb(213 213 213 / 89%);
+}
+
+/* Publish/Update Hover Button */
+#pubGame:hover { /* rgb(164 64 64) Background Color */
+    background-color: rgb(164 64 64) !important;
+}
+
+/* Publish/Update Button */
+#pubGame { /* rgb(248 96 96) Background Color */
+    background-color: rgb(248 96 96) !important;
+}
+
+/* Category */
+#gameCategoryH { /* rgb(47 47 47) Text Color */
+    color: rgb(47 47 47) !important;
+}
+
+/* Type, Private */
+#publishAsset > div { /* rgb(47 47 47) Text Color */
+    color: rgb(47 47 47) !important;
+}
+
+/* Thumbnail (.png) - Max 150KB */
+#gameThumbName { /* rgb(47 47 47) Text Color */
+    color: rgb(47 47 47) !important;
+}
+
+/* Category/Post to Hub */
+#publishGame > div { /* rgb(47 47 47) Text Color */
+    color: rgb(47 47 47) !important;
+}
+
+/* Thumbnail (.png), Lightmap (Optional) */
+#gameThumbnailName, #gameLightmapName {
+    color: rgb(47 47 47) !important;
+}
+
+/* Slider2 Before In Publish Game Popup */
+.slider2::before { /* Better View */
+    height: 20px;
+    width: 22px;
+    left: 5px;
+    bottom: 4px;
+}
+
+/* Switch2 Button */
+.switch2 { /* 50px Width, 29px Height */
+    width: 50px;
+    height: 29px;
+}
+
+/* Slider2 Checked Before */
+input:checked+.slider2:before { /* Better Transform View */
+    -webkit-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    transform: translateX(22px);
+}
+
+/* Slider2 Hover Checked Input In Publish Game Popup */
+input:checked + .slider2:hover { /* rgb(164 64 64) Background Color */
+    background-color: var(--mainhover) !important;
+}
+
+/* Slider2 Checked Input In Publish Game Popup */
+input:checked+.slider2 { /* rgb(248 96 96) Background Color */
+    background-color: var(--main) !important;
+}
+
+/* Slider2 Hover In Publish Game Popup */
+.slider2:hover { /* rgb(113 113 113) Background Color */
+    background-color: rgb(113, 113, 113) !important;
+}
+
+/* Slider2 In Publish Game Popup */
+.slider2 { /* -4px Left */
+    left: -4px;
+}
+
+/* Loading.../Must be lvl 20 */
+#gameUpResp { /* rgb(47 47 47) Text Color */
+    color: rgb(47 47 47) !important;
+}
+
+/* Diffuse...etc */
+[style="color:rgba(0,0,0,0.4);margin-left:10px;font-size: 14px;"] { /* rgb(47 47 47) Text Color */
+    color: rgb(47 47 47) !important;
+}
+
+/* Select Hover Buttons */
+#thumbBtn:hover, #lightmapBtn:hover, #iconBtn:hover, #modelBtn:hover, #alphaBtn:hover, #specularBtn:hover, #normalBtn:hover, #diffuseBtn:hover, #emissiveBtn:hover, #soundBtn:hover, #textureBtn:hover { /* rgb(163 163 163) Background Color */
+    background-color: rgb(163 163 163) !important;
+}
+
+/* Paste Data...etc Hover Input */
+.mapInput:hover { /* rgb(163 163 163) Background Color */
+    background: rgb(163 163 163) !important;
+}
+
+/* Active Tab */
+.activeTab { /* White Text Color, No Box Shadow */
+    color: #fff !important;
+    box-shadow: none !important;
+}
+
+/* Hover"Text" of Publish Game/Asset */
+.pubTabP:hover { /* No Box Shadow, White Text Color */
+    box-shadow: none !important;
+    color: #fff !important;
 }
 
 /*

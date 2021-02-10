@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Hub Custom CSS */
-/* Updated: 2021/2/3 */
+/* Updated: 2021/2/10 */
 
 /* Variables */
 :root {
@@ -2185,6 +2185,16 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
 /* Reset Hover Button */
 #resetFBtn:hover { /* rgb(164 64 64) Background Color */
     background-color: var(--mhb) !important;
+}
+
+/* Category */
+#gameCategoryH { /* rgb(47 47 47) Text Color */
+    color: rgb(47 47 47) !important;
+}
+
+/* by/kb */
+#pTabContent_creations > div > div > div > div > span, #pTabContent_creations > div > div > div > div > div > span { /* rgb(47 47 47) Text Color */
+    color: rgb(47 47 47) !important;
 }
 
 /*
