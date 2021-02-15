@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Hub Custom CSS */
-/* Updated: 2021/2/10 */
+/* Updated: 2021/2/15 */
 
 /* Variables */
 :root {
@@ -2200,8 +2200,13 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
 }
 
 /* Like/Plays/Persons Icon Map/Mod */
-[style="margin-left: 5px;color:rgba(255, 255, 255, 0.5);vertical-align: middle;margin-top: -3px;font-size: 18px;"], [style="margin-left: 8px;color:rgba(255, 255, 255, 0.5);vertical-align: middle;margin-top: -3px;font-size: 18px;"], [style="margin-right: 8px;color:rgba(255, 255, 255, 0.5);vertical-align: middle;margin-top: -3px;font-size: 18px;"] {
+[style="margin-left: 5px;color:rgba(255, 255, 255, 0.5);vertical-align: middle;margin-top: -3px;font-size: 18px;"], [style="margin-left: 8px;color:rgba(255, 255, 255, 0.5);vertical-align: middle;margin-top: -3px;font-size: 18px;"], [style="margin-right: 8px;color:rgba(255, 255, 255, 0.5);vertical-align: middle;margin-top: -3px;font-size: 18px;"] { /* White Icon */
     color: white !important;
+}
+
+/* Since */
+.leftMidHolder { /* Black Text */
+    color: rgb(0 0 0) !important;
 }
 
 /*
