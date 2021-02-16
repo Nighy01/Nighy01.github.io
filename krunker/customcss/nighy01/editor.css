@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Editor Custom CSS */
-/* Updated: 2021/2/10 */
+/* Updated: 2021/2/16 */
 
 /* Variables */
 :root {
@@ -563,6 +563,26 @@ input:checked+.slider2 { /* rgb(248 96 96) Background Color */
 [style="background-color:#E040FB"] { /* White Background, Black Text */
     background-color: rgb(255 255 255) !important;
     color: black !important;
+}
+
+/* Hover SubHeader */
+.subheader:hover { /* White(50% Non Transparent) Background Color */
+    background-color: rgba(255, 255, 255, 50%) !important;
+}
+
+/* SubHeader */
+.subheader { /* White(25% Non Transparent) Background Color */
+    background-color: rgb(255 255 255 / 25%) !important;
+}
+
+/* Hover Header */
+.header:hover { /* White(50% Non Transparent) Background Color */
+    background-color: rgb(255 255 255 / 50%) !important;
+}
+
+/* Header */
+.header { /* White(25% Non Transparent) Background Color */
+    background-color: rgb(255 255 255 / 25%) !important;
 }
 
 /*

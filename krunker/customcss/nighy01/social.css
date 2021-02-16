@@ -2209,6 +2209,33 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
     color: rgb(0 0 0) !important;
 }
 
+/* "by" Clans Leaderboard */
+#leaderList > div > div > span { /* Black Text */
+    color: #000 !important
+}
+
+/* Rank Icon */
+.rnkIcon { /* Hide */
+    display: none !important;
+}
+
+/* Clan Discord/Request to Join Button */
+.clanBut { /* rgb(248 96 96) Background Color */
+    background-color: rgb(248 96 96) !important;
+}
+
+/* Clan Discord/Request to Join Button */
+.clanBut:hover { /* rgb(164 64 64) Background Color, No Opacity, White Text */
+    background-color: rgb(164 64 64) !important;
+    opacity: 999 !important;
+    color: white !important;
+}
+
+/* by Text In Clan Info Page */
+#clanInfo > div > div.clanInfH > span:nth-child(2) { /* Black Text */
+    color: #000 !important;
+}
+
 /*
 
    Pictures:
