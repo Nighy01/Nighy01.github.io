@@ -1,5 +1,7 @@
+/* Announcement: This CSS update will likely be extended until 2021/5/22 due to individual attempts at planning. */
+
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2021/2/10 */
+/* Updated: 2021/2/17 */
 
 /* Variables */
 :root {
@@ -3143,13 +3145,6 @@ input:hover + .tSubCheck {
     display: none !important;
 }
 
-/* Left Of "Advertise" Button */
-#termsInfo::before { /* Show "Made By Nighy01" Text */
-    content: 'Made By Nighy01';
-    font-size: 16px;
-    color: #ffffffba !important;
-}
-
 /* "on New Krunker Map" Text On Left Top */
 #curGameInfo > div {
     color: #fff !important;
@@ -3620,6 +3615,13 @@ input:hover + .tSubCheck {
 [style="background-color:#E040FB"] { /* White Background, Black Text */
     background-color: rgb(255 255 255) !important;
     color: black !important;
+}
+
+/* Left Of "Advertise" Button */
+#termsInfo::before { /* Show "Made By Nighy01, This CSS update will likely be extended until 2021/5/22" Text */
+    content: 'Made By Nighy01, This CSS update will likely be extended until 2021/5/22';
+    font-size: 16px;
+    color: #ffffffba !important;
 }
 
 /*
