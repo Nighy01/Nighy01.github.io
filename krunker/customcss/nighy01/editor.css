@@ -1,7 +1,7 @@
 /* Announcement: This CSS update will likely be extended until 2021/5/22 due to individual attempts at planning. */
 
 /* This is Nighy01's Krunker Editor Custom CSS */
-/* Updated: 2021/2/17 */
+/* Updated: 2021/2/19 */
 
 /* Variables */
 :root {
@@ -585,6 +585,11 @@ input:checked+.slider2 { /* rgb(248 96 96) Background Color */
 /* Header */
 .header { /* White(25% Non Transparent) Background Color */
     background-color: rgb(255 255 255 / 25%) !important;
+}
+
+/* Done Icon Popup */
+#popupContent > div > div:nth-child(1) > i { /* Hide */
+    display: none !important;
 }
 
 /*
