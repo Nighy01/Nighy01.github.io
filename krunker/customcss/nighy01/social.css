@@ -1,7 +1,5 @@
-/* Announcement: This CSS update will likely be extended until 2021/5/22 due to individual attempts at planning. */
-
 /* This is Nighy01's Krunker Hub Custom CSS */
-/* Updated: 2021/2/17 */
+/* Updated: 2021/5/22 */
 
 /* Variables */
 :root {
@@ -1666,7 +1664,7 @@ input:checked + .slider2::before {
 
 /* Unknown */
 .tooltip2 {
-    margin-top: 6px;
+    margin-top: 24px !important;
     background: rgba(18, 18, 18, 0.55) !important;
 }
 
@@ -2236,6 +2234,87 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
 /* by Text In Clan Info Page */
 #clanInfo > div > div.clanInfH > span:nth-child(2) { /* Black Text */
     color: #000 !important;
+}
+
+/* Unfollow Button Active */
+#deleteFollow:active { /* #444444 Text Color */
+    color: #444444 !important;
+}
+
+/* Unfollow Button */
+#deleteFollow { /* Pointer Cursor */
+   cursor: pointer !important;
+}
+
+/* Send Gift Popup */
+#giftPop { /* #353535d1 Background Color, No Box Shadow */
+    background-color: #353535d1;
+    box-shadow: none !important;
+}
+
+/* Big Tabs */
+.bigMenTabs { /* rgb(143 143 143) Background Color */
+    background-color: rgb(143 143 143) !important;
+}
+
+/* Big TabA/Tab */
+.bigMenTabA, .bigMenTabA:hover, .bigMenTab:hover { /* No Border Bottom */
+    border-bottom: none !important;
+}
+
+/* Big TabA */
+.bigMenTabA { /* White Text Color */
+    color: rgba(255,255,255) !important;
+}
+
+/* Big Tab */
+.bigMenTab { /* #ffffff96 Text Color(Not using !important) */
+    color: #ffffff96;
+}
+
+/* Big Tab Hover */
+.bigMenTab:hover { /* White Text Color */
+    color: #fff !important;
+}
+
+/* Item List Select */
+#itemsListNav>select, #itemsListNav>input { /* White Background Color */
+    background-color: #fff !important;
+}
+
+/* Item List Hover Select */
+#itemsListNav>select:hover, #itemsListNav>input:hover { /* #bbb Background Color */
+    background-color: #bbb !important;
+}
+
+/* Kills, Time... */
+#clanwarsInfo > div > div > span > span:nth-child(1), #clanwarsInfo > div > div > span > span:nth-child(3) { /* Black Text Color */
+    color: black !important;
+}
+
+/* Inv Track */
+#invTrack { /* White Text Color */
+    color: rgb(255 255 255) !important;
+}
+
+/* Inv Value */
+#invValue { /* White Text Color */
+    color: rgb(255 255 255) !important;
+}
+
+/* Switch Sml */
+.switchsml { /* -10px Bottom */
+    bottom: -10px;
+}
+
+/* by Krunk..., In Circulation... */
+.smDetails { /* Black Text Color */
+    color: rgb(0 0 0) !important;
+}
+
+/* Count units... */
+#weaponInfo > div:nth-child(6) > div:nth-child(5) > span > span, #weaponInfo > div:nth-child(6) > div:nth-child(4) > span > span { /* Black Text Color */
+    color: black !important;
 }
 
 /*

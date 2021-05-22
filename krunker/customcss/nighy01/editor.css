@@ -1,7 +1,5 @@
-/* Announcement: This CSS update will likely be extended until 2021/5/22 due to individual attempts at planning. */
-
 /* This is Nighy01's Krunker Editor Custom CSS */
-/* Updated: 2021/2/19 */
+/* Updated: 2021/5/22 */
 
 /* Variables */
 :root {
@@ -590,6 +588,50 @@ input:checked+.slider2 { /* rgb(248 96 96) Background Color */
 /* Done Icon Popup */
 #popupContent > div > div:nth-child(1) > i { /* Hide */
     display: none !important;
+}
+
+/* Customize Hover Button */
+#toglEditBtn:hover { /* #bbb Background Color, No underline text */
+   background-color: #bbb !important;
+   text-decoration: none !important;
+}
+
+/* Customize Button */
+#toglEditBtn { /* 3px Margin Top, 5px Padding, 5px Border Radius, White Background */
+    margin-top: 3px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff !important;
+}
+
+/* Thumbnail... */
+#gameLightmapH > div, #gameThumbnailH > div { /* rgb(47 47 47) Text Color */
+    color: rgb(47 47 47) !important;
+}
+
+/* Size 0/250KB,500KB */
+#gameLightmapSize, #gameThumbnailSize { /* rgb(47 47 47) Text Color */
+    color: rgb(47 47 47) !important;
+}
+
+/* Thumbnail... Publish Asset Popup */
+#gameThumbH > div, #gameDiffuseH > div, #gameEmissiveH > div, #gameNormalH > div, #gameSpecularH > div, #gameAlphaH > div, #gameModelH > div, #gameIconH > div { /* rgb(47 47 47) Text Color */
+    color: rgb(47 47 47) !important;
+}
+
+/* Size 0/100KB,250KB,10MB Publish Asset Popup */
+#gameThumbSize, #gameDiffuseSize, #gameEmissiveSize, #gameNormalSize, #gameSpecularSize, #gameAlphaSize, #gameIconSize, #gameSize { /* rgb(47 47 47) Text Color */
+    color: rgb(47 47 47) !important;
+}
+
+/* Remove Hover Button On Quick Add Edit Page */
+.previewDeleteIcon i:hover { /* #828282 Text Color */
+    color: #828282 !important;
+}
+
+/* Remove Active Button On Quick Add Edit Page */
+.previewDeleteIcon i:active { /* #575757 Text Color */
+    color: #575757 !important;
 }
 
 /*

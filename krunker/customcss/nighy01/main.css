@@ -1,7 +1,5 @@
-/* Announcement: This CSS update will likely be extended until 2021/5/22 due to individual attempts at planning. */
-
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2021/3/6 */
+/* Updated: 2021/5/22 */
 
 /* Variables */
 :root {
@@ -181,10 +179,10 @@
     --progress-bar-filled: rgb(248, 96, 96);
     
     /* Unknown */
-    --progress-bar-unfilled: rgb(181, 181, 181);
+    --progress-bar-unfilled: rgb(128 128 128);
     
     /* Unknown */
-    --progress-bar-text: rgb(0, 0, 0);
+    --progress-bar-text: rgb(255 255 255);
     
     /* Unknown */
     --timer-icon-display: none;
@@ -672,13 +670,13 @@ a:active {
 .chatItem {
     border-radius: var(--chat-roundness);
     color: var(--chat-bold-text-color) !important;
-    background-color: var(--chat-background-color) !important;
 }
 
-/* Unknown */
+/* Voice Icon */
 #voiceDisplay {
-    display: var(--chat-mic-display) !important;
-    left: 300px !important;
+    bottom: 24px !important;
+    left: 365px !important;
+    transition-duration: 0.2s;
 }
 
 /* Unknown */
@@ -746,6 +744,8 @@ a:active {
 /* Unknown */
 #chatInput {
     background-color: var(--chat-input-background-color) !important;
+    width: 76%;
+    margin-left: 1px;
 }
 
 /* Unknown */
@@ -912,8 +912,14 @@ a:active {
 
 /* Unknown */
 #uiBase.onMenu #chatHolder {
-    transition: var(--chat-animate);
     left: 15px;
+    transition-duration: 0.2s !important;
+}
+
+/* Unknown */
+#uiBase.onGame #chatHolder {
+    left: 15px;
+    transition-duration: 0.2s !important;
 }
 
 /* Unknown */
@@ -1009,6 +1015,11 @@ a:active {
 /* Unknown */
 #gameUI {
     opacity: 0.8;
+}
+
+/* Chal Prog */
+.chalProg {
+    color: #fff !important;
 }
 
 /* "Host Game" Button */
@@ -2280,9 +2291,11 @@ a:hover {
     display: none;
 }
 
-/* Unknown */
+/* Voice Icon */
 #uiBase.onMenu #voiceDisplay {
-    left: 300px;
+    left: 360px !important;
+    bottom: 25px !important;
+    transition-duration: 0.2s;
 }
 
 /* Unknown */
@@ -3241,7 +3254,12 @@ input:hover + .tSubCheck {
 
 /* Estimated Views Text */
 #menuWindow > div:nth-child(11) > span, #menuWindow > div:nth-child(11) > span > span { /* Black Text Color */
-    color: #000 !important
+    color: #000;
+}
+
+/* KeyBind Shoot Key */
+#contshoot {
+    color: rgb(248 96 96) !important;
 }
 
 /* "Time Remaining" Text */
@@ -3391,17 +3409,97 @@ input:hover + .tSubCheck {
 }
 
 /* By purchasing you agree to the Terms. Consider Support your favorite Content Creator by using a Creator Code */
-#menuWindow > div:nth-child(4) > div:nth-child(1) { /* Black Text Color */
-    color: black !important;
+#menuWindow > div:nth-child(2) > div:nth-child(1) { /* Black Text Color */
+    color: white !important;
 }
 
-/* Get Vouchers from certain Streamers & Events */
-#menuWindow > div:nth-child(4) > div:nth-child(3) { /* Black Text Color */
-    color: black !important;
+/* Not Selected */
+#menuWindow > div.bigMenTabs > div:nth-child(1) {
+    color: rgba(255,255,255,.7) !important;
+}
+
+/* Not Selected Hover */
+#menuWindow > div.bigMenTabs > div:nth-child(1):hover {
+    color: rgb(255 255 255) !important;
+}
+
+/* "Count" Hours */
+#menuWindow > div:nth-child(5) > div > div {
+    color: #fff !important;
+}
+
+/* +[Count] "USD" Text */
+#menuWindow > div:nth-child(5) > div > div > div > span {
+    color: #fff !important;
+}
+
+/* +"Count" USD */
+.refAnot {
+    color: #fff !important;
+}
+
+/* Games Page Host/Play Button */
+#bigMFeatHBtn, #bigMFeatPBtn {
+    background-color: rgb(66 66 66) !important;
+}
+
+/* Games Page Host/Play Button */
+#bigMFeatHBtn:hover, #bigMFeatPBtn:hover {
+    background-color: rgb(146 146 146) !important;
+}
+
+/* Games Page Host/Play Button */
+#bigMFeatHBtn:active, #bigMFeatPBtn:active {
+    background-color: rgb(105 105 105) !important;
+}
+
+/* Game/Mod Page Home Button */
+#menuWindow > div:nth-child(1) > div > div.bigMenTab.bigMenTabA > span, #menuWindow > div:nth-child(4) > div > div.bigMenTab.bigMenTabA > span, #menuWindow > div:nth-child(4) > div > div:nth-child(1) > span, #menuWindow > div:nth-child(1) > div > div:nth-child(1) > span {
+    color: white !important;
+}
+
+/* Game/Mod Page Home Hover Button */
+#menuWindow > div:nth-child(1) > div > div.bigMenTab.bigMenTabA > span:hover, #menuWindow > div:nth-child(4) > div > div.bigMenTab.bigMenTabA > span:hover, #menuWindow > div:nth-child(4) > div > div:nth-child(1) > span:hover, #menuWindow > div:nth-child(1) > div > div:nth-child(1) > span:hover {
+    color: #7c7c7c !important;
+}
+
+/* Play Arrow */
+#bigMFeatPBtn > span{
+    color: white !important;
+}
+
+/* Fun on... */
+.mFeatSepar {
+    color: #fff !important;
+}
+
+/* Count Mods */
+#menuWindow > div:nth-child(3) > span {
+    color: #fff !important;
+}
+
+/* Every hour... */
+#menuWindow > div:nth-child(3) {
+    color: #fff !important;
+}
+
+/* Referred... */
+#menuWindow > div.setHed > span {
+    color: #fff !important;
+}
+
+/* Redeem Vouchers from certain Streamers & Events */
+#menuWindow > div:nth-child(5) > div:nth-child(1) { /* White Text Color */
+    color: white !important;
 }
 
 /* Reversing a payment can result in the termination of your krunker account. */
 #purchaseSelector > div:nth-child(2) { /* Black Text Color */
+    color: black !important;
+}
+
+/* By purchasing you agree to the Terms & Conditions */
+#menuWindow > div:nth-child(6) > div{
     color: black !important;
 }
 
@@ -3617,11 +3715,520 @@ input:hover + .tSubCheck {
     color: black !important;
 }
 
+/* Spectate Slider to Text */
+.sliderSml, #spectButton > span {
+    visibility: hidden;
+    transition-duration: .1s;
+}
+
+/* Spectate After Button */
+.sliderSml:after {
+    position: relative;
+    right: 87px;
+    color: black;
+    background-color: rgb(233 233 233 / 90%);
+    border-radius: 5px;
+    padding: 5px;
+    top: -10px;
+    visibility: visible;
+    content:'Spectate';
+    transition-duration: 0.2s;
+}
+
+/* Spectate Hover After Button */
+.sliderSml:hover:after {
+    position: relative;
+    right: 87px;
+    color: black;
+    background-color: rgb(156 156 156/ 90%);
+    border-radius: 5px;
+    padding: 5px;
+    top: -10px;
+    visibility: visible;
+    content:'Spectate';
+    transition-duration: 0.2s;
+}
+
+/* Spectate Active After Button */
+.sliderSml:active:after {
+    position: relative;
+    right: 87px;
+    color: black;
+    background-color: rgb(129 129 129 / 90%);
+    visibility: visible;
+    border-radius: 5px;
+    padding: 5px;
+    top: -10px;
+    content:'Spectate';
+    transition-duration: 0.2s;
+}
+
+/* Spectate SliderSml */
+input:checked+.sliderSml {
+    visibility: hidden;
+}
+
+/* Spectate SliderSml After */
+input:checked+.sliderSml:after {
+    position: relative;
+    right: 87px;
+    visibility: visible;
+    content:'Spectate';
+    color: white;
+    background-color: rgb(246 96 96 / 90%);
+    border-radius: 5px;
+    padding: 5px;
+    top: -10px;
+    transition-duration: 0.3s;
+}
+
+/* Spectate SliderSml Hover After */
+input:checked+.sliderSml:hover:after {
+    position: relative;
+    right: 87px;
+    border-radius: 5px;
+    padding: 5px;
+    top: -10px;
+    visibility: visible;
+    content:'Spectate';
+    color: white;
+    background-color: rgb(164 64 64/ 90%);
+    transition-duration: 0.3s;
+}
+
+/* Spectate SliderSml Active After */
+input:checked+.sliderSml:active:after {
+    position: relative;
+    right: 87px;
+    border-radius: 5px;
+    padding: 5px;
+    top: -10px;
+    visibility: visible;
+    content:'Spectate';
+    color: white;
+    background-color: rgb(133 53 53/ 90%);
+    transition-duration: 0.3s;
+}
+
+/* Pick Weapon */
+.selectedItem {
+    background-color: #7b7b7b!important;
+    filter: none;
+}
+
+/* Selector Item Hover */
+.selectorItem:hover {
+    background-color: #7a7a7a;
+}
+
+/* Selector Item Active */
+.selectorItem:active {
+    background-color: #525252;
+}
+
+/* Selector Item */
+.selectorItem {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 142px;
+    width: 130px;
+    background-color: #999999;
+    border-radius: 5px;
+    margin-top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: none;
+    transition: .1s;
+    cursor: pointer;
+}
+
+/* Selector Item/Icon */
+.selectorItem .selectorIcon {
+    filter: none;
+}
+
+/* Selector Label */
+.selectorLabel {
+    text-shadow: none;
+}
+
+/* Class Card */
+.classCard {
+    transition: .1s;
+    filter: none !important;
+    background-color: #9e9e9e;
+}
+
+/* Class Card Hover */
+.classCard:hover {
+    background-color: #8c8c8c;
+    transition: .1s;
+}
+
+/* Class Card Active */
+.classCard:active {
+    background-color: #656565;
+    transition: .1s;
+}
+
+/* Dark TabANew Hover */
+.dark .tabANew:hover {
+    border-bottom: rgb(0 0 0 / 0%) !important;
+    color: #fff !important;
+}
+
+/* Dark Menu TabANew */
+.dark .menuTabNew {
+    color: black !important;
+}
+
+/* Dark TabANew */
+.dark .tabANew {
+    color: white !important;
+}
+
+/* Unknown */
+[style="font-size:19px;margin-bottom:10px;color:rgba(255,255,255,0.4)"] {
+    color: #000 !important;
+}
+
+/* Menu Window Dark Div */
+#menuWindow.dark div {
+    color: #000;
+}
+
+/* Estimated Views Count */
+#menuWindow > div:nth-child(9) > div:nth-child(6) > span {
+    color: #fff !important;
+}
+/* You have... */
+#menuWindow > div:nth-child(4) > div {
+    color: #000 !important;
+}
+
+/* Dark Menu TabANew Hover */
+.dark .menuTabNew:hover {
+    border-bottom: 5px solid rgba(255 255 255 / 0%)!important;
+    color: #fff !important;
+}
+
+/* Preview Bid Button */
+#bidPrevBtn {
+    color: #fff !important;
+}
+
+/* Dark Menu TabNew Active */
+.dark .menuTabNew:active {
+    border-bottom: 5px solid rgba(255 255 255 / 0%)!important;
+    color: #9f9f9f !important;
+}
+
+/* Dark TabANew */
+.dark .tabANew {
+    border-bottom: 7px solid rgba(255 255 255 / 0%)!important;
+}
+
 /* Left Of "Advertise" Button */
-#termsInfo::before { /* Show "Made By Nighy01, This CSS update will likely be extended until 2021/5/22" Text */
-    content: 'Made By Nighy01, This CSS update will likely be extended until 2021/5/22';
+#termsInfo::before { /* Show "Made By Nighy01" Text */
+    content: 'Made By Nighy01';
     font-size: 16px;
     color: #ffffffba !important;
+}
+
+/* Item SearchH */
+#itemSearchH {
+    background-color: #0000 !important;
+}
+
+/* Item Search */
+#itemSearch {
+    background-color: rgb(185 185 185) !important;
+    color: #000 !important;
+}
+
+/* Window Background */
+#windowHolder.popupWin {
+    background-color: rgb(0 0 0 / 10%) !important;
+    transition-duration: 0.2s;
+}
+
+/* Selector Container */
+#selectorContainer {
+    height: 1465px;
+}
+
+/* Skin Card */
+.skinCard {
+    color: #fff !important;
+    background-color: rgb(165 165 165) !important;
+}
+
+/* Start Server Hover Button */
+.hostCBtn:hover {
+    transform: none !important;
+    background-color: rgb(164 64 64) !important;
+}
+
+/* Host a Comp... */
+[style="padding:10px;background-color:rgba(0,0,0,0.4);border: 3px solid rgba(255, 255, 255, 0.4);margin-bottom:0px;margin-top:0px;padding-left:15px;font-size:18px"] {
+    color: white !important;
+}
+
+/* Server Cost */
+#hostActionH > div:nth-child(1) {
+    color: black !important;
+}
+
+/* Start Server Button */
+.hostCBtn {
+    border: none !important;
+    background-color: rgb(248 96 96) !important;
+    color: #fff !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+
+/* FavBtn Hover */
+.selctFavBtn:hover {
+    color: rgb(170 170 170) !important;
+}
+
+/* FavBtn Active */
+.selctFavBtn:active {
+    color: rgb(120 120 120) !important;
+}
+
+/* Skin Card Info */
+.selctInfoBtn {
+    color: #fff !important;
+}
+
+/* Skin Card Hover Button */
+.skinCard:hover {
+    background-color: rgb(130 130 130) !important;
+}
+
+/* Skin Card Active Button */
+.skinCard:active {
+    background-color: rgb(106 106 106) !important;
+}
+
+/* Settings Header */
+.setHed {
+    border: 4px solid rgb(255 255 255 / 0%) !important;
+    background-color: rgb(179 179 179) !important;
+    color: #fff !important;
+}
+
+/* Chat Input Holder */
+#chatInputHolder {
+    width: 115% !important;
+    transition-duration: 0.2s;
+}
+
+/* Chat Switch */
+#chatSwitch {
+    margin-left: -40px !important;
+}
+
+/* Hover Chat Switch */
+#chatSwitch:hover {
+    color: rgb(170 170 170) !important;
+}
+
+/* Chat Holder */
+#chatHolder {
+    transition-duration: 0.2s;
+}
+
+/* Watch on Twitch */
+[style="color:#6441a5!important"]:hover {
+    color: #fff !important;
+    text-decoration: underline !important;
+}
+
+/* Watch on Twitch */
+[style="color:#6441a5!important"]:active {
+    color: #fff !important;
+    text-decoration: underline #332252 !important;
+}
+
+/* Big Tab */
+.bigMenTab {
+    color: rgba(255,255,255,.7) !important;
+}
+
+/* Custom Server Setup */
+#menuWindow > div.hostHeader {
+    display: none !important;
+}
+
+/* Offical Host Map Text */
+.hostMapName, .hostMapYear, .hostMapVersion  {
+    color: #fff !important;
+}
+
+/* Community...etc */
+.setBodH {
+    background-color: rgb(179 179 179) !important;
+}
+
+/* Big Tabs */
+.bigMenTabs {
+    background-color: rgb(171 171 171) !important;
+}
+
+/* Hover BigTabA */
+.bigMenTabA:hover {
+    border-bottom: none !important;
+}
+
+/* Hover BigTab */
+.bigMenTab:hover {
+    border-bottom: none !important;
+    color: #fff !important;
+}
+
+/* BigTabA */
+.bigMenTabA {
+    border-bottom: none !important;
+    color: #fff !important;
+}
+
+/* Voice Not Holding Icon */
+[style="opacity: 0.5;"] {
+    transition-duration: 0.2s;
+}
+
+/* Voice Holding Icon */
+[style="opacity: 0.9;"] {
+    transition-duration: 0.2s;
+}
+
+/* InGame Voice Icon */
+#uiBase.onGame #voiceDisplay {
+    left: 360px !important;
+    bottom: 155px !important;
+    transition-duration: 0.2s;
+}
+
+/* Match End Voice Icon */
+#uiBase.onEndScrn #voiceDisplay {
+    left: 364px !important;
+    bottom: 24px !important;
+    transition-duration: 0.2s;
+}
+
+/* ChatSwitch Active */
+#chatSwitch:active {
+    color: rgb(108 108 108) !important;
+}
+
+/* Sml Input */
+.smlInput {
+    color: rgb(255 255 255) !important;
+    background-color: rgb(109 109 109) !important;
+}
+
+/* Purchase KR Tab Enter Creator Code [Save] Button */
+#menuWindow > div:nth-child(2) > div:nth-child(2) > div{
+    color: white;
+}
+
+/* Spin KR Count Text Button */
+.spinVal {
+    color: #ffc147 !important;
+}
+
+/* Slider Val */
+.sliderVal {
+    border: none !important;
+}
+
+/* New Follower...etc */
+.mailSubj {
+    color: rgb(255 255 255) !important;
+}
+
+/* Kills..etc Icon */
+#killsIcon, #deathsIcon, #streakIcon, #kdIcon {
+    width: 35px !important;
+    height: 35px !important;
+}
+
+/* Count Icon */
+.countIcon {
+    font-size: 25px !important;
+}
+
+/* Score Count */
+#scoreCount > i {
+    font-size: 35px !important;
+}
+
+/* KR Count */
+.floatR {
+    color: rgb(255 255 255);
+}
+
+/* Chal Desc */
+.chalDesc {
+    color: rgba(255,255,255,.7) !important;
+}
+
+/* Chal Right */
+.chalRight {
+    color: #fff !important;
+}
+
+/* Chal Card */
+.chalCard {
+    text-shadow: none !important;
+    border: none !important;
+    background-color: rgb(89 89 89) !important;
+}
+
+/* KR Count Profile */
+#menuWindow > div:nth-child(7) > div:nth-child(2) > span > span {
+    color: white;
+}
+
+/* Account Settings HedS */
+.setHedS {
+    border: none !important;
+    background-color: rgb(138 138 138) !important;
+    color: #fff !important;
+}
+
+/* Delete Account Desc */
+[style="font-size:21px;color:rgba(255,255,255,0.4);margin-top:5px"] {
+    color: white !important;
+}
+
+/* Host Map By */
+.hostMapBy {
+    color: #fff !important;
+}
+
+/* Mode Hardpoint... Host Comp Server Desc Card */
+#krRewardsInfo > div > div:nth-child(2), #krRewardsInfo > div > div:nth-child(3), #krRewardsInfo > div > div:nth-child(4), #krRewardsInfo > div > div:nth-child(5), #krRewardsInfo > div > div:nth-child(6), #krRewardsInfo > div > div:nth-child(7), #krRewardsInfo > div > div:nth-child(2) > span, #krRewardsInfo > div > div:nth-child(3) > span, #krRewardsInfo > div > div:nth-child(4) > span, #krRewardsInfo > div > div:nth-child(5) > span, #krRewardsInfo > div > div:nth-child(6) > span, #krRewardsInfo > div > div:nth-child(7) > span {
+    color: white !important;
+}
+
+/* Reset KeyBind Hover Button */
+#menuWindow > div > span.reset > i:hover {
+    color: #b15900 !important;
+}
+
+/* Reset KeyBind Active Button */
+#menuWindow > div > span.reset > i:active {
+    color: #904900 !important;
+}
+
+/* Reset KeyBind Button */
+#menuWindow > div > span.reset > i {
+    color: #ff8100 !important;
 }
 
 /*
