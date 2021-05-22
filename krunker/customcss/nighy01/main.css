@@ -3943,8 +3943,24 @@ input:checked+.sliderSml:active:after {
 
 /* Item Search */
 #itemSearch {
-    background-color: rgb(185 185 185) !important;
+    background-color: white !important;
     color: #000 !important;
+}
+
+/* Item Search */
+#itemSearch:hover {
+    background-color: #c1c1c1 !important;
+    color: #000 !important;
+}
+
+/* Primary...etc Hover Button */
+.contCanSelect:hover {
+    background-color: rgb(0 0 0 / 34%) !important;
+}
+
+/* Primary...etc Active Button */
+.contCanSelect:active {
+    background-color: rgb(0 0 0 / 54%) !important;
 }
 
 /* Window Background */
@@ -3955,7 +3971,7 @@ input:checked+.sliderSml:active:after {
 
 /* Selector Container */
 #selectorContainer {
-    height: 1465px;
+    background-color: rgb(0 0 0 / 0%) !important;
 }
 
 /* Skin Card */
@@ -3978,6 +3994,12 @@ input:checked+.sliderSml:active:after {
 /* Server Cost */
 #hostActionH > div:nth-child(1) {
     color: black !important;
+}
+
+/* Selector Label */
+.selectorLabel {
+    color: #fff !important;
+    text-shadow: -1px -1px 0 #1c1c1c, 1px -1px 0 #1c1c1c, -1px 1px 0 #1c1c1c, 1px 1px 0 #1c1c1c, -2px -2px 0 #1c1c1c, 2px -2px 0 #1c1c1c, -2px 2px 0 #1c1c1c, 2px 2px 0 #1c1c1c !important;
 }
 
 /* Start Server Button */
@@ -4229,6 +4251,93 @@ input:checked+.sliderSml:active:after {
 /* Reset KeyBind Button */
 #menuWindow > div > span.reset > i {
     color: #ff8100 !important;
+}
+
+/* Voice Icon on Death/Spectate Screen */
+#uiBase.onDeathScrn #voiceDisplay, #uiBase.onSpect #voiceDisplay {
+    left: 360px !important;
+    bottom: 25px !important;
+    transition-duration: 0.2s;
+}
+
+/* Big Feat Name */
+#bigMFeatName {
+    color: #fff !important;
+}
+
+/* Fortune Seller, Krunker Esports */
+#menuWindow > div:nth-child(4) > div, #menuWindow > div:nth-child(4) > div:nth-child(2) {
+    color: white !important;
+}
+
+/* Join Queue Hover Button */
+#bigMFeatHBtnD:hover {
+    background-color: rgb(71 71 71) !important;
+}
+
+/* Join Queue Button */
+#bigMFeatHBtnD {
+    background-color: rgb(97 97 97) !important;
+}
+
+/* Ranked Shop Icon Button */
+#menuWindow > div.bigMenTabs > div:nth-child(5) > span {
+    color: #fff !important;
+}
+
+/* Ranked Shop Icon Hover Button */
+#menuWindow > div.bigMenTabs > div:nth-child(5) > span:hover {
+    color: #828282 !important;
+}
+
+/* Ranked Shop Icon Active Button */
+#menuWindow > div.bigMenTabs > div:nth-child(5) > span:active {
+    color: #4e4e4e !important;
+}
+
+/* FaceIt Icon */
+#menuWindow > div.bigMenTabs > div:nth-child(1) > img {
+    content: url(https://i.imgur.com/WxaW9wV.png);
+}
+
+/* FaceIt Hover Icon */
+#menuWindow > div.bigMenTabs > div:nth-child(1) > img:hover {
+    content: url(https://i.imgur.com/JhVYbwA.png);
+}
+
+/* FaceIt Active Icon */
+#menuWindow > div.bigMenTabs > div:nth-child(1) > img:active {
+    content: url(https://i.imgur.com/VxLGDy7.png);
+}
+
+/* Login & Register */
+#referralHeader { /* Hide */
+    display: none !important;
+}
+
+/* For lost Pass... */
+#accResp { /* Hide */
+    display: none !important;
+}
+
+/* Reticle Cards */
+.noBtnCard {
+    color: #fff !important;
+    background-color: rgb(150 150 150) !important;
+}
+
+/* Reticle Hover Cards */
+.noBtnCard:hover {
+    background-color: rgb(109 109 109) !important;
+}
+
+/* Reticle Active Cards */
+.noBtnCard:active {
+    background-color: rgb(85 85 85) !important;
+}
+
+#serverHolder > div:nth-child(1) {
+    color: black !important;
 }
 
 /*
