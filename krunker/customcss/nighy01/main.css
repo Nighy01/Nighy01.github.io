@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2021/5/22 */
+/* Updated: 2021/06/06 */
 
 /* Variables */
 :root {
@@ -3549,10 +3549,10 @@ input:hover + .tSubCheck {
 }
 
 /* New to Krunker? Box */
-#youNewDiv { /* -133px Margin Left, -6px Margin Top, transparent Background Color */
+#youNewDiv { /* -132px Margin Left, -6px Margin Top, transparent Background Color */
     margin-top: -6px;
     background-color: rgb(255 255 255 / 0%) !important;
-    margin-left: -133px;
+    margin-left: -132px !important;
 }
 
 /* New to Krunker? Picture Icon */
@@ -4336,8 +4336,34 @@ input:checked+.sliderSml:active:after {
     background-color: rgb(85 85 85) !important;
 }
 
+/* Unknown */
 #serverHolder > div:nth-child(1) {
     color: black !important;
+}
+
+/* New to... */
+.youNewDiv {
+    margin-left: -132px !important;
+}
+
+/* Advanced Settings Selected */
+[style="background-color: rgb(33, 150, 243);"] {
+    background-color: rgb(146 146 146) !important;
+}
+
+/* Advanced Settings Select */
+.advancedToggle {
+    color: #fff !important;
+}
+
+/* Advanced Settings Select Active */
+.advancedToggle:hover {
+    background-color: rgb(138 138 138) !important;
+}
+
+/* Advanced Settings Select Active */
+.advancedToggle:active {
+    background-color: rgb(98 98 98) !important;
 }
 
 /*
