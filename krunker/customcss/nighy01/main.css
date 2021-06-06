@@ -1188,9 +1188,9 @@ input:checked + .slider2:hover {
     background-color: rgb(146, 146, 146) !important;
 }
 
-/* Unknown */
-#serverSearch {
-    color: rgb(255, 255, 255) !important;
+/* Server Search */
+#serverSearch { /* Black Text */
+    color: rgb(0 0 0) !important;
 }
 
 /* "Enter Username" & "Enter Password" Input */
@@ -3684,8 +3684,9 @@ input:hover + .tSubCheck {
 }
 
 /* Enter Text Input */
-.accountInput { /* White Background Color */
+.accountInput { /* White Background Color, Black Text Color */
     background-color: rgb(255 255 255) !important;
+    color: #000 !important;
 }
 
 /* K/D Count */
@@ -4315,11 +4316,6 @@ input:checked+.sliderSml:active:after {
     display: none !important;
 }
 
-/* For lost Pass... */
-#accResp { /* Hide */
-    display: none !important;
-}
-
 /* Reticle Cards */
 .noBtnCard {
     color: #fff !important;
@@ -4364,6 +4360,16 @@ input:checked+.sliderSml:active:after {
 /* Advanced Settings Select Active */
 .advancedToggle:active {
     background-color: rgb(98 98 98) !important;
+}
+
+/* Slide Name */
+.slideName {
+    color: rgba(255,255,255,.9) !important;
+}
+
+/* Slide Players */
+.slidePlayers {
+    color: rgba(255,255,255,.9) !important;
 }
 
 /*
