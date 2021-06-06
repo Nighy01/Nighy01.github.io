@@ -4342,7 +4342,7 @@ input:checked+.sliderSml:active:after {
 }
 
 /* New to... */
-.youNewDiv {
+.youNewDiv, #twitchDropsAd, #newUserGuide, #tlInfHold > div:nth-child(3) {
     margin-left: -132px !important;
 }
 
