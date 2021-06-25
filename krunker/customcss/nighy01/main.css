@@ -4372,6 +4372,11 @@ input:checked+.sliderSml:active:after {
     color: rgba(255,255,255,.9) !important;
 }
 
+/* Server Browser Game Select Active */
+.settNameIn:active {
+    background-color: rgb(0 0 0 / 55%) !important;
+}
+
 /*
 
    2021/2/3:
