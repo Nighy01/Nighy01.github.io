@@ -2317,6 +2317,21 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
     color: black !important;
 }
 
+/* Krunk TV Box */
+#leftBox {
+    background-color: rgb(255 255 255 / 0%) !important;
+}
+
+/* Purchase Info Hover Button */
+.purchInfoBtn:hover {
+    background-color: rgb(164 64 64) !important;
+}
+
+/* Purchase Info Button */
+.purchInfoBtn {
+    background-color: rgb(248 96 96) !important;
+}
+
 /*
 
    Pictures:

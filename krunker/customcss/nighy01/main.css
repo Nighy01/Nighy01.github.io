@@ -469,7 +469,7 @@
 
 /* Unknown */
 .searchBtn:active {
-    background-color: rgb(125, 125, 125) !important;
+    background-color: rgb(125 67 67) !important;
 }
 
 /* Unknown */
@@ -3499,7 +3499,7 @@ input:hover + .tSubCheck {
 }
 
 /* By purchasing you agree to the Terms & Conditions */
-#menuWindow > div:nth-child(6) > div{
+[style="color:rgba(255,255,255,0.4);font-size:19px;margin-top:10px;width:100%;text-align:center;"]{
     color: black !important;
 }
 
@@ -4344,22 +4344,12 @@ input:checked+.sliderSml:active:after {
 
 /* Advanced Settings Selected */
 [style="background-color: rgb(33, 150, 243);"] {
-    background-color: rgb(146 146 146) !important;
+    background-color: rgb(164 64 64) !important;
 }
 
 /* Advanced Settings Select */
 .advancedToggle {
     color: #fff !important;
-}
-
-/* Advanced Settings Select Active */
-.advancedToggle:hover {
-    background-color: rgb(138 138 138) !important;
-}
-
-/* Advanced Settings Select Active */
-.advancedToggle:active {
-    background-color: rgb(98 98 98) !important;
 }
 
 /* Slide Name */
@@ -4375,6 +4365,48 @@ input:checked+.sliderSml:active:after {
 /* Server Browser Game Select Active */
 .settNameIn:active {
     background-color: rgb(0 0 0 / 55%) !important;
+}
+
+/* Advanced Settings Button */
+.advancedToggle {
+    background-color: rgb(248 96 96) !important;
+}
+
+/* Advanced Settings Hover Button */
+.advancedToggle:hover {
+    background-color: rgb(164 64 64) !important;
+}
+
+/* Advanced Settings Hover Button */
+.advancedToggle:active {
+    background-color: rgb(125 67 67) !important;
+}
+
+/* Spectate KeyBinds Text */
+#specContr > div > span {
+    color: #fff !important;
+}
+
+/* Player List Host Icon */
+#menuWindow > table > tbody > tr > td.pListName > i {
+    color: #fff !important;
+}
+
+/* Ranked Item Unlock Button */
+.rnkShpBtn {
+    color: #fff !important;
+    background-color: rgb(248 96 96) !important;
+}
+
+/* Ranked Shop Item Name */
+.rnkShpINm {
+    color: #fff !important;
+}
+
+/* Inbox Text */
+.mailText {
+    background-color: rgb(66 66 66 / 60%) !important;
+    border-radius: 5px;
 }
 
 /*
