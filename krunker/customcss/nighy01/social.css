@@ -106,8 +106,8 @@ a:hover {
 /* Unknown */
 .scrollItem {
     max-height: calc(100% - 30px);
-    background-color: rgba(255, 255, 255, 0.64) !important;
-    box-shadow: rgba(255, 255, 255, 0.47) 0px 7px 0px 0px !important;
+    background-color: rgb(169 169 169 / 80%) !important;
+    box-shadow: rgba(255 255 255 / 0.47) 0px 7px 0px 0px !important;
 }
 
 /* Unknown */
@@ -639,11 +639,6 @@ img:hover {
     color: rgb(255, 255, 255) !important;
 }
 
-/* "KR" etc Text */
-[style="color:#fff"] { /* White Text Color */
-    color: white !important;
-}
-
 /* Unknown */
 .tListN.inv {
     background-color: rgba(255, 255, 255, 0.42) !important;
@@ -1159,10 +1154,13 @@ img:hover {
     border-color: var(--ppbhc) !important;
 }
 
-/* Unknown */
+/* FeedTab */
 .feedTab {
     background-color: rgba(255, 255, 255, 0.64) !important;
-    box-shadow: rgba(255, 255, 255, 0.47) 0px 7px 0px 0px !important;
+    box-shadow: rgb(255 255 255 / 47%) 0px 7px 0px 0px !important;
+    border-radius: 10px;
+    padding: 5px;
+    color: black !important;
 }
 
 /* "Verify" "Unverify" Hover Button On Profile Page */
@@ -1377,6 +1375,7 @@ img:hover {
 /* Settings Popup */
 #settingsPop {
     background-color: rgba(213, 213, 213, 0.82) !important;
+    box-shadow: none;
 }
 
 /* Slider Input Checked In Settings Popup */
@@ -2101,27 +2100,30 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
 }
 
 /* [Share] Button On Map Info Page */
-.button { /* rgb(248 96 96) Background Color, rgb(164 64 64) Box Shadow Color */
-    background-color: var(--mb) !important;
-    box-shadow: inset 0 -7px 0 0 var(--mhb) !important;
+.button { 
+    background-color: rgb(255 255 255) !important;
+    box-shadow: inset 0 -7px 0 0 rgb(255 255 255) !important;
+    color: #000 !important;
+    border: 3px solid #000;
 }
 
 /* [Host] Button On Map Info Page */
-.buttonH { /* rgb(248 96 96) Background Color, rgb(164 64 64) Box Shadow Color */
-    background-color: var(--mb) !important;
-    box-shadow: inset 0 -7px 0 0 var(--mhb) !important;
+.buttonH { 
+    background-color:rgb(255 255 255) !important;
+    box-shadow: inset 0 -7px 0 0 rgb(255 255 255) !important;
 }
 
 /* [Play] Button On Map Info Page */
-.buttonS { /* rgb(248 96 96) Background Color, rgb(164 64 64) Box Shadow Color */
-    background-color: var(--mb) !important;
-    box-shadow: inset 0 -7px 0 0 var(--mhb) !important;
+.buttonS { 
+    background-color: rgb(255 255 255) !important;
+    box-shadow: inset 0 -7px 0 0 rgb(255 255 255) !important;
+    color: #9eeb56 !important;
 }
 
 /* [Report] Button On Map Info Page */
-.buttonR { /* rgb(248 96 96) Background Color, rgb(164 64 64) Box Shadow Color */
-    background-color: var(--mb) !important;
-    box-shadow: inset 0 -7px 0 0 var(--mhb) !important;
+.buttonR { 
+    background-color: rgb(255 255 255) !important;
+    box-shadow: inset 0 -7px rgb(255 255 255) !important;
 }
 
 /* "No active servers" Text On Map Info Page Of Servers Tab */
@@ -2253,8 +2255,8 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
 }
 
 /* Big Tabs */
-.bigMenTabs { /* rgb(143 143 143) Background Color */
-    background-color: rgb(143 143 143) !important;
+.bigMenTabs { /* rgb(88 88 88 / 0.8) Background Color */
+    background-color: rgb(88 88 88 / 0.8) !important;
 }
 
 /* Big TabA/Tab */
@@ -2331,6 +2333,143 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
 .purchInfoBtn {
     background-color: rgb(248 96 96) !important;
 }
+
+/* Feed Tab Icons */
+.feedTabIcon {
+    color: rgb(0 0 0 / 90%) !important;
+}
+
+/* Post Content Text */
+#postHolder > div > div.postHead > div.postContent > div, #postHolder > div > div.postHead > div.postContent > div > div {
+    color: #000 !important;
+}
+
+/* Likes Holder */
+.likesHolder {
+    padding: 5px;
+    color: rgba(255,255,255,.4);
+    background: rgb(0 0 0 / 50%);
+    border-radius: 5px;
+}
+
+/* Post TopBar Text */
+#postTopBar > b, #postTopBar > span.material-icons.likeBtn {
+    color: #000 !important;
+}
+
+/* Comment Hover Button */
+#postTopStat > div > span:nth-child(3):hover, #postHolder > div > div.likesHolder > span:nth-child(3):hover, #pTabContent_activity > div > div.likesHolder > span:nth-child(3):hover {
+    color: #00bdff !important;
+}
+
+/* Comment Button */
+#postTopStat > div > span:nth-child(3), #postHolder > div > div.likesHolder > span:nth-child(3) {
+    color: #ffffff !important;
+}
+
+/* Name, Post Content */
+#singlePostH > div:nth-child(2) > div > div.postInfo > div > span > a, #singlePostH > div:nth-child(2) > div > div.postContent > div > div {
+    color: #000 !important;
+}
+
+/* Reply Input */
+.replyInput {
+    color: #000 !important;
+}
+
+/* Home Button */
+#modsHolder > div:nth-child(1) > div > div.bigMenTab.bigMenTabA > span, #modsHolder > div:nth-child(1) > div > div:nth-child(1) > span {
+    color: #fff !important;
+}
+
+/* Mod List */
+#modList {
+    color: #fff !important;
+}
+
+/* Featured Mods... */
+.mapListCat {
+    background-image: linear-gradient(to right,rgb(0 0 0 / 71%),rgba(0,0,0,0.2));
+}
+
+/* Mod Cards */
+.mapListCrdI {
+    background-color: #0000 !important;
+}
+
+/* Map List Item */
+.mapListItem {
+    background-color: rgb(0 0 0 / 60%) !important;
+}
+
+/* Mod Name...etc */
+#modProfile > div > div:nth-child(3) > div:nth-child(1), #modProfile > div > div:nth-child(3) > div:nth-child(3) > div:nth-child(1), #modProfile > div > div:nth-child(3) > div:nth-child(3) > div:nth-child(1) > b, #modProfile > div > div:nth-child(3) > div:nth-child(3) > div:nth-child(2), #modProfile > div > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > b, #modProfile > div > div:nth-child(3) > div:nth-child(2), #modProfile > div > div:nth-child(3) > div:nth-child(2) > a {
+    color: #000 !important;
+}
+
+/* Play...etc */
+.button.mod {
+    color: #fff !important;
+}
+
+/* Map Name...etc */
+#mapProfile > div > div:nth-child(3) > div:nth-child(1), #mapProfile > div > div:nth-child(3) > div:nth-child(2) > a, #mapProfile > div > div:nth-child(3) > div:nth-child(2), #mapProfile > div > div:nth-child(3) > div:nth-child(3), #mapDescr > div > div > b, #mapProfile > div > div:nth-child(3) > div:nth-child(3) > span:nth-child(2), #mapProfile > div > div:nth-child(3) > div:nth-child(3) > b:nth-child(1), #mapProfile > div > div:nth-child(3) > div:nth-child(3) > span:nth-child(5), #totalOnline {
+    color: #000 !important;
+}
+
+/* Leaderboard Players in Map Info */
+#mapLeaders > div:nth-child(1), #mapLeaders > div:nth-child(1) > span {
+    color: #000 !important;
+}
+
+/* Big Map Featured Play Button */
+#bigMFeatPBtn {
+    border: 3px solid #fff !important;
+    background-color: rgb(0 0 0 / 60%) !important;
+    box-shadow: none !important;
+}
+
+/* Map TabBar Home Button */
+#mapsHolder > div:nth-child(1) > div > div:nth-child(1) > span, #mapsHolder > div:nth-child(1) > div > div.bigMenTab.bigMenTabA > span {
+    color: #fff !important;
+}
+
+/* Publish or Create a Game */
+#mapsHolder > div.setBodH > div, #mapsHolder > div.setBodH > div > a {
+    color: #fff !important;
+}
+
+/* Map List */
+#mapList {
+    color: rgba(255,255,255) !important;
+}
+
+/* Map Search Button */ 
+.searchListBtn {
+    background-color: rgb(248 96 96) !important;
+}
+
+/* All */
+#mpCat, #mpSrch {
+    color: #fff !important;
+    background-color: rgb(160 160 160 / 0.70) !important;
+}
+
+/* Search Results */
+#searchResultsMO {
+    color: #fff !important;
+}
+
+/* Missing Preview */
+#modsHolder > div.bigMFeatVid > div {
+    color: #fff !important;
+}
+
+/* Profile Post Feed */
+#pTabContent_activity > div > div.postHead > div.postInfo > div > span > a, #pTabContent_activity > div > div.postHead > div.postContent > div {
+    color: #000 !important;
+}
+
 
 /*
 
