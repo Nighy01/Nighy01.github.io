@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Hub Custom CSS */
-/* Updated: 2021/07/17 */
+/* Updated: 2021/07/18 */
 
 /* Variables */
 :root {
@@ -2467,6 +2467,11 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
 
 /* Profile Post Feed */
 #pTabContent_activity > div > div.postHead > div.postInfo > div > span > a, #pTabContent_activity > div > div.postHead > div.postContent > div {
+    color: #000 !important;
+}
+
+/* Feed Profile Name */
+#postHolder > div > div.postHead > div.postInfo > div > span > a {
     color: #000 !important;
 }
 

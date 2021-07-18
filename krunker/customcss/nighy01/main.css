@@ -1,5 +1,5 @@
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2021/07/04 */
+/* Updated: 2021/07/18 */
 
 /* Variables */
 :root {
@@ -4408,6 +4408,17 @@ input:checked+.sliderSml:active:after {
     background-color: rgb(66 66 66 / 60%) !important;
     border-radius: 5px;
 }
+
+/* Krunker Classics...etc */
+.mapListCat {
+    color: #fff !important;
+}
+
+/* Big Map Featured Bar */
+#bigMFeatVbar {
+    color: rgba(255,255,255,.5) !important;
+}
+
 
 /*
 
