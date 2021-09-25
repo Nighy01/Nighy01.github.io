@@ -1,0 +1,1146 @@
+/* Developing Process */
+/* 2021/09/25 */
+
+
+
+/* ------------------------------ Configs ------------------------------ */
+
+    :root {
+    
+    /* Main Background Color */
+     --main-background-color: rgba(149, 156, 171, 0.8) !important;
+    
+    }
+
+/* ------------------------------ Configs ------------------------------ */
+
+
+
+/* ------------------------------ KeyFrames ------------------------------ */
+
+    /* Show Animation on Startup */
+     @keyframes showanimationonstartup {
+        from {
+          margin-bottom: -120px;
+        }
+        to {
+          margin-bottom: 0px;
+        }
+    }
+
+    /* Fade In ChatMsg */
+     @keyframes chatmsgfadein {
+        from {
+         opacity: 0;
+        }
+        to { 
+         opacity: 1;
+       }
+    }
+
+    /* Fade In */
+     @keyframes fadein {
+        from {
+         opacity: 0;
+        }
+        to { 
+         opacity: 1;
+       }
+    }
+
+    /* InstructionsUpdate Popup Animation */
+     @keyframes instructionsupdatepopupanimation {
+        0%{
+            transform: scale(0);
+        }
+        10%{
+            transform: scale(0.1) translate(-500%,-500%);
+        }
+        20%{
+            transform: scale(0.2) translate(-250%,-250%);
+        }
+        30%{
+            transform: scale(0.3) translate(-166%,-166%);
+        }
+        40%{
+            transform: scale(0.4) translate(-124.5%,-124.5%);
+        }
+        50%{
+            transform: scale(0.5) translate(-99.5%,-99.5%);
+        }
+        60%{
+            transform: scale(0.6) translate(-83%,-83%);
+        }
+        70%{
+            transform: scale(0.7) translate(-71%,-72%);
+        }
+        80%{
+            transform: scale(0.8) translate(-62%,-63%);
+        }
+        90%{
+            transform: scale(0.9) translate(-55%,-56%);
+        }
+        100%{
+            transform: scale(1) translate(-50%,-50%);
+        }
+    }
+
+    /* Window Popup Animation */
+     @keyframes windowpopupanimation {
+        0%{
+            transform: scale(0);
+        }
+        10%{
+            transform: scale(0.1) translate(-500%,-500%);
+        }
+        20%{
+            transform: scale(0.2) translate(-250%,-250%);
+        }
+        30%{
+            transform: scale(0.3) translate(-166%,-166%);
+        }
+        40%{
+            transform: scale(0.4) translate(-124.5%,-124.5%);
+        }
+        50%{
+            transform: scale(0.5) translate(-99.5%,-99.5%);
+        }
+        60%{
+            transform: scale(0.6) translate(-83%,-83%);
+        }
+        70%{
+            transform: scale(0.7) translate(-71%,-72%);
+        }
+        80%{
+            transform: scale(0.8) translate(-62%,-63%);
+        }
+        90%{
+            transform: scale(0.9) translate(-55%,-56%);
+        }
+        100%{
+            transform: scale(1) translate(-50%,-50%);
+        }
+    }
+
+    /* Popup Animation */
+     @keyframes popupanimation {
+        0%{
+            transform: scale(0);
+        }
+        10%{
+            transform: scale(0.1) translate(-500%,-500%);
+        }
+        20%{
+            transform: scale(0.2) translate(-250%,-250%);
+        }
+        30%{
+            transform: scale(0.3) translate(-166%,-166%);
+        }
+        40%{
+            transform: scale(0.4) translate(-124.5%,-124.5%);
+        }
+        50%{
+            transform: scale(0.5) translate(-99.5%,-99.5%);
+        }
+        60%{
+            transform: scale(0.6) translate(-83%,-83%);
+        }
+        70%{
+            transform: scale(0.7) translate(-71%,-72%);
+        }
+        80%{
+            transform: scale(0.8) translate(-62%,-63%);
+        }
+        90%{
+            transform: scale(0.9) translate(-55%,-56%);
+        }
+        100%{
+            transform: scale(1) translate(-50%,-50%);
+        }
+    }
+
+    /* Guide Popup Animation */
+     @keyframes guidepopupanimation {
+        0%{
+            transform: scale(0);
+        }
+        10%{
+            transform: scale(0.1) translate(-500%,-500%);
+        }
+        20%{
+            transform: scale(0.2) translate(-250%,-250%);
+        }
+        30%{
+            transform: scale(0.3) translate(-166%,-166%);
+        }
+        40%{
+            transform: scale(0.4) translate(-124.5%,-124.5%);
+        }
+        50%{
+            transform: scale(0.5) translate(-99.5%,-99.5%);
+        }
+        60%{
+            transform: scale(0.6) translate(-83%,-83%);
+        }
+        70%{
+            transform: scale(0.7) translate(-71%,-72%);
+        }
+        80%{
+            transform: scale(0.8) translate(-62%,-63%);
+        }
+        90%{
+            transform: scale(0.9) translate(-55%,-56%);
+        }
+        100%{
+            transform: scale(1) translateX(-50%);
+        }
+    }
+
+    /* Purchase Popup Animation */
+     @keyframes purchasepopupanimation {
+        0%{
+            transform: scale(0);
+        }
+        10%{
+            transform: scale(0.1) translate(-50%,-0%);
+        }
+        20%{
+            transform: scale(0.2) translate(-50%,-0%);
+        }
+        30%{
+            transform: scale(0.3) translate(-50%,-0%);
+        }
+        40%{
+            transform: scale(0.4) translate(-50%,-0%);
+        }
+        50%{
+            transform: scale(0.5) translate(-50%,-0%);
+        }
+        60%{
+            transform: scale(0.6) translate(-50%,-0%);
+        }
+        70%{
+            transform: scale(0.7) translate(-50%,-0%);
+        }
+        80%{
+            transform: scale(0.8) translate(-50%,-0%);
+        }
+        90%{
+            transform: scale(0.9) translate(-50%,-0%);
+        }
+        100%{
+            transform: scale(1) translateX(-50%,-0%);
+        }
+    }
+
+    /* Kill Card Animation */
+     @keyframes killcardanimation {
+        from {
+          margin-bottom: -120px;
+        }
+        to {
+          margin-bottom: 0px;
+        }
+    }
+
+/* ------------------------------ KeyFrames ------------------------------ */
+
+
+
+/* ------------------------------ 1. Startup ------------------------------ */
+
+    /* Krunker Loader Logo */
+     #loadHeader {
+        display: none !important;
+    }
+
+    /* Loading... */ 
+     #loadGamNm {
+        display: none !important;
+    }
+
+    /* AD Container */
+     #aContainer {
+        background: var(--main-background-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.2) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px) !important;
+        border-radius: 7px !important;
+        animation: showanimationonstartup 0.5s;
+        transition-duration: 0.2s !important;
+    }
+
+    /* Krunker Editor Button */
+     #loadEditrBtn {
+        display: none !important;
+    }
+
+    /* Loading Backkground */
+     #initLoader {
+        background-color: black !important;
+    }
+
+    /* Krunker Tips Loader */
+     #loadTipsHolder {
+        transform: translateX(-50%) translateY(-260%);
+        animation: showanimationonstartup 0.5s;
+    }
+
+    /* lC Cont */
+     #lC-cont {
+        animation: showanimationonstartup 0.5s;
+    }
+
+    /* Krunker Yendis Text */
+     #loadInfoRHolder, #loadInfoLHolder {
+        animation: showanimationonstartup 0.5s;
+    }
+
+/* ------------------------------ 1. Startup ------------------------------ */
+
+
+
+/* ------------------------------ 2. Main ------------------------------ */
+
+    /* instructionsUpdate Links */
+    
+       /* Find a New Game */ #instructionsUpdate > div:nth-child(4) > a:nth-child(1), 
+
+       /* Watch on Twitch(!important overrided) #instructionsUpdate > div:nth-child(4) > a:nth-child(2),*/
+
+       /* Server Browser */ #instructionsUpdate > div:nth-child(5) > a:nth-child(1), 
+
+       /* Settings */ #instructionsUpdate > div:nth-child(5) > a:nth-child(2), 
+
+       /* ChangeLog */ #instructionsUpdate > div:nth-child(5) > a:nth-child(3) {
+
+        color: rgb(255, 255, 255, 85%);
+    }
+
+    /* Game is full.. etc Message */
+     #instructionsUpdate {
+        background: var(--main-background-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px) !important;
+        border-radius: 7px !important;
+        animation: instructionsupdatepopupanimation .2s;
+        transform: scale(1) translate(-50%,-50%);
+    }
+
+    /* MenuItemContainer */
+     #menuItemContainer {
+        width: fit-content;
+        height: min-content;
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row;
+        background: none !important;
+    }
+
+    /* MenuItem */
+     .menuItem {
+        align-items: center;
+        pointer-events: none;
+        position: relative;
+        display: inline-block;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 14px 5px 12px;
+    }
+
+    /* MenuItem Hover */
+     .menuItem:hover {
+        color: rgb(255, 255, 255);
+        border-left: none;
+    }
+
+    /* MenuItem Active */
+     .menuItem:active {
+        color: rgb(255, 255, 255);
+    }
+
+    /* MenuItem+Title */
+     .menuItem .menuItemTitle {
+
+       /* Make Menu Top */
+
+        margin-top: -6px;
+        text-transform: var(--text-transform);
+        pointer-events: all;
+        transition: all 0.1s ease 0s;
+        position: relative;
+        display: inline-block;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 5px 18px 17px;
+        color: rgb(255, 255, 255) !important;
+        font-size: 18px !important;
+
+       /* Figma */
+
+        background: var(--main-background-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4);
+        box-sizing: border-box;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(20px) !important;
+        border-radius: 7px;
+
+    }
+
+    /* Menu Title Hover */
+     .menuItemTitle:hover {
+
+       /* Make Menu Top */
+
+        margin-top: -6px;
+        text-transform: var(--text-transform);
+        pointer-events: all;
+        -webkit-transform: scale(.95);
+        transform: scale(.95);
+        position: relative;
+        display: inline-block;
+        box-sizing: border-box;
+        border-radius: 7px;
+        padding: 5px 18px 17px;
+        color: rgb(255, 255, 255) !important;
+        background: rgba(98, 110, 148, 0.8) !important;
+        font-size: 18px !important;
+        
+    }
+
+    /* Menu Title Active */
+     .menuItemTitle:active {
+
+       /* Make Menu Top */
+       
+        margin-top: -6px;
+        text-transform: var(--text-transform);
+        pointer-events: all;
+        -webkit-transform: scale(.9);
+        transform: scale(.9);
+        position: relative;
+        display: inline-block;
+        box-sizing: border-box;
+        border-radius: 7px;
+        padding: 5px 18px 17px;
+        color: white !important;
+        background: rgba(28, 42, 85, 0.8) !important;
+        font-size: 18px !important;
+
+    }
+
+    /* Menu Item Icon */
+     .menBtnIcn {
+        display: none !important;
+    }
+
+    /* Stream Container (Streaming Now!, Featured Creators, Ad), New to Krunker? Div  */
+     #streamContainer, .youNewDiv {
+        left: 0px;
+        top: 78px;
+        background: var(--main-background-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px) !important;
+        border-radius: 7px;
+        margin-left: -130px !important;
+        transition-duration: 0.2s !important;
+    }
+
+
+    /* Discord Button */
+     .discordSocial {
+        background-image: url(https://i.imgur.com/COz2mXw.png) !important;
+    }
+
+    /* Reddit Button */
+     .redditSocial {
+        background-image: url(https://i.imgur.com/oPQ4law.png) !important;
+    }
+
+    /* Download Client Button */
+     [src="./img/client.png"] {
+        content: url(https://i.imgur.com/63KL4lk.png) !important;
+    }
+
+    /* Krunker Editor Button */
+     [src="./img/editor.png"] {
+        content: url(https://i.imgur.com/jpdDhgi.png) !important;
+    }
+
+    /* Editor Button */
+     #editorBtnM {
+        margin-left: 5px !important;
+        margin-right: 0px !important;
+        margin-top: -3px !important;
+        height: 54px !important;
+    }
+
+    /* Buttons(Host,KPD...etc) */
+     .button {
+        background: var(--main-background-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px) !important;
+        border-radius: 7px;
+    }
+
+    /* Buttons Hover(Host,KPD...etc) */
+     .button:hover {
+        background: rgba(98, 110, 148, 0.8) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px) !important;
+        border-radius: 7px;
+    }
+
+    /* Buttons Active(Host,KPD...etc) */
+     .button:active {
+        background: rgba(28, 42, 85, 0.8) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px) !important;
+        border-radius: 7px;
+    }
+
+    /* Singed Out Header Bar(Shows [Login or Register] Button) */
+     #signedOutHeaderBar {
+        background: var(--main-background-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4);
+        box-shadow: 0px 4px 30px rgb(0 0 0 / 25%);
+        backdrop-filter: blur(20px) !important;
+        border-radius: 7px;
+    }
+
+    /* Header Bar */
+     .headerBar {
+        background: var(--main-background-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
+        backdrop-filter: blur(20px);
+        border-radius: 7px;
+    }
+
+    /* Header Bar Level Count */
+     #mLevelCont {
+        background-color: rgb(0 0 0 / 30%) !important;
+        backdrop-filter: blur(20px);
+    }
+
+    /* Top Bar Right(Download Client, Krunker Reddit...etc) */
+     .headerBarRight {
+        background: var(--main-background-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px);
+        border-radius: 7px;
+    }
+
+    /* Featured Games in Top Right */
+     #newsHolder {
+        background: var(--main-background-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px);
+        border-radius: 7px;
+    }
+
+    /* Chat List [User: Test Message] */
+     #chatList {
+        background: var(--main-background-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px);
+        border-radius: 7px;
+        transition-duration: 0.2s !important;
+    }
+
+    /* Enter Message Input ( [Switch Global/Team Chat] [Enter Message] [Voice] ) */
+     #chatInputHolder {
+        background: var(--main-background-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px);
+        border-radius: 7px;
+        transition-duration: 0.2s !important;
+    }
+
+    /* Voice KeyBind */
+      #recTimer {
+        display: none !important;
+    }
+
+    /* Chat */
+      #chatHolder {
+        left: 15px;
+        transition-duration: 0.2s !important;
+    }
+
+    /* Chat on Menu */
+       #uiBase.onMenu #chatHolder {
+        left: 15px;
+        transition-duration: 0.2s !important;
+    }
+
+    /* Chat on End Screen */
+       #uiBase.onEndScrn #chatHolder {
+        left: 15px;
+        transition-duration: 0.2s !important;
+    }
+
+    /* Chat on Game */
+       #uiBase.onGame #chatHolder {
+        left: 15px;
+        transition-duration: 0.2s !important;
+    }
+
+    /* Spectate Slider to Text */
+     .sliderSml, #spectButton > span {
+        visibility: hidden;
+        transition-duration: .1s;
+    }
+
+    /* Spectate Slider Hover */
+     .sliderSml:hover, #spectButton > span {
+        visibility: hidden;
+        transform: scale(.95) translate(-7%,-10%);
+        transition-duration: .1s;
+    }
+
+    /* Spectate Slider Hover */
+     .sliderSml:active, #spectButton > span {
+        visibility: hidden;
+        transform: scale(.9) translate(-20%,-10%);
+        transition-duration: .1s;
+    }    
+
+    /* Spectate After Button */
+     .sliderSml:after {
+        position: relative;
+        right: 95px;
+        color: white;
+        background-color: var(--main-background-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        border-radius: 7px;
+        padding: 5px;
+        top: -20px;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+        visibility: visible;
+        content:'Spectate';
+        transition-duration: .1s;
+    }
+
+    /* Spectate Hover After Button */
+     .sliderSml:hover:after {
+        position: relative;
+        right: 95px;
+        color: white;
+        background: rgba(98, 110, 148, 0.8) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        border-radius: 7px;
+        padding: 5px;
+        top: -20px;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+        visibility: visible;
+        content:'Spectate';
+        transition-duration: .1s;
+    }
+
+    /* Spectate Active After Button */
+     .sliderSml:active:after {
+        position: relative;
+        right: 95px;
+        color: white;
+        background: rgba(28, 42, 85, 0.8) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        visibility: visible;
+        border-radius: 7px;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+        padding: 5px;
+        top: -20px;
+        content:'Spectate';
+        transition-duration: .1s;
+    }
+
+    /* Spectate Checked SliderSml */
+     input:checked+.sliderSml {
+        visibility: hidden;
+        transform: scale(.85) translate(-27%,-10%);
+        transition-duration: .1s;
+    }
+
+    /* Spectate Checked SliderSml */
+     input:checked:hover+.sliderSml {
+        visibility: hidden;
+        transform: scale(.95) translate(-7%,-10%);
+        transition-duration: .1s;
+    }
+
+    /* Spectate Checked SliderSml */
+     input:checked:active+.sliderSml {
+        visibility: hidden;
+        transform: scale(.9) translate(-20%,-10%);
+        transition-duration: .1s;
+    }
+
+    /* Spectate SliderSml After */
+     input:checked+.sliderSml:after {
+        position: relative;
+        right: 95px;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+        visibility: visible;
+        content:'Spectate';
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        color: white;
+        background: rgba(95, 98, 107, 0.8) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        border-radius: 7px;
+        padding: 5px;
+        top: -20px;
+        transition-duration: .1s;
+    }
+
+    /* Spectate SliderSml Hover After */
+     input:checked+.sliderSml:hover:after {
+        position: relative;
+        right: 95px;
+        border-radius: 7px;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+        padding: 5px;
+        top: -20px;
+        visibility: visible;
+        content:'Spectate';
+        color: white;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        background-color: rgba(98, 110, 148, 0.8) !important;
+        transition-duration: .1s;
+    }
+
+    /* Spectate SliderSml Active After */
+     input:checked+.sliderSml:active:after {
+        position: relative;
+        right: 95px;
+        border-radius: 7px;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+        padding: 5px;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        top: -20px;
+        visibility: visible;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        content:'Spectate';
+        color: white;
+        background-color: rgba(28, 42, 85, 0.8) !important;
+        transition-duration: .1s;
+    }
+
+    /* KRUNKER Logo */
+     #gameNameHolder {
+        display: none !important;
+    }
+
+    /* Version of Krunker */
+     #seasonLabel {
+        display: none !important;
+    }
+
+    /* WindowUI */ 
+     #menuWindow.dark {
+        background-color: #a3a3a38f !important;
+        box-shadow: 0px 0px 20px 3px rgb(16 16 16) !important;
+        backdrop-filter: blur(20px) !important;
+        animation: windowpopupanimation .2s;
+        transition-duration: 0.2s !important;
+    }
+
+    /* Loading... ChangeLog Window */
+     #menuWindow {
+        color: #fff !important;
+        transition-duration: 0.2s !important;
+    }
+
+    /* Home Button on Map/Mods Window */
+     #menuWindow > div > div > div.bigMenTab.bigMenTabA > span, #menuWindow > div > div > div.bigMenTab.bigMenTab > span {
+        color: #fff !important;
+    }
+
+    /* FaceIT Icon */
+     #faceItIconM {
+        display: none !important;
+    }
+
+    /* Settings Header */
+     .settingsHeader {
+        background-color: #00000000 !important;
+    }
+
+    /* WindowUI Background */
+     #windowHolder.popupWin {
+        background-color: rgb(0 0 0 / 0.2) !important;
+        animation: fadein .3s;
+        transition-duration: .2s;
+    }
+
+    /* Server Browser Game Select Active */
+     .settNameIn:active {
+        background-color: rgb(0 0 0 / 60%) !important;
+        transition: .2s;
+    }
+
+    /* Settings Tab Layout */
+    #settingsTabLayout {
+        background-color: rgb(0 0 0 / 0%) !important;
+    }
+
+    /* Server Browser Game Select Hover */
+     .settNameIn:hover {
+        transition: .2s;
+    }
+
+    /* Settings Tab */
+     .settingTab {
+        background-color: rgb(142 142 142 / 70%) !important;
+        backdrop-filter: blur(20px);
+    }
+
+    /* Popup Background */
+     #popupBack {
+        background-color: rgb(0 0 0 / 20%) !important;
+        backdrop-filter: blur(5px);
+        animation: fadein .3s;
+    }
+
+    /* Confirm Popup */
+     #confPremiumPop, #twitchPop, #confPop, #clientExitPop, #confPurchItemPop {
+        backdrop-filter: blur(20px);
+        background-color: rgb(80 80 80 / 60%);
+        animation: popupanimation .2s;
+    }
+
+    /* Popup Content */
+     #popupContent {
+        background-color: rgb(80 80 80 / 60%) !important;
+        backdrop-filter: blur(20px);
+        animation: popupanimation .2s;
+    }
+
+    /* Server Browser Game Select Active */
+     .settNameIn {
+        transition: .2s;
+    }
+
+    /* Business... etc of TermsInfo Button */
+     #termsInfo {
+        animation: showanimationonstartup 0.5s;
+        background: var(--main-background-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px);
+        border-radius: 7px !important;
+    }
+
+    /* Host Game... etc of SubLogoButtons */
+     #subLogoButtons {
+        animation: showanimationonstartup 0.5s;
+    }
+
+    /* Brave Warning */
+     #braveWarning {
+        display: none !important;
+    }
+
+    /* Enter Message Input */
+     #chatInputHolder {
+        animation: showanimationonstartup 0.5s;
+    }
+
+    /* Chat Text Outline */
+    .chatTextOutline {
+        text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.7), 1px -1px 0 rgb(0, 0, 0, 0.7), -1px 1px 0 rgb(0, 0, 0, 0.7), 1px 1px 0 rgb(0, 0, 0, 0.7);
+    }
+
+    /* Voice Icon */
+     #voiceDisplay {
+        animation: showanimationonstartup 0.5s;
+        left: 360px !important;
+        transition-duration: 0.2s !important;
+    }
+    
+    /* Voice Icon UI Base */ 
+
+     /* on Menu */ #uiBase.onMenu #voiceDisplay, 
+
+     /* on End Screen(Victory/Deaft Screen) */ #uiBase.onEndScrn #voiceDisplay, 
+
+     /* on Killed By/You died Screen */ #uiBase.onDeathScrn #voiceDisplay, 
+     
+     /* on Spectate */ #uiBase.onSpect #voiceDisplay {
+
+        bottom: 21px !important;
+    }
+    
+    /* Voice on Game */ 
+     #uiBase.onGame #voiceDisplay {
+        bottom: 150px;
+    }
+
+    /* Chat Message Text */
+     .chatMsg, .chatItem, .chatTextOutline {
+        animation: chatmsgfadein 0.5s;
+        transition-duration: 0.2s !important;
+    }
+
+    /* Chat Msg Content */
+     .chatMsg {
+        color: rgb(255 255 255 / 80%);
+    }
+
+    /* 
+      Player Action Chat
+      Public: Vote Kick [Guest_1 was vote kicked] , KPD Arrest [Guest_1 was arrested by the K.P.D]
+      Custom: Host Kick [Guest_1 was kicked] / Ban [Guest_1 was banned]
+    */
+     [style="color:#ff0000"] /* Red Color */ {
+        color: #081565 !important;
+        text-shadow: none !important;
+    }
+
+    /* System Chat */
+     [style="color:#fc03ec"] /* Magenta/Fuchsia Color */ {
+        color: #081565 !important;
+        text-shadow: none !important;
+    }
+
+    /* KPD PhonePop Icon */
+     #phonePop, #phoneImg {
+        display: none !important;
+    }
+
+    /* Host Icon */
+     #menuWindow > table > tbody > tr > td.pListName > i {
+        color: #fff !important;
+    }
+
+    /* Server Browser Header */
+     .serverHeader {
+        background-color: #0000 !important;
+    }
+
+    /* Click to play Background */
+     #instructionHolder {
+        animation: fadein .3s;
+    }
+
+    /* Kick Spec, Manage User Button */
+     .punishButton {
+        text-shadow: none !important;
+    }
+
+    /* Kick Button Active */
+     .punishButton.kick:active {
+        opacity: .5 !important;
+    }
+
+    /* KPD Popup */
+     #policePopC {
+        animation: popupanimation .2s;
+        transform: scale(1) translate(-50%,-50%);
+        background-color: #a3a3a38f !important;
+        box-shadow: 0px 0px 20px 3px rgb(16 16 16) !important;
+        backdrop-filter: blur(20px) !important;
+    }
+
+    /* Profile, Games...etc Tabs */
+     .bigMenTabs {
+        background-color: rgb(142 142 142 / 70%) !important;
+        backdrop-filter: blur(20px);
+    }
+
+    /* Key Binds Header Tab */
+     #bindsHeader {
+        background-color: #0000 !important;
+    }
+
+    /* Krunker Guide Popup Background */ 
+     #guidePopupH {
+        background-color: rgb(0 0 0 / 20%) !important;
+        backdrop-filter: blur(5px);
+        animation: fadein .2s;
+    }
+
+    /* Krunker Guide Popup */
+     #guidePopup {
+        background-color: rgb(142 142 142 / 70%) !important;
+        backdrop-filter: blur(20px);
+        animation: fadein .2s;
+    }
+
+    /* Purchase KR Popup Background */
+     #purchaseHolder {
+        background-color: rgb(0 0 0 / 20%) !important;
+        backdrop-filter: blur(5px);
+        animation: fadein .3s;
+
+    }
+
+    /* Purchase Selector Popup */
+     #purchaseSelector {
+        animation: purchasepopupanimation .2s;
+        transform: scale(1) translate(-50%,-0%);
+    }
+
+    /* Customize Selector Container */
+     #selectorContainer {
+        background-color: rgb(0 0 0 / 0%) !important;
+    }
+
+/* ------------------------------ 2. Main ------------------------------ */
+
+
+
+/* ------------------------------ 3. Comp Game Main ------------------------------ */
+   
+    /* Comp Sub Lst */
+     #compBtnLst {
+        background-color: rgb(187 187 187 / 50%);
+        backdrop-filter: blur(20px);
+    }
+
+/* ------------------------------ 3. Comp Game Main ------------------------------ */
+
+
+
+/* ------------------------------ 4. In Game ------------------------------ */
+       
+    /* "Killed By" Card */
+     #killCardHolder {
+        animation: killcardanimation .2s;
+    }
+
+/* ------------------------------ 4. In Game ------------------------------ */
+
+
+
+/* ------------------------------ 5. Twitch Info ------------------------------ */
+
+    /* Click here to Link Your Twitch Hover Button */
+     .twitchEventLink:hover {
+        background-color: #6037a99e !important;
+        transform: translateX(-50%) scale(1);
+    }
+
+    /* Click here to Link Your Twitch Active Button */
+     .twitchEventLink:active {
+        background-color: #4025719e !important;
+    }
+
+    /* Click here to Link Your Twitch Button */
+     .twitchEventLink {
+        font-size: 20px;
+        border-radius: 7px;
+    }
+
+/* ------------------------------ 5. Twitch Info ------------------------------ */
+
+
+
+/* ------------------------------ 6. Match Ended ------------------------------ */
+
+    /* Match Ended Card */
+     .endCard {
+        background: var(--main-background-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px);
+        border-radius: 7px;
+        transition-duration: 0.2s !important;
+    }
+
+    /* Match Ended Ad Container */
+     #endAContainer {
+        background: var(--main-background-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px);
+        border-radius: 7px;
+    }
+
+    /* Match Vote ( [Map1] [Game Modes] | [Map2] [Game Modes] | [Map3] [Game Modes] | [Map4] [Game Modes] ) (if possible) */
+     #matchVoteHolder {
+        background: var(--main-background-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px);
+        border-radius: 7px;
+    }
+
+    /* Team Totals ( [Team1] [Scores] | [Team2] [Scores] ) (Only TDM,DOM,Infected(Custom)...etc Team Modes) */
+     .teamTotals {
+        background: var(--main-background-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px);
+        border-radius: 7px;
+    }
+    
+    /* Blue(Your) Team */
+     .teamTotalN0 {
+        color: #004ca9;
+    }
+    
+    /* Red(Enemy)Team */
+     .teamTotalN1 {
+        color: #b70000;
+    }
+    
+    /* Match End Ad Container */
+     #endAContainer {
+        border-radius: 7px;
+    }
+
+/* ------------------------------ 6. Match Ended ------------------------------ */
+
+
+
+/* ------------------------------ 7.Customize ------------------------------ */
+
+    /* Search Item */
+     #itemSearchH {
+        background-color: #0000 !important;
+    }
+
+/* ------------------------------ 7.Customize ------------------------------ */
+
+
+
+/* ------------------------------ 8.Player list ------------------------------ */
+
+    /* [Clan] Text of Player list */
+     #menuWindow > table > tbody > tr > td.pListName > a > span {
+        color: #ffffffc2 !important;
+    }
+
+/* ------------------------------ 8.Player list ------------------------------ */
