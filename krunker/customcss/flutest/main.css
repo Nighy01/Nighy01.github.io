@@ -277,12 +277,12 @@
 
     /* Loading Backkground */
      #initLoader {
-        background-color: black !important;
+        background-color: #2b2d33 !important;
     }
 
     /* Krunker Tips Loader */
      #loadTipsHolder {
-        transform: translateX(-50%) translateY(-260%);
+        width: 1500px;
         animation: showanimationonstartup 0.5s;
     }
 
