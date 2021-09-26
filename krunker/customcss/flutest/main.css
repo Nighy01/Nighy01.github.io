@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/09/25 */
+/* 2021/09/26 */
 
 
 
@@ -275,7 +275,7 @@
         display: none !important;
     }
 
-    /* Loading Backkground */
+    /* Loading Background */
      #initLoader {
         background-color: #2b2d33 !important;
     }
@@ -294,6 +294,31 @@
     /* Krunker Yendis Text */
      #loadInfoRHolder, #loadInfoLHolder {
         animation: showanimationonstartup 0.5s;
+    }
+
+    /* lC right, bottom top */
+     .lC-r, .lC-bt {
+        background: #5a4ca6 !important;
+    }
+
+    /* lC bottom */
+     .lC-b {
+        background: #7965ea !important;
+    }
+
+    /* lC top */
+     .lC-t {
+        background: #bab9ff !important;
+    }
+
+    /* lC left */
+     .lC-l {
+        background: #9593ff !important;
+    }
+
+    /* lC f */
+     .lC-f {
+        background: #6f60ec !important;
     }
 
 /* ------------------------------ 1. Startup ------------------------------ */
