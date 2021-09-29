@@ -8,7 +8,7 @@
     :root {
     
     /* Main Background Color */
-     --main-background-color: rgba(149, 156, 171, 0.8) !important;
+     --main-bg-color: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(149, 156, 171, 0.8) !important;
     
     }
 
@@ -261,7 +261,7 @@
 
     /* AD Container */
      #aContainer {
-        background: var(--main-background-color) !important;
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.2) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px) !important;
@@ -344,7 +344,7 @@
 
     /* Game is full.. etc Message */
      #instructionsUpdate {
-        background: var(--main-background-color) !important;
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px) !important;
@@ -398,14 +398,13 @@
         position: relative;
         display: inline-block;
         box-sizing: border-box;
-        border-radius: 4px;
         padding: 5px 18px 17px;
         color: rgb(255, 255, 255) !important;
         font-size: 18px !important;
 
        /* Figma */
 
-        background: var(--main-background-color) !important;
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4);
         box-sizing: border-box;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
@@ -465,7 +464,7 @@
      #streamContainer, .youNewDiv {
         left: 0px;
         top: 78px;
-        background: var(--main-background-color) !important;
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px) !important;
@@ -505,7 +504,7 @@
 
     /* Buttons(Host,KPD...etc) */
      .button {
-        background: var(--main-background-color) !important;
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px) !important;
@@ -532,7 +531,7 @@
 
     /* Singed Out Header Bar(Shows [Login or Register] Button) */
      #signedOutHeaderBar {
-        background: var(--main-background-color) !important;
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4);
         box-shadow: 0px 4px 30px rgb(0 0 0 / 25%);
         backdrop-filter: blur(20px) !important;
@@ -541,7 +540,7 @@
 
     /* Header Bar */
      .headerBar {
-        background: var(--main-background-color) !important;
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
         backdrop-filter: blur(20px);
@@ -556,7 +555,7 @@
 
     /* Top Bar Right(Download Client, Krunker Reddit...etc) */
      .headerBarRight {
-        background: var(--main-background-color) !important;
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px);
@@ -565,7 +564,7 @@
 
     /* Featured Games in Top Right */
      #newsHolder {
-        background: var(--main-background-color) !important;
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px);
@@ -574,7 +573,7 @@
 
     /* Chat List [User: Test Message] */
      #chatList {
-        background: var(--main-background-color) !important;
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px);
@@ -584,7 +583,7 @@
 
     /* Enter Message Input ( [Switch Global/Team Chat] [Enter Message] [Voice] ) */
      #chatInputHolder {
-        background: var(--main-background-color) !important;
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px);
@@ -646,7 +645,7 @@
         position: relative;
         right: 95px;
         color: white;
-        background-color: var(--main-background-color) !important;
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         border-radius: 7px;
@@ -794,10 +793,11 @@
 
     /* WindowUI */ 
      #menuWindow.dark {
-        background-color: #a3a3a38f !important;
+        background: var(--main-bg-color) !important;
         box-shadow: 0px 0px 20px 3px rgb(16 16 16) !important;
         backdrop-filter: blur(20px) !important;
         animation: windowpopupanimation .2s;
+        border-radius: 7px;
         transition-duration: 0.2s !important;
     }
 
@@ -880,7 +880,7 @@
     /* Business... etc of TermsInfo Button */
      #termsInfo {
         animation: showanimationonstartup 0.5s;
-        background: var(--main-background-color) !important;
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px);
@@ -1096,7 +1096,7 @@
 
     /* Match Ended Card */
      .endCard {
-        background: var(--main-background-color) !important;
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px);
@@ -1106,7 +1106,7 @@
 
     /* Match Ended Ad Container */
      #endAContainer {
-        background: var(--main-background-color) !important;
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px);
@@ -1115,7 +1115,7 @@
 
     /* Match Vote ( [Map1] [Game Modes] | [Map2] [Game Modes] | [Map3] [Game Modes] | [Map4] [Game Modes] ) (if possible) */
      #matchVoteHolder {
-        background: var(--main-background-color) !important;
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px);
@@ -1124,7 +1124,7 @@
 
     /* Team Totals ( [Team1] [Scores] | [Team2] [Scores] ) (Only TDM,DOM,Infected(Custom)...etc Team Modes) */
      .teamTotals {
-        background: var(--main-background-color) !important;
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px);
