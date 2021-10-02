@@ -9,6 +9,9 @@
     
     /* Main Background Color */
      --main-bg-color: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(149, 156, 171, 0.8) !important;
+
+    /* Dark Background Color */
+     --dark-bg-color: linear-gradient(180deg, rgba(85, 85, 92, 0.3) 0%, rgba(49, 49, 54, 0.3) 100%), rgba(0, 0, 0, 0.45) !important;
     
     }
 
@@ -353,7 +356,7 @@
     }
 
     /* FloatR */
-    .floatR {
+     .floatR {
         color: rgb(255 255 255);
     }
 
@@ -370,7 +373,7 @@
 
     /* Click To Play Background */
      #instructionHolder {
-        background: linear-gradient(180deg, rgba(105, 108, 120, 0.3) 0%, rgba(75, 77, 88, 0.3) 100%), rgba(0, 0, 0, 0.3) !important;
+        background: var(--dark-bg-color) !important;
     }
 
     /* MenuItemContainer */
@@ -844,7 +847,7 @@
 
     /* WindowUI Background */
      #windowHolder.popupWin {
-        background: linear-gradient(180deg, rgba(105, 108, 120, 0.3) 0%, rgba(75, 77, 88, 0.3) 100%), rgba(0, 0, 0, 0.3) !important;
+        background: var(--dark-bg-color) !important;
         animation: fadein .3s;
         transition-duration: .2s;
     }
@@ -873,8 +876,7 @@
 
     /* Popup Background */
      #popupBack {
-        background-color: rgb(0 0 0 / 20%) !important;
-        backdrop-filter: blur(5px);
+        background: var(--dark-bg-color) !important;
         animation: fadein .3s;
     }
 
@@ -1031,8 +1033,7 @@
 
     /* Krunker Guide Popup Background */ 
      #guidePopupH {
-        background-color: rgb(0 0 0 / 20%) !important;
-        backdrop-filter: blur(5px);
+        background: var(--dark-bg-color) !important;
         animation: fadein .2s;
     }
 
@@ -1045,8 +1046,7 @@
 
     /* Purchase KR Popup Background */
      #purchaseHolder {
-        background-color: rgb(0 0 0 / 20%) !important;
-        backdrop-filter: blur(5px);
+        background: var(--dark-bg-color) !important;
         animation: fadein .3s;
 
     }
@@ -1080,9 +1080,35 @@
 
 /* ------------------------------ 4. In Game ------------------------------ */
        
-    /* "Killed By" Card */
+    /* "Killed By" Card Holder */
      #killCardHolder {
         animation: killcardanimation .2s;
+    }
+
+    /* "Killed By" Card */
+     #killCard {
+        border-radius: 7px;
+        background: rgb(0 0 0 / 55%);
+    }
+
+    /* Health Bar Seg */
+     .healthBarSeg {
+        width: 55px !important;
+        margin-right: -10px !important;
+        background-color: rgb(0 0 0 / 0%) !important;
+    }
+
+    /* Health Blocks Seg */
+     .hpBSeg {
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Health Bar */
+     #healthBar {
+        border-radius: 5px;
+        background-color: rgb(0 0 0 / 40%);
     }
 
 /* ------------------------------ 4. In Game ------------------------------ */
@@ -1153,12 +1179,12 @@
     
     /* Blue(Your) Team */
      .teamTotalN0 {
-        color: #004ca9;
+        color: #82abdf;
     }
     
     /* Red(Enemy)Team */
      .teamTotalN1 {
-        color: #b70000;
+        color: #e66d6d;
     }
     
     /* Match End Ad Container */
