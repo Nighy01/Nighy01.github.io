@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/10/02 */
+/* 2021/10/03 */
 
 
 
@@ -25,6 +25,38 @@
      @keyframes showanimationonstartup {
         from {
           margin-bottom: -120px;
+        }
+        to {
+          margin-bottom: 0px;
+        }
+    }
+
+    /* Top Menu Animation */
+     @keyframes topmenuanimation {
+        from {
+          top: -120px;
+        }
+        to {
+          top: 5px;
+        }
+    }
+
+    /* Top Animation */
+     @keyframes topanimation {
+        from {
+          margin-top: -600px;
+          z-index: 0;
+        }
+        to {
+          margin-top: 0px;
+          z-index: 1;
+        }
+    }
+
+    /* Ad Bottom Animation */
+     @keyframes adbottomanimation {
+        from {
+          margin-bottom: -220px;
         }
         to {
           margin-bottom: 0px;
@@ -246,6 +278,25 @@
         }
     }
 
+    /* Chat List Animation */
+     @keyframes chatlistanimation {
+        0% {
+          background: linear-gradient(180deg, rgba(165, 167, 216, 0.1) 0%, rgba(171, 179, 223, 0.1) 100%), rgba(149, 156, 171, 0.3);
+          margin-bottom: -64px;
+          z-index: 0;
+        }
+        50% {
+          background: linear-gradient(180deg, rgba(165, 167, 216, 0.2) 0%, rgba(171, 179, 223, 0.2) 100%), rgba(149, 156, 171, 0.5);
+          margin-bottom: -44px;
+          z-index: 0;
+        }
+        100% {
+          background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(149, 156, 171, 0.8);
+          margin-bottom: 0px;
+          z-index: 1;
+        }
+    }
+
 /* ------------------------------ KeyFrames ------------------------------ */
 
 
@@ -269,8 +320,8 @@
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px) !important;
         border-radius: 7px !important;
-        animation: showanimationonstartup 0.5s;
-        transition-duration: 0.2s !important;
+        animation: adbottomanimation 0.95s;
+        transition-duration: .2s !important;
     }
 
     /* Krunker Editor Button */
@@ -381,10 +432,12 @@
         width: fit-content;
         height: min-content;
         top: 5px;
+        transition-duration: .2s;
         left: 50%;
         transform: translateX(-50%);
         flex-direction: row;
         background: none !important;
+        animation: topmenuanimation .4s;
     }
 
     /* MenuItem */
@@ -496,25 +549,14 @@
         transition-duration: 0.2s !important;
     }
 
-
-    /* Discord Button */
-     .discordSocial {
-        background-image: url(https://i.imgur.com/COz2mXw.png) !important;
-    }
-
-    /* Reddit Button */
-     .redditSocial {
-        background-image: url(https://i.imgur.com/oPQ4law.png) !important;
-    }
-
     /* Download Client Button */
      [src="./img/client.png"] {
-        content: url(https://i.imgur.com/63KL4lk.png) !important;
+        content: url(https://i.imgur.com/XkDeUPp.png) !important;
     }
 
     /* Krunker Editor Button */
      [src="./img/editor.png"] {
-        content: url(https://i.imgur.com/jpdDhgi.png) !important;
+        content: url(https://i.imgur.com/5VlCJ7l.png) !important;
     }
 
     /* Editor Button */
@@ -558,6 +600,8 @@
         border: 1px solid rgba(225, 225, 225, 0.4);
         box-shadow: 0px 4px 30px rgb(0 0 0 / 25%);
         backdrop-filter: blur(20px) !important;
+        transition-duration: .2s;
+        animation: topanimation .4s;
         border-radius: 7px;
     }
 
@@ -582,6 +626,8 @@
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px);
+        transition-duration: .2s;
+        animation: topanimation .4s;
         border-radius: 7px;
     }
 
@@ -592,16 +638,26 @@
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px);
         border-radius: 7px;
+        transition-duration: .2s;
+        animation: topanimation .4s;
+    }
+
+    /* Top Left Container(Streaming Now!...etc) */
+     #tlInfHold {
+        transition-duration: .2s;
+        animation: topanimation .4s;
     }
 
     /* Chat List [User: Test Message] */
      #chatList {
-        background: var(--main-bg-color) !important;
+        background: var(--main-bg-color);
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px);
         border-radius: 7px;
         transition-duration: 0.2s !important;
+        min-height: 41px;
+        animation: chatlistanimation .2s;
     }
 
     /* Enter Message Input ( [Switch Global/Team Chat] [Enter Message] [Voice] ) */
@@ -932,8 +988,24 @@
     /* Voice Icon */
      #voiceDisplay {
         animation: showanimationonstartup 0.5s;
-        left: 360px !important;
+        left: 355px !important;
+        background: var(--main-bg-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px);
+        border-radius: 7px;
+        margin-bottom: -2px;
+        width: 58px;
+        padding: 6px;
+        padding-bottom: 3px;
+        padding-top: 10px;
+        border: none;
         transition-duration: 0.2s !important;
+    }
+
+    /* Voice On */
+     .voiceOn:after {
+        color: #00133c;
     }
     
     /* Voice Icon UI Base */ 
@@ -1061,6 +1133,12 @@
      #selectorContainer {
         background-color: rgb(0 0 0 / 0%) !important;
     }
+    
+    /* Class Preview */
+     #classPreviewCanvas {
+        transition-duration: .2s;
+        animation: topanimation .4s;
+    }
 
 /* ------------------------------ 2. Main ------------------------------ */
 
@@ -1107,8 +1185,15 @@
 
     /* Health Bar */
      #healthBar {
-        border-radius: 5px;
+        border-radius: 7px;
+        padding: 5px;
+        padding-right: 15px;
         background-color: rgb(0 0 0 / 40%);
+    }
+
+    /* LeaderBoard */
+     #leaderDisplay {
+        background-color: rgb(0 0 0 / 50%) !important;
     }
 
 /* ------------------------------ 4. In Game ------------------------------ */
