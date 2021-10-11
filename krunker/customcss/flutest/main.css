@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/10/03 */
+/* 2021/10/11 */
 
 
 
@@ -538,33 +538,98 @@
 
     /* Stream Container (Streaming Now!, Featured Creators, Ad), New to Krunker? Div  */
      #streamContainer, .youNewDiv {
-        left: 0px;
-        top: 78px;
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px) !important;
         border-radius: 7px;
-        margin-left: -130px !important;
+        margin-left: -125px !important;
+        transform: translateY(15px);
         transition-duration: 0.2s !important;
     }
 
     /* Download Client Button */
      [src="./img/client.png"] {
         content: url(https://i.imgur.com/XkDeUPp.png) !important;
+        transform: translate(15px) !important;
+    }
+
+    /* Download Client Hover Button */
+     [src="./img/client.png"]:hover {
+        transform: translate(15px) scale(.95) !important;
+    }
+
+    /* Download Client Active Button */
+     [src="./img/client.png"]:active {
+        transform: translate(15px) scale(.9) !important;
     }
 
     /* Krunker Editor Button */
      [src="./img/editor.png"] {
         content: url(https://i.imgur.com/5VlCJ7l.png) !important;
+        transform: translate(21px) !important;
+    }
+
+    /* Krunker Editor Hover Button */
+     [src="./img/editor.png"]:hover {
+        content: url(https://i.imgur.com/5VlCJ7l.png) !important;
+        transform: translate(21px) scale(.95) !important;
+    }
+
+    /* Krunker Editor Active Button */
+     [src="./img/editor.png"]:active {
+        content: url(https://i.imgur.com/5VlCJ7l.png) !important;
+        transform: translate(21px) scale(.9) !important;
     }
 
     /* Editor Button */
      #editorBtnM {
-        margin-left: 5px !important;
+        margin-left: 10px !important;
         margin-right: 0px !important;
-        margin-top: -3px !important;
-        height: 54px !important;
+        margin-top: 0px !important;
+        height: 48px !important;
+    }
+
+    /* Reddit Button */
+     #headerRight > div:nth-child(4) > span {
+        transform: translate(15px);
+    }
+
+    /* Discord Button */
+     #headerRight > div:nth-child(3) > span {
+        transform: translate(15px);
+    }
+
+    /* Top Right Vertical Separator */
+     .verticalSeparator {
+        background: rgb(255 255 255 / 60%);
+        width: 5px;
+        border-radius: 100px;
+        height: 23px !important;
+        transform: translate(16px);
+    }
+
+    /* Top Left Vertical Separator */
+     #signedInHeaderBar > div:nth-child(1) > div:nth-child(2), #signedInHeaderBar > div:nth-child(1) > div:nth-child(4), #signedInHeaderBar > div:nth-child(1) > div:nth-child(6) {
+        background: rgb(255 255 255 / 60%);
+        width: 5px;
+        border-radius: 100px;
+        transform: translate(0px) translateY(-6px) !important;
+    }
+
+    /* Top Left Kr Count */
+     #menuKRCount > span {
+        color: #000862 !important;
+    }
+
+    /* Top Left Junk Count */
+     #menuJNKCount > span {
+        color: #000862 !important;
+    }
+
+    /* Top Right Server Info */
+     #menuServerInfoContainer {
+        transform: translate(1px);
     }
 
     /* Buttons(Host,KPD...etc) */
@@ -600,9 +665,10 @@
         border: 1px solid rgba(225, 225, 225, 0.4);
         box-shadow: 0px 4px 30px rgb(0 0 0 / 25%);
         backdrop-filter: blur(20px) !important;
-        transition-duration: .2s;
+        transition-duration: .4s;
         animation: topanimation .4s;
         border-radius: 7px;
+        transform: translate(12px);
     }
 
     /* Singed In Header Bar(Shows [Login or Register] Button) */
@@ -611,16 +677,23 @@
         border: 1px solid rgba(225, 225, 225, 0.4);
         box-shadow: 0px 4px 30px rgb(0 0 0 / 25%);
         backdrop-filter: blur(20px) !important;
-        transition-duration: .2s;
+        transition-duration: .4s;
         animation: topanimation .4s;
-        border-radius: 7px;
+        border-radius: 7px !important;
+        transform: translate(12px);
     }
+
+    /* Login Button */
+     #signedOutHeaderBar > div {
+         width: 308px !important;
+     }
 
     /* Header Bar */
      .headerBar {
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
+        top: 10px;
         backdrop-filter: blur(20px);
         border-radius: 7px;
     }
@@ -629,6 +702,13 @@
      #mLevelCont {
         background-color: rgb(0 0 0 / 30%) !important;
         backdrop-filter: blur(20px);
+        width: 30px;
+        border-bottom-right-radius: 0px !important;
+    }
+
+    /* Ranked Icon in Top Left */
+     .bigMFeatBarI {
+        display: none !important;
     }
 
     /* Top Bar Right(Download Client, Krunker Reddit...etc) */
@@ -640,6 +720,8 @@
         transition-duration: .2s;
         animation: topanimation .4s;
         border-radius: 7px;
+        width: 370px;
+        transform: translate(-14px);
     }
 
     /* Featured Games in Top Right */
@@ -650,6 +732,7 @@
         backdrop-filter: blur(20px);
         border-radius: 7px;
         transition-duration: .2s;
+        transform: translateY(9px);
         animation: topanimation .4s;
     }
 
@@ -974,6 +1057,7 @@
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(20px);
         border-radius: 7px !important;
+        transform: translate(-14px , -18px);
     }
 
     /* Host Game... etc of SubLogoButtons */
@@ -1058,8 +1142,8 @@
         text-shadow: none !important;
     }
 
-    /* System Chat */
-     [style="color:#fc03ec"] /* Magenta/Fuchsia Color */ {
+    /* System Chat, Krunkitis */
+     [style="color:#fc03ec"], [style="color:#76ff03"] /* Magenta/Fuchsia Color */ {
         color: #081565 !important;
         text-shadow: none !important;
     }
