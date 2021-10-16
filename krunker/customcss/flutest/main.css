@@ -966,11 +966,12 @@
 
     /* WindowUI */ 
      #menuWindow.dark {
-        background: linear-gradient(180deg, rgb(77, 77, 77, 30%) 0%, rgb(40, 40, 40, 30%) 100%), rgb(91, 100, 116, 80%) !important;
-        box-shadow: 0px 0px 20px 3px rgb(16, 16, 16) !important;
+        background: linear-gradient(180deg, rgba(239, 238, 255, 0.3) 0%, rgba(241, 240, 255, 0.3) 100%), rgba(76, 80, 107, 0.8) !important;
+        border: 1px solid rgba(225, 225, 225, 0.2)  !important;
+        box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(15px) !important;
+        border-radius: 10px !important;
         animation: windowpopupanimation .2s;
-        border-radius: 7px;
         transition-duration: 0.2s !important;
     }
 
@@ -1037,6 +1038,51 @@
         animation: popupanimation .2s;
     }
 
+    /* Map Vote */
+     .material-icons.vote {
+        color: rgb(255 255 255 / 70%);
+    }
+
+    /* Map Vote Hover */
+     .material-icons.vote:hover {
+        color: rgb(255 255 255 / 90%);
+        transform: scale(1.2);
+    }
+
+    /* Map Vote Active */
+     .material-icons.vote:active {
+        color: rgb(163 163 163 / 90%);
+        transform: scale(0.9);
+    }
+
+    /* Donate Map */
+     .voteHint {
+        background: var(--main-bg-color) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
+        backdrop-filter: blur(20px) !important;
+        border-radius: 5px;
+     }
+
+    /* Donate Map Hover Button */
+     .voteHint:hover {
+        background: rgba(98, 110, 148, 0.8) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
+        backdrop-filter: blur(20px) !important;
+        border-radius: 5px;
+    }
+
+    /* Donate Map Active Button */
+     .voteHint:active {
+        background: rgba(28, 42, 85, 0.8) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
+        backdrop-filter: blur(20px) !important;
+        border-radius: 5px;
+        transform: scale(.9);
+    }
+
     /* Popup Content */
      #popupContent {
         background-color: rgb(80 80 80 / 60%) !important;
@@ -1073,6 +1119,12 @@
     /* Enter Message Input */
      #chatInputHolder {
         animation: showanimationonstartup 0.5s;
+    }
+
+    /* Map Info */
+     #mapInfo {
+        margin-bottom: 30px;
+        margin-right: 1px;
     }
 
     /* Chat Text Outline */

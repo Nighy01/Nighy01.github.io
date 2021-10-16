@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/09/25 */
+/* 2021/10/11 */
 
 
 
@@ -80,6 +80,16 @@
         to { 
          opacity: 1;
        }
+    }
+
+    /* Hover to Spin Icon */
+     @keyframes hovertospinicon {
+       0% { 
+        transform: rotate(0deg);
+      }
+       100% { 
+        transform: rotate(360deg);
+      }
     }
 
 /* ------------------------------ KeyFrames ------------------------------ */
@@ -528,7 +538,6 @@
    /* Popup Background */
     #popupBack {
         background-color: rgb(0 0 0 / 10%) !important;
-        backdrop-filter: blur(2px);
     }
 
    /* Login Hover Button */
@@ -587,6 +596,30 @@
         backdrop-filter: blur(10px);
         border-radius: 7px;
         animation: instructionsupdatepopupanimation .2s;
+    }
+
+   /* Settings Hover Icon Button */
+     #navTitle > div.material-icons.terms:hover {
+        animation: hovertospinicon 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        transition-duration: .2s;
+        text-decoration: none;
+        font-size: 50px !important;
+        margin-top: 6px !important;
+        color: #717db5 !important;
+    }
+
+   /* Settings Active Icon Button */
+     #navTitle > div.material-icons.terms:active {
+        animation: hovertospinicon 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        transition-duration: .2s;
+        text-decoration: none;
+        font-size: 45px !important;
+        margin-top: 9px !important;
+        color: #4c5ebb !important;
     }
 
 /* ------------------------------ Krunker Hub Default(Feed) UI ------------------------------ */
