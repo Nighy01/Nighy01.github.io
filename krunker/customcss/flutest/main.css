@@ -474,8 +474,8 @@
         position: relative;
         display: inline-block;
         box-sizing: border-box;
-        padding: 5px 18px 17px;
-        color: rgb(255, 255, 255) !important;
+        padding: 10px 18px 13px;
+        color: rgb(255 255 255) !important;
         font-size: 18px !important;
 
        /* Figma */
@@ -503,7 +503,7 @@
         display: inline-block;
         box-sizing: border-box;
         border-radius: 7px;
-        padding: 5px 18px 17px;
+        padding: 10px 18px 13px;
         color: rgb(255, 255, 255) !important;
         background: rgba(98, 110, 148, 0.8) !important;
         font-size: 18px !important;
@@ -524,7 +524,7 @@
         display: inline-block;
         box-sizing: border-box;
         border-radius: 7px;
-        padding: 5px 18px 17px;
+        padding: 10px 18px 13px;
         color: white !important;
         background: rgba(28, 42, 85, 0.8) !important;
         font-size: 18px !important;
@@ -551,40 +551,41 @@
     /* Download Client Button */
      [src="./img/client.png"] {
         content: url(https://i.imgur.com/XkDeUPp.png) !important;
-        transform: translate(15px) !important;
+        transform: translate(5px) !important;
+        transition-duration: .2s;
     }
 
     /* Download Client Hover Button */
      [src="./img/client.png"]:hover {
-        transform: translate(15px) scale(.95) !important;
+        transform: translate(5px) scale(.88) !important;
     }
 
     /* Download Client Active Button */
      [src="./img/client.png"]:active {
-        transform: translate(15px) scale(.9) !important;
+        transform: translate(5px) scale(.75) !important;
     }
 
     /* Krunker Editor Button */
      [src="./img/editor.png"] {
         content: url(https://i.imgur.com/5VlCJ7l.png) !important;
-        transform: translate(21px) !important;
+        transition-duration: .2s;
     }
 
     /* Krunker Editor Hover Button */
      [src="./img/editor.png"]:hover {
         content: url(https://i.imgur.com/5VlCJ7l.png) !important;
-        transform: translate(21px) scale(.95) !important;
+        transform: scale(.88) !important;
     }
 
     /* Krunker Editor Active Button */
      [src="./img/editor.png"]:active {
         content: url(https://i.imgur.com/5VlCJ7l.png) !important;
-        transform: translate(21px) scale(.9) !important;
+        transform: scale(.75) !important;
     }
 
     /* Editor Button */
      #editorBtnM {
-        margin-left: 10px !important;
+        margin-left: 21px !important;
         margin-right: 0px !important;
         margin-top: 0px !important;
         height: 48px !important;
@@ -598,6 +599,21 @@
     /* Discord Button */
      #headerRight > div:nth-child(3) > span {
         transform: translate(15px);
+    }
+
+    /* Menu Social B */
+     .menuSocialB {
+        transition-duration: .2s;
+    }
+
+    /* Menu Social B Hover */
+     .menuSocialB:hover {
+        transform: translate(2px) scale(.88);
+    }
+
+    /* Menu Social B Active */
+     .menuSocialB:active {
+        transform: translate(3px) scale(.75);
     }
 
     /* Top Right Vertical Separator */
@@ -617,6 +633,18 @@
         transform: translate(0px) translateY(-6px) !important;
     }
 
+    /* Top Left Mail Hover Button */
+     #mailIcon:hover {
+         transform: scale(.9);
+         color: #c9c9c9 !important;
+     }
+
+    /* Top Left Mail Active Button */
+     #mailIcon:active {
+         transform: scale(.8);
+         color: #8a8a8a !important;
+     }
+
     /* Top Left Kr Count */
      #menuKRCount > span {
         color: #000862 !important;
@@ -625,11 +653,6 @@
     /* Top Left Junk Count */
      #menuJNKCount > span {
         color: #000862 !important;
-    }
-
-    /* Top Right Server Info */
-     #menuServerInfoContainer {
-        transform: translate(1px);
     }
 
     /* Buttons(Host,KPD...etc) */
@@ -720,7 +743,6 @@
         transition-duration: .2s;
         animation: topanimation .4s;
         border-radius: 7px;
-        width: 370px;
         transform: translate(-14px);
     }
 
