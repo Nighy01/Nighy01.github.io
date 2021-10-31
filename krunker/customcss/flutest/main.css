@@ -2,7 +2,6 @@
 /* 2021/10/31 */
 
 
-
 /* ------------------------------ Configs ------------------------------ */
 
     :root {
@@ -313,6 +312,11 @@
         display: none !important;
     }
 
+    /* More Games */
+     .menuMGLink {
+         display: none !important;
+    }
+
     /* AD Container */
      #aContainer {
         background: var(--main-bg-color) !important;
@@ -338,6 +342,11 @@
      #loadTipsHolder {
         width: 1500px;
         animation: showanimationonstartup 0.5s;
+    }
+
+    /* Krunker Tips Loader Before (Add "Tip:") */
+     #loadTipsHolder:before {
+        content: "Tip: ";
     }
 
     /* lC Cont */
@@ -398,7 +407,7 @@
 
     /* a Link */
      a {
-        color: #c3d3ff !important;
+        color: #c3d3ff;
     }
 
     /* Twitch Link */
@@ -1425,16 +1434,6 @@
         opacity: .5 !important;
     }
 
-    /* Enemy System Chat */
-     [style="color:#eb5656"] {
-        color: #ff5858 !important;
-    }
-
-    /* Team System Chat */
-     [style="color:#9eeb56"] {
-        color: #62ff58 !important;
-    }
-
     /* Menu FPS Display */
      #menuFPS {
         color: #fff !important;
@@ -1535,6 +1534,7 @@
      .healthBarSeg {
         width: 55px !important;
         margin-right: -10px !important;
+        height: 30px;
         background-color: rgb(0 0 0 / 0%) !important;
     }
 
@@ -1548,8 +1548,10 @@
     /* Health Bar */
      #healthBar {
         border-radius: 7px;
-        padding: 5px;
-        padding-right: 15px;
+        height: 35px;
+        width: 466px;
+        padding-left: 6px;
+        padding-top: 6px;
         background-color: rgb(0 0 0 / 40%);
     }
 
@@ -1657,7 +1659,7 @@
 /* ------------------------------ 8.Player list ------------------------------ */
 
     /* [Clan] Text of Player list */
-     #menuWindow > table > tbody > tr > td.pListName > a > span {
+     #playerListH > table > tbody > tr > td.pListName > a > span {
         color: #ffffffc2 !important;
     }
 
