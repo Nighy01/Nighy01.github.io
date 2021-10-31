@@ -1,3 +1,22 @@
 /* Developing Process */
-/* 2021/06/25 */
+/* 2021/10/31 */
 
+
+/* ------------------------------ Main ------------------------------ */
+
+/* Left/Right Panel */
+ .left.panel, .right.panel {
+    background-color: rgb(105 104 126) !important;
+}
+
+/* Hot Top Bar */
+ #hotbar {
+    background: linear-gradient(180deg, rgb(105 104 126) 0%, rgb(105 104 126) 100%), rgb(105 104 126) !important;
+}
+
+/* Play,Host,Expore Bar */
+ #playbar>div {
+    border-color: #5550 !important;
+}
+
+/* ------------------------------ Main ------------------------------ */

@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/10/11 */
+/* 2021/10/31 */
 
 
 
@@ -8,7 +8,7 @@
     :root {
     
     /* Main Background Color */
-     --main-bg-color: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(149, 156, 171, 0.8) !important;
+     --main-bg-color: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
 
     /* Dark Background Color */
      --dark-bg-color: linear-gradient(180deg, rgba(85, 85, 92, 0.3) 0%, rgba(49, 49, 54, 0.3) 100%), rgba(0, 0, 0, 0.45) !important;
@@ -318,7 +318,7 @@
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.2) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-        backdrop-filter: blur(20px) !important;
+        backdrop-filter: blur(40px) !important;
         border-radius: 7px !important;
         animation: adbottomanimation 0.95s;
         transition-duration: .2s !important;
@@ -398,7 +398,7 @@
 
     /* a Link */
      a {
-        color: #dde6ff;
+        color: #c3d3ff !important;
     }
 
     /* Twitch Link */
@@ -416,7 +416,7 @@
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-        backdrop-filter: blur(20px) !important;
+        backdrop-filter: blur(40px) !important;
         border-radius: 7px !important;
         animation: instructionsupdatepopupanimation .2s;
         transform: scale(1) translate(-50%,-50%);
@@ -484,9 +484,19 @@
         border: 1px solid rgba(225, 225, 225, 0.4);
         box-sizing: border-box;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-        backdrop-filter: blur(20px) !important;
+        backdrop-filter: blur(40px) !important;
         border-radius: 7px;
 
+    }
+
+    /* New to Krunker? , Double XP Weekend Link Text */
+     #helpGuidOpn {
+        color: #dde6ff !important;
+    }
+
+    /* Whats new? Link Text */
+     #updateAdVersion {
+        color: #dde6ff !important;
     }
 
     /* Menu Title Hover */
@@ -536,12 +546,22 @@
         display: none !important;
     }
 
+    /* Featured Top Right */
+     #newsHed {
+        background-image: linear-gradient(to right,#877fa3,#7a7897);
+    }
+
+    /* [Count] Plays */
+     #newsStat {
+         background: rgb(110 104 128);
+    }
+
     /* Stream Container (Streaming Now!, Featured Creators, Ad), New to Krunker? Div  */
      #streamContainer, .youNewDiv {
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-        backdrop-filter: blur(20px) !important;
+        backdrop-filter: blur(40px) !important;
         border-radius: 7px;
         margin-left: -125px !important;
         transform: translateY(15px);
@@ -660,8 +680,51 @@
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-        backdrop-filter: blur(20px) !important;
+        backdrop-filter: blur(40px) !important;
         border-radius: 7px;
+    }
+
+    /* KPD Button */
+     #policeButton {
+        color: #fff;
+        display: inline-block;
+        background: linear-gradient(180deg, rgba(111, 113, 154, 0.3) 0%, rgba(123, 128, 152, 0.3) 100%), rgba(106, 96, 172, 0.7) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 40px rgb(0 0 0 / 25%) !important;
+        backdrop-filter: blur(40px) !important;
+        border-radius: 7px !important;
+    }
+
+    /* KPD Hover Button */
+     #policeButton:hover {
+        color: #fff;
+        display: inline-block;
+        background: linear-gradient(180deg, rgba(111, 113, 154, 0.3) 0%, rgba(123, 128, 152, 0.3) 100%), rgba(85, 65, 206, 0.7) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 40px rgb(0 0 0 / 25%) !important;
+        backdrop-filter: blur(40px) !important;
+        border-radius: 7px !important;
+        transform: scale(0.9);
+    }
+
+    /* KPD Active Button */
+     #policeButton:active {
+        color: #fff;
+        display: inline-block;
+        background: linear-gradient(180deg, rgba(111, 113, 154, 0.3) 0%, rgba(123, 128, 152, 0.3) 100%), rgba(14, 0, 103, 0.7) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 40px rgb(0 0 0 / 25%) !important;
+        backdrop-filter: blur(40px) !important;
+        border-radius: 7px !important;
+        transform: scale(0.8);
+    }
+
+    /* Button Shadow Text */
+     .bigShadowT {
+        text-shadow: none !important;
     }
 
     /* Buttons Hover(Host,KPD...etc) */
@@ -669,7 +732,7 @@
         background: rgba(98, 110, 148, 0.8) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-        backdrop-filter: blur(20px) !important;
+        backdrop-filter: blur(40px) !important;
         border-radius: 7px;
     }
 
@@ -678,7 +741,7 @@
         background: rgba(28, 42, 85, 0.8) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-        backdrop-filter: blur(20px) !important;
+        backdrop-filter: blur(40px) !important;
         border-radius: 7px;
     }
 
@@ -687,7 +750,7 @@
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4);
         box-shadow: 0px 4px 30px rgb(0 0 0 / 25%);
-        backdrop-filter: blur(20px) !important;
+        backdrop-filter: blur(40px) !important;
         transition-duration: .4s;
         animation: topanimation .4s;
         border-radius: 7px;
@@ -699,7 +762,7 @@
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4);
         box-shadow: 0px 4px 30px rgb(0 0 0 / 25%);
-        backdrop-filter: blur(20px) !important;
+        backdrop-filter: blur(40px) !important;
         transition-duration: .4s;
         animation: topanimation .4s;
         border-radius: 7px !important;
@@ -717,15 +780,14 @@
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
         top: 10px;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
         border-radius: 7px;
     }
 
     /* Header Bar Level Count */
      #mLevelCont {
         background-color: rgb(0 0 0 / 30%) !important;
-        backdrop-filter: blur(20px);
-        width: 30px;
+        backdrop-filter: blur(40px);
         border-bottom-right-radius: 0px !important;
     }
 
@@ -739,7 +801,7 @@
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
         transition-duration: .2s;
         animation: topanimation .4s;
         border-radius: 7px;
@@ -751,7 +813,7 @@
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
         border-radius: 7px;
         transition-duration: .2s;
         transform: translateY(9px);
@@ -766,13 +828,13 @@
 
     /* Chat List [User: Test Message] */
      #chatList {
-        background: var(--main-bg-color);
+        background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
         border-radius: 7px;
         transition-duration: 0.2s !important;
-        min-height: 41px;
+        min-height: 45px;
         animation: chatlistanimation .2s;
     }
 
@@ -781,7 +843,7 @@
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
         border-radius: 7px;
         transition-duration: 0.2s !important;
     }
@@ -916,6 +978,30 @@
         transition-duration: .1s;
     }
 
+    /* [X] Icon */
+     #menuWindow > div > i {
+        position: fixed;
+        display: none;
+    }
+
+    /* Require Title */
+     .reqWLvl {
+        margin-left: 50px !important;
+        margin-top: 60px !important;
+        position: fixed;
+        font-size: 25px !important;
+        color: rgb(255 255 255 / 0.9) !important;
+    }
+
+    /* Require Content */
+     .reqWTxt {
+        margin-left: 50px !important;
+        position: fixed;
+        margin-top: 110px !important;
+        font-size: 18px !important;
+        color: rgb(255 255 255 / 0.8) !important;
+    }
+
     /* Spectate SliderSml After */
      input:checked+.sliderSml:after {
         position: relative;
@@ -986,12 +1072,36 @@
         display: none !important;
     }
 
+    /* Register or Login */
+     #referralHeader {
+        background-color: rgba(0,0,0,.4) !important;
+    }
+
+    /* XP Bar B */
+     .xpBarB {
+        background: rgb(186 196 216) !important;
+        border-radius: 7px;
+    }
+
+    /* XP Bar */
+     .xpBar {
+        background-color: rgb(88 86 102) !important;
+        border-radius: 7px;
+    }
+
+    /* Profile Stats */
+     .pSt {
+        background-color: rgb(88 86 102) !important;
+        border-radius: 7px;
+        text-shadow: none !important;
+    }
+
     /* WindowUI */ 
      #menuWindow.dark {
-        background: linear-gradient(180deg, rgba(239, 238, 255, 0.3) 0%, rgba(241, 240, 255, 0.3) 100%), rgba(76, 80, 107, 0.8) !important;
-        border: 1px solid rgba(225, 225, 225, 0.2)  !important;
-        box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.25) !important;
-        backdrop-filter: blur(15px) !important;
+        background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(40px) !important;
         border-radius: 10px !important;
         animation: windowpopupanimation .2s;
         transition-duration: 0.2s !important;
@@ -1011,6 +1121,39 @@
     /* FaceIT Icon */
      #faceItIconM {
         display: none !important;
+    }
+
+    /* Settings Hed */
+     .setHed {
+        border: none !important;
+        border-radius: 7px;
+        background-color: transparent;
+    }
+
+    /* Settings Hover Hed */
+     .setHed:hover {
+        border: none !important;
+        border-radius: 7px;
+        background-color: rgb(60 60 60 / 0.5);
+    }
+
+    /* Settings Active Hed */
+     .setHed:active {
+        border: none !important;
+        border-radius: 7px;
+        background-color: rgb(22 22 22 / 50%);
+    }
+
+    /* Quick Join Hover Button */
+    .quickJoin:hover {
+        transform: scale(1);
+        color: #c4c0ff !important;
+    }
+
+    /* Quick Join Button */
+    .quickJoin {
+        border: none !important;
+        margin-top: 1px;
     }
 
     /* Settings Header */
@@ -1044,7 +1187,7 @@
     /* Settings Tab */
      .settingTab {
         background-color: rgb(142 142 142 / 70%) !important;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
     }
 
     /* Popup Background */
@@ -1055,9 +1198,19 @@
 
     /* Confirm Popup */
      #confPremiumPop, #twitchPop, #confPop, #clientExitPop, #confPurchItemPop {
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
         background-color: rgb(80 80 80 / 60%);
         animation: popupanimation .2s;
+    }
+
+    /* You don't have any friends yet */
+     #friendList > span {
+         color: rgb(195 195 195 / 0.9) !important;
+    }
+
+    /* Home, Promo */
+     #menuWindow > div.bigMenTabs > div.bigMenTab.bigMenTabA > span , #menuWindow > div.bigMenTabs > div:nth-child(1) > span , #menuWindow > div.bigMenTabs > div:nth-child(6) > span {
+         color: #fff !important;
     }
 
     /* Map Vote */
@@ -1082,16 +1235,21 @@
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-        backdrop-filter: blur(20px) !important;
+        backdrop-filter: blur(40px) !important;
         border-radius: 5px;
-     }
+    }
+
+    /* SetBodH */
+     .setBodH {
+        backdrop-filter: blur(20px);
+    }
 
     /* Donate Map Hover Button */
      .voteHint:hover {
         background: rgba(98, 110, 148, 0.8) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-        backdrop-filter: blur(20px) !important;
+        backdrop-filter: blur(40px) !important;
         border-radius: 5px;
     }
 
@@ -1100,7 +1258,7 @@
         background: rgba(28, 42, 85, 0.8) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-        backdrop-filter: blur(20px) !important;
+        backdrop-filter: blur(40px) !important;
         border-radius: 5px;
         transform: scale(.9);
     }
@@ -1108,7 +1266,7 @@
     /* Popup Content */
      #popupContent {
         background-color: rgb(80 80 80 / 60%) !important;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
         animation: popupanimation .2s;
     }
 
@@ -1117,13 +1275,27 @@
         transition: .2s;
     }
 
+    /* Chat Switch Hover */
+     #chatSwitch:hover {
+        transition-duration: .2s;
+        color: #d8d8d8;
+        transform: scale(1.35);
+    }
+
+    /* Chat Switch Active */
+     #chatSwitch:active {
+        transition-duration: .2s;
+        color: #343434;
+        transform: scale(0.85);
+    }
+
     /* Business... etc of TermsInfo Button */
      #termsInfo {
         animation: showanimationonstartup 0.5s;
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
         border-radius: 7px !important;
         transform: translate(-14px , -18px);
     }
@@ -1150,8 +1322,8 @@
     }
 
     /* Chat Text Outline */
-    .chatTextOutline {
-        text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.7), 1px -1px 0 rgb(0, 0, 0, 0.7), -1px 1px 0 rgb(0, 0, 0, 0.7), 1px 1px 0 rgb(0, 0, 0, 0.7);
+     .chatTextOutline {
+        text-shadow: -1px -1px 0 rgb(36 36 36 / 60%), 1px -1px 0 rgb(36 36 36 / 60%), -1px 1px 0 rgb(36 36 36 / 60%), 1px 1px 0 rgb(36 36 36 / 60%) !important;
     }
 
     /* Voice Icon */
@@ -1161,7 +1333,7 @@
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
         border-radius: 7px;
         margin-bottom: -2px;
         width: 58px;
@@ -1174,7 +1346,8 @@
 
     /* Voice On */
      .voiceOn:after {
-        color: #00133c;
+        color: rgba(5, 0, 61, 0.9);
+        transition-duration: 0.2s !important;
     }
     
     /* Voice Icon UI Base */ 
@@ -1203,7 +1376,7 @@
 
     /* Chat Msg Content */
      .chatMsg {
-        color: rgb(255 255 255 / 80%);
+        color: rgb(255 255 255 / 0.9);
     }
 
     /* 
@@ -1212,13 +1385,13 @@
       Custom: Host Kick [Guest_1 was kicked] / Ban [Guest_1 was banned]
     */
      [style="color:#ff0000"] /* Red Color */ {
-        color: #081565 !important;
+        color: rgba(5, 0, 61, 0.9) !important;
         text-shadow: none !important;
     }
 
     /* System Chat, Krunkitis */
      [style="color:#fc03ec"], [style="color:#76ff03"] /* Magenta/Fuchsia Color */ {
-        color: #081565 !important;
+        color: rgba(5, 0, 61, 0.9) !important;
         text-shadow: none !important;
     }
 
@@ -1252,19 +1425,39 @@
         opacity: .5 !important;
     }
 
+    /* Enemy System Chat */
+     [style="color:#eb5656"] {
+        color: #ff5858 !important;
+    }
+
+    /* Team System Chat */
+     [style="color:#9eeb56"] {
+        color: #62ff58 !important;
+    }
+
+    /* Menu FPS Display */
+     #menuFPS {
+        color: #fff !important;
+    }
+
+    /* Menu Ping Icon */
+     #menuPingIcon {
+        color: #fff !important;
+    }
+
     /* KPD Popup */
      #policePopC {
         animation: popupanimation .2s;
         transform: scale(1) translate(-50%,-50%);
         background-color: #a3a3a38f !important;
         box-shadow: 0px 0px 20px 3px rgb(16 16 16) !important;
-        backdrop-filter: blur(20px) !important;
+        backdrop-filter: blur(40px) !important;
     }
 
     /* Profile, Games...etc Tabs */
      .bigMenTabs {
         background-color: rgb(142 142 142 / 70%) !important;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
     }
 
     /* Key Binds Header Tab */
@@ -1281,7 +1474,7 @@
     /* Krunker Guide Popup */
      #guidePopup {
         background-color: rgb(142 142 142 / 70%) !important;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
         animation: fadein .2s;
     }
 
@@ -1318,7 +1511,7 @@
     /* Comp Sub Lst */
      #compBtnLst {
         background-color: rgb(187 187 187 / 50%);
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
     }
 
 /* ------------------------------ 3. Comp Game Main ------------------------------ */
@@ -1399,7 +1592,7 @@
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
         border-radius: 7px;
         transition-duration: 0.2s !important;
     }
@@ -1409,7 +1602,7 @@
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
         border-radius: 7px;
     }
 
@@ -1418,7 +1611,7 @@
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
         border-radius: 7px;
     }
 
@@ -1427,7 +1620,7 @@
         background: var(--main-bg-color) !important;
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(40px);
         border-radius: 7px;
     }
     
