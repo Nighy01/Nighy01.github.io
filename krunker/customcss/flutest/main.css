@@ -1410,7 +1410,7 @@
     }
 
     /* Host Icon */
-     #menuWindow > table > tbody > tr > td.pListName > i {
+     #playerListH > table > tbody > tr > td.pListName > i {
         color: #fff !important;
     }
 
