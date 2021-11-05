@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/10/31 */
+/* 2021/11/05 */
 
 
 /* ------------------------------ Configs ------------------------------ */
@@ -1501,6 +1501,16 @@
         animation: topanimation .4s;
     }
 
+    /* Xp Bar V Text */
+     .xpBarV {
+        color: rgb(64 72 103 / 90%);
+        text-align: left;
+        top: 6px;
+        left: 17px;
+        font-size: 15px;
+        text-shadow: none !important;
+    }
+
 /* ------------------------------ 2. Main ------------------------------ */
 
 
@@ -1549,9 +1559,11 @@
      #healthBar {
         border-radius: 7px;
         height: 35px;
-        width: 466px;
-        padding-left: 6px;
-        padding-top: 6px;
+        padding: 20px;
+        padding-top: 7px;
+        padding-bottom: 1px;
+        padding-right: 17px;
+        padding-left: 7px;
         background-color: rgb(0 0 0 / 40%);
     }
 
