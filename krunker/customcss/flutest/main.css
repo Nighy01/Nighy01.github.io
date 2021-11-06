@@ -1594,22 +1594,15 @@
 
     /* Health Bar */
      #healthBar {
-        border-radius: 7px;
-        height: 35px;
-        width: 500px;
-        padding: 20px;
-        padding-top: 7px;
-        padding-bottom: 1px;
-        padding-right: 17px;
-        padding-left: 7px;
-        background: rgba(31, 31, 31, 0.8);
-        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(40px);
+        width: 280px;
+        height: 30px;
         display: inline-flex;
         justify-content: center;
+        background-color: #b8b8b8;
+        border-radius: 0;
         position: fixed;
-        bottom: 205px;
-        left: calc(45% - 145px);
+        left: calc(50% - 140px);
+        bottom: 25px;
         transition-duration: .2s;
     }
 
@@ -1626,9 +1619,14 @@
      #weapDisplay {
         display: flex !important;
         flex-direction: row !important;
+        width: 280px;
+        height: 16px;
+        display: inline-flex;
+        justify-content: center;
+        border-radius: 0;
         position: fixed;
+        left: calc(50% - 140px);
         bottom: 100px;
-        right: calc(45% - 25px);
         transition-duration: .2s;
     }
 
@@ -1649,8 +1647,8 @@
         margin: 0;
         z-index: 5;
         position: fixed;
-        left: calc(45% - 125px);
-        bottom: 213px;
+        left: calc(50% - 130px);
+        bottom: 27px;
     }
 
     /* Health Value */
@@ -1704,11 +1702,16 @@
     }
 
     /* Ammo Display */
-     #bottomRight {
+     #ammoDisplay {
+        transform: unset;
+        background-color: transparent;
         position: fixed;
-        bottom: 110px;    
-        right: calc(39% - 25px);
-        transition-duration: .2s;
+        left: calc(50% - 40px);
+        bottom: calc(50% - 60px);
+        height: 8px;
+        width: 80px;
+        padding: 0;
+        margin: 0;
     }
 
     /* Ammo Icon */
@@ -1762,6 +1765,10 @@
     /* Ammo Value */
      #ammoVal {
         text-shadow: -1px -1px 0 rgb(36 36 36 / 60%), 1px -1px 0 rgb(36 36 36 / 60%), -1px 1px 0 rgb(36 36 36 / 60%), 1px 1px 0 rgb(36 36 36 / 60%) !important;
+        display: inline-block;
+        position: fixed;
+        left: calc(50% + 180px);
+        bottom: 20px;
     }
 
     /* Ammo Max */
