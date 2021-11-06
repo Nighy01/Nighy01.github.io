@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/11/05 */
+/* 2021/11/06 */
 
 
 /* ------------------------------ Configs ------------------------------ */
@@ -891,12 +891,6 @@
         transition-duration: 0.2s !important;
     }
 
-    /* Chat on Game */
-       #uiBase.onGame #chatHolder {
-        left: 15px;
-        transition-duration: 0.2s !important;
-    }
-
     /* Spectate Slider to Text */
      .sliderSml, #spectButton > span {
         visibility: hidden;
@@ -1558,7 +1552,19 @@
 
 
 /* ------------------------------ 4. In Game ------------------------------ */
-       
+    
+    /* Chat on Game */
+       #uiBase.onGame #chatHolder {
+        left: 15px;
+        bottom: 20px;
+        transition-duration: 0.2s !important;
+    }
+
+    /* Voice on Game */ 
+     #uiBase.onGame #voiceDisplay {
+        bottom: 21px;
+    }
+
     /* "Killed By" Card Holder */
      #killCardHolder {
         animation: killcardanimation .2s;
@@ -1572,9 +1578,10 @@
 
     /* Health Bar Seg */
      .healthBarSeg {
-        width: 55px !important;
+        width: 100px !important;
         margin-right: -10px !important;
         height: 30px;
+        margin: 0 -1px;
         background-color: rgb(0 0 0 / 0%) !important;
     }
 
@@ -1589,17 +1596,178 @@
      #healthBar {
         border-radius: 7px;
         height: 35px;
+        width: 500px;
         padding: 20px;
         padding-top: 7px;
         padding-bottom: 1px;
         padding-right: 17px;
         padding-left: 7px;
-        background-color: rgb(0 0 0 / 40%);
+        background: rgba(31, 31, 31, 0.8);
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(40px);
+        display: inline-flex;
+        justify-content: center;
+        position: fixed;
+        bottom: 205px;
+        left: calc(45% - 145px);
+        transition-duration: .2s;
     }
 
     /* LeaderBoard */
      #leaderDisplay {
-        background-color: rgb(0 0 0 / 50%) !important;
+        background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7);
+        border: 1px solid rgba(225, 225, 225, 0.4);
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(40px);
+        border-radius: 7px;
+    }
+
+    /* Weap Display */
+     #weapDisplay {
+        display: flex !important;
+        flex-direction: row !important;
+        position: fixed;
+        bottom: 100px;
+        right: calc(45% - 25px);
+        transition-duration: .2s;
+    }
+
+    /* Weap Key */
+     .weapKey {
+        display: none;
+    }
+
+    /* Health [+] Icon */
+     #challIcon {
+        display: none;
+    }
+
+    /* Health Value Holder */
+     #healthValueHolder {
+        background-color: #0000;
+        padding: 0;
+        margin: 0;
+        z-index: 5;
+        position: fixed;
+        left: calc(45% - 125px);
+        bottom: 213px;
+    }
+
+    /* Health Value */
+     #healthValue {
+        color: rgb(64 72 103);
+        font-size: 15px;
+    }
+
+    /* Max HP */
+     #maxHP {
+        color: rgb(64 72 103);
+    }
+
+    /* Health Color */
+     #healthBar > div > div {
+        background: rgb(186 196 216) !important;
+    }
+
+    /* Timer Icon */
+    #timerIcon {
+        display: none;
+    }
+
+    /* Timer Display */
+     #timerDisplay {
+        background: rgb(112 112 112 / 0.5);
+        backdrop-filter: blur(40px);
+        border-radius: 7px !important;
+    }
+
+    /* Ping Text */
+     #pingText{
+        color: rgba(255,255,255, 0.9) !important;
+    }
+
+    /* Ping/FPS Display and Ping Icon */
+     #pingDisplay, #pingIcon, #fpsDisplay {
+        color: rgba(255,255,255, 0.8) !important;
+    }
+
+    /* In Game FPS Text */
+     #ingameFPS {
+        color: rgb(255,255,255, 0.9) !important;
+    }
+
+    /* Profile Icon Holder */
+     #bottomLeftHolder {
+        position: fixed;
+        left: calc(100% - 115px);
+        bottom: 0px;
+    }
+
+    /* Ammo Display */
+     #bottomRight {
+        position: fixed;
+        bottom: 110px;    
+        right: calc(39% - 25px);
+        transition-duration: .2s;
+    }
+
+    /* Ammo Icon */
+     #ammoIcon {
+        display: none;
+    }
+
+    /* Ammo Display Background */
+     .UIB {
+        background-color: rgb(0 0 0 / 0%);
+    }
+
+    /* Speed Run (Parkour/Race Mode) Holder */
+     #speedRunHolder {
+        position: fixed;
+        bottom: 30px;    
+        right: calc(6% - 25px);
+    }
+
+    /* Vote Kick Key Text */
+     #kickVoteY, #kickVoteN {
+        color: rgb(203 198 255 / 90%) !important;
+    }
+
+    /* Network Lag Detected! */
+     #networkLagHed {
+        color: rgb(203 198 255 / 90%) !important;
+    }
+
+    /* Network Lag, Vote Kick, Team Scores Display */
+    #networkLag, #voteToKick, #teamScores {
+        background: rgb(112 112 112 / 0.5);
+        backdrop-filter: blur(40px);
+        border-radius: 7px !important;
+    }
+
+    /* Kills, Deaths, Scores..etc Count Icon */
+     .countIcon {
+        background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7);
+        border: 1px solid rgba(225, 225, 225, 0.4);
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(40px);
+        border-radius: 7px;
+    }
+
+    /* In Game XP Bar */
+     #igXPBar {
+        bottom: -4px;
+    }
+
+    /* Ammo Value */
+     #ammoVal {
+        text-shadow: -1px -1px 0 rgb(36 36 36 / 60%), 1px -1px 0 rgb(36 36 36 / 60%), -1px 1px 0 rgb(36 36 36 / 60%), 1px 1px 0 rgb(36 36 36 / 60%) !important;
+    }
+
+    /* Ammo Max */
+     #ammoMax {
+        text-shadow: -1px -1px 0 rgb(36 36 36 / 60%), 1px -1px 0 rgb(36 36 36 / 60%), -1px 1px 0 rgb(36 36 36 / 60%), 1px 1px 0 rgb(36 36 36 / 60%) !important;
+        color: rgba(255,255,255, 60%);
     }
 
 /* ------------------------------ 4. In Game ------------------------------ */
