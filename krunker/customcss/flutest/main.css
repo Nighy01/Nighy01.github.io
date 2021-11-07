@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/11/06 */
+/* 2021/11/07 */
 
 
 /* ------------------------------ Configs ------------------------------ */
@@ -291,19 +291,14 @@
     /* Chat List Animation */
      @keyframes chatlistanimation {
         0% {
+          transform: translateY(120%);
+          z-index: 0;
           background: linear-gradient(180deg, rgba(165, 167, 216, 0.1) 0%, rgba(171, 179, 223, 0.1) 100%), rgba(149, 156, 171, 0.3);
-          margin-bottom: -64px;
-          z-index: 0;
-        }
-        50% {
-          background: linear-gradient(180deg, rgba(165, 167, 216, 0.2) 0%, rgba(171, 179, 223, 0.2) 100%), rgba(149, 156, 171, 0.5);
-          margin-bottom: -44px;
-          z-index: 0;
         }
         100% {
+          transform: translateY(0%);
+          z-index: 0;
           background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(149, 156, 171, 0.8);
-          margin-bottom: 0px;
-          z-index: 1;
         }
     }
 
@@ -848,14 +843,14 @@
 
     /* Chat List [User: Test Message] */
      #chatList {
-        background: var(--main-bg-color) !important;
+        background: var(--main-bg-color);
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(40px);
         border-radius: 7px;
-        transition-duration: 0.2s !important;
+        transition-duration: .3s !important;
         min-height: 45px;
-        animation: chatlistanimation .2s;
+        animation: chatlistanimation .3s !important;
     }
 
     /* Enter Message Input ( [Switch Global/Team Chat] [Enter Message] [Voice] ) */
@@ -1578,7 +1573,7 @@
 
     /* Health Bar Seg */
      .healthBarSeg {
-        width: 100px !important;
+        width: 450px !important;
         margin-right: -10px !important;
         height: 30px;
         margin: 0 -1px;
@@ -1594,22 +1589,23 @@
 
     /* Health Bar */
      #healthBar {
-        width: 280px;
+        width: 450px;
         height: 30px;
         display: inline-flex;
         justify-content: center;
-        background: rgba(31, 31, 31, 0.8);
-        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+        background: rgba(31, 31, 31, 0.7);
+        border: 1px solid rgba(225, 225, 225, 0.1);
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
         backdrop-filter: blur(40px);
         padding: 10px;
-        padding-left: 8px;
-        padding-right: 18px;
-        padding-top: 9px;
-        padding-bottom: 9px;
+        padding-left: 7px;
+        padding-right: 17px;
+        padding-top: 8px;
+        padding-bottom: 7px;
         border-radius: 7px;
         position: fixed;
         left: calc(50% - 236px);
-        bottom: 22px;
+        bottom: 150px;
         transition-duration: .2s;
     }
 
@@ -1624,17 +1620,16 @@
 
     /* Weap Display */
      #weapDisplay {
-        display: flex !important;
-        flex-direction: row !important;
-        width: 280px;
-        height: 16px;
-        display: inline-flex;
-        justify-content: center;
-        border-radius: 0;
         position: fixed;
-        left: calc(50% - 150px);
-        bottom: 120px;
+        left: calc(100% - 132px);
+        bottom: 113px;
         transition-duration: .2s;
+    }
+
+    /* Weap Icon */
+     .weapIcon {
+        width: 120px;
+        height: 70px;
     }
 
     /* Weap Key */
@@ -1655,7 +1650,7 @@
         z-index: 5;
         position: fixed;
         left: calc(50% - 220px);
-        bottom: 32px;
+        bottom: 158px;
     }
 
     /* Health Value */
@@ -1681,8 +1676,10 @@
 
     /* Timer Display */
      #timerDisplay {
-        background: rgb(112 112 112 / 0.5);
-        backdrop-filter: blur(40px);
+        background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(40px) !important;
         border-radius: 7px !important;
     }
 
@@ -1713,9 +1710,10 @@
         transform: unset;
         background-color: transparent;
         position: fixed;
-        left: calc(50% - -75px);
-        bottom: calc(50% - 611px);
-        height: 56px;
+        left: calc(50% - 55px);
+        border-radius: 7px;
+        bottom: 65px;
+        height: 7px;
         width: 123px;
         padding: 0;
         margin: 0;
@@ -1734,8 +1732,8 @@
     /* Speed Run (Parkour/Race Mode) Holder */
      #speedRunHolder {
         position: fixed;
-        bottom: 30px;    
-        right: calc(6% - 25px);
+        bottom: 30px;
+        left: calc(100% - 868px);
     }
 
     /* Vote Kick Key Text */
@@ -1743,15 +1741,41 @@
         color: rgb(203 198 255 / 90%) !important;
     }
 
+    /* Reset Key */
+     #speedRunRstKey {
+        color: rgb(213 209 255 / 90%) !important;
+    }
+
     /* Network Lag Detected! */
      #networkLagHed {
         color: rgb(203 198 255 / 90%) !important;
     }
 
+    /* Speed Run Timer */
+     #speedRunTimer {
+        color: #ffffff !important;
+    }
+
+    /* Speed Run Point */
+     .sriAct {
+        background-color: rgb(0 0 0 / 50%) !important;
+    }
+
+    /* Speed Run Box, Reset Key */
+     #speedRunReset, #speedRunReset {
+        background: rgba(29, 29, 29, 0.6) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px);
+        border-radius: 7px !important;
+    }
+
     /* Network Lag, Vote Kick, Team Scores Display */
-    #networkLag, #voteToKick, #teamScores {
-        background: rgb(112 112 112 / 0.5);
-        backdrop-filter: blur(40px);
+     #networkLag, #voteToKick, #teamScores {
+        background: rgba(29, 29, 29, 0.6) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px);
         border-radius: 7px !important;
     }
 
@@ -1771,23 +1795,54 @@
 
     /* Ammo Value */
      #ammoVal {
-        text-shadow: -1px -1px 0 rgb(36 36 36 / 60%), 1px -1px 0 rgb(36 36 36 / 60%), -1px 1px 0 rgb(36 36 36 / 60%), 1px 1px 0 rgb(36 36 36 / 60%) !important;
+        color: rgba(150, 141, 255, 0.9);
         font-size: 30px;
         display: inline-block;
         position: fixed;
-        left: calc(50% + 81px);
-        bottom: 22px;
+        left: calc(50% + -50px);
+        bottom: 75px;
     }
 
     /* Ammo Max */
      #ammoMax {
-        text-shadow: -1px -1px 0 rgb(36 36 36 / 60%), 1px -1px 0 rgb(36 36 36 / 60%), -1px 1px 0 rgb(36 36 36 / 60%), 1px 1px 0 rgb(36 36 36 / 60%) !important;
-        color: rgb(255 255 255 / 0.8);
+        color: rgba(186, 180, 255, 0.8);
         font-size: 30px;
         display: inline-block;
         position: fixed;
-        left: calc(50% + 131px);
-        bottom: 22px;
+        left: calc(50% + 1px);
+        bottom: 75px;
+    }
+
+    /* Reload Message */
+     #reloadMsg {
+        bottom: calc(50% - 90px);
+        font-size: 17px;
+        background-color: transparent !important;
+        border: none !important;
+    }
+
+    /* Press [G] */
+     #interactMsg > span:nth-child(1) {
+         color: rgb(213 209 255 / 90%) !important;
+    }
+
+    /* Interact Message */
+     #interactMsg {
+        background: rgba(29, 29, 29, 0.6) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(20px) !important;
+        border-radius: 7px !important;
+        animation: fadein .2s;
+        transition-duration: .2s;
+    }
+
+    /* Profile Icon */
+     #hudClassIcon {
+        background: rgba(29, 29, 29, 0.6) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
+        backdrop-filter: blur(20px) !important;
     }
 
 /* ------------------------------ 4. In Game ------------------------------ */
@@ -1858,17 +1913,23 @@
     
     /* Blue(Your) Team */
      .teamTotalN0 {
-        color: #82abdf;
+        color: #a9cfff;
     }
     
     /* Red(Enemy)Team */
      .teamTotalN1 {
-        color: #e66d6d;
+        color: #ff7f7f;
     }
     
     /* Match End Ad Container */
      #endAContainer {
         border-radius: 7px;
+    }
+
+    /* Tab Selected */
+     .tabHeader.selected {
+        color: #ffffff;
+        border-bottom: 4px solid #ffffff;
     }
 
 /* ------------------------------ 6. Match Ended ------------------------------ */
