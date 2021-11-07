@@ -43,7 +43,7 @@
     /* Top Animation */
      @keyframes topanimation {
         from {
-          margin-top: -600px;
+          margin-top: -120px;
           z-index: 0;
         }
         to {
@@ -52,13 +52,61 @@
         }
     }
 
+    /* Left Animation */
+     @keyframes leftanimation {
+        from {
+          margin-left: -400px;
+          z-index: 0;
+        }
+        to {
+          margin-left: 0px;
+          z-index: 1;
+        }
+    }
+
+    /* Stream Container or YouNew Animation */
+     @keyframes StreamContainerORyouNewAnimation {
+        from {
+          transform: translate(-400px, 15px);
+          z-index: 0;
+        }
+        to {
+          transform: translate(0px, 15px);
+          z-index: 1;
+        }
+    }
+
+    /* Right Animation */
+     @keyframes rightanimation {
+        from {
+          margin-right: -450px;
+          z-index: 0;
+        }
+        to {
+          margin-right: 0px;
+          z-index: 1;
+        }
+    }
+
     /* Ad Bottom Animation */
      @keyframes adbottomanimation {
         from {
-          margin-bottom: -220px;
+          margin-bottom: -300px;
         }
         to {
           margin-bottom: 0px;
+        }
+    }
+
+    /* Customize Bottom Animation */
+     @keyframes customizebottomanimation {
+        from {
+          transform: translate(0px, 100px);
+          opacity: 0.1;
+        }
+        to {
+          transform: translate(0px, 0px);
+          opacity: 1;
         }
     }
 
@@ -291,14 +339,62 @@
     /* Chat List Animation */
      @keyframes chatlistanimation {
         0% {
-          transform: translateY(120%);
+          transform: translateX(-110%);
           z-index: 0;
           background: linear-gradient(180deg, rgba(165, 167, 216, 0.1) 0%, rgba(171, 179, 223, 0.1) 100%), rgba(149, 156, 171, 0.3);
         }
         100% {
-          transform: translateY(0%);
+          transform: translateY(-1%);
           z-index: 0;
           background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(149, 156, 171, 0.8);
+        }
+    }
+
+    /* Menu Name Tag Animation */
+     @keyframes MenuNameTagAnimation {
+        from {
+          opacity: 0.1;
+          transform: translate(0px,-70px);
+        }
+        to {
+          transform: translate(0px, 0px);
+          opacity: 1;
+        }
+    }
+
+    /* Menu Class Sub Name Animation */
+     @keyframes menuClassSubNameAnimation {
+        from {
+          transform: translate(0px, 150px);
+          opacity: 0.1;
+        }
+        to {
+          transform: translate(0px, 0px);
+          opacity: 1;
+        }
+    }
+
+    /* Spectate Button Animation */
+     @keyframes SpectateBtnAnimation {
+        from {
+          top: calc(50% - 0px);
+          opacity: 0.1;
+        }
+        to {
+          top: calc(50% - 60px);
+          opacity: 1;
+        }
+    }
+
+    /* Click To Play Animation */
+     @keyframes Click2PlayAnimation {
+        from {
+          top: calc(50% - -20px);
+          opacity: 0.1;
+        }
+        to {
+          top: calc(50% - 0px);
+          opacity: 1;
         }
     }
 
@@ -330,8 +426,8 @@
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(40px) !important;
         border-radius: 7px !important;
-        animation: adbottomanimation 0.95s;
-        transition-duration: .2s !important;
+        animation: adbottomanimation .8s;
+        transition-duration: .8s !important;
     }
 
     /* Krunker Editor Button */
@@ -413,7 +509,7 @@
 
     /* a Link */
      a {
-        color: #c3d3ff;
+        color: #c3d3ff !important;
     }
 
     /* Twitch Link */
@@ -447,7 +543,7 @@
         width: fit-content;
         height: min-content;
         top: 5px;
-        transition-duration: .2s;
+        transition-duration: .4s;
         left: 50%;
         transform: translateX(-50%);
         flex-direction: row;
@@ -583,6 +679,20 @@
         transition-duration: 0.2s !important;
     }
 
+    /* Stream Container (Streaming Now!, Featured Creators, Ad) */
+     #streamContainer {
+        transform: translate(0px, 15px);
+        transition-duration: .5s !important;
+        animation: StreamContainerORyouNewAnimation .5s;
+    }
+
+    /* New to Krunker? Div */
+     .youNewDiv {
+        transform: translate(0px, 15px);
+        transition-duration: .55s !important;
+        animation: StreamContainerORyouNewAnimation .55s !important;
+    }
+
     /* Download Client Button */
      [src="./img/client.png"] {
         content: url(https://i.imgur.com/XkDeUPp.png) !important;
@@ -709,6 +819,8 @@
         box-shadow: 0px 4px 40px rgb(0 0 0 / 25%) !important;
         backdrop-filter: blur(40px) !important;
         border-radius: 7px !important;
+        transition-duration: .45s;
+        animation: customizebottomanimation .45s;
     }
 
     /* KPD Hover Button */
@@ -817,7 +929,7 @@
         border: 1px solid rgba(225, 225, 225, 0.4) !important;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(40px);
-        transition-duration: .2s;
+        transition-duration: .4s;
         animation: topanimation .4s;
         border-radius: 7px;
         transform: translate(-14px);
@@ -830,15 +942,9 @@
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
         backdrop-filter: blur(40px);
         border-radius: 7px;
-        transition-duration: .2s;
+        transition-duration: .5s;
         transform: translateY(9px);
-        animation: topanimation .4s;
-    }
-
-    /* Top Left Container(Streaming Now!...etc) */
-     #tlInfHold {
-        transition-duration: .2s;
-        animation: topanimation .4s;
+        animation: rightanimation .5s;
     }
 
     /* Chat List [User: Test Message] */
@@ -850,6 +956,7 @@
         border-radius: 7px;
         transition-duration: .3s !important;
         min-height: 45px;
+        transform: translateY(-1%);
         animation: chatlistanimation .3s !important;
     }
 
@@ -884,6 +991,18 @@
        #uiBase.onEndScrn #chatHolder {
         left: 15px;
         transition-duration: 0.2s !important;
+    }
+
+    /* Spectate Button */
+     #uiBase.onMenu #spectButton {
+        transition-duration: .4s !important;
+        animation: SpectateBtnAnimation .4s;
+    }
+
+    /* Click To Play */
+     #instructions {
+        transition-duration: .45s !important;
+        animation: Click2PlayAnimation .45s;
     }
 
     /* Spectate Slider to Text */
@@ -1516,9 +1635,33 @@
     
     /* Class Preview */
      #classPreviewCanvas {
-        transition-duration: .2s;
-        animation: topanimation .4s;
+        transition-duration: .3s;
+        animation: MenuNameTagAnimation .3s;
     }
+
+    /* Menu Class Name Tag */
+     #menuClassNameTag {
+        transition-duration: .45s;
+        animation: MenuNameTagAnimation .45s;
+    }
+
+    /* Menu Class Sub Text */
+     #menuClassSubtext {
+        transition-duration: .5s;
+        animation: menuClassSubNameAnimation .5s;
+    }
+
+    /* Menu Class Name */
+     #menuClassName {
+        transition-duration: .55s;
+        animation: menuClassSubNameAnimation .55s;
+    }
+
+    /* Customize Button */
+     #customizeButton {
+        transition-duration: .4s;
+        animation: customizebottomanimation .4s;
+     }
 
     /* Xp Bar V Text */
      .xpBarV {
@@ -1528,6 +1671,15 @@
         left: 17px;
         font-size: 15px;
         text-shadow: none !important;
+    }
+
+    /* Bottom Right Vertical Separator */
+     .verticalSeparatorInline {
+        background: rgb(255 255 255 / 60%) !important;
+        width: 5px !important;
+        border-radius: 100px !important;
+        height: 22px !important;
+        transform: translate(0px) translateY(-2px) !important;
     }
 
 /* ------------------------------ 2. Main ------------------------------ */
@@ -1549,7 +1701,7 @@
 /* ------------------------------ 4. In Game ------------------------------ */
     
     /* Chat on Game */
-       #uiBase.onGame #chatHolder {
+     #uiBase.onGame #chatHolder {
         left: 15px;
         bottom: 20px;
         transition-duration: 0.2s !important;
@@ -1567,8 +1719,16 @@
 
     /* "Killed By" Card */
      #killCard {
-        border-radius: 7px;
-        background: rgb(0 0 0 / 55%);
+        background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+        backdrop-filter: blur(40px) !important;
+        border-radius: 7px !important;
+    }
+
+    /* Kill Card Info Scores */
+     #kCInfoS {
+        color: rgb(5 0 61) !important;
     }
 
     /* Health Bar Seg */
@@ -1845,6 +2005,39 @@
         backdrop-filter: blur(20px) !important;
     }
 
+    /* "[Key]" to Report */
+     #killCardKick > span {
+        color: rgb(213 209 255 / 95%) !important;
+        margin-left: -450px;
+        transition-duration: .2s;
+    }
+
+    /* [Key] "to Report" */
+     #killCardKick {
+        color: rgba(255 255 255 / 90%) !important;
+    }
+
+    /* Killed By */
+     #killCardBy {
+        display: none;
+    }
+
+    /* Kill Card Profile */
+     #kCProfile {
+        width: 95px;
+        height: 100px;
+        background: rgba(29, 29, 29, 0.6) !important;
+        border: 1px solid rgba(225, 225, 225, 0.4) !important;
+        box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
+        backdrop-filter: blur(20px) !important;
+        border-radius: 7px !important;
+    }
+
+    /* Kill Card Level */
+     .kClvl {
+        text-shadow: none;
+    }
+
 /* ------------------------------ 4. In Game ------------------------------ */
 
 
@@ -1882,6 +2075,21 @@
         backdrop-filter: blur(40px);
         border-radius: 7px;
         transition-duration: 0.2s !important;
+    }
+
+    /* Enemy Color Profile Link */
+     [style="color:#eb5656"] {
+        color: #eb5656 !important;
+    }
+
+    /* You Color Profile Link */
+     [style="color:#fff"] {
+        color: #fff !important;
+    }
+
+    /* Team Color Profile Link */
+     [style="color:rgba(255,255,255,0.6)"] {
+        color: rgba(255,255,255,0.6) !important;
     }
 
     /* Match Ended Ad Container */
