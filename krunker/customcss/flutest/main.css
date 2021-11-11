@@ -787,11 +787,53 @@ a {
 
 /* Buttons(Host,KPD...etc) */
 .button {
+    background: var(--main-bg-color);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(40px);
+    border-radius: 7px;
+}
+
+/* Login or Register, Login/Register Button in Login Page */
+#signedOutHeaderBar > div, #menuWindow > div > div:nth-child(6) > div.accBtn.button.buttonG, #menuWindow > div > div:nth-child(6) > div.accBtn.button.buttonP {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
-    border-radius: 7px;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 7px !important;
+}
+
+/* Login or Register, Login/Register Hover Button in Login Page */
+#signedOutHeaderBar > div:hover, #menuWindow > div > div:nth-child(6) > div.accBtn.button.buttonG:hover, #menuWindow > div > div:nth-child(6) > div.accBtn.button.buttonP:hover {
+    background: rgba(98, 110, 148, 0.8) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 7px !important;
+}
+
+/* Login or Register, Login/Register Active Button in Login Page */
+#signedOutHeaderBar > div:active, #menuWindow > div > div:nth-child(6) > div.accBtn.button.buttonG:active, #menuWindow > div > div:nth-child(6) > div.accBtn.button.buttonP:active {
+    background: rgba(28, 42, 85, 0.8) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 7px !important;
+}
+
+/* Claim KR Button */
+#claimPop > div > div > div {
+    background: #b447ff !important;
+}
+
+/* Claim KR Hover Button */
+#claimPop > div > div > div:hover {
+    background: #8636bd !important;
+}
+
+/* Claim KR Active Button */
+#claimPop > div > div > div:active {
+    background: #59267c !important;
 }
 
 /* KPD Button */
@@ -804,7 +846,7 @@ a {
     box-shadow: 0px 4px 40px rgb(0 0 0 / 25%) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 7px !important;
-    transition-duration: .45s;
+    transition-duration: .15s;
     animation: customizebottomanimation .45s;
 }
 
@@ -841,19 +883,19 @@ a {
 
 /* Buttons Hover(Host,KPD...etc) */
 .button:hover {
-    background: rgba(98, 110, 148, 0.8) !important;
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    background: rgba(98, 110, 148, 0.8);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(40px);
     border-radius: 7px;
 }
 
 /* Buttons Active(Host,KPD...etc) */
 .button:active {
-    background: rgba(28, 42, 85, 0.8) !important;
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    background: rgba(28, 42, 85, 0.8);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(40px);
     border-radius: 7px;
 }
 
@@ -1206,7 +1248,7 @@ input:checked+.sliderSml:active:after {
 
 /* XP Bar B */
 .xpBarB {
-    background: rgb(186 196 216) !important;
+    background: rgba(131, 140, 188, 1) !important;
     border-radius: 7px;
 }
 
@@ -1397,9 +1439,33 @@ input:checked+.sliderSml:active:after {
 
 /* Popup Content */
 #popupContent {
-    background-color: rgb(80 80 80 / 60%) !important;
-    backdrop-filter: blur(40px);
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    transition-duration: .2s !important;
     animation: popupanimation .2s;
+}
+
+/* Import Popup */
+#importPop {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    transition-duration: .2s !important;
+}
+
+/* Import Button */
+#importPop > div.mapFndB {
+    background: var(--main-bg-color) !important;
+}
+
+/* Pub Hed */
+.pubHed {
+    border-radius: 10px !important;
 }
 
 /* Server Browser Game Select Active */
@@ -1643,13 +1709,43 @@ input:checked+.sliderSml:active:after {
 
 /* Customize Button */
 #customizeButton {
-    transition-duration: .4s;
+    transition-duration: .15s;
     animation: customizebottomanimation .4s;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
+    backdrop-filter: blur(40px) !important;
+}
+
+/* Host Game/Server Browser/Ranked/Invite/Join Button */
+#menuBtnHost, #menuBtnBrowser, #inviteButton, #menuBtnJoin, #menuBtnRanked {
+    background: var(--main-bg-color) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 7px !important;
+}
+
+/* Host Game/Server Browser/Ranked/Invite/Join Hover Button */
+#menuBtnHost:hover, #menuBtnBrowser:hover, #inviteButton:hover, #menuBtnJoin:hover, #menuBtnRanked:hover {
+    background: rgba(98, 110, 148, 0.8) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 7px !important;
+}
+
+/* Host Game/Server Browser/Ranked/Invite/Join Active Button */
+#menuBtnHost:active, #menuBtnBrowser:active, #inviteButton:active, #menuBtnJoin:active, #menuBtnRanked:active {
+    background: rgba(28, 42, 85, 0.8) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 7px !important;
 }
 
 /* Xp Bar V Text */
 .xpBarV {
-    color: rgb(64 72 103 / 90%);
+    color: rgb(255 255 255 / 90%);
     text-align: left;
     top: 6px;
     left: 17px;
@@ -1799,18 +1895,18 @@ input:checked+.sliderSml:active:after {
 
 /* Health Value */
 #healthValue {
-    color: rgb(64 72 103);
+    color: rgb(255 255 255);
     font-size: 15px;
 }
 
 /* Max HP */
 #maxHP {
-    color: rgb(64 72 103);
+    color: rgb(255 255 255);
 }
 
 /* Health Color */
 #healthBar > div > div {
-    background: rgb(186 196 216) !important;
+    background: rgba(131, 140, 188) !important;
 }
 
 /* Timer Icon */
