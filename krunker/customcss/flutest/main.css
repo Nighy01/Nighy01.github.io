@@ -10,7 +10,7 @@
      --main-bg-color: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
 
     /* Dark Background Color */
-     --dark-bg-color: linear-gradient(180deg, rgba(85, 85, 92, 0.3) 0%, rgba(49, 49, 54, 0.3) 100%), rgba(0, 0, 0, 0.45) !important;
+     --dark-bg-color: linear-gradient(180deg, rgba(41, 42, 46, 0.3) 0%, rgba(34, 34, 39, 0.3) 100%), rgba(0, 0, 0, 0.45) !important;
     
 }
 
@@ -1760,6 +1760,11 @@ input:checked+.sliderSml:active:after {
     border-radius: 100px !important;
     height: 22px !important;
     transform: translate(0px) translateY(-2px) !important;
+}
+
+/* [X] Icon Popup Content */
+#popupContent > div > div:nth-child(1) > i {
+    color: rgb(255 255 255 / 0.7) !important;
 }
 
 /* ======================================= Main ======================================= */

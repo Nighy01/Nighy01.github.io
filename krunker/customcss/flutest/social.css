@@ -1,5 +1,18 @@
 /* Developing Process */
-/* 2021/11/11 */
+/* 2021/11/14 */
+
+
+/* ======================================= Configs ======================================= */
+
+:root {
+    
+    /* Card Blur */
+     --CardBlur: blur(40px) !important;
+    
+}
+
+/* ======================================= Configs ======================================= */
+
 
 
 /* ======================================= KeyFrames ======================================= */
@@ -81,21 +94,17 @@
     }
 }
 
-/* Hover to Spin Icon */
-@keyframes hovertospinicon {
-    0% { 
-        transform: rotate(0deg);
-    }
-    100% { 
-        transform: rotate(360deg);
-    }
-}
-
 /* ======================================= KeyFrames ======================================= */
 
 
 
 /* ======================================= Main(Feed) ======================================= */
+
+/* Background Image Holder */
+#backImgHoldr {
+    background: linear-gradient(180deg, rgba(41, 42, 46, 0.3) 0%, rgba(34, 34, 39, 0.3) 100%), rgba(0, 0, 0, 0.3) !important;
+    filter: blur(50px) !important;
+}
 
 /* LOADING */
 #loadMessage > div > div {
@@ -113,7 +122,7 @@
 #captcha-holder > div {
     animation: instructionsupdatepopupanimation .2s;
     background-color: rgb(255 255 255 / 0.9) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: var(--CardBlur);
 }
 
 /* Security Challenge Popup Background */
@@ -151,9 +160,40 @@
 
 /* Top Bar */
 #navBar {
-    background-color: rgb(140 140 140 / 34%) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: var(--CardBlur) !important;
     animation: topbarstartupanimation .2s;
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Search User Input */
+#searchPInput {
+    background: rgba(229, 230, 255, 0.8) !important;
+    backdrop-filter: blur(20px);
+    border-radius: 5px !important;
+}
+
+/* Search Button */
+#searchBtn {
+    margin-top: -10px !important;
+    margin-bottom: -9px !important;
+    height: 30px !important;
+    width: 30px !important;
+    content: url(https://i.imgur.com/ifR2sCz.png) !important;
+    background: rgba(180, 182, 217, 0.8);
+    backdrop-filter: blur(20px);
+    border-radius: 5px !important;
+}
+
+/* Terms Vertical Separator */
+#navTitle > div:nth-child(2) {
+    display: none;
+}
+
+/* Profile Image */
+#profileImg {
+    display: none !important;
 }
 
 /* Say something , KR Giveway Amount */
@@ -161,7 +201,7 @@
     background-color: rgb(255 255 255 / 40%) !important;
     border: 3px solid rgb(255 255 255) !important;
     border-radius: 5px !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: var(--CardBlur);
 }
 
 /* You will be charged a 10% KR Fee to make a Giveaway Post */
@@ -203,10 +243,13 @@
     opacity: 999;
 }
 
-/* Trade Chat Scroller */
+/* Side Bar */
 #chatScroller {
-    background-color: rgb(140 140 140 / 34%) !important;
-    backdrop-filter: blur(10px);
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: var(--CardBlur);
     animation: TradeChatScrollerStartupAnimation .2s;
 }
 
@@ -218,7 +261,7 @@
 /* Trade Chat Box */
 #chatBox {
     background-color: rgb(255 255 255 / 40%) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: var(--CardBlur);
 }
 
 /* Enter Message Input on Trade Chat */
@@ -275,7 +318,7 @@
 /* Krunker News, Krunk TV... etc */
 #leftABox, #rightABox, #rightFollBox, #leftYTBox {
     background-color: rgb(140 140 140 / 34%) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: var(--CardBlur) !important;
 }
 
 /* Krunker News Message Box */
@@ -298,7 +341,7 @@
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
     box-shadow: none !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: var(--CardBlur);
 }
 
 /* Post Scroll */
@@ -307,7 +350,7 @@
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    backdrop-filter: blur(10px);
+    backdrop-filter: var(--CardBlur);
 }
 
 /* Post Scroll Reply Button */
@@ -395,11 +438,6 @@
 /* Share Button */
 .shareBtnHol {
     background-color: rgb(175 175 175 / 80%);
-}
-
-/* Profile Image */
-#profileImg {
-    display: none !important;
 }
 
 /* Feed Post Username Clan */
@@ -509,10 +547,47 @@
     background-color: rgb(100 100 100 / 0.8);
 }
 
-/* Krunker [Hub] Box */
+/* Krunker [.io] Box */
 #hubBox {
-    color: rgb(255 255 255) !important;
-    background-color: rgb(35 120 255 / 80%) !important;
+    height: 60px !important;
+    width: 60px !important;
+    margin-right: -20px;
+    content: url(https://i.imgur.com/x1kHvsK.png) !important;
+    background-color: #0000 !important;
+}
+
+/* Krunker [.io] Box Hover */
+#hubBox:hover {
+    height: 60px !important;
+    width: 60px !important;
+    margin-right: -20px;
+    background-color: #0000 !important;
+    opacity: 0.7;
+    transition-duration: .1s;
+}
+
+/* Krunker [.io] Box Active */
+#hubBox:active {
+    height: 60px !important;
+    width: 60px !important;
+    margin-right: -20px;
+    background-color: #0000 !important;
+    opacity: 0.5;
+    transition-duration: .1s;
+}
+
+/* KRUNKER Logo */
+#navTitle > div:nth-child(5) {
+    display: none !important;
+}
+
+#navTitle > div.material-icons.terms {
+    transform: translate(60px,0px) !important;
+}
+
+.terms {
+    transform: translate(60px,0px) !important;
+    color: #fff !important;
 }
 
 /* Krunker Hub Hover Button */
@@ -528,7 +603,7 @@
 /* Login Popup */ 
 #loginPop {
     background-color: rgb(41 41 41 / 0.7) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: var(--CardBlur);
     animation: instructionsupdatepopupanimation .2s;
     transform: scale(1) translate(-50%,-50%);
 }
@@ -536,6 +611,7 @@
 /* Popup Background */
 #popupBack {
     background-color: rgb(0 0 0 / 0.6) !important;
+    backdrop-filter: blur(30px);
 }
 
 /* Login Hover Button */
@@ -567,14 +643,14 @@
 /* Krunk TV Box */
 #leftBox {
     background-color: rgb(140 140 140 / 34%) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: var(--CardBlur) !important;
 }
 
 /* New Feed Tabs */
 #feedTabs {
     border-radius: 5px;
     background-color: rgb(140 140 140 / 34%) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: var(--CardBlur);
 } 
 
 /* Feed Tab */
@@ -591,33 +667,29 @@
 /* Settings Popup */
 #settingsPop {
     background-color: rgb(25 25 25 / 80%) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: var(--CardBlur);
     border-radius: 7px;
     animation: instructionsupdatepopupanimation .2s;
 }
 
 /* Settings Hover Icon Button */
 #navTitle > div.material-icons.terms:hover {
-    animation: hovertospinicon 1.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    transition-duration: .2s;
     text-decoration: none;
+    transform: translate(60px,0px) !important;
     font-size: 50px !important;
     margin-top: 6px !important;
     color: #717db5 !important;
+    transition-duration: .2s;
 }
 
 /* Settings Active Icon Button */
 #navTitle > div.material-icons.terms:active {
-    animation: hovertospinicon 1.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    transition-duration: .2s;
     text-decoration: none;
+    transform: translate(60px,0px) !important;
     font-size: 45px !important;
     margin-top: 9px !important;
     color: #4c5ebb !important;
+    transition-duration: .2s;
 }
 
 /* ======================================= Main(Feed) ======================================= */
@@ -669,59 +741,11 @@
 
 
 
-/* ======================================= Clan Wars ======================================= */
-   
-/* Clan Wars Prog */
-.regionCard, #clanwarsProg {
-    backdrop-filter: blur(10px);
-    background-color: rgb(255 255 255 / 0.6) !important;
-    box-shadow: none !important;
-}
-
-/* Clan Wars Stats */ 
-#clanwarsStats {
-    z-index: 1 !important;
-}
-
-/* Sea Pseudo */
-#sea-pseudo {
-    border: 13px solid rgb(255 255 255 / 0.6) !important;
-} 
-
-/* Sea Mask */
-#sea-mask {
-    width: calc(100% - 25px);
-    margin-left: 12px;
-    margin-top: 13px;
-    height: 375px !important;
-    filter: none;
-    border-radius: 0px;
-} 
-
-/* Clan XP Bar */ 
-#clanwarsProg > div {
-    width: calc(100% - 16px) !important;
-}
-
-/* Clan Wars Help Background */
-#clanwarsHelpVig {
-    background-color: rgb(0 0 0 / 0%) !important;
-}
-
-/* Clan Wars Help Popup */
-#clanwarsHelpWin {
-    animation: fadein .2s;
-} 
-
-/* ======================================= Clan Wars ======================================= */
-
-
-
 /* ======================================= Item List ======================================= */
     
 /* Category...etc Select, Search Item Input */
 #itemsListNav>select, #itemsListNav>input {
-    backdrop-filter: blur(10px);
+    backdrop-filter: var(--CardBlur);
     background-color: rgb(255 255 255 / 0.8) !important;
 }
 
@@ -741,7 +765,7 @@
 
 /* Username, Since, Followers/Following Scroll Page */
 .scrollItemNew {
-    backdrop-filter: blur(10px);
+    backdrop-filter: var(--CardBlur);
     background-color: rgb(255 255 255 / 40%) !important;
     box-shadow: none !important;
 }
@@ -774,7 +798,7 @@
 /* Profile Tabs */
 .profileTabs {
     background-color: rgb(255 255 255 / 40%) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: var(--CardBlur);
 }
 
 /* Profile Tab */
@@ -821,7 +845,7 @@
 /* Following/Followers List Popup */
 #followPop {
     background-color: rgb(170 170 170 / 80%) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: var(--CardBlur);
     animation: instructionsupdatepopupanimation .2s;
 }
 
@@ -851,9 +875,35 @@
     color: #fff;
 }
 
+/* Trade Button */
+#tradeBtn {
+    color: #ffffff;
+    border-color: #2196f3;
+    background-color: #2196F3;
+}
+
+/* Give Badge Button */
+#badgeBtn {
+    color: #ffffff;
+    border-color: #505050;
+    background-color: #505050;
+}
+
+/* Unfollow Button */
+.unfollow {
+    color: #ffffff;
+    border-color: #ff4747;
+    background-color: #ff4747;
+}
+
 /* Followers/Following BHold */ 
 .friendBHold {
     border-top: none;
+}
+
+/* Custom Badge */
+.customBadge {
+    display: none !important;
 }
 
 /* ======================================= Profile ======================================= */
