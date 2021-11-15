@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/11/14 */
+/* 2021/11/15 */
 
 
 /* ======================================= Configs ======================================= */
@@ -121,14 +121,15 @@
 /* Security Challenge Popup */
 #captcha-holder > div {
     animation: instructionsupdatepopupanimation .2s;
-    background-color: rgb(255 255 255 / 0.9) !important;
     backdrop-filter: var(--CardBlur);
+    box-shadow: none !important;
+    background-color: rgb(232 234 255 / 80%) !important;
 }
 
 /* Security Challenge Popup Background */
 #captcha-holder {
     background-color: rgb(0 0 0 / 10%) !important;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(30px);
 }
 
 /* Error Load(e.g: Socket timed out, Took too long to complete captcha... etc) Hover Button */
@@ -143,7 +144,14 @@
 
 /* Error Load(e.g: Socket timed out, Took too long to complete captcha... etc) Button */
 #errorReloadButton {
-    background: #00b0ff !important;
+    width: 45px;
+    height: 45px;
+    content: url(https://i.imgur.com/abMeKhp.png) !important;
+    border-radius: 5px;
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(40px);
     border-radius: 5px;
 }
 
@@ -151,6 +159,11 @@
 #errorDisplay {
     background-color: rgb(0 0 0 / 10%) !important;
     backdrop-filter: blur(2px);
+}
+
+/* Blue Link */
+.blueLink {
+    color: #fff !important;
 }
 
 /* Steam, App Store, Google Play, Krunker Editor DBs */
@@ -184,6 +197,23 @@
     background: rgba(180, 182, 217, 0.8);
     backdrop-filter: blur(20px);
     border-radius: 5px !important;
+}
+
+/* Search Hover Button */
+#searchBtn:hover {
+    background-color: rgb(166 168 197 / 80%);
+}
+
+/* Search Active Button */
+#searchBtn:active {
+    background-color: rgb(91 94 147 / 80%);
+}
+
+/* Disabled Follow (Followed) */
+.disFolB {
+    cursor: default;
+    border: 3px solid #565656;
+    color: #565656;
 }
 
 /* Terms Vertical Separator */
@@ -306,7 +336,7 @@
 
 /* Feed Tab Selected Button */
 .feedTabA {
-    background-color: rgb(255 255 255 / 67%) !important;
+    background-color: rgb(58 59 70 / 70%) !important;
     border-bottom: none !important;
 }
 
@@ -317,8 +347,9 @@
 
 /* Krunker News, Krunk TV... etc */
 #leftABox, #rightABox, #rightFollBox, #leftYTBox {
-    background-color: rgb(140 140 140 / 34%) !important;
+    background-color: rgb(156 157 191 / 70%) !important;
     backdrop-filter: var(--CardBlur) !important;
+    height: 326px;
 }
 
 /* Krunker News Message Box */
@@ -337,7 +368,7 @@
 
 /* Feed Post */
 .socPost {
-    background-color: rgb(255 255 255 / 40%) !important;
+    background-color: rgb(156 157 191 / 70%) !important;
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
     box-shadow: none !important;
@@ -346,11 +377,21 @@
 
 /* Post Scroll */
 .scrollItem {
-    background-color: rgb(255 255 255 / 40%) !important;
+    background-color: rgb(156 157 191 / 70%) !important;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     backdrop-filter: var(--CardBlur);
+}
+
+/* Search Results */
+#searchInfo > div {
+    color: rgb(255 255 255 / 80%);
+}
+
+/* Search Results Count */
+#searchInfo > div > div {
+    color: rgb(255 255 255 / 0.5);
 }
 
 /* Post Scroll Reply Button */
@@ -581,10 +622,12 @@
     display: none !important;
 }
 
+/* Settings Icon */
 #navTitle > div.material-icons.terms {
     transform: translate(60px,0px) !important;
 }
 
+/* Terms Link */
 .terms {
     transform: translate(60px,0px) !important;
     color: #fff !important;
@@ -642,7 +685,7 @@
 
 /* Krunk TV Box */
 #leftBox {
-    background-color: rgb(140 140 140 / 34%) !important;
+    background-color: rgb(156 157 191 / 70%) !important;
     backdrop-filter: var(--CardBlur) !important;
 }
 
@@ -657,6 +700,7 @@
 .feedTab {
     padding-top: 0px;
     padding-bottom: 0px;
+    background-color: rgb(156 157 191 / 70%);
 } 
 
 /* No Current Posts */
@@ -664,13 +708,7 @@
     font-size: 26px !important;
 } 
 
-/* Settings Popup */
-#settingsPop {
-    background-color: rgb(25 25 25 / 80%) !important;
-    backdrop-filter: var(--CardBlur);
-    border-radius: 7px;
-    animation: instructionsupdatepopupanimation .2s;
-}
+
 
 /* Settings Hover Icon Button */
 #navTitle > div.material-icons.terms:hover {
@@ -678,7 +716,7 @@
     transform: translate(60px,0px) !important;
     font-size: 50px !important;
     margin-top: 6px !important;
-    color: #717db5 !important;
+    color: #b4afff !important;
     transition-duration: .2s;
 }
 
@@ -688,7 +726,7 @@
     transform: translate(60px,0px) !important;
     font-size: 45px !important;
     margin-top: 9px !important;
-    color: #4c5ebb !important;
+    color: #4f4c83 !important;
     transition-duration: .2s;
 }
 
@@ -755,7 +793,14 @@
 
 /* ======================================= Settings Popup ======================================= */
 
-
+/* Settings Popup */
+#settingsPop {
+    background-color: rgb(156 157 191 / 70%) !important;
+    backdrop-filter: var(--CardBlur);
+    border-radius: 7px;
+    animation: instructionsupdatepopupanimation .2s;
+    box-shadow: none !important;
+}
 
 /* ======================================= Settings Popup ======================================= */
 
@@ -766,7 +811,7 @@
 /* Username, Since, Followers/Following Scroll Page */
 .scrollItemNew {
     backdrop-filter: var(--CardBlur);
-    background-color: rgb(255 255 255 / 40%) !important;
+    background-color: rgb(156 157 191 / 70%) !important;
     box-shadow: none !important;
 }
 
@@ -804,6 +849,7 @@
 /* Profile Tab */
 .profileTab {
     color: rgb(255 255 255 / 90%) !important;
+    background-color: rgb(156 157 191 / 70%) !important;
 }
 
 /* Profile TabA... */
@@ -844,7 +890,7 @@
 
 /* Following/Followers List Popup */
 #followPop {
-    background-color: rgb(170 170 170 / 80%) !important;
+    background-color: rgb(151 148 183 / 80%) !important;
     backdrop-filter: var(--CardBlur);
     animation: instructionsupdatepopupanimation .2s;
 }
@@ -904,6 +950,11 @@
 /* Custom Badge */
 .customBadge {
     display: none !important;
+}
+
+/* Follow Pfp */
+.folPfp {
+    border: none;
 }
 
 /* ======================================= Profile ======================================= */

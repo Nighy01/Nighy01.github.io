@@ -1,22 +1,65 @@
 /* Developing Process */
-/* 2021/11/11 */
+/* 2021/11/15 */
 
 
 /* ======================================= Main ======================================= */
 
 /* Left/Right Panel */
 .left.panel, .right.panel {
-    background-color: rgb(105 104 126) !important;
+    background-color: rgb(131 130 147) !important;
+    box-shadow: none !important;
 }
 
 /* Hot Top Bar */
 #hotbar {
-    background: linear-gradient(180deg, rgb(105 104 126) 0%, rgb(105 104 126) 100%), rgb(105 104 126) !important;
+    background: rgb(131 130 147) !important;
+    box-shadow: none !important;
 }
 
 /* Play,Host,Expore Bar */
 #playbar>div {
     border-color: #5550 !important;
+}
+
+/* Tool Bar */
+.toolbarItem:hover,.toolbarDropDownItem:hover,.toolbarDropDownItem:hover,.button:hover,.publishAsset:hover {
+    background-color: #61616c;
+}
+
+/* [<] [>] Button */
+.qs_title_bar,.header>i,.subheader>i,.hide>i,.restore>i {
+    color: #ffffff !important;
+}
+
+/* Slider Checked */
+input:checked+.slider {
+    background: linear-gradient(90deg,#464646,#464646);
+}
+
+/* Range Slider Thumb */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: linear-gradient(#464646,#464646);
+}
+
+/* Moz Range Slider Thumb */
+input[type=range]::-moz-range-thumb {
+    background: linear-gradient(#464646,#464646);
+}
+
+/* Tab A New */
+.tabANew {
+    box-shadow: inset 0 -5px #989898b2;
+}
+
+/* Menu Tabs New Hover */
+.menuTabsNew>div:hover {
+    box-shadow: inset 0 -5px #6d7681b2;
+}
+
+/* Customize */
+#toglEditBtn {
+    color: #fff !important;
 }
 
 /* ======================================= Main ======================================= */
