@@ -541,7 +541,7 @@ a {
 }
 
 /* MenuItemContainer */
-#menuItemContainer {
+#menuItemContainer, div#menuItemContainer {
     width: fit-content;
     height: min-content;
     top: 5px;
@@ -551,10 +551,11 @@ a {
     flex-direction: row;
     background: none !important;
     animation: topmenuanimation .4s;
+    box-shadow: none !important;
 }
 
 /* MenuItem */
-.menuItem {
+.menuItem, div.menuItem {
     align-items: center;
     pointer-events: none;
     position: relative;
@@ -562,6 +563,7 @@ a {
     box-sizing: border-box;
     border-radius: 4px;
     padding: 14px 5px 12px;
+    background-color: transparent !important;
 }
 
 /* MenuItem Hover */
@@ -666,8 +668,20 @@ a {
     transition-duration: 0.2s !important;
 }
 
+/* Stream Container, New to Krunker? (Steam Fix)  */
+div#streamContainer, div.youNewDiv {
+    background: var(--main-bg-color) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 7px;
+    margin-left: -125px !important;
+    transform: translateY(15px);
+    transition-duration: 0.2s !important;
+}
+
 /* Stream Container (Streaming Now!, Featured Creators, Ad) */
-#streamContainer {
+#streamContainer, div#streamContainer {
     transform: translate(0px, 15px);
     transition-duration: .5s !important;
     animation: StreamContainerORyouNewAnimation .5s;
@@ -931,7 +945,7 @@ a {
 }
 
 /* Header Bar */
-.headerBar {
+.headerBar, div.headerBar {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
@@ -1504,7 +1518,7 @@ input:checked+.sliderSml:active:after {
 }
 
 /* Business... etc of TermsInfo Button */
-#termsInfo {
+#termsInfo, div#termsInfo {
     animation: showanimationonstartup 0.5s;
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
@@ -1719,9 +1733,30 @@ input:checked+.sliderSml:active:after {
 }
 
 /* Customize Button */
-#customizeButton {
+#customizeButton, div#customizeButton {
     transition-duration: .15s;
     animation: customizebottomanimation .4s;
+    background: var(--main-bg-color) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
+    backdrop-filter: blur(40px) !important;
+}
+
+/* Customize Button Hover */
+#customizeButton:hover, div#customizeButton:hover {
+    transition-duration: .15s;
+    animation: customizebottomanimation .4s;
+    background: rgba(98, 110, 148, 0.8) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
+    backdrop-filter: blur(40px) !important;
+}
+
+/* Customize Button Active */
+#customizeButton:active, div#customizeButton:active {
+    transition-duration: .15s;
+    animation: customizebottomanimation .4s;
+    background: rgba(28, 42, 85, 0.8) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
     backdrop-filter: blur(40px) !important;
@@ -1819,7 +1854,7 @@ input:checked+.sliderSml:active:after {
 }
 
 /* "Killed By" Card */
-#killCard {
+#killCard, div#killCard {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
@@ -1833,12 +1868,13 @@ input:checked+.sliderSml:active:after {
 }
 
 /* Health Bar Seg */
-.healthBarSeg {
+.healthBarSeg, div.healthBarSeg {
     width: 450px !important;
     margin-right: -10px !important;
     height: 30px;
     margin: 0 -1px;
     background-color: rgb(0 0 0 / 0%) !important;
+    border-right: none !important;
 }
 
 /* Health Blocks Seg */
@@ -1849,14 +1885,14 @@ input:checked+.sliderSml:active:after {
 }
 
 /* Health Bar */
-#healthBar {
+#healthBar, div#healthBar {
     width: 450px;
-    height: 30px;
+    height: 30px !important;
     display: inline-flex;
     justify-content: center;
-    background: rgba(31, 31, 31, 0.7);
-    border: 1px solid rgba(225, 225, 225, 0.1);
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    background: rgba(31, 31, 31, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.1) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px);
     padding: 10px;
     padding-left: 7px;
@@ -1871,10 +1907,10 @@ input:checked+.sliderSml:active:after {
 }
 
 /* LeaderBoard */
-#leaderDisplay {
-    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7);
-    border: 1px solid rgba(225, 225, 225, 0.4);
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+#leaderDisplay, div#leaderDisplay {
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px);
     border-radius: 7px;
 }
@@ -1904,14 +1940,16 @@ input:checked+.sliderSml:active:after {
 }
 
 /* Health Value Holder */
-#healthValueHolder {
-    background-color: #0000;
+#healthValueHolder, div#healthValueHolder {
+    background-color: #0000 !important;
     padding: 0;
     margin: 0;
     z-index: 5;
     position: fixed;
     left: calc(50% - 220px);
     bottom: 158px;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 /* Health Value */
@@ -1967,9 +2005,11 @@ input:checked+.sliderSml:active:after {
 }
 
 /* Ammo Display */
-#ammoDisplay {
+#ammoDisplay, div#ammoDisplay {
     transform: unset;
-    background-color: transparent;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    border: none !important;
     position: fixed;
     left: calc(50% - 55px);
     border-radius: 7px;
@@ -2041,12 +2081,12 @@ input:checked+.sliderSml:active:after {
 }
 
 /* Kills, Deaths, Scores..etc Count Icon */
-.countIcon {
-    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7);
-    border: 1px solid rgba(225, 225, 225, 0.4);
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+.countIcon, div.countIcon {
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px);
-    border-radius: 7px;
+    border-radius: 7px !important;
 }
 
 /* In Game XP Bar */
@@ -2099,7 +2139,7 @@ input:checked+.sliderSml:active:after {
 }
 
 /* Profile Icon */
-#hudClassIcon {
+#hudClassIcon, div#hudClassIcon {
     background: rgba(29, 29, 29, 0.6) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
@@ -2169,7 +2209,7 @@ input:checked+.sliderSml:active:after {
 /* ======================================= Match Ended ======================================= */
 
 /* Match Ended Card */
-.endCard {
+.endCard, div.endCard {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
@@ -2264,3 +2304,35 @@ input:checked+.sliderSml:active:after {
 }
 
 /* ======================================= Player list ======================================= */
+
+
+
+/* ======================================= Steam Fix ======================================= */
+
+/* Featured Games In Menu Scroll Bar */
+#newsBody::-webkit-scrollbar-thumb {
+    border-radius: 0px !important;
+    background-color: #fff !important;
+}
+
+/* Host Game, Servers, Ranked, Invite, Join */
+div.buttonG , div.buttonO, div.buttonP, div.buttonR, div.buttonPI {
+    color: #fff;
+}
+
+/* Button Login */
+div.button.lgn {
+    color: #fff !important;
+}
+
+/* Button Login Icon */
+div.button.lgn span {
+    color: #ffffff !important;
+}
+
+/* Customize Button Icon */
+div#customizeButton span {
+    color: #fff !important;
+}
+
+/* ======================================= Steam Fix ======================================= */
