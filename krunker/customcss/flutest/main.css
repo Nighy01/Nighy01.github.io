@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/11/15 */
+/* 2021/11/21 */
 
 
 /* ======================================= Configs ======================================= */
@@ -536,6 +536,8 @@ a {
 /* Click To Play Background */
 #instructionHolder {
     background: var(--dark-bg-color) !important;
+    animation: fadein .3s;
+    backdrop-filter: blur(40px);
 }
 
 /* MenuItemContainer */
@@ -1054,21 +1056,23 @@ a {
 
 /* Spectate After Button */
 .sliderSml:after {
-    position: relative;
-    right: 95px;
+    position: absolute;
+    right: -8px;
     color: white;
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    border-radius: 7px;
-    padding: 5px;
-    top: -20px;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
+    top: -73px;
+    padding: 20px;
+    padding-left: 16px;
+    padding-top: 15px;
+    width: 95px;
+    height: 95px;
+    transform: scale(0.4);
     visibility: visible;
-    content:'Spectate';
+    content: url('https://i.imgur.com/YgGRvy6.png');
     transition-duration: .1s;
 }
 
@@ -1088,41 +1092,44 @@ a {
 
 /* Spectate Hover After Button */
 .sliderSml:hover:after {
-    position: relative;
-    right: 95px;
+    position: absolute;
+    right: -8px;
     color: white;
     background: rgba(98, 110, 148, 0.8) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    border-radius: 7px;
-    padding: 5px;
-    top: -20px;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
+    top: -73px;
+    padding: 20px;
+    padding-left: 16px;
+    padding-top: 15px;
+    width: 95px;
+    height: 95px;
+    transform: scale(0.4);
     visibility: visible;
-    content:'Spectate';
+    content: url('https://i.imgur.com/YgGRvy6.png');
     transition-duration: .1s;
 }
 
 /* Spectate Active After Button */
 .sliderSml:active:after {
-    position: relative;
-    right: 95px;
+    position: absolute;
+    right: -8px;
     color: white;
     background: rgba(28, 42, 85, 0.8) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
+    top: -73px;
+    padding: 20px;
+    padding-left: 16px;
+    padding-top: 15px;
+    width: 95px;
+    height: 95px;
+    transform: scale(0.4);
     visibility: visible;
-    border-radius: 7px;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
-    padding: 5px;
-    top: -20px;
-    content:'Spectate';
+    content: url('https://i.imgur.com/YgGRvy6.png');
     transition-duration: .1s;
 }
 
@@ -1173,38 +1180,43 @@ input:checked:active+.sliderSml {
 
 /* Spectate SliderSml After */
 input:checked+.sliderSml:after {
-    position: relative;
-    right: 95px;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
-    visibility: visible;
-    content:'Spectate';
+    position: absolute;
+    right: -8px;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     color: white;
     background: rgba(95, 98, 107, 0.8) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    border-radius: 7px;
-    padding: 5px;
-    top: -20px;
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
+    top: -73px;
+    padding: 20px;
+    padding-left: 16px;
+    padding-top: 15px;
+    width: 95px;
+    height: 95px;
+    transform: scale(0.4);
+    visibility: visible;
+    content: url('https://i.imgur.com/YgGRvy6.png');
     transition-duration: .1s;
 }
 
 /* Spectate SliderSml Hover After */
 input:checked+.sliderSml:hover:after {
-    position: relative;
-    right: 95px;
+    position: absolute;
+    right: -8px;
     border-radius: 7px;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
-    padding: 5px;
-    top: -20px;
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
+    top: -73px;
+    padding: 20px;
+    padding-left: 16px;
+    padding-top: 15px;
+    width: 95px;
+    height: 95px;
+    transform: scale(0.4);
     visibility: visible;
-    content:'Spectate';
+    content: url('https://i.imgur.com/YgGRvy6.png');
     color: white;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     background-color: rgba(98, 110, 148, 0.8) !important;
@@ -1213,21 +1225,23 @@ input:checked+.sliderSml:hover:after {
 
 /* Spectate SliderSml Active After */
 input:checked+.sliderSml:active:after {
-    position: relative;
-    right: 95px;
-    border-radius: 7px;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
-    padding: 5px;
+    position: absolute;
+    right: -8px;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    top: -20px;
-    visibility: visible;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    content:'Spectate';
     color: white;
     background-color: rgba(28, 42, 85, 0.8) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
+    top: -73px;
+    padding: 20px;
+    padding-left: 16px;
+    padding-top: 15px;
+    width: 95px;
+    height: 95px;
+    transform: scale(0.4);
+    visibility: visible;
+    content: url('https://i.imgur.com/YgGRvy6.png');
     transition-duration: .1s;
 }
 
@@ -1338,6 +1352,7 @@ input:checked+.sliderSml:active:after {
 /* WindowUI Background */
 #windowHolder.popupWin {
     background: var(--dark-bg-color) !important;
+    backdrop-filter: blur(40px);
     animation: fadein .3s;
     transition-duration: .2s;
 }
@@ -1367,6 +1382,7 @@ input:checked+.sliderSml:active:after {
 /* Popup Background */
 #popupBack {
     background: var(--dark-bg-color) !important;
+    backdrop-filter: blur(40px);
     animation: fadein .3s;
 }
 
@@ -1608,18 +1624,13 @@ input:checked+.sliderSml:active:after {
     background-color: #0000 !important;
 }
 
-/* Click to play Background */
-    #instructionHolder {
-    animation: fadein .3s;
-}
-
 /* Kick Spec, Manage User Button */
 .punishButton {
     text-shadow: none !important;
 }
 
 /* Kick Button Active */
-    .punishButton.kick:active {
+.punishButton.kick:active {
     opacity: .5 !important;
 }
 
@@ -1765,6 +1776,11 @@ input:checked+.sliderSml:active:after {
 /* [X] Icon Popup Content */
 #popupContent > div > div:nth-child(1) > i {
     color: rgb(255 255 255 / 0.7) !important;
+}
+
+/* Latest Update x.x.x */
+#mailList > div > div.mailFrom {
+    color: #fff !important;
 }
 
 /* ======================================= Main ======================================= */
