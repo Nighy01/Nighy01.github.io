@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/11/21 */
+/* 2021/11/27 */
 
 
 /* ======================================= Configs ======================================= */
@@ -1947,7 +1947,7 @@ input:checked+.sliderSml:active:after {
     z-index: 5;
     position: fixed;
     left: calc(50% - 220px);
-    bottom: 158px;
+    bottom: 159px;
     border: none !important;
     box-shadow: none !important;
 }
@@ -2310,9 +2310,9 @@ input:checked+.sliderSml:active:after {
 /* ======================================= Steam Fix ======================================= */
 
 /* Featured Games In Menu Scroll Bar */
-#newsBody::-webkit-scrollbar-thumb {
+div#newsBody::-webkit-scrollbar-thumb {
     border-radius: 0px !important;
-    background-color: #fff !important;
+    background-color: rgb(166, 165, 199) !important;
 }
 
 /* Host Game, Servers, Ranked, Invite, Join */
