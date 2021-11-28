@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/11/20 */
+/* 2021/11/27 */
 
 
 /* ======================================= Configs ======================================= */
@@ -94,6 +94,20 @@
     }
 }
 
+/* Blur Switch Effect */
+@keyframes blurswitch {
+    from {
+        background-color: rgb(0 0 0 / 0.1);
+        backdrop-filter: blur(10px);
+        transition-duration: .2s;
+    }
+    to {
+        background-color: rgb(0 0 0 / 0.6);
+        backdrop-filter: blur(30px);
+        transition-duration: .2s;
+    }
+}
+
 /* ======================================= KeyFrames ======================================= */
 
 
@@ -121,25 +135,44 @@
 /* Security Challenge Popup */
 #captcha-holder > div {
     animation: instructionsupdatepopupanimation .2s;
-    backdrop-filter: var(--CardBlur);
-    box-shadow: none !important;
-    background-color: rgb(232 234 255 / 80%) !important;
+    background: linear-gradient(180deg, rgba(217, 214, 255, 0.3) 0%, rgba(219, 213, 255, 0.3) 100%), rgba(196, 193, 219, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-sizing: border-box !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 7px !important;
+}
+
+/* Security Challenge */
+#captcha-holder > div > div:nth-child(1) {
+    width: 500px;
+    font-size: 28px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Please complete the security challenge to contiune */
+#captcha-holder > div > div:nth-child(2) {
+    font-size: 19px !important;
+    color: rgba(241, 241, 241, 0.9) !important;
 }
 
 /* Security Challenge Popup Background */
 #captcha-holder {
+    animation: fadein .2s;
     background-color: rgb(0 0 0 / 10%) !important;
     backdrop-filter: blur(30px);
 }
 
 /* Error Load(e.g: Socket timed out, Took too long to complete captcha... etc) Hover Button */
 #errorReloadButton:hover {
-    background: #006d9f !important;
+    background: #9794b3 !important;
+    transition-duration: .2s;
 }
 
 /* Error Load(e.g: Socket timed out, Took too long to complete captcha... etc) Active Button */
 #errorReloadButton:active {
-    background: #004463 !important;
+    background: #747387 !important;
+    transition-duration: .2s;
 }
 
 /* Error Load(e.g: Socket timed out, Took too long to complete captcha... etc) Button */
@@ -147,12 +180,13 @@
     width: 45px;
     height: 45px;
     content: url(https://i.imgur.com/abMeKhp.png) !important;
-    border-radius: 5px;
-    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7);
-    border: 1px solid rgba(225, 225, 225, 0.4);
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(40px);
-    border-radius: 5px;
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 5px !important;
+    padding: 5px;
+    transition-duration: .2s;
 }
 
 /* Error Load Background */
@@ -653,8 +687,10 @@
 
 /* Popup Background */
 #popupBack {
-    background-color: rgb(0 0 0 / 0.6) !important;
+    background-color: rgb(0 0 0 / 0.6);
     backdrop-filter: blur(30px);
+    transition-duration: .5s;
+    animation: blurswitch .5s !important;
 }
 
 /* Login Hover Button */
@@ -706,9 +742,7 @@
 /* No Current Posts */
 #postHolder > div {
     font-size: 26px !important;
-} 
-
-
+}
 
 /* Settings Hover Icon Button */
 #navTitle > div.material-icons.terms:hover {
@@ -730,13 +764,19 @@
     transition-duration: .2s;
 }
 
+#postHolder > div:nth-child(18) > div.postHead > div.postInfo > div > span > i:nth-child(3) , #postHolder > div:nth-child(18) > div.postHead > div.postInfo > div > span > i:nth-child(4) {
+    color: #e6eaff !important;
+}
+
 /* ======================================= Main(Feed) ======================================= */
 
 
 
 /* ======================================= MarketPlace ======================================= */
 
-
+div#marketSearchB, div#invSortB {
+    background: linear-gradient(180deg, rgb(178 179 214) 0%, rgb(171 179 223) 100%), rgb(152 149 171) !important;
+}
 
 /* ======================================= MarketPlace ======================================= */
 
@@ -757,7 +797,11 @@
 /* LeaderBoardNav */
 .leaderNav2 {
     background-color: rgb(0 0 0 / 0) !important;
-} 
+}
+
+#leaderList > div > div > div.leaderText > i {
+    color: #e6eaff !important;
+}
 
 /* ======================================= LeaderBoard ======================================= */
 
@@ -773,7 +817,10 @@
 
 /* ======================================= Mods ======================================= */
 
-
+/* Publish */
+#modsHolder > div:nth-child(1) > div > div:nth-child(6) {
+    background: linear-gradient(180deg, rgb(178 179 214) 0%, rgb(171 179 223) 100%), rgb(152 149 171) !important;
+}
 
 /* ======================================= Mods ======================================= */
 

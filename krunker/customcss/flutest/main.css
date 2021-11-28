@@ -398,6 +398,22 @@
     }
 }
 
+/* Blur Switch Effect */
+@keyframes blurswitch {
+    from {
+        background: linear-gradient(180deg, rgba(41, 42, 46, 0.1) 0%, rgba(34, 34, 39, 0.1) 100%), rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        backdrop-filter: blur(10px);
+        transition-duration: .2s;
+    }
+    to {
+        background: linear-gradient(180deg, rgba(41, 42, 46, 0.3) 0%, rgba(34, 34, 39, 0.3) 100%), rgba(0, 0, 0, 0.45);
+        opacity: 1;
+        backdrop-filter: blur(40px);
+        transition-duration: .2s;
+    }
+}
+
 /* ======================================= KeyFrames ======================================= */
 
 
@@ -535,8 +551,9 @@ a {
 
 /* Click To Play Background */
 #instructionHolder {
-    background: var(--dark-bg-color) !important;
-    animation: fadein .3s;
+    background: var(--dark-bg-color);
+    animation: blurswitch .3s;
+    transition-duration: .2s;
     backdrop-filter: blur(40px);
 }
 
@@ -1092,14 +1109,15 @@ div#streamContainer, div.youNewDiv {
 
 /* Ranked Soon Before */
 #rankedSoonTm:before {
-    border-top: none !important;
+    border-top: 11px solid #3c3c3cb8 !important;
 }
 
 /* Ranked Soon */
 #rankedSoonTm {
-    top: 7px;
+    top: -45px;
     left: -6px;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px) !important;
+    background: #3c3c3cb8 !important;
     border: none !important;
     width: 130px;
 }
@@ -1341,6 +1359,12 @@ input:checked+.sliderSml:active:after {
     background-color: rgb(22 22 22 / 50%);
 }
 
+/* Quick Join Active Button */
+.quickJoin:active {
+    transform: scale(1);
+    color: #928fbd !important;
+}
+
 /* Quick Join Hover Button */
 .quickJoin:hover {
     transform: scale(1);
@@ -1365,9 +1389,9 @@ input:checked+.sliderSml:active:after {
 
 /* WindowUI Background */
 #windowHolder.popupWin {
-    background: var(--dark-bg-color) !important;
+    background: var(--dark-bg-color);
     backdrop-filter: blur(40px);
-    animation: fadein .3s;
+    animation: blurswitch .2s;
     transition-duration: .2s;
 }
 
@@ -1395,9 +1419,10 @@ input:checked+.sliderSml:active:after {
 
 /* Popup Background */
 #popupBack {
-    background: var(--dark-bg-color) !important;
+    background: var(--dark-bg-color);
     backdrop-filter: blur(40px);
-    animation: fadein .3s;
+    animation: blurswitch .2s;
+    transition-duration: .2s;
 }
 
 /* Confirm Popup */
