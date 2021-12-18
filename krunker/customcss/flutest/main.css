@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/11/27 */
+/* 2021/12/18 */
 
 
 /* ======================================= Configs ======================================= */
@@ -512,7 +512,7 @@
     
  /* Find a New Game */ #instructionsUpdate > div:nth-child(4) > a:nth-child(1), 
 
- /* Watch on Twitch(!important overrided) #instructionsUpdate > div:nth-child(4) > a:nth-child(2),*/
+ /* Watch on Twitch(!important overrided) */ #instructionsUpdate > div:nth-child(4) > a:nth-child(2),
 
  /* Server Browser */ #instructionsUpdate > div:nth-child(5) > a:nth-child(1), 
 
@@ -715,7 +715,7 @@ div#streamContainer, div.youNewDiv {
 [src="./img/client.png"] {
     content: url(https://i.imgur.com/XkDeUPp.png) !important;
     transform: translate(5px) !important;
-    transition-duration: .2s;
+    transition-duration: .15s;
 }
 
 /* Download Client Hover Button */
@@ -731,7 +731,7 @@ div#streamContainer, div.youNewDiv {
 /* Krunker Editor Button */
 [src="./img/editor.png"] {
     content: url(https://i.imgur.com/5VlCJ7l.png) !important;
-    transition-duration: .2s;
+    transition-duration: .15s;
 }
 
 /* Krunker Editor Hover Button */
@@ -766,7 +766,7 @@ div#streamContainer, div.youNewDiv {
 
 /* Menu Social B */
 .menuSocialB {
-    transition-duration: .2s;
+    transition-duration: .15s;
 }
 
 /* Menu Social B Hover */
@@ -1115,11 +1115,11 @@ div#streamContainer, div.youNewDiv {
 /* Ranked Soon */
 #rankedSoonTm {
     top: -45px;
-    left: -6px;
+    left: -15px;
     backdrop-filter: blur(20px) !important;
     background: #3c3c3cb8 !important;
     border: none !important;
-    width: 130px;
+    width: 150px;
 }
 
 /* Spectate Hover After Button */
@@ -1290,6 +1290,7 @@ input:checked+.sliderSml:active:after {
 /* Register or Login */
 #referralHeader {
     background-color: rgba(0,0,0,.4) !important;
+    border-radius: 7px;
 }
 
 /* XP Bar B */
@@ -1411,9 +1412,9 @@ input:checked+.sliderSml:active:after {
     transition: .2s;
 }
 
-/* Settings Tab */
-.settingTab {
-    background-color: rgb(142 142 142 / 70%) !important;
+/* Tabs */
+.settingTab, .bigMenTab {
+    background-color: rgb(158 159 191 / 70%) !important;
     backdrop-filter: blur(40px);
 }
 
@@ -1685,11 +1686,38 @@ input:checked+.sliderSml:active:after {
 
 /* KPD Popup */
 #policePopC {
-    animation: popupanimation .2s;
-    transform: scale(1) translate(-50%,-50%);
-    background-color: #a3a3a38f !important;
-    box-shadow: 0px 0px 20px 3px rgb(16 16 16) !important;
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    animation: windowpopupanimation .2s;
+    transition-duration: .2s !important;
+}
+
+/* KPD Apply Popup: Title */
+#policePopC > div:nth-child(1) {
+    color: #eeeeeee8 !important;
+}
+
+/* KPD Apply Popup: Content */
+#policePopC > div:nth-child(2), #policePopC > div:nth-child(5) {
+    color: #e3e3e3bd !important;
+}
+
+/* Helpful Reports Bar */
+#trustProg {
+    background-color: rgb(88 86 102) !important;
+}
+
+/* Helpful Reports HD Bar */
+#trustPrgHD {
+    background: rgba(131, 140, 188, 1) !important;
+}
+
+/* x/x Helpful Reports Bar Text */
+#trustProgHD {
+    text-shadow: none;
 }
 
 /* Profile, Games...etc Tabs */
@@ -1706,14 +1734,30 @@ input:checked+.sliderSml:active:after {
 /* Krunker Guide Popup Background */ 
 #guidePopupH {
     background: var(--dark-bg-color) !important;
-    animation: fadein .2s;
+    backdrop-filter: blur(40px);
+    animation: blurswitch .2s;
+    z-index: 100000 !important;
 }
 
 /* Krunker Guide Popup */
 #guidePopup {
-    background-color: rgb(142 142 142 / 70%) !important;
-    backdrop-filter: blur(40px);
+    background: linear-gradient( 180deg , rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
     animation: fadein .2s;
+    transition-duration: .2s !important;
+}
+
+/* Guide Popup Highlight Content */
+#guidePopup > div:nth-child(1) > div.guideInfoT > span, #guidePopup > div:nth-child(3) > div > span > span, #guidePopup > div:nth-child(4) > div > span > span {
+    color: #fff !important;
+}
+
+/* Guide Step Image */
+.guideStepImg {
+    border-radius: 10px;
 }
 
 /* Purchase KR Popup Background */
@@ -1841,6 +1885,11 @@ input:checked+.sliderSml:active:after {
 /* Latest Update x.x.x */
 #mailList > div > div.mailFrom {
     color: #fff !important;
+}
+
+/* Join Button */
+.joinBtn {
+    background-color: #a79cff;
 }
 
 /* ======================================= Main ======================================= */
@@ -2312,9 +2361,47 @@ input:checked+.sliderSml:active:after {
 
 /* ======================================= Customize ======================================= */
 
-/* Search Item */
+/* Search Item Background */
 #itemSearchH {
     background-color: #0000 !important;
+}
+
+/* Search Item */
+#itemSearch {
+    height: 50px;
+    border-radius: 7px;
+}
+
+/* Set Name */
+.settName, .settNameSmall {
+    border-bottom: none !important;
+}
+
+/* Load..Buttons */
+.loadoutBtn {
+    background: var(--main-bg-color) !important;
+}
+
+/* Add more Skin/Hair/Chat Name Color Button (Require Premium) */
+.premiumSkinCol {
+    color: #fff !important;
+}
+
+/* Req Class */
+#customizeContainer > div > div > div.classWeap {
+    z-index: 1 !important;
+}
+
+/* Locked Class */
+.lockedClass {
+    backdrop-filter: blur(7px);
+    background: rgb(0 0 0 / 0.7);
+}
+
+/* Back Button */
+.custBack {
+    background: var(--main-bg-color) !important;
+    border-radius: 7px;
 }
 
 /* ======================================= Customize ======================================= */
@@ -2329,6 +2416,274 @@ input:checked+.sliderSml:active:after {
 }
 
 /* ======================================= Player list ======================================= */
+
+
+
+/* ======================================= Business ======================================= */
+
+/* ========================= Referrals ========================= */
+
+/* +Count USD */
+.refAnot {
+    background: var(--main-bg-color) !important;
+}
+
+/* ========================= Referrals ========================= */
+
+/* ======================================= Business ======================================= */
+
+
+
+/* ======================================= Settings ======================================= */
+
+/* Checked Slider */
+input:checked+.slider {
+    background-color: #26252f !important;
+}
+
+/* Settings+Manage Ads Buttons */
+.settingsBtn, #menuWindow > div.settingsHeader > div:nth-child(1) > div:nth-child(1) {
+    background: var(--main-bg-color) !important;
+}
+
+/* Manage Ads Popup */
+.onetrust-pc-dark-filter {
+    backdrop-filter: blur(50px);
+}
+
+/* Requires Restart Text */
+
+/* Localization(General) */ #requiresRestart > span, 
+
+/* Network(General) */ #setBod_network > div > span, 
+
+/* Experimental(General) */ #setBod_experimental > div > span, 
+
+/* View Model(Game) */ #setBod_viewmodel > div > span, 
+
+/* Performance(Render) */ #setBod_quality > div > span {
+
+    color: #fff !important;
+
+}
+
+/* Verifiation, Premium, Partner Icon in Gameplay Privacy(Game) */
+
+/* Verifiation(Anonymous Mode) */ #setBod_gameprivacy > div:nth-child(2) > i, 
+
+/* Verifiation */ #setBod_gameprivacy > div:nth-child(5) > i, 
+
+/* Premium */ #setBod_gameprivacy > div:nth-child(6) > i, 
+
+/* Partner */ #setBod_gameprivacy > div:nth-child(7) > i {
+
+    color: #fff !important;
+
+}
+
+/* Image Collection Button */
+div.openCollection {
+    background: var(--main-bg-color) !important;
+}
+
+/* Input Color */
+input[type=color] {
+    border: 4px solid #26252f !important;
+}
+
+/* ============= Delete KeyBind, Reset KeyBind Buttons ============= */
+
+/* ========================= General ========================= */
+
+/* ============ Movement ============ */
+
+/* Delete KeyBind Button */ #setBindBod_movement > div > div > span.unbind > i, 
+
+/* Reset KeyBind Button */ #setBindBod_movement > div > div > span.reset > i, 
+
+/* ============ Movement ============ */
+
+
+/* ============ Weapon ============ */
+
+/* Delete KeyBind Button */ #setBindBod_weapon > div > div > span.unbind > i,
+
+/* Reset KeyBind Button */ #setBindBod_weapon > div > div > span.reset > i,
+
+/* ============ Weapon ============ */
+
+
+/* ============ Interface ============ */
+
+/* Delete KeyBind Button */ #setBindBod_interface > div > div > span.unbind > i,
+
+/* Reset KeyBind Button */ #setBindBod_interface > div > div > span.reset > i,
+
+/* ============ Interface ============ */
+
+
+/* ============ Players ============ */
+
+/* Delete KeyBind Button */ #setBindBod_players > div > div > span.unbind > i,
+
+/* Reset KeyBind Button */ #setBindBod_players > div > div > span.reset > i,
+
+/* ============ Players ============ */
+
+/* ========================= General ========================= */
+
+
+
+/* ========================= Chat & Toggles ========================= */
+
+/* ============ Interface & Audio ============ */
+
+/* Delete KeyBind Button */ #setBindBod_interface___audio > div > div > span.unbind > i,
+
+/* Reset KeyBind Button */ #setBindBod_interface___audio > div > div > span.reset > i,
+
+/* ============ Interface & Audio ============ */
+
+
+/* ============ Premium & Host ============ */
+
+/* Delete KeyBind Button */ #setBindBod_premium___host > div > div > span.unbind > i,
+
+/* Reset KeyBind Button */ #setBindBod_premium___host > div > div > span.reset > i,
+
+/* ============ Premium & Host ============ */
+
+
+/* ============ Chat Messages ============ */
+
+/* Delete KeyBind Button */ #setBindBod_chat_messages > div > div > span.unbind > i,
+
+/* Reset KeyBind Button */ #setBindBod_chat_messages > div > div > span.reset > i,
+
+/* ============ Chat Messages ============ */
+
+
+/* ============ Toggle Settings ============ */
+
+/* Delete KeyBind Button */ #setBindBod_toggle_settings > div > div > span.unbind > i,
+
+/* Reset KeyBind Button */ #setBindBod_toggle_settings > div > div > span.reset > i,
+
+/* ============ Toggle Settings ============ */
+
+/* ========================= Chat & Toggles ========================= */
+
+
+
+/* ========================= Interaction ========================= */
+
+/* ============ Interaction ============ */
+
+/* Delete KeyBind Button */ #setBindBod_interaction > div > div > span.unbind > i,
+
+/* Reset KeyBind Button */ #setBindBod_interaction > div > div > span.reset > i,
+
+/* ============ Interaction ============ */
+
+
+/* ============ Killstreaks ============ */
+
+/* Delete KeyBind Button */ #setBindBod_killstreaks > div > div > span.unbind > i,
+
+/* Reset KeyBind Button */ #setBindBod_killstreaks > div > div > span.reset > i,
+
+/* ============ Killstreaks ============ */
+
+/* ========================= Interaction ========================= */
+
+
+
+/* ========================= Spectate & Vote ========================= */
+
+/* ============ Spectating ============ */
+
+/* Delete KeyBind Button */ #setBindBod_spectating > div > div > span.unbind > i,
+
+/* Reset KeyBind Button */ #setBindBod_spectating > div > div > span.reset > i,
+
+/* ============ Spectating ============ */
+
+
+/* ============ KPD ============ */
+
+/* Delete KeyBind Button */ #setBindBod_kpd > div > div > span.unbind > i,
+
+/* Reset KeyBind Button */ #setBindBod_kpd > div > div > span.reset > i,
+
+/* ============ KPD ============ */
+
+
+/* ============ Vote ============ */
+
+/* Delete KeyBind Button */ #setBindBod_vote > div > div > span.unbind > i,
+
+/* Reset KeyBind Button */ #setBindBod_vote > div > div > span.reset > i,
+
+/* ============ Vote ============ */
+
+/* ========================= Spectate & Vote ========================= */
+
+
+
+/* ========================= Modes ========================= */
+
+/* ============ Prop Hunt ============ */
+
+/* Delete KeyBind Button */ #setBindBod_prop_hunt > div > div > span.unbind > i,
+
+/* Reset KeyBind Button */ #setBindBod_prop_hunt > div > div > span.reset > i,
+
+/* ============ Prop Hunt ============ */
+
+
+/* ============ Parkour & Race ============ */
+
+/* Delete KeyBind Button */ #setBindBod_parkour___race > div > div > span.unbind > i,
+
+/* Reset KeyBind Button */ #setBindBod_parkour___race > div > div > span.reset > i
+
+/* ============ Parkour & Race ============ */
+
+/* ========================= Modes ========================= */
+
+ {
+    color: #fff !important;
+}
+
+/* ============= Delete KeyBind, Reset KeyBind Buttons ============= */
+
+/* ======================================= Settings ======================================= */
+
+
+
+/* ======================================= Mod ======================================= */
+
+/* Search Button */
+.searchBtn {
+    background: var(--main-bg-color) !important;
+    border-radius: 7px;
+}
+
+/* ====================== Mod Loader ====================== */
+
+/* Drop mod file here or click */
+#modDropper {
+    border-radius: 10px;
+}
+
+/* Paste Mod Url Input */
+.accountInput {
+    border-radius: 7px;
+}
+
+/* ====================== Mod Loader ====================== */
+
+/* ======================================= Mod ======================================= */
 
 
 

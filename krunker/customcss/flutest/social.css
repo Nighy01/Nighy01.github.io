@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/11/27 */
+/* 2021/12/18 */
 
 
 /* ======================================= Configs ======================================= */
@@ -235,7 +235,7 @@
 
 /* Search Hover Button */
 #searchBtn:hover {
-    background-color: rgb(166 168 197 / 80%);
+    background-color: rgb(158 161 187 / 80%);
 }
 
 /* Search Active Button */
@@ -263,7 +263,7 @@
 /* Say something , KR Giveway Amount */
 #postInput, #postKR {
     background-color: rgb(255 255 255 / 40%) !important;
-    border: 3px solid rgb(255 255 255) !important;
+    border: none !important;
     border-radius: 5px !important;
     backdrop-filter: var(--CardBlur);
 }
@@ -276,34 +276,34 @@
 /* Post Hover Button */
 #postButton:hover {
     opacity: 999;
-    background-color: #2f5da7 !important;
+    background-color: #838acf !important;
 }
 
 /* Post Hover Button */
 #postButton:active {
     opacity: 999;
-    background-color: #224479 !important;
+    background-color: #7378be !important;
 }
 
 /* Post Button */
 #postButton {
-    background-color: #4287f5 !important;
+    background-color: #969dff !important;
 }
 
 /* Giva Button */
 #givaButton {
-    background-color: rgb(255 146 10 / 80%) !important;
+    background-color: #969dff !important;
 }
 
 /* Giva Hover Button */
 #givaButton:hover {
-    background-color: rgb(185 106 8 / 80%) !important;
+    background-color: #838acf !important;
     opacity: 999;
 }
 
 /* Giva Active Button */
 #givaButton:active {
-    background-color: rgb(125 72 7 / 80%) !important;
+    background-color: #7378be !important;
     opacity: 999;
 }
 
@@ -473,6 +473,11 @@
     display: none;
 }
 
+/* Post Stat */
+#postTopStat > div {
+    width: 106% !important;
+}
+
 /* Feed Post Content */
 .postContent {
     border-bottom: 1px solid rgb(0 0 0 / 0%) !important;
@@ -527,8 +532,8 @@
 
 /* Follow Button on Giveways Posts */
 .follBtnGiv {
-    margin-left: 8px;
-    margin-top: 9px;
+    margin-left: 0px;
+    margin-top: 7.6px;
 }
 
 /* Like Hover Button */
@@ -600,7 +605,7 @@
 
 /* Follow and Like to Enter */
 .krGivFol {
-    margin-top: -3px;
+    margin-top: -7.5px;
     color: rgb(255 255 255 / 0.9) !important;
 }
 
@@ -679,18 +684,23 @@
 
 /* Login Popup */ 
 #loginPop {
-    background-color: rgb(41 41 41 / 0.7) !important;
+    background-color: rgb(183 171 220 / 70%) !important;
     backdrop-filter: var(--CardBlur);
     animation: instructionsupdatepopupanimation .2s;
     transform: scale(1) translate(-50%,-50%);
+}
+
+/* Login Button */
+.accBtn.button.buttonG {
+    border: none !important;
 }
 
 /* Popup Background */
 #popupBack {
     background-color: rgb(0 0 0 / 0.6);
     backdrop-filter: blur(30px);
-    transition-duration: .5s;
-    animation: blurswitch .5s !important;
+    transition-duration: .3s;
+    animation: blurswitch .3s !important;
 }
 
 /* Login Hover Button */
@@ -764,8 +774,39 @@
     transition-duration: .2s;
 }
 
+/* Post Info */
 #postHolder > div:nth-child(18) > div.postHead > div.postInfo > div > span > i:nth-child(3) , #postHolder > div:nth-child(18) > div.postHead > div.postInfo > div > span > i:nth-child(4) {
     color: #e6eaff !important;
+}
+
+/* LeaderBoard Kr Count Post Feed */
+#postGameRes > tbody > tr > td > span {
+    color: #fff !important;
+}
+
+/* Profile Kr */
+#profileKR {
+    color: #ffffffc7;
+}
+
+/* Giveway Post Feed */
+.krGivPost {
+    text-shadow: none;
+}
+
+/* Giveway KR Text Post Feed */
+#postHolder > div > div.postHead > div.postContent > div > div > span {
+    color: #fff !important;
+}
+
+/* Premium, Verified Icon Post Feed */
+
+/* Premium */ #postHolder > div > div.postHead > div.postInfo > div > span > i, 
+
+/* Verified */ #postHolder > div > div.postHead > div.postInfo > div > span > i {
+
+    color: #fff !important;
+
 }
 
 /* ======================================= Main(Feed) ======================================= */
@@ -774,11 +815,50 @@
 
 /* ======================================= MarketPlace ======================================= */
 
+/* Black MarketPlace Icon */
+#m_blackm > img {
+    height: 50px;
+    content: url(https://i.imgur.com/4bPtkHr.png);
+}
+
+/* Search Button */
 div#marketSearchB, div#invSortB {
     background: linear-gradient(180deg, rgb(178 179 214) 0%, rgb(171 179 223) 100%), rgb(152 149 171) !important;
 }
 
 /* ======================================= MarketPlace ======================================= */
+
+
+
+/* ======================================= Black MarketPlace ======================================= */
+
+/* Glitch Krunker Logo */
+.glitch:before, .glitch:after {
+    display: none !important;
+}
+
+/* ======================================= Black MarketPlace ======================================= */
+
+
+
+/* ======================================= Trade ======================================= */
+
+/* Incoming Offers, Outgoing Offers, Trade History */
+#o_in > div:nth-child(1), #o_in > div:nth-child(1) > span, #o_out > div:nth-child(1), #o_out > div:nth-child(1) > span, #o_his > div:nth-child(1), #o_his > div:nth-child(1) > span {
+    color: #f2f2f2d9 !important;
+}
+
+/* None */
+#o_in > div:nth-child(2), #o_out > div:nth-child(2), #o_his > div:nth-child(2) {
+    color: #f2f2f2d9 !important;
+}
+
+/* Decline All */
+.declineAll {
+    color: #fff;
+}
+
+/* ======================================= Trade ======================================= */
 
 
 
@@ -796,6 +876,9 @@ div#marketSearchB, div#invSortB {
 
 /* LeaderBoardNav */
 .leaderNav2 {
+    margin-bottom: 5px;
+    width: 788px;
+    margin-top: -10px;
     background-color: rgb(0 0 0 / 0) !important;
 }
 
@@ -809,13 +892,21 @@ div#marketSearchB, div#invSortB {
 
 /* ======================================= Games ======================================= */
 
-
+/* Home */
+#mapsHolder > div:nth-child(1) > div > div.bigMenTab.bigMenTabA > span, #mapsHolder > div:nth-child(1) > div > div:nth-child(1) > span {
+    color: #fff !important;
+}
 
 /* ======================================= Games ======================================= */
 
 
 
 /* ======================================= Mods ======================================= */
+
+/* Home */
+#modsHolder > div:nth-child(1) > div > div.bigMenTab.bigMenTabA > span, #modsHolder > div:nth-child(1) > div > div:nth-child(1) > span {
+    color: #fff !important;
+}
 
 /* Publish */
 #modsHolder > div:nth-child(1) > div > div:nth-child(6) {
@@ -1007,6 +1098,16 @@ div#marketSearchB, div#invSortB {
 /* Xp Bar B */
 .xpBarB {
     background-image: linear-gradient(to right,#b6a6d8,#cfb9ef) !important;
+}
+
+/* Report, Share Button */
+span#reprtBtn, span#shareBtn {
+    color: #fff !important;
+}
+
+/* Twitch Button */
+#twitchBtn {
+    content: url(https://i.imgur.com/fGSnzPG.png);
 }
 
 /* ======================================= Profile ======================================= */

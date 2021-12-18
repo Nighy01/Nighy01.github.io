@@ -1,5 +1,48 @@
 /* Developing Process */
-/* 2021/11/15 */
+/* 2021/12/18 */
+
+
+/* ======================================= KeyFrames ======================================= */
+
+/* Window Popup Animation */
+@keyframes windowpopupanimation {
+    0%{
+        transform: scale(0);
+    }
+    10%{
+        transform: scale(0.1) translate(-500%,-500%);
+    }
+    20%{
+        transform: scale(0.2) translate(-250%,-250%);
+    }
+    30%{
+        transform: scale(0.3) translate(-166%,-166%);
+    }
+    40%{
+        transform: scale(0.4) translate(-124.5%,-124.5%);
+    }
+    50%{
+        transform: scale(0.5) translate(-99.5%,-99.5%);
+    }
+    60%{
+        transform: scale(0.6) translate(-83%,-83%);
+    }
+    70%{
+        transform: scale(0.7) translate(-71%,-72%);
+    }
+    80%{
+        transform: scale(0.8) translate(-62%,-63%);
+    }
+    90%{
+        transform: scale(0.9) translate(-55%,-56%);
+    }
+    100%{
+        transform: scale(1) translate(-50%,-50%);
+    }
+}
+
+/* ======================================= KeyFrames ======================================= */
+
 
 
 /* ======================================= Main ======================================= */
@@ -22,7 +65,7 @@
 }
 
 /* Tool Bar */
-.toolbarItem:hover,.toolbarDropDownItem:hover,.toolbarDropDownItem:hover,.button:hover,.publishAsset:hover {
+.toolbarItem:hover, .toolbarDropDownItem:hover, .toolbarDropDownItem:hover, .eButton:hover, .publishAsset:hover {
     background-color: #61616c;
 }
 
@@ -60,6 +103,58 @@ input[type=range]::-moz-range-thumb {
 /* Customize */
 #toglEditBtn {
     color: #fff !important;
+}
+
+/* Add */
+#canvasAdd {
+    box-shadow: none;
+}
+
+/* Delete, Duplicate Button */
+#canvasObjEdit .eButton {
+    box-shadow: none;
+}
+
+/* Spawn...Objects Info */
+#canvasInfo {
+    box-shadow: none;
+}
+
+/* Canvas Button */
+#canvasUI .eButton {
+    box-shadow: none;
+}
+
+/* Tool Bar Option */
+.toolbarDropDown {
+    box-shadow: none;
+}
+
+/* Popup Background */
+#instructionHolder {
+    background-color: rgb(0 0 0 / 0.7);
+    backdrop-filter: blur(40px);
+}
+
+/* Window Popups */
+#menuWindow, #publishGamePop, #publishPop, #popupContent, #importPop {
+    animation: windowpopupanimation .2s;
+}
+
+/* Restore Hover */
+.restore:hover {
+    background-color: rgba(40,40,40,.6);
+    box-shadow: none;
+}
+
+/* Restore Button */
+.restore {
+    background-color: rgba(100,100,100,.5);
+}
+
+/* Version */
+#versionTxt {
+    display: none;
 }
 
 /* ======================================= Main ======================================= */
