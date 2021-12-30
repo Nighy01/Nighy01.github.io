@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/12/18 */
+/* 2021/12/30 */
 
 
 /* ======================================= Configs ======================================= */
@@ -542,7 +542,7 @@ a {
 #instructionsUpdate {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 7px !important;
     animation: instructionsupdatepopupanimation .2s;
@@ -1316,7 +1316,7 @@ input:checked+.sliderSml:active:after {
 #menuWindow.dark {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
     animation: windowpopupanimation .2s;
@@ -1380,7 +1380,7 @@ input:checked+.sliderSml:active:after {
 
 /* Settings Header */
 .settingsHeader {
-    background-color: #00000000 !important;
+    background-color: #0000 !important;
 }
 
 /* Streaming Now: [Count] Viewers */
@@ -1402,20 +1402,20 @@ input:checked+.sliderSml:active:after {
     transition: .2s;
 }
 
-/* Settings Tab Layout */
-#settingsTabLayout {
-    background-color: rgb(0 0 0 / 0%) !important;
-}
-
 /* Server Browser Game Select Hover */
 .settNameIn:hover {
     transition: .2s;
 }
 
 /* Tabs */
-.settingTab, .bigMenTab {
+.bigMenTab {
+    background-color: transparent !important;
+}
+
+/* Profile, Games...etc Tabs */
+.bigMenTabs {
     background-color: rgb(158 159 191 / 70%) !important;
-    backdrop-filter: blur(40px);
+    border-radius: 15px;
 }
 
 /* Popup Background */
@@ -1497,7 +1497,7 @@ input:checked+.sliderSml:active:after {
 #popupContent {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
     transition-duration: .2s !important;
@@ -1508,7 +1508,7 @@ input:checked+.sliderSml:active:after {
 #importPop {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
     transition-duration: .2s !important;
@@ -1521,7 +1521,7 @@ input:checked+.sliderSml:active:after {
 
 /* Pub Hed */
 .pubHed {
-    border-radius: 10px !important;
+    border-radius: 10px 10px 0px 0px !important;
 }
 
 /* Server Browser Game Select Active */
@@ -1688,7 +1688,7 @@ input:checked+.sliderSml:active:after {
 #policePopC {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
     animation: windowpopupanimation .2s;
@@ -1718,12 +1718,6 @@ input:checked+.sliderSml:active:after {
 /* x/x Helpful Reports Bar Text */
 #trustProgHD {
     text-shadow: none;
-}
-
-/* Profile, Games...etc Tabs */
-.bigMenTabs {
-    background-color: rgb(142 142 142 / 70%) !important;
-    backdrop-filter: blur(40px);
 }
 
 /* Key Binds Header Tab */
@@ -1924,7 +1918,7 @@ input:checked+.sliderSml:active:after {
 
 /* "Killed By" Card Holder */
 #killCardHolder {
-    animation: killcardanimation .2s;
+    animation: killcardanimation .3s;
 }
 
 /* "Killed By" Card */
@@ -2333,7 +2327,7 @@ input:checked+.sliderSml:active:after {
     backdrop-filter: blur(40px);
     border-radius: 7px;
 }
-    
+
 /* Blue(Your) Team */
 .teamTotalN0 {
     color: #a9cfff;
@@ -2434,7 +2428,174 @@ input:checked+.sliderSml:active:after {
 
 
 
+/* ======================================= Select a Server Type (Host Game) ======================================= */
+
+/* Server Type Button */
+.serverHostOp {
+    border-radius: 10px !important;
+}
+
+/* Server Type Hover Button */
+.serverHostOp:active {
+    opacity: .6;
+}
+
+/* ========================= Comp Game Setup ========================= */
+
+/* Host Maps Image Button */
+.hostMapImg {
+    filter: blur(20px);
+}
+
+/* Host Maps Image Hover Button */
+.hostMapImg:hover {
+    filter: blur(0px);
+}
+
+/* Host Maps Image Active Button */
+.hostMapImg:active {
+    filter: blur(0px);
+}
+
+/* ========================= Comp Game Setup ========================= */
+
+
+
+/* ========================= Custom Game Setup ========================= */
+
+/* Change Game Overlay Hover */
+.segSugIH {
+    background-color: rgb(0 0 0 / 50%);
+    backdrop-filter: blur(20px);
+}
+
+/* Remove Icon */
+#hostGameNameHolder > span:nth-child(1) > i {
+    color: #fff !important;
+}
+
+/* Select opt Checked */
+input:checked+.optCheck {
+    background: #26252f;
+}
+
+/* Select opt Hover */
+input:hover+.optCheck {
+    background: #817f93;
+}
+
+/* Select opt Image */
+.optImg {
+    display: none;
+}
+
+/* Opt Host */
+.hostOpt {
+    border: 2px solid #0000;
+    background-color: rgb(255 255 255 / 0.1);
+}
+
+/* Select Modes/Classes Button */
+.optCheck {
+    background: #9d9bb3;
+}
+
+/* ? */
+.mapInfoT {
+    display: none;
+}
+
+/* Toggle Button, Host Preset Button */
+.hostToggle, .hostPresetBtn {
+    background: var(--main-bg-color);
+}
+
+/* Error Message */
+.error {
+    color: #ffd1c4;
+}
+
+/* Custom Server Setup */
+.hostHeader {
+    background: rgba(26 26 26 / 0.8);
+    backdrop-filter: blur(10px);
+    border: none;
+    box-shadow: none;
+}
+
+/* Server Cost */
+#stickyHostH {
+    background: rgb(26 26 26 / 0.8);
+    backdrop-filter: blur(10px);
+    border: none;
+    box-shadow: none;
+}
+
+/* ========================= Custom Game Setup ========================= */
+
+
+
+/* ========================= Dedicated Setup ========================= */
+
+/* Server Card (+Image) */
+.serverCard, .serverCardI {
+    border-radius: 10px;
+}
+
+/* Server Card Hover */
+.serverCard:hover {
+    background-position-y: -20px !important;
+    background: url(https://krunker.io/img/server_i.png),linear-gradient(#212121,#0095ff4d);
+    background-size: cover;
+}
+
+/* Server Card Active */
+.serverCard:active {
+    background-position-y: -20px !important;
+    background: url(https://krunker.io/img/server_i.png),linear-gradient(#212121,#00318bb5);
+    background-size: cover;
+}
+
+/* Server Card Info */
+.serverCardInfo {
+    border-radius: 0px 0px 10px 10px;
+    backdrop-filter: blur(10px);
+    background: rgb(54 55 66 / 80%);
+}
+
+/* ========================= Dedicated Setup ========================= */
+
+/* ======================================= Select a Server Type (Host Game) ======================================= */
+
+
+
 /* ======================================= Settings ======================================= */
+
+/* Settings Tab Layout */
+#settingsTabLayout {
+    background-color: rgb(158 159 191 / 70%) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+}
+
+/* Settings Tab */
+.settingTab {
+    background-color: transparent !important;
+}
+
+.settingTab.tabANew, .settingTab.tabANew:hover, .settingTab.tabANew:active {
+    border-bottom: none !important;
+    background: rgb(107 106 120 / 70%) !important;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.settingTab:hover, .settingTab:active {
+    border-bottom: none !important;
+    background: rgb(193 192 215 / 70%) !important;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
 
 /* Checked Slider */
 input:checked+.slider {
@@ -2658,6 +2819,18 @@ input[type=color] {
 /* ============= Delete KeyBind, Reset KeyBind Buttons ============= */
 
 /* ======================================= Settings ======================================= */
+
+
+
+/* ======================================= Games ======================================= */
+
+/* Game Overlay Hover */
+.mapActionOvrl {
+    backdrop-filter: blur(20px);
+    background: rgb(0 0 0 / 50%);
+}
+
+/* ======================================= Games ======================================= */
 
 
 
