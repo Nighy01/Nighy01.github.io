@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/12/30 */
+/* 2021/12/31 */
 
 
 /* ======================================= Configs ======================================= */
@@ -1061,6 +1061,7 @@ div#streamContainer, div.youNewDiv {
 
 /* Click To Play */
 #instructions {
+    display: none;
     transition-duration: .45s !important;
     animation: Click2PlayAnimation .45s;
 }
@@ -1095,7 +1096,7 @@ div#streamContainer, div.youNewDiv {
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px);
     border-radius: 20px;
-    top: -73px;
+    top: -50px;
     padding: 20px;
     padding-left: 16px;
     padding-top: 15px;
@@ -1132,7 +1133,7 @@ div#streamContainer, div.youNewDiv {
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px);
     border-radius: 20px;
-    top: -73px;
+    top: -50px;
     padding: 20px;
     padding-left: 16px;
     padding-top: 15px;
@@ -1153,7 +1154,7 @@ div#streamContainer, div.youNewDiv {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     backdrop-filter: blur(40px);
     border-radius: 20px;
-    top: -73px;
+    top: -50px;
     padding: 20px;
     padding-left: 16px;
     padding-top: 15px;
@@ -1220,7 +1221,7 @@ input:checked+.sliderSml:after {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     backdrop-filter: blur(40px);
     border-radius: 20px;
-    top: -73px;
+    top: -50px;
     padding: 20px;
     padding-left: 16px;
     padding-top: 15px;
@@ -1240,7 +1241,7 @@ input:checked+.sliderSml:hover:after {
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px);
     border-radius: 20px;
-    top: -73px;
+    top: -50px;
     padding: 20px;
     padding-left: 16px;
     padding-top: 15px;
@@ -1265,7 +1266,7 @@ input:checked+.sliderSml:active:after {
     background-color: rgba(28, 42, 85, 0.8) !important;
     backdrop-filter: blur(40px);
     border-radius: 20px;
-    top: -73px;
+    top: -50px;
     padding: 20px;
     padding-left: 16px;
     padding-top: 15px;
@@ -1511,6 +1512,8 @@ input:checked+.sliderSml:active:after {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
+    animation: popupanimation .2s;
+    transform: scale(1) translate(-50%,-50%);
     transition-duration: .2s !important;
 }
 
@@ -1577,7 +1580,7 @@ input:checked+.sliderSml:active:after {
 
 /* Chat Text Outline */
 .chatTextOutline {
-    text-shadow: -1px -1px 0 rgb(36 36 36 / 60%), 1px -1px 0 rgb(36 36 36 / 60%), -1px 1px 0 rgb(36 36 36 / 60%), 1px 1px 0 rgb(36 36 36 / 60%) !important;
+    text-shadow: none !important;
 }
 
 /* Voice Icon */
@@ -1630,7 +1633,12 @@ input:checked+.sliderSml:active:after {
 
 /* Chat Msg Content */
 .chatMsg {
-    color: rgb(255 255 255 / 0.9);
+    color: rgb(255 255 255 / 80%);
+}
+
+/* Your Team Chat Color */
+[style="color:#9eeb56"] {
+    color: #6aff6d !important;
 }
 
 /* 
@@ -1903,7 +1911,18 @@ input:checked+.sliderSml:active:after {
 
 
 /* ======================================= In Game ======================================= */
-    
+
+
+/* Ranked Icon */
+#leaderContainer > div > img {
+    display: none;
+}
+
+/* Premium Icon */
+#leaderContainer > div > i {
+    color: rgb(255 255 255 / 0.85) !important;
+}
+
 /* Chat on Game */
 #uiBase.onGame #chatHolder {
     left: 15px;
@@ -2286,9 +2305,14 @@ input:checked+.sliderSml:active:after {
     transition-duration: 0.2s !important;
 }
 
+/* Vote Map */
+.matchVote {
+    text-shadow: none;
+}
+
 /* Enemy Color Profile Link */
 [style="color:#eb5656"] {
-    color: #eb5656 !important;
+    color: #e53232 !important;
 }
 
 /* You Color Profile Link */
@@ -2347,6 +2371,22 @@ input:checked+.sliderSml:active:after {
 .tabHeader.selected {
     color: #ffffff;
     border-bottom: 4px solid #ffffff;
+}
+
+/* +Count KR */
+#endTable > tbody > tr > td > span {
+    color: #fff !important;
+}
+
+/* Premium Icon */
+#endTable > tbody > tr:nth-child(3) > td:nth-child(2) > i {
+    color: #fff !important;
+}
+
+/* Ranked Icon */
+#endTable > tbody > tr > td:nth-child(2) > img:nth-child(3), 
+#endTable > tbody > tr > td:nth-child(2) > img:nth-child(4) {
+    display: none !important;
 }
 
 /* ======================================= Match Ended ======================================= */
@@ -2463,13 +2503,28 @@ input:checked+.sliderSml:active:after {
 
 /* ========================= Custom Game Setup ========================= */
 
+/* Default Maps Name Button */
+.hostMapName {
+    bottom: 40px;
+    font-size: 20px;
+    color: rgb(241 241 241 / 80%) !important;
+    text-shadow: none;
+    background: rgb(0 0 0 / 0%);
+}
+
+/* Default Maps Button */
+.hostMap {
+    border-radius: 7px;
+    border: 1px solid rgb(255 255 255);
+}
+
 /* Change Game Overlay Hover */
 .segSugIH {
     background-color: rgb(0 0 0 / 50%);
     backdrop-filter: blur(20px);
 }
 
-/* Remove Icon */
+/* "Remove" Icon */
 #hostGameNameHolder > span:nth-child(1) > i {
     color: #fff !important;
 }
