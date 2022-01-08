@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/12/31 */
+/* 2022/01/07 */
 
 
 /* ======================================= Configs ======================================= */
@@ -453,7 +453,7 @@
 
 /* Loading Background */
 #initLoader {
-    background-color: #2b2d33 !important;
+    background: #0c0c0d !important;
 }
 
 /* Krunker Tips Loader */
@@ -555,6 +555,11 @@ a {
     animation: blurswitch .3s;
     transition-duration: .2s;
     backdrop-filter: blur(40px);
+}
+
+/* Twitch Drops Timer */
+#twitchDropsTimer {
+    color: #dde6ff !important;
 }
 
 /* MenuItemContainer */
@@ -1638,7 +1643,7 @@ input:checked+.sliderSml:active:after {
 
 /* Your Team Chat Color */
 [style="color:#9eeb56"] {
-    color: #6aff6d !important;
+    color: rgb(133 255 100 / 90%) !important;
 }
 
 /* 
@@ -1894,6 +1899,47 @@ input:checked+.sliderSml:active:after {
     background-color: #a79cff;
 }
 
+/* Twitch Text */
+.dropsActive {
+    text-shadow: none !important;
+}
+
+/* Watch(link) your favorite... , Event Timer */
+#dropsPop > div:nth-child(1) > div:nth-child(2), .eventTimer {
+    color: #eaf5ff !important;
+}
+
+/* Drops Button */
+.viewDrops:hover {
+    background: #6900ff9e;
+    box-shadow: 0 0 20px #6900ff6e;
+    transform: scale(.9);
+}
+
+/* Drops Button */
+.viewDrops:active {
+    background: #5900c9ee;
+    box-shadow: 0 0 20px #6900ff;
+    transform: scale(.84);
+}
+
+/* Drop Cards */
+.dropCard {
+    border-radius: 15px;
+    background-color: rgb(66 66 66);
+}
+
+/* Drops Pop */
+#dropsPop {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgb(217 205 255 / 70%);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    animation: popupanimation .2s;
+    transition-duration: .2s !important;
+}
+
 /* ======================================= Main ======================================= */
 
 
@@ -1999,7 +2045,7 @@ input:checked+.sliderSml:active:after {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px);
-    border-radius: 7px;
+    border-radius: 10px;
 }
 
 /* Weap Display */
@@ -2272,21 +2318,80 @@ input:checked+.sliderSml:active:after {
 
 /* ======================================= Twitch Info ======================================= */
 
+/* Drop Card Animation */
+@keyframes DropCardAnimation {
+    from {
+        top: 100px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+/* End of Holiday... Title */
+.twitchEventN {
+    animation: fadein .6s;
+}
+
+/* Event Background */
+.twitchEventGDH {
+    background-color: #373346a3;
+    border-top: none;
+    border-bottom: none;
+    animation: fadein .8s;
+}
+
+/* What's available... Event Title */
+.twitchEventT {
+    background-color: #6e6092;
+    border-radius: 10px;
+    border: none;
+    box-shadow: none;
+    color: #cfc2f5;
+    text-shadow: none;
+}
+
 /* Click here to Link Your Twitch Hover Button */
 .twitchEventLink:hover {
-    background-color: #6037a99e !important;
-    transform: translateX(-50%) scale(1);
+    box-shadow: 0 0 50px #673ab79e !important;
+    background-color: #5a4f77 !important;
+    transform: translateX(-50%) scale(.95);
 }
 
 /* Click here to Link Your Twitch Active Button */
 .twitchEventLink:active {
-    background-color: #4025719e !important;
+    box-shadow: 0 0 50px #400d9c !important;
+    background-color: #443c5a !important;
+    transform: translateX(-50%) scale(.9);
 }
 
 /* Click here to Link Your Twitch Button */
 .twitchEventLink {
+    background: #6e6092;
     font-size: 20px;
     border-radius: 7px;
+    box-shadow: none !important;
+    transition-duration: .15s;
+}
+
+/* Drops Card */
+.twitchCard, .twitchCardFooter, .twitchCardHeader {
+    border-radius: 10px;
+    background-color: #674c9d;
+    animation: DropCardAnimation .8s;
+}
+
+/* Twitch Card Hover */
+.twitchCard:hover {
+    transform: scale(.95);
+}
+
+/* Twitch Card Active */
+.twitchCard:active {
+    box-shadow: 0 0 50px #400d9c;
+    transform: scale(.9);
 }
 
 /* ======================================= Twitch Info ======================================= */
@@ -2312,7 +2417,7 @@ input:checked+.sliderSml:active:after {
 
 /* Enemy Color Profile Link */
 [style="color:#eb5656"] {
-    color: #e53232 !important;
+    color: rgb(247 88 98 / 90%) !important;
 }
 
 /* You Color Profile Link */
