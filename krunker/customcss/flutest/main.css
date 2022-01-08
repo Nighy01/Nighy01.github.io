@@ -1884,9 +1884,19 @@ input:checked+.sliderSml:active:after {
     transform: translate(0px) translateY(-2px) !important;
 }
 
-/* [X] Icon Popup Content */
+/* Other Icon Popup Content */
 #popupContent > div > div:nth-child(1) > i {
     color: rgb(255 255 255 / 0.7) !important;
+}
+
+/* [X] Icon Popup Content */
+[style="font-size:80px;color:#e33b3b"] {
+    text-shadow: 0px 0px 20px rgba(255, 0, 0, 0.15);
+}
+
+/* [V] Icon Popup Content */
+[style="font-size:80px;color:#3be354"] {
+    text-shadow: 0px 0px 20px rgba(0, 255, 117, 0.15);
 }
 
 /* Latest Update x.x.x */
