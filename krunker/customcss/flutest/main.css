@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/01/07 */
+/* 2022/01/09 */
 
 
 /* ======================================= Configs ======================================= */
@@ -91,10 +91,10 @@
 /* Ad Bottom Animation */
 @keyframes adbottomanimation {
     from {
-        margin-bottom: -300px;
+        top: calc(100% - 0px);
     }
     to {
-        margin-bottom: 0px;
+        top: calc(100% - 140px);
     }
 }
 
@@ -435,6 +435,13 @@
     display: none !important;
 }
 
+/* Ad Holder */
+div#aHolder {
+    top: calc(100% - 140px);
+    animation: adbottomanimation .6s;
+    transition-duration: .6s;
+}
+
 /* AD Container */
 #aContainer {
     background: var(--main-bg-color) !important;
@@ -442,8 +449,6 @@
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 7px !important;
-    animation: adbottomanimation .8s;
-    transition-duration: .8s !important;
 }
 
 /* Krunker Editor Button */
@@ -1357,6 +1362,7 @@ input:checked+.sliderSml:active:after {
     border: none !important;
     border-radius: 7px;
     background-color: rgb(60 60 60 / 0.5);
+    backdrop-filter: blur(6px);
 }
 
 /* Settings Active Hed */
@@ -1364,6 +1370,11 @@ input:checked+.sliderSml:active:after {
     border: none !important;
     border-radius: 7px;
     background-color: rgb(22 22 22 / 50%);
+}
+
+/* Settings Button in Server */
+#hostMenuBtn {
+    background: var(--main-bg-color) !important;
 }
 
 /* Quick Join Active Button */
@@ -1950,6 +1961,16 @@ input:checked+.sliderSml:active:after {
     transition-duration: .2s !important;
 }
 
+/* Button Disabled */
+.buttonD {
+    filter: grayscale(1) blur(4px) !important;
+}
+
+/* Live Event! */
+.esports {
+    text-shadow: none;
+}
+
 /* ======================================= Main ======================================= */
 
 
@@ -1968,15 +1989,37 @@ input:checked+.sliderSml:active:after {
 
 /* ======================================= In Game ======================================= */
 
-
 /* Ranked Icon */
-#leaderContainer > div > img {
+/* Old LeaderBoard */ #leaderContainer > div > img,
+/* New LeaderBoard */ #ingameTable > tbody > tr > td > div > img {
     display: none;
 }
 
-/* Premium Icon */
-#leaderContainer > div > i {
+/* Icon */
+/* Old LeaderBoard */ #leaderContainer > div > i, 
+/* New LeaderBoard */ #ingameTable > tbody > tr > td > div > i {
     color: rgb(255 255 255 / 0.85) !important;
+}
+
+/* Premium Icon */
+#leaderContainer i[style*="color:#FBC02D"], .newLeaderContainer i[style*="color:#FBC02D"] {
+    color: rgb(255 255 255 / 0.85) !important;
+}
+
+/* Verified Icon */
+#leaderContainer i[style*="color:#40C4FF"], .newLeaderContainer i[style*="color:#40C4FF"] {
+    color: rgb(255 255 255 / 0.85) !important;
+}
+
+/* Kill Feed Item */
+.kfItem {
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 7px !important;
+    animation: rightanimation .4s;
+    transition-duration: .4s;
 }
 
 /* Chat on Game */
@@ -2055,7 +2098,7 @@ input:checked+.sliderSml:active:after {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px);
-    border-radius: 10px;
+    border-radius: 10px !important;
 }
 
 /* Weap Display */
@@ -2202,7 +2245,8 @@ input:checked+.sliderSml:active:after {
 
 /* Speed Run Point */
 .sriAct {
-    background-color: rgb(0 0 0 / 50%) !important;
+    background-color: rgb(180 180 180 / 0.5) !important;
+    border-radius: 7px;
 }
 
 /* Speed Run Box, Reset Key */
@@ -2322,7 +2366,190 @@ input:checked+.sliderSml:active:after {
     text-shadow: none;
 }
 
+/* Speed Run Box */
+#speedRunBox {
+    background: rgba(29, 29, 29, 0.6);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 7px;
+}
+
+/* Speed Run Info/Item */
+#speedRunInfo, .speedRunItem {
+    border-bottom: none !important;
+}
+
+/* New LeaderBoard */
+#newLeaderDisplay {
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 10px;
+    animation: fadein .2s;
+    transition-duration: .2s;
+}
+
+/* New LeaderBoard Container */
+.newLeaderContainer {
+    background: transparent !important;
+}
+
+/* New LeaderBoard Team Tab */
+.newLeaderTeam {
+    border-radius: 0px !important;
+    background-color: rgba(0,0,0,.5) !important;
+}
+
 /* ======================================= In Game ======================================= */
+
+
+
+/* ======================================= In Spec ======================================= */
+
+/* Spectate HUD */
+#spectateHUD {
+    text-shadow: none;
+}
+
+/* Spectate Game Info */
+#specGameInfo {
+    color: #ffffff;
+    font-size: 17px;
+}
+
+/* Timer */
+#specTimer {
+    background: rgba(29, 29, 29, 0.6);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 7px;
+}
+
+/* Team 1 */
+#specScoreTm0 {
+    clip-path: none;
+    background: rgba(122, 135, 255, 0.6);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 4px 30px rgb(0 0 0 / 25%);
+    backdrop-filter: blur(20px);
+    border-radius: 7px;
+}
+
+/* Team 2 */
+#specScoreTm1 {
+    clip-path: none;
+    background: rgba(255, 70, 70, 0.6);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 7px;
+}
+
+/* Spectating */
+#specNames {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(40px);
+    border-radius: 10px;
+}
+
+/* Spectate Contr */
+#specContr {
+    background: rgba(29, 29, 29, 0.6);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+}
+
+/* [LM]... Spec Contr KeyBinds */
+[style="color:#fbc02d;float:right"] {
+    color: rgba(213, 209, 255, 0.9) !important;
+}
+
+/* Spec Contr I */
+.specContrI, specIns {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Spectate Player Stats */
+#specStats {
+    background: rgba(29, 29, 29, 0.6);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+}
+
+/* Spectate Profile Icon */
+.spectPIcon {
+    background: rgba(29, 29, 29, 0.6);
+    border: 1px solid rgba(225, 225, 225, 0.1);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+}
+
+/* Level Box */
+.specLevelBox {
+    background: rgba(29, 29, 29, 0.6) !important;
+    border: 1px solid rgba(225, 225, 225, 0.1) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 5px !important;
+}
+
+/* Verified in Spectate Stats */
+.specVerified {
+    color: rgb(255 255 255 / 0.8) !important;
+}
+
+/* Spec Stat Empty HP Bar */
+#spectHPB {
+    background-color: rgba(31, 31, 31, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.1) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 7px !important;
+}
+
+/* Spec Stat HP Value */
+#spectHPV {
+    text-shadow: none;
+    left: 108px;
+    top: 55px;
+}
+
+/* Spec Stat HP Bar */
+#spectHPBI {
+    background-color: #838CBC !important;
+    border-radius: 7px !important;
+}
+
+/* SUSPECT */
+#specSUS {
+    color: rgba(126, 81, 255, 0.9);
+    font-size: 22px;
+}
+
+/* KPD Contr */
+#specKPDContr {
+    background: rgba(29, 29, 29, 0.6);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 7px;
+}
+
+/* KPD Contr Interact */
+.specKPDContrI {
+    color: rgba(213, 209, 255, 0.9) !important;
+}
+
+/* ======================================= In Spec ======================================= */
 
 
 
@@ -2564,6 +2791,21 @@ input:checked+.sliderSml:active:after {
     color: #ffffffc2 !important;
 }
 
+/* Take Action Icon */
+.takeAction {
+    filter: none !important;
+}
+
+/* Puish Button */
+.punishButton {
+    background: #878ebd !important;
+}
+
+/* Search Player Input */
+#plySearch {
+    background: white !important;
+}
+
 /* ======================================= Player list ======================================= */
 
 
@@ -2600,6 +2842,12 @@ input:checked+.sliderSml:active:after {
 /* Host Maps Image Button */
 .hostMapImg {
     filter: blur(20px);
+    transition-duration: .3s;
+}
+
+/* Host Map Ing Checked */
+input:checked+.hostMapImg {
+    filter: brightness(0.9);
 }
 
 /* Host Maps Image Hover Button */
@@ -2621,16 +2869,73 @@ input:checked+.sliderSml:active:after {
 /* Default Maps Name Button */
 .hostMapName {
     bottom: 40px;
+    left: 5px;
     font-size: 20px;
     color: rgb(241 241 241 / 80%) !important;
     text-shadow: none;
     background: rgb(0 0 0 / 0%);
 }
 
+/* Browse Community Games */
+div#hostCMapPickT {
+    position: relative;
+    bottom: 3px;
+    width: 1169px;
+    height: 70px;
+    left: 0px;
+    backdrop-filter: blur(14px);
+    padding-left: 20px;
+    padding-top: 75px;
+    border-radius: 7px;
+    text-shadow: none !important;
+    transition-duration: .3s;
+}
+
+/* Browse Commun... [>] */
+#hostCMapInd {
+    text-shadow: none !important;
+}
+
+/* Browse Community Games Hover */
+div#hostCMapPickT:hover {
+    backdrop-filter: blur(0px);
+}
+
+/* Browse Community Games Active */
+div#hostCMapPickT:active {
+    backdrop-filter: blur(0px);
+}
+
+/* Browse Community Games Pickr */
+#hostCMapPickr {
+    transition-duration: .3s;
+}
+
+/* Browse Community Games Pickr Hover */
+#hostCMapPickr:hover {
+    filter: brightness(0.8);
+}
+
+/* Browse Community Games Pickr Active */
+#hostCMapPickr:active {
+    filter: brightness(0.5)
+}
+
 /* Default Maps Button */
 .hostMap {
     border-radius: 7px;
     border: 1px solid rgb(255 255 255);
+    transition-duration: .15s;
+}
+
+/* Default Maps Button */
+.hostMap:hover {
+    filter: brightness(0.8);
+}
+
+/* Default Maps Button */
+.hostMap:active {
+    filter: brightness(0.5);
 }
 
 /* Change Game Overlay Hover */
@@ -2699,6 +3004,12 @@ input:hover+.optCheck {
     backdrop-filter: blur(10px);
     border: none;
     box-shadow: none;
+}
+
+/* [KR] Rewards */
+.krIconHost {
+    border: none !important;
+    text-shadow: none !important;
 }
 
 /* ========================= Custom Game Setup ========================= */
