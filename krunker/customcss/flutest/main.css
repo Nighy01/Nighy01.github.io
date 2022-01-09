@@ -2012,11 +2012,11 @@ input:checked+.sliderSml:active:after {
 }
 
 /* Kill Feed Item */
-.kfItem {
+.kfItem, div.kfItem {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px) !important;
     border-radius: 7px !important;
     animation: rightanimation .4s;
     transition-duration: .4s;
@@ -2392,8 +2392,9 @@ input:checked+.sliderSml:active:after {
 }
 
 /* New LeaderBoard Container */
-.newLeaderContainer {
+.newLeaderContainer, div.newLeaderContainer {
     background: transparent !important;
+    box-shadow: none !important;
 }
 
 /* New LeaderBoard Team Tab */
@@ -3103,7 +3104,9 @@ input:checked+.slider {
 
 /* View Model(Game) */ #setBod_viewmodel > div > span, 
 
-/* Performance(Render) */ #setBod_quality > div > span {
+/* Performance(Render) */ #setBod_quality > div > span,
+
+/* Client */ #setBod_client > div > span {
 
     color: #fff !important;
 
