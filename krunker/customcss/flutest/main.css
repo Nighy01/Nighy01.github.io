@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/01/09 */
+/* 2022/01/15 */
 
 
 /* ======================================= Configs ======================================= */
@@ -12,6 +12,12 @@
     /* Dark Background Color */
      --dark-bg-color: linear-gradient(180deg, rgba(41, 42, 46, 0.3) 0%, rgba(34, 34, 39, 0.3) 100%), rgba(0, 0, 0, 0.45) !important;
     
+    /* Menu Hover Button Color */
+     --menu-hover-btn-color: linear-gradient(180deg, rgba(138, 134, 186, 0.3) 0%, rgba(107, 105, 176, 0.3) 100%), rgba(102, 93, 131, 0.8) !important;
+
+    /* Menu Active Button Color */
+     --menu-active-btn-color: linear-gradient(180deg, rgba(102, 98, 145, 0.3) 0%, rgba(75, 63, 123, 0.3) 100%), rgba(53, 56, 123, 0.8) !important;
+
 }
 
 /* ======================================= Configs ======================================= */
@@ -647,7 +653,7 @@ a {
     border-radius: 7px;
     padding: 10px 18px 13px;
     color: rgb(255, 255, 255) !important;
-    background: rgba(98, 110, 148, 0.8) !important;
+    background: var(--menu-hover-btn-color) !important;
     font-size: 18px !important;
 }
 
@@ -664,7 +670,7 @@ a {
     border-radius: 7px;
     padding: 10px 18px 13px;
     color: white !important;
-    background: rgba(28, 42, 85, 0.8) !important;
+    background: var(--menu-active-btn-color) !important;
     font-size: 18px !important;
 }
 
@@ -848,7 +854,7 @@ div#streamContainer, div.youNewDiv {
 
 /* Login or Register, Login/Register Hover Button in Login Page */
 #signedOutHeaderBar > div:hover, #menuWindow > div > div:nth-child(6) > div.accBtn.button.buttonG:hover, #menuWindow > div > div:nth-child(6) > div.accBtn.button.buttonP:hover {
-    background: rgba(98, 110, 148, 0.8) !important;
+    background: var(--menu-hover-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(20px) !important;
@@ -857,7 +863,7 @@ div#streamContainer, div.youNewDiv {
 
 /* Login or Register, Login/Register Active Button in Login Page */
 #signedOutHeaderBar > div:active, #menuWindow > div > div:nth-child(6) > div.accBtn.button.buttonG:active, #menuWindow > div > div:nth-child(6) > div.accBtn.button.buttonP:active {
-    background: rgba(28, 42, 85, 0.8) !important;
+    background: var(--menu-active-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(20px) !important;
@@ -926,7 +932,7 @@ div#streamContainer, div.youNewDiv {
 
 /* Buttons Hover(Host,KPD...etc) */
 .button:hover {
-    background: rgba(98, 110, 148, 0.8);
+    background: var(--menu-hover-btn-color);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(40px);
@@ -935,7 +941,7 @@ div#streamContainer, div.youNewDiv {
 
 /* Buttons Active(Host,KPD...etc) */
 .button:active {
-    background: rgba(28, 42, 85, 0.8);
+    background: var(--menu-active-btn-color);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(40px);
@@ -1138,7 +1144,7 @@ div#streamContainer, div.youNewDiv {
     position: absolute;
     right: -8px;
     color: white;
-    background: rgba(98, 110, 148, 0.8) !important;
+    background: var(--menu-hover-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px);
@@ -1160,7 +1166,7 @@ div#streamContainer, div.youNewDiv {
     position: absolute;
     right: -8px;
     color: white;
-    background: rgba(28, 42, 85, 0.8) !important;
+    background: var(--menu-active-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     backdrop-filter: blur(40px);
     border-radius: 20px;
@@ -1262,7 +1268,7 @@ input:checked+.sliderSml:hover:after {
     content: url('https://i.imgur.com/YgGRvy6.png');
     color: white;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    background-color: rgba(98, 110, 148, 0.8) !important;
+    background: var(--menu-hover-btn-color) !important;
     transition-duration: .1s;
 }
 
@@ -1273,7 +1279,7 @@ input:checked+.sliderSml:active:after {
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     color: white;
-    background-color: rgba(28, 42, 85, 0.8) !important;
+    background: var(--menu-active-btn-color) !important;
     backdrop-filter: blur(40px);
     border-radius: 20px;
     top: -50px;
@@ -1493,7 +1499,7 @@ input:checked+.sliderSml:active:after {
 
 /* Donate Map Hover Button */
 .voteHint:hover {
-    background: rgba(98, 110, 148, 0.8) !important;
+    background: var(--menu-hover-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
     backdrop-filter: blur(40px) !important;
@@ -1502,7 +1508,7 @@ input:checked+.sliderSml:active:after {
 
 /* Donate Map Active Button */
 .voteHint:active {
-    background: rgba(28, 42, 85, 0.8) !important;
+    background: var(--menu-active-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
     backdrop-filter: blur(40px) !important;
@@ -1833,7 +1839,7 @@ input:checked+.sliderSml:active:after {
 #customizeButton:hover, div#customizeButton:hover {
     transition-duration: .15s;
     animation: customizebottomanimation .4s;
-    background: rgba(98, 110, 148, 0.8) !important;
+    background: var(--menu-hover-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
     backdrop-filter: blur(40px) !important;
@@ -1843,7 +1849,7 @@ input:checked+.sliderSml:active:after {
 #customizeButton:active, div#customizeButton:active {
     transition-duration: .15s;
     animation: customizebottomanimation .4s;
-    background: rgba(28, 42, 85, 0.8) !important;
+    background: var(--menu-active-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
     backdrop-filter: blur(40px) !important;
@@ -1860,7 +1866,7 @@ input:checked+.sliderSml:active:after {
 
 /* Host Game/Server Browser/Ranked/Invite/Join Hover Button */
 #menuBtnHost:hover, #menuBtnBrowser:hover, #inviteButton:hover, #menuBtnJoin:hover, #menuBtnRanked:hover {
-    background: rgba(98, 110, 148, 0.8) !important;
+    background: var(--menu-hover-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
@@ -1869,7 +1875,7 @@ input:checked+.sliderSml:active:after {
 
 /* Host Game/Server Browser/Ranked/Invite/Join Active Button */
 #menuBtnHost:active, #menuBtnBrowser:active, #inviteButton:active, #menuBtnJoin:active, #menuBtnRanked:active {
-    background: rgba(28, 42, 85, 0.8) !important;
+    background: var(--menu-active-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
@@ -2831,11 +2837,19 @@ input:checked+.sliderSml:active:after {
 /* Server Type Button */
 .serverHostOp {
     border-radius: 10px !important;
+    transition-duration: .2s;
 }
 
 /* Server Type Hover Button */
+.serverHostOp:hover {
+    filter: brightness(0.7);
+    opacity: 1;
+}
+
+/* Server Type Active Button */
 .serverHostOp:active {
-    opacity: .6;
+    opacity: 1;
+    filter: brightness(0.5);
 }
 
 /* ========================= Comp Game Setup ========================= */
@@ -2924,8 +2938,9 @@ div#hostCMapPickT:active {
 
 /* Default Maps Button */
 .hostMap {
-    border-radius: 7px;
-    border: 1px solid rgb(255 255 255);
+    border-radius: 10px !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgb(0 0 0 / 25%) !important;
     transition-duration: .15s;
 }
 
