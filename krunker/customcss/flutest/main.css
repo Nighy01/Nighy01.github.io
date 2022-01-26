@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/01/15 */
+/* 2022/01/26 */
 
 
 /* ======================================= Configs ======================================= */
@@ -1422,11 +1422,17 @@ input:checked+.sliderSml:active:after {
 /* Server Browser Game Select Active */
 .settNameIn:active {
     background-color: rgb(0 0 0 / 60%) !important;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     transition: .2s;
 }
 
 /* Server Browser Game Select Hover */
 .settNameIn:hover {
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     transition: .2s;
 }
 
@@ -1697,11 +1703,19 @@ input:checked+.sliderSml:active:after {
 /* Kick Spec, Manage User Button */
 .punishButton {
     text-shadow: none !important;
+    transition-duration: .2s;
+}
+
+/* Kick Spec... Hover Button */
+.punishButton:hover, span.punishButton:hover {
+    opacity: 1 !important;
+    filter: brightness(0.8);
 }
 
 /* Kick Button Active */
 .punishButton.kick:active {
-    opacity: .5 !important;
+    opacity: 1 !important;
+    filter: brightness(0.5);
 }
 
 /* Menu FPS Display */
@@ -2313,6 +2327,7 @@ input:checked+.sliderSml:active:after {
     font-size: 17px;
     background-color: transparent !important;
     border: none !important;
+    animation: fadein .2s;
 }
 
 /* Press [G] */
@@ -2556,6 +2571,13 @@ input:checked+.sliderSml:active:after {
     color: rgba(213, 209, 255, 0.9) !important;
 }
 
+/* Silhouette In Spec */
+.silhouette {
+    filter: grayscale(1) brightness(0.7) opacity(0.7) blur(3px) !important;
+    opacity: 1 !important;
+    animation: fadein .2s;
+}
+
 /* ======================================= In Spec ======================================= */
 
 
@@ -2693,12 +2715,12 @@ input:checked+.sliderSml:active:after {
 }
 
 /* Team Totals ( [Team1] [Scores] | [Team2] [Scores] ) (Only TDM,DOM,Infected(Custom)...etc Team Modes) */
-.teamTotals {
+.teamTotals, div.teamTotals {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 7px;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 7px !important;
 }
 
 /* Blue(Your) Team */
@@ -2728,7 +2750,7 @@ input:checked+.sliderSml:active:after {
 }
 
 /* Premium Icon */
-#endTable > tbody > tr:nth-child(3) > td:nth-child(2) > i {
+#endTable > tbody > tr > td:nth-child(2) > i {
     color: #fff !important;
 }
 
@@ -2868,6 +2890,7 @@ input:checked+.hostMapImg {
 /* Host Maps Image Hover Button */
 .hostMapImg:hover {
     filter: blur(0px);
+    transform:scale(1.1);
 }
 
 /* Host Maps Image Active Button */
@@ -3026,6 +3049,27 @@ input:hover+.optCheck {
 .krIconHost {
     border: none !important;
     text-shadow: none !important;
+}
+
+/* Change Game Hover */
+.setSugBox:hover {
+    border: 4px solid #bbb;
+}
+
+/* Start Game */
+#startServBtn {
+    filter: hue-rotate(50deg) hue-rotate(347deg);
+    transition-duration: .15s;
+}
+
+/* Start Game */
+#startServBtn:hover {
+    filter: hue-rotate(50deg) hue-rotate(347deg) brightness(0.8);
+}
+
+/* Start Game */
+#startServBtn:active {
+    filter: hue-rotate(50deg) hue-rotate(347deg) brightness(0.5);
 }
 
 /* ========================= Custom Game Setup ========================= */

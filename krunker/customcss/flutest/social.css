@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2021/12/31 */
+/* 2022/01/26 */
 
 
 /* ======================================= Configs ======================================= */
@@ -122,12 +122,14 @@
 
 /* LOADING */
 #loadMessage > div > div {
-    color: rgb(255 255 255 / 0.8) !important;
+    font-size: 0px !important;
+    margin-bottom: -50px;
 }
 
 /* Loading Icon */
 .lds-ring div {
-    border: 5px solid #fff !important;
+    border: 5px solid rgba(255, 255, 255, 0.7) !important;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
     animation: loadicospin 1s linear infinite !important;
     border-color: #fff #ffffff #ffffff #0000 !important;
 }
@@ -167,32 +169,33 @@
 #errorReloadButton:hover {
     background: #9794b3 !important;
     transition-duration: .2s;
+    transform: scale(0.9);
 }
 
 /* Error Load(e.g: Socket timed out, Took too long to complete captcha... etc) Active Button */
 #errorReloadButton:active {
     background: #747387 !important;
     transition-duration: .2s;
+    transform: scale(0.8);
 }
 
 /* Error Load(e.g: Socket timed out, Took too long to complete captcha... etc) Button */
 #errorReloadButton {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     content: url(https://i.imgur.com/abMeKhp.png) !important;
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
-    border-radius: 5px !important;
+    border-radius: 10px !important;
     padding: 5px;
     transition-duration: .2s;
 }
 
 /* Error Load Background */
 #errorDisplay {
-    background-color: rgb(0 0 0 / 10%) !important;
-    backdrop-filter: blur(2px);
+    background-color: rgb(0 0 0 / 0%) !important;
 }
 
 /* Blue Link */
@@ -440,6 +443,7 @@
     width: 136px;
     margin-top: -1px;
     border-radius: 5px;
+    line-height: 50px;
 }
 
 /* Post Scroll Reply Hover Button */
@@ -714,6 +718,9 @@
 #popupBack {
     background-color: rgb(0 0 0 / 0.6);
     backdrop-filter: blur(30px);
+    top: -150px !important;
+    width: 150% !important;
+    height: 150% !important;
     transition-duration: .3s;
     animation: blurswitch .3s !important;
 }
@@ -1123,6 +1130,16 @@ span#reprtBtn, span#shareBtn {
 /* Twitch Button */
 #twitchBtn {
     content: url(https://i.imgur.com/fGSnzPG.png);
+}
+
+/* Profile Badge Bound */
+.badgeBound {
+    backdrop-filter: blur(7px);
+}
+
+/* Feed Verified Icon In Profile */
+#pTabContent_activity > div > div.postHead > div.postInfo > div > span > i {
+    color: #fff !important;
 }
 
 /* ======================================= Profile ======================================= */
