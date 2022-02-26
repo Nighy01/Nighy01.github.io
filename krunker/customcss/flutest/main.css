@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/02/01 */
+/* 2022/02/26 */
 
 
 /* ======================================= Configs ======================================= */
@@ -1991,6 +1991,30 @@ input:checked+.sliderSml:active:after {
     text-shadow: none;
 }
 
+/* Star Icon in Server Browser */
+#serverHolder > div.setBodH > div > span {
+    color: #fbf0e1f0 !important;
+}
+
+/* Game Quick Search */
+div.purejscarousel-btn {
+    background: #9d99bc !important;
+    border-radius: 10px;
+}
+
+/* ^Slide */
+.slide {
+    border: none !important;
+    padding: 10px;
+}
+
+/* ^Slide Image */
+.slideImg {
+    border-radius: 10px;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 0.4) !important;
+}
+
 /* ======================================= Main ======================================= */
 
 
@@ -2678,7 +2702,73 @@ input:checked+.sliderSml:active:after {
 
 /* Vote Map */
 .matchVote {
-    text-shadow: none;
+    text-shadow: none !important;
+    background: #878787 !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.3)) !important;
+    border-radius: 7px !important;
+}
+
+/* Vote Map Thumb */
+.matchVoteThumb {
+    filter: blur(20px);
+}
+
+/* Vote Map Thumb Hover */
+.matchVoteThumb:hover {
+    filter: blur(0px) brightness(0.8);
+}
+
+/* Vote Map Thumb Active */
+.matchVoteThumb:active {
+    filter: blur(0px) brightness(0.5);
+}
+
+/* Vote Map: Title */
+.matchVoteMap {
+    top: 25px;
+    left: 10px;
+    font-size: 15px;
+}
+
+/* Vote Map: Game Mode */
+.matchVoteMode {
+    top: 52px;
+    left: 15px;
+    font-size: 13px;
+}
+
+/* Vote Map: Total */
+.matchVoteTotal {
+    bottom: 33px;
+    right: 10px;
+    font-size: 18px;
+}
+
+/* Vote Map: Total Text */
+[style="color: rgb(251, 192, 45);"] {
+    color: rgba(193, 181, 218, 0.9) !important;
+}
+
+/* Vote Map: PARTY */
+.matchVoteModifier {
+    display: none !important;
+}
+
+/* Vote Map: PARTY Background */
+[style="border: 4px solid #ffb600;box-shadow: 0 0 20px #ffb6009c;"] {
+    box-shadow: 0px 0px 20px rgba(255, 153, 0, 0.8) !important;
+}
+
+/* End Chal */
+.endChalCard {
+    text-shadow: none !important;
+    background: var(--main-bg-color) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 7px !important;
+    transition-duration: 0.2s !important;
 }
 
 /* Enemy Color Profile Link */
@@ -2698,15 +2788,6 @@ input:checked+.sliderSml:active:after {
 
 /* Match Ended Ad Container */
 #endAContainer {
-    background: var(--main-bg-color) !important;
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 7px;
-}
-
-/* Match Vote ( [Map1] [Game Modes] | [Map2] [Game Modes] | [Map3] [Game Modes] | [Map4] [Game Modes] ) (if possible) */
-#matchVoteHolder {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;

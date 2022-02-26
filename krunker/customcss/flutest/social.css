@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/01/26 */
+/* 2022/02/26 */
 
 
 /* ======================================= Configs ======================================= */
@@ -137,12 +137,13 @@
 /* Security Challenge Popup */
 #captcha-holder > div {
     animation: instructionsupdatepopupanimation .2s;
-    background: linear-gradient(180deg, rgba(217, 214, 255, 0.3) 0%, rgba(219, 213, 255, 0.3) 100%), rgba(196, 193, 219, 0.7) !important;
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-sizing: border-box !important;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 7px !important;
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    transition-duration: .2s !important;
 }
 
 /* Security Challenge */
@@ -624,22 +625,34 @@
     color: rgb(255 255 255 / 0.9) !important;
 }
 
-/* Login Hover Button*/
-.button:hover {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    filter: contrast(1);
-    -webkit-filter: contrast(1);
-    background-color: rgb(136 136 136 / 80%);
+/* Button */
+.button {
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 7px;
+    transition-duration: .2s;
 }
 
-/* Login Active Button*/
-.button:active {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    filter: contrast(1);
-    -webkit-filter: contrast(1);
-    background-color: rgb(100 100 100 / 0.8);
+/* Buttons Hover */
+div.button:hover {
+    background: linear-gradient(180deg, rgba(138, 134, 186, 0.3) 0%, rgba(107, 105, 176, 0.3) 100%), rgba(102, 93, 131, 0.8) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 7px;
+    transform: scale(.9);
+}
+
+/* Buttons Active */
+div.button:active {
+    background: linear-gradient(180deg, rgba(102, 98, 145, 0.3) 0%, rgba(75, 63, 123, 0.3) 100%), rgba(53, 56, 123, 0.8) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 7px;
+    transform: scale(.8);
 }
 
 /* Krunker [.io] Box */
@@ -699,19 +712,13 @@
 
 /* Login Popup */ 
 #loginPop {
-    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
-    border: 1px solid rgba(225, 225, 225, 0.4);
-    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25);
-    backdrop-filter: var(--CardBlur);
-    border-radius: 10px;
-    background-color: rgb(171 173 220 / 70%) !important;
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
     animation: instructionsupdatepopupanimation .2s;
-    transform: scale(1) translate(-50%,-50%);
-}
-
-/* Login Button */
-.accBtn.button.buttonG {
-    border: none !important;
+    transition-duration: .2s !important;
 }
 
 /* Popup Background */
@@ -904,6 +911,7 @@ div#marketSearchB, div#invSortB {
     background-color: rgb(0 0 0 / 0) !important;
 }
 
+/* Verified Icon in LeaderBoard */
 #leaderList > div > div > div.leaderText > i {
     color: #e6eaff !important;
 }
@@ -917,6 +925,16 @@ div#marketSearchB, div#invSortB {
 /* Home */
 #mapsHolder > div:nth-child(1) > div > div.bigMenTab.bigMenTabA > span, #mapsHolder > div:nth-child(1) > div > div:nth-child(1) > span {
     color: #fff !important;
+}
+
+/* Play Now Btn */
+div#bigMFeatPBtn {
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 7px;
+    transition-duration: .2s;
 }
 
 /* ======================================= Games ======================================= */
@@ -955,14 +973,77 @@ div#marketSearchB, div#invSortB {
 
 /* Settings Popup */
 #settingsPop {
-    background-color: rgb(156 157 191 / 70%) !important;
-    backdrop-filter: var(--CardBlur);
-    border-radius: 7px;
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
     animation: instructionsupdatepopupanimation .2s;
-    box-shadow: none !important;
+    transition-duration: .2s !important;
+    transform: scale(1) translate(-50%,-50%);
 }
 
-/* ======================================= Settings Popup ======================================= */
+/* Slider Value */
+.sliderVal {
+    background: #00000042 !important;
+}
+
+/* SliderM Slider Thumb */
+.sliderM::-webkit-slider-thumb {
+    background: #fff !important;
+    border-radius: 3px;
+}
+
+/* Checked Slider */
+input:checked+.slider {
+    background: linear-gradient(180deg, rgba(36, 35, 57, 0.3) 0%, rgba(40, 41, 62, 0.3) 100%), rgba(31, 29, 42, 0.8) !important;
+    box-shadow: 0px 0px 25px rgba(109, 108, 124, 0.3) !important;
+    backdrop-filter: blur(20px);
+}
+
+/* Settings Slider */
+.slider {
+    background: linear-gradient(180deg, rgba(189, 188, 206, 0.3) 0%, rgba(178, 177, 198, 0.3) 100%), rgba(186, 188, 209, 0.8) !important;
+    box-shadow: 0px 0px 25px rgba(135, 125, 177, 0.3) !important;
+    backdrop-filter: blur(20px);
+    transition-duration: .3s;
+    transform: scale(0.9);
+}
+
+/* Settings Slider Hover */
+.slider:hover {
+    background: linear-gradient(180deg, rgb(162 160 194 / 30%) 0%, rgb(136 133 176 / 30%) 100%), rgb(146 149 182 / 80%) !important;
+    box-shadow: 0px 0px 30px rgb(135 125 177 / 65%) !important;
+    backdrop-filter: blur(20px);
+    transform: scale(1);
+}
+
+/* Settings Slider Active */
+.slider:active {
+    background: linear-gradient(180deg, rgb(106 104 137 / 30%) 0%, rgb(75 72 112 / 30%) 100%), rgb(133 136 163 / 80%) !important;
+    box-shadow: 0px 0px 30px rgb(97 103 152 / 80%) !important;
+    backdrop-filter: blur(20px);
+    transform: scale(1);
+}
+
+/* Settings Slider White */
+.slider:before {
+    background: linear-gradient(180deg, rgba(235, 233, 255, 0.3) 0%, rgba(229, 227, 255, 0.3) 100%), rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(20px);
+}
+
+/* Collection Btn */
+.openCollection {
+    filter: grayscale(1);
+}
+
+/* Manage Ad Preferences */
+#settHolder > div:nth-child(10) {
+    background: linear-gradient(180deg, #54596e 0%, #54596e 100%), #54596e !important;
+}
+
+/* ========#54596e======================== Settings Popup ======================================= */
 
 
 
@@ -1062,44 +1143,44 @@ div#marketSearchB, div#invSortB {
 
 /* Send Gift Button */ 
 #giftBtn {
-    color: #ffffff;
-    border-color: #41c300;
-    background: #41c300;
+    color: #505050;
+    border-color: #f2f2f2;
+    background: #f2f2f2;
 }
 
 /* Follow Button */ 
 .follow {
-    color: #ffffff;
-    border-color: #006dff;
-    background: #006dff;
+    color: #505050;
+    border-color: #f2f2f2;
+    background: #f2f2f2;
 }
 
 /* Verify/UnVerify Button */ 
 #verifyBtn {
-    background: #40c4ff;
-    border-color: #40c4ff;
-    color: #fff;
+    color: #505050;
+    border-color: #f2f2f2;
+    background: #f2f2f2;
 }
 
 /* Trade Button */
 #tradeBtn {
-    color: #ffffff;
-    border-color: #2196f3;
-    background-color: #2196F3;
+    color: #505050;
+    border-color: #f2f2f2;
+    background: #f2f2f2;
 }
 
 /* Give Badge Button */
 #badgeBtn {
-    color: #ffffff;
-    border-color: #505050;
-    background-color: #505050;
+    color: #505050;
+    border-color: #f2f2f2;
+    background: #f2f2f2;
 }
 
 /* Unfollow Button */
 .unfollow {
-    color: #ffffff;
-    border-color: #ff4747;
-    background-color: #ff4747;
+    color: #505050;
+    border-color: #f2f2f2;
+    background: #f2f2f2;
 }
 
 /* Followers/Following BHold */ 
@@ -1142,6 +1223,55 @@ span#reprtBtn, span#shareBtn {
     color: #fff !important;
 }
 
+/* Gift Pop */
+#giftPop {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    animation: instructionsupdatepopupanimation .2s;
+    transform: scale(1) translate(-50%,-50%);
+}
+
+/* Fee: Count */
+#giftAmntFee {
+    color: rgb(255 255 255 / 90%);
+}
+
+/* Report Pop */
+#reportPop {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    animation: instructionsupdatepopupanimation .2s;
+    transform: scale(1) translate(-50%,-50%);
+}
+
+/* Report Button */
+#reportBtn {
+    background: #ff8195ed !important;
+    color: #f2f2f2 !important;
+    border-radius: 7px;
+}
+
+/* Badge Card */
+.badgeCard {
+    text-shadow: none;
+}
+
+/* Badge Desc */
+.badgeDesc {
+    color: #d2d2d2;
+}
+
+/* Market Sales */
+.graphHeader {
+    background-color: #fbfbfb2e;
+}
+
 /* ======================================= Profile ======================================= */
 
 
@@ -1153,6 +1283,16 @@ span#reprtBtn, span#shareBtn {
     color: rgb(255 255 255 / 90%) !important;
 }
 
+/* Premium Icon */
+#clanRoster > div > div > i:nth-child(1) {
+    color: #e6eaff !important;
+}
+
+/* Verified Icon */
+#clanRoster > div > div > i:nth-child(2) {
+    color: #e6eaff !important;
+}
+
 /* ======================================= Clan Page ======================================= */
 
 
@@ -1162,6 +1302,16 @@ span#reprtBtn, span#shareBtn {
 /* LeaderBoard Tab of Players */
 #mapLeaders > div, #mapLeaders > div > span {
     color: #fff !important;
+}
+
+/* Servers Tab of Servers */
+.menuSelector, .serverPCount, .serverRegion {
+    color: #f3f3f3f0 !important;
+}
+
+/* ^Star Icon */
+#activeGames > div > div > span {
+    color: #fbf0e1f0 !important;
 }
 
 /* ======================================= Map Page ======================================= */
