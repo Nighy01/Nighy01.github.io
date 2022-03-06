@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/02/26 */
+/* 2022/03/06 */
 
 
 /* ======================================= Configs ======================================= */
@@ -566,6 +566,38 @@ a {
     animation: blurswitch .3s;
     transition-duration: .2s;
     backdrop-filter: blur(40px);
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+    background: rgb(43 43 43 / 50%) !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transition-duration: .2s;
+}
+
+/* Scrollbar Thumb Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(64 64 64 / 50%) !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transition-duration: .2s;
+}
+
+/* Scrollbar Thumb Active */
+::-webkit-scrollbar-thumb:active {
+    background: rgb(26 26 26 / 50%) !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transition-duration: .2s;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    background-color: rgb(222 222 222 / 31%) !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transition-duration: .2s;
 }
 
 /* Twitch Drops Timer */
@@ -3185,6 +3217,12 @@ input:hover+.optCheck {
     background: rgb(54 55 66 / 80%);
 }
 
+/* Disabled Tab Dis */
+.bigMenTab.bigMenTabDis {
+    color: rgb(236 236 236 / 37%) !important;
+    filter: blur(5px);
+}
+
 /* ========================= Dedicated Setup ========================= */
 
 /* ======================================= Select a Server Type (Host Game) ======================================= */
@@ -3450,15 +3488,20 @@ input[type=color] {
 
 /* ============= Delete KeyBind, Reset KeyBind Buttons ============= */
 
+/* Advanced Slider */
+.advancedSlider {
+    border-radius: 7px;
+}
+
 /* Checked Slider */
-input:checked+.slider {
+input:checked+.slider, input:checked+.advancedSlider {
     background: linear-gradient(180deg, rgba(36, 35, 57, 0.3) 0%, rgba(40, 41, 62, 0.3) 100%), rgba(31, 29, 42, 0.8) !important;
     box-shadow: 0px 0px 25px rgba(109, 108, 124, 0.3) !important;
     backdrop-filter: blur(20px);
 }
 
 /* Settings Slider */
-.slider {
+.slider, .advancedSlider {
     background: linear-gradient(180deg, rgba(189, 188, 206, 0.3) 0%, rgba(178, 177, 198, 0.3) 100%), rgba(186, 188, 209, 0.8) !important;
     box-shadow: 0px 0px 25px rgba(135, 125, 177, 0.3) !important;
     backdrop-filter: blur(20px);
@@ -3466,7 +3509,7 @@ input:checked+.slider {
 }
 
 /* Settings Slider Hover */
-.slider:hover {
+.slider:hover, .advancedSlider:hover {
     background: linear-gradient(180deg, rgb(162 160 194 / 30%) 0%, rgb(136 133 176 / 30%) 100%), rgb(146 149 182 / 80%) !important;
     box-shadow: 0px 0px 30px rgb(135 125 177 / 65%) !important;
     backdrop-filter: blur(20px);
@@ -3474,7 +3517,7 @@ input:checked+.slider {
 }
 
 /* Settings Slider Active */
-.slider:active {
+.slider:active, .advancedSlider:active {
     background: linear-gradient(180deg, rgb(106 104 137 / 30%) 0%, rgb(75 72 112 / 30%) 100%), rgb(133 136 163 / 80%) !important;
     box-shadow: 0px 0px 30px rgb(97 103 152 / 80%) !important;
     backdrop-filter: blur(20px);
@@ -3482,7 +3525,7 @@ input:checked+.slider {
 }
 
 /* Settings Slider White */
-.slider:before {
+.slider:before, .advancedSlider:before {
     background: linear-gradient(180deg, rgba(235, 233, 255, 0.3) 0%, rgba(229, 227, 255, 0.3) 100%), rgba(255, 255, 255, 0.9) !important;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1) !important;
     backdrop-filter: blur(20px);
