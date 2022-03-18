@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/02/26 */
+/* 2022/03/18 */
 
 
 /* ======================================= Configs ======================================= */
@@ -913,7 +913,8 @@ div#marketSearchB, div#invSortB {
 
 /* Verified Icon in LeaderBoard */
 #leaderList > div > div > div.leaderText > i {
-    color: #e6eaff !important;
+    color: rgba(231, 231, 241, 0.85) !important;
+    filter: drop-shadow(0px 0px 10px rgba(50, 181, 255, 0.2)) !important;
 }
 
 /* ======================================= LeaderBoard ======================================= */
@@ -1049,26 +1050,107 @@ input:checked+.slider {
 
 /* ======================================= Profile ======================================= */
 
-/* Username, Since, Followers/Following Scroll Page */
-.scrollItemNew {
-    backdrop-filter: var(--CardBlur);
-    background-color: rgb(156 157 191 / 70%) !important;
-    box-shadow: none !important;
+/* Profile Picture */
+.profilePic {
+    background: rgba(29, 29, 29, 0.6) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(20px);
 }
 
-/* Username, Since, Followers/Following Text */
-.leftTopHolder, .leftMidHolder, #rightProfile > div.leftMidHolder > span, .follL, .follCount, #rightProfile > div.leftTopHolder > a {
-    color: rgb(255 255 255 / 90%) !important;
+/* On Status */
+.onStatus {
+    border: 5px solid rgb(190 190 190 / 90%) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(20px);
+}
+
+/* ^Prof */
+.onStatProf {
+    backdrop-filter: blur(20px);
+}
+
+/* HACKER Card */
+#hackText {
+    background: linear-gradient(180deg, rgba(255, 185, 185, 0.3) 0%, rgba(255, 171, 165, 0.3) 100%), rgba(171, 149, 154, 0.5) !important;
+    box-shadow: 0px 0px 30px rgba(255, 95, 131, 0.5) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 10px !important;
+    z-index: 0 !important;
+    font-size: 0 !important;
+}
+
+/* ^For Icon */
+#hackText:after {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 385px;
+    top: 15px;
+    content: url('https://nighy01.github.io/krunker/customcss/flutest/icons/hackericon.png');
+}
+
+/* Username, Since, Followers/Following Scroll Page */
+.scrollItemNew {
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 10px !important;
+    transition-duration: .2s;
+}
+
+/* Since */
+.leftMidHolder {
+    color: rgba(220, 220, 233, 0.9) !important;
+}
+
+/* Since Date */
+#rightProfile > div.leftMidHolder > span {
+    color: rgba(250, 250, 255, 0.95) !important;
+}
+
+/* Followers/Following Text */
+.follCount {
+    color: rgba(220, 220, 233, 0.9) !important;
+}
+
+/* Followers/Following Counts */
+.follL {
+    color: rgba(250, 250, 255, 0.95) !important;
 }
 
 /* Partner, Premium, Verified Icon */ 
 #rightProfile > div.leftTopHolder > i {
-    color: rgb(255 255 255) !important;
+    color: rgba(231, 231, 241, 0.85) !important;
+}
+
+/* Partner Icon */
+[style="margin-right:-2px;font-size:32px;color:#993299;vertical-align:middle;margin-top:-6px;"] {
+    filter: drop-shadow(0px 0px 10px rgba(123, 18, 255, 0.2)) !important;
+}
+
+/* Premium Icon */
+[style="margin-right:-2px;font-size:32px;color:#FBC02D;vertical-align:middle;margin-top:-6px;"] {
+    filter: drop-shadow(0px 0px 10px rgba(255, 179, 89, 0.2)) !important;
+}
+
+/* Verified Icon */
+[style="margin-right:1px;font-size:32px;color:#40C4FF;vertical-align:middle;margin-top:-6px;"] {
+    filter: drop-shadow(0px 0px 10px rgba(50, 181, 255, 0.2)) !important;
+}
+
+/* Premium Display Name */
+[style="color: rgb(251, 192, 45);"] {
+    color: rgba(255, 237, 216, 0.95) !important;
+    text-shadow: 0px 0px 10px rgba(255, 179, 89, 0.2) !important;
+    transition-duration: .15s;
 }
 
 /* Profile Premium Display Name Hover Switch */ 
 #nameSwitch:hover {
     color: rgb(212 212 212 / 90%) !important;
+    transition-duration: .15s;
 }
 
 /* Profile Premium Display Name Active Switch */ 
@@ -1143,44 +1225,62 @@ input:checked+.slider {
 
 /* Send Gift Button */ 
 #giftBtn {
-    color: #505050;
-    border-color: #f2f2f2;
-    background: #f2f2f2;
+    color: #ffffff !important;
+    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 7px !important;
 }
 
 /* Follow Button */ 
 .follow {
-    color: #505050;
-    border-color: #f2f2f2;
-    background: #f2f2f2;
+    color: #ffffff !important;
+    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 7px !important;
 }
 
 /* Verify/UnVerify Button */ 
 #verifyBtn {
-    color: #505050;
-    border-color: #f2f2f2;
-    background: #f2f2f2;
+    color: #ffffff !important;
+    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 7px !important;
 }
 
 /* Trade Button */
 #tradeBtn {
-    color: #505050;
-    border-color: #f2f2f2;
-    background: #f2f2f2;
+    color: #ffffff !important;
+    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 7px !important;
 }
 
 /* Give Badge Button */
 #badgeBtn {
-    color: #505050;
-    border-color: #f2f2f2;
-    background: #f2f2f2;
+    color: #ffffff !important;
+    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 7px !important;
 }
 
 /* Unfollow Button */
 .unfollow {
-    color: #505050;
-    border-color: #f2f2f2;
-    background: #f2f2f2;
+    color: #ffffff !important;
+    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 7px !important;
 }
 
 /* Followers/Following BHold */ 

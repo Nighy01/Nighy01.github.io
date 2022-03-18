@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/02/26 */
+/* 2022/03/18 */
 
 
 /* ======================================= KeyFrames ======================================= */
@@ -57,17 +57,37 @@
 
 /* ======================================= Main ======================================= */
 
-/* Left/Right Panel */
-.left.panel, .right.panel {
-    background: rgb(153 154 180) !important;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(40px);
+/* Texts */
+div.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .header>a, .subheader>a, .qs_textarea, #versionTxt, .windowHeader>div, .menuTabsNew>div, .inlineLabel, .mapListItem>*>a {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Left Panel */
+.left.panel {
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: -4px 0px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+}
+
+/* Right Panel */
+.right.panel {
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 4px 0px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
 }
 
 /* Hot Top Bar */
 #hotbar {
-    background: rgb(153 154 180) !important;
-    box-shadow: none !important;
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px -5px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+}
+
+.header {
+    background-color: rgb(21 21 21 / 27%);
 }
 
 /* Play,Host,Expore Bar */
@@ -256,10 +276,10 @@ div#menuWindow, #loginPop, #importPop {
 
 /* Input */
 .inlineInput {
-    background: rgba(229, 230, 255, 0.8);
-    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(20px);
-    border-radius: 5px;
+    background: rgba(245, 246, 255, 0.8) !important;
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 5px !important;
 }
 
 /* Select Mod...etc */
