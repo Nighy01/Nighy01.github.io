@@ -1449,7 +1449,7 @@ input:checked+.slider {
     top: 6.1px;
     text-align: left;
     left: 12px;
-    font-size: 5px;
+    font-size: 12px;
     text-shadow: none !important;
     color: rgba(255, 255, 255, 0.98) !important;
 }
@@ -1636,7 +1636,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active {
     top: 1.6px;
     text-align: left;
     left: 9px;
-    font-size: 5px;
+    font-size: 12px;
     color: rgba(255, 255, 255, 0.9) !important;
 }
 
