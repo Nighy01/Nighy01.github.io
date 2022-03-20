@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/03/18 */
+/* 2022/03/20 */
 
 
 /* ======================================= Configs ======================================= */
@@ -8,6 +8,9 @@
     
     /* Card Blur */
      --CardBlur: blur(40px) !important;
+
+    /* Profile Bottom Button Color */
+     --ProfileBottomBtn: rgba(255, 255, 255, 0.95) !important;
     
 }
 
@@ -105,6 +108,38 @@
         background-color: rgb(0 0 0 / 0.6);
         backdrop-filter: blur(30px);
         transition-duration: .2s;
+    }
+}
+
+/* Top Nav Animation */
+@keyframes navanimat {
+    from {
+        top: -80px;
+    }
+    to {
+        top: 3px;
+    }
+}
+
+/* Nav Buttons Aniamtion */
+@keyframes navbtnsanimat {
+    from {
+        transform: translateY(-80px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+/* Center Holder Animation */
+@keyframes centerholderanimat {
+    from {
+        transform: translateX(-50px);
+        opacity: 0.2;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
     }
 }
 
@@ -212,17 +247,52 @@
 /* Top Bar */
 #navBar {
     backdrop-filter: var(--CardBlur) !important;
-    animation: topbarstartupanimation .2s;
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    animation: topbarstartupanimation .5s;
 }
+
+/* =============Nav Buttons Animation============= */
+
+/* Nav Buttons */
+#navButtons {
+    animation: navanimat 0.6s;
+}
+
+
+/* feed */
+#feed {
+    animation: navbtnsanimat 0.62s;
+}
+
+/* market */
+#market {
+    animation: navbtnsanimat 0.65s;
+}
+
+/* leaders */
+#leaders {
+    animation: navbtnsanimat 0.7s;
+}
+
+/* games */
+#maps {
+    animation: navbtnsanimat 0.75s;
+}
+
+/* mods */
+#mods {
+    animation: navbtnsanimat 0.8s;
+}
+
+/* =============Nav Buttons Animation============= */
 
 /* Search User Input */
 #searchPInput {
-    background: rgba(229, 230, 255, 0.8) !important;
-    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px);
+    background: rgba(245, 246, 255, 0.8) !important;
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
+    backdrop-filter: blur(20px) !important;
     border-radius: 5px !important;
 }
 
@@ -324,7 +394,7 @@
     box-sizing: border-box;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
     backdrop-filter: var(--CardBlur);
-    animation: TradeChatScrollerStartupAnimation .2s;
+    animation: TradeChatScrollerStartupAnimation .65s;
 }
 
 /* Count Followers/Following */
@@ -554,12 +624,12 @@
 
 /* Like Hover Button */
 .likeBtn:hover {
-    color: rgb(230 0 0 / 80%) !important;
+    color: rgb(244 111 111 / 80%) !important;
 }
 
 /* Like Active Button */
 .likeBtn:active {
-    color: rgb(152 0 0 / 80%) !important;
+    color: rgb(200 95 95 / 80%) !important;
 }
 
 /* Comment Hover Button */
@@ -834,8 +904,14 @@ div.button:active {
 
 /* Verified */ #postHolder > div > div.postHead > div.postInfo > div > span > i {
 
-    color: #fff !important;
+    color: rgba(242, 242, 255, 0.9) !important;
 
+}
+
+/* Center Holder */
+.centerHolder, #adBox {
+    animation: centerholderanimat 0.4s;
+    transition-duration: 0.4s;
 }
 
 /* ======================================= Main(Feed) ======================================= */
@@ -913,7 +989,7 @@ div#marketSearchB, div#invSortB {
 
 /* Verified Icon in LeaderBoard */
 #leaderList > div > div > div.leaderText > i {
-    color: rgba(231, 231, 241, 0.85) !important;
+    color: rgba(242, 242, 255, 0.9) !important;
     filter: drop-shadow(0px 0px 10px rgba(50, 181, 255, 0.2)) !important;
 }
 
@@ -1044,7 +1120,7 @@ input:checked+.slider {
     background: linear-gradient(180deg, #54596e 0%, #54596e 100%), #54596e !important;
 }
 
-/* ========#54596e======================== Settings Popup ======================================= */
+/* ================================ Settings Popup ======================================= */
 
 
 
@@ -1065,8 +1141,10 @@ input:checked+.slider {
     backdrop-filter: blur(20px);
 }
 
-/* ^Prof */
-.onStatProf {
+/* Online Status Green */
+[style="background:#27ab32"] {
+    background: rgba(51, 255, 84, 0.6) !important;
+    box-shadow: 0px 0px 20px rgba(101, 255, 126, 0.15);
     backdrop-filter: blur(20px);
 }
 
@@ -1083,11 +1161,16 @@ input:checked+.slider {
 /* ^For Icon */
 #hackText:after {
     position: absolute;
-    width: 150px;
-    height: 150px;
-    left: 385px;
-    top: 15px;
+    left: 385.6px;
+    top: -8.5px;
     content: url('https://nighy01.github.io/krunker/customcss/flutest/icons/hackericon.png');
+    transform: scale(.85);
+}
+
+/* Profile Holder */
+#profileHolder {
+    animation: centerholderanimat 0.4s;
+    transition-duration: 0.4s;
 }
 
 /* Username, Since, Followers/Following Scroll Page */
@@ -1122,7 +1205,7 @@ input:checked+.slider {
 
 /* Partner, Premium, Verified Icon */ 
 #rightProfile > div.leftTopHolder > i {
-    color: rgba(231, 231, 241, 0.85) !important;
+    color: rgba(242, 242, 255, 0.9) !important;
 }
 
 /* Partner Icon */
@@ -1165,29 +1248,57 @@ input:checked+.slider {
 
 /* Profile Tabs */
 .profileTabs {
-    background-color: rgb(255 255 255 / 40%) !important;
-    backdrop-filter: var(--CardBlur);
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 10px !important;
+    width: 99.8% !important;
 }
 
 /* Profile Tab */
 .profileTab {
-    color: rgb(255 255 255 / 90%) !important;
-    background-color: rgb(156 157 191 / 70%) !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    background-color: transparent !important;
+    transition-duration: .15s;
 }
 
 /* Profile TabA... */
-.pTabA, .pTabA:hover {
-    box-shadow: inset 0 -5px rgb(255 255 255 / 90%) !important;
+.pTabA {
+    box-shadow: none !important;
+    background: rgba(50, 50, 50, 0.4) !important;
+    border-radius: 10px !important;
 }
 
 /* Profile Tab Hover */ 
 .profileTab:hover {
-    box-shadow: inset 0 -5px rgb(255 255 255 / 40%) !important;
+    box-shadow: none !important;
+    background: rgba(50, 50, 50, 0.2) !important;
+    border-radius: 10px !important;
+}
+
+/* Profile Tab Active */ 
+.profileTab:active {
+    box-shadow: none !important;
+    background: rgba(50, 50, 50, 0.6) !important;
+    border-radius: 10px !important;
+}
+
+/* Overall Status Box */
+.pSt {
+    width: 123px !important;
+    background: rgba(88, 86, 102, 0.9) !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 7px !important;
+    text-shadow: none !important;
+    border: none !important;
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 /* Overall Stats Count */
 .pSt strong {
-    color: rgb(255 255 255 / 95%) !important;
+    color: rgba(255, 255, 255, 0.82) !important;
 }
 
 /* Scroll Item Head(Overall Stats, Class Stats, Sales) */
@@ -1220,12 +1331,47 @@ input:checked+.slider {
 
 /* Following/Followers List of Premium/Verified Icon */
 #followPop > div > div.leaderText > div > i:nth-child(1), #followPop > div > div.leaderText > div > i:nth-child(2) {
-    color: #fff !important;
+    color: rgba(242, 242, 255, 0.9) !important;
 }
 
-/* Send Gift Button */ 
-#giftBtn {
-    color: #ffffff !important;
+/* Bottom Button Hover */
+.bottomBtn:hover {
+    -webkit-transform: scale(.95);
+    transform: scale(.95);
+    filter: contrast(1) !important;
+    -webkit-filter: contrast(1) !important;
+}
+
+/* Bottom Button Active */
+.bottomBtn:active {
+    -webkit-transform: scale(.89);
+    transform: scale(.89);
+    filter: contrast(1) !important;
+    -webkit-filter: contrast(1) !important;
+}
+
+/* Follow, Send Gift...etc Button */ 
+
+/* Follow */
+.follow, 
+
+/* Send Gift */
+#giftBtn, 
+
+/* Verify */
+#verifyBtn, 
+
+/* Trade */
+#tradeBtn, 
+
+/* Give Badge */
+#badgeBtn, 
+
+/* UnFollow */
+.unfollow 
+
+{
+    color: var(--ProfileBottomBtn) !important;
     background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
@@ -1233,52 +1379,44 @@ input:checked+.slider {
     border-radius: 7px !important;
 }
 
-/* Follow Button */ 
-.follow {
-    color: #ffffff !important;
-    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
+/* ^Hover */
+.follow:hover, 
+
+#giftBtn:hover, 
+
+#verifyBtn:hover, 
+
+#tradeBtn:hover, 
+
+#badgeBtn:hover, 
+
+.unfollow:hover 
+
+{
+    background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
+    box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25) !important;
     backdrop-filter: blur(40px);
     border-radius: 7px !important;
 }
 
-/* Verify/UnVerify Button */ 
-#verifyBtn {
-    color: #ffffff !important;
-    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 7px !important;
-}
+/* ^^Active */
+.follow:active,
 
-/* Trade Button */
-#tradeBtn {
-    color: #ffffff !important;
-    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 7px !important;
-}
+#giftBtn:active, 
 
-/* Give Badge Button */
-#badgeBtn {
-    color: #ffffff !important;
-    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 7px !important;
-}
+#verifyBtn:active,
 
-/* Unfollow Button */
-.unfollow {
-    color: #ffffff !important;
-    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
+#tradeBtn:active, 
+
+#badgeBtn:active, 
+
+.unfollow:active 
+
+{
+    background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
+    box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25) !important;
     backdrop-filter: blur(40px);
     border-radius: 7px !important;
 }
@@ -1298,14 +1436,44 @@ input:checked+.slider {
     border: none;
 }
 
+/* Xp Bar */
+.xpBar {
+    background: rgba(88, 86, 102, 0.9) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 7px !important;
+}
+
+/* Xp Bar Text */
+.xpBarV {
+    position: absolute;
+    top: 6.1px;
+    text-align: left;
+    left: 12px;
+    font-size: 5px;
+    text-shadow: none !important;
+    color: rgba(255, 255, 255, 0.98) !important;
+}
+
 /* Xp Bar B */
 .xpBarB {
-    background-image: linear-gradient(to right,#b6a6d8,#cfb9ef) !important;
+    background: #838CBC !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 7px !important;
 }
 
 /* Report, Share Button */
 span#reprtBtn, span#shareBtn {
-    color: #fff !important;
+    color: rgb(255 255 255 / 0.95) !important;
+}
+
+/* Report, Share Hover Button */
+span#reprtBtn:hover, span#shareBtn:hover, #twitchBtn:hover {
+    filter: brightness(0.85);
+}
+
+/* Report, Share Active Button */
+span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active {
+    filter: brightness(0.7);
 }
 
 /* Twitch Button */
@@ -1320,7 +1488,7 @@ span#reprtBtn, span#shareBtn {
 
 /* Feed Verified Icon In Profile */
 #pTabContent_activity > div > div.postHead > div.postInfo > div > span > i {
-    color: #fff !important;
+    color: rgba(242, 242, 255, 0.9) !important;
 }
 
 /* Gift Pop */
@@ -1367,9 +1535,109 @@ span#reprtBtn, span#shareBtn {
     color: #d2d2d2;
 }
 
+/* Data Range */
+#pTabContent_about > div:nth-child(5) > div:nth-child(3) > span {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Data Range Select */
+.rangeSelect {
+    background: rgba(245, 246, 255, 0.8);
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 7px !important;
+    color: rgba(0, 0, 0, 0.9) !important;
+    transition-duration: .15s;
+}
+
+/* ^Hover */
+.rangeSelect:hover {
+    background: rgba(200, 200, 210, 0.8);
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 7px;
+}
+
+/* ^^Active */
+.rangeSelect:active {
+    background: rgba(139, 140, 150, 0.8);
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 7px;
+}
+
 /* Market Sales */
 .graphHeader {
-    background-color: #fbfbfb2e;
+    background: rgba(88, 86, 102, 0.9) !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(40px);
+    border-radius: 10px !important;
+}
+
+/* ^Chart */
+.chartjs-render-monitor {
+    background: rgba(222, 219, 239, 0.9);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(40px);
+    border-radius: 10px;
+}
+
+/* Class Card */
+.classCard {
+    background: rgba(88, 86, 102, 0.9) !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 10px !important;
+    text-shadow: none !important;
+}
+
+/* Class Image */
+.classImg {
+    background: rgba(29, 29, 29, 0.6) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 10px !important;
+}
+
+/* Class Level */
+.classLvl {
+    top: 55px !important;
+    left: 50px !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Class Name (ex. Hunter) */
+.className {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Class Weapon (ex. Sniper Rifle) */
+.classWeap {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Class XP Bar */
+.classXPBar {
+    background: rgba(47, 46, 53, 0.45) !important;
+    backdrop-filter: blur(40px);
+    border-radius: 5px !important;
+}
+
+/* Class XP Bar C */
+.clsXPBarC {
+    background: rgba(131, 140, 188, 1) !important;
+    backdrop-filter: blur(20px);
+    border-radius: 5px !important;
+}
+
+/* Class XP Bar Text */
+.clsXPBarV {
+    position: absolute;
+    top: 1.6px;
+    text-align: left;
+    left: 9px;
+    font-size: 5px;
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 /* ======================================= Profile ======================================= */
@@ -1385,12 +1653,12 @@ span#reprtBtn, span#shareBtn {
 
 /* Premium Icon */
 #clanRoster > div > div > i:nth-child(1) {
-    color: #e6eaff !important;
+    color: rgba(242, 242, 255, 0.9) !important;
 }
 
 /* Verified Icon */
 #clanRoster > div > div > i:nth-child(2) {
-    color: #e6eaff !important;
+    color: rgba(242, 242, 255, 0.9) !important;
 }
 
 /* ======================================= Clan Page ======================================= */

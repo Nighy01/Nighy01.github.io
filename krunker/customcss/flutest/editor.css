@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/03/18 */
+/* 2022/03/20 */
 
 
 /* ======================================= KeyFrames ======================================= */
@@ -86,6 +86,7 @@ div.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .
     backdrop-filter: blur(40px) !important;
 }
 
+/* Header */
 .header {
     background-color: rgb(21 21 21 / 27%);
 }

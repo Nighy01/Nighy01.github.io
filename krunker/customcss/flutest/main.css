@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/03/06 */
+/* 2022/03/20 */
 
 
 /* ======================================= Configs ======================================= */
@@ -13,10 +13,10 @@
      --dark-bg-color: linear-gradient(180deg, rgba(41, 42, 46, 0.3) 0%, rgba(34, 34, 39, 0.3) 100%), rgba(0, 0, 0, 0.45) !important;
     
     /* Menu Hover Button Color */
-     --menu-hover-btn-color: linear-gradient(180deg, rgba(138, 134, 186, 0.3) 0%, rgba(107, 105, 176, 0.3) 100%), rgba(102, 93, 131, 0.8) !important;
+     --menu-hover-btn-color: linear-gradient(180deg, rgba(138, 134, 186, 0.3) 0%, rgba(125, 121, 176, 0.3) 100%), rgba(102, 93, 131, 0.8) !important;
 
     /* Menu Active Button Color */
-     --menu-active-btn-color: linear-gradient(180deg, rgba(102, 98, 145, 0.3) 0%, rgba(75, 63, 123, 0.3) 100%), rgba(53, 56, 123, 0.8) !important;
+     --menu-active-btn-color: linear-gradient(180deg, rgba(102, 98, 145, 0.3) 0%, rgba(97, 93, 142, 0.3) 100%), rgba(53, 56, 123, 0.8) !important;
 
 }
 
