@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/03/20 */
+/* 2022/04/03 */
 
 
 /* ======================================= Configs ======================================= */
@@ -29,10 +29,24 @@
 /* Show Animation on Startup */
 @keyframes showanimationonstartup {
     from {
+        opacity: 0;
         margin-bottom: -120px;
     }
     to {
+        opacity: 1;
         margin-bottom: 0px;
+    }
+}
+
+/* Tips Startup */
+@keyframes tipsstartup {
+    from {
+        opacity: 0;
+        top: calc(50% + 150px);
+    }
+    to {
+        opacity: 1;
+        top: calc(50% + 90px);
     }
 }
 
@@ -295,43 +309,6 @@
     }
 }
 
-/* Purchase Popup Animation */
-@keyframes purchasepopupanimation {
-    0%{
-        transform: scale(0);
-    }
-    10%{
-        transform: scale(0.1) translate(-50%,-0%);
-    }
-    20%{
-        transform: scale(0.2) translate(-50%,-0%);
-    }
-    30%{
-        transform: scale(0.3) translate(-50%,-0%);
-    }
-    40%{
-        transform: scale(0.4) translate(-50%,-0%);
-    }
-    50%{
-        transform: scale(0.5) translate(-50%,-0%);
-    }
-    60%{
-        transform: scale(0.6) translate(-50%,-0%);
-    }
-    70%{
-        transform: scale(0.7) translate(-50%,-0%);
-    }
-    80%{
-        transform: scale(0.8) translate(-50%,-0%);
-    }
-    90%{
-        transform: scale(0.9) translate(-50%,-0%);
-    }
-    100%{
-        transform: scale(1) translateX(-50%,-0%);
-    }
-}
-
 /* Kill Card Animation */
 @keyframes killcardanimation {
     from {
@@ -470,7 +447,14 @@ div#aHolder {
 /* Krunker Tips Loader */
 #loadTipsHolder {
     width: 1500px;
-    animation: showanimationonstartup 0.5s;
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    top: calc(50% + 90px);
+    transform: translate(-50%, 0);
+    color: rgb(255 255 255 / 0.9);
+    text-align: center;
+    animation: tipsstartup .5s;
 }
 
 /* Krunker Tips Loader Before (Add "Tip:") */
@@ -481,36 +465,14 @@ div#aHolder {
 /* lC Cont */
 #lC-cont {
     animation: showanimationonstartup 0.5s;
+    width: 100px;
+    height: 100px;
+    content: url('https://i.imgur.com/lTHKVcL.gif');
 }
 
 /* Krunker Yendis Text */
 #loadInfoRHolder, #loadInfoLHolder {
-    animation: showanimationonstartup 0.5s;
-}
-
-/* lC right, bottom top */
-.lC-r, .lC-bt {
-    background: #5a4ca6 !important;
-}
-
-/* lC bottom */
-.lC-b {
-    background: #7965ea !important;
-}
-
-/* lC top */
-.lC-t {
-    background: #bab9ff !important;
-}
-
-/* lC left */
-.lC-l {
-    background: #9593ff !important;
-}
-
-/* lC f */
-.lC-f {
-    background: #6f60ec !important;
+    display: none;
 }
 
 /* ======================================= Startup ======================================= */
@@ -569,35 +531,44 @@ a {
 }
 
 /* Scrollbar Thumb */
-::-webkit-scrollbar-thumb {
-    background: rgb(43 43 43 / 50%) !important;
+::-webkit-scrollbar-thumb, div#newsBody::-webkit-scrollbar-thumb {
+    background: rgb(11 11 11 / 45%) !important;
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     transition-duration: .2s;
+    border-radius: 10px !important;
 }
 
 /* Scrollbar Thumb Hover */
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(64 64 64 / 50%) !important;
+::-webkit-scrollbar-thumb:hover, div#newsBody::-webkit-scrollbar-thumb:hover {
+    background: rgb(11 11 11 / 60%) !important;
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     transition-duration: .2s;
+    border-radius: 10px !important;
 }
 
 /* Scrollbar Thumb Active */
-::-webkit-scrollbar-thumb:active {
-    background: rgb(26 26 26 / 50%) !important;
+::-webkit-scrollbar-thumb:active, div#newsBody::-webkit-scrollbar-thumb:active {
+    background: rgb(11 11 11 / 70%) !important;
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     transition-duration: .2s;
+    border-radius: 10px !important;
 }
 
 /* Scrollbar Track */
 ::-webkit-scrollbar-track {
-    background-color: rgb(222 222 222 / 31%) !important;
+    background-color: transparent !important;
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     transition-duration: .2s;
+    border-radius: 10px !important;
+}
+
+/* Chat List Scrollbar */
+#chatList::-webkit-scrollbar {
+    width: 10px;
 }
 
 /* Twitch Drops Timer */
@@ -1361,6 +1332,18 @@ input:checked+.sliderSml:active:after {
     text-shadow: none !important;
 }
 
+/* Submit, Select Badge */
+.subPassChg, .updDisN {
+    background: var(--main-bg-color) !important;
+    border-radius: 7px !important;
+}
+
+/* Account Settings Hed */
+.setHedS {
+    border: none;
+    background-color: transparent;
+}
+
 /* WindowUI */ 
 #menuWindow.dark {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
@@ -1433,6 +1416,13 @@ input:checked+.sliderSml:active:after {
     margin-top: 1px;
 }
 
+/* Hide Full Selected */
+input:checked+.slider2 {
+    background: linear-gradient(180deg, rgba(36, 35, 57, 0.3) 0%, rgba(40, 41, 62, 0.3) 100%), rgba(31, 29, 42, 0.8) !important;
+    box-shadow: 0px 0px 25px rgba(109, 108, 124, 0.3) !important;
+    backdrop-filter: blur(20px);
+}
+
 /* Settings Header */
 .settingsHeader {
     background-color: #0000 !important;
@@ -1473,10 +1463,27 @@ input:checked+.sliderSml:active:after {
     background-color: transparent !important;
 }
 
+/* Tabs Hover */
+.bigMenTab:hover {
+    border-bottom: none !important;
+    background: rgb(193 192 215 / 70%) !important;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
 /* Profile, Games...etc Tabs */
 .bigMenTabs {
     background-color: rgb(158 159 191 / 70%) !important;
     border-radius: 15px;
+}
+
+/* Tab Selected */
+.bigMenTabA, .bigMenTabA:hover {
+    border-bottom: none !important;
+    background: rgb(107 106 120 / 70%) !important;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    cursor: default;
 }
 
 /* Popup Background */
@@ -1489,9 +1496,43 @@ input:checked+.sliderSml:active:after {
 
 /* Confirm Popup */
 #confPremiumPop, #twitchPop, #confPop, #clientExitPop, #confPurchItemPop {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px);
-    background-color: rgb(80 80 80 / 60%);
+    border-radius: 10px !important;
     animation: popupanimation .2s;
+}
+
+/* YES/NO */
+#confirmBtn, #declineBtn {
+    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 0px 30px rgb(142 147 255 / 25%);
+    backdrop-filter: blur(40px);
+    border-radius: 7px !important;
+    padding: 8.5px !important;
+    transition-duration: .15s;
+}
+
+/* YES/NO Hover */
+#confirmBtn:hover, #declineBtn:hover {
+    background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25);
+    backdrop-filter: blur(40px);
+    border-radius: 7px !important;
+    padding: 8.5px !important;
+}
+
+/* YES/NO Active */
+#confirmBtn:active, #declineBtn:active {
+    background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25);
+    backdrop-filter: blur(40px);
+    border-radius: 7px !important;
+    padding: 8.5px !important;
 }
 
 /* You don't have any friends yet */
@@ -1505,29 +1546,58 @@ input:checked+.sliderSml:active:after {
 }
 
 /* Map Vote */
+#mapVote {
+    background: rgb(123 122 132 / 70%);
+    backdrop-filter: blur(40px);
+    border-radius: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    transform: translateX(-1px);
+}
+
+/* Map Info */
+#mapInfo {
+    background: rgb(123 122 132 / 70%);
+    backdrop-filter: blur(40px);
+    border-radius: 7px 0px 7px 7px;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-right: 1px;
+}
+
+/* Mod Vote */
+#modVote {
+    background: rgb(123 122 132 / 70%);
+    backdrop-filter: blur(40px);
+    border-radius: 7px;
+    padding: 10px;
+}
+
+/* Map Vote Icons */
 .material-icons.vote {
-    color: rgb(255 255 255 / 70%);
+    color: rgb(255 255 255 / 90%);
 }
 
 /* Map Vote Hover */
 .material-icons.vote:hover {
-    color: rgb(255 255 255 / 90%);
-    transform: scale(1.2);
+    color: rgb(255 255 255 / 70%);
+    transform: scale(1.1);
 }
 
 /* Map Vote Active */
 .material-icons.vote:active {
-    color: rgb(163 163 163 / 90%);
+    color: rgb(163 163 163 / 70%);
     transform: scale(0.9);
 }
 
 /* Donate Map */
 .voteHint {
-    background: var(--main-bg-color) !important;
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(40px) !important;
-    border-radius: 5px;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none!important;
+    border-radius: 0px;
+    transform: scale(1.1) translateY(-1.5px);
 }
 
 /* SetBodH */
@@ -1537,21 +1607,22 @@ input:checked+.sliderSml:active:after {
 
 /* Donate Map Hover Button */
 .voteHint:hover {
-    background: var(--menu-hover-btn-color) !important;
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(40px) !important;
-    border-radius: 5px;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none!important;
+    border-radius: 0px;
+    color: #c4c0ff !important;
+    transform: scale(1.1) translateY(-1.5px);
 }
 
 /* Donate Map Active Button */
 .voteHint:active {
-    background: var(--menu-active-btn-color) !important;
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(40px) !important;
-    border-radius: 5px;
-    transform: scale(.9);
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none!important;
+    border-radius: 0px;
+    color: #928fbd !important;
+    transform: scale(1.1) translateY(-1.5px);
 }
 
 /* Popup Content */
@@ -1630,12 +1701,6 @@ input:checked+.sliderSml:active:after {
 /* Enter Message Input */
 #chatInputHolder {
     animation: showanimationonstartup 0.5s;
-}
-
-/* Map Info */
-#mapInfo {
-    margin-bottom: 30px;
-    margin-right: 1px;
 }
 
 /* Chat Text Outline */
@@ -1832,14 +1897,22 @@ input:checked+.sliderSml:active:after {
 
 /* Purchase KR Popup Background */
 #purchaseHolder {
-    background: var(--dark-bg-color) !important;
-    animation: fadein .3s;
+    background: var(--dark-bg-color);
+    backdrop-filter: blur(40px);
+    animation: blurswitch .2s;
+    transition-duration: .2s;
 }
 
 /* Purchase Selector Popup */
 #purchaseSelector {
-    animation: purchasepopupanimation .2s;
-    transform: scale(1) translate(-50%,-0%);
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    animation: popupanimation .2s;
+    transform: scale(1) translate(-50%,-50%);
+    transition-duration: .2s;
 }
 
 /* Customize Selector Container */
@@ -1969,7 +2042,32 @@ input:checked+.sliderSml:active:after {
 
 /* Join Button */
 .joinBtn {
-    background-color: #a79cff;
+    background: var(--main-bg-color) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 7px !important;
+    transition-duration: .2s;
+}
+
+/* Join Button Hover */
+.joinBtn:hover {
+    background: var(--menu-hover-btn-color) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 7px !important;
+    transform: scale(0.97);
+}
+
+/* Join Button Active */
+.joinBtn:active {
+    background: var(--menu-active-btn-color) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 7px !important;
+    transform: scale(0.9);
 }
 
 /* Twitch Text */
@@ -2030,7 +2128,7 @@ input:checked+.sliderSml:active:after {
 
 /* Game Quick Search */
 div.purejscarousel-btn {
-    background: #9d99bc !important;
+    background: linear-gradient(180deg, rgb(165 167 216 / 33%) 0%, rgb(171 179 223 / 33%) 100%), rgba(152, 149, 171) !important;
     border-radius: 10px;
 }
 
@@ -2045,6 +2143,127 @@ div.purejscarousel-btn {
     border-radius: 10px;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 15px rgb(0 0 0 / 0.4) !important;
+}
+
+/* Ranked Popup */
+#rankedPop {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    animation: windowpopupanimation .2s;
+    transition-duration: .2s !important;
+}
+
+/* Close Ranked */
+.closeRanked {
+    background: linear-gradient(180deg, rgb(241 184 184 / 30%) 0%, rgb(253 193 193 / 30%) 100%), rgb(224 197 197 / 70%);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 0px 30px rgb(255 142 142 / 25%);
+    backdrop-filter: blur(40px);
+    border-radius: 7px !important;
+    transition-duration: .15s;
+    color: #fff !important;
+}
+
+/* PLAY NOW */
+.bundlPopBuyB {
+    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 0px 30px rgb(142 147 255 / 25%);
+    backdrop-filter: blur(40px);
+    border-radius: 7px !important;
+    transition-duration: .15s;
+}
+
+/* PLAY NOW Hover */
+.bundlPopBuyB:hover {
+    background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25);
+    backdrop-filter: blur(40px);
+    border-radius: 7px !important;
+}
+
+/* PLAY NOW Active */
+.bundlPopBuyB:active {
+    background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25);
+    backdrop-filter: blur(40px);
+    border-radius: 7px !important;
+}
+
+/* Vouch Popup */
+#vouchPop {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    animation: windowpopupanimation .2s;
+    transition-duration: .2s !important;
+}
+
+/* Redeem */
+.redVouchBtn {
+    background: var(--main-bg-color) !important;
+}
+
+/* Popups (maybe if it is possible) */
+
+#polConfPop,
+
+#pfpPop,
+
+#nftPop,
+
+#metaPop,
+
+#twitchConPop,
+
+#twitchLinkPop,
+
+#faceitPop,
+
+#promoPop,
+
+#tradePop,
+
+#imagePop,
+
+#badgePop,
+
+#imageNewPop,
+
+#disconnectPop,
+
+#bundlePop 
+
+{
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    animation: windowpopupanimation .2s;
+    transition-duration: .2s !important;
+}
+
+/* Clan Error */
+#clanErr {
+    color: #ffd1c4 !important;
+}
+
+/* Your Notifications [Clear All] */
+div.buttonR, div.buttonR:hover, div.buttonR:active {
+    border: none !important;
+}
+
+/* Loading Streams... */
+#loadingStreams {
+    color: rgb(255 255 255 / 50%) !important;
 }
 
 /* ======================================= Main ======================================= */
@@ -2853,8 +3072,22 @@ div.purejscarousel-btn {
 
 /* Tab Selected */
 .tabHeader.selected {
-    color: #ffffff;
-    border-bottom: 4px solid #ffffff;
+    border-bottom: none !important;
+    background: rgb(156 155 174 / 70%) !important;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    cursor: default;
+    color: white !important;
+    transition-duration: .2s;
+}
+
+/* Tab Hover */
+.tabHeader:hover {
+    border-bottom: none !important;
+    background: rgb(193 192 215 / 70%) !important;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    transition-duration: .2s;
 }
 
 /* +Count KR */
@@ -3170,9 +3403,10 @@ input:hover+.optCheck {
 }
 
 /* Start Game */
-#startServBtn {
+div#startServBtn {
     filter: grayscale(1) brightness(1);
     transition-duration: .15s;
+    border-radius: 10px;
 }
 
 /* Start Game */
@@ -3574,12 +3808,6 @@ input:checked+.slider, input:checked+.advancedSlider {
 
 
 /* ======================================= Steam Fix ======================================= */
-
-/* Featured Games In Menu Scroll Bar */
-div#newsBody::-webkit-scrollbar-thumb {
-    border-radius: 0px !important;
-    background-color: rgb(166, 165, 199) !important;
-}
 
 /* Host Game, Servers, Ranked, Invite, Join */
 div.buttonG , div.buttonO, div.buttonP, div.buttonR, div.buttonPI {

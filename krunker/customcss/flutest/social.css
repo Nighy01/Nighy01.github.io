@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/03/20 */
+/* 2022/04/03 */
 
 
 /* ======================================= Configs ======================================= */
@@ -135,11 +135,13 @@
 @keyframes centerholderanimat {
     from {
         transform: translateX(-50px);
-        opacity: 0.2;
+        opacity: 0;
+        filter: blur(10px);
     }
     to {
         transform: translateX(0px);
         opacity: 1;
+        filter: blur(0px);
     }
 }
 
