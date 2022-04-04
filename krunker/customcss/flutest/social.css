@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/04/03 */
+/* 2022/04/04 */
 
 
 /* ======================================= Configs ======================================= */
@@ -30,42 +30,39 @@
     }
 }
 
-/* InstructionsUpdate Popup Animation */
-@keyframes instructionsupdatepopupanimation {
-    0%{
-        transform: scale(0);
+/* ------Popup Animation------ */
+
+/* Width */
+@keyframes popup_width_animat {
+    from {
+        transform: scale3d(0.35, 0.35, 0.35) translate(-141%,-153%);
     }
-    10%{
-        transform: scale(0.1) translate(-500%,-500%);
-    }
-    20%{
-        transform: scale(0.2) translate(-250%,-250%);
-    }
-    30%{
-        transform: scale(0.3) translate(-166%,-166%);
-    }
-    40%{
-        transform: scale(0.4) translate(-124.5%,-124.5%);
-    }
-    50%{
-        transform: scale(0.5) translate(-99.5%,-99.5%);
-    }
-    60%{
-        transform: scale(0.6) translate(-83%,-83%);
-    }
-    70%{
-        transform: scale(0.7) translate(-71%,-72%);
-    }
-    80%{
-        transform: scale(0.8) translate(-62%,-63%);
-    }
-    90%{
-        transform: scale(0.9) translate(-55%,-56%);
-    }
-    100%{
-        transform: scale(1) translate(-50%,-50%);
+    to {
+        transform: scale3d(1) translate(-50%,-50%);
     }
 }
+
+/* Height */
+@keyframes popup_height_animat {
+    from {
+        transform: scale3d(0.35, 0.35, 0.35) translate(-141%,-153%);
+    }
+    to {
+        transform: scale3d(1) translate(-50%,-50%);
+    }
+}
+
+/* Opacity */
+@keyframes popup_opacity_animat {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ------Popup Animation------ */
 
 /* Top Bar Startup Animation */
 @keyframes topbarstartupanimation {
@@ -136,12 +133,10 @@
     from {
         transform: translateX(-50px);
         opacity: 0;
-        filter: blur(10px);
     }
     to {
         transform: translateX(0px);
         opacity: 1;
-        filter: blur(0px);
     }
 }
 
@@ -173,7 +168,7 @@
 
 /* Security Challenge Popup */
 #captcha-holder > div {
-    animation: instructionsupdatepopupanimation .2s;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     box-sizing: border-box !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 7px !important;
@@ -789,7 +784,7 @@ div.button:active {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: instructionsupdatepopupanimation .2s;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
 
@@ -819,10 +814,14 @@ div.button:active {
 
 /* Popup Content */
 #popupContent {
-    background-color: rgba(0,0,0,.8) !important;
-    backdrop-filter: blur(5px);
-    animation: instructionsupdatepopupanimation .2s;
-    transform: scale(1) translate(-50%, -50%);
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transition-duration: .2s !important;
+    transform: scale3d(1) translate(-50%,-50%);
 }
 
 /* Popup Content Loading, Success, Error... etc */
@@ -1057,9 +1056,9 @@ div#bigMFeatPBtn {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: instructionsupdatepopupanimation .2s;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
-    transform: scale(1) translate(-50%,-50%);
+    transform: scale3d(1) translate(-50%,-50%);
 }
 
 /* Slider Value */
@@ -1326,9 +1325,14 @@ input:checked+.slider {
 
 /* Following/Followers List Popup */
 #followPop {
-    background-color: rgb(151 148 183 / 80%) !important;
-    backdrop-filter: var(--CardBlur);
-    animation: instructionsupdatepopupanimation .2s;
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transition-duration: .2s !important;
+    transform: scale3d(1) translate(-50%,-50%);
 }
 
 /* Following/Followers List of Premium/Verified Icon */
@@ -1500,8 +1504,8 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: instructionsupdatepopupanimation .2s;
-    transform: scale(1) translate(-50%,-50%);
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transform: scale3d(1) translate(-50%,-50%);
 }
 
 /* Fee: Count */
@@ -1516,8 +1520,8 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: instructionsupdatepopupanimation .2s;
-    transform: scale(1) translate(-50%,-50%);
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transform: scale3d(1) translate(-50%,-50%);
 }
 
 /* Report Button */

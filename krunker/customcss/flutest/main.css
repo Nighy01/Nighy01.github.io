@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/04/03 */
+/* 2022/04/04 */
 
 
 /* ======================================= Configs ======================================= */
@@ -130,12 +130,13 @@
     }
 }
 
-/* Fade In ChatMsg */
-@keyframes chatmsgfadein {
+/* Chat Message Animation */
+@keyframes chatmsganimat {
     from {
+        transform: translateX(-30px);
         opacity: 0;
     }
-    to { 
+    to {
         opacity: 1;
     }
 }
@@ -150,164 +151,39 @@
     }
 }
 
-/* InstructionsUpdate Popup Animation */
-@keyframes instructionsupdatepopupanimation {
-    0%{
-        transform: scale(0);
+/* ------Popup Animation------ */
+
+/* Width */
+@keyframes popup_width_animat {
+    from {
+        transform: scale3d(0.35, 0.35, 0.35) translate(-141%,-153%);
     }
-    10%{
-        transform: scale(0.1) translate(-500%,-500%);
-    }
-    20%{
-        transform: scale(0.2) translate(-250%,-250%);
-    }
-    30%{
-        transform: scale(0.3) translate(-166%,-166%);
-    }
-    40%{
-        transform: scale(0.4) translate(-124.5%,-124.5%);
-    }
-    50%{
-        transform: scale(0.5) translate(-99.5%,-99.5%);
-    }
-    60%{
-        transform: scale(0.6) translate(-83%,-83%);
-    }
-    70%{
-        transform: scale(0.7) translate(-71%,-72%);
-    }
-    80%{
-        transform: scale(0.8) translate(-62%,-63%);
-    }
-    90%{
-        transform: scale(0.9) translate(-55%,-56%);
-    }
-    100%{
-        transform: scale(1) translate(-50%,-50%);
+    to {
+        transform: scale3d(1) translate(-50%,-50%);
     }
 }
 
-/* Window Popup Animation */
-@keyframes windowpopupanimation {
-    0%{
-        transform: scale(0);
-        background: linear-gradient(180deg, rgba(178, 204, 255, 0.1) 0%, rgba(194, 204, 255, 0.1) 100%), rgba(104, 105, 130, 0.2);
+/* Height */
+@keyframes popup_height_animat {
+    from {
+        transform: scale3d(0.35, 0.35, 0.35) translate(-141%,-153%);
     }
-    10%{
-        transform: scale(0.1) translate(-500%,-500%);
-        background: linear-gradient(180deg, rgba(178, 204, 255, 0.1) 0%, rgba(194, 204, 255, 0.1) 100%), rgba(104, 105, 130, 0.2);
-    }
-    20%{
-        transform: scale(0.2) translate(-250%,-250%);
-        background: linear-gradient(180deg, rgba(178, 204, 255, 0.1) 0%, rgba(194, 204, 255, 0.1) 100%), rgba(104, 105, 130, 0.3);
-    }
-    30%{
-        transform: scale(0.3) translate(-166%,-166%);
-        background: linear-gradient(180deg, rgba(178, 204, 255, 0.1) 0%, rgba(194, 204, 255, 0.1) 100%), rgba(104, 105, 130, 0.35);
-    }
-    40%{
-        transform: scale(0.4) translate(-124.5%,-124.5%);
-        background: linear-gradient(180deg, rgba(178, 204, 255, 0.1) 0%, rgba(194, 204, 255, 0.1) 100%), rgba(104, 105, 130, 0.4);
-    }
-    50%{
-        transform: scale(0.5) translate(-99.5%,-99.5%);
-        background: linear-gradient(180deg, rgba(178, 204, 255, 0.15) 0%, rgba(194, 204, 255, 0.15) 100%), rgba(104, 105, 130, 0.45);
-    }
-    60%{
-        transform: scale(0.6) translate(-83%,-83%);
-        background: linear-gradient(180deg, rgba(178, 204, 255, 0.15) 0%, rgba(194, 204, 255, 0.15) 100%), rgba(104, 105, 130, 0.5);
-    }
-    70%{
-        transform: scale(0.7) translate(-71%,-72%);
-        background: linear-gradient(180deg, rgba(178, 204, 255, 0.15) 0%, rgba(194, 204, 255, 0.15) 100%), rgba(104, 105, 130, 0.55);
-    }
-    80%{
-        transform: scale(0.8) translate(-62%,-63%);
-        background: linear-gradient(180deg, rgba(178, 204, 255, 0.2) 0%, rgba(194, 204, 255, 0.2) 100%), rgba(104, 105, 130, 0.6);
-    }
-    90%{
-        transform: scale(0.9) translate(-55%,-56%);
-        background: linear-gradient(180deg, rgba(178, 204, 255, 0.25) 0%, rgba(194, 204, 255, 0.25) 100%), rgba(104, 105, 130, 0.65);
-    }
-    100%{
-        transform: scale(1) translate(-50%,-50%);
-        background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    to {
+        transform: scale3d(1) translate(-50%,-50%);
     }
 }
 
-/* Popup Animation */
-@keyframes popupanimation {
-    0%{
-        transform: scale(0);
+/* Opacity */
+@keyframes popup_opacity_animat {
+    from {
+        opacity: 0;
     }
-    10%{
-        transform: scale(0.1) translate(-500%,-500%);
-    }
-    20%{
-        transform: scale(0.2) translate(-250%,-250%);
-    }
-    30%{
-        transform: scale(0.3) translate(-166%,-166%);
-    }
-    40%{
-        transform: scale(0.4) translate(-124.5%,-124.5%);
-    }
-    50%{
-        transform: scale(0.5) translate(-99.5%,-99.5%);
-    }
-    60%{
-        transform: scale(0.6) translate(-83%,-83%);
-    }
-    70%{
-        transform: scale(0.7) translate(-71%,-72%);
-    }
-    80%{
-        transform: scale(0.8) translate(-62%,-63%);
-    }
-    90%{
-        transform: scale(0.9) translate(-55%,-56%);
-    }
-    100%{
-        transform: scale(1) translate(-50%,-50%);
+    to {
+        opacity: 1;
     }
 }
 
-/* Guide Popup Animation */
-@keyframes guidepopupanimation {
-    0%{
-        transform: scale(0);
-    }
-    10%{
-        transform: scale(0.1) translate(-500%,-500%);
-    }
-    20%{
-        transform: scale(0.2) translate(-250%,-250%);
-    }
-    30%{
-        transform: scale(0.3) translate(-166%,-166%);
-    }
-    40%{
-        transform: scale(0.4) translate(-124.5%,-124.5%);
-    }
-    50%{
-        transform: scale(0.5) translate(-99.5%,-99.5%);
-    }
-    60%{
-        transform: scale(0.6) translate(-83%,-83%);
-    }
-    70%{
-        transform: scale(0.7) translate(-71%,-72%);
-    }
-    80%{
-        transform: scale(0.8) translate(-62%,-63%);
-    }
-    90%{
-        transform: scale(0.9) translate(-55%,-56%);
-    }
-    100%{
-        transform: scale(1) translateX(-50%);
-    }
-}
+/* ------Popup Animation------ */
 
 /* Kill Card Animation */
 @keyframes killcardanimation {
@@ -518,8 +394,8 @@ a {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 7px !important;
-    animation: instructionsupdatepopupanimation .2s;
-    transform: scale(1) translate(-50%,-50%);
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transform: scale3d(1) translate(-50%,-50%);
 }
 
 /* Click To Play Background */
@@ -531,7 +407,10 @@ a {
 }
 
 /* Scrollbar Thumb */
-::-webkit-scrollbar-thumb, div#newsBody::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb, 
+
+/* ^Feature Games (Steam) */
+div#newsBody::-webkit-scrollbar-thumb {
     background: rgb(11 11 11 / 45%) !important;
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
@@ -540,7 +419,10 @@ a {
 }
 
 /* Scrollbar Thumb Hover */
-::-webkit-scrollbar-thumb:hover, div#newsBody::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover, 
+
+/* ^Feature Games (Steam) */
+div#newsBody::-webkit-scrollbar-thumb:hover {
     background: rgb(11 11 11 / 60%) !important;
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
@@ -549,7 +431,10 @@ a {
 }
 
 /* Scrollbar Thumb Active */
-::-webkit-scrollbar-thumb:active, div#newsBody::-webkit-scrollbar-thumb:active {
+::-webkit-scrollbar-thumb:active, 
+
+/* ^Feature Games (Steam) */
+div#newsBody::-webkit-scrollbar-thumb:active {
     background: rgb(11 11 11 / 70%) !important;
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
@@ -558,7 +443,10 @@ a {
 }
 
 /* Scrollbar Track */
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track,
+
+/* ^Feature Games (Steam) */
+div#newsBody::-webkit-scrollbar-track {
     background-color: transparent !important;
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
@@ -766,11 +654,12 @@ div#streamContainer, div.youNewDiv {
 }
 
 /* Editor Button */
-#editorBtnM {
+#editorBtnM, img#editorBtnM {
     margin-left: 21px !important;
     margin-right: 0px !important;
     margin-top: 0px !important;
     height: 48px !important;
+    display: block !important;
 }
 
 /* Reddit Button */
@@ -1351,8 +1240,16 @@ input:checked+.sliderSml:active:after {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: windowpopupanimation .2s;
     transition-duration: .2s !important;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+}
+
+/* WindowUI Background */
+#windowHolder.popupWin {
+    background: var(--dark-bg-color);
+    backdrop-filter: blur(40px);
+    animation: blurswitch .2s;
+    transition-duration: .2s;
 }
 
 /* Loading... ChangeLog Window */
@@ -1433,14 +1330,6 @@ input:checked+.slider2 {
     color: #dde6ff !important;
 }
 
-/* WindowUI Background */
-#windowHolder.popupWin {
-    background: var(--dark-bg-color);
-    backdrop-filter: blur(40px);
-    animation: blurswitch .2s;
-    transition-duration: .2s;
-}
-
 /* Server Browser Game Select Active */
 .settNameIn:active {
     background-color: rgb(0 0 0 / 60%) !important;
@@ -1501,7 +1390,7 @@ input:checked+.slider2 {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px);
     border-radius: 10px !important;
-    animation: popupanimation .2s;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
 }
 
 /* YES/NO */
@@ -1633,7 +1522,7 @@ input:checked+.slider2 {
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
     transition-duration: .2s !important;
-    animation: popupanimation .2s;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
 }
 
 /* Import Popup */
@@ -1643,8 +1532,8 @@ input:checked+.slider2 {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: popupanimation .2s;
-    transform: scale(1) translate(-50%,-50%);
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transform: scale3d(1) translate(-50%,-50%);
     transition-duration: .2s !important;
 }
 
@@ -1752,7 +1641,7 @@ input:checked+.slider2 {
 
 /* Chat Message Text */
 .chatMsg, .chatItem, .chatTextOutline {
-    animation: chatmsgfadein 0.5s;
+    animation: chatmsganimat 0.5s;
     transition-duration: 0.2s !important;
 }
 
@@ -1832,7 +1721,7 @@ input:checked+.slider2 {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: windowpopupanimation .2s;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
 
@@ -1910,8 +1799,8 @@ input:checked+.slider2 {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: popupanimation .2s;
-    transform: scale(1) translate(-50%,-50%);
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transform: scale3d(1) translate(-50%,-50%);
     transition-duration: .2s;
 }
 
@@ -2107,7 +1996,7 @@ input:checked+.slider2 {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: popupanimation .2s;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
 
@@ -2152,7 +2041,7 @@ div.purejscarousel-btn {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: windowpopupanimation .2s;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
 
@@ -2202,7 +2091,7 @@ div.purejscarousel-btn {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: windowpopupanimation .2s;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
 
@@ -2247,7 +2136,17 @@ div.purejscarousel-btn {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: windowpopupanimation .2s;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transition-duration: .2s !important;
+}
+
+/* Claim KR Popup */
+#claimPop {
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
 
@@ -2264,6 +2163,19 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 /* Loading Streams... */
 #loadingStreams {
     color: rgb(255 255 255 / 50%) !important;
+}
+
+/* Resource Packs */
+.imageListHeader {
+    font-size: 25px !important;
+    border-bottom: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* No Packs Found! */
+#skinList > div {
+    color: #ffd1c4 !important;
 }
 
 /* ======================================= Main ======================================= */
@@ -3103,6 +3015,11 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 /* Ranked Icon */
 #endTable > tbody > tr > td:nth-child(2) > img:nth-child(3), 
 #endTable > tbody > tr > td:nth-child(2) > img:nth-child(4) {
+    display: none !important;
+}
+
+/* Badge Icon */
+#endTable > tbody > tr > td:nth-child(2) > img:nth-child(6) {
     display: none !important;
 }
 
