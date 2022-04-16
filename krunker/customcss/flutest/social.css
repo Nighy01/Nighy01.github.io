@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/04/04 */
+/* 2022/04/16 */
 
 
 /* ======================================= Configs ======================================= */
@@ -435,19 +435,21 @@
 
 /* Feed Tab Hover Button */
 .feedTab:hover {
-    background-color: rgb(255 255 255 / 44%) !important;
+    background: rgb(0 0 0 / 0.3) !important;
     border-bottom: none !important;
+    filter: brightness(0.9);
 }
 
 /* Feed Tab Active Button */
 .feedTab:active {
-    background-color: rgb(177 177 177 / 44%) !important;
+    background: rgb(0 0 0 / 0.5) !important;
+    filter: brightness(0.8);
     border-bottom: none !important;
 }
 
 /* Feed Tab Selected Button */
 .feedTabA {
-    background-color: rgb(58 59 70 / 70%) !important;
+    background: rgb(58 59 70 / 70%) !important;
     border-bottom: none !important;
 }
 
@@ -829,6 +831,40 @@ div.button:active {
     color: rgb(255 255 255 / 0.9) !important;
 }
 
+/* Image Collection Popup */
+#imagePop, #imageNewPop {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transition-duration: .2s !important;
+    transform: scale3d(1) translate(-50%,-50%);
+}
+
+/* Image Collection */
+.imageListHeader {
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+/* Add Image */
+.imageListAdd {
+    background: linear-gradient(180deg, rgb(0 0 0 / 0.1) 0%, rgb(0 0 0 / 0.1) 100%), rgb(0 0 0 / 0.2) !important;
+}
+
+/* ^Add in Popup */
+.mapFndB {
+    background: rgb(0 0 0 / 30%) !important;
+}
+
+/* Image Tab */
+#imagesTabLayout > div.imageTab {
+    color: rgb(255 255 255 / 0.9) !important;
+}
+
 /* Krunk TV Box */
 #leftBox {
     background-color: rgb(156 157 191 / 70%) !important;
@@ -837,8 +873,8 @@ div.button:active {
 
 /* New Feed Tabs */
 #feedTabs {
-    border-radius: 5px;
-    background-color: rgb(140 140 140 / 34%) !important;
+    border-radius: 7px;
+    background-color: rgb(156 157 191 / 70%) !important;
     backdrop-filter: var(--CardBlur);
 } 
 
@@ -846,7 +882,7 @@ div.button:active {
 .feedTab {
     padding-top: 0px;
     padding-bottom: 0px;
-    background-color: rgb(156 157 191 / 70%);
+    background: transparent;
 } 
 
 /* No Current Posts */
@@ -913,6 +949,11 @@ div.button:active {
 .centerHolder, #adBox {
     animation: centerholderanimat 0.4s;
     transition-duration: 0.4s;
+}
+
+/* [X] Icon */
+[style="font-size:80px;color:#e33b3b"] {
+    color: rgb(255 255 255 / 0.9) !important;
 }
 
 /* ======================================= Main(Feed) ======================================= */
@@ -1015,6 +1056,12 @@ div#bigMFeatPBtn {
     transition-duration: .2s;
 }
 
+/* Search Button */
+.searchListBtn {
+    background: rgb(255 255 255 / 0.3) !important;
+    border-radius: 7px;
+}
+
 /* ======================================= Games ======================================= */
 
 
@@ -1113,7 +1160,7 @@ input:checked+.slider {
 
 /* Collection Btn */
 .openCollection {
-    filter: grayscale(1);
+    background: linear-gradient(180deg, rgb(0 0 0 / 0.1) 0%, rgb(0 0 0 / 0.1) 100%), rgb(0 0 0 / 0.2) !important;
 }
 
 /* Manage Ad Preferences */
@@ -1646,6 +1693,12 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active {
     color: rgba(255, 255, 255, 0.9) !important;
 }
 
+/* Sale Card Actions */
+.cardActions {
+    background: rgb(0 0 0 / 50%);
+    backdrop-filter: blur(20px);
+}
+
 /* ======================================= Profile ======================================= */
 
 
@@ -1665,6 +1718,11 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active {
 /* Verified Icon */
 #clanRoster > div > div > i:nth-child(2) {
     color: rgba(242, 242, 255, 0.9) !important;
+}
+
+/* Clan Button */
+.clanBut {
+    background: rgb(255 255 255 / 0.3) !important;
 }
 
 /* ======================================= Clan Page ======================================= */
