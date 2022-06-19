@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/04/16 */
+/* 2022/06/19 */
 
 
 /* ======================================= Configs ======================================= */
@@ -339,7 +339,7 @@
 
 /* Say something , KR Giveway Amount */
 #postInput, #postKR {
-    background-color: rgb(255 255 255 / 40%) !important;
+    background-color: rgb(255 255 255 / 90%) !important;
     border: none !important;
     border-radius: 5px !important;
     backdrop-filter: var(--CardBlur);
@@ -353,35 +353,37 @@
 /* Post Hover Button */
 #postButton:hover {
     opacity: 999;
-    background-color: #838acf !important;
+    background-color: rgb(136 138 170) !important;
 }
 
 /* Post Hover Button */
 #postButton:active {
     opacity: 999;
-    background-color: #7378be !important;
+    background-color: rgb(79 81 108) !important;
 }
 
 /* Post Button */
 #postButton {
-    background-color: #969dff !important;
+    background-color: rgb(157 159 198) !important;
+    transition-duration: .15s;
 }
 
 /* Giva Button */
 #givaButton {
-    background-color: #969dff !important;
+    background-color: rgb(157 159 198) !important;
+    transition-duration: .15s;
 }
 
 /* Giva Hover Button */
 #givaButton:hover {
-    background-color: #838acf !important;
     opacity: 999;
+    background-color: rgb(136 138 170) !important;
 }
 
 /* Giva Active Button */
 #givaButton:active {
-    background-color: #7378be !important;
     opacity: 999;
+    background-color: rgb(79 81 108) !important;
 }
 
 /* Side Bar */
@@ -514,16 +516,18 @@
     margin-top: -1px;
     border-radius: 5px;
     line-height: 50px;
+    background: #b1b0c0 !important;
+    transition-duration: .15s;
 }
 
 /* Post Scroll Reply Hover Button */
 .replyBtn:hover {
-    background-color: rgb(45 93 168) !important;
+    background-color: #706f7b !important;
 }
 
 /* Post Scroll Reply Active Button */
 .replyBtn:active {
-    background-color: rgb(30 61 110) !important;
+    background-color: #44444b !important;
 }
 
 /* Post Scroll Reply */
@@ -860,11 +864,6 @@ div.button:active {
     background: rgb(0 0 0 / 30%) !important;
 }
 
-/* Image Tab */
-#imagesTabLayout > div.imageTab {
-    color: rgb(255 255 255 / 0.9) !important;
-}
-
 /* Krunk TV Box */
 #leftBox {
     background-color: rgb(156 157 191 / 70%) !important;
@@ -973,6 +972,70 @@ div#marketSearchB, div#invSortB {
     background: linear-gradient(180deg, rgb(178 179 214) 0%, rgb(171 179 223) 100%), rgb(152 149 171) !important;
 }
 
+/* Filter/Sort Popup */
+#filterPop, #sortPop {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transition-duration: .2s !important;
+}
+
+/* Toggle Button */
+#filterTog, #sortTog {
+    background: #b6bac8 !important;
+}
+
+.sliderSml2:before {
+    display: none;
+}
+
+#sortPop > div:nth-child(3) > label > span {
+    transform: translateY(7px);
+}
+
+.sliderSml2 {
+    border-radius: 5px;
+    width: 30px;
+    left: -10px;
+    height: 20px;
+    background: #b6bac8;
+}
+
+input:checked+.sliderSml2 {
+    background-color: #e2ecff;
+    border-radius: 5px;
+    width: 30px;
+    left: -10px;
+    height: 20px;
+}
+
+#marketFiltTxt, #invSortTxt {
+    border-radius: 7px;
+    background: rgb(255 255 255 / 0.9);
+    border: none !important;
+}
+
+#sortFilt, #seaFilt, #seaSort {
+    border-radius: 7px;
+    background: rgb(255 255 255 / 0.9);
+    border: none !important;
+}
+
+.filterNav {
+    color: rgb(255 255 255 / 0.9) !important;
+}
+
+.raritySel {
+    color: rgb(255 255 255 / 0.9) !important;
+}
+
+#filterRBtn, #resetFBtn {
+    background: #b6bac8 !important;
+}
+
 /* ======================================= MarketPlace ======================================= */
 
 
@@ -1003,6 +1066,7 @@ div#marketSearchB, div#invSortB {
 /* Decline All */
 .declineAll {
     color: #fff;
+    background: rgb(160 162 203) !important;
 }
 
 /* ======================================= Trade ======================================= */
@@ -1075,7 +1139,52 @@ div#bigMFeatPBtn {
 
 /* Publish */
 #modsHolder > div:nth-child(1) > div > div:nth-child(6) {
-    background: linear-gradient(180deg, rgb(178 179 214) 0%, rgb(171 179 223) 100%), rgb(152 149 171) !important;
+    background: linear-gradient(180deg, rgb(165 167 216) 0%, rgb(171 179 223) 100%), rgb(152 149 171) !important;
+    border-radius: 10px;
+}
+
+/* Publish Mod Popup */
+#publishPop {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transition-duration: .2s !important;
+}
+
+/* Publish Button */
+#pubGame {
+    background: rgb(0 0 0 / 0.3) !important;
+}
+
+/* Thumbnail Preview */
+.publishLeft {
+    border-radius: 10px;
+    border: 4px solid #0000;
+}
+
+/* Thumbnail Image */
+#modThumbPrev {
+    border-radius: 10px;
+}
+
+/* Select Thumbnail */
+.changeThumb {
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+}
+
+/* Name */
+.mapInput {
+    background: rgb(255 255 255 / 90%);
+}
+
+/* Select */
+.fileSelect {
+    border: none;
+    border-radius: 5px;
 }
 
 /* ======================================= Mods ======================================= */
@@ -1688,7 +1797,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active {
     position: absolute;
     top: 1.6px;
     text-align: left;
-    left: 9px;
+    left: 1px;
     font-size: 12px;
     color: rgba(255, 255, 255, 0.9) !important;
 }
@@ -1697,6 +1806,45 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active {
 .cardActions {
     background: rgb(0 0 0 / 50%);
     backdrop-filter: blur(20px);
+}
+
+/* Tabs */
+.bigMenTabs {
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    border-radius: 10px !important;
+}
+
+/* Tab Selected */
+.bigMenTabA {
+    border-bottom: none;
+    backdrop-filter: brightness(0.75);
+    border-radius: 10px !important;
+    transition-duration: .2s;
+}
+
+/* Tab Hover */
+.bigMenTab:hover {
+    border-bottom: none;
+    backdrop-filter: brightness(0.59);
+    border-radius: 10px !important;
+    transition-duration: .2s;
+}
+
+/* Tab Active */
+.bigMenTab:active {
+    border-bottom: none;
+    backdrop-filter: brightness(0.4);
+    border-radius: 10px !important;
+}
+
+/* Stat Holder Tabs */
+#statHolder > div.bigMenTabs {
+    left: 8px !important;
+}
+
+/* Stat Tab */
+#statTab0, #statTab1, #statTab2 {
+    line-height: 20px !important;
 }
 
 /* ======================================= Profile ======================================= */
@@ -1746,6 +1894,29 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active {
     color: #fbf0e1f0 !important;
 }
 
+/* Map List Item */
+.mapListItem {
+    background: rgb(0 0 0 / 0.3) !important;
+    border-radius: 10px;
+}
+
+/* Map Thumb Holder */
+.mapListThumbHolder {
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* Map Info */
+.mapListCrdI {
+    background: rgb(0 0 0 / 0.3) !important;
+    backdrop-filter: blur(20px);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.mapAgeD {
+    background: rgb(0 0 0 / 50%) !important;
+    backdrop-filter: blur(10px);
+}
+
 /* ======================================= Map Page ======================================= */
 
 
@@ -1758,3 +1929,160 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active {
 }
 
 /* ======================================= Item Sales Page ======================================= */
+
+/* Others ================================================================================== */
+
+/* units... */
+[style="color:#787878"] {
+    color: rgb(255 255 255 / 0.95) !important;
+}
+
+/* Premium */
+#iTabContent_owners > div > div.leaderText > i:nth-child(1), 
+
+/* in reply post */ #comHolderH > div > div > div > span.postLink > i
+
+{
+    
+    color: rgba(242, 242, 255, 0.9) !important;
+    filter: drop-shadow(0px 0px 10px rgba(255, 179, 89, 0.2)) !important;
+}
+
+/* Verified */
+#iTabContent_owners > div > div.leaderText > i:nth-child(2)
+
+{
+    color: rgba(242, 242, 255, 0.9) !important;
+    filter: drop-shadow(0px 0px 10px rgba(50, 181, 255, 0.2)) !important;
+}
+
+/* Premium/Verified Icon in post */
+#singlePostH > div:nth-child(3) > div > div.postInfo > div > span > i {
+    color: rgba(242, 242, 255, 0.9) !important;
+}
+
+/* Find Button */
+.buyBtn {
+    background: rgb(152 154 187);
+}
+
+/* Green(Up) */
+[style="background-color: rgb(126, 214, 51);"], [style="background-color:#41c300"] {
+    background-color: rgb(186 255 216 / 50%) !important;
+}
+
+/* Red(Down) */
+[style="background-color: rgb(244, 67, 54);"], [style="background-color:rgb(244,67,54)"] {
+    background-color: rgb(255 197 217 / 50%) !important;
+}
+
+/* Market Card */
+.marketCard {
+    border: 5px solid #0000 !important;
+    border-radius: 10px;
+}
+
+/* Search User */
+#searchDInput {
+    background-color: rgb(255 255 255 / 90%);
+}
+
+/* Open in Editor */
+.editLink {
+    color: #c3d3ff !important;
+}
+
+/* Update Leadboard */
+.mapLeaderB {
+    background: rgb(167 175 203);
+}
+
+/* Leaderboard Displau... */
+[style="margin-top:25px;font-size:24px;color:#b2b2b2"] {
+    color: rgb(255 255 255 / 90%) !important;
+}
+
+/* Enter KR Amount */
+#mapFundsInp {
+    border-radius: 7px;
+}
+
+/* Play, Share */
+div.buttonS, div.buttonH {
+    border: 3px solid #0000 !important;
+}
+
+/* Edit Button */
+.creationAction.edit, .creationAction.del {
+    color: rgb(255 255 255 / 0.9) !important;
+    filter: none;
+    background: rgb(0 0 0 / 0.5);
+    border-radius: 5px;
+    padding: 5px;
+    transition-duration: .15s;
+}
+
+/* Quick Sell Popup */
+#confQSPop {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transition-duration: .2s !important;
+}
+
+/* Are you sure you want to Quick Sell [Item]? */
+#confQSPop > div:nth-child(1)  {
+    color: rgb(255 255 255 / 0.9) !important;
+}
+
+/* Item Color, KR Count */
+#confQSPop > div:nth-child(1) > span, #confQSPop > div:nth-child(2) > div > span {
+    color: rgb(255 255 255 / 0.6) !important;
+}
+
+/* Get KR, NO, List Item */
+#quickSellBtn, #declineBtn, .pItemButton {
+    background: rgb(0 0 0 / 30%) !important;
+}
+
+/* Amount Select */
+#quickSellSelect {
+    border-radius: 7px;
+}
+
+/* Item Name */
+.pItemName {
+    color: rgb(255 255 255 / 0.9) !important;
+}
+
+/* List Price in KR */
+#sellPriceIn {
+    background: rgb(255 255 255 / 90%);
+    border: none;
+}
+
+/* Item View Popup */
+#itemViewPop {
+    border: none !important;
+    background: rgb(0 0 0 / 0.3);
+}
+
+/* ^Name */
+.itemViewName {
+    text-shadow: none !important;
+    color: rgb(255 255 255 / 0.9) !important;
+}
+
+/* ^Sea */
+.itemViewSea {
+    background: rgb(0 0 0 / 0.5) !important;
+}
+
+/* 3D */
+.popupImgInfo {
+    background: rgb(0 0 0 / 30%);
+    backdrop-filter: blur(20px);
+}
