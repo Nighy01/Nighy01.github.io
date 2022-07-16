@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/07/01 */
+/* 2022/07/16 */
 
 
 /* ======================================= Configs ======================================= */
@@ -652,7 +652,7 @@ a {
 .reportDC {
     background-color: rgb(0 0 0 / 0%) !important;
     transition-duration: .1s;
-    left: 24px;
+    left: 70px;
     color: rgb(255 255 255 / 60%);
 }
 
@@ -1949,6 +1949,7 @@ input:checked+.slider2 {
 .chatMsg, .chatItem, .chatTextOutline {
     animation: chatmsganimat 0.5s;
     transition-duration: 0.2s !important;
+    background-color: transparent !important;
 }
 
 /* Chat Msg Content */
@@ -2117,6 +2118,21 @@ input:checked+.slider2 {
     animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
     transition-duration: .2s;
+}
+
+/* Speech Box (Ex. Welcome Back!...etc) */
+.speechBox {
+    background: rgb(0 0 0 / 50%);
+    backdrop-filter: blur(10px);
+    color: rgb(255 255 255 / 90%);
+}
+
+/* ^Arrow */
+.sb1:before {
+    border-left: 10px solid rgb(0 0 0 / 50%);
+    border-top: 10px solid rgb(0 0 0 / 50%);
+    backdrop-filter: blur(5px);
+    right: -20px;
 }
 
 /* Customize Selector Container */
@@ -2358,9 +2374,19 @@ input:checked+.sliderCent:before {
     text-shadow: none;
 }
 
-/* Star Icon in Server Browser */
+/* Star/Lock Icon in Server Browser */
 #serverHolder > div.setBodH > div > span {
-    color: #fbf0e1f0 !important;
+    color: rgb(255 255 255 / 0.9) !important;
+}
+
+/* Higher Ping in Server Browser */
+[style="color:rgb(255, 75, 66)!important;"] {
+    filter: brightness(2);
+}
+
+/* Lower Ping in Server Browser */
+[style="color:rgb(158, 235, 86)!important;"] {
+    filter: brightness(1.3);
 }
 
 /* Game Quick Search */
@@ -2480,7 +2506,7 @@ div.purejscarousel-btn {
 
 #disconnectPop,
 
-#bundlePop 
+#bundlePop
 
 {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
@@ -2528,11 +2554,23 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 /* Skin List Name */
 #skinList > div {
     color: rgb(255 255 255 / 95%) !important;
+    text-align: left;
+}
+
+/* Progress Bar */
+.progressBar {
+    background-color: #0000 !important;
+    background: rgba(57, 57, 64, 0.9) !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 5px !important;
 }
 
 /* Progress Bar Inner */
 .progressBarInner {
-    background-image: linear-gradient(to right,#939fff,#929cff,94%,#9883ff);
+    background-image: linear-gradient(to right,rgba(0 0 0 / 0%),rgba(0 0 0 / 0%),94%,rgba(0 0 0 / 0%)) !important;
+    background: rgba(131, 140, 188, 0.9) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 4px !important;
 }
 
 /* Home Shop Cards */
@@ -2727,21 +2765,36 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: transparent !important;
 }
 
-/* XXX KR, XXX Spin Info */
-#spinKR, #spinInfo {
-    background-color: rgb(0 0 0 / 50%);
-    backdrop-filter: blur(40px);
-    border-radius: 10px;
-}
-
+/* Spin Info */
 #spinInfo {
+    background-color: rgb(0 0 0 / 50%);
+    border-radius: 10px;
     transition-duration: .5s;
     animation: rightanimation .5s;  
 }
 
+/* [Count] KR in Spin */
 #spinKR {
+    background-color: rgb(0 0 0 / 50%);
+    border-radius: 10px;
     transition-duration: .5s;
     animation: leftanimation .5s;
+}
+
+/* Spin History */
+#spinHistoryBtn {
+    background: rgb(0 0 0 / 0.5) !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 7px !important;
+}
+
+/* Spin History */
+#spinHistoryBtn:hover {
+    background: rgb(255 255 255 / 0.1) !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 7px !important;
 }
 
 /* Spin Preview Icon */
@@ -2750,10 +2803,11 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background-color: rgb(0 0 0 / 50%);
     backdrop-filter: blur(40px);
     border-radius: 10px;
-    transition-duration: .5s;
+    transition-duration: .2s;
     animation: topanimation .5s;
 }
 
+/* + More Animation */
 @keyframes plusmore {
     from {
         transform: translate(170px, -180px);
@@ -2763,6 +2817,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     }
 }
 
+/* + More */
 #spinItems > span {
     position: absolute;
     display: block;
@@ -3931,6 +3986,29 @@ th, tr {
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
     backdrop-filter: blur(20px);
     border-radius: 7px;
+    transition-duration: .2s;
+}
+
+/* ^Loadout Select Hover */
+#loadoutSelect:hover {
+    background: rgba(200, 200, 210, 0.8) !important;
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(20px);
+    border-radius: 7px;
+}
+
+/* ^Loadout Select Active */
+#loadoutSelect:active {
+    background: rgba(139, 140, 150, 0.8) !important;
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.15) !important;
+    backdrop-filter: blur(20px);
+    border-radius: 7px;
+}
+
+/* Select Random */
+.selRandom {
+    text-shadow: none;
+    color: rgb(255 255 255 / 95%) !important;
 }
 
 /* Search Item Background */
@@ -3941,7 +4019,12 @@ th, tr {
 /* Search Item */
 #itemSearch {
     height: 50px;
+    font-size: 18px;
     border-radius: 7px;
+    background: rgba(245, 246, 255, 0.8) !important;
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
+    backdrop-filter: blur(20px);
+    border: none !important;
 }
 
 /* Side Box Selector */
@@ -3955,6 +4038,7 @@ th, tr {
 
 /* ^Label */
 .selectorLabel {
+    font-size: 16.5px;
     color: rgb(255 255 255 / 0.95) !important;
     text-shadow: none;
 }
@@ -3968,7 +4052,7 @@ th, tr {
     border-radius: 10px;
 }
 
-/* Side Box Selector Active*/
+/* Side Box Selector Active */
 .selectorItem:active {
     background: rgba(0, 0, 0, 0.55) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
@@ -3980,6 +4064,11 @@ th, tr {
 /* Primary: "Gun Name" */
 .settLabel {
     display: none;
+}
+
+/* Streaks Icon */
+.custStreakIconH {
+    filter: brightness(10) opacity(0.9);
 }
 
 /* Loadout Box */
@@ -4052,26 +4141,20 @@ th, tr {
     border-radius: 7px;
 }
 
-/* Add more Skin/Hair/Chat Name Color Button (Require Premium) */
-.premiumSkinCol {
-    color: #fff !important;
-}
-
-/* Req Class */
-#customizeContainer > div > div > div.classWeap {
-    z-index: 1 !important;
-}
-
-/* Locked Class */
-.lockedClass {
-    backdrop-filter: blur(7px);
-    background: rgb(0 0 0 / 0.7);
-}
-
 /* Back Button */
 .custBack {
-    background: var(--main-bg-color) !important;
-    border-radius: 7px;
+    background: transparent !important;
+    transition-duration: .2s;
+}
+
+/* ^Hover */
+.custBack:hover {
+    filter: brightness(0.8);
+}
+
+/* ^Active */
+.custBack:active {
+    filter: brightness(0.6);
 }
 
 /* Customize Name */
@@ -4084,9 +4167,500 @@ th, tr {
     display: none;
 }
 
+/* Select Title (Ex. Select Streaks...etc) */
+.winSelH {
+    background: transparent !important;
+}
+
 /* Window Close */
 .winClose {
-    background: var(--main-bg-color) !important;
+    background: transparent !important;
+    transition-duration: .2s;
+}
+
+/* ^Hover */
+.winClose:hover {
+    filter: brightness(0.8);
+}
+
+/* ^Active */
+.winClose:active {
+    filter: brightness(0.6);
+}
+
+/* Back/WinClose Icon */
+.custBackArr, .winCloseArr {
+    color: rgb(255 255 255 / 90%) !important;
+}
+
+/* Items */
+.skinCard {
+    background: rgba(0, 0, 0, 0.3) !important;
+    border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px !important;
+    text-shadow: none !important;
+    transition-duration: .2s;
+}
+
+/* Items Hover */
+.skinCard:hover {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px !important;
+}
+
+/* Items Active */
+.skinCard:active {
+    background: rgba(0, 0, 0, 0.55) !important;
+    border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px !important;
+}
+
+/* Item Image */
+.skinImgC, .secImg {
+    margin-left: 20px;
+}
+
+/* Item Image Hover */
+.skinCard:hover img {
+    opacity: 999;
+    transform: scale(1.2);
+}
+
+/* Streak Card */
+.streakCard {
+    color: rgb(255, 255, 255, 0.95) !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px !important;
+    text-shadow: none !important;
+    text-align: left;
+    padding-left: 12px;
+    padding-top: 7px;
+    transition-duration: .2s;
+}
+
+/* Streak Card Hover */
+.streakCard:hover {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px !important;
+}
+
+/* Streak Card Active */
+.streakCard:active {
+    background: rgba(0, 0, 0, 0.55) !important;
+    border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px !important;
+}
+
+/* Slot XXX | XXX kills */
+
+/* Slimer */
+#streakSel1_4 > div,
+
+/* Airdrop */
+#streakSel1_1 > div,
+
+/* War Machine */
+#streakSel1_6 > div,
+
+/* Nuke */
+#streakSel2_0 > div,
+
+/* Juggernaut */
+#streakSel2_5 > div
+
+{
+    color: rgba(255, 255, 255, 0.85) !important;
+    text-align: left;
+    padding-left: 5px;
+    padding-top: 3px;
+}
+
+/* Streak Image */
+.streakImg {
+    margin-left: 22px;
+    width: 95px;
+    filter: brightness(10) opacity(0.9);
+}
+
+/* Locked Card */
+.lockedCard {
+    background: rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0px 0px 20px rgb(80 80 80 / 50%) !important;
+    padding: 100px;
+    backdrop-filter: blur(5px);
+    border-radius: 10px !important;
+    padding-top: 65px !important;
+    padding-left: 46px !important;
+}
+
+/* Slimer */
+#streakSel1_4 > div.lockedCard > span,
+
+/* Airdrop */
+#streakSel1_1 > div.lockedCard > span,
+
+/* War Machine */
+#streakSel1_6 > div.lockedCard > span,
+
+/* Nuke */
+#streakSel2_0 > div.lockedCard > span,
+
+/* Juggernaut */
+#streakSel2_5 > div.lockedCard > span
+
+{
+    font-size: 60px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    padding-left: 5px;
+}
+
+/* Tool Tip Animation */
+@keyframes toolTip_Animat {
+    from {
+        transform: translate(0%, 20%);
+    }
+
+    to {
+        transform: translate(0%, 0%);
+    }
+}
+
+/* Tool Tip (Ex. Airdrop: Calls in a air...etc) */
+.tooltip {
+    background: rgba(29, 29, 29, 0.6) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 7px;
+    color: rgb(194 197 255) !important;
+    text-shadow: none !important;
+    animation: toolTip_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    transition-duration: 400ms;
+}
+
+/* ^Arrow */
+.tooltip:before {
+    display: none !important;
+}
+
+/* Tool Tip Title */
+body > div.tooltip > div:nth-child(1) > span {
+    color: rgba(213, 209, 255, 0.95) !important;
+    font-size: 11px !important;
+}
+
+/* Tool Tip Desc */
+body > div.tooltip > div:nth-child(2) {
+    color: rgb(255 255 255 / 0.8) !important;
+    font-style: normal !important;
+    font-size: 10px !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    padding-left: 7px !important;
+}
+
+/* Est "[XXX] KR/Unknown" */
+body > div.tooltip > div:nth-child(2) > span {
+    color: rgba(213, 209, 255, 0.95) !important;
+}
+
+/* Cutsom Streak Sel */
+#custStreakSelH {
+    border-top: 2px solid rgb(0, 0, 0, 0);
+}
+
+/* Slot X */
+#custStreakSelH > div > div.itemOwn {
+    color: rgba(255, 255, 255, 0.85) !important;
+    text-align: left;
+    padding-left: 5px;
+    padding-top: 3px;
+}
+
+/* None (?) */
+#custStreakSelH > div > div.skinRandom.blackShad {
+    top: 75px !important;
+    left: 60px !important;
+}
+
+/* Remove Slot Hover */
+.streakActionOvrl {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+/* ^Action Icon Hover */
+.streakActionB:hover {
+    transform: scale(1);
+}
+
+/* Default */
+#skinList > div > div.itemOwn {
+    color: transparent;
+}
+
+/* [?] */
+.selctInfoBtn , .selctInfoBtn:hover {
+    background: #0000;
+}
+
+/* Skin List Name */
+#skinList > div {
+    color: rgb(255 255 255 / 95%) !important;
+    text-align: left;
+    padding-left: 12px;
+    padding-top: 7px;
+}
+
+/* Random (?) */
+.skinRandom {
+    top: 68px;
+    text-shadow: none;
+    color: rgb(255 255 255 / 95%) !important;
+}
+
+/* Season [1,2,3,4,5...etc] */
+.itemSea {
+    display: none;
+}
+
+/* Skin Image */
+.skinImg {
+    margin-top: -10px;
+}
+
+/* Skin Item Locked */
+.lockedSkin {
+    background: rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0px 0px 20px rgb(80 80 80 / 50%) !important;
+    padding: 65px;
+    padding-left: 55px;
+    backdrop-filter: blur(5px);
+    border-radius: 10px !important;
+}
+
+/* ^Locked Icon */
+#skinList > div > div.lockedSkin > span {
+    color: rgb(255 255 255 / 0.9) !important;
+}
+
+/* Skin Color Item */
+.skinColorItem {
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(20px);
+    transition-duration: .15s;
+}
+
+/* ^Item Hover */
+.skinColorItem:hover {
+    filter: brightness(0.8);
+}
+
+/* ^Item Active */
+.skinColorItem:active {
+    filter: brightness(0.6);
+}
+
+/* Add more Skin/Hair/Chat Name Color Button (Require Premium) */
+.premiumSkinCol {
+    color: rgba(245, 246, 255, 0.8) !important;
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
+    transition-duration: .15s;
+}
+
+/* ^Button Hover */
+.premiumSkinCol:hover {
+    filter: brightness(0.8);
+}
+
+/* ^Button Active */
+.premiumSkinCol:active {
+    filter: brightness(0.6);
+}
+
+/* Killcard Stat Select */
+.inputGrey2 {
+    background: rgba(245, 246, 255, 0.8) !important;
+    box-shadow: 0px 0px 30px 2px rgb(0 0 0 / 5%) !important;
+    backdrop-filter: blur(20px);
+    border-radius: 7px !important;
+    transition-duration: .2s;
+}
+
+/* ^Select Hover */
+.inputGrey2:hover {
+    background: rgba(200, 200, 210, 0.8) !important;
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ^Select Active */
+.inputGrey2:active {
+    background: rgba(139, 140, 150, 0.8) !important;
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* No Button Card */
+.noBtnCard {
+    background: rgba(0, 0, 0, 0.3) !important;
+    border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px !important;
+    text-shadow: none !important;
+    transition-duration: .2s;
+}
+
+/* ^No Button Card Hover */
+.noBtnCard:hover {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px !important;
+}
+
+/* ^No Button Card Active */
+.noBtnCard:active {
+    background: rgba(0, 0, 0, 0.55) !important;
+    border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px !important;
+}
+
+/* Select Delete Button */
+.selctDelBtn, .selctDelBtn:hover {
+    background: rgb(0 0 0 / 0.5) !important;
+    font-size: 25px !important;
+    margin-top: -29px !important;
+    margin-right: 4px !important;
+    padding-left: 8px !important;
+    transition-duration: .2s;
+}
+
+/* ^Select Delete Button Hover */
+.selctDelBtn:hover {
+    filter: brightness(0.8);
+}
+
+/* ^Select Delete Button Active */
+.selctDelBtn:active {
+    filter: brightness(0.6);
+}
+
+/* Class Card */
+.classCard {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 20px !important;
+    padding-left: 12px !important;
+    width: 177px !important;
+    text-shadow: none !important;
+    background-color: #0000 !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
+    filter: none !important;
+    text-align: left !important;
+    border-radius: 10px !important;
+    transition-duration: .2s;
+}
+
+/* ^Class Card Hover */
+.classCard:hover {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ^Class Card Active */
+.classCard:active {
+    background: rgba(0, 0, 0, 0.55) !important;
+    border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Locked Class */
+.lockedClass {
+    background: rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0px 0px 20px rgba(80, 80, 80, 0.5) !important;
+    backdrop-filter: blur(5px);
+    padding: 150px !important;
+    padding-left: 75px !important;
+    padding-top: 120px !important;
+}
+
+/* Class Lock Icon */
+#customizeContainer > div > div > div.lockedClass > span {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 55px !important;
+}
+
+/* Assault Rifle...etc */
+.classWeap {
+    font-size: 0px !important;
+}
+
+/* Class Card Image */
+.classCard img {
+    width: 125px !important;
+    height: 125px !important;
+    left: 50px !important;
+    top: 56px !important;
+}
+
+/* ^Hover Image */
+.classCard:hover img {
+    opacity: 999 !important;
+    transform: scale(1) !important;
+}
+
+/* lvl XXX */
+.classLvl {
+    color: rgba(255, 255, 255, 0.85) !important;
+    top: 52px !important;
+    right: 142px !important;
+    left: 17px !important;
+    font-size: 16px !important;
+}
+
+/* XXX HP */
+.classHP, #customizeContainer > div > div > div.classHP > span {
+    color: rgba(255, 255, 255, 0.7) !important;
+    top: 82px !important;
+    left: 17px !important;
+    font-size: 10px !important;
+}
+
+/* Class XP Bar */
+.classXPBar {
+    background-color: #0000 !important;
+    background: rgba(57, 57, 64, 0.9) !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 5px !important;
+}
+
+/* Class XP Bar C */
+.clsXPBarC {
+    background: rgba(131, 140, 188, 0.9) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 4px !important;
+}
+
+/* 0 / 1111 */
+.clsXPBarV {
+    font-size: 11px !important;
+    left: 10px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-align: left !important;
+    text-shadow: none !important;
 }
 
 /* ======================================= Customize ======================================= */
@@ -4962,6 +5536,7 @@ div#customizeButton span {
 
 /* Others ================================================================================== */
 
+/* Mail Card Animation */
 @keyframes mailObjanimat {
     from {
         transform: translateX(-20px);
@@ -4973,11 +5548,13 @@ div#customizeButton span {
     }
 }
 
+/* UnRead Mail Count */
 .unreadBtnM {
     background: rgb(105 106 124) !important;
     animation: fadein .15s;
 }
 
+/* Mail Card */
 .mailObj {
     border: none !important;
     border-radius: 10px;
@@ -4985,20 +5562,24 @@ div#customizeButton span {
     animation: mailObjanimat 350ms;
 }
 
+/* Follow Back */
 div.followBack, div.followBack:hover {
     border: none !important;
 }
 
+/* XXX has commented on your Post...etc */
 .mailText {
     border-radius: 10px;
     background: rgb(0 0 0 / 30%)
 }
 
+/* XXX Challenges */
 .challHeadrI {
     border: none !important;
     border-radius: 10px;
 }
 
+/* Challenges Can't Use */
 div.challHeadrBlck {
     color: #ffe1e1 !important;
     background: rgb(0 0 0 / 0.5);
@@ -5006,11 +5587,13 @@ div.challHeadrBlck {
     border-radius: 10px;
 }
 
+/* Challenge XP Value */
 .chalXPVal {
     text-shadow: none !important;
     border-radius: 7px;
 }
 
+/* Challenge Xp Bar */
 .chalXPBarC {
     background: rgb(145 155 254);
     height: 85%;
@@ -5018,14 +5601,100 @@ div.challHeadrBlck {
     border-radius: 7px;
 }
 
+/* +KR and Junks */
 #menuWindow > div > div > div.chalRews > div > span:nth-child(2) {
-    color: white !important;
+    color: rgb(255 255 255 / 0.8) !important;
 }
 
+/* Challenge Card */
 .chalCard {
     border: 4px solid #0000;
 }
 
+/* Challenge Card Rewards */
 .chalRews {
     border-left: 3px solid #0000;
+}
+
+/* Bid KR */
+[style="color:#696969"] {
+    color: rgb(255 255 255 / 0.5) !important;
+}
+
+/* Changelog Text */
+.changeText {
+    border-bottom: none !important;
+}
+
+/* Play Now, Host Server */
+#bigMFeatPBtn, #bigMFeatHBtn {
+    border: 3px solid rgb(0 0 0 / 0%) !important;
+}
+
+/* Play Now, Host Server Hover */
+#bigMFeatPBtn:hover, #bigMFeatHBtn:hover {
+    border: 3px solid rgb(0 0 0 / 0%) !important;
+}
+
+/* Play Now, Host Server Active */
+#bigMFeatPBtn:active, #bigMFeatHBtn:active {
+    border: 3px solid rgb(0 0 0 / 0%) !important;
+}
+
+/* Open in Editor */
+.editLink {
+    color: #c3d3ff !important;
+}
+
+/* Preview */
+div#bidPrevBtn, div#bidPrevBtn:hover {
+    background: rgb(0 0 0 / 0.5) !important;
+    transition-duration: .2s;
+}
+
+/* Place Bid */
+.hostCBtn {
+    background: var(--main-bg-color) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 7px !important;
+}
+
+/* ^Place Bid Hover */
+.hostCBtn:hover {
+    background: var(--menu-hover-btn-color) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 7px !important;
+}
+
+/* Place Bid Active */
+.hostCBtn:active {
+    background: var(--menu-active-btn-color) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 7px !important;
+}
+
+/* Enter Server Password to Join Popup */
+#gameCodePop {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px) !important;
+    border-radius: 10px !important;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transform: scale3d(1) translate(-50%,-50%);
+    transition-duration: .2s !important;
+}
+
+/* ^Password Input */
+#codeInput {
+    background: rgba(245, 246, 255, 0.8) !important;
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
+    backdrop-filter: blur(20px);
+    border-radius: 7px;
 }

@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/06/19 */
+/* 2022/07/16 */
 
 
 /* ======================================= Configs ======================================= */
@@ -11,6 +11,15 @@
 
     /* Profile Bottom Button Color */
      --ProfileBottomBtn: rgba(255, 255, 255, 0.95) !important;
+
+    /* Button 1 Color */
+     --Btn1Color: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+
+    /* Button 1 Hover Color */
+     --Btn1_HoverColor: linear-gradient(180deg, rgba(140, 137, 177, 0.3) 0%, rgba(139, 138, 181, 0.3) 100%), rgba(98, 92, 115, 0.8) !important;
+
+    /* Button 1 Active Color */
+     --Btn1_ActiveColor: linear-gradient(180deg, rgba(121, 118, 153, 0.3) 0%, rgba(113, 112, 146, 0.3) 100%), rgba(57, 56, 73, 0.8) !important;
     
 }
 
@@ -145,6 +154,42 @@
 
 
 /* ======================================= Main(Feed) ======================================= */
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+    background: rgb(255 255 255 / 45%) !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transition-duration: .2s;
+    border-radius: 10px !important;
+}
+
+/* Scrollbar Thumb Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(255 255 255 / 60%) !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transition-duration: .2s;
+    border-radius: 10px !important;
+}
+
+/* Scrollbar Thumb Active */
+::-webkit-scrollbar-thumb:active {
+    background: rgb(255 255 255 / 70%) !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transition-duration: .2s;
+    border-radius: 10px !important;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transition-duration: .2s;
+    border-radius: 10px !important;
+}
 
 /* Background Image Holder */
 #backImgHoldr {
@@ -300,22 +345,23 @@
     height: 30px !important;
     width: 30px !important;
     content: url(https://i.imgur.com/ifR2sCz.png) !important;
-    background: rgba(180, 182, 217, 0.8);
+    background: var(--Btn1Color);
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(20px);
     border-radius: 5px !important;
+    transition-duration: .2s;
 }
 
 /* Search Hover Button */
 #searchBtn:hover {
-    background: rgb(158 161 187 / 80%);
+    background: var(--Btn1_HoverColor);
     backdrop-filter: blur(20px);
     border-radius: 5px !important;
 }
 
 /* Search Active Button */
 #searchBtn:active {
-    background: rgb(91 94 147 / 80%);
+    background: var(--Btn1_ActiveColor);
     backdrop-filter: blur(20px);
     border-radius: 8px !important;
 }
@@ -700,7 +746,7 @@
 
 /* Button */
 .button {
-    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    background: var(--Btn1Color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px);
@@ -710,7 +756,7 @@
 
 /* Buttons Hover */
 div.button:hover {
-    background: linear-gradient(180deg, rgba(138, 134, 186, 0.3) 0%, rgba(107, 105, 176, 0.3) 100%), rgba(102, 93, 131, 0.8) !important;
+    background: var(--Btn1_HoverColor) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px);
@@ -720,7 +766,7 @@ div.button:hover {
 
 /* Buttons Active */
 div.button:active {
-    background: linear-gradient(180deg, rgba(102, 98, 145, 0.3) 0%, rgba(75, 63, 123, 0.3) 100%), rgba(53, 56, 123, 0.8) !important;
+    background: var(--Btn1_ActiveColor) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px);
@@ -895,7 +941,7 @@ div.button:active {
     transform: translate(60px,0px) !important;
     font-size: 50px !important;
     margin-top: 6px !important;
-    color: #b4afff !important;
+    color: var(--Btn1_HoverColor) !important;
     transition-duration: .2s;
 }
 
@@ -905,7 +951,7 @@ div.button:active {
     transform: translate(60px,0px) !important;
     font-size: 45px !important;
     margin-top: 9px !important;
-    color: #4f4c83 !important;
+    color: var(--Btn1_ActiveColor) !important;
     transition-duration: .2s;
 }
 
