@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/07/16 */
+/* 2022/07/29 */
 
 
 /* ======================================= Configs ======================================= */
@@ -378,11 +378,6 @@
     display: none;
 }
 
-/* Profile Image */
-#profileImg {
-    display: none !important;
-}
-
 /* Say something , KR Giveway Amount */
 #postInput, #postKR {
     background-color: rgb(255 255 255 / 90%) !important;
@@ -449,7 +444,10 @@
 
 /* Trade Chat Box */
 #chatBox {
-    background-color: rgb(255 255 255 / 40%) !important;
+    background-color: rgb(156 157 191 / 70%) !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
     backdrop-filter: var(--CardBlur);
 }
 
@@ -462,13 +460,13 @@
 /* Send Hover Button on Trade Chat */
 #chatBoxButton:hover {
     opacity: 999;
-    background-color: #2a5599 !important;
+    background-color: rgb(136 138 170) !important;
 }
 
 /* Send Active Button on Trade Chat */
 #chatBoxButton:active {
     opacity: 999;
-    background-color: #1d3967 !important;
+    background-color: rgb(79 81 108) !important;
 }
 
 /* Trade Chat System Message */
@@ -478,7 +476,9 @@
 
 /* Send Button on Trade Chat */
 #chatBoxButton {
-    border-radius: 5px;
+    border-radius: 7px;
+    background-color: rgb(157 159 198) !important;
+    transition-duration: .15s;
 }
 
 /* Feed Tab Hover Button */
@@ -517,7 +517,7 @@
 .sideBarItem {
     border-bottom: 1px solid rgb(0 0 0 / 0%) !important;
     background-color: rgb(255 255 255 / 30%) !important;
-    border: 3px solid rgb(255 255 255 / 80%) !important;
+    border: 3px solid rgb(0 0 0 / 0%) !important;
     color: #fffffff2 !important;
     border-radius: 5px;
 }
@@ -612,7 +612,7 @@
 .postContent {
     border-bottom: 1px solid rgb(0 0 0 / 0%) !important;
     background-color: rgb(255 255 255 / 30%) !important;
-    border: 3px solid rgb(255 255 255 / 80%) !important;
+    border: 3px solid rgb(0 0 0 / 0%) !important;
 }
 
 /* Feed Post Content Text */
@@ -643,7 +643,7 @@
 /* Follow Button */
 .reqFollB {
     border-radius: 5px;
-    border: 3px solid #ffffff !important;
+    border: 3px solid #0000 !important;
     margin-left: 3px;
     margin-top: 6px;
     padding: 10px;
@@ -1121,11 +1121,6 @@ input:checked+.sliderSml2 {
 
 /* ======================================= LeaderBoard ======================================= */
 
-/* LeaderBoardName */
-.lName {
-    color: rgb(255 255 255 / 80%) !important;
-}
-
 /* Rank Icons */
 .rnkIcon {
     display: none !important;
@@ -1134,7 +1129,7 @@ input:checked+.sliderSml2 {
 /* LeaderBoardNav */
 .leaderNav2 {
     margin-bottom: 5px;
-    width: 788px;
+    width: 750px;
     margin-top: -10px;
     background-color: rgb(0 0 0 / 0) !important;
 }
@@ -1263,54 +1258,109 @@ div#bigMFeatPBtn {
     transform: scale3d(1) translate(-50%,-50%);
 }
 
+/* Slider Background */
+.sliderM {
+    background: linear-gradient(180deg, rgba(209, 208, 227, 0.3) 0%, rgba(197, 196, 218, 0.3) 100%), rgba(223, 223, 240, 0.8);
+    box-shadow: 0px 0px 20px rgba(223, 223, 240, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 7px;
+    padding-top: 0.5px;
+    padding-bottom: 0.5px;
+    transition-duration: .2s;
+}
+
+/* Slider Background Hover */
+.sliderM:hover {
+    background: linear-gradient(180deg, rgba(175, 174, 197, 0.3) 0%, rgba(176, 175, 197, 0.3) 96.35%), rgba(172, 172, 192, 0.8);
+    box-shadow: 0px 0px 20px 2px rgba(172, 172, 192, 0.2);
+}
+
+/* Slider Background Active */
+.sliderM:active {
+    background: linear-gradient(180deg, rgba(163, 162, 187, 0.3) 0%, rgba(164, 163, 185, 0.3) 96.35%), rgba(139, 139, 159, 0.8);
+    box-shadow: 0px 0px 20px 3px rgba(139, 139, 159, 0.2);
+}
+
+/* Slider Box */
+.sliderM::-webkit-slider-thumb {
+    background-color: #0000 !important;
+    background: linear-gradient(180deg, rgba(235, 233, 255, 0.3) 0%, rgba(229, 227, 255, 0.3) 100%), rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    padding: 8px;
+    transition-duration: .2s;
+}
+
+/* Slider Box Hover */
+.sliderM::-webkit-slider-thumb:hover {
+    background: linear-gradient(180deg, rgba(235, 233, 255, 0.3) 0%, rgba(229, 227, 255, 0.3) 100%), rgba(211, 211, 222, 0.9) !important;
+    box-shadow: 0px 0px 15px rgba(211, 211, 222, 0.2) !important;
+}
+
+/* Slider Box Active */
+.sliderM::-webkit-slider-thumb:active {
+    background: linear-gradient(180deg, rgba(235, 233, 255, 0.3) 0%, rgba(229, 227, 255, 0.3) 100%), rgba(172, 172, 184, 0.9) !important;
+    box-shadow: 0px 0px 15px rgba(172, 172, 184, 0.2) !important;
+}
+
 /* Slider Value */
 .sliderVal {
     background: #00000042 !important;
 }
 
-/* SliderM Slider Thumb */
-.sliderM::-webkit-slider-thumb {
-    background: #fff !important;
-    border-radius: 3px;
-}
-
-/* Checked Slider */
+/* Checked Toggle */
 input:checked+.slider {
-    background: linear-gradient(180deg, rgba(36, 35, 57, 0.3) 0%, rgba(40, 41, 62, 0.3) 100%), rgba(31, 29, 42, 0.8) !important;
-    box-shadow: 0px 0px 25px rgba(109, 108, 124, 0.3) !important;
-    backdrop-filter: blur(20px);
+    background: linear-gradient(180deg, rgba(69, 69, 94, 0.3) 0%, rgba(64, 65, 89, 0.3) 100%), rgba(33, 35, 43, 0.8) !important;
+    box-shadow: 0px 0px 25px rgba(33, 35, 43, 0.3) !important;
+    backdrop-filter: blur(5px);
+    transition-duration: .2s;
 }
 
-/* Settings Slider */
+/* Checked Toggle Hover */
+input:checked+.slider:hover {
+    background: linear-gradient(180deg, rgba(52, 52, 68, 0.3) 0%, rgba(55, 55, 74, 0.3) 100%), rgba(18, 21, 37, 0.8) !important;
+    box-shadow: 0px 0px 20px 1px rgba(18, 21, 37, 0.35) !important;
+    filter: brightness(0.8);
+}
+
+/* Checked Toggle Active */
+input:checked+.slider:active {
+    background: linear-gradient(180deg, rgba(32, 27, 64, 0.3) 0%, rgba(31, 25, 56, 0.3) 100%), rgba(9, 8, 26, 0.8) !important;
+    box-shadow: 0px 0px 20px 1px rgba(9, 8, 26, 0.5) !important;
+    filter: brightness(0.7);
+}
+
+/* Settings Toggle */
 .slider {
     background: linear-gradient(180deg, rgba(189, 188, 206, 0.3) 0%, rgba(178, 177, 198, 0.3) 100%), rgba(186, 188, 209, 0.8) !important;
-    box-shadow: 0px 0px 25px rgba(135, 125, 177, 0.3) !important;
-    backdrop-filter: blur(20px);
-    transition-duration: .3s;
-    transform: scale(0.9);
+    box-shadow: 0px 0px 25px rgb(135 125 177 / 30%) !important;
+    backdrop-filter: blur(5px);
+    transition-duration: .2s;
+    transform: scale(0.95);
 }
 
-/* Settings Slider Hover */
+/* Settings Toggle Hover */
 .slider:hover {
-    background: linear-gradient(180deg, rgb(162 160 194 / 30%) 0%, rgb(136 133 176 / 30%) 100%), rgb(146 149 182 / 80%) !important;
+    background: linear-gradient(180deg, rgba(162, 160, 194, 0.3) 0%, rgba(162, 159, 192, 0.3) 100%), rgba(146, 149, 182, 0.8) !important;
     box-shadow: 0px 0px 30px rgb(135 125 177 / 65%) !important;
-    backdrop-filter: blur(20px);
     transform: scale(1);
+    filter: brightness(0.9);
 }
 
-/* Settings Slider Active */
+/* Settings Toggle Active */
 .slider:active {
-    background: linear-gradient(180deg, rgb(106 104 137 / 30%) 0%, rgb(75 72 112 / 30%) 100%), rgb(133 136 163 / 80%) !important;
+    background: linear-gradient(180deg, rgba(106, 104, 137, 0.3) 0%, rgba(107, 105, 138, 0.3) 100%), rgba(133, 136, 163, 0.8) !important;
     box-shadow: 0px 0px 30px rgb(97 103 152 / 80%) !important;
-    backdrop-filter: blur(20px);
-    transform: scale(1);
+    transform: scale(0.95);
+    filter: brightness(0.8);
 }
 
-/* Settings Slider White */
+/* Settings Toggle White Box */
 .slider:before {
     background: linear-gradient(180deg, rgba(235, 233, 255, 0.3) 0%, rgba(229, 227, 255, 0.3) 100%), rgba(255, 255, 255, 0.9) !important;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(5px);
 }
 
 /* Collection Btn */
@@ -1976,6 +2026,8 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active {
 
 /* ======================================= Item Sales Page ======================================= */
 
+
+
 /* Others ================================================================================== */
 
 /* units... */
@@ -2131,4 +2183,206 @@ div.buttonS, div.buttonH {
 .popupImgInfo {
     background: rgb(0 0 0 / 30%);
     backdrop-filter: blur(20px);
+}
+
+/* White */
+[style="color:#fff"] {
+    color: rgb(255 255 255 / 0.9) !important;
+}
+
+/* White 40% Opacity */
+[style="color:rgba(255,255,255,0.4)"] {
+    color: rgb(255 255 255 / 0.5) !important;
+}
+
+/* Red Color: HackerTagged, Error (maybe?) */
+[style="color:#E85656"] {
+    color: rgb(255 255 255 / 0.3) !important;
+}
+
+/* a Link */
+a {
+    color: rgb(255 255 255 / 0.9) !important;
+}
+
+/* L Name */
+.lName {
+    color: rgb(255 255 255 / 0.8);
+}
+
+/* Referral Header */
+#referralHeader {
+    background-color: rgba(0 0 0 / 50%);
+    border-radius: 10px !important;
+}
+
+/* Success/Fail Icon */
+#popupContent > div > div:nth-child(1) > i {
+    filter: brightness(100) opacity(0.9);
+}
+
+/* Friends Icon */
+.chatBlobIcn {
+    background-color: rgba(0 0 0 / 20%);
+    border: 4px solid #0000;
+}
+
+/* Friends Chat */
+.chatBlobImg {
+    background-color: rgba(0 0 0 / 20%);
+    border: 4px solid #0000;
+}
+
+/* Tool Tip Left Animation */
+@keyframes toolTip2_Animat {
+    from {
+        transform: translate(-10%, 0%);
+    }
+
+    to {
+        transform: translate(0%, 0%);
+    }
+}
+
+/* Tool Tip Left (Ex. Friends: view friends list...etc) */
+.tooltip2 {
+    background: rgba(29, 29, 29, 0.6) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 7px;
+    color: rgb(194 197 255) !important;
+    text-shadow: none !important;
+    animation: toolTip2_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    transition-duration: 400ms;
+}
+
+/* Tool Tip Left Title */
+#uiBase > div.tooltip2 > div {
+    color: rgba(255 255 255 / 0.95) !important;
+}
+
+/* Tool Tip Left Desc */
+#uiBase > div.tooltip2 > div > div {
+    color: rgb(255 255 255 / 0.8) !important;
+    font-size: 15px !important;
+}
+
+/* Tool Tip Animation */
+@keyframes toolTip_Animat {
+    from {
+        transform: translate(0%, 20%);
+    }
+
+    to {
+        transform: translate(0%, 0%);
+    }
+}
+
+/* Tool Tip (Ex. Item: Est XXX KR...etc) */
+.tooltip {
+    background: rgba(29, 29, 29, 0.6) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 7px;
+    color: rgb(194 197 255) !important;
+    text-shadow: none !important;
+    animation: toolTip_Animat 300ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 300ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    transition-duration: 300ms;
+}
+
+/* ^Arrow */
+.tooltip:before {
+    display: none !important;
+}
+
+/* Items Desc */
+[style="font-style:italic;font-size:10px;"] {
+    color: rgb(255 255 255 / 0.95);
+    font-style: normal !important;
+}
+
+/* Tool Tip Title */
+body > div.tooltip > div:nth-child(1) > span {
+    color: rgba(213, 209, 255, 0.95) !important;
+    font-size: 11px !important;
+}
+
+/* Tool Tip Desc */
+body > div.tooltip > div:nth-child(2) {
+    color: rgb(255 255 255 / 0.8) !important;
+    font-style: normal !important;
+    font-size: 10px !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    padding-left: 7px !important;
+}
+
+/* Est "[XXX] KR/Unknown" */
+body > div.tooltip > div:nth-child(2) > span,
+body > div.tooltip > div:nth-child(3) > span 
+{
+    color: rgba(213, 209, 255, 0.95) !important;
+}
+
+/* Must be level 20 */
+#marketList {
+    color: rgb(255 255 255 / 0.95);
+}
+
+/* Offline Status */
+[style="background:#7f7f7f"] {
+    background: rgb(218 218 218 / 90%) !important;
+}
+
+/* Status */
+.statusBlob {
+    border: 5px solid rgb(0 0 0 / 50%);
+}
+
+/* Chat Input Holder */
+div#chatBoxInputH {
+    border-top: 3px solid rgb(0 0 0 / 0%) !important;
+}
+
+/* Map List Item in Profile */
+.mapListItem2 {
+    background: rgb(0 0 0 / 30%) !important;
+    border: 3px solid rgba(0 0 0 / 0%) !important;
+    border-radius: 10px !important;
+}
+
+/* Prfoile Info */
+#profileInfo {
+    top: 7px;
+    left: 0px;
+}
+
+/* Profile Image */
+#profileImg {
+    width: 0px;
+    height: 0px;
+}
+
+/* Profile Search */
+#profileSearch {
+    height: 77px;
+}
+
+/* Star Icon */
+.creationAction {
+    color: rgb(255 255 255 / 0.8) !important;
+    filter: none !important;
+}
+
+/* Person Icon */
+[style="margin-right: 8px;color:rgba(255, 255, 255, 0.5);vertical-align: middle;margin-top:-5px;font-size:30px;"],
+
+/* Map Votes */
+div.mapsVotes
+{
+    color: rgb(255 255 255 / 0.85) !important;
+    filter: none !important;
+    text-shadow: none !important;
 }

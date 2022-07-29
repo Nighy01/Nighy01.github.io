@@ -1,5 +1,5 @@
 /* Developing Process */
-/* 2022/07/16 */
+/* 2022/07/29 */
 
 
 /* ======================================= Configs ======================================= */
@@ -452,6 +452,30 @@
 
 /* ======================================= Startup ======================================= */
 
+/* Tip Animation */
+@keyframes tip_animat {
+    from {
+        transform: translate(-50%, 20%);
+    }
+
+    to {
+        transform: translate(-50%, 0%);
+    }
+}
+
+/* Loading Animation */
+@keyframes loader_animat {
+    from {
+        transform: translateY(50%);
+        filter: opacity(0);
+    }
+
+    to {
+        transform: translateY(0%);
+        filter: opacity(0.9);
+    }
+}
+
 /* Krunker Loader Logo */
 #loadHeader {
     display: none !important;
@@ -460,6 +484,29 @@
 /* Loading... */ 
 #loadGamNm {
     display: none !important;
+}
+
+/* Loading Icon */
+#lC-cont {
+    width: 100px;
+    height: 100px;
+    content: url('https://i.imgur.com/lTHKVcL.gif');
+    animation: loader_animat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    transition-duration: 500ms;
+}
+
+/* Krunker Tips Loader */
+#loadTipsHolder {
+    width: 1500px;
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    top: calc(50% + 90px);
+    transform: translate(-50%, 0);
+    color: rgb(255 255 255 / 0.9);
+    text-align: center;
+    animation: tip_animat 700ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 700ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    transition-duration: 700ms;
 }
 
 /* More Games */
@@ -491,32 +538,6 @@ div#aHolder {
 /* Loading Background */
 #initLoader {
     background: #0c0c0d !important;
-}
-
-/* Krunker Tips Loader */
-#loadTipsHolder {
-    width: 1500px;
-    font-size: 20px;
-    position: absolute;
-    left: 50%;
-    top: calc(50% + 90px);
-    transform: translate(-50%, 0);
-    color: rgb(255 255 255 / 0.9);
-    text-align: center;
-    animation: fadein 350ms 0ms linear forwards;
-}
-
-/* Krunker Tips Loader Before (Add "Tip:") */
-#loadTipsHolder:before {
-    content: "Tip: ";
-}
-
-/* lC Cont */
-#lC-cont {
-    animation: fadein 350ms 0ms linear forwards;
-    width: 100px;
-    height: 100px;
-    content: url('https://i.imgur.com/lTHKVcL.gif');
 }
 
 /* Krunker Yendis Text */
@@ -810,7 +831,7 @@ div#newsBody::-webkit-scrollbar-track {
 }
 
 /* New to Krunker? , Double XP Weekend Link Text */
-#helpGuidOpn {
+.helpGuidOpn {
     color: #dde6ff !important;
 }
 
@@ -1164,6 +1185,17 @@ div#streamContainer, div.youNewDiv {
 /* Login Button */
 #signedOutHeaderBar > div {
     width: 308px !important;
+    transform: scale(0.95);
+}
+
+/* Login Button Hover */
+#signedOutHeaderBar > div:hover {
+    transform: scale(0.9);
+}
+
+/* Login Button Active */
+#signedOutHeaderBar > div:active {
+    transform: scale(0.85);
 }
 
 /* Header Bar */
@@ -1218,7 +1250,7 @@ div#streamContainer, div.youNewDiv {
     background: var(--main-bg-color);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     border-radius: 7px;
     transition-duration: .3s !important;
     min-height: 45px;
@@ -1231,7 +1263,7 @@ div#streamContainer, div.youNewDiv {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px;
     transition-duration: 0.2s !important;
 }
@@ -1516,6 +1548,7 @@ input:checked+.sliderSml:active:after {
 .pSt {
     background-color: rgb(88 86 102) !important;
     border-radius: 7px;
+    border: 2px solid #0000;
     text-shadow: none !important;
 }
 
@@ -1910,7 +1943,7 @@ input:checked+.slider2 {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(5px);
     border-radius: 7px;
     margin-bottom: -2px;
     width: 58px;
@@ -1964,6 +1997,7 @@ input:checked+.slider2 {
 
 /* System Chat */
 [style="color:#fc03ec"],
+div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
 
 /* Krunkitis */
 [style="color:#76ff03"],
@@ -1977,7 +2011,6 @@ input:checked+.slider2 {
     Custom: Host Kick [Guest_1 was kicked] / Ban [Guest_1 was banned]
 */
 [style="color:#ff0000"] {
-    
     color: rgba(5, 0, 61, 0.9) !important;
     text-shadow: none !important;
 }
@@ -2084,10 +2117,11 @@ input:checked+.slider2 {
     background: linear-gradient( 180deg , rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(20px) !important;
     border-radius: 10px !important;
-    animation: fadein .2s;
-    transition-duration: .2s !important;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transform: scale3d(1) translate(-50%,-50%);
+    transition-duration: .2s;
 }
 
 /* Guide Popup Highlight Content */
@@ -2095,9 +2129,35 @@ input:checked+.slider2 {
     color: #fff !important;
 }
 
+/* Guide Header */
+.guideHeader {
+    color: rgb(255 255 255 / 0.95);
+    border-bottom: 4px solid rgba(0 0 0 / 0%);
+}
+
+/* Guide Sub H */
+.guideSubH {
+    border-bottom: 4px solid rgba(0 0 0 / 0%);
+}
+
 /* Guide Step Image */
 .guideStepImg {
     border-radius: 10px;
+}
+
+/* Guide Step S */
+.guStepS {
+    border-bottom: 2px solid rgba(0 0 0 / 0%);
+}
+
+/* Guide Step */
+.guideStep {
+    color: rgb(255 255 255 / 0.95);
+}
+
+/* Guide Social Icon */
+.guideSIcon {
+    filter: opacity(0.95);
 }
 
 /* Purchase KR Popup Background */
@@ -2139,7 +2199,22 @@ input:checked+.slider2 {
 #selectorContainer {
     background-color: rgb(0 0 0 / 0%) !important;
 }
-    
+
+/* Menu Class Icons */
+
+/* Partner Icon */
+.menuClassPlayerPartner, 
+
+/* Verified Icon */
+.menuClassPlayerVerified, 
+
+/* Premium Icon */
+.menuClassPlayerPremium 
+
+{
+    color: rgb(255 255 255 / 0.85) !important;
+}
+
 /* Class Preview */
 #classPreviewCanvas {
     transition-duration: .3s;
@@ -2391,21 +2466,71 @@ input:checked+.sliderCent:before {
 
 /* Game Quick Search */
 div.purejscarousel-btn {
-    background: linear-gradient(180deg, rgb(165 167 216 / 33%) 0%, rgb(171 179 223 / 33%) 100%), rgba(152, 149, 171) !important;
+    background: rgb(0 0 0 / 50%) !important;
     border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transition-duration: .2s;
 }
 
-/* ^Slide */
+/* Game Quick Search Hover */
+div.purejscarousel-btn:hover {
+    background: rgb(0 0 0 / 70%) !important;
+    filter: brightness(0.7);
+}
+
+/* Game Quick Search Active */
+div.purejscarousel-btn:active {
+    background: rgb(0 0 0 / 80%) !important;
+    filter: brightness(0.5);
+}
+
+/* Slide */
 .slide {
     border: none !important;
     padding: 10px;
 }
 
-/* ^Slide Image */
+/* Slide Image */
 .slideImg {
     border-radius: 10px;
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 0px 15px rgb(0 0 0 / 0.4) !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* ^Slide Image Hover */
+.slideImg:hover {
+    border-radius: 10px;
+    filter: brightness(0.7);
+}
+
+/* ^Slide Image Active */
+.slideImg:active {
+    filter: brightness(0.5);
+}
+
+/* Server Slide Scrolling */
+[style="margin-left: -8835px; width: 26505px; transition: margin-left 400ms linear 0ms;"],
+
+/* Left */
+[style="margin-left: -7980px; width: 26505px; transition: margin-left 400ms linear 0ms;"],
+
+/* Right */
+[style="margin-left: -9690px; width: 26505px; transition: margin-left 400ms linear 0ms;"]
+
+{
+    transition: margin-left 400ms cubic-bezier(0.42,0,0,1) 0ms !important;
+}
+
+/* Slide Games Name */
+
+/* [Map Name] */
+.slideName, 
+
+/* XX players */
+.slidePlayers
+
+{
+    display: none;
 }
 
 /* Ranked Popup */
@@ -2530,7 +2655,7 @@ div.purejscarousel-btn {
 
 /* Clan Error */
 #clanErr {
-    color: #ffd1c4 !important;
+    color: rgb(255 255 255 / 0.95) !important;
 }
 
 /* Your Notifications [Clear All] */
@@ -2870,6 +2995,11 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     display: none;
 }
 
+/* Team 1/2 */
+.cmpTmHed {
+    text-shadow: none !important;
+}
+
 /* Comp Class PCnt */
 .compClassPCnt {
     color: rgb(255 255 255 / 0.9);
@@ -2910,7 +3040,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 }
 
 /* Join Team */
-.compSwpTmB{
+.compSwpTmB {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
@@ -2948,7 +3078,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 
 /* Selected Class */
 .cmpClassGr {
-    filter: grayscale(0) blur(10px) !important;
+    filter: grayscale(0) blur(5px) !important;
 }
 
 /* ======================================= Comp Game Main ======================================= */
@@ -2984,7 +3114,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(5px) !important;
     border-radius: 7px !important;
     animation: rightanimation .4s;
     transition-duration: .4s;
@@ -3012,7 +3142,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(20px) !important;
     border-radius: 7px !important;
 }
 
@@ -3047,7 +3177,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: rgba(31, 31, 31, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.1) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(20px);
     padding: 10px;
     padding-left: 7px;
     padding-right: 17px;
@@ -3148,7 +3278,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(20px) !important;
     border-radius: 7px !important;
     animation: timing_aniamt 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -3259,7 +3389,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: rgba(29, 29, 29, 0.6) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     border-radius: 7px !important;
     animation: timing_aniamt 450ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 450ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -3383,7 +3513,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: rgba(29, 29, 29, 0.6) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 7px !important;
 }
 
@@ -3454,16 +3584,20 @@ th, tr {
     background-color: rgba(29, 29, 29, 0.6) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 10px;
     animation: fadein .2s;
 }
 
-/* KR Package */
-/* #interactMsg > span:nth-child(2) {
-    color: rgb(255 255 255 / 0.8) !important;
+/* Perk Item */
+.perkItem {
+    background-color: rgba(29, 29, 29, 0.6) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 10px;
+    animation: fadein .2s;
 }
-*/
 
 /* ======================================= In Game ======================================= */
 
@@ -3740,23 +3874,112 @@ th, tr {
 
 /* ======================================= Match Ended ======================================= */
 
+/* Next Round in 00:00 */
+#endTimer {
+    font-size: 24px !important;
+    color: rgb(255 255 255 / 90%) !important;
+    text-shadow: none !important;
+    transition-duration: 400ms;
+    animation: EndTimer_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+}
+
+/* End Timer Animation */
+@keyframes EndTimer_Animat {
+    from {
+        transform: translateY(300%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+/* Victory Icon */
+#victorySub {
+    transition-duration: 400ms;
+    animation: VictorySub_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+}
+
+/* Victory Icon Animation */
+@keyframes VictorySub_Animat {
+    from {
+        transform: translateY(15px);
+    }
+
+    to {
+        transform: translateY(-15px);
+    }
+}
+
 /* Match Ended Card */
 .endCard, div.endCard {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px);
     border-radius: 7px;
-    transition-duration: 0.2s !important;
+    transition-duration: 400ms !important;
 }
 
-/* Vote Map */
+/* End Tabbed View */
+#endTabbedView {
+    animation: EndCard_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    transition-duration: 400ms !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Match Ended Card Animation */
+@keyframes EndCard_Animat {
+    from {
+        transform: translateY(45%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+/* Match Ended Ad Container */
+#endAContainer {
+    background: var(--main-bg-color) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 7px;
+    animation: EndAd_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    transition-duration: 400ms;
+}
+
+/* Match Ended Ad Animation */
+@keyframes EndAd_Animat {
+    from {
+        transform: translateY(50%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+/* Vote Match */
 .matchVote {
     text-shadow: none !important;
     background: #878787 !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.3)) !important;
     border-radius: 7px !important;
+    animation: VoteMatch_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    transition-duration: 400ms !important;
+}
+
+/* Vote Match Animation */
+@keyframes VoteMatch_Animat {
+    from {
+        transform: translateY(50%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
 }
 
 /* Vote Map Thumb */
@@ -3807,7 +4030,7 @@ th, tr {
 
 /* Vote Map: PARTY Background */
 [style="border: 4px solid #ffb600;box-shadow: 0 0 20px #ffb6009c;"] {
-    box-shadow: 0px 0px 20px rgba(255, 153, 0, 0.8) !important;
+    box-shadow: 0px 0px 20px rgba(193, 181, 218, 0.75) !important;
 }
 
 /* End Chal */
@@ -3816,9 +4039,21 @@ th, tr {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 7px !important;
-    transition-duration: 0.2s !important;
+    animation: EndChal_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    transition-duration: 400ms;
+}
+
+/* End Chal Animation */
+@keyframes EndChal_Animat {
+    from {
+        transform: translateX(110%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
 }
 
 /* Enemy Color Profile Link and Red Color */
@@ -3836,22 +4071,26 @@ th, tr {
     color: rgba(255,255,255,0.6) !important;
 }
 
-/* Match Ended Ad Container */
-#endAContainer {
-    background: var(--main-bg-color) !important;
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 7px;
-}
-
 /* Team Totals ( [Team1] [Scores] | [Team2] [Scores] ) (Only TDM,DOM,Infected(Custom)...etc Team Modes) */
 .teamTotals, div.teamTotals {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 7px !important;
+    animation: teamTotals_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    transition-duration: 400ms;
+}
+
+/* Team Totals Animation */
+@keyframes teamTotals_Animat {
+    from {
+        transform: translateY(150%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
 }
 
 /* Blue(Your) Team */
@@ -3921,13 +4160,16 @@ th, tr {
 
 /* Lobby Strk */
 #lobStrkPrg {
-    background-image: linear-gradient(to right,#939fff,#929cff,94%,#9883ff);
-    border-radius: 5px;
+    background-image: linear-gradient(to right,#0000,#0000,94%,#0000);
+    background: rgba(131, 140, 188, 0.9) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 5px !important;
 }
 
 /* End Round XP Bar B */
 .xpEndBarB {
-    background-image: linear-gradient(to right,#939fff,#929cff,94%,#9883ff) !important;
+    background-image: linear-gradient(to right,#0000,#0000,94%,#0000) !important;
+    background: rgba(131, 140, 188, 0.9) !important;
 }
 
 /* Mode Layout in Performance */
@@ -3942,7 +4184,9 @@ th, tr {
 
 /* End Round Chal Image */
 .endChalImg {
-    display: none;
+    width: 0px !important;
+    height: 0px !important;
+    margin-left: -25px !important;
 }
 
 /* End Chal Desc */
@@ -3952,8 +4196,11 @@ th, tr {
 
 /* Lobby Streak Prog Bar */
 .lobStrkProg {
-    background: #3d3d3d;
-    border-radius: 7px;
+    background: rgba(57, 57, 64, 0.9) !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 7px !important;
+    margin-right: -10px !important;
 }
 
 /* Team Win Icon */
@@ -3964,6 +4211,45 @@ th, tr {
 /* +Count KR */
 #fundsLayout > div > span {
     color: #aab1ff !important;
+}
+
+/* Return to Krunker */
+#returnHolder {
+    background: var(--main-bg-color) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 10px !important;
+    animation: Return2Krunk_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    transition-duration: .2s;
+}
+
+/* Return to Krunker Animation */
+@keyframes Return2Krunk_Animat {
+    from {
+        transform: translate(-50%,150%);
+    }
+
+    to {
+        transform: translate(-50%,0%);
+    }
+}
+
+/* ^Return to Krunker Hover Button */
+#returnHolder:hover {
+    background: var(--main-bg-color);
+    filter: brightness(0.8);
+}
+
+/* ^Return to Krunker Active Button */
+#returnHolder:active {
+    background: var(--main-bg-color);
+    filter: brightness(0.6);
+}
+
+/* Return */
+#returnText:before {
+    content: url("https://i.imgur.com/q6eoBBB.png");
 }
 
 /* ======================================= Match Ended ======================================= */
@@ -3985,7 +4271,7 @@ th, tr {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
     backdrop-filter: blur(20px);
-    border-radius: 7px;
+    border-radius: 7px !important;
     transition-duration: .2s;
 }
 
@@ -4041,6 +4327,13 @@ th, tr {
     font-size: 16.5px;
     color: rgb(255 255 255 / 0.95) !important;
     text-shadow: none;
+}
+
+/* ^Icon */
+.selectorItem .selectorIcon {
+    width: 120px;
+    height: 120px;
+    margin-top: 0px;
 }
 
 /* Side Box Selector Hover */
@@ -4228,6 +4521,11 @@ th, tr {
 .skinCard:hover img {
     opacity: 999;
     transform: scale(1.2);
+}
+
+/* Favoite Icon */
+#skinList > div > div.selctFavBtn.material-icons {
+    filter: none !important;
 }
 
 /* Streak Card */
@@ -4744,7 +5042,12 @@ body > div.tooltip > div:nth-child(2) > span {
 .serverHostOp {
     border-radius: 10px !important;
     transition-duration: .2s;
+    text-shadow: none;
+    border: none !important;
+    width: 315px;
+    background-size: auto 315px;
 }
+
 
 /* Server Type Hover Button */
 .serverHostOp:hover {
@@ -4846,8 +5149,8 @@ div#hostCMapPickT:active {
 /* Default Maps Button */
 .hostMap {
     border-radius: 10px !important;
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 55px rgb(0 0 0 / 25%) !important;
+    border: 1px solid rgba(225, 225, 225, 0.1) !important;
+    box-shadow: none !important;
     transition-duration: .15s;
 }
 
@@ -4865,7 +5168,15 @@ div#hostCMapPickT:active {
 .segSugIH {
     border-radius: 10px;
     background-color: rgb(0 0 0 / 50%);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
+    transition-duration: .15s;
+    animation: fadein 200ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+}
+
+/* Change Game Overlay Hover Active */
+.segSugIH:active {
+    background-color: rgb(0 0 0 / 60%);
+    filter: brightness(0.6);
 }
 
 /* "Remove" Icon */
@@ -4951,6 +5262,7 @@ input:hover+.optCheck {
 /* Change Game */
 .setSugInf {
     text-shadow: none !important;
+    width: 300px;
 }
 
 /* Start Game Button */
@@ -5037,6 +5349,14 @@ input:hover+.optCheck {
 
 
 /* ======================================= Settings ======================================= */
+
+/* Search Settings Input */
+#settSearch {
+    background: rgba(245, 246, 255, 0.8) !important;
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 7px !important;
+}
 
 /* Settings Tab Layout */
 #settingsTabLayout {
@@ -5309,42 +5629,103 @@ input[type=color] {
     border-radius: 7px;
 }
 
-/* Checked Slider */
-input:checked+.slider, input:checked+.advancedSlider {
-    background: linear-gradient(180deg, rgba(36, 35, 57, 0.3) 0%, rgba(40, 41, 62, 0.3) 100%), rgba(31, 29, 42, 0.8) !important;
-    box-shadow: 0px 0px 25px rgba(109, 108, 124, 0.3) !important;
-    backdrop-filter: blur(20px);
+/* Slider Background */
+.sliderM {
+    background: linear-gradient(180deg, rgba(209, 208, 227, 0.3) 0%, rgba(197, 196, 218, 0.3) 100%), rgba(223, 223, 240, 0.8);
+    box-shadow: 0px 0px 20px rgba(223, 223, 240, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 7px;
+    padding-top: 0.7px;
+    padding-bottom: 0.7px;
+    transition-duration: .2s;
 }
 
-/* Settings Slider */
+/* Slider Background Hover */
+.sliderM:hover {
+    background: linear-gradient(180deg, rgba(175, 174, 197, 0.3) 0%, rgba(176, 175, 197, 0.3) 96.35%), rgba(172, 172, 192, 0.8);
+    box-shadow: 0px 0px 20px 2px rgba(172, 172, 192, 0.2);
+}
+
+/* Slider Background Active */
+.sliderM:active {
+    background: linear-gradient(180deg, rgba(163, 162, 187, 0.3) 0%, rgba(164, 163, 185, 0.3) 96.35%), rgba(139, 139, 159, 0.8);
+    box-shadow: 0px 0px 20px 3px rgba(139, 139, 159, 0.2);
+}
+
+/* Slider Box */
+.sliderM::-webkit-slider-thumb {
+    background-color: #0000 !important;
+    background: linear-gradient(180deg, rgba(235, 233, 255, 0.3) 0%, rgba(229, 227, 255, 0.3) 100%), rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    padding: 10px;
+    transition-duration: .2s;
+}
+
+/* Slider Box Hover */
+.sliderM::-webkit-slider-thumb:hover {
+    background: linear-gradient(180deg, rgba(235, 233, 255, 0.3) 0%, rgba(229, 227, 255, 0.3) 100%), rgba(211, 211, 222, 0.9) !important;
+    box-shadow: 0px 0px 15px rgba(211, 211, 222, 0.2) !important;
+}
+
+/* Slider Box Active */
+.sliderM::-webkit-slider-thumb:active {
+    background: linear-gradient(180deg, rgba(235, 233, 255, 0.3) 0%, rgba(229, 227, 255, 0.3) 100%), rgba(172, 172, 184, 0.9) !important;
+    box-shadow: 0px 0px 15px rgba(172, 172, 184, 0.2) !important;
+}
+
+/* Checked Toggle */
+input:checked+.slider, input:checked+.advancedSlider {
+    background: linear-gradient(180deg, rgba(69, 69, 94, 0.3) 0%, rgba(64, 65, 89, 0.3) 100%), rgba(33, 35, 43, 0.8) !important;
+    box-shadow: 0px 0px 25px rgba(33, 35, 43, 0.3) !important;
+    backdrop-filter: blur(5px);
+    transition-duration: .2s;
+}
+
+/* Checked Toggle Hover */
+input:checked+.slider:hover, input:checked+.advancedSlider:hover {
+    background: linear-gradient(180deg, rgba(52, 52, 68, 0.3) 0%, rgba(55, 55, 74, 0.3) 100%), rgba(18, 21, 37, 0.8) !important;
+    box-shadow: 0px 0px 20px 1px rgba(18, 21, 37, 0.35) !important;
+    filter: brightness(0.8);
+}
+
+/* Checked Toggle Active */
+input:checked+.slider:active, input:checked+.advancedSlider:active {
+    background: linear-gradient(180deg, rgba(32, 27, 64, 0.3) 0%, rgba(31, 25, 56, 0.3) 100%), rgba(9, 8, 26, 0.8) !important;
+    box-shadow: 0px 0px 20px 1px rgba(9, 8, 26, 0.5) !important;
+    filter: brightness(0.7);
+}
+
+/* Settings Toggle */
 .slider, .advancedSlider {
     background: linear-gradient(180deg, rgba(189, 188, 206, 0.3) 0%, rgba(178, 177, 198, 0.3) 100%), rgba(186, 188, 209, 0.8) !important;
     box-shadow: 0px 0px 25px rgb(135 125 177 / 30%) !important;
-    backdrop-filter: blur(20px);
-    transition-duration: .3s;
+    backdrop-filter: blur(5px);
+    transition-duration: .2s;
 }
 
-/* Settings Slider Hover */
+/* Settings Toggle Hover */
 .slider:hover, .advancedSlider:hover {
-    background: linear-gradient(180deg, rgb(162 160 194 / 30%) 0%, rgb(136 133 176 / 30%) 100%), rgb(146 149 182 / 80%) !important;
+    background: linear-gradient(180deg, rgba(162, 160, 194, 0.3) 0%, rgba(162, 159, 192, 0.3) 100%), rgba(146, 149, 182, 0.8) !important;
     box-shadow: 0px 0px 30px rgb(135 125 177 / 65%) !important;
-    backdrop-filter: blur(20px);
     transform: scale(1.1);
+    filter: brightness(0.9);
 }
 
-/* Settings Slider Active */
+/* Settings Toggle Active */
 .slider:active, .advancedSlider:active {
-    background: linear-gradient(180deg, rgb(106 104 137 / 30%) 0%, rgb(75 72 112 / 30%) 100%), rgb(133 136 163 / 80%) !important;
+    background: linear-gradient(180deg, rgba(106, 104, 137, 0.3) 0%, rgba(107, 105, 138, 0.3) 100%), rgba(133, 136, 163, 0.8) !important;
     box-shadow: 0px 0px 30px rgb(97 103 152 / 80%) !important;
-    backdrop-filter: blur(20px);
     transform: scale(1.1);
+    filter: brightness(0.8);
 }
 
-/* Settings Slider White */
+/* Settings Toggle White Box */
 .slider:before, .advancedSlider:before {
     background: linear-gradient(180deg, rgba(235, 233, 255, 0.3) 0%, rgba(229, 227, 255, 0.3) 100%), rgba(255, 255, 255, 0.9) !important;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(5px);
 }
 
 /* ======================================= Settings ======================================= */
@@ -5616,6 +5997,11 @@ div.challHeadrBlck {
     border-left: 3px solid #0000;
 }
 
+/* Challenge Map Card */
+.challMapCrd {
+    border: 3px solid #0000 !important;
+}
+
 /* Bid KR */
 [style="color:#696969"] {
     color: rgb(255 255 255 / 0.5) !important;
@@ -5697,4 +6083,64 @@ div#bidPrevBtn, div#bidPrevBtn:hover {
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
     backdrop-filter: blur(20px);
     border-radius: 7px;
+}
+
+/* Sign-in to apply for K.P.D */
+#policePopC > div:nth-child(4) {
+    color: rgb(255 255 255 / 0.95);
+}
+
+/* Offline Status */
+[style="background:#7f7f7f"] {
+    background: rgb(218 218 218 / 90%) !important;
+}
+
+/* Enter KR Amount */
+#clanFundsIn {
+    border: none !important;
+    border-radius: 7px;
+}
+
+/* [Withdraw] [Deposit] */
+.clanFndB {
+    background: rgb(0 0 0 / 30%) !important;
+    border-radius: 7px;
+}
+
+/* Decline All */
+#clanDeclineAll {
+    background: rgb(0 0 0 / 30%) !important;
+    transition-duration: .2s;
+}
+
+/* Decline All Hover */
+#clanDeclineAll:hover {
+    background: rgb(0 0 0 / 40%) !important;
+    border: none !important;
+}
+
+/* Decline All Active */
+#clanDeclineAll:active {
+    background: rgb(0 0 0 / 50%) !important;
+}
+
+/* Friends List */
+[style="margin-bottom:10px;text-align:left;padding-bottom:10px;border-bottom:3px solid #ffffff33;padding-top:10px;"] {
+    border-bottom: 3px solid #0000 !important;
+}
+
+/* Rent Server */
+div#rentServBtn {
+    background: rgb(0 0 0 / 0.3) !important;
+    transition-duration: .2s;
+}
+
+/* Rent Server Hover */
+div#rentServBtn:hover {
+    background: rgb(0 0 0 / 0.4) !important;
+}
+
+/* Rent Server Active */
+div#rentServBtn:active {
+    background: rgb(0 0 0 / 0.5) !important;
 }
