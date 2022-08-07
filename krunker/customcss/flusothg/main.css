@@ -1,8 +1,10 @@
-/* Developing Process */
-/* 2022/07/29 */
+/* Flusothg - Krunker */
+/* Made by Nighy Riy (Nighy01) */
+
+/* 2022/08/07 */
 
 
-/* ======================================= Configs ======================================= */
+/* Configs ================================================================================== */
 
 :root {
     
@@ -29,11 +31,11 @@
 
 }
 
-/* ======================================= Configs ======================================= */
+/* Configs ================================================================================== */
 
 
 
-/* ======================================= KeyFrames ======================================= */
+/* KeyFrames ================================================================================== */
 
 /* Show Animation on Startup */
 @keyframes showanimationonstartup {
@@ -92,8 +94,8 @@
     }
 }
 
-/* Stream Container or YouNew Animation */
-@keyframes StreamContainerORyouNewAnimation {
+/* Stream Container Animation */
+@keyframes StreamContainer_Animat {
     from {
         transform: translate(-400px, 15px);
         z-index: 0;
@@ -101,6 +103,25 @@
     to {
         transform: translate(0px, 15px);
         z-index: 1;
+    }
+}
+
+/* New to Krunker? Div Animation */
+@keyframes youNew_Animat {
+    from {
+        transform: translate(-400px, 15px);
+        z-index: 0;
+        opacity: 1;
+    }
+    50% {
+        transform: translate(0px, 15px);
+        z-index: 0;
+        opacity: 1;
+    }
+    to {
+        transform: translate(0px, 15px);
+        z-index: 1;
+        opacity: 0;
     }
 }
 
@@ -446,11 +467,11 @@
     }
 }
 
-/* ======================================= KeyFrames ======================================= */
+/* KeyFrames ================================================================================== */
 
 
 
-/* ======================================= Startup ======================================= */
+/* Startup ================================================================================== */
 
 /* Tip Animation */
 @keyframes tip_animat {
@@ -526,7 +547,7 @@ div#aHolder {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 7px !important;
 }
 
@@ -545,11 +566,11 @@ div#aHolder {
     display: none;
 }
 
-/* ======================================= Startup ======================================= */
+/* Startup ================================================================================== */
 
 
 
-/* ======================================= Main ======================================= */
+/* Main ================================================================================== */
 
 /* instructionsUpdate Links */
     
@@ -773,7 +794,7 @@ div#newsBody::-webkit-scrollbar-track {
     color: #dde6ff !important;
 }
 
-/* MenuItemContainer */
+/* Menu Item Container */
 #menuItemContainer, div#menuItemContainer {
     width: fit-content;
     height: min-content;
@@ -787,16 +808,16 @@ div#newsBody::-webkit-scrollbar-track {
     box-shadow: none !important;
 }
 
-/* MenuItem */
+/* Menu Item */
 .menuItem, div.menuItem {
+    background-color: transparent !important;
+    border-radius: 4px;
+    display: inline-block;
     align-items: center;
     pointer-events: none;
     position: relative;
-    display: inline-block;
-    box-sizing: border-box;
-    border-radius: 4px;
     padding: 14px 5px 12px;
-    background-color: transparent !important;
+    box-sizing: border-box;
 }
 
 /* MenuItem Hover */
@@ -812,22 +833,22 @@ div#newsBody::-webkit-scrollbar-track {
 
 /* MenuItem+Title */
 .menuItem .menuItemTitle {
-    margin-top: -6px;
-    text-transform: var(--text-transform);
-    pointer-events: all;
-    transition: all 0.1s ease 0s;
-    position: relative;
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 10px 18px 13px;
     color: rgb(255 255 255) !important;
     font-size: 18px !important;
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-sizing: border-box;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 7px;
+    margin-top: -6px;
+    display: inline-block;
+    text-transform: var(--text-transform);
+    transition: all 0.1s ease 0s;
+    pointer-events: all;
+    box-sizing: border-box;
+    padding: 10px 18px 13px;
+    position: relative;
 }
 
 /* New to Krunker? , Double XP Weekend Link Text */
@@ -842,36 +863,36 @@ div#newsBody::-webkit-scrollbar-track {
 
 /* Menu Title Hover */
 .menuItemTitle:hover {
+    color: rgb(255, 255, 255) !important;
+    background: var(--menu-hover-btn-color) !important;
+    font-size: 18px !important;
     margin-top: -6px;
     text-transform: var(--text-transform);
     pointer-events: all;
     -webkit-transform: scale(.95);
     transform: scale(.95);
-    position: relative;
+    border-radius: 7px;
     display: inline-block;
     box-sizing: border-box;
-    border-radius: 7px;
     padding: 10px 18px 13px;
-    color: rgb(255, 255, 255) !important;
-    background: var(--menu-hover-btn-color) !important;
-    font-size: 18px !important;
+    position: relative;
 }
 
 /* Menu Title Active */
 .menuItemTitle:active {
-    margin-top: -6px;
-    text-transform: var(--text-transform);
-    pointer-events: all;
-    -webkit-transform: scale(.9);
-    transform: scale(.9);
-    position: relative;
-    display: inline-block;
-    box-sizing: border-box;
-    border-radius: 7px;
-    padding: 10px 18px 13px;
     color: white !important;
     background: var(--menu-active-btn-color) !important;
+    border-radius: 7px;
     font-size: 18px !important;
+    margin-top: -6px;
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+    pointer-events: all;
+    display: inline-block;
+    text-transform: var(--text-transform);
+    box-sizing: border-box;
+    padding: 10px 18px 13px;
+    position: relative;
 }
 
 /* Menu Item Icon */
@@ -902,7 +923,7 @@ div#newsBody::-webkit-scrollbar-track {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 7px;
     margin-left: -125px !important;
     transform: translateY(15px);
@@ -914,7 +935,7 @@ div#streamContainer, div.youNewDiv {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 7px;
     margin-left: -125px !important;
     transform: translateY(15px);
@@ -925,14 +946,20 @@ div#streamContainer, div.youNewDiv {
 #streamContainer, div#streamContainer {
     transform: translate(0px, 15px);
     transition-duration: .5s !important;
-    animation: StreamContainerORyouNewAnimation .5s;
+    animation: StreamContainer_Animat .5s;
 }
 
 /* New to Krunker? Div */
-.youNewDiv {
+.youNewDiv, div.youNewDiv {
     transform: translate(0px, 15px);
-    transition-duration: .55s !important;
-    animation: StreamContainerORyouNewAnimation .55s !important;
+    transition-duration: .2s !important;
+    animation: youNew_Animat 1s !important;
+    opacity: 0;
+}
+
+/* New to Krunker? Div Hover */
+div.youNewDiv:hover {
+    opacity: 1;
 }
 
 /* Download Client Button */
@@ -945,11 +972,13 @@ div#streamContainer, div.youNewDiv {
 /* Download Client Hover Button */
 [src="./img/client.png"]:hover {
     transform: translate(5px) scale(.88) !important;
+    filter: brightness(0.88);
 }
 
 /* Download Client Active Button */
 [src="./img/client.png"]:active {
     transform: translate(5px) scale(.75) !important;
+    filter: brightness(0.7);
 }
 
 /* Krunker Editor Button */
@@ -962,12 +991,14 @@ div#streamContainer, div.youNewDiv {
 [src="./img/editor.png"]:hover {
     content: url(https://i.imgur.com/5VlCJ7l.png) !important;
     transform: scale(.88) !important;
+    filter: brightness(0.88);
 }
 
 /* Krunker Editor Active Button */
 [src="./img/editor.png"]:active {
     content: url(https://i.imgur.com/5VlCJ7l.png) !important;
     transform: scale(.75) !important;
+    filter: brightness(0.7);
 }
 
 /* Editor Button */
@@ -991,17 +1022,19 @@ div#streamContainer, div.youNewDiv {
 
 /* Menu Social B */
 .menuSocialB {
-    transition-duration: .15s;
+    transition-duration: .2s;
 }
 
 /* Menu Social B Hover */
 .menuSocialB:hover {
     transform: translate(2px) scale(.88);
+    filter: brightness(0.88);
 }
 
 /* Menu Social B Active */
 .menuSocialB:active {
     transform: translate(3px) scale(.75);
+    filter: brightness(0.7);
 }
 
 /* Top Right Vertical Separator */
@@ -1048,7 +1081,7 @@ div#streamContainer, div.youNewDiv {
     background: var(--main-bg-color);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px;
 }
 
@@ -1103,7 +1136,7 @@ div#streamContainer, div.youNewDiv {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-sizing: border-box;
     box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 7px !important;
     transition-duration: .15s;
     animation: customizebottomanimation .45s;
@@ -1117,7 +1150,6 @@ div#streamContainer, div.youNewDiv {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-sizing: border-box;
     box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
     border-radius: 7px !important;
     transform: scale(0.9);
 }
@@ -1130,7 +1162,6 @@ div#streamContainer, div.youNewDiv {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-sizing: border-box;
     box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
     border-radius: 7px !important;
     transform: scale(0.8);
 }
@@ -1145,7 +1176,7 @@ div#streamContainer, div.youNewDiv {
     background: var(--menu-hover-btn-color);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px;
 }
 
@@ -1154,7 +1185,7 @@ div#streamContainer, div.youNewDiv {
     background: var(--menu-active-btn-color);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px;
 }
 
@@ -1163,7 +1194,7 @@ div#streamContainer, div.youNewDiv {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%);
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     transition-duration: .4s;
     animation: topanimation .4s;
     border-radius: 7px;
@@ -1175,7 +1206,7 @@ div#streamContainer, div.youNewDiv {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%);
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     transition-duration: .4s;
     animation: topanimation .4s;
     border-radius: 7px !important;
@@ -1204,14 +1235,14 @@ div#streamContainer, div.youNewDiv {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
     top: 10px;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px;
 }
 
 /* Header Bar Level Count */
 #mLevelCont {
-    background-color: rgb(0 0 0 / 30%) !important;
-    backdrop-filter: blur(40px);
+    background-color: rgb(0 0 0 / 40%) !important;
+    backdrop-filter: blur(5px);
     border-bottom-right-radius: 0px !important;
     border-radius: 0px 7px 7px 0px !important;
 }
@@ -1226,7 +1257,7 @@ div#streamContainer, div.youNewDiv {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     transition-duration: .4s;
     animation: topanimation .4s;
     border-radius: 7px;
@@ -1238,7 +1269,7 @@ div#streamContainer, div.youNewDiv {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px;
     transition-duration: .5s;
     transform: translateY(9px);
@@ -1337,7 +1368,7 @@ div#streamContainer, div.youNewDiv {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     top: -50px;
     padding: 20px;
@@ -1369,7 +1400,7 @@ div#streamContainer, div.youNewDiv {
     background: var(--menu-hover-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     top: -48px;
     padding: 20px;
@@ -1390,7 +1421,7 @@ div#streamContainer, div.youNewDiv {
     color: white;
     background: var(--menu-active-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     top: -48px;
     padding: 20px;
@@ -1457,7 +1488,7 @@ input:checked+.sliderSml:after {
     color: white;
     background: rgba(95, 98, 107, 0.8) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     top: -47px;
     padding: 20px;
@@ -1477,7 +1508,7 @@ input:checked+.sliderSml:hover:after {
     right: -9px;
     border-radius: 7px;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     top: -47px;
     padding: 20px;
@@ -1502,7 +1533,7 @@ input:checked+.sliderSml:active:after {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     color: white;
     background: var(--menu-active-btn-color) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     top: -47px;
     padding: 20px;
@@ -1544,6 +1575,37 @@ input:checked+.sliderSml:active:after {
     border-radius: 7px;
 }
 
+/* Class Stat Card */
+.clsStatCard {
+    text-shadow: none !important;
+}
+
+/* Class Stat Level */
+.clsStatLvl {
+    color: rgb(255 255 255 / 80%) !important;
+}
+
+/* Class Stat XP Bar */
+.clsStatXPBar {
+    background: rgb(51 50 59) !important;
+    border-radius: 5px;
+}
+
+/* Class Stat XP Bar Value */
+.clsStatXPBarV {
+    text-shadow: none;
+    color: rgb(255 255 255 / 90%) !important;
+    text-align: left;
+    left: 8px;
+}
+
+/* Class Stat XP Bar C */
+.clsStatXPBarC {
+    background-image: linear-gradient(to right,#0000,#0000) !important;
+    background: rgba(131, 140, 188, 1) !important;
+    border-radius: 5px;
+}
+
 /* Profile Stats */
 .pSt {
     background-color: rgb(88 86 102) !important;
@@ -1569,7 +1631,7 @@ input:checked+.sliderSml:active:after {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 10px !important;
     transition-duration: .2s !important;
     animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
@@ -1604,14 +1666,14 @@ input:checked+.sliderSml:active:after {
     border: none !important;
     border-radius: 7px;
     background-color: transparent;
+    transition: .14s;
 }
 
 /* Settings Hover Hed */
 .setHed:hover {
     border: none !important;
     border-radius: 7px;
-    background-color: rgb(60 60 60 / 0.5);
-    backdrop-filter: blur(6px);
+    background-color: rgb(22 22 22 / 30%);
 }
 
 /* Settings Active Hed */
@@ -1691,24 +1753,52 @@ input:checked+.slider2 {
 /* Tabs Hover */
 .bigMenTab:hover {
     border-bottom: none !important;
-    background: rgb(193 192 215 / 70%) !important;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
+    background: rgba(50, 50, 50, 0.2) !important;
+    border-radius: 10px;
+    transition-duration: .15s;
+}
+
+/* Tabs Active */
+.bigMenTab:active {
+    border-bottom: none !important;
+    background: rgba(50, 50, 50, 0.6) !important;
+    border-radius: 10px;
+    transition-duration: .15s;
 }
 
 /* Profile, Games...etc Tabs */
 .bigMenTabs {
-    background-color: rgb(158 159 191 / 70%) !important;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 10px !important;
+    transition-duration: .15s;
 }
 
 /* Tab Selected */
-.bigMenTabA, .bigMenTabA:hover {
+.bigMenTabA {
     border-bottom: none !important;
-    background: rgb(107 106 120 / 70%) !important;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
+    background: rgba(50, 50, 50, 0.4) !important;
+    border-radius: 10px;
+    transition-duration: .2s;
+}
+
+/* Tab Selected Hover */
+.bigMenTabA:hover {
+    border-bottom: none !important;
+    background: rgba(50, 50, 50, 0.2) !important;
+    border-radius: 10px;
+    transition-duration: .15s;
+    cursor: default;
+}
+
+/* Tab Selected Active */
+.bigMenTabA:active {
+    border-bottom: none !important;
+    background: rgba(50, 50, 50, 0.6) !important;
+    border-radius: 10px;
+    transition-duration: .15s;
     cursor: default;
 }
 
@@ -1725,7 +1815,7 @@ input:checked+.slider2 {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 10px !important;
     animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
 }
@@ -1735,7 +1825,7 @@ input:checked+.slider2 {
     background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgb(142 147 255 / 25%);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px !important;
     padding: 8.5px !important;
     transition-duration: .15s;
@@ -1746,7 +1836,7 @@ input:checked+.slider2 {
     background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px !important;
     padding: 8.5px !important;
 }
@@ -1756,7 +1846,7 @@ input:checked+.slider2 {
     background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px !important;
     padding: 8.5px !important;
 }
@@ -1774,7 +1864,7 @@ input:checked+.slider2 {
 /* Map Vote */
 #mapVote {
     background: rgb(123 122 132 / 70%);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(5px);
     border-radius: 7px;
     padding-left: 10px;
     padding-right: 10px;
@@ -1785,7 +1875,7 @@ input:checked+.slider2 {
 /* Map Info */
 #mapInfo {
     background: rgb(123 122 132 / 70%);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(5px);
     border-radius: 7px 0px 7px 7px;
     padding: 10px;
     margin-bottom: 30px;
@@ -1795,7 +1885,7 @@ input:checked+.slider2 {
 /* Mod Vote */
 #modVote {
     background: rgb(123 122 132 / 70%);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(5px);
     border-radius: 7px;
     padding: 10px;
 }
@@ -1829,7 +1919,10 @@ input:checked+.slider2 {
 
 /* SetBodH */
 .setBodH {
-    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 10px !important;
 }
 
 /* Donate Map Hover Button */
@@ -1858,7 +1951,7 @@ input:checked+.slider2 {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 10px !important;
     transition-duration: .2s !important;
     animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
@@ -1869,7 +1962,7 @@ input:checked+.slider2 {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 10px !important;
     animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
@@ -1911,7 +2004,7 @@ input:checked+.slider2 {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px !important;
     transform: translate(-14px , -18px);
 }
@@ -2068,7 +2161,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 10px !important;
     animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
@@ -2173,7 +2266,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 10px !important;
     animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
@@ -2248,7 +2341,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
 }
 
 /* Customize Button Hover */
@@ -2258,7 +2351,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
     background: var(--menu-hover-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
 }
 
 /* Customize Button Active */
@@ -2268,7 +2361,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
     background: var(--menu-active-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
 }
 
 /* Team Switch */
@@ -2302,7 +2395,7 @@ input:checked+.sliderCent:before {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 7px !important;
 }
 
@@ -2311,7 +2404,7 @@ input:checked+.sliderCent:before {
     background: var(--menu-hover-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 7px !important;
 }
 
@@ -2320,7 +2413,7 @@ input:checked+.sliderCent:before {
     background: var(--menu-active-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 7px !important;
 }
 
@@ -2360,7 +2453,7 @@ input:checked+.sliderCent:before {
 
 /* Latest Update x.x.x */
 #mailList > div > div.mailFrom {
-    color: #fff !important;
+    color: rgb(255 255 255 / 95%) !important;
 }
 
 /* Mail Card */
@@ -2395,7 +2488,7 @@ input:checked+.sliderCent:before {
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(20px) !important;
     border-radius: 7px !important;
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 
 /* Twitch Text */
@@ -2433,7 +2526,7 @@ input:checked+.sliderCent:before {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgb(217 205 255 / 70%);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 10px !important;
     animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
@@ -2441,7 +2534,7 @@ input:checked+.sliderCent:before {
 
 /* Button Disabled */
 .buttonD {
-    filter: grayscale(1) blur(4px) !important;
+    filter: blur(3px) brightness(0.9) grayscale(0.5) !important;
 }
 
 /* Live Event! */
@@ -2518,7 +2611,7 @@ div.purejscarousel-btn:active {
 [style="margin-left: -9690px; width: 26505px; transition: margin-left 400ms linear 0ms;"]
 
 {
-    transition: margin-left 400ms cubic-bezier(0.42,0,0,1) 0ms !important;
+    transition: margin-left 450ms cubic-bezier(0.42,0,0,1) 0ms !important;
 }
 
 /* Slide Games Name */
@@ -2538,7 +2631,7 @@ div.purejscarousel-btn:active {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 10px !important;
     animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
@@ -2549,7 +2642,7 @@ div.purejscarousel-btn:active {
     background: linear-gradient(180deg, rgb(203 89 89 / 79%) 0%, rgb(219 101 101 / 72%) 100%), rgb(224 197 197 / 48%);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgb(255 142 142 / 25%);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px !important;
     transition-duration: .15s;
 }
@@ -2564,7 +2657,7 @@ div.purejscarousel-btn:active {
     background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgb(142 147 255 / 25%);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px !important;
     transition-duration: .15s;
 }
@@ -2574,7 +2667,7 @@ div.purejscarousel-btn:active {
     background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px !important;
 }
 
@@ -2583,7 +2676,7 @@ div.purejscarousel-btn:active {
     background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px !important;
 }
 
@@ -2592,7 +2685,7 @@ div.purejscarousel-btn:active {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 10px !important;
     animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
@@ -2631,13 +2724,15 @@ div.purejscarousel-btn:active {
 
 #disconnectPop,
 
-#bundlePop
+#bundlePop,
+
+#eventPop
 
 {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 10px !important;
     animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
@@ -2647,7 +2742,7 @@ div.purejscarousel-btn:active {
 #claimPop {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 10px !important;
     animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
@@ -2737,7 +2832,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px;
     transition-duration: .1s;
 }
@@ -2747,7 +2842,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     opacity: 1 !important;
 }
 
@@ -2756,7 +2851,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     opacity: 1 !important;
 }
 
@@ -2926,7 +3021,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 .spinPrevIcon, .spinSprayIcon {
     border-color: transparent !important;
     background-color: rgb(0 0 0 / 50%);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
     transition-duration: .2s;
     animation: topanimation .5s;
@@ -2962,8 +3057,35 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 
 /* Bundl Pop Curncs */
 .bundlPopCurncs {
-    background-color: rgb(0 0 0 / 60%);
+    background-color: rgb(0 0 0 / 30%);
     backdrop-filter: blur(10px);
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-radius: 7px !important;
+    bottom: 28.5px;
+    left: 25px;
+}
+
+/* Bundl Rewards */
+
+/* +Junk */
+#bundlePop > div.bundlPopCurncs > div:nth-child(1) > span:nth-child(1), 
+
+/* +KR */
+#bundlePop > div.bundlPopCurncs > div:nth-child(2) > span:nth-child(1)
+{
+    color: rgb(255 255 255 / 50%) !important;
+}
+
+/* Bundl Rewards Icon */
+
+/* Junk Icon */
+#bundlePop > div.bundlPopCurncs > div:nth-child(1) > span.material-icons,
+
+/* KR */
+#bundlePop > div.bundlPopCurncs > div:nth-child(2) > span:nth-child(2) 
+{
+    color: #c3d3ff !important;
 }
 
 /* Mail Count */
@@ -2984,11 +3106,11 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border-radius: 5px;
 }
 
-/* ======================================= Main ======================================= */
+/* Main ================================================================================== */
 
 
 
-/* ======================================= Comp Game Main ======================================= */
+/* Comp Game Main ================================================================================== */
 
 /* FaceIt Logo */
 #cmpPartnerImg {
@@ -3035,7 +3157,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px !important;
 }
 
@@ -3044,7 +3166,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px !important;
 }
 
@@ -3081,11 +3203,11 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     filter: grayscale(0) blur(5px) !important;
 }
 
-/* ======================================= Comp Game Main ======================================= */
+/* Comp Game Main ================================================================================== */
 
 
 
-/* ======================================= In Game ======================================= */
+/* In Game ================================================================================== */
 
 /* Ranked Icon */
 /* Old LeaderBoard */ #leaderContainer > div > img,
@@ -3154,9 +3276,9 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 /* Health Bar Seg */
 .healthBarSeg, div.healthBarSeg {
     width: 450px !important;
-    margin-right: -10px !important;
     height: 30px;
     margin: 0 -1px;
+    margin-right: -10px !important;
     background-color: rgb(0 0 0 / 0%) !important;
     border-right: none !important;
 }
@@ -3170,23 +3292,22 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 
 /* Health Bar */
 #healthBar, div#healthBar {
-    width: 450px;
-    height: 30px !important;
-    display: inline-flex;
-    justify-content: center;
     background: rgba(31, 31, 31, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.1) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(20px);
-    padding: 10px;
-    padding-left: 7px;
-    padding-right: 17px;
-    padding-top: 8px;
-    padding-bottom: 7px;
     border-radius: 10px;
-    position: fixed;
+    width: 450px;
+    height: 30px !important;
     left: calc(50% - 236px);
     bottom: 150px;
+    padding: 10px;
+    padding-top: 8px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 17px;
+    display: inline-flex;
+    position: fixed;
     transition-duration: .2s;
     animation: health_bar_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -3216,7 +3337,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 #weapDisplay {
     position: fixed;
     left: calc(100% - 132px);
-    bottom: 113px;
+    bottom: 122px;
     transition-duration: .2s;
     animation: weap_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -3240,13 +3361,13 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 /* Health Value Holder */
 #healthValueHolder, div#healthValueHolder {
     background-color: #0000 !important;
-    padding: 0;
-    margin: 0;
-    z-index: 5;
-    position: fixed;
     left: calc(50% - 220px);
     bottom: 159px;
     border: none !important;
+    padding: 0;
+    position: fixed;
+    margin: 0;
+    z-index: 5;
     box-shadow: none !important;
     animation: health_bar_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -3313,17 +3434,17 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 
 /* Ammo Display */
 #ammoDisplay, div#ammoDisplay {
-    transform: unset;
-    box-shadow: none !important;
     background-color: transparent !important;
+    box-shadow: none !important;
     border: none !important;
     position: fixed;
     left: calc(50% - 80px);
     border-radius: 7px;
+    padding: 0;
     bottom: 65px;
     height: 7px;
     width: 150px;
-    padding: 0;
+    transform: unset;
     margin: 0;
 }
 
@@ -3419,7 +3540,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 /* In Game XP Bar Prog */
 #igXPBarProg {
     background-image: linear-gradient(to right,#939fff,#929cff,94%,#9883ff) !important;
-    box-shadow: 0px 0px 50px 2px rgb(14 0 255) !important;
+    box-shadow: 0px 0px 40px rgb(14 0 255) !important;
 }
 
 /* Ammo Value */
@@ -3541,7 +3662,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(15px);
     border-radius: 10px;
     animation: fadein .2s;
     transition-duration: .2s;
@@ -3599,11 +3720,11 @@ th, tr {
     animation: fadein .2s;
 }
 
-/* ======================================= In Game ======================================= */
+/* In Game ================================================================================== */
 
 
 
-/* ======================================= In Spec ======================================= */
+/* In Spec ================================================================================== */
 
 /* Spectate HUD */
 #spectateHUD {
@@ -3622,7 +3743,7 @@ th, tr {
     background: rgba(29, 29, 29, 0.6);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     border-radius: 7px;
     animation: spectimer_animat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -3633,7 +3754,7 @@ th, tr {
     background: rgba(122, 135, 255, 0.6);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     border-radius: 7px;
     animation: team1_animat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -3659,7 +3780,7 @@ th, tr {
     background: rgba(255, 0, 0, 0.5);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     border-radius: 7px;
     animation: team2_animat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -3679,7 +3800,7 @@ th, tr {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
     animation: spectating_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -3689,7 +3810,7 @@ th, tr {
     background: rgba(29, 29, 29, 0.6);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
     animation: spec_contr_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -3709,7 +3830,7 @@ th, tr {
     background: rgba(29, 29, 29, 0.6);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
     animation: fadein 100ms 0ms linear forwards;
     transition-duration: .2s;
@@ -3720,7 +3841,7 @@ th, tr {
     background: rgba(29, 29, 29, 0.6);
     border: 1px solid rgba(225, 225, 225, 0.1);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
 }
 
@@ -3729,7 +3850,7 @@ th, tr {
     background: rgba(29, 29, 29, 0.6) !important;
     border: 1px solid rgba(225, 225, 225, 0.1) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 5px !important;
 }
 
@@ -3770,7 +3891,7 @@ th, tr {
     background: rgba(29, 29, 29, 0.6);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     border-radius: 7px;
 }
 
@@ -3786,11 +3907,11 @@ th, tr {
     animation: fadein .2s;
 }
 
-/* ======================================= In Spec ======================================= */
+/* In Spec ================================================================================== */
 
 
 
-/* ======================================= Twitch Info ======================================= */
+/* Twitch Info ================================================================================== */
 
 /* Drop Card Animation */
 @keyframes DropCardAnimation {
@@ -3868,11 +3989,11 @@ th, tr {
     transform: scale(.9);
 }
 
-/* ======================================= Twitch Info ======================================= */
+/* Twitch Info ================================================================================== */
 
 
 
-/* ======================================= Match Ended ======================================= */
+/* Match Ended ================================================================================== */
 
 /* Next Round in 00:00 */
 #endTimer {
@@ -4161,7 +4282,7 @@ th, tr {
 /* Lobby Strk */
 #lobStrkPrg {
     background-image: linear-gradient(to right,#0000,#0000,94%,#0000);
-    background: rgba(131, 140, 188, 0.9) !important;
+    background: #838CBC !important;
     backdrop-filter: blur(5px);
     border-radius: 5px !important;
 }
@@ -4252,11 +4373,29 @@ th, tr {
     content: url("https://i.imgur.com/q6eoBBB.png");
 }
 
-/* ======================================= Match Ended ======================================= */
+/* Performance Stat */
+.crStat {
+    text-align: center;
+    color: rgba(255,255,255,.5);
+    background-color: rgba(255,255,255,.05);
+    padding: 15px;
+    border-radius: 7px;
+    border: 4px solid rgba(0 0 0 / 0%);
+}
+
+/* Kill Death Layout */
+#kdLayout {
+    color: rgba(255,255,255,.5);
+    background-color: rgba(255,255,255,.05);
+    border-radius: 7px;
+    border: 4px solid rgba(0 0 0 / 0%);
+}
+
+/* Match Ended ================================================================================== */
 
 
 
-/* ======================================= Customize ======================================= */
+/* Customize ================================================================================== */
 
 /* Loadout Name */
 #loadoutName {
@@ -4791,7 +4930,7 @@ body > div.tooltip > div:nth-child(2) > span {
 .inputGrey2 {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgb(0 0 0 / 5%) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(5px);
     border-radius: 7px !important;
     transition-duration: .2s;
 }
@@ -4961,11 +5100,11 @@ body > div.tooltip > div:nth-child(2) > span {
     text-shadow: none !important;
 }
 
-/* ======================================= Customize ======================================= */
+/* Customize ================================================================================== */
 
 
 
-/* ======================================= Player list ======================================= */
+/* Player list ================================================================================== */
 
 /* [Clan] Text of Player list */
 #playerListH > table > tbody > tr > td.pListName > a > span {
@@ -4993,7 +5132,7 @@ body > div.tooltip > div:nth-child(2) > span {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(201, 197, 224, 0.25);
     text-shadow: none !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 7px !important;
     padding: 10px;
     padding-left: 10px;
@@ -5017,26 +5156,26 @@ body > div.tooltip > div:nth-child(2) > span {
     opacity: 1 !important;
 }
 
-/* ======================================= Player list ======================================= */
+/* Player list ================================================================================== */
 
 
 
-/* ======================================= Business ======================================= */
+/* Business ================================================================================== */
 
-/* ========================= Referrals ========================= */
+/* ---------- Referrals ---------- */
 
 /* +Count USD */
 .refAnot {
     background: var(--main-bg-color) !important;
 }
 
-/* ========================= Referrals ========================= */
+/* ---------- Referrals ---------- */
 
-/* ======================================= Business ======================================= */
+/* Business ================================================================================== */
 
 
 
-/* ======================================= Select a Server Type (Host Game) ======================================= */
+/* Select a Server Type (Host Game) ================================================================================== */
 
 /* Server Type Button */
 .serverHostOp {
@@ -5061,7 +5200,7 @@ body > div.tooltip > div:nth-child(2) > span {
     filter: brightness(0.5);
 }
 
-/* ========================= Comp Game Setup ========================= */
+/* ---------- Comp Game Setup ---------- */
 
 /* Host Maps Image Button */
 .hostMapImg {
@@ -5085,11 +5224,11 @@ input:checked+.hostMapImg {
     filter: blur(0px);
 }
 
-/* ========================= Comp Game Setup ========================= */
+/* ---------- Comp Game Setup ---------- */
 
 
 
-/* ========================= Custom Game Setup ========================= */
+/* --------- Custom Game Setup ---------- */
 
 /* Default Maps Name Button */
 .hostMapName {
@@ -5181,7 +5320,12 @@ div#hostCMapPickT:active {
 
 /* "Remove" Icon */
 #hostGameNameHolder > span:nth-child(1) > i {
-    color: #fff !important;
+    color: rgb(255 255 255 / 95%) !important;
+}
+
+/* Select Modes Box Texts */
+.optName {
+    text-shadow: none;
 }
 
 /* Select opt Checked */
@@ -5207,7 +5351,7 @@ input:hover+.optCheck {
 
 /* Select Modes/Classes Button */
 .optCheck {
-    background: #9d9bb3;
+    background: #9599b9;
 }
 
 /* ? */
@@ -5251,6 +5395,8 @@ input:hover+.optCheck {
 .sugBoxSelCus {
     border-radius: 10px;
     border: none;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(5px);
 }
 
 /* Change Game Hover */
@@ -5263,42 +5409,49 @@ input:hover+.optCheck {
 .setSugInf {
     text-shadow: none !important;
     width: 300px;
+    font-size: 22.5px;
 }
 
 /* Start Game Button */
 #startServBtn, div#startServBtn {
-    filter: grayscale(1) brightness(1);
+    filter: hue-rotate(20deg) brightness(1.2) brightness(0.9);
     transition-duration: .15s;
-    border-radius: 15px;
+    border-radius: 10px !important;
 }
 
 /* ^ */
 [style="background:#4582d1!important;border-top-right-radius:6px;border-bottom-right-radius:6px;"] {
-    border-top-right-radius: 15px !important;
-    border-bottom-right-radius: 15px !important;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
 }
 
 /* Start Game Hover Button */
 #startServBtn:hover {
-    filter: grayscale(1) brightness(0.8);
+    filter: hue-rotate(20deg) brightness(1.2) brightness(0.8);
 }
 
 /* Start Game Active Button */
 #startServBtn:active {
-    filter: grayscale(1) brightness(0.7);
+    filter: hue-rotate(20deg) brightness(1.2) brightness(0.7);
 }
 
-#defaultSettsInfo > div, #krRewardsInfo > div {
+/* Enabling Default Settings allows for storing Player Progress and Highscores */
+#defaultSettsInfo > div, 
+
+/* Enabling KR Rewards forces the Server to use Default Settings & allows players to earn KR from the map funds: */
+#krRewardsInfo > div 
+
+{
     border: 3px solid rgb(0 0 0 / 0%) !important;
     border-radius: 10px;
     background: rgb(0 0 0 / 35%) !important;
 }
 
-/* ========================= Custom Game Setup ========================= */
+/* ---------- Custom Game Setup ---------- */
 
 
 
-/* ========================= Dedicated Setup ========================= */
+/* ---------- Dedicated Setup ---------- */
 
 /* Server Card (+Image) */
 .serverCard, .serverCardI {
@@ -5326,6 +5479,7 @@ input:hover+.optCheck {
     background: rgb(54 55 66 / 80%);
 }
 
+/* Disabled Tab Dis Switch */
 @keyframes tabDisBlurSwitch {
     from {
         filter: blur(0px);
@@ -5342,13 +5496,13 @@ input:hover+.optCheck {
     animation: tabDisBlurSwitch .25s;
 }
 
-/* ========================= Dedicated Setup ========================= */
+/* ---------- Dedicated Setup ---------- */
 
-/* ======================================= Select a Server Type (Host Game) ======================================= */
+/* Select a Server Type (Host Game) ================================================================================== */
 
 
 
-/* ======================================= Settings ======================================= */
+/* Settings ================================================================================== */
 
 /* Search Settings Input */
 #settSearch {
@@ -5360,9 +5514,12 @@ input:hover+.optCheck {
 
 /* Settings Tab Layout */
 #settingsTabLayout {
-    background-color: rgb(158 159 191 / 70%) !important;
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 10px !important;
+    transition-duration: .15s;
 }
 
 /* Settings Tab */
@@ -5370,31 +5527,115 @@ input:hover+.optCheck {
     background-color: transparent !important;
 }
 
-/* Settings TabANew Hover/Active */
-.settingTab.tabANew, .settingTab.tabANew:hover, .settingTab.tabANew:active {
+/* Settings Tab Selected */
+.settingTab.tabANew {
     border-bottom: none !important;
-    background: rgb(107 106 120 / 70%) !important;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
+    background: rgba(50, 50, 50, 0.4) !important;
+    border-radius: 10px;
+    transition-duration: .2s;
 }
 
-/* Settings Tab Hover/Active */
-.settingTab:hover, .settingTab:active {
+/* Settings Tab Selected Hover */
+.settingTab.tabANew:hover {
     border-bottom: none !important;
-    background: rgb(193 192 215 / 70%) !important;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
+    background: rgba(50, 50, 50, 0.2) !important;
+    border-radius: 10px;
+    transition-duration: .15s;
 }
 
-/* Settings+Manage Ads Buttons */
-.settingsBtn, #menuWindow > div.settingsHeader > div:nth-child(1) > div:nth-child(1) {
-    background: var(--main-bg-color) !important;
-    backdrop-filter: blur(20px);
+/* Settings Tab Selected Active */
+.settingTab.tabANew:active {
+    border-bottom: none !important;
+    background: rgba(50, 50, 50, 0.6) !important;
+    border-radius: 10px;
+    transition-duration: .15s;
+}
+
+/* Settings Tab Hover */
+.settingTab:hover {
+    border-bottom: none !important;
+    background: rgba(50, 50, 50, 0.2) !important;
+    border-radius: 10px;
+    transition-duration: .15s;
+}
+
+/* Settings Tab Active */
+.settingTab:active {
+    border-bottom: none !important;
+    background: rgba(50, 50, 50, 0.6) !important;
+    border-radius: 10px;
+    transition-duration: .15s;
+}
+
+/* Settings Preset Buttons */
+.settingsBtn {
+    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 7px !important;
+    transition-duration: .2s;
+}
+
+/* Settings Preset Hover Buttons */
+.settingsBtn:hover {
+    background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25) !important;
+}
+
+/* Settings Preset Active Buttons */
+.settingsBtn:active {
+    background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25) !important;
+}
+
+/* Manage Ads Button */
+#menuWindow > div.settingsHeader > div:nth-child(1) > div:nth-child(1) {
+    background: linear-gradient(180deg, rgba(181, 188, 255, 0.3) 0%, rgba(181, 188, 255, 0.3) 0%, rgba(181, 188, 255, 0.3) 0%, rgba(168, 177, 255, 0.3) 0.01%, rgba(176, 189, 255, 0.3) 100%, rgba(170, 179, 255, 0.3) 100%), rgba(166, 175, 255, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(166, 175, 255, 0.25) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 7px !important;
+    transition-duration: .2s;
+}
+
+/* Manage Ads Hover Button */
+#menuWindow > div.settingsHeader > div:nth-child(1) > div:nth-child(1):hover {
+    background: linear-gradient(180deg, rgba(147, 153, 208, 0.3) 0%, rgba(181, 188, 255, 0.3) 0%, rgba(181, 188, 255, 0.3) 0%, rgba(147, 152, 193, 0.3) 0.01%, rgba(148, 153, 197, 0.3) 100%), rgba(118, 124, 177, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(120, 126, 181, 0.3) !important;
+}
+
+/* Manage Ads Active Button */
+#menuWindow > div.settingsHeader > div:nth-child(1) > div:nth-child(1):active {
+    background: linear-gradient(180deg, rgba(114, 119, 159, 0.3) 0%, rgba(181, 188, 255, 0.3) 0%, rgba(181, 188, 255, 0.3) 0%, rgba(129, 134, 174, 0.3) 0.01%, rgba(123, 129, 176, 0.3) 100%), rgba(46, 48, 66, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(46, 48, 66, 0.3) !important;
+}
+
+/* Setting Suggests Box */
+.setSugBox2 {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 10px !important;
+    padding: 3px;
+}
+
+/* ^Hover */
+.setSugBox2:hover {
+    opacity: 999 !important;
 }
 
 /* Manage Ads Popup */
 .onetrust-pc-dark-filter {
-    backdrop-filter: blur(50px);
+    background: var(--dark-bg-color) !important;
+    backdrop-filter: blur(40px);
+    animation: blurswitch .2s;
+    transition-duration: .2s;
 }
 
 /* Requires Restart Text */
@@ -5411,7 +5652,7 @@ input:hover+.optCheck {
 
 /* Client */ #setBod_client > div > span {
 
-    color: #fff !important;
+    color: rgb(255 255 255 / 0.95) !important;
 
 }
 
@@ -5425,206 +5666,165 @@ input:hover+.optCheck {
 
 /* Partner */ #setBod_gameprivacy > div:nth-child(7) > i {
 
-    color: #fff !important;
+    color: rgb(255 255 255 / 0.95) !important;
 
 }
 
 /* Image Collection Button */
 div.openCollection {
-    background: var(--main-bg-color) !important;
+    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 7px !important;
+    transition-duration: .2s;
+}
+
+/* Image Collection Hover Button */
+div.openCollection:hover {
+    transform: scale(1) !important;
+    background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25) !important;
+}
+
+/* Image Collection Active Button */
+div.openCollection:active {
+    background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25) !important;
 }
 
 /* Input Color */
-input[type=color] {
-    border: 4px solid #26252f !important;
+input[type="color" i] {
+    opacity: 0.9 !important;
+    border: 4px solid rgba(33, 35, 43, 0.9) !important;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 5px !important;
+    transition-duration: .2s;
+}
+
+/* Input Color Hover */
+input[type="color" i]:hover {
+    filter: brightness(0.75);
+}
+
+/* Input Color Active */
+input[type="color" i]:active {
+    filter: brightness(0.55);
 }
 
 /* KeyBind Icon */
 .keyIcon {
+    background-color: rgb(0 0 0 / 30%) !important;
     padding: 8px 10px !important;
     border-radius: 7px !important;
     border-left: none !important;
     border-right: none !important;
     border-top: none !important;
     border-bottom: none !important;
+    transition: .15s;
 }
 
-/* ============= Delete KeyBind, Reset KeyBind Buttons ============= */
-
-/* ========================= General ========================= */
-
-/* ============ Movement ============ */
-
-/* Delete KeyBind Button */ #setBindBod_movement > div > div > span.unbind > i, 
-
-/* Reset KeyBind Button */ #setBindBod_movement > div > div > span.reset > i, 
-
-/* ============ Movement ============ */
-
-
-/* ============ Weapon ============ */
-
-/* Delete KeyBind Button */ #setBindBod_weapon > div > div > span.unbind > i,
-
-/* Reset KeyBind Button */ #setBindBod_weapon > div > div > span.reset > i,
-
-/* ============ Weapon ============ */
-
-
-/* ============ Interface ============ */
-
-/* Delete KeyBind Button */ #setBindBod_interface > div > div > span.unbind > i,
-
-/* Reset KeyBind Button */ #setBindBod_interface > div > div > span.reset > i,
-
-/* ============ Interface ============ */
-
-
-/* ============ Players ============ */
-
-/* Delete KeyBind Button */ #setBindBod_players > div > div > span.unbind > i,
-
-/* Reset KeyBind Button */ #setBindBod_players > div > div > span.reset > i,
-
-/* ============ Players ============ */
-
-/* ========================= General ========================= */
-
-
-
-/* ========================= Chat & Toggles ========================= */
-
-/* ============ Interface & Audio ============ */
-
-/* Delete KeyBind Button */ #setBindBod_interface___audio > div > div > span.unbind > i,
-
-/* Reset KeyBind Button */ #setBindBod_interface___audio > div > div > span.reset > i,
-
-/* ============ Interface & Audio ============ */
-
-
-/* ============ Premium & Host ============ */
-
-/* Delete KeyBind Button */ #setBindBod_premium___host > div > div > span.unbind > i,
-
-/* Reset KeyBind Button */ #setBindBod_premium___host > div > div > span.reset > i,
-
-/* ============ Premium & Host ============ */
-
-
-/* ============ Chat Messages ============ */
-
-/* Delete KeyBind Button */ #setBindBod_chat_messages > div > div > span.unbind > i,
-
-/* Reset KeyBind Button */ #setBindBod_chat_messages > div > div > span.reset > i,
-
-/* ============ Chat Messages ============ */
-
-
-/* ============ Toggle Settings ============ */
-
-/* Delete KeyBind Button */ #setBindBod_toggle_settings > div > div > span.unbind > i,
-
-/* Reset KeyBind Button */ #setBindBod_toggle_settings > div > div > span.reset > i,
-
-/* ============ Toggle Settings ============ */
-
-/* ========================= Chat & Toggles ========================= */
-
-
-
-/* ========================= Interaction ========================= */
-
-/* ============ Interaction ============ */
-
-/* Delete KeyBind Button */ #setBindBod_interaction > div > div > span.unbind > i,
-
-/* Reset KeyBind Button */ #setBindBod_interaction > div > div > span.reset > i,
-
-/* ============ Interaction ============ */
-
-
-/* ============ Killstreaks ============ */
-
-/* Delete KeyBind Button */ #setBindBod_killstreaks > div > div > span.unbind > i,
-
-/* Reset KeyBind Button */ #setBindBod_killstreaks > div > div > span.reset > i,
-
-/* ============ Killstreaks ============ */
-
-/* ========================= Interaction ========================= */
-
-
-
-/* ========================= Spectate & Vote ========================= */
-
-/* ============ Spectating ============ */
-
-/* Delete KeyBind Button */ #setBindBod_spectating > div > div > span.unbind > i,
-
-/* Reset KeyBind Button */ #setBindBod_spectating > div > div > span.reset > i,
-
-/* ============ Spectating ============ */
-
-
-/* ============ KPD ============ */
-
-/* Delete KeyBind Button */ #setBindBod_kpd > div > div > span.unbind > i,
-
-/* Reset KeyBind Button */ #setBindBod_kpd > div > div > span.reset > i,
-
-/* ============ KPD ============ */
-
-
-/* ============ Vote ============ */
-
-/* Delete KeyBind Button */ #setBindBod_vote > div > div > span.unbind > i,
-
-/* Reset KeyBind Button */ #setBindBod_vote > div > div > span.reset > i,
-
-/* ============ Vote ============ */
-
-/* ========================= Spectate & Vote ========================= */
-
-
-
-/* ========================= Modes ========================= */
-
-/* ============ Prop Hunt ============ */
-
-/* Delete KeyBind Button */ #setBindBod_prop_hunt > div > div > span.unbind > i,
-
-/* Reset KeyBind Button */ #setBindBod_prop_hunt > div > div > span.reset > i,
-
-/* ============ Prop Hunt ============ */
-
-
-/* ============ Parkour & Race ============ */
-
-/* Delete KeyBind Button */ #setBindBod_parkour___race > div > div > span.unbind > i,
-
-/* Reset KeyBind Button */ #setBindBod_parkour___race > div > div > span.reset > i,
-
-/* ============ Parkour & Race ============ */
-
-
-/* ============ Sandbox (Test mode) ============ */
-
-/* Delete KeyBind Button */ #setBindBod_sandbox__test_mode_ > div > div > span.unbind > i,
-
-/* Reset KeyBind Button */ #setBindBod_sandbox__test_mode_ > div > div > span.reset > i
-
-/* ============ Sandbox (Test mode) ============ */
-
-/* ========================= Modes ========================= */
-
- {
-    color: #fff !important;
+/* KeyBind Icon Hover */
+.keyIcon:hover {
+    transform: scale(.9);
+    filter: brightness(0.9);
 }
 
-/* ============= Delete KeyBind, Reset KeyBind Buttons ============= */
+/* KeyBind Icon Active */
+.keyIcon:active {
+    transform: scale(.85);
+    filter: brightness(0.75);
+}
 
-/* Advanced Slider */
+/* Unbind, Reset Icon */
+
+/* Unbind */
+.unbind, 
+
+/* Reset */
+.reset 
+{
+    filter: brightness(999) opacity(0.95);
+    transition-duration: .15s;
+}
+
+/* Unbind, Reset Icon Hover */
+
+/* Unbind Hover */
+.unbind:hover, 
+
+/* Reset Hover */
+.reset:hover
+{
+    filter: brightness(999) opacity(0.95) brightness(0.8);
+}
+
+/* Unbind, Reset Icon Active */
+
+/* Unbind Active */
+.unbind:active, 
+
+/* Reset Active */
+.reset:active
+{
+    filter: brightness(999) opacity(0.95) brightness(0.7);
+}
+
+/* KeyBind Sep */
+.bindSep {
+    height: 20px;
+    transform: translateY(10px);
+    background-color: rgba(255,255,255,.3);
+    border-radius: 100px;
+}
+
+/* --- Mouse Click Icon --- */
+
+/* Click */
+[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=e7f3j5wu4b5xlbu5u7a97jhfvpv3sp0u);"] {
+    content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/click.png);
+    opacity: 0.9;
+}
+
+/* Middle Click */
+[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=e7f3j5wu4b5xlbu5u7a97jhfvpv3sp0u);"] {
+    content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/middleclick.png);
+    opacity: 0.9;
+}
+
+/* Right Click */
+[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=e7f3j5wu4b5xlbu5u7a97jhfvpv3sp0u);"] {
+    content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/rightclick.png);
+    opacity: 0.9;
+}
+
+/* --- Mouse Click Icon --- */
+
+/* KeyBind Settings Toggle */
+.setToggle {
+    background: rgba(245, 246, 255, 0.8) !important;
+    box-shadow: 0px 0px 30px 2px rgb(0 0 0 / 5%) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 7px !important;
+    transition-duration: .2s;
+}
+
+/* ^Select Hover */
+.setToggle:hover {
+    background: rgba(200, 200, 210, 0.8) !important;
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ^Select Active */
+.setToggle:active {
+    background: rgba(139, 140, 150, 0.8) !important;
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Advanced Toggle */
 .advancedSlider {
     border-radius: 7px;
 }
@@ -5659,7 +5859,7 @@ input[type=color] {
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     border-radius: 5px;
-    padding: 10px;
+    padding: 9px;
     transition-duration: .2s;
 }
 
@@ -5673,6 +5873,28 @@ input[type=color] {
 .sliderM::-webkit-slider-thumb:active {
     background: linear-gradient(180deg, rgba(235, 233, 255, 0.3) 0%, rgba(229, 227, 255, 0.3) 100%), rgba(172, 172, 184, 0.9) !important;
     box-shadow: 0px 0px 15px rgba(172, 172, 184, 0.2) !important;
+}
+
+/* Slider Value */
+.sliderVal {
+    background: rgba(0, 0, 0, 0.15) !important;
+    border: 3px solid rgba(225, 225, 225, 0.25) !important;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 9px !important;
+    font-size: 16.5px;
+    padding: 4px;
+    transition-duration: .2s;
+}
+
+/* Slider Value Hover */
+.sliderVal:hover {
+    filter: brightness(0.75);
+}
+
+/* Slider Value Active */
+.sliderVal:active {
+    filter: brightness(0.55);
 }
 
 /* Checked Toggle */
@@ -5728,11 +5950,11 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
     backdrop-filter: blur(5px);
 }
 
-/* ======================================= Settings ======================================= */
+/* Settings ================================================================================== */
 
 
 
-/* ======================================= Games ======================================= */
+/* Games ================================================================================== */
 
 /* Game Overlay Hover */
 .mapActionOvrl {
@@ -5859,11 +6081,11 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
     border-radius: 15px;
 }
 
-/* ======================================= Games ======================================= */
+/* Games ================================================================================== */
 
 
 
-/* ======================================= Mod ======================================= */
+/* Mod ================================================================================== */
 
 /* Search Button */
 .searchBtn {
@@ -5871,7 +6093,7 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
     border-radius: 7px;
 }
 
-/* ====================== Mod Loader ====================== */
+/* --- Mod Loader --- */
 
 /* Drop mod file here or click */
 #modDropper {
@@ -5883,13 +6105,13 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
     border-radius: 7px;
 }
 
-/* ====================== Mod Loader ====================== */
+/* --- Mod Loader --- */
 
-/* ======================================= Mod ======================================= */
+/* Mod ================================================================================== */
 
 
 
-/* ======================================= Steam Fix ======================================= */
+/* Steam Fix ================================================================================== */
 
 /* Host Game, Servers, Ranked, Invite, Join */
 div.buttonG , div.buttonO, div.buttonP, div.buttonR, div.buttonPI {
@@ -5911,7 +6133,7 @@ div#customizeButton span {
     color: #fff !important;
 }
 
-/* ======================================= Steam Fix ======================================= */
+/* Steam Fix ================================================================================== */
 
 
 
@@ -6070,7 +6292,7 @@ div#bidPrevBtn, div#bidPrevBtn:hover {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 10px !important;
     animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
@@ -6143,4 +6365,307 @@ div#rentServBtn:hover {
 /* Rent Server Active */
 div#rentServBtn:active {
     background: rgb(0 0 0 / 0.5) !important;
+}
+
+/* ---Event--- */
+
+/* Event Pop Header */
+.eventPopHeader {
+    border: 4px solid #0000 !important;
+}
+
+/* View Challenges */
+.eventPopChallBtn {
+    background: rgb(0 0 0 / 0.3) !important;
+    transition-duration: .2s;
+}
+
+/* View Challenges Hover */
+.eventPopChallBtn:hover {
+    background: rgb(0 0 0 / 0.4) !important;
+}
+
+/* View Challenges Active */
+.eventPopChallBtn:active {
+    background: rgb(0 0 0 / 0.5) !important;
+    transform: scale(0.96);
+}
+
+/* Event ends in [Date] */
+.eventPopEnd {
+    color: #c3d3ff
+}
+
+/* Event Bund Item */
+.bundlItmC {
+    background: rgb(0 0 0 / 30%);
+}
+
+/* 2XP */
+#serverHolder > div.setBodH > div > div.krIcon {
+    background: rgb(0 0 0 / 30%) !important;
+    text-shadow: none !important;
+}
+
+/* ---Event--- */
+
+
+/* ---Ping in Player List--- */
+
+/* Low Ping */
+[style="color:rgb(158, 235, 86)"] {
+    filter: brightness(1.3) opacity(0.9);
+}
+
+/* Normal Ping */
+[style="color:rgb(255, 213, 66)"] {
+    filter: brightness(1.1) opacity(0.9);
+}
+
+/* High Ping */
+[style="color:rgb(255, 75, 66)"] {
+    filter: brightness(2) opacity(0.9);
+}
+
+/* ---Ping in Player List--- */
+
+
+/* White Color */
+[style="color:white"] {
+    color: rgb(255 255 255 / 95%) !important;
+}
+
+/* Victory */
+[src="./img/vic.png"] {
+    content: url(https://i.imgur.com/ugET4YI.png) !important;
+}
+
+/* Defeat */
+[src="./img/def.png"] {
+    content: url(https://i.imgur.com/bkX5HIH.png) !important;
+}
+
+/* Draw */
+[src="./img/dra.png"] {
+    content: url(https://i.imgur.com/RWXr3kw.png) !important;
+}
+
+/* Twitch Partner */
+.streamPartner {
+    color: rgb(255 255 255 / 95%) !important;
+    margin-left: -5px;
+}
+
+/* Twitch Text Shadow */
+.twitch {
+    text-shadow: none;
+}
+
+/* Whats New in v[Version] ? Header */
+.logVersionHed {
+    color: rgb(255 255 255 / 0.95) !important;
+    border: 6px solid #fff0;
+    border-radius: 10px;
+    text-shadow: none;
+}
+
+/* View All Updates */
+.viewAllUpdates {
+    color: rgb(255 255 255 / 95%) !important;
+    border-radius: 10px;
+    background: rgba(0 0 0 / 20%);
+    border: 4px solid rgba(0 0 0 / 0%);
+    transition-duration: .15s;
+}
+
+/* View All Updates Hover */
+.viewAllUpdates:hover {
+    color: rgb(255 255 255 / 95%) !important;
+    border-radius: 10px;
+    background: rgba(0 0 0 / 35%);
+    border: 4px solid rgba(0 0 0 / 0%);
+    transform: scale(0.98);
+}
+
+/* View All Updates Active */
+.viewAllUpdates:active {
+    color: rgb(255 255 255 / 95%) !important;
+    border-radius: 10px;
+    background: rgba(0 0 0 / 50%);
+    border: 4px solid rgba(0 0 0 / 0%);
+    transform: scale(0.95);
+}
+
+/* Krunker Client Installer Icon */
+
+/* Windows */
+#menuWindow > div:nth-child(3) > ul > li:nth-child(1) > a > img,
+
+/* macOS (Apple) */
+#menuWindow > div:nth-child(3) > ul > li:nth-child(2) > a > img,
+
+/* Linux */
+#menuWindow > div:nth-child(3) > ul > li:nth-child(3) > a > img
+
+{
+    filter: invert(0.1) brightness(999) opacity(0.8);
+}
+
+/* Windows Logo */
+[src="./img/windows.png"] {
+    content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/winicon.png);
+}
+
+/* Link Metamask */
+.metaLoginBtn {
+    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 0px 30px rgb(142 147 255 / 25%);
+    backdrop-filter: blur(10px);
+    border-radius: 7px !important;
+    transition-duration: .15s;
+}
+
+/* Link Metamask Hover */
+.metaLoginBtn:hover {
+    background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 7px !important;
+}
+
+/* Link Metamask Active */
+.metaLoginBtn:active {
+    background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4);
+    box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 7px !important;
+}
+
+/* Logout, Logout of all Sessions Line */
+[style="height:15px;margin-top:30px;border-top:4px solid rgba(255, 255, 255, 0.8);"] {
+    border-top: 4px solid #0000 !important;
+}
+
+/* Add Image */
+.imageListAdd, div.imageListAdd {
+    color: rgb(255 255 255 / 95%) !important;
+    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgb(142 147 255 / 25%) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 7px !important;
+    transition-duration: .15s;
+}
+
+/* Add Image Hover */
+.imageListAdd:hover, div.imageListAdd:hover {
+    background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 7px !important;
+    transform: scale(1) !important;
+    opacity: 1 !important;
+    cursor: pointer;
+}
+
+/* Add Image Active */
+.imageListAdd:active, div.imageListAdd:active {
+    background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 7px !important;
+}
+
+/* Image Tab */
+.imageTab {
+    background-color: #0000 !important;
+    color: rgb(255 255 255 / 95%) !important;
+}
+
+/* Image Tab Layout */
+#imagesTabLayout {
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 50px rgb(0 0 0 / 10%) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 10px !important;
+    transition-duration: .15s;
+}
+
+/* Image Tab Selected */
+.tabAIMG {
+    border-bottom: 5px solid rgb(0 0 0 / 0%) !important;
+    background: rgba(50, 50, 50, 0.4) !important;
+    border-radius: 10px;
+    transition-duration: .2s;
+}
+
+/* Image Tab Selected Hover */
+.tabAIMG:hover {
+    border-bottom: 5px solid rgb(0 0 0 / 0%) !important;
+    background: rgba(50, 50, 50, 0.2) !important;
+    border-radius: 10px;
+    transition-duration: .15s;
+}
+
+/* Image Tab Selected Active */
+.tabAIMG:active {
+    border-bottom: 5px solid rgb(0 0 0 / 0%) !important;
+    background: rgba(50, 50, 50, 0.6) !important;
+    border-radius: 10px;
+    transition-duration: .15s;
+}
+
+/* Image Tab Hover */
+.imageTab:hover {
+    border-bottom: 5px solid rgb(0 0 0 / 0%) !important;
+    background: rgba(50, 50, 50, 0.2) !important;
+    border-radius: 10px;
+    transition-duration: .15s;
+}
+
+/* Image Tab Active */
+.imageTab:active {
+    border-bottom: 5px solid rgb(0 0 0 / 0%) !important;
+    background: rgba(50, 50, 50, 0.6) !important;
+    border-radius: 10px;
+    transition-duration: .15s;
+}
+
+/* Image List Item */
+.imageListItem {
+    background-color: rgb(0 0 0 / 50%) !important;
+    border-radius: 10px !important;
+}
+
+/* Image List Thumb */
+.imageListThumbH {
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* Image Action Overlay */
+.imageActionOvrl {
+    background: rgba(0 0 0 / 50%) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* Must be at least [Bid level] to Submit a Bid. */
+#menuWindow > div:nth-child(7) {
+    color: rgb(255 255 255 / 0.5) !important;
+}
+
+/* [Bid level] */
+#menuWindow > div:nth-child(7) > span {
+    color: rgb(255 255 255 / 0.95) !important;
+}
+
+/* Bid Image */
+[style="width:100%;margin-top:0px;object-position:0px -50px;margin-bottom:20px;border-radius:6px;height:260px;object-fit:cover;"] {
+    border-radius: 10px !important;
 }

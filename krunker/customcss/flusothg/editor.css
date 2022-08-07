@@ -1,10 +1,15 @@
-/* Developing Process */
-/* 2022/07/16 */
+/* Flusothg - Krunker Editor */
+/* Made by Nighy Riy (Nighy01) */
+
+/* 2022/08/07 */
 
 
-/* ======================================= Configs ======================================= */
+/* Configs ================================================================================== */
 
 :root {
+
+    /* Dark Background Color */
+     --dark-bg-color: linear-gradient(180deg, rgba(41, 42, 46, 0.3) 0%, rgba(34, 34, 39, 0.3) 100%), rgba(0, 0, 0, 0.45) !important;
 
     /* Button 1 Color */
      --Btn1Color: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
@@ -17,11 +22,11 @@
     
 }
 
-/* ======================================= Configs ======================================= */
+/* Configs ================================================================================== */
 
 
 
-/* ======================================= KeyFrames ======================================= */
+/* KeyFrames ================================================================================== */
 
 /* Fadein ToolBar */
 @keyframes fadeintoolbar {
@@ -81,11 +86,63 @@
 
 /* ------Popup Animation------ */
 
-/* ======================================= KeyFrames ======================================= */
+/* Blur Switch Effect */
+@keyframes blurswitch {
+    from {
+        background: linear-gradient(180deg, rgba(41, 42, 46, 0.1) 0%, rgba(34, 34, 39, 0.1) 100%), rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        backdrop-filter: blur(10px);
+        transition-duration: .2s;
+    }
+    to {
+        background: linear-gradient(180deg, rgba(41, 42, 46, 0.3) 0%, rgba(34, 34, 39, 0.3) 100%), rgba(0, 0, 0, 0.45);
+        opacity: 1;
+        backdrop-filter: blur(40px);
+        transition-duration: .2s;
+    }
+}
+
+/* KeyFrames ================================================================================== */
 
 
 
-/* ======================================= Main ======================================= */
+/* Main ================================================================================== */
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+    background: rgb(11 11 11 / 45%) !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transition-duration: .2s;
+    border-radius: 10px !important;
+}
+
+/* Scrollbar Thumb Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(11 11 11 / 60%) !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transition-duration: .2s;
+    border-radius: 10px !important;
+}
+
+/* Scrollbar Thumb Active */
+::-webkit-scrollbar-thumb:active {
+    background: rgb(11 11 11 / 70%) !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transition-duration: .2s;
+    border-radius: 10px !important;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transition-duration: .2s;
+    border-radius: 10px !important;
+}
 
 /* Texts */
 div.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .header>a, .subheader>a, .qs_textarea, #versionTxt, .windowHeader>div, .menuTabsNew>div, .inlineLabel, .mapListItem>*>a {
@@ -97,7 +154,7 @@ div.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: -4px 0px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
 }
 
 /* Right Panel */
@@ -105,7 +162,7 @@ div.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 4px 0px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
 }
 
 /* Hot Top Bar */
@@ -113,7 +170,7 @@ div.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px -5px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
 }
 
 /* Header */
@@ -172,7 +229,7 @@ input[type=range]::-moz-range-thumb {
 #canvasAdd {
     background: linear-gradient(180deg, rgba(169, 171, 217, 0.3) 0%, rgba(161, 169, 208, 0.3) 100%), rgba(151, 148, 171, 0.7);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(5px);
     border-radius: 7px;
 }
 
@@ -180,7 +237,7 @@ input[type=range]::-moz-range-thumb {
 #canvasObjEdit .eButton {
     background: linear-gradient(180deg, rgba(169, 171, 217, 0.3) 0%, rgba(161, 169, 208, 0.3) 100%), rgba(151, 148, 171, 0.7);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(5px);
     border-radius: 7px;
 }
 
@@ -188,7 +245,7 @@ input[type=range]::-moz-range-thumb {
 #canvasInfo {
     background: linear-gradient(180deg, rgba(169, 171, 217, 0.3) 0%, rgba(161, 169, 208, 0.3) 100%), rgba(151, 148, 171, 0.7);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(5px);
     border-radius: 7px;
 }
 
@@ -201,25 +258,27 @@ input[type=range]::-moz-range-thumb {
 #canvasUI .eButton {
     background: linear-gradient(180deg, rgba(176, 178, 230, 0.3) 0%, rgba(184, 192, 236, 0.3) 100%), rgba(164, 160, 185, 0.7);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(5px);
     border-radius: 7px;
     transition-duration: .15s;
 }
 
 /* Tool Bar Option */
-.toolbarDropDown {
+.toolbarDropDown, div.toolbarDropDown {
     transform: translateY(3px);
     box-shadow: none;
     border-radius: 7px;
     animation: fadeintoolbar .2s;
+    background: rgb(36 36 36) !important;
 }
 
 /* ^Sub */
-.toolbarSubDropDown {
-    transform: translateX(2px);
+.toolbarSubDropDown, div.toolbarSubDropDown {
+    transform: translateX(1.5px);
     box-shadow: none;
     border-radius: 7px;
     animation: fadeintoolbarsub .2s;
+    background: rgb(36 36 36) !important;
 }
 
 /* Window Background */
@@ -227,7 +286,7 @@ div#menuWindow, #loginPop, #importPop {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 10px !important;
     animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
@@ -239,7 +298,7 @@ div#menuWindow, #loginPop, #importPop {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(40px) !important;
+    backdrop-filter: blur(10px) !important;
     border-radius: 10px !important;
     animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
@@ -256,12 +315,29 @@ div#menuWindow, #loginPop, #importPop {
     color: rgb(255 255 255 / 0.8);
 }
 
+/* Teleport Popup */
+#teleportPop {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgb(0 0 0 / 25%) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 10px !important;
+    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transition-duration: .2s !important;
+    transform: scale3d(1) translate(-50%,-50%);
+}
+
+/* Change Position */
+#teleportPop > div:nth-child(1) {
+    color: rgb(240 240 240);
+}
+
 /* Button */
 .button {
     background: var(--Btn1Color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(5px);
     border-radius: 7px;
 }
 
@@ -270,7 +346,7 @@ div#menuWindow, #loginPop, #importPop {
     background: var(--Btn1_HoverColor) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(5px);
     border-radius: 7px !important;
 }
 
@@ -279,14 +355,16 @@ div#menuWindow, #loginPop, #importPop {
     background: var(--Btn1_ActiveColor) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(5px);
     border-radius: 7px !important;
 }
 
 /* Popup Background */
 #instructionHolder, #popupBack {
-    background-color: rgb(0 0 0 / 50%) !important;
+    background: var(--dark-bg-color);
     backdrop-filter: blur(40px);
+    animation: blurswitch .2s;
+    transition-duration: .2s;
 }
 
 /* Window Popups */
@@ -332,7 +410,7 @@ div#menuWindow, #loginPop, #importPop {
 
 /* Select Mod...etc */
 .eButton, .publishAsset {
-    background: rgb(85 86 101 / 80%);
+    background: rgb(0 0 0 / 30%);
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(20px);
     border-radius: 7px;
@@ -350,4 +428,114 @@ div#menuWindow, #loginPop, #importPop {
     backdrop-filter: blur(20px);
 }
 
-/* ======================================= Main ======================================= */
+/* Sub Header */
+.subheader {
+    background-color: rgb(0 0 0 / 20%);
+}
+
+/* Main ================================================================================== */
+
+
+
+/* Others ================================================================================== */
+
+/* hr Line */
+hr {
+    border-color: rgb(0 0 0 / 0%);
+}
+
+/* Lock Icon */
+.lock i {
+    color: rgb(240, 240, 240) !important;
+}
+
+/* Play, Host...etc Icon */
+[style="color: #202020; font-size: 25px"] {
+    color: rgb(240, 240, 240) !important;
+}
+
+/* Quick */
+.qs_main, div.qs_main {
+    background-color: rgb(0 0 0 / 50%) !important;
+    border-radius: 7px;
+    backdrop-filter: blur(5px);
+}
+
+/* Quick */
+.qs_content, div.qs_content {
+    background-color: rgb(0 0 0 / 0%) !important;
+}
+
+/* Quick Title */
+.qs_title_bar, div.qs_title_bar {
+    background-color: rgb(0 0 0 / 50%) !important;
+    border-radius: 7px 7px 0px 0px;
+}
+
+/* Quick JSON Text Area */
+.qs_textarea {
+    background-color: rgb(36 36 36) !important;
+    border-radius: 3px;
+    color: rgb(240 240 240) !important;
+}
+
+/* No Backups found */
+#menuWindow > div.windowBody {
+    color: rgb(240 240 240) !important;
+}
+
+/* Publishing Guide */
+[style="text-align:center;font-size:30px;color:#fff;margin-bottom:20px"] {
+    text-align: center;
+    font-size: 37px !important;
+    color: rgb(255 255 255 / 95%);
+}
+
+/* 1. Create a Thumbnail */
+.pubGIt {
+    color: rgba(255 255 255 / 95%);
+    border-top: 3px solid rgba(0 0 0 / 0%) !important;
+    font-size: 25px;
+}
+
+/* Tip: Content */
+.pubGItSub {
+    color: rgba(255 255 255 / 70%);
+    font-size: 18px;
+}
+
+/* Publishing Guide Rule */
+.pubGRule {
+    border-bottom: 4px solid rgb(0 0 0 / 0%);
+}
+
+/* Click [here] */
+.popupLink, div.popupLink {
+    color: #c3d3ff !important;
+}
+
+/* Wrong */
+#menuWindow > div.pubGImgSplit > div:nth-child(1) > div,
+
+/* Ok */
+#menuWindow > div.pubGImgSplit > div:nth-child(2) > div
+
+{
+    filter: invert(0.1) brightness(999) opacity(0.8);
+}
+
+/* Publish */
+#menuWindow > div:nth-child(1) > div.windowHeader > div > div {
+    color: rgb(240 240 240);
+}
+
+/* Asset Name */
+.smlInput {
+    background-color: rgb(255 255 255 / 80%);
+    color: rgba(0 0 0 / 90%);
+}
+
+/* Back Button */
+#menuWindow > div:nth-child(1) > div.windowHeader > div:nth-child(1) > i {
+    color: rgb(255 255 255 / 0.95) !important;
+}

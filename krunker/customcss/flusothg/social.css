@@ -1,8 +1,10 @@
-/* Developing Process */
-/* 2022/07/29 */
+/* Flusothg - Krunker Hub */
+/* Made by Nighy Riy (Nighy01) */
+
+/* 2022/08/07 */
 
 
-/* ======================================= Configs ======================================= */
+/* Configs ================================================================================== */
 
 :root {
     
@@ -23,11 +25,11 @@
     
 }
 
-/* ======================================= Configs ======================================= */
+/* Configs ================================================================================== */
 
 
 
-/* ======================================= KeyFrames ======================================= */
+/* KeyFrames ================================================================================== */
     
 /* Loading Icon Spin */ 
 @keyframes loadicospin {
@@ -149,11 +151,11 @@
     }
 }
 
-/* ======================================= KeyFrames ======================================= */
+/* KeyFrames ================================================================================== */
 
 
 
-/* ======================================= Main(Feed) ======================================= */
+/* Main(Feed) ================================================================================== */
 
 /* Scrollbar Thumb */
 ::-webkit-scrollbar-thumb {
@@ -378,8 +380,9 @@
     display: none;
 }
 
-/* Say something , KR Giveway Amount */
+/* Say something, KR Giveaway Amount */
 #postInput, #postKR {
+    color: rgb(0 0 0 / 90%) !important;
     background-color: rgb(255 255 255 / 90%) !important;
     border: none !important;
     border-radius: 5px !important;
@@ -665,7 +668,7 @@
     color: rgb(255 255 255 / 70%) !important;
 }
 
-/* Follow Button on Giveways Posts */
+/* Follow Button on Giveaways Posts */
 .follBtnGiv {
     margin-left: 0px;
     margin-top: 7.6px;
@@ -674,6 +677,7 @@
 /* Like Hover Button */
 .likeBtn:hover {
     color: rgb(244 111 111 / 80%) !important;
+    transition: .15s;
 }
 
 /* Like Active Button */
@@ -695,6 +699,7 @@
 .shareBtnHol:hover {
     opacity: 999;
     background-color: rgb(136 136 136 / 80%);
+    transition: .15s;
 }
 
 /* Share Active Button */ 
@@ -723,17 +728,17 @@
     color: rgb(175 175 175 / 0.8) !important;
 }
 
-/* Giveway Posts Follow Button */
+/* Giveaway Posts Follow Button */
 .follBtnGiv {
     background-color: rgb(175 175 175 / 80%);
 }
 
-/* Giveway Posts Follow Hover Button */
+/* Giveaway Posts Follow Hover Button */
 .follBtnGiv:hover {
     background-color: rgb(136 136 136 / 80%);
 }
 
-/* Giveway Posts Follow Active Button */
+/* Giveaway Posts Follow Active Button */
 .follBtnGiv:active {
     background-color: rgb(84 84 84 / 80%);
 }
@@ -970,12 +975,12 @@ div.button:active {
     color: #ffffffc7;
 }
 
-/* Giveway Post Feed */
+/* Giveaway Post Feed */
 .krGivPost {
     text-shadow: none;
 }
 
-/* Giveway KR Text Post Feed */
+/* Giveaway KR Text Post Feed */
 #postHolder > div > div.postHead > div.postContent > div > div > span {
     color: #fff !important;
 }
@@ -1001,11 +1006,11 @@ div.button:active {
     color: rgb(255 255 255 / 0.9) !important;
 }
 
-/* ======================================= Main(Feed) ======================================= */
+/* Main(Feed) ================================================================================== */
 
 
 
-/* ======================================= MarketPlace ======================================= */
+/* MarketPlace ================================================================================== */
 
 /* Black MarketPlace Icon */
 #m_blackm > img {
@@ -1082,22 +1087,22 @@ input:checked+.sliderSml2 {
     background: #b6bac8 !important;
 }
 
-/* ======================================= MarketPlace ======================================= */
+/* MarketPlace ================================================================================== */
 
 
 
-/* ======================================= Black MarketPlace ======================================= */
+/* Black MarketPlace ================================================================================== */
 
 /* Glitch Krunker Logo */
 .glitch:before, .glitch:after {
     display: none !important;
 }
 
-/* ======================================= Black MarketPlace ======================================= */
+/* Black MarketPlace ================================================================================== */
 
 
 
-/* ======================================= Trade ======================================= */
+/* Trade ================================================================================== */
 
 /* Incoming Offers, Outgoing Offers, Trade History */
 #o_in > div:nth-child(1), #o_in > div:nth-child(1) > span, #o_out > div:nth-child(1), #o_out > div:nth-child(1) > span, #o_his > div:nth-child(1), #o_his > div:nth-child(1) > span {
@@ -1115,11 +1120,11 @@ input:checked+.sliderSml2 {
     background: rgb(160 162 203) !important;
 }
 
-/* ======================================= Trade ======================================= */
+/* Trade ================================================================================== */
 
 
 
-/* ======================================= LeaderBoard ======================================= */
+/* LeaderBoard ================================================================================== */
 
 /* Rank Icons */
 .rnkIcon {
@@ -1140,11 +1145,11 @@ input:checked+.sliderSml2 {
     filter: drop-shadow(0px 0px 10px rgba(50, 181, 255, 0.2)) !important;
 }
 
-/* ======================================= LeaderBoard ======================================= */
+/* LeaderBoard ================================================================================== */
 
 
 
-/* ======================================= Games ======================================= */
+/* Games ================================================================================== */
 
 /* Home */
 #mapsHolder > div:nth-child(1) > div > div.bigMenTab.bigMenTabA > span, #mapsHolder > div:nth-child(1) > div > div:nth-child(1) > span {
@@ -1167,11 +1172,11 @@ div#bigMFeatPBtn {
     border-radius: 7px;
 }
 
-/* ======================================= Games ======================================= */
+/* Games ================================================================================== */
 
 
 
-/* ======================================= Mods ======================================= */
+/* Mods ================================================================================== */
 
 /* Home */
 #modsHolder > div:nth-child(1) > div > div.bigMenTab.bigMenTabA > span, #modsHolder > div:nth-child(1) > div > div:nth-child(1) > span {
@@ -1228,11 +1233,11 @@ div#bigMFeatPBtn {
     border-radius: 5px;
 }
 
-/* ======================================= Mods ======================================= */
+/* Mods ================================================================================== */
 
 
 
-/* ======================================= Item List ======================================= */
+/* Item List ================================================================================== */
     
 /* Category...etc Select, Search Item Input */
 #itemsListNav>select, #itemsListNav>input {
@@ -1240,11 +1245,11 @@ div#bigMFeatPBtn {
     background-color: rgb(255 255 255 / 0.8) !important;
 }
 
-/* ======================================= Item List ======================================= */
+/* Item List ================================================================================== */
 
 
 
-/* ======================================= Settings Popup ======================================= */
+/* Settings ================================================================================== */
 
 /* Settings Popup */
 #settingsPop {
@@ -1289,6 +1294,8 @@ div#bigMFeatPBtn {
     backdrop-filter: blur(5px);
     border-radius: 5px;
     padding: 8px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     transition-duration: .2s;
 }
 
@@ -1371,13 +1378,25 @@ input:checked+.slider:active {
 /* Manage Ad Preferences */
 #settHolder > div:nth-child(10) {
     background: linear-gradient(180deg, #54596e 0%, #54596e 100%), #54596e !important;
+    transition: .15s;
 }
 
-/* ================================ Settings Popup ======================================= */
+/* Manage Ad Preferences Hover */
+#settHolder > div:nth-child(10):hover {
+    cursor: pointer;
+    filter: brightness(0.85);
+}
+
+/* Manage Ad Preferences Active */
+#settHolder > div:nth-child(10):active {
+    filter: brightness(0.7);
+}
+
+/* Settings ================================================================================== */
 
 
 
-/* ======================================= Profile ======================================= */
+/* Profile ================================================================================== */
 
 /* Profile Picture */
 .profilePic {
@@ -1719,18 +1738,18 @@ input:checked+.slider:active {
     border-radius: 7px !important;
 }
 
-/* Report, Share Button */
-span#reprtBtn, span#shareBtn {
+/* Report, Share, Flag Button */
+span#reprtBtn, span#shareBtn, span#flagBtn {
     color: rgb(255 255 255 / 0.95) !important;
 }
 
-/* Report, Share Hover Button */
-span#reprtBtn:hover, span#shareBtn:hover, #twitchBtn:hover {
+/* Report, Share, Twitch, Flag Hover Button */
+span#reprtBtn:hover, span#shareBtn:hover, #twitchBtn:hover, span#flagBtn:hover {
     filter: brightness(0.85);
 }
 
-/* Report, Share Active Button */
-span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active {
+/* Report, Share, Twitch, Flag Active Button */
+span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:active {
     filter: brightness(0.7);
 }
 
@@ -1778,8 +1797,8 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active {
 
 /* Report Button */
 #reportBtn {
-    background: #ff8195ed !important;
-    color: #f2f2f2 !important;
+    background: rgb(0 0 0 / 20%) !important;
+    color: rgb(255 255 255 / 95%) !important;
     border-radius: 7px;
 }
 
@@ -1933,21 +1952,11 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active {
     border-radius: 10px !important;
 }
 
-/* Stat Holder Tabs */
-#statHolder > div.bigMenTabs {
-    left: 8px !important;
-}
-
-/* Stat Tab */
-#statTab0, #statTab1, #statTab2 {
-    line-height: 20px !important;
-}
-
-/* ======================================= Profile ======================================= */
+/* Profile ================================================================================== */
 
 
 
-/* ======================================= Clan Page ======================================= */
+/* Clan Page ================================================================================== */
 
 /* Members, Market Cap, Purchase Power and Counts */
 #clanInfo > div > div.clanStatH > div, #clanInfo > div > div.clanStatH > div > span {
@@ -1969,11 +1978,11 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active {
     background: rgb(255 255 255 / 0.3) !important;
 }
 
-/* ======================================= Clan Page ======================================= */
+/* Clan Page ================================================================================== */
 
 
 
-/* ======================================= Map Page ======================================= */
+/* Map Page ================================================================================== */
    
 /* LeaderBoard Tab of Players */
 #mapLeaders > div, #mapLeaders > div > span {
@@ -2013,18 +2022,18 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active {
     backdrop-filter: blur(10px);
 }
 
-/* ======================================= Map Page ======================================= */
+/* Map Page ================================================================================== */
 
 
 
-/* ======================================= Item Sales Page ======================================= */
+/* Item Sales Page ================================================================================== */
 
 #iTabContent_owners > div > div:nth-child(2), 
 #iTabContent_owners > div  {
     color: rgb(255 255 255 / 0.6) !important;
 }
 
-/* ======================================= Item Sales Page ======================================= */
+/* Item Sales Page ================================================================================== */
 
 
 
@@ -2041,7 +2050,6 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active {
 /* in reply post */ #comHolderH > div > div > div > span.postLink > i
 
 {
-    
     color: rgba(242, 242, 255, 0.9) !important;
     filter: drop-shadow(0px 0px 10px rgba(255, 179, 89, 0.2)) !important;
 }
@@ -2385,4 +2393,40 @@ div.mapsVotes
     color: rgb(255 255 255 / 0.85) !important;
     filter: none !important;
     text-shadow: none !important;
+}
+
+/* Verified Icon in Search User */
+#searchList > div > div > i {
+    color: rgb(255 255 255 / 0.95) !important; 
+}
+
+/* By [Username] */
+#mapProfile > div > div:nth-child(3) > div:nth-child(2) > a {
+    opacity: 0.7 !important;
+}
+
+/* Badge Image */
+.badgeImg {
+    filter: invert(0.1) brightness(4) grayscale(1);
+}
+
+/* Clan with Color */
+#clanInfo > div > div.clanInfH > span:nth-child(1) {
+    filter: invert(0.1) brightness(2) grayscale(0.5);
+}
+
+/* Like Icon */
+[style="font-size:33px;vertical-align:middle;margin-top:-5px;color:#eb4034"] {
+    filter: invert(0.1) brightness(2);
+}
+
+/* Profile Gift Button */
+.pGiftButton {
+    border-radius: 10px;
+}
+
+/* Gift Input */
+#giftIn, #giftMsg {
+    border: none !important;
+    background: rgb(255 255 255 / 95%) !important;
 }
