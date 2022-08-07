@@ -1318,7 +1318,7 @@ div.youNewDiv:hover {
 
 /* Chat on Comp Menu */
 #uiBase.onCompMenu #chatHolder {
-    bottom: 20px !important;
+    bottom: 145px;
 }
 
 /* Chat on End Screen */
@@ -2052,7 +2052,7 @@ input:checked+.slider2 {
     color: rgba(5, 0, 61, 0.9);
     transition-duration: 0.2s !important;
 }
-    
+
 /* Voice Icon UI Base */ 
 
  /* on Menu */ #uiBase.onMenu #voiceDisplay, 
@@ -2063,7 +2063,7 @@ input:checked+.slider2 {
      
  /* on Spectate */ #uiBase.onSpect #voiceDisplay {
 
-    bottom: 21px !important;
+    bottom: 21px;
 }
 
 /* Voice on Game */ 
@@ -3112,11 +3112,6 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 
 /* Comp Game Main ================================================================================== */
 
-/* FaceIt Logo */
-#cmpPartnerImg {
-    display: none;
-}
-
 /* Team 1/2 */
 .cmpTmHed {
     text-shadow: none !important;
@@ -3129,7 +3124,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 
 /* Comp Sub Lst */
 #compBtnLst, #compClassPHolder {
-    background: transparent !important;
+    background: rgb(0 0 0 / 30%) !important;
 }
 
 /* Title */
@@ -3143,12 +3138,13 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: 1px solid rgba(225, 225, 225, 0.1) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px);
-    border-radius: 10px;
+    border-radius: 7px;
 }
 
 /* Comp Stat Bar P */
 #cmpStatBarP {
-    background-image: linear-gradient(to right,#939fff,#929cff,94%,#9883ff);
+    background-image: linear-gradient(to right,#0000,#0000,94%,#0000);
+    background: rgba(131, 140, 188, 1) !important;
     border-radius: 5px;
 }
 
@@ -3201,6 +3197,17 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 /* Selected Class */
 .cmpClassGr {
     filter: grayscale(0) blur(5px) !important;
+    animation: fadein .2s;
+}
+
+/* Comp Class Icon */
+.compPlWpIcn {
+    border: 3px solid #fff0 !important;
+}
+
+/* Voice Display on Comp Menu */
+#uiBase.onCompMenu #voiceDisplay {
+    bottom: 145px;
 }
 
 /* Comp Game Main ================================================================================== */
