@@ -1,7 +1,7 @@
 /* Flusothg - Krunker Hub */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2022/08/07 */
+/* 2022/08/22 */
 
 
 /* Configs ================================================================================== */
@@ -1435,7 +1435,7 @@ input:checked+.slider:active {
     position: absolute;
     left: 385.6px;
     top: -8.5px;
-    content: url('https://nighy01.github.io/krunker/customcss/flutest/icons/hackericon.png');
+    content: url('https://nighy01.github.io/krunker/customcss/flusothg/icons/hackericon.png');
     transform: scale(.85);
 }
 
