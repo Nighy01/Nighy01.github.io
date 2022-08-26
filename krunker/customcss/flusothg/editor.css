@@ -1,7 +1,7 @@
 /* Flusothg - Krunker Editor */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2022/08/19 */
+/* 2022/08/26 */
 
 
 /* Configs ================================================================================== */
@@ -553,4 +553,25 @@ hr {
 /* Script Saved Icon */
 #warning_scriptSaving > div > i {
     color: rgb(255 255 255 / 95%) !important;
+}
+
+/* Warning Icon */
+
+/* Error: Socket timed out */
+#warning_error > div > i,
+
+/* Collidable Object limit */
+#warning_objects_col > div > i,
+
+/* Object limit */
+#warning_objects > div > i,
+
+/* Verified/Premium Collidable Object limit */
+#warning_objectsF_col > div > i,
+
+/* Verified/Premium Object limit */
+#warning_objectsF > div > i
+
+{
+    color: rgb(255 255 255 / 0.95) !important;
 }
