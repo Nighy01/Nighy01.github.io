@@ -1,7 +1,7 @@
 /* Flusothg - Krunker Hub */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2022/08/22 */
+/* 2022/09/24 */
 
 
 /* Configs ================================================================================== */
@@ -34,17 +34,17 @@
 /* Loading Icon Spin */ 
 @keyframes loadicospin {
     0% { 
-    transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% { 
-    transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
 /* ------Popup Animation------ */
 
-/* Width */
-@keyframes popup_width_animat {
+/* Width Fix */
+@keyframes popup_width_animatFix {
     from {
         transform: scale3d(0.35, 0.35, 0.35) translate(-141%,-153%);
     }
@@ -53,13 +53,57 @@
     }
 }
 
-/* Height */
-@keyframes popup_height_animat {
+/* Height Fix */
+@keyframes popup_height_animatFix {
     from {
         transform: scale3d(0.35, 0.35, 0.35) translate(-141%,-153%);
     }
     to {
         transform: scale3d(1) translate(-50%,-50%);
+    }
+}
+
+/* Width 1 */
+@keyframes popup_width_animat_1 {
+    from {
+        transform: scale3d(0.35, 0.35, 0.35) translate(-100%,-100%);
+    }
+
+    to {
+        transform: scale3d(1.01, 1.01, 1.01) translate(-49.5%,-49.5%);
+    }
+}
+
+/* Width 2 */
+@keyframes popup_width_animat_2 {
+    from {
+        transform: scale3d(1.01, 1.01, 1.01) translate(-49.5%,-49.5%);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1) translate(-50%,-50%);
+    }
+}
+
+/* Height 1 */
+@keyframes popup_height_animat_1 {
+    from {
+        transform: scale3d(0.35, 0.35, 0.35) translate(-100%,-100%);
+    }
+
+    to {
+        transform: scale3d(1.01, 1.01, 1.01) translate(-49.5%,-49.5%);
+    }
+}
+
+/* Height 2 */
+@keyframes popup_height_animat_2 {
+    from {
+        transform: scale3d(1.01, 1.01, 1.01) translate(-49.5%,-49.5%);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1) translate(-50%,-50%);
     }
 }
 
@@ -151,11 +195,27 @@
     }
 }
 
+/* Trade Popup Animat */
+@keyframes tradePopAnimat {
+    from {
+        transform: translate(-70%,-50%);
+    }
+
+    to {
+        transform: translate(-50%,-50%);
+    }
+}
+
 /* KeyFrames ================================================================================== */
 
 
 
 /* Main(Feed) ================================================================================== */
+
+/* Texts */
+* {
+    -webkit-text-stroke: 0.1px !important;
+}
 
 /* Scrollbar Thumb */
 ::-webkit-scrollbar-thumb {
@@ -215,7 +275,7 @@
 
 /* Security Challenge Popup */
 #captcha-holder > div {
-    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     box-sizing: border-box !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 7px !important;
@@ -841,7 +901,7 @@ div.button:active {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
 
@@ -876,7 +936,7 @@ div.button:active {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
     transform: scale3d(1) translate(-50%,-50%);
 }
@@ -893,7 +953,7 @@ div.button:active {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
     transform: scale3d(1) translate(-50%,-50%);
 }
@@ -1021,6 +1081,7 @@ div.button:active {
 /* Search Button */
 div#marketSearchB, div#invSortB {
     background: linear-gradient(180deg, rgb(178 179 214) 0%, rgb(171 179 223) 100%), rgb(152 149 171) !important;
+    border-radius: 10px;
 }
 
 /* Filter/Sort Popup */
@@ -1030,7 +1091,7 @@ div#marketSearchB, div#invSortB {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
 
@@ -1196,7 +1257,7 @@ div#bigMFeatPBtn {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
 
@@ -1258,7 +1319,7 @@ div#bigMFeatPBtn {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
     transform: scale3d(1) translate(-50%,-50%);
 }
@@ -1590,8 +1651,8 @@ input:checked+.slider:active {
 
 /* Dont view on stream! Popup */ 
 #confSubmitPop > div:nth-child(1) {
-    color: #ff9494 !important;
-    font-size: 23px !important;
+    color: rgb(255 227 207) !important;
+    font-size: 17.9px !important;
 }
 
 /* Following/Followers List Popup */
@@ -1601,7 +1662,7 @@ input:checked+.slider:active {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
     transform: scale3d(1) translate(-50%,-50%);
 }
@@ -1775,7 +1836,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
 }
 
@@ -1791,7 +1852,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
 }
 
@@ -1847,16 +1908,17 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 .graphHeader {
     background: rgba(88, 86, 102, 0.9) !important;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 10px !important;
 }
 
 /* ^Chart */
 .chartjs-render-monitor {
-    background: rgba(222, 219, 239, 0.9);
+    background: rgb(0 0 0 / 0.65);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
+    filter: grayscale(1) brightness(3.2);
 }
 
 /* Class Card */
@@ -2135,7 +2197,7 @@ div.buttonS, div.buttonH {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(40px) !important;
     border-radius: 10px !important;
-    animation: popup_width_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
 
@@ -2174,6 +2236,8 @@ div.buttonS, div.buttonH {
 #itemViewPop {
     border: none !important;
     background: rgb(0 0 0 / 0.3);
+    border-radius: 10px;
+    animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
 }
 
 /* ^Name */
@@ -2423,10 +2487,138 @@ div.mapsVotes
 /* Profile Gift Button */
 .pGiftButton {
     border-radius: 10px;
+    background: rgb(0 0 0 / 20%);
+    transition: .15s;
+}
+
+/* Profile Gift Hover Button */
+.pGiftButton:hover {
+    background: rgb(0 0 0 / 30%);
+}
+
+/* Profile Gift Active Button */
+.pGiftButton:active {
+    background: rgb(0 0 0 / 50%);
 }
 
 /* Gift Input */
 #giftIn, #giftMsg {
     border: none !important;
     background: rgb(255 255 255 / 95%) !important;
+}
+
+/* Creator Skin Item */
+.creationSkinItem {
+    border: 3px solid rgb(0 0 0 / 0%) !important;
+    background-color: rgb(0 0 0 / 0%) !important;
+}
+
+/* Creator Skin Image */
+.creationSkinImg {
+    background-color: rgb(0 0 0 / 0.3);
+    border-radius: 10px;
+}
+
+/* Creator Skin Name */
+.creationSkinName {
+    color: rgb(255 255 255 / 95%);
+    filter: none !important;
+}
+
+/* Trade Popup */
+#tradePop {
+    color: rgb(255 255 255 / 0.95) !important;
+    background-color: #0000 !important;
+    box-shadow: none !important;
+    transform: translate(-50%,-50%) scale(1);
+    animation: fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, tradePopAnimat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    transition-duration: 500ms;
+}
+
+.tListN.inv {
+    background-color: rgb(0 0 0 / 0%);
+}
+
+.tListN.trade {
+    background-color: rgb(0 0 0 / 0%);
+}
+
+.tListN {
+    font-size: 18px;
+    color: rgb(255 255 255 / 95%);
+    text-align: left;
+    border-radius: 10px;
+}
+
+/* Submit Offer */
+.tSubOffer {
+    color: rgb(255 255 255 / 0.95);
+    background-color: rgb(0 0 0 / 0.3);
+    border-radius: 10px;
+}
+
+.tSubOffer:hover {
+    font-size: 16px;
+    background-color: rgb(180 180 180 / 25%);
+}
+
+/* Trade Swap(?) */
+#tradePop > div.material-icons.tradeSwap {
+    filter: grayscale(1) opacity(0.95);
+    transition: .15s;
+}
+
+/* Trade Item Animation */
+@keyframes tItemAnimat {
+    from {
+        transform: translateY(-45px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+/* Trade Item */
+.tItemHolder {
+    color: rgb(255 255 255 / 0.95);
+    padding: 15px;
+    background-color: rgb(0 0 0 / 50%);
+    border: 2px solid #0000 !important;
+    animation: fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, tItemAnimat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    border-radius: 10px;
+}
+
+/* Trade Item Locked */
+.tItemBound {
+    padding: 30px;
+    padding-right: 32px;
+    top: 0px;
+    left: 0px;
+    background: rgb(0 0 0 / 90%) !important;
+    backdrop-filter: blur(2.5px);
+    border-radius: 10px;
+}
+
+/* Trade Item Name */
+.tItemN {
+    color: rgb(255 255 255 / 95%);
+    right: 3px;
+    width: 80px;
+}
+
+.tItemCnt {
+    color: rgb(255 255 255 / 95%);
+    top: 3px;
+    right: 5px;
+}
+
+#tMsg , .tSearch {
+    background-color: rgb(0 0 0 / 0.5);
+    border-radius: 10px;
+    color: rgb(255 255 255 / 95%) !important;
+    border: none !important;
+}
+
+#declineBtn {
+    background-color: #eb5656 !important;
 }
