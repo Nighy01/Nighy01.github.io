@@ -1,7 +1,7 @@
 /* Flusothg - Krunker */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2022/09/24 */
+/* 2022/09/25 */
 
 
 /* Configs ================================================================================== */
@@ -555,6 +555,82 @@
 
     to {
         transform: translate(-50%, 0%);
+    }
+}
+
+/* Purchase KR Selector Animation */
+@keyframes purchaseKRSelect_Animat {
+    from {
+        transform: translateX(-70%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Trade Chat Holder Animation */
+@keyframes tradeChatHolder_Animat {
+    from {
+        transform: translateX(-120px) translateY(-115px);
+    }
+    to {
+        transform: translateX(-100px) translateY(-115px);
+    }
+}
+
+/* RainBow B Modify */
+@keyframes rainBow_ModifyB {
+    0%,100% {
+        border-color: rgb(237 20 61 / 0.3);
+        box-shadow: 0px 0px 30px 2px rgb(237 20 61 / 0.03);
+    }
+
+    20% {
+        border-color: rgb(255 165 0 / 0.3);
+        box-shadow: 0px 0px 30px 2px rgb(255 165 0 / 0.03);
+    }
+
+    40% {
+        border-color: rgb(255 255 0 / 0.3);
+        box-shadow: 0px 0px 30px 2px rgb(255 255 0 / 0.03);
+    }
+
+    60% {
+        border-color: rgb(0 255 0 / 0.3);
+        box-shadow: 0px 0px 30px 2px rgb(0 255 0 / 0.03);
+    }
+
+    80% {
+        border-color: rgb(0 0 205 / 0.3);
+        box-shadow: 0px 0px 30px 2px rgb(0 0 205 / 0.03);
+    }
+}
+
+/* Trade Item Holder Animation */
+@keyframes tradeItemHolder_Animat {
+    from {
+        transform: translateY(-45px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+/* Blur Switch Purshase Effect */
+@keyframes blurswitch_purshase {
+    from {
+        background: rgb(6 2 2 / 10%);
+        opacity: 0;
+        backdrop-filter: blur(10px);
+        transition-duration: .2s;
+    }
+    to {
+        background: rgb(6 2 2 / 75%);
+        opacity: 1;
+        backdrop-filter: blur(40px);
+        transition-duration: .2s;
     }
 }
 
@@ -2389,14 +2465,32 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
 
 /* Purchase Selector Popup */
 #purchaseSelector {
-    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
-    border-radius: 10px !important;
-    animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
-    transform: scale3d(1) translate(-50%,-50%);
-    transition-duration: .2s;
+    background: rgb(255 255 255 / 0) !important;
+    box-shadow: none !important;
+    transform: translateX(-50%);
+    animation: fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, purchaseKRSelect_Animat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    transition-duration: 500ms;
+}
+
+/* Reversing a payment can result in the termination of your krunker account. */
+[style="color:rgba(255,255,255,0.4);font-size:20px;margin-bottom:10px;text-align:center;"] {
+    width: 1000px;
+    margin-left: -120px;
+}
+
+/* Pay Method */
+
+/* Credit/Debit Card (By Xsolla) */
+#xsollaPayB,
+
+/* Paypal */
+#paypal-button,
+
+/* Pay on Apple/Android App, Pay with Cash/Crypto */
+#androidPayB
+
+{
+    transition: .15s;
 }
 
 /* Speech Box (Ex. Welcome Back!...etc) */
@@ -6343,18 +6437,36 @@ div.challHeadrBlck {
     border-radius: 10px;
 }
 
+/* Challenge Image C */
+.chalImgC {
+    background-color: rgb(0 0 0 / 50%) !important;
+    border: 4px solid #0000 !important;
+    filter: grayscale(0.1) hue-rotate(185deg);
+}
+
 /* Challenge XP Value */
 .chalXPVal {
     text-shadow: none !important;
     border-radius: 7px;
 }
 
-/* Challenge Xp Bar */
+/* Challenge XP Bar */
+.chalXPBar {
+    background-color: rgb(0 0 0 / 50%);
+}
+
+/* Challenge XP Bar C */
 .chalXPBarC {
     background: rgb(145 155 254);
     height: 85%;
     transform: translateY(2.5px) translateX(2px);
     border-radius: 7px;
+}
+
+/* Challenge Rew Skn */
+.chalRewSkn {
+    background: rgb(0 0 0 / 50%);
+    border: 2px solid #0000 !important;
 }
 
 /* +KR and Junks */
@@ -6375,7 +6487,28 @@ div.challHeadrBlck {
 /* Challenge Map Card */
 .challMapCrd {
     border: 3px solid #0000 !important;
+    transition: .15s;
 }
+
+/* Challenge Map Prg */
+.challMapPrg {
+    background: rgb(0 0 0 / 50%);
+    backdrop-filter: blur(5px);
+    border-radius: 10px 0px 0px 0px;
+}
+
+/* ---Nightmare Challenges--- */
+[style="margin-top:0px;box-shadow: 0 0 14px #ffa000;background:rgb(79 50 0 / 40%);border:4px solid #ff9c00;"], 
+[style="margin-top:20px;box-shadow: 0 0 14px #ffa000;background:rgb(79 50 0 / 40%);border:4px solid #ff9c00;"] {
+    box-shadow: 0 0 50px rgb(239 105 20 / 0.3) !important;
+    background: rgb(181 71 0 / 30%) !important;
+    border: 4px solid rgb(239 105 20 / 0.1) !important;
+}
+
+[style="border-left: 3px solid #ff9c00;"] {
+    border-left: rgb(239 105 20 / 0.1) !important;
+}
+/* ---Nightmare Challenges--- */
 
 /* Bid KR */
 [style="color:#696969"] {
@@ -6841,9 +6974,52 @@ div#rentServBtn:active {
     animation: chatmsganimat 0.5s;
 }
 
+/* Welcome to the Junkyard */
+[style="top:40px;text-shadow: 0 0 10px black;"] {
+    text-shadow: none !important;
+}
+
+/* Craft brand new... */
+#bigMFeatDesc2 {
+    backdrop-filter: blur(0px) !important;
+    background: rgb(0 0 0 / 0%) !important;
+}
+
 /* Junk Card */
 .crftRcpeCrd {
-    background: rgb(18 18 18 / 60%) !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: none !important;
+    background-color: #0000 !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px !important;
+    transition-duration: .2s;
+}
+
+/* Junk Icon */
+[style="color:#cc51f8;font-size:38px;margin-left:5px;vertical-align:top;"] {
+    color: rgb(255 255 255 / 95%) !important;
+}
+
+/* Crft Item Req */
+.crftItmReq {
+    opacity: 0.6;
+    transition: .15s;
+}
+
+/* Crft Item Name */
+.crftItmNm {
+    filter: grayscale(0.5) brightness(1.2);
+}
+
+[style="color:#292929"] {
+    filter: grayscale(0.5) brightness(3);
+}
+
+/* Not enough Junk / Sold out */
+.crftTim {
+    background: rgb(0 0 0 / 50%);
 }
 
 /* Junk Card View */
@@ -6867,4 +7043,318 @@ div#rentServBtn:active {
 #shopJnkDsp {
     background: rgb(0 0 0 / 50%);
     backdrop-filter: blur(10px);
+}
+
+/* Trade Accept */
+[style="color:#5ce05a"] {
+    color: rgb(168 255 186 / 90%) !important;
+}
+
+/* Trade List Name */
+.tListN {
+    text-align: left;
+}
+
+/* XXX Inventory */
+.tListN.inv {
+    background-color: #0000 !important;
+}
+
+/* You 0/5 */
+.tListN.trade {
+    background-color: #0000 !important;
+}
+
+/* ^0/5 */
+.tTotal {
+    color: rgb(255 255 255 / 50%) !important;
+}
+
+/* READY */
+.tReady {
+    color: rgb(255 255 255 / 50%) !important;
+    animation: fadein .2s;
+    transition: .2s;
+}
+
+/* Accept Offer */
+#tSubName {
+    text-shadow: none !important;
+    color: rgb(255 255 255 / 0.95);
+}
+
+/* ^Button */
+.tSubCheck {
+    border-radius: 10px;
+    background-color: rgb(0 0 0 / 30%);
+    transition: .15s;
+}
+
+/* ^Button Hover */
+.tSubCheck:hover {
+    background-color: rgb(0 0 0 / 45%) !important;
+}
+
+/* ^Button Active */
+.tSubCheck:active {
+    background-color: rgb(0 0 0 / 60%) !important;
+}
+
+/* ^Disabled */
+input:disabled+.tSubCheck {
+    background-color: rgb(255 255 255 / 0.3) !important;
+    opacity: 0.5;
+}
+
+/* Decline Offer */
+#tDecName {
+    text-shadow: none !important;
+    color: rgb(255 255 255 / 95%);
+}
+
+/* ^Button */
+.tDecCheck {
+    border-radius: 10px;
+    background-color: rgb(0 0 0 / 30%);
+    transition: .15s;
+}
+
+/* ^Button Hover */
+.tDecCheck:hover {
+    background-color: rgb(0 0 0 / 45%) !important;
+}
+
+/* ^Button Active */
+.tDecCheck:active {
+    background-color: rgb(0 0 0 / 60%) !important;
+}
+
+/* ^Disabled */
+input:disabled+.tDecCheck {
+    background-color: rgb(255 255 255 / 0.3) !important;
+}
+
+/* Est. Value [XXX] KR */
+.estOfferVal {
+    color: rgb(255 255 255 / 95%) !important;
+}
+
+/* ^[XXX] KR */
+#offerVal0 > span, #offerVal1 > span {
+    color: rgb(255 255 255 / 0.6) !important;
+}
+
+/* Trade Chat Holder */
+#tradeChatHolder {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    transform: translateX(-100px) translateY(-115px);
+    padding: 10px;
+    width: 310px;
+    max-height: 610px;
+    bottom: calc(50% - 427px) !important;
+    animation: fadein 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, tradeChatHolder_Animat 250ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    transition-duration: .2s !important;
+}
+
+/* Trade Chat List */
+#tradeChatList {
+    overflow-y: auto !important;
+    max-height: 560px;
+}
+
+/* Trade Chat Item */
+.tradeChatItem {
+    color: rgb(255 255 255 / 0.95);
+    max-width: 310px;
+    filter: grayscale(0.9) opacity(0.95);
+}
+
+/* Trade Chat Input */
+#tradeChatInput {
+    color: rgb(255 255 255 / 0.95) !important;
+    font-size: 15px;
+    background-color: rgba(0,0,0,.4);
+    border: none !important;
+    border-radius: 5px !important;
+}
+
+/* Search Item Trade Input */
+.tSearch {
+    background: rgba(245, 246, 255, 0.8) !important;
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 7px !important;
+}
+
+/* Uncommon */
+[style="border: 2px solid #b2f252;"], [style="border: 2px solid rgb(178, 242, 82); display: inline-block;"] {
+    border: 2px solid rgb(185 255 211 / 0.6) !important;
+    box-shadow: 0px 0px 30px 2px rgb(68 255 140 / 0.2) !important;
+}
+
+/* Rare */
+[style="border: 2px solid #2196F3;"], [style="border: 2px solid rgb(33, 150, 243); display: inline-block;"] {
+    border: 2px solid rgb(185 234 255 / 60%) !important;
+    box-shadow: 0px 0px 30px 2px rgb(0 130 255 / 30%) !important;
+}
+
+/* Epic */
+[style="border: 2px solid #E040FB;"], [style="border: 2px solid rgb(224, 64, 251); display: inline-block;"] {
+    border: 2px solid rgb(208 185 255 / 60%) !important;
+    box-shadow: 0px 0px 30px 2px rgb(127 30 255 / 20%) !important;
+}
+
+/* Legendary */
+[style="border: 2px solid #FBC02D;"], [style="border: 2px solid rgb(251, 192, 45); display: inline-block;"] {
+    border: 2px solid rgb(255 191 106 / 60%) !important;
+    box-shadow: 0px 0px 30px 2px rgb(255 134 29 / 30%) !important;
+}
+
+/* Relic */
+[style="border: 2px solid #ed4242;"], [style="border: 2px solid rgb(237, 66, 66); display: inline-block;"] {
+    border: 2px solid rgb(255 115 155 / 60%) !important;
+    box-shadow: 0px 0px 30px 2px rgb(255 0 76 / 20%) !important;
+}
+
+/* Contraband */
+[style="border: 2px solid #292929;"], [style="border: 2px solid rgb(41, 41, 41); display: inline-block;"] {
+    border: 2px solid rgb(181 181 181 / 60%) !important;
+    box-shadow: 0px 0px 30px 2px rgb(181 181 181 / 74%) !important;
+}
+
+/* Unobtainable */
+[style="border: 2px solid #fff53d;"], [style="border: 2px solid rgb(255, 245, 61); display: inline-block;"] {
+    border: 2px solid rgb(249 255 110 / 60%);
+    box-shadow: 0px 0px 30px 2px rgb(254 255 146 / 30%);
+    animation: rainBow_ModifyB 900ms linear infinite, fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, tradeItemHolder_Animat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+}
+
+/* Trade Item Holder */
+.tItemHolder {
+    animation: fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, tradeItemHolder_Animat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    transition: .15s;
+    border-radius: 8px;
+}
+
+/* Trade Item Locked */
+.tItemBound {
+    border-radius: 8px;
+    background-color: rgb(0 0 0 / 80%);
+    backdrop-filter: blur(2.5px);
+    filter: grayscale(1) opacity(0.95);
+}
+
+/* Badge Locked */
+.badgeBound {
+    background-color: rgb(0 0 0 / 0.5) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding-left: 138px;
+    padding-bottom: 22px;
+    animation: fadein .2s;
+    transition-duration: .15s;
+}
+
+/* Badge Card */
+.badgeCard {
+    color: rgb(255 255 255 / 0.95) !important;
+    background-color: rgba(0,0,0,.3) !important;
+    border-radius: 10px !important;
+    text-shadow: none !important;
+    transition: .15s;
+}
+
+/* ^Hover */
+.badgeCard:hover {
+    transform: scale(.96);
+    filter: brightness(1) !important;
+    background: rgb(0 0 0 / 45%) !important;
+}
+
+/* ^Active */
+.badgeCard:active {
+    transform: scale(.92);
+    filter: brightness(1) !important;
+    background: rgb(0 0 0 / 60%) !important;
+}
+
+/* Badge Desc */
+.badgeDesc {
+    color: rgb(255 255 255 / 0.5);
+}
+
+/* Purchase Response */
+#purchaseResponse {
+    background: rgb(6 2 2 / 75%);
+    backdrop-filter: blur(40px);
+    animation: blurswitch_purshase .2s;
+    transition-duration: .2s;
+}
+
+/* Purchase Response Popup (Eg. Invalid Creator Code...etc) */
+#purchaseRespH {
+    color: rgb(255 255 255 / 80%) !important;
+    background: #0000 !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition-duration: .2s !important;
+    width: 700px;
+    top: calc(100% - 54%);
+    left: calc(100% - 48.5%);
+    animation: fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    transition-duration: 500ms;
+}
+
+/* 2FA Popup Background */
+#twoFAPop {
+    background: var(--dark-bg-color);
+    backdrop-filter: blur(40px);
+    animation: blurswitch .2s;
+    transition-duration: .2s;
+}
+
+/* 2FA Popup */
+#twoFAWindow {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 10px !important;
+    animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transform: scale3d(1) translate(-50%,-50%);
+    transition-duration: .2s !important;
+}
+
+/* ^2-Factor Auth... */
+.twoFAHeader {
+    color: rgb(255 255 255 / 0.95) !important;
+    border-bottom: 4px solid #0000 !important;
+    background-color: rgb(0 0 0 / 50%) !important;
+    box-shadow: none !important;
+    text-align: left;
+    padding-left: 19px;
+    font-size: 23px;
+}
+
+/* ^Scan QR code with... */
+#twoFAmsg {
+    font-size: 20px;
+    filter: brightness(1.35) opacity(0.95);
+}
+
+/* ^or */
+#twoFAmsg > div {
+    color: rgb(255 255 255 / 95%) !important;
+}
+
+/* ^Submit */
+#twoFAbtn {
+    border-radius: 8px;
+    font-size: 20px;
+    color: rgb(255 255 255 / 0.95);
+    background-color: rgb(0 0 0 / 30%);
 }
