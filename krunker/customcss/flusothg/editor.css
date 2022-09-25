@@ -1,7 +1,7 @@
 /* Flusothg - Krunker Editor */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2022/09/24 */
+/* 2022/09/25 */
 
 
 /* Configs ================================================================================== */
@@ -697,4 +697,66 @@ input:checked+.slider2 {
 /* Copy Paste Map Text Here */
 [style="color:rgba(255,255,255,0.7);font-size:19px;text-align:center;margin-bottom:15px;margin-top: -10px;"] {
     text-align: left !important;
+}
+
+/* 2FA Popup Background */
+#twoFAPop {
+    background: rgb(0 0 0 / 0.6);
+    backdrop-filter: blur(40px);
+    animation: blurswitch .2s;
+    transition-duration: .2s;
+}
+
+/* 2FA Popup */
+#twoFAWindow {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 10px !important;
+    animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transform: scale3d(1) translate(-50%,-50%);
+    transition-duration: .2s !important;
+}
+
+/* ^2-Factor Auth... */
+.twoFAHeader {
+    color: rgb(255 255 255 / 0.95) !important;
+    border-bottom: 4px solid #0000 !important;
+    background-color: rgb(0 0 0 / 50%) !important;
+    box-shadow: none !important;
+    text-align: left;
+    padding-left: 19px;
+    font-size: 23px;
+}
+
+/* ^Scan QR code with... */
+#twoFAmsg {
+    font-size: 20px;
+    color: rgb(255 255 255 / 0.95) !important;
+    filter: opacity(0.95);
+}
+
+/* ^Submit */
+#twoFAbtn {
+    border-radius: 8px;
+    font-size: 20px;
+    color: rgb(255 255 255 / 0.95);
+    background-color: rgb(0 0 0 / 30%);
+}
+
+/* For lost Passwords/Accounts... */
+[style="width:100%;text-align:center;margin-top:10px;background-color:rgba(0,0,0,0.3);padding-top:10px;padding-bottom:20px;"] {
+    border-radius: 10px;
+}
+
+/* Login */
+#referralHeader {
+    background-color: rgb(0 0 0 / 0.4);
+    border-radius: 10px;
+}
+
+/* Popup Message */
+[style="text-align:center;font-size:20px;color:rgba(255,255,255,0.5)"] {
+    font-size: 17px !important;
 }

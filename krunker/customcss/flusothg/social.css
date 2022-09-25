@@ -246,6 +246,18 @@
     }
 }
 
+/* Page 01 Animation */
+@keyframes page01animat {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
 /* KeyFrames ================================================================================== */
 
 
@@ -617,15 +629,16 @@
     background-color: rgb(156 157 191 / 70%) !important;
     backdrop-filter: var(--CardBlur) !important;
     height: 326px;
+    border-radius: 10px;
 }
 
 /* Krunker News Message Box */
 .sideBarItem {
     border-bottom: 1px solid rgb(0 0 0 / 0%) !important;
-    background-color: rgb(255 255 255 / 30%) !important;
+    background-color: rgb(0 0 0 / 0.25) !important;
     border: 3px solid rgb(0 0 0 / 0%) !important;
-    color: #fffffff2 !important;
-    border-radius: 5px;
+    color: rgb(255 255 255 / 95%) !important;
+    border-radius: 10px;
 }
 
 /* Krunker News Header */
@@ -640,6 +653,8 @@
     -moz-box-shadow: none !important;
     box-shadow: none !important;
     backdrop-filter: var(--CardBlur);
+    animation: page01animat .3s;
+    transition-duration: .3s;
 }
 
 /* Post Scroll */
@@ -743,7 +758,7 @@
 
 /* Follow Hover Button */
 .reqFollB:hover {
-    background-color: #5d5d5d !important;
+    background-color: rgb(0 0 0 / 30%) !important;
 }
 
 /* Follow Button */
@@ -1022,6 +1037,7 @@ div.button:active {
 #leftBox {
     background-color: rgb(156 157 191 / 70%) !important;
     backdrop-filter: var(--CardBlur) !important;
+    border-radius: 10px;
 }
 
 /* New Feed Tabs */
@@ -1558,6 +1574,7 @@ input:checked+.slider:active {
     backdrop-filter: blur(40px);
     border-radius: 10px !important;
     transition-duration: .2s;
+    animation: page01animat .3s;
 }
 
 /* Since */
@@ -2761,4 +2778,50 @@ div.mapsVotes
 .offerHolder {
     background-color: rgb(0 0 0 / 30%) !important;
     color: rgb(255 255 255 / 50%);
+}
+
+/* 2FA Popup Background */
+#twoFAPop {
+    background: rgb(0 0 0 / 0.6);
+    backdrop-filter: blur(40px);
+    animation: blurswitch .2s;
+    transition-duration: .2s;
+}
+
+/* 2FA Popup */
+#twoFAWindow {
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 10px !important;
+    animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transform: scale3d(1) translate(-50%,-50%);
+    transition-duration: .2s !important;
+}
+
+/* ^2-Factor Auth... */
+.twoFAHeader {
+    color: rgb(255 255 255 / 0.95) !important;
+    border-bottom: 4px solid #0000 !important;
+    background-color: rgb(0 0 0 / 50%) !important;
+    box-shadow: none !important;
+    text-align: left;
+    padding-left: 19px;
+    font-size: 23px;
+}
+
+/* ^Scan QR code with... */
+#twoFAmsg {
+    font-size: 20px;
+    color: rgb(255 255 255 / 0.95) !important;
+    filter: opacity(0.95);
+}
+
+/* ^Submit */
+#twoFAbtn {
+    border-radius: 8px;
+    font-size: 20px;
+    color: rgb(255 255 255 / 0.95);
+    background-color: rgb(0 0 0 / 30%);
 }
