@@ -1137,19 +1137,19 @@ div.youNewDiv:hover {
 /* Download Client Button */
 [src="./img/client.png"] {
     content: url(https://i.imgur.com/XkDeUPp.png) !important;
-    transform: translate(1px) !important;
+    transform: translate(3px) !important;
     transition-duration: .15s;
 }
 
 /* Download Client Hover Button */
 [src="./img/client.png"]:hover {
-    transform: translate(1px) scale(.88) !important;
+    transform: translate(3px) scale(.88) !important;
     filter: brightness(0.88);
 }
 
 /* Download Client Active Button */
 [src="./img/client.png"]:active {
-    transform: translate(1px) scale(.75) !important;
+    transform: translate(3px) scale(.75) !important;
     filter: brightness(0.7);
 }
 
@@ -1184,13 +1184,18 @@ div.youNewDiv:hover {
 }
 
 /* Reddit Button */
-#headerRightSocial > div:nth-child(3) > span {
-    transform: translate(7px);
+#headerRightSocial > div:nth-child(4) > span {
+    transform: translate(14px);
 }
 
 /* Discord Button */
+#headerRightSocial > div:nth-child(3) > span {
+    transform: translate(14px);
+}
+
+/* Facebook Button */
 #headerRightSocial > div:nth-child(2) > span {
-    transform: translate(5px);
+    transform: translate(14px);
 }
 
 /* Menu Social B */
