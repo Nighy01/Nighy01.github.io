@@ -1,7 +1,7 @@
 /* Flusothg - Krunker Hub */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2022/09/25 */
+/* 2022/10/27 */
 
 
 /* Configs ================================================================================== */
@@ -1107,6 +1107,7 @@ div.button:active {
 /* Giveaway Post Feed */
 .krGivPost {
     text-shadow: none;
+    filter: grayscale(1) brightness(1.2) opacity(0.95);
 }
 
 /* Giveaway KR Text Post Feed */
@@ -2699,7 +2700,7 @@ div.mapsVotes
 
 /* NO Button */
 #declineBtn {
-    background-color: #eb5656 !important;
+    background-color: rgb(117 0 0 / 20%) !important;
 }
 
 /* Uncommon */
@@ -2836,4 +2837,8 @@ div.mapsVotes
     font-size: 20px;
     color: rgb(255 255 255 / 0.95);
     background-color: rgb(0 0 0 / 30%);
+}
+
+#confQSPop > div:nth-child(2) {
+    filter: brightness(3.5);
 }
