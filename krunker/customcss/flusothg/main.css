@@ -1,7 +1,7 @@
 /* Flusothg - Krunker */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2022/10/27 */
+/* 2022/12/05 */
 
 
 /* Configs ================================================================================== */
@@ -739,9 +739,10 @@ div#aHolder {
 
 /* Main ================================================================================== */
 
-/* Texts */
+/* All Components */
 * {
     -webkit-text-stroke: 0.1px !important;
+    transition-duration: .2s;
 }
 
 /* instructionsUpdate Links */
@@ -1487,6 +1488,7 @@ div.youNewDiv:hover {
 /* Chat Input */
 #chatInput {
     border-radius: 8px !important;
+    width: 274px !important;
 }
 
 /* Voice KeyBind */
@@ -2517,7 +2519,8 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
 
 /* Customize Selector Container */
 #selectorContainer {
-    background-color: rgb(0 0 0 / 0%) !important;
+    background-color: rgb(0 0 0 / 0) !important;
+    margin-top: 0px;
 }
 
 /* Menu Class Icons */
@@ -3481,6 +3484,11 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     transition-duration: .4s;
 }
 
+/* Death, KDR, Star Icons */
+#deathsIcon, #kdIcon, #scoreCount > i {
+    filter: brightness(999) grayscale(1) opacity(0.95) !important;
+}
+
 /* Chat on Game */
 #uiBase.onGame #chatHolder {
     left: 15px;
@@ -3585,6 +3593,16 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 .weapIcon {
     width: 120px;
     height: 70px;
+}
+
+/* Selected Weapon */
+[style="opacity: 1;"], [style="opacity: 1; margin-right: 25px;"] {
+    transform: scale(1.2) translateX(-10px);
+}
+
+/* Unselected Weapon */
+[style="opacity: 0.7;"], [style="opacity: 0.7; margin-right: 25px;"] {
+    filter: brightness(0.75);
 }
 
 /* Weap Key */
@@ -3804,13 +3822,35 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     animation: ammo_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
+/* Reload Message Animation */
+@keyframes reloadMsg {
+    from {
+        bottom: calc(50% - 70px);
+        opacity: 0;
+    }
+    to {
+        bottom: calc(50% - 90px);
+        opacity: 1;
+    }
+}
+
+/* Reload Message Notify */
+@keyframes reloadMsg_Notify {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* Reload Message */
 #reloadMsg {
     bottom: calc(50% - 90px);
     font-size: 17px;
     background-color: transparent !important;
     border: none !important;
-    animation: fadein .2s;
+    animation: reloadMsg .2s, reloadMsg_Notify .7s infinite cubic-bezier(1, 0, 0, 1);
 }
 
 /* Press [G] */
@@ -4468,12 +4508,17 @@ th, tr {
     border-radius: 8px;
 }
 
+/* Tab Holder */
+#tabHolder {
+    background-color: rgb(0 0 0 / 15%) !important;
+    border-radius: 10px !important;
+}
+
 /* Tab Selected */
 .tabHeader.selected {
     border-bottom: none !important;
-    background: rgb(156 155 174 / 70%) !important;
-    border-radius: 5px;
-    backdrop-filter: blur(10px);
+    background: rgb(0 0 0 / 25%) !important;
+    border-radius: 10px;
     cursor: default;
     color: white !important;
     transition-duration: .2s;
@@ -4482,10 +4527,23 @@ th, tr {
 /* Tab Hover */
 .tabHeader:hover {
     border-bottom: none !important;
-    background: rgb(193 192 215 / 70%) !important;
-    border-radius: 5px;
-    backdrop-filter: blur(10px);
+    background: rgb(0 0 0 / 35%) !important;
+    border-radius: 10px;
     transition-duration: .2s;
+}
+
+/* Tab Active */
+.tabHeader:active {
+    background: rgb(0 0 0 / 50%) !important;
+    border-radius: 10px;
+}
+
+/* Match Ended Leaderboard */
+#endTable, 
+
+/* ...etc */
+.endSection, .gfSection, #endTabbedView > div > div.tabBody > div {
+    border-radius: 10px !important;
 }
 
 /* +Count KR */
@@ -4630,6 +4688,12 @@ th, tr {
     border: 4px solid rgba(0 0 0 / 0%);
 }
 
+/* Report Button */
+.reportBut {
+    color: #ef9696;
+    text-shadow: none !important;
+}
+
 /* Match Ended ================================================================================== */
 
 
@@ -4695,9 +4759,12 @@ th, tr {
 .selectorItem {
     background: rgba(0, 0, 0, 0.3) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(20px);
-    border-radius: 0px;
+    border-radius: 10px;
+    display: inline-flex !important;
+    margin: 5px;
+    width: 200px !important;
+    height: 125px !important;
 }
 
 /* ^Label */
@@ -4709,9 +4776,16 @@ th, tr {
 
 /* ^Icon */
 .selectorItem .selectorIcon {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
+    transform: translateX(50px);
     margin-top: 0px;
+    filter: none !important;
+}
+
+/* Selected Item */
+.selectedItem {
+    filter: brightness(0.7) opacity(0.8) grayscale(0.2);
 }
 
 /* Side Box Selector Hover */
@@ -4720,7 +4794,7 @@ th, tr {
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(20px);
-    border-radius: 0px;
+    border-radius: 10px;
 }
 
 /* Side Box Selector Active */
@@ -4729,7 +4803,7 @@ th, tr {
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(20px);
-    border-radius: 0px;
+    border-radius: 10px;
 }
 
 /* Primary: "Gun Name" */
@@ -5045,7 +5119,13 @@ body > div.tooltip > div:nth-child(2) {
 }
 
 /* Est "[XXX] KR/Unknown" */
-body > div.tooltip > div:nth-child(2) > span {
+body > div.tooltip > div:nth-child(2) > span,
+
+/*  ...etc */
+body > div.tooltip > div:nth-child(3) > span,
+body > div.tooltip > div:nth-child(4) > span
+
+{
     color: rgba(213, 209, 255, 0.95) !important;
 }
 
@@ -5915,11 +5995,11 @@ input:hover+.optCheck {
 
 /* Verifiation(Anonymous Mode) */ #setBod_gameprivacy > div:nth-child(2) > i, 
 
-/* Verifiation */ #setBod_gameprivacy > div:nth-child(5) > i, 
+/* Verifiation */ #setBod_gameprivacy > div:nth-child(6) > i, 
 
-/* Premium */ #setBod_gameprivacy > div:nth-child(6) > i, 
+/* Premium */ #setBod_gameprivacy > div:nth-child(7) > i, 
 
-/* Partner */ #setBod_gameprivacy > div:nth-child(7) > i {
+/* Partner */ #setBod_gameprivacy > div:nth-child(8) > i {
 
     color: rgb(255 255 255 / 0.95) !important;
 
@@ -6039,19 +6119,19 @@ input[type="color" i]:active {
 /* --- Mouse Click Icon --- */
 
 /* Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=AX5tW9frm67tDsGD8A4b93gtGJ3pvJtw);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=b97uTkCEJUQwVJG6JDIu7mxPv40kqAA0);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/click.png);
     opacity: 0.9;
 }
 
 /* Middle Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=AX5tW9frm67tDsGD8A4b93gtGJ3pvJtw);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=b97uTkCEJUQwVJG6JDIu7mxPv40kqAA0);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/middleclick.png);
     opacity: 0.9;
 }
 
 /* Right Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=AX5tW9frm67tDsGD8A4b93gtGJ3pvJtw);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=b97uTkCEJUQwVJG6JDIu7mxPv40kqAA0);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/rightclick.png);
     opacity: 0.9;
 }
@@ -6494,7 +6574,8 @@ div.challHeadrBlck {
 
 /* Challenge Map Card */
 .challMapCrd {
-    border: 3px solid #0000 !important;
+    border: none !important;
+    margin: 10px !important;
     transition: .15s;
 }
 
@@ -6502,7 +6583,13 @@ div.challHeadrBlck {
 .challMapPrg {
     background: rgb(0 0 0 / 50%);
     backdrop-filter: blur(5px);
-    border-radius: 10px 0px 0px 0px;
+    border-radius: 7px;
+    transform: translate(-10px , -10px);
+}
+
+/* Missons Head Back Button */
+.challHeadrBck {
+    border-top-left-radius: 10px;
 }
 
 /* ---Nightmare Challenges--- */
@@ -6639,6 +6726,11 @@ div#bidPrevBtn, div#bidPrevBtn:hover {
 /* Decline All Active */
 #clanDeclineAll:active {
     background: rgb(0 0 0 / 50%) !important;
+}
+
+/* Clan Submit */
+.clanSubmitBtn {
+    background-color: #0000 !important;
 }
 
 /* Friends List */
@@ -7406,7 +7498,7 @@ input:disabled+.tDecCheck {
     }
 }
 
-.frvr-daily-reward-screen {
+.frvr-daily-reward-screen, .advent-bg, .adventWrapper {
     animation: fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, SpookEventAnimat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
@@ -7419,4 +7511,118 @@ input:disabled+.tDecCheck {
     filter: brightness(0.7);
 }
 
+#battlepassAd > div.helpTxtHol > div:nth-child(2),
+#adventCal > div > div:nth-child(2) {
+    color: #dde6ff !important;
+}
+
+.bpXPBar {
+    background-color: #9aa5ffab;
+    height: 15px;
+}
+
+#menuWindow > div:nth-child(4) > div.bpTopH > div.bpLevelH > div:nth-child(2) > span {
+    color: rgb(255 255 255 / 0.5) !important;
+}
+
+.bp-generic-btn,
+.bp-generic-btn:hover,
+.bp-generic-btn:active {
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+}
+
+.bp-generic-pop {
+    color: rgb(255 255 255 / 0.95) !important;
+    background: rgb(0 0 0 / 50%) !important;
+    border: 1px solid #0000 !important;
+    box-shadow: none !important;
+    animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
+    transform: scale3d(1) translate(-50%,-50%);
+    transition-duration: .2s !important;
+}
+
 /* ---Events */
+
+div.buttonG,
+div.buttonG:hover,
+div.buttonG:active
+{
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+}
+
+/* Ad Icon L */
+.adIconL {
+    display: none;
+}
+
+.spinErrorPop {
+    color: #fff;
+    background-color: #00000000;
+    box-shadow: none !important;
+    animation: fadein .15s;
+}
+
+.popHeader {
+    text-align: left;
+    color: #fff;
+    border-bottom: 4px solid #00000000;
+    background-color: #0000;
+    box-shadow: none !important;
+}
+
+.custSubContainer {
+    padding: 0px !important;
+    border-radius: 7px;
+    background-color: rgb(0 0 0 / 0.2) !important;
+    border-left: 3px solid rgb(0 0 0/ 0%) !important;
+    border-bottom: 3px solid rgb(0 0 0 / 0%) !important;
+    box-shadow: none !important;
+    top: 7px;
+    right: 6px;
+    width: 85px;
+}
+
+.custSubContainer.bottom {
+    bottom: 7px !important;
+}
+
+/* Spin History Animat */
+@keyframes SpinHistoryAnimat {
+    from {
+        transform: translate(-70%,-50%);
+    }
+
+    to {
+        transform: translate(-50%,-50%);
+    }
+}
+
+#spinHistoryPop {
+    border-radius: 10px;
+    box-shadow: none !important;
+    background-color: #0000 !important;
+    animation: fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, SpinHistoryAnimat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+}
+
+.spinHistoryHeader {
+    text-align: left;
+    transform: translateX(-30px);
+    border-bottom: 4px solid #0000 !important;
+    background-color: #0000 !important;
+    box-shadow: none !important;
+}
+
+.spinHistoryClear,
+.spinHistoryClear.disabled
+{
+    background: transparent !important;
+    left: 80px;
+}
+
+.spinHistoryWarning {
+    color: rgb(255 255 255 / 0.5);
+}
+
+#clanErr > div:nth-child(3) > span {
+    filter: brightness(999) opacity(0.95);
+}

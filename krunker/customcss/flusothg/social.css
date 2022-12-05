@@ -1,7 +1,7 @@
 /* Flusothg - Krunker Hub */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2022/10/27 */
+/* 2022/12/05 */
 
 
 /* Configs ================================================================================== */
@@ -30,7 +30,7 @@
 
 
 /* KeyFrames ================================================================================== */
-    
+
 /* Loading Icon Spin */ 
 @keyframes loadicospin {
     0% { 
@@ -267,6 +267,7 @@
 /* Texts */
 * {
     -webkit-text-stroke: 0.1px !important;
+    transition-duration: .2s;
 }
 
 /* Scrollbar Thumb */
@@ -498,7 +499,25 @@
     background-color: rgb(255 255 255 / 90%) !important;
     border: none !important;
     border-radius: 5px !important;
+    width: 551px !important;
     backdrop-filter: var(--CardBlur);
+}
+
+/* KR Giveaway Amount Animation */
+@keyframes krInputGiveaway_Animat {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* KR Giveaway Amount */
+#krInptHol {
+    animation: krInputGiveaway_Animat .4s;
 }
 
 /* You will be charged a 10% KR Fee to make a Giveaway Post */
@@ -628,7 +647,8 @@
 #leftABox, #rightABox, #rightFollBox, #leftYTBox {
     background-color: rgb(156 157 191 / 70%) !important;
     backdrop-filter: var(--CardBlur) !important;
-    height: 326px;
+    height: 350px;
+    max-height: 400px;
     border-radius: 10px;
 }
 
@@ -664,6 +684,7 @@
     -moz-box-shadow: none;
     box-shadow: none;
     backdrop-filter: var(--CardBlur);
+    transition-duration: .15s;
 }
 
 /* Search Results */
@@ -715,7 +736,7 @@
 
 /* Post Scroll Comment */
 .comTxtHolder {
-    background-color: rgb(0 0 0 / 0.3) !important;
+    background-color: transparent !important;
     color: rgb(255 255 255 / 90%) !important;
 }
 
@@ -748,12 +769,13 @@
 
 /* Feed Post Content Text */
 #postHolder > div > div.postHead > div.postContent > div, #postHolder > div > div.postHead > div.postContent > div > div, #pTabContent_activity > div > div.postHead > div.postContent > div > div, #singlePostH > div > div > div.postContent > div > div {
-    color: #fff !important;
+    color: rgb(255 255 255 / 0.95) !important;
 }
 
 /* Img Text O */
 .imgTextO {
     font-size: 35px !important;
+    width: 75%;
 }
 
 /* "Count" Followers, "time(like 1s, 2m, 3d... etc)" ago */
@@ -764,6 +786,7 @@
 /* Who to Follow */
 #rightFollBox {
     width: 310px;
+    max-height: 320px;
 }
 
 /* Follow Hover Button */
@@ -875,6 +898,11 @@
 .krGivFol {
     margin-top: -7.5px;
     color: rgb(255 255 255 / 0.9) !important;
+}
+
+/* Button Map */
+.button.map {
+    width: 32.2%;
 }
 
 /* Button */
@@ -1112,7 +1140,7 @@ div.button:active {
 
 /* Giveaway KR Text Post Feed */
 #postHolder > div > div.postHead > div.postContent > div > div > span {
-    color: #fff !important;
+    color: rgb(255 255 255 / 0.5) !important;
 }
 
 /* Premium, Verified Icon Post Feed */
@@ -1200,8 +1228,9 @@ input:checked+.sliderSml2 {
     border: none !important;
 }
 
+/* SortFilt */
 #sortFilt, #seaFilt, #seaSort {
-    border-radius: 7px;
+    border-radius: 4px;
     background: rgb(255 255 255 / 0.9);
     border: none !important;
 }
@@ -1283,6 +1312,17 @@ input:checked+.sliderSml2 {
 
 /* Games ================================================================================== */
 
+/* Maps Holder */
+#mapsHolder {
+    top: 88px;
+}
+
+/* Feat Games (+ Video Preview) */
+.bigMFeatHold, 
+#mapsHolder > div.bigMFeatVid > iframe, .bigMFeatVid {
+    border-radius: 10px;
+}
+
 /* Home */
 #mapsHolder > div:nth-child(1) > div > div.bigMenTab.bigMenTabA > span, #mapsHolder > div:nth-child(1) > div > div:nth-child(1) > span {
     color: #fff !important;
@@ -1298,10 +1338,49 @@ div#bigMFeatPBtn {
     transition-duration: .2s;
 }
 
+/* Play Now Hover Btn */
+div#bigMFeatPBtn:hover {
+    background: var(--Btn1_HoverColor) !important;
+}
+
+/* Play Now Active Btn */
+div#bigMFeatPBtn:active {
+    background: var(--Btn1_ActiveColor) !important;
+}
+
 /* Search Button */
 .searchListBtn {
     background: rgb(255 255 255 / 0.3) !important;
     border-radius: 7px;
+}
+
+/* Mao List Cat */
+.mapListCat {
+    color: rgb(255 255 255 / 0.9);
+    background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0));
+}
+
+/* Action, Parkour...etc */
+.mapLICat {
+    border-radius: 10px;
+    color: rgb(255 255 255 / 0.95);
+    text-shadow: none;
+}
+
+/* ^Hover */
+.mapLICat:hover {
+    opacity: .7;
+}
+
+/* Map Cat Scroll */
+.mapCatScrl {
+    white-space: break-spaces !important;
+    width: 100%;
+}
+
+/* ^Only Popular Categories */
+#mapList > div:nth-child(2) {
+    text-align: center;
 }
 
 /* Games ================================================================================== */
@@ -1611,6 +1690,8 @@ input:checked+.slider:active {
 /* Partner, Premium, Verified Icon */ 
 #rightProfile > div.leftTopHolder > i {
     color: rgba(242, 242, 255, 0.9) !important;
+    margin-right: 4px !important;
+    margin-left: -4px !important;
 }
 
 /* Partner Icon */
@@ -1653,20 +1734,21 @@ input:checked+.slider:active {
 
 /* Profile Tabs */
 .profileTabs {
-    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 10px !important;
-    width: 99.8% !important;
+    background: #0000 !important;
+    top: -9.5px;
+    left: 13px;
+    width: 98.2%;
+    border-radius: 10px 10px 10px 10px !important;
     transition-duration: .2s;
-    animation: page01animat .3s;
 }
 
 /* Profile Tab */
 .profileTab {
     color: rgba(255, 255, 255, 0.95) !important;
     background-color: transparent !important;
+    border-top: 4px solid transparent !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
     transition-duration: .15s;
 }
 
@@ -1935,6 +2017,21 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
     background: rgb(0 0 0 / 20%) !important;
     color: rgb(255 255 255 / 95%) !important;
     border-radius: 7px;
+    transition: .15s;
+}
+
+/* Report Hover Button */
+#reportBtn:hover {
+    background: rgb(0 0 0 / 30%) !important;
+    color: rgb(255 255 255 / 95%) !important;
+    border-radius: 7px;
+}
+
+/* Report Active Button */
+#reportBtn:active {
+    background: rgb(0 0 0 / 40%) !important;
+    color: rgb(255 255 255 / 95%) !important;
+    border-radius: 7px;
 }
 
 /* Badge Card */
@@ -2088,6 +2185,48 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
     border-radius: 10px !important;
 }
 
+/* Creation Tabs */
+.creationTabs {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Creation Tab A */
+.creationTabA {
+    border-color: transparent !important;
+    background: rgba(50, 50, 50, 0.4) !important;
+    border-radius: 10px !important;
+}
+
+/* Creation Tab */
+.creationTab {
+    border-bottom: none !important;
+    transition: .15s;
+}
+
+/* Creation Tab */
+.creationTab:hover {
+    background: rgba(50, 50, 50, 0.2) !important;
+    border-radius: 10px !important;
+}
+
+/* Creation Tab */
+.creationTab:active {
+    background: rgba(50, 50, 50, 0.6) !important;
+    border-radius: 10px !important;
+}
+
+.profileNav {
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(40px);
+    margin-top: 0px;
+    border-radius: 10px !important;
+    transition-duration: .2s;
+    animation: page01animat .3s;
+}
+
 /* Profile ================================================================================== */
 
 
@@ -2122,28 +2261,60 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
    
 /* LeaderBoard Tab of Players */
 #mapLeaders > div, #mapLeaders > div > span {
-    color: #fff !important;
+    color: rgb(255 255 255 / 0.85) !important;
 }
 
 /* Servers Tab of Servers */
 .menuSelector, .serverPCount, .serverRegion {
     color: #f3f3f3f0 !important;
+    transition: .15s;
+}
+
+/* MenuSelector Hover */
+.menuSelector:hover {
+    background: rgba(0,0,0,.3);
+    border-radius: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* MenuSelector Active */
+.menuSelector:active {
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 /* ^Star Icon */
 #activeGames > div > div > span {
     color: #fbf0e1f0 !important;
+    transform: translateY(-6px);
 }
 
 /* Map List Item */
 .mapListItem {
     background: rgb(0 0 0 / 0.3) !important;
     border-radius: 10px;
+    width: 375px !important;
 }
 
 /* Map Thumb Holder */
 .mapListThumbHolder {
     border-radius: 10px 10px 0px 0px;
+}
+
+/* Creation Maps List */
+#creationContent_games > div > div.mapListThumbHolder,
+#creationContent_games > div > div.mapListThumbHolder > img,
+
+/* Creation Mods List */
+#creationContent_mods > div > div.mapListThumbHolder,
+#creationContent_mods > div > div.mapListThumbHolder > img 
+
+{
+    height: 98px !important;
+    border-radius: 7px 7px 0px 0px;
 }
 
 /* Map Info */
@@ -2153,6 +2324,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
     border-radius: 0px 0px 10px 10px;
 }
 
+/* Map Age D */
 .mapAgeD {
     background: rgb(0 0 0 / 50%) !important;
     backdrop-filter: blur(10px);
@@ -2251,17 +2423,63 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 
 /* Play, Share */
 div.buttonS, div.buttonH {
-    border: 3px solid #0000 !important;
+    border: 1px solid #0000 !important;
+}
+
+/* Play/Share Button Bg */
+.mapPagePlB {
+    backdrop-filter: blur(5px);
+}
+
+/* Map Likes */
+.mapText {
+    color: rgb(255 255 255 / 0.85) !important;
+    background: rgb(0 0 0 / 0.6);
+    border-radius: 7px;
+    padding: 5px;
+    transform: translate(7px , -20px);
+    transition-duration: .15s;
+    text-shadow: none !important;
+    backdrop-filter: blur(2px);
+}
+
+#mapProfile > div > div:nth-child(3) > div.mapText > span {
+    color: rgb(255 255 255 / 0.95) !important;
 }
 
 /* Edit Button */
-.creationAction.edit, .creationAction.del {
+.creationAction.edit, .creationAction.del, .creationActions {
     color: rgb(255 255 255 / 0.9) !important;
     filter: none;
     background: rgb(0 0 0 / 0.5);
-    border-radius: 5px;
+    border-radius: 7px;
     padding: 5px;
     transition-duration: .15s;
+    backdrop-filter: blur(2px);
+}
+
+/* Edit Button Hover */
+.creationAction.edit:hover, .creationAction.del:hover, .creationActions:hover {
+    background: rgb(0 0 0 / 0.65);
+    transform: scale(0.9);
+}
+
+/* Edit Button Active */
+.creationAction.edit:active, .creationAction.del:active, .creationActions:active {
+    background: rgb(0 0 0 / 0.8);
+    transform: scale(0.8);
+}
+
+/* Fav Icon */
+.creationAction.sel{
+    color: rgb(255 206 147) !important;
+    transition: .15s;
+}
+
+/* ^Hover */
+.creationAction.sel:hover {
+    transform: scale(1);
+    transition: .15s;
 }
 
 /* Quick Sell Popup */
@@ -2533,6 +2751,21 @@ div.mapsVotes
     text-shadow: none !important;
 }
 
+/* Maps Votes */
+.mapsVotes {
+    background: rgb(0 0 0 / 0.5);
+    border-radius: 7px;
+    padding: 5px;
+    transform: translateY(-13px);
+    transition-duration: .15s;
+    backdrop-filter: blur(2px);
+}
+
+/* KR */
+#mapList > div > div > div.mapListThumbHolder > div:nth-child(2) > span {
+    color: rgb(255 255 255 / 0.95) !important;
+}
+
 /* Verified Icon in Search User */
 #searchList > div > div > i {
     color: rgb(255 255 255 / 0.95) !important; 
@@ -2545,7 +2778,7 @@ div.mapsVotes
 
 /* Badge Image */
 .badgeImg {
-    filter: invert(0.1) brightness(4) grayscale(1);
+    filter: invert(0.1) brightness(2) grayscale(0.5);
 }
 
 /* Clan with Color */
@@ -2560,7 +2793,7 @@ div.mapsVotes
 
 /* Profile Gift Button */
 .pGiftButton {
-    border-radius: 10px;
+    border-radius: 7px;
     background: rgb(0 0 0 / 20%);
     transition: .15s;
 }
@@ -2579,6 +2812,7 @@ div.mapsVotes
 #giftIn, #giftMsg {
     border: none !important;
     background: rgb(255 255 255 / 95%) !important;
+    border-radius: 7px;
 }
 
 /* Creator Skin Item */
@@ -2839,6 +3073,139 @@ div.mapsVotes
     background-color: rgb(0 0 0 / 30%);
 }
 
+/* Comfirm QS (?) */
 #confQSPop > div:nth-child(2) {
     filter: brightness(3.5);
+}
+
+/* Premium Card */
+.shopCard {
+    color: rgb(255 255 255 / 0.99) !important;
+    border: 5px solid transparent !important;
+    text-align: left !important;
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 20px;
+    width: 42.71% !important;
+    background-size: 108% !important;
+    background-position: center;
+    text-shadow: none !important;
+    border-radius: 10px !important;
+    transition: .15s;
+}
+
+/* Premium Card Hover */
+.shopCard:hover {
+    opacity: 999;
+    background-size: 115% !important;
+    filter: brightness(0.8);
+}
+
+/* Premium Card Active */
+.shopCard:active {
+    opacity: 999;
+    background-size: 115% !important;
+    filter: brightness(0.6);
+}
+
+/* Starter, Popular!...etc */
+.shopSale {
+    top: 43px;
+    left: 10px;
+    font-size: 13px;
+    background-color: transparent !important;
+}
+
+/* XXXX KR */
+.spinVal {
+    font-size: 18px;
+    color: rgb(255 255 255 / 70%);
+    margin-left: -26px;
+    background-color: transparent !important;
+    text-align: right;
+    margin-top: 99px;
+}
+
+/* Report Select */
+#reportSelect {
+    border: none !important;
+    border-radius: 4px;
+}
+
+/* Post/Reply/PostProfile Pfp */
+.postPFP, .replyPfp, #postProf {
+    background-color: rgba(0,0,0,.1) !important;
+    border: 3px solid #00000000 !important;
+    cursor: default;
+}
+
+/* Post Pfp Hover */
+.postPFP:hover {
+    transform: scale(1);
+}
+
+/* Krunk TV (Twitch) */
+#recEmbed {
+    border-radius: 7px;
+}
+
+/* Map Tabs P */
+#mapTabsP {
+    background-color: rgb(0 0 0 / 15%);
+    border-radius: 10px;
+}
+
+/* Active Tab */
+.activeTab {
+    box-shadow: inset 0 -5px rgb(0 0 0 / 0%) !important;
+    color: rgb(255 255 255 / 0.95);
+    background: rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    transition: .15s;
+}
+
+/* Map Tab P Hover */
+.mapTabP:hover {
+    box-shadow: inset 0 -5px rgb(0 0 0 / 0%) !important;
+    background: rgb(0 0 0 / 30%);
+    border-radius: 10px;
+    transition: .15s;
+}
+
+/* Map Tab P Active */
+.mapTabP:active {
+    box-shadow: inset 0 -5px rgb(0 0 0 / 0%) !important;
+    background: rgb(0 0 0 / 50%);
+    border-radius: 10px;
+}
+
+/* Map/Mods Desc */
+#mapDescr, #mapVid, #modDescr, #modVid, #mapLeaders, #activeGames {
+    background-color: rgb(0 0 0 / 30%) !important;
+    border-radius: 10px !important;
+}
+
+/* Map Youtube Vid */
+#mapVid > iframe {
+    border-radius: 10px !important;
+}
+
+/* Active Servers (Games) */
+#activeGames {
+    width: 98%;
+}
+
+/* Map Sub Desc */
+.mapSubDesc {
+    border-top: 2px solid rgb(255 255 255 / 10%) !important;
+}
+
+#mapLeaders > hr {
+    border-color: rgb(255 255 255 / 30%) !important;
+}
+
+/* Button Disabled */
+[style="background-color:#2b2b2b"] {
+    background-color: rgb(0 0 0 / 20%) !important;
+    opacity: 0.7;
 }

@@ -1,7 +1,7 @@
 /* Flusothg - Krunker Editor */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2022/09/25 */
+/* 2022/12/05 */
 
 
 /* Configs ================================================================================== */
@@ -225,6 +225,17 @@ div.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .
 /* Header */
 .header {
     background-color: rgb(21 21 21 / 27%);
+    transition: .15s;
+}
+
+/* Header Hover */
+.header:hover {
+    background-color: rgb(0 0 0 / 0.4);
+}
+
+/* Header Active */
+.header:active {
+    background-color: rgb(0 0 0 / 0.5);
 }
 
 /* Play,Host,Expore Bar */
@@ -235,7 +246,7 @@ div.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .
 /* Tool Bar */
 .toolbarItem:hover, .toolbarDropDownItem:hover, .toolbarDropDownItem:hover, .eButton:hover, .publishAsset:hover {
     border-radius: 5px;
-    background-color: #61616c;
+    background-color: rgb(0 0 0 / 0.4);
 }
 
 /* [<] [>] Button */
@@ -245,11 +256,15 @@ div.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .
 
 /* Slider Checked */
 input:checked+.slider {
-    background: linear-gradient(90deg,#464646,#464646);
+    background: linear-gradient(180deg, rgba(69, 69, 94, 0.3) 0%, rgba(64, 65, 89, 0.3) 100%), rgba(33, 35, 43, 0.8) !important;
+    box-shadow: 0px 0px 25px rgba(33, 35, 43, 0.3) !important;
+    backdrop-filter: blur(5px);
+    transition-duration: .2s;
 }
 
 /* Range Slider Thumb */
 input[type=range]::-webkit-slider-thumb {
+    appearance: none;
     -webkit-appearance: none;
     background: linear-gradient(#464646,#464646);
 }
@@ -318,7 +333,8 @@ input[type=range]::-moz-range-thumb {
     box-shadow: none;
     border-radius: 7px;
     animation: fadeintoolbar .2s;
-    background: rgb(36 36 36) !important;
+    background: rgb(0 0 0 / 0.75) !important;
+    backdrop-filter: blur(10px) !important;
 }
 
 /* ^Sub */
@@ -327,7 +343,16 @@ input[type=range]::-moz-range-thumb {
     box-shadow: none;
     border-radius: 7px;
     animation: fadeintoolbarsub .2s;
-    background: rgb(36 36 36) !important;
+    background: rgb(0 0 0 / 0.75) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+.toolbarChunkSubDropDown, div.toolbarChunkSubDropDown {
+    transform: translateX(1.5px);
+    box-shadow: none;
+    border-radius: 7px;
+    animation: fadeintoolbarsub .2s;
+    background-color: rgb(0 0 0 / 0) !important;
 }
 
 /* Window Background */
@@ -759,4 +784,93 @@ input:checked+.slider2 {
 /* Popup Message */
 [style="text-align:center;font-size:20px;color:rgba(255,255,255,0.5)"] {
     font-size: 17px !important;
+}
+
+/* Menu Background */
+.menuTabsNew {
+    background-color: rgba(0 0 0 / 10%);
+    border-radius: 10px !important;
+    transition: .15s;
+}
+
+/* Tab Selected */
+.tabANew {
+    box-shadow: inset 0 -5px #0000;
+    background: rgba(0 0 0 / 25%);
+    border-radius: 10px !important;
+    transition: .15s;
+}
+
+/* Tab Selected Hover */
+.tabANew:hover {
+    box-shadow: inset 0 -5px #0000 !important;
+}
+
+/* Short Tab New */
+.menuShortTabNew {
+    line-height: 40px;
+}
+
+/* Tab Hover */
+.menuTabNew:hover, .menuShortTabNew:hover {
+    box-shadow: inset 0 -5px #0000 !important;
+    background: rgba(0 0 0 / 15%);
+    border-radius: 10px !important;
+    transition: .15s;
+}
+
+/* Tab Active */
+.menuTabNew:active, .menuShortTabNew:active {
+    box-shadow: inset 0 -5px #0000 !important;
+    background: rgba(0 0 0 / 40%);
+    border-radius: 10px !important;
+}
+
+/* Search Button */
+.searchBtn {
+    background-color: rgb(0 0 0 / 20%) !important;
+}
+
+/* Slider Background */
+.sliderM {
+    background: linear-gradient(180deg, rgb(169 167 184 / 30%) 0%, rgb(172 170 191 / 30%) 100%), rgb(98 99 108 / 0.7);
+    box-shadow: 0px 0px 20px rgba(223, 223, 240, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 7px;
+    padding-top: 0.7px;
+    padding-bottom: 0.7px;
+    transition-duration: .2s;
+}
+
+/* Slider Box */
+.sliderM::-webkit-slider-thumb {
+    background-color: #0000 !important;
+    background: linear-gradient(180deg, rgb(176 173 195 / 30%) 0%, rgb(228 226 255 / 30%) 100%), rgb(255 255 255 / 90%) !important;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    padding: 9px;
+    transition-duration: .2s;
+}
+
+/* Slider Value */
+.sliderVal {
+    background: rgb(0 0 0 / 0.3) !important;
+    border: 3px solid rgba(225, 225, 225, 0.25) !important;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 9px !important;
+    font-size: 16.5px;
+    padding: 4px;
+    transition-duration: .2s;
+}
+
+/* Slider Value Hover */
+.sliderVal:hover {
+    filter: brightness(0.75);
+}
+
+/* Slider Value Active */
+.sliderVal:active {
+    filter: brightness(0.55);
 }
