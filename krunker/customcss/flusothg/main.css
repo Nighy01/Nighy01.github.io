@@ -1,7 +1,7 @@
 /* Flusothg - Krunker */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2022/12/05 */
+/* 2023/01/20 */
 
 
 /* Configs ================================================================================== */
@@ -2150,7 +2150,7 @@ input:checked+.slider2 {
 }
 
 /* Import Popup */
-#importPop {
+.importPop {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
@@ -2159,11 +2159,6 @@ input:checked+.slider2 {
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
     transition-duration: .2s !important;
-}
-
-/* Import Button */
-#importPop > div.mapFndB {
-    background: var(--main-bg-color) !important;
 }
 
 /* Pub Hed */
@@ -2465,7 +2460,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
 }
 
 /* Purchase KR Popup Background */
-#purchaseHolder {
+#purchaseBack {
     background: var(--dark-bg-color);
     backdrop-filter: blur(40px);
     animation: blurswitch .2s;
@@ -2667,7 +2662,7 @@ input:checked+.sliderCent:before {
 }
 
 /* Other Icon Popup Content */
-#popupContent > div > div:nth-child(1) > i {
+#popupContent > div > div:nth-child(1) > i, #genericPop > div > div:nth-child(1) > i {
     color: rgb(255 255 255 / 0.7) !important;
 }
 
@@ -2911,7 +2906,7 @@ div.purejscarousel-btn:active {
 }
 
 /* Vouch Popup */
-#vouchPop {
+.vouchPop {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
@@ -2928,35 +2923,37 @@ div.purejscarousel-btn:active {
 
 /* Popups (maybe if it is possible) */
 
-#polConfPop,
+.polConfPop,
 
-#pfpPop,
+.pfpPop,
 
-#nftPop,
+.nftPop,
 
-#metaPop,
+.metaPop,
 
-#twitchConPop,
+.twitchConPop,
 
-#twitchLinkPop,
+.twitchLinkPop,
 
-#faceitPop,
+.twitchPop,
 
-#promoPop,
+.faceitPop,
 
-#tradePop,
+.promoPop,
 
-#imagePop,
+.tradePop,
 
-#badgePop,
+.imagePop,
 
-#imageNewPop,
+.badgePop,
 
-#disconnectPop,
+.imageNewPop,
+
+.disconnectPop,
 
 #bundlePop,
 
-#eventPop
+.eventPop
 
 {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
@@ -6905,6 +6902,7 @@ div#rentServBtn:active {
 
 /* Link Metamask */
 .metaLoginBtn {
+    color: rgb(255 255 255 / 0.95) !important;
     background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgb(142 147 255 / 25%);
@@ -7069,7 +7067,7 @@ div#rentServBtn:active {
 }
 
 /* XXX to Redeem */
-#vouchRes {
+.vouchRes {
     color: rgb(255 255 255 / 70%) !important;
     animation: chatmsganimat 0.5s;
 }
@@ -7094,6 +7092,7 @@ div#rentServBtn:active {
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
     border-radius: 10px !important;
+    width: 280px !important;
     transition-duration: .2s;
 }
 
@@ -7625,4 +7624,31 @@ div.buttonG:active
 
 #clanErr > div:nth-child(3) > span {
     filter: brightness(999) opacity(0.95);
+}
+
+#genericPop > div {
+    color: rgb(255 255 255 / 0.95);
+}
+
+#genericPop > div > div:nth-child(2) {
+    color: rgb(255 255 255 / 0.95)  !important;
+}
+
+#twitchLinkPop, #twitchConPop {
+    background-color: rgb(0 0 0 / 0%);
+    width: 500px;
+    border: none !important;
+}
+
+.bp-generic-btn-small, .bp-generic-btn-small:hover, .bp-generic-btn-small:active {
+    border: none !important;
+}
+
+/* Unlocked BPP Level Icon */
+#menuWindow > div > div.bpMidH > div.bpCols > div > div.bpCard.free.completed > div.bpClaimed > span {
+    color: rgb(255 255 255 / 0.75) !important;
+}
+
+#menuWindow > div:nth-child(3) > div > div.challComplB > span {
+    color: rgb(255 255 255 / 0.75) !important;
 }
