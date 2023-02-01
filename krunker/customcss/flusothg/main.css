@@ -1,10 +1,10 @@
 /* Flusothg - Krunker */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2023/01/20 */
+/* 2023/02/01 */
 
 
-/* Configs ================================================================================== */
+/* CF1. Configs ================================================================================== */
 
 :root {
     
@@ -31,11 +31,11 @@
 
 }
 
-/* Configs ================================================================================== */
+/* CF1. Configs ================================================================================== */
 
 
 
-/* KeyFrames ================================================================================== */
+/* KF1. KeyFrames ================================================================================== */
 
 /* Show Animation on Startup */
 @keyframes showanimationonstartup {
@@ -634,11 +634,11 @@
     }
 }
 
-/* KeyFrames ================================================================================== */
+/* KF1. KeyFrames ================================================================================== */
 
 
 
-/* Startup ================================================================================== */
+/* ST1. Startup ================================================================================== */
 
 /* Tip Animation */
 @keyframes tip_animat {
@@ -733,11 +733,11 @@ div#aHolder {
     display: none;
 }
 
-/* Startup ================================================================================== */
+/* ST1. Startup ================================================================================== */
 
 
 
-/* Main ================================================================================== */
+/* MI1. Main ================================================================================== */
 
 /* All Components */
 * {
@@ -887,18 +887,18 @@ a {
 
 /* Copy Data Button in Disconnected Popup */
 .mapFndB {
-    background-color: rgb(0 0 0 / 20%) !important;
+    background-color: rgb(255 255 255 / 20%) !important;
     transition-duration: .1s;
 }
 
 /* Copy Data Hover Button in Disconnected Popup */
 .mapFndB:hover {
-    background-color: rgb(0 0 0 / 45%) !important;
+    background-color: rgb(255 255 255 / 45%) !important;
 }
 
 /* Copy Data Active Button in Disconnected Popup */
 .mapFndB:active {
-    background-color: rgb(0 0 0 / 55%) !important;
+    background-color: rgb(180 180 180 / 55%) !important;
 }
 
 /* Click To Play Background */
@@ -1021,6 +1021,7 @@ div#newsBody::-webkit-scrollbar-track {
     pointer-events: all;
     box-sizing: border-box;
     padding: 10px 18px 13px;
+    font-size: 15.5px !important;
     position: relative;
 }
 
@@ -1048,6 +1049,7 @@ div#newsBody::-webkit-scrollbar-track {
     display: inline-block;
     box-sizing: border-box;
     padding: 10px 18px 13px;
+    font-size: 15.5px !important;
     position: relative;
 }
 
@@ -1065,6 +1067,7 @@ div#newsBody::-webkit-scrollbar-track {
     text-transform: var(--text-transform);
     box-sizing: border-box;
     padding: 10px 18px 13px;
+    font-size: 15.5px !important;
     position: relative;
 }
 
@@ -2138,9 +2141,9 @@ input:checked+.slider2 {
 }
 
 /* Popup Content */
-#popupContent {
+#popupContent, #genericPop {
     background-color: transparent !important;
-    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    background: linear-gradient(180deg, rgba(178, 204, 255, 0.5) 0%, rgba(194, 204, 255, 0.5) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(10px) !important;
@@ -3338,11 +3341,11 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border-radius: 5px;
 }
 
-/* Main ================================================================================== */
+/* MI1. Main ================================================================================== */
 
 
 
-/* Comp Game Main ================================================================================== */
+/* CG1. Comp Game Main ================================================================================== */
 
 /* Team 1/2 */
 .cmpTmHed {
@@ -3442,11 +3445,11 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     bottom: 145px;
 }
 
-/* Comp Game Main ================================================================================== */
+/* CG1. Comp Game Main ================================================================================== */
 
 
 
-/* In Game ================================================================================== */
+/* IG1. In Game ================================================================================== */
 
 /* Ranked Icon */
 /* Old LeaderBoard */ #leaderContainer > div > img,
@@ -3996,11 +3999,11 @@ th, tr {
     animation: fadein .2s;
 }
 
-/* In Game ================================================================================== */
+/* IG1. In Game ================================================================================== */
 
 
 
-/* In Spec ================================================================================== */
+/* IS1. In Spec ================================================================================== */
 
 /* Spectate HUD */
 #spectateHUD {
@@ -4183,11 +4186,11 @@ th, tr {
     animation: fadein .2s;
 }
 
-/* In Spec ================================================================================== */
+/* IS1. In Spec ================================================================================== */
 
 
 
-/* Twitch Info ================================================================================== */
+/* TI1. Twitch Info ================================================================================== */
 
 /* Drop Card Animation */
 @keyframes DropCardAnimation {
@@ -4265,11 +4268,11 @@ th, tr {
     transform: scale(.9);
 }
 
-/* Twitch Info ================================================================================== */
+/* TI1. Twitch Info ================================================================================== */
 
 
 
-/* Match Ended ================================================================================== */
+/* ME1. Match Ended ================================================================================== */
 
 /* Next Round in 00:00 */
 #endTimer {
@@ -4691,11 +4694,11 @@ th, tr {
     text-shadow: none !important;
 }
 
-/* Match Ended ================================================================================== */
+/* ME1. Match Ended ================================================================================== */
 
 
 
-/* Customize ================================================================================== */
+/* CT1. Customize ================================================================================== */
 
 /* Loadout Name */
 #loadoutName {
@@ -5417,11 +5420,11 @@ body > div.tooltip > div:nth-child(4) > span
     text-shadow: none !important;
 }
 
-/* Customize ================================================================================== */
+/* CT1. Customize ================================================================================== */
 
 
 
-/* Player list ================================================================================== */
+/* PI1. Player list ================================================================================== */
 
 /* [Clan] Text of Player list */
 #playerListH > table > tbody > tr > td.pListName > a > span {
@@ -5477,11 +5480,11 @@ body > div.tooltip > div:nth-child(4) > span
     opacity: 1 !important;
 }
 
-/* Player list ================================================================================== */
+/* PI1. Player list ================================================================================== */
 
 
 
-/* Business ================================================================================== */
+/* BI1. Business ================================================================================== */
 
 /* ---------- Referrals ---------- */
 
@@ -5492,11 +5495,11 @@ body > div.tooltip > div:nth-child(4) > span
 
 /* ---------- Referrals ---------- */
 
-/* Business ================================================================================== */
+/* BI1. Business ================================================================================== */
 
 
 
-/* Select a Server Type (Host Game) ================================================================================== */
+/* HG1. Select a Server Type (Host Game) ================================================================================== */
 
 /* Server Type Button */
 .serverHostOp {
@@ -5830,11 +5833,33 @@ input:hover+.optCheck {
 
 /* ---------- Dedicated Setup ---------- */
 
-/* Select a Server Type (Host Game) ================================================================================== */
+/* HG1. Select a Server Type (Host Game) ================================================================================== */
 
 
 
-/* Settings ================================================================================== */
+/* STG1. Settings ================================================================================== */
+
+/* --- CM1. Mouse Click Icon --- */
+
+/* Click */
+[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=04Jh9w9NNjOY0maj2NDlsMUFJ5LP3FZW);"] {
+    content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/click.png);
+    opacity: 0.9;
+}
+
+/* Middle Click */
+[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=04Jh9w9NNjOY0maj2NDlsMUFJ5LP3FZW);"] {
+    content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/middleclick.png);
+    opacity: 0.9;
+}
+
+/* Right Click */
+[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=04Jh9w9NNjOY0maj2NDlsMUFJ5LP3FZW);"] {
+    content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/rightclick.png);
+    opacity: 0.9;
+}
+
+/* --- Mouse Click Icon --- */
 
 /* Search Settings Input */
 #settSearch {
@@ -6113,28 +6138,6 @@ input[type="color" i]:active {
     border-radius: 100px;
 }
 
-/* --- Mouse Click Icon --- */
-
-/* Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=b97uTkCEJUQwVJG6JDIu7mxPv40kqAA0);"] {
-    content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/click.png);
-    opacity: 0.9;
-}
-
-/* Middle Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=b97uTkCEJUQwVJG6JDIu7mxPv40kqAA0);"] {
-    content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/middleclick.png);
-    opacity: 0.9;
-}
-
-/* Right Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=b97uTkCEJUQwVJG6JDIu7mxPv40kqAA0);"] {
-    content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/rightclick.png);
-    opacity: 0.9;
-}
-
-/* --- Mouse Click Icon --- */
-
 /* KeyBind Settings Toggle */
 .setToggle {
     background: rgba(245, 246, 255, 0.8) !important;
@@ -6282,11 +6285,11 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
     backdrop-filter: blur(5px);
 }
 
-/* Settings ================================================================================== */
+/* STG1. Settings ================================================================================== */
 
 
 
-/* Games ================================================================================== */
+/* GA1. Games ================================================================================== */
 
 /* Game Overlay Hover */
 .mapActionOvrl {
@@ -6413,11 +6416,11 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
     border-radius: 15px;
 }
 
-/* Games ================================================================================== */
+/* GA1. Games ================================================================================== */
 
 
 
-/* Mod ================================================================================== */
+/* MD1. Mod ================================================================================== */
 
 /* Search Button */
 .searchBtn {
@@ -6439,11 +6442,11 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
 
 /* --- Mod Loader --- */
 
-/* Mod ================================================================================== */
+/* MD1. Mod ================================================================================== */
 
 
 
-/* Steam Fix ================================================================================== */
+/* SF1. Steam Fix ================================================================================== */
 
 /* Host Game, Servers, Ranked, Invite, Join */
 div.buttonG , div.buttonO, div.buttonP, div.buttonR, div.buttonPI {
@@ -6465,11 +6468,11 @@ div#customizeButton span {
     color: #fff !important;
 }
 
-/* Steam Fix ================================================================================== */
+/* SF1. Steam Fix ================================================================================== */
 
 
 
-/* Others ================================================================================== */
+/* UO1. Others ================================================================================== */
 
 /* Mail Card Animation */
 @keyframes mailObjanimat {
@@ -7458,7 +7461,7 @@ input:disabled+.tDecCheck {
     background-color: rgb(0 0 0 / 30%);
 }
 
-/* ---Events */
+/* ---EV1. Events--- */
 
 .daily-reward {
     transition: .2s;
@@ -7540,7 +7543,7 @@ input:disabled+.tDecCheck {
     transition-duration: .2s !important;
 }
 
-/* ---Events */
+/* ---EV1. Events--- */
 
 div.buttonG,
 div.buttonG:hover,
@@ -7651,4 +7654,12 @@ div.buttonG:active
 
 #menuWindow > div:nth-child(3) > div > div.challComplB > span {
     color: rgb(255 255 255 / 0.75) !important;
+}
+
+/* [24/7] Tag */
+.slideTag {
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: rgb(0 0 0 / 50%);
+    text-shadow: none !important;
 }

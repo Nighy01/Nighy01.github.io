@@ -1,10 +1,10 @@
 /* Flusothg - Krunker Hub */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2022/12/05 */
+/* 2023/02/01 */
 
 
-/* Configs ================================================================================== */
+/* CF1. Configs ================================================================================== */
 
 :root {
     
@@ -25,11 +25,11 @@
     
 }
 
-/* Configs ================================================================================== */
+/* CF1. Configs ================================================================================== */
 
 
 
-/* KeyFrames ================================================================================== */
+/* KF1. KeyFrames ================================================================================== */
 
 /* Loading Icon Spin */ 
 @keyframes loadicospin {
@@ -258,11 +258,11 @@
     }
 }
 
-/* KeyFrames ================================================================================== */
+/* KF1. KeyFrames ================================================================================== */
 
 
 
-/* Main(Feed) ================================================================================== */
+/* MI1. Main(Feed) ================================================================================== */
 
 /* Texts */
 * {
@@ -1026,7 +1026,7 @@ div.button:active {
 }
 
 /* Popup Content */
-#popupContent {
+#popupContent, #genericPop {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
@@ -1038,7 +1038,7 @@ div.button:active {
 }
 
 /* Popup Content Loading, Success, Error... etc */
-#popupContent > div > div:nth-child(2) {
+#popupContent > div > div:nth-child(2), #genericPop > div > div:nth-child(2) {
     color: rgb(255 255 255 / 0.9) !important;
 }
 
@@ -1164,11 +1164,11 @@ div.button:active {
     color: rgb(255 255 255 / 0.9) !important;
 }
 
-/* Main(Feed) ================================================================================== */
+/* MI1. Main(Feed) ================================================================================== */
 
 
 
-/* MarketPlace ================================================================================== */
+/* MP1. MarketPlace ================================================================================== */
 
 /* Black MarketPlace Icon */
 #m_blackm > img {
@@ -1247,22 +1247,22 @@ input:checked+.sliderSml2 {
     background: #b6bac8 !important;
 }
 
-/* MarketPlace ================================================================================== */
+/* MP1. MarketPlace ================================================================================== */
 
 
 
-/* Black MarketPlace ================================================================================== */
+/* B1MP2. Black MarketPlace ================================================================================== */
 
 /* Glitch Krunker Logo */
 .glitch:before, .glitch:after {
     display: none !important;
 }
 
-/* Black MarketPlace ================================================================================== */
+/* B1MP2. Black MarketPlace ================================================================================== */
 
 
 
-/* Trade ================================================================================== */
+/* TD1. Trade ================================================================================== */
 
 /* Incoming Offers, Outgoing Offers, Trade History */
 #o_in > div:nth-child(1), #o_in > div:nth-child(1) > span, #o_out > div:nth-child(1), #o_out > div:nth-child(1) > span, #o_his > div:nth-child(1), #o_his > div:nth-child(1) > span {
@@ -1281,11 +1281,11 @@ input:checked+.sliderSml2 {
     border-radius: 8px;
 }
 
-/* Trade ================================================================================== */
+/* TD1. Trade ================================================================================== */
 
 
 
-/* LeaderBoard ================================================================================== */
+/* LB1. LeaderBoard ================================================================================== */
 
 /* Rank Icons */
 .rnkIcon {
@@ -1306,11 +1306,11 @@ input:checked+.sliderSml2 {
     filter: drop-shadow(0px 0px 10px rgba(50, 181, 255, 0.2)) !important;
 }
 
-/* LeaderBoard ================================================================================== */
+/* LB1. LeaderBoard ================================================================================== */
 
 
 
-/* Games ================================================================================== */
+/* GA1. Games ================================================================================== */
 
 /* Maps Holder */
 #mapsHolder {
@@ -1383,11 +1383,11 @@ div#bigMFeatPBtn:active {
     text-align: center;
 }
 
-/* Games ================================================================================== */
+/* GA1. Games ================================================================================== */
 
 
 
-/* Mods ================================================================================== */
+/* MD1. Mods ================================================================================== */
 
 /* Home */
 #modsHolder > div:nth-child(1) > div > div.bigMenTab.bigMenTabA > span, #modsHolder > div:nth-child(1) > div > div:nth-child(1) > span {
@@ -1444,11 +1444,11 @@ div#bigMFeatPBtn:active {
     border-radius: 5px;
 }
 
-/* Mods ================================================================================== */
+/* MD1. Mods ================================================================================== */
 
 
 
-/* Item List ================================================================================== */
+/* IL1. Item List ================================================================================== */
     
 /* Category...etc Select, Search Item Input */
 #itemsListNav>select, #itemsListNav>input {
@@ -1456,11 +1456,11 @@ div#bigMFeatPBtn:active {
     background-color: rgb(255 255 255 / 0.8) !important;
 }
 
-/* Item List ================================================================================== */
+/* IL1. Item List ================================================================================== */
 
 
 
-/* Settings ================================================================================== */
+/* STG1. Settings ================================================================================== */
 
 /* Settings Popup */
 #settingsPop {
@@ -1603,11 +1603,11 @@ input:checked+.slider:active {
     filter: brightness(0.7);
 }
 
-/* Settings ================================================================================== */
+/* STG1. Settings ================================================================================== */
 
 
 
-/* Profile ================================================================================== */
+/* PF1. Profile ================================================================================== */
 
 /* Profile Picture */
 .profilePic {
@@ -1824,7 +1824,7 @@ input:checked+.slider:active {
 }
 
 /* Following/Followers List of Premium/Verified Icon */
-#followPop > div > div.leaderText > div > i:nth-child(1), #followPop > div > div.leaderText > div > i:nth-child(2) {
+#genericPop > div > div.leaderText > div > i {
     color: rgba(242, 242, 255, 0.9) !important;
 }
 
@@ -2227,11 +2227,11 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
     animation: page01animat .3s;
 }
 
-/* Profile ================================================================================== */
+/* PF1. Profile ================================================================================== */
 
 
 
-/* Clan Page ================================================================================== */
+/* CP1. Clan Page ================================================================================== */
 
 /* Members, Market Cap, Purchase Power and Counts */
 #clanInfo > div > div.clanStatH > div, #clanInfo > div > div.clanStatH > div > span {
@@ -2253,11 +2253,11 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
     background: rgb(255 255 255 / 0.3) !important;
 }
 
-/* Clan Page ================================================================================== */
+/* CP1. Clan Page ================================================================================== */
 
 
 
-/* Map Page ================================================================================== */
+/* GMP1. Game Map Page ================================================================================== */
    
 /* LeaderBoard Tab of Players */
 #mapLeaders > div, #mapLeaders > div > span {
@@ -2330,22 +2330,22 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
     backdrop-filter: blur(10px);
 }
 
-/* Map Page ================================================================================== */
+/* GMP1. Game Map Page ================================================================================== */
 
 
 
-/* Item Sales Page ================================================================================== */
+/* ISP1. Item Sales Page ================================================================================== */
 
 #iTabContent_owners > div > div:nth-child(2), 
 #iTabContent_owners > div  {
     color: rgb(255 255 255 / 0.6) !important;
 }
 
-/* Item Sales Page ================================================================================== */
+/* ISP1. Item Sales Page ================================================================================== */
 
 
 
-/* Others ================================================================================== */
+/* UO1. Others ================================================================================== */
 
 /* units... */
 [style="color:#787878"] {
@@ -2447,8 +2447,18 @@ div.buttonS, div.buttonH {
     color: rgb(255 255 255 / 0.95) !important;
 }
 
+
 /* Edit Button */
-.creationAction.edit, .creationAction.del, .creationActions {
+.creationAction.edit, .creationAction.del {
+    color: rgb(255 255 255 / 0.9) !important;
+    filter: none;
+    border-radius: 7px;
+    padding: 5px;
+    transition-duration: .15s;
+}
+
+/* Creation Actions */
+.creationActions {
     color: rgb(255 255 255 / 0.9) !important;
     filter: none;
     background: rgb(0 0 0 / 0.5);
@@ -2459,14 +2469,12 @@ div.buttonS, div.buttonH {
 }
 
 /* Edit Button Hover */
-.creationAction.edit:hover, .creationAction.del:hover, .creationActions:hover {
-    background: rgb(0 0 0 / 0.65);
+.creationAction.edit:hover, .creationAction.del:hover {
     transform: scale(0.9);
 }
 
 /* Edit Button Active */
-.creationAction.edit:active, .creationAction.del:active, .creationActions:active {
-    background: rgb(0 0 0 / 0.8);
+.creationAction.edit:active, .creationAction.del:active {
     transform: scale(0.8);
 }
 
@@ -2581,7 +2589,7 @@ a {
 }
 
 /* Success/Fail Icon */
-#popupContent > div > div:nth-child(1) > i {
+#popupContent > div > div:nth-child(1) > i, #genericPop > div > div:nth-child(1) > i {
     filter: brightness(100) opacity(0.9);
 }
 
@@ -2834,9 +2842,9 @@ div.mapsVotes
 }
 
 /* Trade Popup */
-#tradePop {
+.tradePop, div.tradePop {
     color: rgb(255 255 255 / 0.95) !important;
-    background-color: #0000 !important;
+    background: #0000 !important;
     box-shadow: none !important;
     transform: translate(-50%,-50%) scale(1);
     animation: fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, tradePopAnimat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
@@ -2932,9 +2940,16 @@ div.mapsVotes
     border: none !important;
 }
 
+/* YES Button */
+#confirmBtn {
+    background-color: rgb(255 255 255 / 30%) !important;
+    border-radius: 7px;
+}
+
 /* NO Button */
 #declineBtn {
-    background-color: rgb(117 0 0 / 20%) !important;
+    background-color: rgb(255 255 255 / 30%) !important;
+    border-radius: 7px;
 }
 
 /* Uncommon */

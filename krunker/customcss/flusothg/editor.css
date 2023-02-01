@@ -1,10 +1,10 @@
 /* Flusothg - Krunker Editor */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2022/12/05 */
+/* 2023/02/01 */
 
 
-/* Configs ================================================================================== */
+/* CF1. Configs ================================================================================== */
 
 :root {
 
@@ -22,11 +22,11 @@
     
 }
 
-/* Configs ================================================================================== */
+/* CF1. Configs ================================================================================== */
 
 
 
-/* KeyFrames ================================================================================== */
+/* KF1. KeyFrames ================================================================================== */
 
 /* Fadein ToolBar */
 @keyframes fadeintoolbar {
@@ -146,11 +146,11 @@
     }
 }
 
-/* KeyFrames ================================================================================== */
+/* KF1. KeyFrames ================================================================================== */
 
 
 
-/* Main ================================================================================== */
+/* MI1. Main ================================================================================== */
 
 /* Texts */
 * {
@@ -356,7 +356,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 /* Window Background */
-div#menuWindow, #loginPop, #importPop {
+div#menuWindow, .loginPop, .importPop {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgb(0 0 0 / 25%) !important;
@@ -368,7 +368,7 @@ div#menuWindow, #loginPop, #importPop {
 }
 
 /* Popup Content */
-#popupContent, #alertPop {
+#popupContent, #alertPop, .responsePop, .loadingPop, #genericPop {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgb(0 0 0 / 25%) !important;
@@ -390,7 +390,7 @@ div#menuWindow, #loginPop, #importPop {
 }
 
 /* Teleport Popup */
-#teleportPop {
+.teleportPop {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgb(0 0 0 / 25%) !important;
@@ -402,7 +402,7 @@ div#menuWindow, #loginPop, #importPop {
 }
 
 /* Change Position */
-#teleportPop > div:nth-child(1) {
+.teleportPop > div:nth-child(1) {
     text-align: left !important;
     color: rgb(240 240 240);
 }
@@ -443,7 +443,7 @@ div#menuWindow, #loginPop, #importPop {
 }
 
 /* Window Popups */
-#menuWindow, #publishGamePop, #publishPop, #popupContent, #importPop {
+#menuWindow, #publishGamePop, .publishPop, #popupContent, .importPop {
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
 }
@@ -492,7 +492,7 @@ div#menuWindow, #loginPop, #importPop {
 }
 
 /* import btn */
-#importPop > div.mapFndB {
+.importPop > div.mapFndB {
     background: #ffffff33 !important;
 }
 
@@ -508,11 +508,11 @@ div#menuWindow, #loginPop, #importPop {
     background-color: rgb(0 0 0 / 20%);
 }
 
-/* Main ================================================================================== */
+/* MI1. Main ================================================================================== */
 
 
 
-/* Others ================================================================================== */
+/* UO1. Others ================================================================================== */
 
 /* hr Line */
 hr {
@@ -591,10 +591,10 @@ hr {
 }
 
 /* Wrong */
-#menuWindow > div.pubGImgSplit > div:nth-child(1) > div,
+#menuWindow > div.pubGImgSplit > div:nth-child(1) > div, #genericPop > div > div:nth-child(1) > i,
 
 /* Ok */
-#menuWindow > div.pubGImgSplit > div:nth-child(2) > div
+#menuWindow > div.pubGImgSplit > div:nth-child(2) > div, #genericPop > div > div:nth-child(2) > i
 
 {
     filter: invert(0.1) brightness(999) opacity(0.8);
@@ -653,7 +653,7 @@ hr {
 }
 
 /* Map Test Popup */
-#mapTestPop {
+.mapTestPop {
     padding: 7px;
     border-radius: 15px;
     border: solid 2px rgb(0 0 0 / 0%);
@@ -662,11 +662,11 @@ hr {
 }
 
 /* ^Frame */
-#mapTestFrame {
+#mapTestFrame, .mapTestFrame {
     border-radius: 10px;
 }
 
-#publishGamePop, #publishPop {
+.publishGamePop, .publishPop {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgb(0 0 0 / 25%) !important;
