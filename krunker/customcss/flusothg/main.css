@@ -1,13 +1,42 @@
 /* Flusothg - Krunker */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2023/02/01 */
+/* 2023/03/27 */
 
 
 /* CF1. Configs ================================================================================== */
 
 :root {
+
+  /* BC1. Blur Configs ================================================================= */
+
+    /* None Blur */
+     --None_Blur: 0px;
+
+    /* Level 1 blur (highest level) */
+     --LV1_Blur: 40px;
+
+    /* Level 2 blur */
+     --LV2_Blur: 20px;
+
+    /* Level 3 blur */
+     --LV3_Blur: 15px;
     
+    /* Level 4 blur */
+     --LV4_Blur: 10px;
+
+    /* Level 5 blur */
+     --LV5_Blur: 5px;
+
+    /* Level 6 blur */
+     --LV6_Blur: 3px;
+
+    /* Level 7 blur (lowest level) */
+     --LV7_Blur: 2.5px;
+    
+  /* BC1. Blur Configs ================================================================= */
+
+
     /* Main Background Color */
      --main-bg-color: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
 
@@ -19,6 +48,15 @@
 
     /* Menu Active Button Color */
      --menu-active-btn-color: linear-gradient(180deg, rgba(121, 118, 153, 0.3) 0%, rgba(113, 112, 146, 0.3) 100%), rgba(57, 56, 73, 0.8) !important;
+
+    /* Action Button Color */
+     --actionBtn-Color: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7);
+
+    /* Action Button Hover Color */
+     --actionBtn-HoverColor: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7);
+
+    /* Popup Background Color */
+     --popupBgColor: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
 
     /* Impact Key */
      --impactKey: rgb(213 209 255 / 90%);
@@ -335,13 +373,13 @@
     from {
         background: linear-gradient(180deg, rgba(41, 42, 46, 0.1) 0%, rgba(34, 34, 39, 0.1) 100%), rgba(0, 0, 0, 0.1);
         opacity: 0;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(var(--LV4_Blur));
         transition-duration: .2s;
     }
     to {
         background: linear-gradient(180deg, rgba(41, 42, 46, 0.3) 0%, rgba(34, 34, 39, 0.3) 100%), rgba(0, 0, 0, 0.45);
         opacity: 1;
-        backdrop-filter: blur(40px);
+        backdrop-filter: blur(var(--LV1_Blur));
         transition-duration: .2s;
     }
 }
@@ -623,13 +661,13 @@
     from {
         background: rgb(6 2 2 / 10%);
         opacity: 0;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(var(--LV4_Blur));
         transition-duration: .2s;
     }
     to {
         background: rgb(6 2 2 / 75%);
         opacity: 1;
-        backdrop-filter: blur(40px);
+        backdrop-filter: blur(var(--LV1_Blur));
         transition-duration: .2s;
     }
 }
@@ -714,7 +752,7 @@ div#aHolder {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 7px !important;
 }
 
@@ -906,7 +944,7 @@ a {
     background: var(--dark-bg-color);
     animation: blurswitch .3s;
     transition-duration: .3s;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(var(--LV1_Blur));
 }
 
 /* Scrollbar Thumb */
@@ -1012,7 +1050,7 @@ div#newsBody::-webkit-scrollbar-track {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-sizing: border-box;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 8px;
     margin-top: -6px;
     display: inline-block;
@@ -1082,7 +1120,7 @@ div#newsBody::-webkit-scrollbar-track {
     left: 5px;
     bottom: 5px;
     border-radius: 7px !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
 }
 
 /* [Count] Plays */
@@ -1091,7 +1129,7 @@ div#newsBody::-webkit-scrollbar-track {
     right: 27px;
     bottom: 5px;
     border-radius: 7px !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
 }
 
 /* Stream Container (Streaming Now!, Featured Creators, Ad), New to Krunker? Div  */
@@ -1099,7 +1137,7 @@ div#newsBody::-webkit-scrollbar-track {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 8px;
     margin-left: -125px !important;
     transform: translateY(15px);
@@ -1111,7 +1149,7 @@ div#streamContainer, div.youNewDiv {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 8px;
     margin-left: -125px !important;
     transform: translateY(15px);
@@ -1270,7 +1308,7 @@ div.youNewDiv:hover {
     background: var(--main-bg-color);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 8px;
 }
 
@@ -1279,7 +1317,7 @@ div.youNewDiv:hover {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(var(--LV2_Blur)) !important;
     border-radius: 7px !important;
 }
 
@@ -1288,7 +1326,7 @@ div.youNewDiv:hover {
     background: var(--menu-hover-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(var(--LV2_Blur)) !important;
     border-radius: 7px !important;
 }
 
@@ -1297,7 +1335,7 @@ div.youNewDiv:hover {
     background: var(--menu-active-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(var(--LV2_Blur)) !important;
     border-radius: 7px !important;
 }
 
@@ -1325,7 +1363,7 @@ div.youNewDiv:hover {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-sizing: border-box;
     box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 7px !important;
     transition-duration: .15s;
     animation: customizebottomanimation .45s;
@@ -1365,7 +1403,7 @@ div.youNewDiv:hover {
     background: var(--menu-hover-btn-color);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 8px;
 }
 
@@ -1374,7 +1412,7 @@ div.youNewDiv:hover {
     background: var(--menu-active-btn-color);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 8px;
 }
 
@@ -1383,7 +1421,7 @@ div.youNewDiv:hover {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%);
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     transition-duration: .4s;
     animation: topanimation .4s;
     border-radius: 8px;
@@ -1395,7 +1433,7 @@ div.youNewDiv:hover {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%);
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     transition-duration: .4s;
     animation: topanimation .4s;
     border-radius: 8px !important;
@@ -1424,14 +1462,14 @@ div.youNewDiv:hover {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
     top: 10px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 8px;
 }
 
 /* Header Bar Level Count */
 #mLevelCont {
     background-color: rgb(0 0 0 / 40%) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-bottom-right-radius: 0px !important;
     border-radius: 0px 7px 7px 0px !important;
 }
@@ -1446,7 +1484,7 @@ div.youNewDiv:hover {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     transition-duration: .4s;
     animation: topanimation .4s;
     border-radius: 8px;
@@ -1458,7 +1496,7 @@ div.youNewDiv:hover {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 8px;
     transition-duration: .5s;
     transform: translateY(9px);
@@ -1470,7 +1508,7 @@ div.youNewDiv:hover {
     background: var(--main-bg-color);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 8px;
     transition-duration: .3s !important;
     min-height: 45px;
@@ -1483,7 +1521,7 @@ div.youNewDiv:hover {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 8px;
     transition-duration: 0.2s !important;
 }
@@ -1563,7 +1601,7 @@ div.youNewDiv:hover {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 20px;
     top: -50px;
     padding: 20px;
@@ -1595,7 +1633,7 @@ div.youNewDiv:hover {
     background: var(--menu-hover-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 20px;
     top: -48px;
     padding: 20px;
@@ -1616,7 +1654,7 @@ div.youNewDiv:hover {
     color: white;
     background: var(--menu-active-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 20px;
     top: -48px;
     padding: 20px;
@@ -1683,7 +1721,7 @@ input:checked+.sliderSml:after {
     color: white;
     background: rgba(95, 98, 107, 0.8) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 20px;
     top: -47px;
     padding: 20px;
@@ -1703,7 +1741,7 @@ input:checked+.sliderSml:hover:after {
     right: -9px;
     border-radius: 8px;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 20px;
     top: -47px;
     padding: 20px;
@@ -1728,7 +1766,7 @@ input:checked+.sliderSml:active:after {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     color: white;
     background: var(--menu-active-btn-color) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 20px;
     top: -47px;
     padding: 20px;
@@ -1823,10 +1861,10 @@ input:checked+.sliderSml:active:after {
 
 /* WindowUI */ 
 #menuWindow.dark, div#menuWindow.dark {
-    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    background: var(--popupBgColor);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 15px !important;
     transition-duration: .2s !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
@@ -1835,7 +1873,7 @@ input:checked+.sliderSml:active:after {
 /* WindowUI Background */
 #windowHolder.popupWin {
     background: var(--dark-bg-color);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(var(--LV1_Blur));
     animation: blurswitch .2s;
     transition-duration: .2s;
 }
@@ -1905,7 +1943,7 @@ input:checked+.sliderSml:active:after {
 input:checked+.slider2 {
     background: linear-gradient(180deg, rgba(36, 35, 57, 0.3) 0%, rgba(40, 41, 62, 0.3) 100%), rgba(31, 29, 42, 0.8) !important;
     box-shadow: 0px 0px 25px rgba(109, 108, 124, 0.3) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
 }
 
 /* Settings Header */
@@ -1966,7 +2004,7 @@ input:checked+.slider2 {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 10px !important;
     transition-duration: .15s;
 }
@@ -2000,27 +2038,27 @@ input:checked+.slider2 {
 /* Popup Background */
 #popupBack {
     background: var(--dark-bg-color);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(var(--LV1_Blur));
     animation: blurswitch .2s;
     transition-duration: .2s;
 }
 
 /* Confirm Popup */
 #confPremiumPop, #twitchPop, #confPop, #clientExitPop, #confPurchItemPop {
-    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    background: var(--popupBgColor);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 10px !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
 }
 
 /* YES/NO */
 #confirmBtn, #declineBtn {
-    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7);
+    background: var(--actionBtn-Color);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgb(142 147 255 / 25%);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
     padding: 8.5px !important;
     transition-duration: .15s;
@@ -2028,10 +2066,10 @@ input:checked+.slider2 {
 
 /* YES/NO Hover */
 #confirmBtn:hover, #declineBtn:hover {
-    background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7);
+    background: var(--actionBtn-HoverColor);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
     padding: 8.5px !important;
 }
@@ -2041,7 +2079,7 @@ input:checked+.slider2 {
     background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
     padding: 8.5px !important;
 }
@@ -2059,7 +2097,7 @@ input:checked+.slider2 {
 /* Map Vote */
 #mapVote {
     background: rgb(123 122 132 / 70%);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 8px;
     padding-left: 10px;
     padding-right: 10px;
@@ -2070,7 +2108,7 @@ input:checked+.slider2 {
 /* Map Info */
 #mapInfo {
     background: rgb(123 122 132 / 70%);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 7px 0px 7px 7px;
     padding: 10px;
     margin-bottom: 30px;
@@ -2080,7 +2118,7 @@ input:checked+.slider2 {
 /* Mod Vote */
 #modVote {
     background: rgb(123 122 132 / 70%);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 8px;
     padding: 10px;
 }
@@ -2116,7 +2154,7 @@ input:checked+.slider2 {
 .setBodH {
     background: rgba(0, 0, 0, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 10px !important;
 }
 
@@ -2146,7 +2184,7 @@ input:checked+.slider2 {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.5) 0%, rgba(194, 204, 255, 0.5) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 10px !important;
     transition-duration: .2s !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
@@ -2154,10 +2192,10 @@ input:checked+.slider2 {
 
 /* Import Popup */
 .importPop {
-    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    background: var(--popupBgColor);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 10px !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
@@ -2195,7 +2233,7 @@ input:checked+.slider2 {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
     transform: translate(-14px , -18px);
 }
@@ -2227,7 +2265,7 @@ input:checked+.slider2 {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 8px;
     margin-bottom: -2px;
     width: 58px;
@@ -2349,10 +2387,10 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
 
 /* KPD Popup */
 #policePopC {
-    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    background: var(--popupBgColor);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 10px !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
@@ -2391,7 +2429,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
 /* Krunker Guide Popup Background */ 
 #guidePopupH {
     background: var(--dark-bg-color) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(var(--LV1_Blur));
     animation: blurswitch .2s;
     z-index: 10000000000000000000000000000000000000000000000000000000 !important;
 }
@@ -2465,7 +2503,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
 /* Purchase KR Popup Background */
 #purchaseBack {
     background: var(--dark-bg-color);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(var(--LV1_Blur));
     animation: blurswitch .2s;
     transition-duration: .2s;
 }
@@ -2503,7 +2541,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
 /* Speech Box (Ex. Welcome Back!...etc) */
 .speechBox {
     background: rgb(0 0 0 / 50%);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     color: rgb(255 255 255 / 90%);
 }
 
@@ -2511,7 +2549,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
 .sb1:before {
     border-left: 10px solid rgb(0 0 0 / 50%);
     border-top: 10px solid rgb(0 0 0 / 50%);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     right: -20px;
 }
 
@@ -2569,7 +2607,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
 }
 
 /* Customize Button Hover */
@@ -2579,7 +2617,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
     background: var(--menu-hover-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
 }
 
 /* Customize Button Active */
@@ -2589,7 +2627,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
     background: var(--menu-active-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
 }
 
 /* Team Switch */
@@ -2623,7 +2661,7 @@ input:checked+.sliderCent:before {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 7px !important;
 }
 
@@ -2632,7 +2670,7 @@ input:checked+.sliderCent:before {
     background: var(--menu-hover-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 7px !important;
 }
 
@@ -2641,7 +2679,7 @@ input:checked+.sliderCent:before {
     background: var(--menu-active-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 7px !important;
 }
 
@@ -2694,7 +2732,7 @@ input:checked+.sliderCent:before {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(var(--LV2_Blur)) !important;
     border-radius: 7px !important;
     transition-duration: .2s;
 }
@@ -2704,7 +2742,7 @@ input:checked+.sliderCent:before {
     background: var(--menu-hover-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(var(--LV2_Blur)) !important;
     border-radius: 7px !important;
     transform: scale(0.97);
 }
@@ -2714,7 +2752,7 @@ input:checked+.sliderCent:before {
     background: var(--menu-active-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(var(--LV2_Blur)) !important;
     border-radius: 7px !important;
     transform: scale(0.95);
 }
@@ -2754,7 +2792,7 @@ input:checked+.sliderCent:before {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgb(217 205 255 / 70%);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 10px !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
@@ -2762,7 +2800,7 @@ input:checked+.sliderCent:before {
 
 /* Button Disabled */
 .buttonD {
-    filter: blur(3px) brightness(0.9) grayscale(0.5) !important;
+    filter: blur(var(--LV6_Blur)) brightness(0.9) grayscale(0.5) !important;
 }
 
 /* Live Event! */
@@ -2789,7 +2827,7 @@ input:checked+.sliderCent:before {
 div.purejscarousel-btn {
     background: rgb(0 0 0 / 50%) !important;
     border-radius: 10px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     transition-duration: .2s;
 }
 
@@ -2856,10 +2894,10 @@ div.purejscarousel-btn:active {
 
 /* Ranked Popup */
 #rankedPop {
-    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    background: var(--popupBgColor);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 10px !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
@@ -2870,7 +2908,7 @@ div.purejscarousel-btn:active {
     background: linear-gradient(180deg, rgb(203 89 89 / 79%) 0%, rgb(219 101 101 / 72%) 100%), rgb(224 197 197 / 48%);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgb(255 142 142 / 25%);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
     transition-duration: .15s;
 }
@@ -2882,20 +2920,20 @@ div.purejscarousel-btn:active {
 
 /* PLAY NOW */
 .bundlPopBuyB {
-    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7);
+    background: var(--actionBtn-Color);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgb(142 147 255 / 25%);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
     transition-duration: .15s;
 }
 
 /* PLAY NOW Hover */
 .bundlPopBuyB:hover {
-    background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7);
+    background: var(--actionBtn-HoverColor);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
 }
 
@@ -2904,16 +2942,16 @@ div.purejscarousel-btn:active {
     background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
 }
 
 /* Vouch Popup */
 .vouchPop {
-    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    background: var(--popupBgColor);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 10px !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
@@ -2959,10 +2997,10 @@ div.purejscarousel-btn:active {
 .eventPop
 
 {
-    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    background: var(--popupBgColor);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 10px !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
@@ -2972,7 +3010,7 @@ div.purejscarousel-btn:active {
 #claimPop {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 10px !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
@@ -3019,7 +3057,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 .progressBarInner {
     background-image: linear-gradient(to right,rgba(0 0 0 / 0%),rgba(0 0 0 / 0%),94%,rgba(0 0 0 / 0%)) !important;
     background: rgba(131, 140, 188, 0.9) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 4px !important;
 }
 
@@ -3053,26 +3091,26 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     color: rgb(0 0 0 / 90%) !important;
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 7px;
 }
 
 /* Save Button */
 .creatorCodeBtn {
-    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
+    background: var(--actionBtn-Color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px;
     transition-duration: .1s;
 }
 
 /* Save Hover Button */
 .creatorCodeBtn:hover {
-    background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7) !important;
+    background: var(--actionBtn-HoverColor) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     opacity: 1 !important;
 }
 
@@ -3081,7 +3119,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     opacity: 1 !important;
 }
 
@@ -3256,7 +3294,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 .spinPrevIcon, .spinSprayIcon {
     border-color: transparent !important;
     background-color: rgb(0 0 0 / 50%);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 10px;
     transition-duration: .2s;
     animation: topanimation .5s;
@@ -3293,7 +3331,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 /* Bundl Pop Curncs */
 .bundlPopCurncs {
     background-color: rgb(0 0 0 / 30%);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-bottom-left-radius: 0px;
     border-top-right-radius: 0px;
     border-radius: 7px !important;
@@ -3372,7 +3410,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: rgba(31, 31, 31, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.1) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(var(--LV1_Blur));
     border-radius: 7px;
 }
 
@@ -3388,7 +3426,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
 }
 
@@ -3397,7 +3435,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
 }
 
@@ -3431,7 +3469,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 
 /* Selected Class */
 .cmpClassGr {
-    filter: grayscale(0) blur(5px) !important;
+    filter: grayscale(0) blur(var(--LV5_Blur)) !important;
     animation: fadein .2s;
 }
 
@@ -3478,7 +3516,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(5px) !important;
+    backdrop-filter: blur(var(--LV5_Blur)) !important;
     border-radius: 7px !important;
     animation: rightanimation .4s;
     transition-duration: .4s;
@@ -3511,7 +3549,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(var(--LV2_Blur)) !important;
     border-radius: 7px !important;
 }
 
@@ -3542,7 +3580,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: rgba(31, 31, 31, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.1) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 10px;
     width: 450px;
     height: 30px !important;
@@ -3564,7 +3602,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 10px !important;
     animation: leader_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -3656,7 +3694,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(var(--LV2_Blur)) !important;
     border-radius: 7px !important;
     animation: timing_aniamt 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -3758,7 +3796,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: rgba(29, 29, 29, 0.6) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 10px !important;
 }
 
@@ -3767,7 +3805,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: rgba(29, 29, 29, 0.6) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
     animation: timing_aniamt 450ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 450ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -3777,7 +3815,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(5px) !important;
+    backdrop-filter: blur(var(--LV5_Blur)) !important;
     border-radius: 7px !important;
     padding-left: 10px;
     padding-right: 10px;
@@ -3874,7 +3912,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: rgba(29, 29, 29, 0.6) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(var(--LV2_Blur)) !important;
     border-radius: 7px !important;
     animation: fadein .2s;
     transition-duration: .2s;
@@ -3885,7 +3923,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: rgba(29, 29, 29, 0.6) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(var(--LV2_Blur)) !important;
     animation: pfp_pic_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
@@ -3913,7 +3951,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: rgba(29, 29, 29, 0.6) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 7px !important;
 }
 
@@ -3927,7 +3965,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: rgba(29, 29, 29, 0.6);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 10px;
 }
 
@@ -3941,7 +3979,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(var(--LV3_Blur));
     border-radius: 10px;
     animation: fadein .2s;
     transition-duration: .2s;
@@ -3984,7 +4022,7 @@ th, tr {
     background-color: rgba(29, 29, 29, 0.6) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 10px;
     animation: fadein .2s;
 }
@@ -3994,7 +4032,7 @@ th, tr {
     background-color: rgba(29, 29, 29, 0.6) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 10px;
     animation: fadein .2s;
 }
@@ -4022,7 +4060,7 @@ th, tr {
     background: rgba(29, 29, 29, 0.6);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px;
     animation: spectimer_animat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -4033,7 +4071,7 @@ th, tr {
     background: rgba(122, 135, 255, 0.6);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px;
     animation: team1_animat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -4059,7 +4097,7 @@ th, tr {
     background: rgba(255, 0, 0, 0.5);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px;
     animation: team2_animat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -4076,10 +4114,10 @@ th, tr {
 
 /* Spectating */
 #specNames {
-    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    background: var(--popupBgColor);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 10px;
     animation: spectating_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -4089,7 +4127,7 @@ th, tr {
     background: rgba(29, 29, 29, 0.6);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 10px;
     animation: spec_contr_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -4109,7 +4147,7 @@ th, tr {
     background: rgba(29, 29, 29, 0.6);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 10px;
     animation: fadein 100ms 0ms linear forwards;
     transition-duration: .2s;
@@ -4120,7 +4158,7 @@ th, tr {
     background: rgba(29, 29, 29, 0.6);
     border: 1px solid rgba(225, 225, 225, 0.1);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 10px;
 }
 
@@ -4129,7 +4167,7 @@ th, tr {
     background: rgba(29, 29, 29, 0.6) !important;
     border: 1px solid rgba(225, 225, 225, 0.1) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 5px !important;
 }
 
@@ -4170,7 +4208,7 @@ th, tr {
     background: rgba(29, 29, 29, 0.6);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px;
 }
 
@@ -4181,7 +4219,7 @@ th, tr {
 
 /* Silhouette In Spec */
 .silhouette {
-    filter: grayscale(1) brightness(0.7) opacity(0.7) blur(3px) !important;
+    filter: grayscale(1) brightness(0.7) opacity(0.7) blur(var(--LV6_Blur)) !important;
     opacity: 1 !important;
     animation: fadein .2s;
 }
@@ -4324,7 +4362,7 @@ th, tr {
 #endTabbedView {
     animation: EndCard_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
     transition-duration: 400ms !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
 }
 
 /* Match Ended Card Animation */
@@ -4343,7 +4381,7 @@ th, tr {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 8px;
     animation: EndAd_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
     transition-duration: 400ms;
@@ -4384,17 +4422,17 @@ th, tr {
 
 /* Vote Map Thumb */
 .matchVoteThumb {
-    filter: blur(20px);
+    filter: blur(var(--LV2_Blur));
 }
 
 /* Vote Map Thumb Hover */
 .matchVoteThumb:hover {
-    filter: blur(0px) brightness(0.8);
+    filter: blur(var(--None_Blur)) brightness(0.8);
 }
 
 /* Vote Map Thumb Active */
 .matchVoteThumb:active {
-    filter: blur(0px) brightness(0.5);
+    filter: blur(var(--None_Blur)) brightness(0.5);
 }
 
 /* Vote Map: Title */
@@ -4439,7 +4477,7 @@ th, tr {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 7px !important;
     animation: EndChal_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
     transition-duration: 400ms;
@@ -4476,7 +4514,7 @@ th, tr {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 7px !important;
     animation: teamTotals_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
     transition-duration: 400ms;
@@ -4580,7 +4618,7 @@ th, tr {
 #lobStrkPrg {
     background-image: linear-gradient(to right,#0000,#0000,94%,#0000);
     background: #838CBC !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 5px !important;
 }
 
@@ -4616,7 +4654,7 @@ th, tr {
 .lobStrkProg {
     background: rgba(57, 57, 64, 0.9) !important;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
     margin-right: -10px !important;
 }
@@ -4636,7 +4674,7 @@ th, tr {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 10px !important;
     animation: Return2Krunk_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
     transition-duration: .2s;
@@ -4704,7 +4742,7 @@ th, tr {
 #loadoutName {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 7px;
 }
 
@@ -4712,7 +4750,7 @@ th, tr {
 #loadoutSelect {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 7px !important;
     transition-duration: .2s;
 }
@@ -4721,7 +4759,7 @@ th, tr {
 #loadoutSelect:hover {
     background: rgba(200, 200, 210, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.1) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 7px;
 }
 
@@ -4729,7 +4767,7 @@ th, tr {
 #loadoutSelect:active {
     background: rgba(139, 140, 150, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.15) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 7px;
 }
 
@@ -4751,7 +4789,7 @@ th, tr {
     border-radius: 7px;
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border: none !important;
 }
 
@@ -4759,7 +4797,7 @@ th, tr {
 .selectorItem {
     background: rgba(0, 0, 0, 0.3) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 10px;
     display: inline-flex !important;
     margin: 5px;
@@ -4793,7 +4831,7 @@ th, tr {
     background: rgba(0, 0, 0, 0.4) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 10px;
 }
 
@@ -4802,7 +4840,7 @@ th, tr {
     background: rgba(0, 0, 0, 0.55) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 10px;
 }
 
@@ -4821,7 +4859,7 @@ th, tr {
     background: rgb(0 0 0 / 0.3) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 10px;
     text-shadow: none;
     transition-duration: .15s;
@@ -4837,7 +4875,7 @@ th, tr {
     background: rgb(0 0 0 / 0.4) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 10px;
 }
 
@@ -4846,7 +4884,7 @@ th, tr {
     background: rgb(0 0 0 / 0.55) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 10px;
 }
 
@@ -4857,10 +4895,10 @@ th, tr {
 
 /* Load..Buttons */
 .loadoutBtn {
-    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
+    background: var(--actionBtn-Color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     margin-left: 7px !important;
     border-radius: 7px;
     transition-duration: .15s;
@@ -4868,10 +4906,10 @@ th, tr {
 
 /* Load..Buttons Hover */
 .loadoutBtn:hover {
-    background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7) !important;
+    background: var(--actionBtn-HoverColor) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     margin-left: 7px !important;
     border-radius: 7px;
 }
@@ -4881,7 +4919,7 @@ th, tr {
     background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     margin-left: 7px !important;
     border-radius: 7px;
 }
@@ -5046,7 +5084,7 @@ th, tr {
     background: rgba(0, 0, 0, 0.5) !important;
     box-shadow: 0px 0px 20px rgb(80 80 80 / 50%) !important;
     padding: 100px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 10px !important;
     padding-top: 65px !important;
     padding-left: 46px !important;
@@ -5089,7 +5127,7 @@ th, tr {
     background: rgba(29, 29, 29, 0.6) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 8px;
     color: rgb(194 197 255) !important;
     text-shadow: none !important;
@@ -5152,7 +5190,7 @@ body > div.tooltip > div:nth-child(4) > span
 .streakActionOvrl {
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
 }
 
 /* ^Action Icon Hover */
@@ -5201,7 +5239,7 @@ body > div.tooltip > div:nth-child(4) > span
     box-shadow: 0px 0px 20px rgb(80 80 80 / 50%) !important;
     padding: 65px;
     padding-left: 55px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 10px !important;
 }
 
@@ -5214,7 +5252,7 @@ body > div.tooltip > div:nth-child(4) > span
 .skinColorItem {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     transition-duration: .15s;
 }
 
@@ -5249,7 +5287,7 @@ body > div.tooltip > div:nth-child(4) > span
 .inputGrey2 {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgb(0 0 0 / 5%) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 7px !important;
     transition-duration: .2s;
 }
@@ -5346,7 +5384,7 @@ body > div.tooltip > div:nth-child(4) > span
 .lockedClass {
     background: rgba(0, 0, 0, 0.5) !important;
     box-shadow: 0px 0px 20px rgba(80, 80, 80, 0.5) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     padding: 150px !important;
     padding-left: 75px !important;
     padding-top: 120px !important;
@@ -5402,7 +5440,7 @@ body > div.tooltip > div:nth-child(4) > span
 /* Class XP Bar C */
 .clsXPBarC {
     background: rgba(131, 140, 188, 0.9) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 4px !important;
 }
 
@@ -5445,18 +5483,18 @@ body > div.tooltip > div:nth-child(4) > span
 #plySearch {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgb(0 0 0 / 5%) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 7px;
     font-size: 16px;
 }
 
 /* Kick, Ban, Transfer Host Take Action Button */
 .takeActionBtn, .takeActionBtn.kick, .takeActionBtn.enabled {
-    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7);
+    background: var(--actionBtn-Color);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(201, 197, 224, 0.25);
     text-shadow: none !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
     padding: 10px;
     padding-left: 10px;
@@ -5466,7 +5504,7 @@ body > div.tooltip > div:nth-child(4) > span
 
 /* Kick, Ban, Transfer Host Take Action Hover Button */
 .takeActionBtn:hover, .takeActionBtn.kick:hover {
-    background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7);
+    background: var(--actionBtn-HoverColor);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25);
     opacity: 1 !important;
@@ -5528,7 +5566,7 @@ body > div.tooltip > div:nth-child(4) > span
 
 /* Host Maps Image Button */
 .hostMapImg {
-    filter: blur(20px);
+    filter: blur(var(--LV2_Blur));
     transition-duration: .3s;
 }
 
@@ -5539,13 +5577,13 @@ input:checked+.hostMapImg {
 
 /* Host Maps Image Hover Button */
 .hostMapImg:hover {
-    filter: blur(0px);
+    filter: blur(var(--None_Blur));
     transform:scale(1.1);
 }
 
 /* Host Maps Image Active Button */
 .hostMapImg:active {
-    filter: blur(0px);
+    filter: blur(var(--None_Blur));
 }
 
 /* ---------- Comp Game Setup ---------- */
@@ -5571,7 +5609,7 @@ div#hostCMapPickT {
     width: 1169px;
     height: 70px;
     left: 0px;
-    backdrop-filter: blur(14px);
+    backdrop-filter: blur(var(--LV3_Blur));
     padding-left: 20px;
     padding-top: 75px;
     border-radius: 7px;
@@ -5586,12 +5624,12 @@ div#hostCMapPickT {
 
 /* Browse Community Games Hover */
 div#hostCMapPickT:hover {
-    backdrop-filter: blur(0px);
+    backdrop-filter: blur(var(--None_Blur));
 }
 
 /* Browse Community Games Active */
 div#hostCMapPickT:active {
-    backdrop-filter: blur(0px);
+    backdrop-filter: blur(var(--None_Blur));
 }
 
 /* Browse Community Games Pickr */
@@ -5631,7 +5669,7 @@ div#hostCMapPickT:active {
 .segSugIH {
     border-radius: 10px;
     background-color: rgb(0 0 0 / 50%);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     transition-duration: .15s;
     animation: fadein 200ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
@@ -5707,7 +5745,7 @@ input:hover+.optCheck {
 /* Custom Server Setup */
 .hostHeader {
     background: rgba(26 26 26 / 0.8);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border: none;
     box-shadow: none;
 }
@@ -5715,7 +5753,7 @@ input:hover+.optCheck {
 /* Server Cost */
 #stickyHostH {
     background: rgb(26 26 26 / 0.8);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border: none;
     box-shadow: none;
 }
@@ -5731,7 +5769,7 @@ input:hover+.optCheck {
     border-radius: 10px;
     border: none;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
 }
 
 /* Change Game Hover */
@@ -5810,24 +5848,24 @@ input:hover+.optCheck {
 /* Server Card Info */
 .serverCardInfo {
     border-radius: 0px 0px 10px 10px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     background: rgb(54 55 66 / 80%);
 }
 
 /* Disabled Tab Dis Switch */
 @keyframes tabDisBlurSwitch {
     from {
-        filter: blur(0px);
+        filter: blur(var(--None_Blur));
     }
     to {
-        filter: blur(5px);
+        filter: blur(var(--LV5_Blur));
     }
 }
 
 /* Disabled Tab Dis */
 .bigMenTab.bigMenTabDis {
     color: rgb(236 236 236 / 37%) !important;
-    filter: blur(5px);
+    filter: blur(var(--LV5_Blur));
     animation: tabDisBlurSwitch .25s;
 }
 
@@ -5842,19 +5880,19 @@ input:hover+.optCheck {
 /* --- CM1. Mouse Click Icon --- */
 
 /* Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=04Jh9w9NNjOY0maj2NDlsMUFJ5LP3FZW);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=7q6wSbbCPhm6xavgfvsfIkt9JWYlVoH6);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/click.png);
     opacity: 0.9;
 }
 
 /* Middle Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=04Jh9w9NNjOY0maj2NDlsMUFJ5LP3FZW);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=7q6wSbbCPhm6xavgfvsfIkt9JWYlVoH6);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/middleclick.png);
     opacity: 0.9;
 }
 
 /* Right Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=04Jh9w9NNjOY0maj2NDlsMUFJ5LP3FZW);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=7q6wSbbCPhm6xavgfvsfIkt9JWYlVoH6);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/rightclick.png);
     opacity: 0.9;
 }
@@ -5865,7 +5903,7 @@ input:hover+.optCheck {
 #settSearch {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 7px !important;
 }
 
@@ -5874,7 +5912,7 @@ input:hover+.optCheck {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 10px !important;
     transition-duration: .15s;
 }
@@ -5926,17 +5964,17 @@ input:hover+.optCheck {
 
 /* Settings Preset Buttons */
 .settingsBtn {
-    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
+    background: var(--actionBtn-Color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 7px !important;
     transition-duration: .2s;
 }
 
 /* Settings Preset Hover Buttons */
 .settingsBtn:hover {
-    background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7) !important;
+    background: var(--actionBtn-HoverColor) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25) !important;
 }
@@ -5953,7 +5991,7 @@ input:hover+.optCheck {
     background: linear-gradient(180deg, rgba(181, 188, 255, 0.3) 0%, rgba(181, 188, 255, 0.3) 0%, rgba(181, 188, 255, 0.3) 0%, rgba(168, 177, 255, 0.3) 0.01%, rgba(176, 189, 255, 0.3) 100%, rgba(170, 179, 255, 0.3) 100%), rgba(166, 175, 255, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(166, 175, 255, 0.25) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 7px !important;
     transition-duration: .2s;
 }
@@ -5977,7 +6015,7 @@ input:hover+.optCheck {
     background: rgba(0, 0, 0, 0.4) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 10px !important;
     padding: 3px;
 }
@@ -5990,7 +6028,7 @@ input:hover+.optCheck {
 /* Manage Ads Popup */
 .onetrust-pc-dark-filter {
     background: var(--dark-bg-color) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(var(--LV1_Blur));
     animation: blurswitch .2s;
     transition-duration: .2s;
 }
@@ -6029,10 +6067,10 @@ input:hover+.optCheck {
 
 /* Image Collection Button */
 div.openCollection {
-    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
+    background: var(--actionBtn-Color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 7px !important;
     transition-duration: .2s;
 }
@@ -6040,7 +6078,7 @@ div.openCollection {
 /* Image Collection Hover Button */
 div.openCollection:hover {
     transform: scale(1) !important;
-    background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7) !important;
+    background: var(--actionBtn-HoverColor) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25) !important;
 }
@@ -6057,7 +6095,7 @@ input[type="color" i] {
     opacity: 0.9 !important;
     border: 4px solid rgba(33, 35, 43, 0.9) !important;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 5px !important;
     transition-duration: .2s;
 }
@@ -6142,7 +6180,7 @@ input[type="color" i]:active {
 .setToggle {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgb(0 0 0 / 5%) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 7px !important;
     transition-duration: .2s;
 }
@@ -6168,7 +6206,7 @@ input[type="color" i]:active {
 .sliderM {
     background: linear-gradient(180deg, rgba(209, 208, 227, 0.3) 0%, rgba(197, 196, 218, 0.3) 100%), rgba(223, 223, 240, 0.8);
     box-shadow: 0px 0px 20px rgba(223, 223, 240, 0.2);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 7px;
     padding-top: 0.7px;
     padding-bottom: 0.7px;
@@ -6192,7 +6230,7 @@ input[type="color" i]:active {
     background-color: #0000 !important;
     background: linear-gradient(180deg, rgba(235, 233, 255, 0.3) 0%, rgba(229, 227, 255, 0.3) 100%), rgba(255, 255, 255, 0.9) !important;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 5px;
     padding: 9px;
     transition-duration: .2s;
@@ -6215,7 +6253,7 @@ input[type="color" i]:active {
     background: rgba(0, 0, 0, 0.15) !important;
     border: 3px solid rgba(225, 225, 225, 0.25) !important;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 9px !important;
     font-size: 16.5px;
     padding: 4px;
@@ -6236,7 +6274,7 @@ input[type="color" i]:active {
 input:checked+.slider, input:checked+.advancedSlider {
     background: linear-gradient(180deg, rgba(69, 69, 94, 0.3) 0%, rgba(64, 65, 89, 0.3) 100%), rgba(33, 35, 43, 0.8) !important;
     box-shadow: 0px 0px 25px rgba(33, 35, 43, 0.3) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     transition-duration: .2s;
 }
 
@@ -6258,7 +6296,7 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
 .slider, .advancedSlider {
     background: linear-gradient(180deg, rgba(189, 188, 206, 0.3) 0%, rgba(178, 177, 198, 0.3) 100%), rgba(186, 188, 209, 0.8) !important;
     box-shadow: 0px 0px 25px rgb(135 125 177 / 30%) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     transition-duration: .2s;
 }
 
@@ -6282,7 +6320,7 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
 .slider:before, .advancedSlider:before {
     background: linear-gradient(180deg, rgba(235, 233, 255, 0.3) 0%, rgba(229, 227, 255, 0.3) 100%), rgba(255, 255, 255, 0.9) !important;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
 }
 
 /* STG1. Settings ================================================================================== */
@@ -6293,7 +6331,7 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
 
 /* Game Overlay Hover */
 .mapActionOvrl {
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     background: rgb(0 0 0 / 50%);
     border-radius: 10px 10px 0px 0px;
 }
@@ -6328,7 +6366,7 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
 
 /* [Count] online */
 .mapsVotes {
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     background: rgb(0 0 0 / 30%) !important;
     color: rgb(255 255 255 / 0.9) !important;
     font-size: 15px;
@@ -6352,7 +6390,7 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
 
 /* [NEW]/[UPDATED] */
 .mapAgeD {
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     background: rgb(0 0 0 / 30%) !important;
     color: rgb(255 255 255 / 0.9) !important;
     font-size: 15px;
@@ -6374,21 +6412,21 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
 /* Create your own game... */
 [style="margin-left:20px;background:#0b0b0b;display:inline-block;width:580px;vertical-align:top;"] {
     background: rgb(0 0 0 / 0.5) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 10px;
 }
 
 /* ^Info */
 .biMFeatInfH {
     background: rgb(0 0 0 / 0.1) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 10px;
 }
 
 /* ^Open Editor...Button */
 .biMFeatInfB {
     background: rgb(0 0 0 / 0.1) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 10px;
     border: 1px solid rgb(255 255 255 / 0.1);
     transition-duration: .15s;
@@ -6397,7 +6435,7 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
 /* ^Hover */
 .biMFeatInfB:hover {
     background: rgb(255 255 255 / 30%) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 10px;
     border: 1px solid rgb(255 255 255 / 0.1) !important;
 }
@@ -6405,7 +6443,7 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
 /* ^Active */
 .biMFeatInfB:active {
     background: rgb(134 134 134 / 30%) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 10px;
     border: 1px solid rgb(255 255 255 / 0.1) !important;
     transform: scale(0.9);
@@ -6521,7 +6559,7 @@ div.followBack, div.followBack:hover {
 div.challHeadrBlck {
     color: #ffe1e1 !important;
     background: rgb(0 0 0 / 0.5);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 10px;
 }
 
@@ -6582,7 +6620,7 @@ div.challHeadrBlck {
 /* Challenge Map Prg */
 .challMapPrg {
     background: rgb(0 0 0 / 50%);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 7px;
     transform: translate(-10px , -10px);
 }
@@ -6646,7 +6684,7 @@ div#bidPrevBtn, div#bidPrevBtn:hover {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(var(--LV2_Blur)) !important;
     border-radius: 7px !important;
 }
 
@@ -6655,7 +6693,7 @@ div#bidPrevBtn, div#bidPrevBtn:hover {
     background: var(--menu-hover-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(var(--LV2_Blur)) !important;
     border-radius: 7px !important;
 }
 
@@ -6664,16 +6702,16 @@ div#bidPrevBtn, div#bidPrevBtn:hover {
     background: var(--menu-active-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(var(--LV2_Blur)) !important;
     border-radius: 7px !important;
 }
 
 /* Enter Server Password to Join Popup */
 #gameCodePop {
-    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    background: var(--popupBgColor);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 10px !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
@@ -6684,7 +6722,7 @@ div#bidPrevBtn, div#bidPrevBtn:hover {
 #codeInput {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
     border-radius: 7px;
 }
 
@@ -6906,20 +6944,20 @@ div#rentServBtn:active {
 /* Link Metamask */
 .metaLoginBtn {
     color: rgb(255 255 255 / 0.95) !important;
-    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7);
+    background: var(--actionBtn-Color);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgb(142 147 255 / 25%);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
     transition-duration: .15s;
 }
 
 /* Link Metamask Hover */
 .metaLoginBtn:hover {
-    background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7);
+    background: var(--actionBtn-HoverColor);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
 }
 
@@ -6928,7 +6966,7 @@ div#rentServBtn:active {
     background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
 }
 
@@ -6940,20 +6978,20 @@ div#rentServBtn:active {
 /* Add Image */
 .imageListAdd, div.imageListAdd {
     color: rgb(255 255 255 / 95%) !important;
-    background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
+    background: var(--actionBtn-Color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgb(142 147 255 / 25%) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
     transition-duration: .15s;
 }
 
 /* Add Image Hover */
 .imageListAdd:hover, div.imageListAdd:hover {
-    background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7) !important;
+    background: var(--actionBtn-HoverColor) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
     transform: scale(1) !important;
     opacity: 1 !important;
@@ -6965,7 +7003,7 @@ div#rentServBtn:active {
     background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 7px !important;
 }
 
@@ -6980,7 +7018,7 @@ div#rentServBtn:active {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 50px rgb(0 0 0 / 10%) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 10px !important;
     transition-duration: .15s;
 }
@@ -7039,7 +7077,7 @@ div#rentServBtn:active {
 /* Image Action Overlay */
 .imageActionOvrl {
     background: rgba(0 0 0 / 50%) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -7082,7 +7120,7 @@ div#rentServBtn:active {
 
 /* Craft brand new... */
 #bigMFeatDesc2 {
-    backdrop-filter: blur(0px) !important;
+    backdrop-filter: blur(var(--None_Blur)) !important;
     background: rgb(0 0 0 / 0%) !important;
 }
 
@@ -7138,13 +7176,13 @@ div#rentServBtn:active {
 .challHeadrS {
     text-shadow: none !important;
     background: rgb(0 0 0 / 50%);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
 }
 
 /* Shop Junk */
 #shopJnkDsp {
     background: rgb(0 0 0 / 50%);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
 }
 
 /* Trade Accept */
@@ -7248,10 +7286,10 @@ input:disabled+.tDecCheck {
 
 /* Trade Chat Holder */
 #tradeChatHolder {
-    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    background: var(--popupBgColor);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: 8px;
     transform: translateX(-100px) translateY(-115px);
     padding: 10px;
@@ -7288,7 +7326,7 @@ input:disabled+.tDecCheck {
 .tSearch {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 7px !important;
 }
 
@@ -7346,14 +7384,14 @@ input:disabled+.tDecCheck {
 .tItemBound {
     border-radius: 8px;
     background-color: rgb(0 0 0 / 80%);
-    backdrop-filter: blur(2.5px);
+    backdrop-filter: blur(var(--LV7_Blur));
     filter: grayscale(1) opacity(0.95);
 }
 
 /* Badge Locked */
 .badgeBound {
     background-color: rgb(0 0 0 / 0.5) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 10px;
     padding-left: 138px;
     padding-bottom: 22px;
@@ -7392,7 +7430,7 @@ input:disabled+.tDecCheck {
 /* Purchase Response */
 #purchaseResponse {
     background: rgb(6 2 2 / 75%);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(var(--LV1_Blur));
     animation: blurswitch_purshase .2s;
     transition-duration: .2s;
 }
@@ -7414,17 +7452,17 @@ input:disabled+.tDecCheck {
 /* 2FA Popup Background */
 #twoFAPop {
     background: var(--dark-bg-color);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(var(--LV1_Blur));
     animation: blurswitch .2s;
     transition-duration: .2s;
 }
 
 /* 2FA Popup */
 #twoFAWindow {
-    background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
+    background: var(--popupBgColor);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: 10px !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
@@ -7469,7 +7507,7 @@ input:disabled+.tDecCheck {
     opacity: 0;
     transform: scale(0.85);
     background: rgb(0 0 0 / 0.5);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV5_Blur));
     border-radius: 20px;
 }
 
@@ -7484,7 +7522,7 @@ input:disabled+.tDecCheck {
 
 .frvr-dark-blur {
     background: var(--dark-bg-color);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(var(--LV1_Blur));
     animation: blurswitch .2s;
     transition-duration: .2s;
 }
