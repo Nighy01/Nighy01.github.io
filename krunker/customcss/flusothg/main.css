@@ -1,7 +1,7 @@
 /* Flusothg - Krunker */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2023/03/27 */
+/* 2023/04/05 */
 
 
 /* CF1. Configs ================================================================================== */
@@ -36,6 +36,44 @@
     
   /* BC1. Blur Configs ================================================================= */
 
+
+
+  /* RC1. Rounded Corners Configs ================================================================= */
+
+    /* None Rounded Corners */
+     --None_RC: 0px;
+
+    /* Level 1 Rounded Corners (highest level) */
+     --LV1_RC: 100px;
+
+    /* Level 2 Rounded Corners */
+     --LV2_RC: 20px;
+
+    /* Level 3 Rounded Corners */
+     --LV3_RC: 15px;
+    
+    /* Level 4 Rounded Corners */
+     --LV4_RC: 10px;
+
+    /* Level 5 Rounded Corners */
+     --LV5_RC: 9px;
+
+    /* Level 6 Rounded Corners */
+     --LV6_RC: 8px;
+
+    /* Level 7 Rounded Corners */
+     --LV7_RC: 7px;
+
+    /* Level 8 Rounded Corners */
+     --LV8_RC: 6px;
+
+    /* Level 9 Rounded Corners */
+     --LV9_RC: 5px;
+
+    /* Level 10 Rounded Corners (lowest level) */
+     --LV10_RC: 4px;
+
+  /* RC1. Rounded Corners Configs ================================================================= */
 
     /* Main Background Color */
      --main-bg-color: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
@@ -135,7 +173,7 @@
 /* Stream Container Animation */
 @keyframes StreamContainer_Animat {
     from {
-        transform: translate(-400px, 15px);
+        transform: translate(400px, 15px);
         z-index: 0;
     }
     to {
@@ -188,7 +226,7 @@
 /* Customize Bottom Animation */
 @keyframes customizebottomanimation {
     from {
-        transform: translate(0px, 100px);
+        transform: translate(60px, 0px);
         opacity: 0.1;
     }
     to {
@@ -324,10 +362,10 @@
 @keyframes MenuNameTagAnimation {
     from {
         opacity: 0.1;
-        transform: translate(0px,-70px);
+        transform: scale(0.8) translateY(70px) translateX(160px);
     }
     to {
-        transform: translate(0px, 0px);
+        transform: scale(0.8) translateY(70px) translateX(88px);
         opacity: 1;
     }
 }
@@ -335,7 +373,7 @@
 /* Menu Class Sub Name Animation */
 @keyframes menuClassSubNameAnimation {
     from {
-        transform: translate(0px, 150px);
+        transform: translate(55px, 0px);
         opacity: 0.1;
     }
     to {
@@ -753,7 +791,7 @@ div#aHolder {
     border: 1px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Krunker Editor Button */
@@ -956,7 +994,7 @@ div#newsBody::-webkit-scrollbar-thumb {
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     transition-duration: .2s;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Scrollbar Thumb Hover */
@@ -968,7 +1006,7 @@ div#newsBody::-webkit-scrollbar-thumb:hover {
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     transition-duration: .2s;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Scrollbar Thumb Active */
@@ -980,7 +1018,7 @@ div#newsBody::-webkit-scrollbar-thumb:active {
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     transition-duration: .2s;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Scrollbar Track */
@@ -992,7 +1030,7 @@ div#newsBody::-webkit-scrollbar-track {
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     transition-duration: .2s;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Chat List Scrollbar */
@@ -1000,8 +1038,8 @@ div#newsBody::-webkit-scrollbar-track {
     width: 10px;
 }
 
-/* Twitch Drops Timer */
-#twitchDropsTimer {
+/* Twitch Drops/Raid Release Timer */
+#twitchDropsTimer, #raidReleaseTimer {
     color: #dde6ff !important;
 }
 
@@ -1022,7 +1060,7 @@ div#newsBody::-webkit-scrollbar-track {
 /* Menu Item */
 .menuItem, div.menuItem {
     background-color: transparent !important;
-    border-radius: 4px;
+    border-radius: var(--LV10_RC);
     display: inline-block;
     align-items: center;
     pointer-events: none;
@@ -1045,13 +1083,13 @@ div#newsBody::-webkit-scrollbar-track {
 /* MenuItem+Title */
 .menuItem .menuItemTitle {
     color: rgb(255 255 255) !important;
-    font-size: 18px !important;
+    font-size: 17px !important;
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-sizing: border-box;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     margin-top: -6px;
     display: inline-block;
     text-transform: var(--text-transform);
@@ -1059,7 +1097,6 @@ div#newsBody::-webkit-scrollbar-track {
     pointer-events: all;
     box-sizing: border-box;
     padding: 10px 18px 13px;
-    font-size: 15.5px !important;
     position: relative;
 }
 
@@ -1077,17 +1114,16 @@ div#newsBody::-webkit-scrollbar-track {
 .menuItemTitle:hover {
     color: rgb(255, 255, 255) !important;
     background: var(--menu-hover-btn-color) !important;
-    font-size: 18px !important;
+    font-size: 17px !important;
     margin-top: -6px;
     text-transform: var(--text-transform);
     pointer-events: all;
     -webkit-transform: scale(.95);
     transform: scale(.95);
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     display: inline-block;
     box-sizing: border-box;
     padding: 10px 18px 13px;
-    font-size: 15.5px !important;
     position: relative;
 }
 
@@ -1095,8 +1131,8 @@ div#newsBody::-webkit-scrollbar-track {
 .menuItemTitle:active {
     color: white !important;
     background: var(--menu-active-btn-color) !important;
-    border-radius: 8px;
-    font-size: 18px !important;
+    border-radius: var(--LV6_RC);
+    font-size: 17px !important;
     margin-top: -6px;
     -webkit-transform: scale(.9);
     transform: scale(.9);
@@ -1105,7 +1141,6 @@ div#newsBody::-webkit-scrollbar-track {
     text-transform: var(--text-transform);
     box-sizing: border-box;
     padding: 10px 18px 13px;
-    font-size: 15.5px !important;
     position: relative;
 }
 
@@ -1119,7 +1154,7 @@ div#newsBody::-webkit-scrollbar-track {
     background-image: linear-gradient(to right,rgb(0 0 0 / 30%),rgb(0 0 0 / 30%));
     left: 5px;
     bottom: 5px;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     backdrop-filter: blur(var(--LV4_Blur));
 }
 
@@ -1128,7 +1163,7 @@ div#newsBody::-webkit-scrollbar-track {
     background: rgb(0 0 0 / 30%);
     right: 27px;
     bottom: 5px;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     backdrop-filter: blur(var(--LV4_Blur));
 }
 
@@ -1138,7 +1173,7 @@ div#newsBody::-webkit-scrollbar-track {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     margin-left: -125px !important;
     transform: translateY(15px);
     transition-duration: 0.2s !important;
@@ -1150,7 +1185,7 @@ div#streamContainer, div.youNewDiv {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     margin-left: -125px !important;
     transform: translateY(15px);
     transition-duration: 0.2s !important;
@@ -1263,7 +1298,7 @@ div.youNewDiv:hover {
 .verticalSeparator {
     background: rgb(255 255 255 / 60%);
     width: 5px;
-    border-radius: 100px;
+    border-radius: var(--LV1_RC);
     height: 23px !important;
     transform: translate(16px);
 }
@@ -1277,7 +1312,7 @@ div.youNewDiv:hover {
 #signedInHeaderBar > div:nth-child(1) > div:nth-child(2), #signedInHeaderBar > div:nth-child(1) > div:nth-child(4), #signedInHeaderBar > div:nth-child(1) > div:nth-child(6) {
     background: rgb(255 255 255 / 60%);
     width: 5px;
-    border-radius: 100px;
+    border-radius: var(--LV1_RC);
     transform: translate(0px) translateY(-6px) !important;
 }
 
@@ -1309,7 +1344,7 @@ div.youNewDiv:hover {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
 }
 
 /* Login or Register, Login/Register Button in Login Page */
@@ -1318,7 +1353,7 @@ div.youNewDiv:hover {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Login or Register, Login/Register Hover Button in Login Page */
@@ -1327,7 +1362,7 @@ div.youNewDiv:hover {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Login or Register, Login/Register Active Button in Login Page */
@@ -1336,7 +1371,7 @@ div.youNewDiv:hover {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Claim KR Button */
@@ -1361,12 +1396,10 @@ div.youNewDiv:hover {
     display: inline-block;
     background: linear-gradient(180deg, rgba(111, 113, 154, 0.3) 0%, rgba(123, 128, 152, 0.3) 100%), rgba(158, 146, 233, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-sizing: border-box;
     box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transition-duration: .15s;
-    animation: customizebottomanimation .45s;
 }
 
 /* KPD Hover Button */
@@ -1375,9 +1408,8 @@ div.youNewDiv:hover {
     display: inline-block;
     background: linear-gradient(180deg, rgba(111, 113, 154, 0.3) 0%, rgba(123, 128, 152, 0.3) 100%), rgba(122, 112, 186, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-sizing: border-box;
     box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transform: scale(0.9);
 }
 
@@ -1387,9 +1419,8 @@ div.youNewDiv:hover {
     display: inline-block;
     background: linear-gradient(180deg, rgba(111, 113, 154, 0.3) 0%, rgba(123, 128, 152, 0.3) 100%), rgba(41, 37, 71, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-sizing: border-box;
     box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transform: scale(0.8);
 }
 
@@ -1404,7 +1435,7 @@ div.youNewDiv:hover {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
 }
 
 /* Buttons Active(Host,KPD...etc) */
@@ -1413,7 +1444,7 @@ div.youNewDiv:hover {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
 }
 
 /* Singed Out Header Bar(Shows [Login or Register] Button) */
@@ -1424,7 +1455,7 @@ div.youNewDiv:hover {
     backdrop-filter: blur(var(--LV4_Blur)) !important;
     transition-duration: .4s;
     animation: topanimation .4s;
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     transform: translate(12px);
 }
 
@@ -1436,7 +1467,7 @@ div.youNewDiv:hover {
     backdrop-filter: blur(var(--LV4_Blur)) !important;
     transition-duration: .4s;
     animation: topanimation .4s;
-    border-radius: 8px !important;
+    border-radius: var(--LV6_RC) !important;
     transform: translate(12px);
 }
 
@@ -1463,7 +1494,7 @@ div.youNewDiv:hover {
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
     top: 10px;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
 }
 
 /* Header Bar Level Count */
@@ -1471,7 +1502,7 @@ div.youNewDiv:hover {
     background-color: rgb(0 0 0 / 40%) !important;
     backdrop-filter: blur(var(--LV5_Blur));
     border-bottom-right-radius: 0px !important;
-    border-radius: 0px 7px 7px 0px !important;
+    border-radius: var(--None_RC) var(--LV7_RC) var(--LV7_RC) var(--None_RC) !important;
 }
 
 /* Ranked Icon in Top Left */
@@ -1487,7 +1518,7 @@ div.youNewDiv:hover {
     backdrop-filter: blur(var(--LV4_Blur));
     transition-duration: .4s;
     animation: topanimation .4s;
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     transform: translate(-14px);
 }
 
@@ -1497,7 +1528,7 @@ div.youNewDiv:hover {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     transition-duration: .5s;
     transform: translateY(9px);
     animation: rightanimation .5s;
@@ -1509,7 +1540,7 @@ div.youNewDiv:hover {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     transition-duration: .3s !important;
     min-height: 45px;
     transform: translateY(-1%);
@@ -1522,13 +1553,13 @@ div.youNewDiv:hover {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     transition-duration: 0.2s !important;
 }
 
 /* Chat Input */
 #chatInput {
-    border-radius: 8px !important;
+    border-radius: var(--LV6_RC) !important;
     width: 274px !important;
 }
 
@@ -1552,6 +1583,18 @@ div.youNewDiv:hover {
 /* Chat on Comp Menu */
 #uiBase.onCompMenu #chatHolder {
     bottom: 145px;
+}
+
+/* Chat List on Death Screen */
+div#uiBase.onDeathScrn #chatList {
+    max-height: 500px !important;
+}
+
+/* Chat on Death Screen */
+#uiBase.onDeathScrn #chatHolder {
+    left: 15px;
+    bottom: 20px;
+    animation: none !important;
 }
 
 /* Chat on End Screen */
@@ -1602,7 +1645,7 @@ div.youNewDiv:hover {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 20px;
+    border-radius: var(--LV2_RC);
     top: -50px;
     padding: 20px;
     padding-left: 16px;
@@ -1634,7 +1677,7 @@ div.youNewDiv:hover {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 20px;
+    border-radius: var(--LV2_RC);
     top: -48px;
     padding: 20px;
     padding-left: 16px;
@@ -1655,7 +1698,7 @@ div.youNewDiv:hover {
     background: var(--menu-active-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 20px;
+    border-radius: var(--LV2_RC);
     top: -48px;
     padding: 20px;
     padding-left: 16px;
@@ -1722,7 +1765,7 @@ input:checked+.sliderSml:after {
     background: rgba(95, 98, 107, 0.8) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 20px;
+    border-radius: var(--LV2_RC);
     top: -47px;
     padding: 20px;
     padding-left: 16px;
@@ -1739,10 +1782,10 @@ input:checked+.sliderSml:after {
 input:checked+.sliderSml:hover:after {
     position: absolute;
     right: -9px;
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 20px;
+    border-radius: var(--LV2_RC);
     top: -47px;
     padding: 20px;
     padding-left: 16px;
@@ -1767,7 +1810,7 @@ input:checked+.sliderSml:active:after {
     color: white;
     background: var(--menu-active-btn-color) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 20px;
+    border-radius: var(--LV2_RC);
     top: -47px;
     padding: 20px;
     padding-left: 16px;
@@ -1793,19 +1836,19 @@ input:checked+.sliderSml:active:after {
 /* Register or Login */
 #referralHeader {
     background-color: rgba(0,0,0,.4) !important;
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
 }
 
 /* XP Bar B */
 .xpBarB {
     background: rgba(131, 140, 188, 1) !important;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* XP Bar */
 .xpBar {
     background-color: rgb(88 86 102) !important;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* Class Stat Card */
@@ -1821,7 +1864,7 @@ input:checked+.sliderSml:active:after {
 /* Class Stat XP Bar */
 .clsStatXPBar {
     background: rgb(51 50 59) !important;
-    border-radius: 5px;
+    border-radius: var(--LV9_RC);
 }
 
 /* Class Stat XP Bar Value */
@@ -1836,13 +1879,13 @@ input:checked+.sliderSml:active:after {
 .clsStatXPBarC {
     background-image: linear-gradient(to right,#0000,#0000) !important;
     background: rgba(131, 140, 188, 1) !important;
-    border-radius: 5px;
+    border-radius: var(--LV9_RC);
 }
 
 /* Profile Stats */
 .pSt {
     background-color: rgb(88 86 102) !important;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     border: 2px solid #0000;
     text-shadow: none !important;
 }
@@ -1850,7 +1893,7 @@ input:checked+.sliderSml:active:after {
 /* Submit, Select Badge */
 .subPassChg, .updDisN {
     background: var(--main-bg-color) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Account Settings Hed */
@@ -1865,7 +1908,7 @@ input:checked+.sliderSml:active:after {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 15px !important;
+    border-radius: var(--LV3_RC) !important;
     transition-duration: .2s !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
 }
@@ -1897,7 +1940,7 @@ input:checked+.sliderSml:active:after {
 /* Settings Hed */
 .setHed {
     border: none !important;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     background-color: transparent;
     transition: .14s;
 }
@@ -1905,14 +1948,14 @@ input:checked+.sliderSml:active:after {
 /* Settings Hover Hed */
 .setHed:hover {
     border: none !important;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     background-color: rgb(22 22 22 / 30%);
 }
 
 /* Settings Active Hed */
 .setHed:active {
     border: none !important;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     background-color: rgb(22 22 22 / 50%);
 }
 
@@ -1964,7 +2007,7 @@ input:checked+.slider2 {
 /* Server Browser Game Select Active */
 .settNameIn:active {
     background-color: rgb(0 0 0 / 60%) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     padding-left: 15px;
     padding-right: 15px;
     transition: .2s;
@@ -1972,7 +2015,7 @@ input:checked+.slider2 {
 
 /* Server Browser Game Select Hover */
 .settNameIn:hover {
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     padding-left: 15px;
     padding-right: 15px;
     transition: .2s;
@@ -1987,7 +2030,7 @@ input:checked+.slider2 {
 .bigMenTab:hover {
     border-bottom: none !important;
     background: rgba(50, 50, 50, 0.2) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .15s;
 }
 
@@ -1995,7 +2038,7 @@ input:checked+.slider2 {
 .bigMenTab:active {
     border-bottom: none !important;
     background: rgba(50, 50, 50, 0.6) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .15s;
 }
 
@@ -2005,7 +2048,7 @@ input:checked+.slider2 {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     transition-duration: .15s;
 }
 
@@ -2013,7 +2056,7 @@ input:checked+.slider2 {
 .bigMenTabA {
     border-bottom: none !important;
     background: rgba(50, 50, 50, 0.4) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .2s;
 }
 
@@ -2021,7 +2064,7 @@ input:checked+.slider2 {
 .bigMenTabA:hover {
     border-bottom: none !important;
     background: rgba(50, 50, 50, 0.2) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .15s;
     cursor: default;
 }
@@ -2030,7 +2073,7 @@ input:checked+.slider2 {
 .bigMenTabA:active {
     border-bottom: none !important;
     background: rgba(50, 50, 50, 0.6) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .15s;
     cursor: default;
 }
@@ -2049,7 +2092,7 @@ input:checked+.slider2 {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
 }
 
@@ -2059,7 +2102,7 @@ input:checked+.slider2 {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgb(142 147 255 / 25%);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     padding: 8.5px !important;
     transition-duration: .15s;
 }
@@ -2070,7 +2113,7 @@ input:checked+.slider2 {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     padding: 8.5px !important;
 }
 
@@ -2080,7 +2123,7 @@ input:checked+.slider2 {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     padding: 8.5px !important;
 }
 
@@ -2096,20 +2139,19 @@ input:checked+.slider2 {
 
 /* Map Vote */
 #mapVote {
-    background: rgb(123 122 132 / 70%);
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     padding-left: 10px;
     padding-right: 10px;
-    margin-bottom: 10px;
-    transform: translateX(-1px);
+    padding-top: 14px;
+    padding-bottom: 0px;
+    transform: translateX(1px) translateY(1px);
 }
 
 /* Map Info */
 #mapInfo {
-    background: rgb(123 122 132 / 70%);
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 7px 0px 7px 7px;
+    border-radius: var(--LV7_RC) 0px 7px 7px;
     padding: 10px;
     margin-bottom: 30px;
     margin-right: 1px;
@@ -2119,7 +2161,7 @@ input:checked+.slider2 {
 #modVote {
     background: rgb(123 122 132 / 70%);
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     padding: 10px;
 }
 
@@ -2146,7 +2188,8 @@ input:checked+.slider2 {
     background: transparent !important;
     border: none !important;
     box-shadow: none!important;
-    border-radius: 0px;
+    border-radius: var(--None_RC);
+    font-size: 16px;
     transform: scale(1.1) translateY(-4px);
 }
 
@@ -2155,7 +2198,7 @@ input:checked+.slider2 {
     background: rgba(0, 0, 0, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Donate Map Hover Button */
@@ -2163,7 +2206,7 @@ input:checked+.slider2 {
     background: transparent !important;
     border: none !important;
     box-shadow: none!important;
-    border-radius: 0px;
+    border-radius: var(--None_RC);
     color: #c4c0ff !important;
     transform: scale(1.1) translateY(-4px);
 }
@@ -2173,7 +2216,7 @@ input:checked+.slider2 {
     background: transparent !important;
     border: none !important;
     box-shadow: none!important;
-    border-radius: 0px;
+    border-radius: var(--None_RC);
     color: #928fbd !important;
     transform: scale(1.1) translateY(-4px);
 }
@@ -2185,7 +2228,7 @@ input:checked+.slider2 {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     transition-duration: .2s !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
 }
@@ -2196,7 +2239,7 @@ input:checked+.slider2 {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
     transition-duration: .2s !important;
@@ -2204,7 +2247,7 @@ input:checked+.slider2 {
 
 /* Pub Hed */
 .pubHed {
-    border-radius: 10px 10px 0px 0px !important;
+    border-radius: var(--LV4_RC) 10px 0px 0px !important;
     text-align: left;
 }
 
@@ -2234,7 +2277,7 @@ input:checked+.slider2 {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transform: translate(-14px , -18px);
 }
 
@@ -2266,7 +2309,7 @@ input:checked+.slider2 {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     margin-bottom: -2px;
     width: 58px;
     padding: 6px;
@@ -2391,7 +2434,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
@@ -2438,7 +2481,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
 #guidePopup {
     background: rgb(255 255 255 / 0) !important;
     box-shadow: none !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     animation: fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, youNewtoKrunker_Animat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
     transition-duration: 500ms;
 }
@@ -2446,7 +2489,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
 /* Slide Hopping Guide Image */
 #moveGuidSlid {
     background: rgb(255 255 255 / 0.3) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     padding: 10px;
     margin-top: 35px;
     margin-left: 10px;
@@ -2472,7 +2515,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
 
 /* Guide Step Image */
 .guideStepImg {
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* Guide Step S */
@@ -2550,7 +2593,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
     border-left: 10px solid rgb(0 0 0 / 50%);
     border-top: 10px solid rgb(0 0 0 / 50%);
     backdrop-filter: blur(var(--LV5_Blur));
-    right: -20px;
+    top: 80px;
 }
 
 /* Customize Selector Container */
@@ -2576,44 +2619,64 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
 
 /* Class Preview */
 #classPreviewCanvas {
-    transition-duration: .3s;
-    animation: MenuNameTagAnimation .3s;
+    transform: scale(0.8) translateY(70px) translateX(88px);
+    transition-duration: .5s;
+    animation: MenuNameTagAnimation .5s;
 }
 
-/* Menu Class Name Tag */
+/* Menu Class Name Tag (deprecated) */
+/*
 #menuClassNameTag {
     transition-duration: .45s;
     animation: MenuNameTagAnimation .45s;
 }
+*/
 
-/* Menu Class Sub Text */
+/* Assault Rifle...etc Menu Class SubText */
 #menuClassSubtext {
-    display: none;
+    position: relative;
+    margin-bottom: 1px;
+    text-shadow: none !important;
+    filter: brightness(50) grayscale(0.1);
+    transition-duration: .5s;
+    animation: menuClassSubNameAnimation .5s;
+}
+
+/* Menu Class Icon */
+#menuClassIcn {
+    border-radius: var(--LV4_RC);
+    border: 4px solid rgb(255 255 255/ 0%);
+    margin-bottom: 12px;
+    transition-duration: .5s;
+    animation: menuClassSubNameAnimation .5s;
 }
 
 /* Menu Class Name */
 #menuClassName {
+    position: relative;
     color: rgb(255 255 255 / 0.95) !important;
     text-shadow: none !important;
     font-size: 25px;
-    transition-duration: .55s;
-    animation: menuClassSubNameAnimation .55s;
+    margin-bottom: 22px;
+    transition-duration: .5s;
+    animation: menuClassSubNameAnimation .5s;
 }
 
 /* Customize Button */
 #customizeButton, div#customizeButton {
     transition-duration: .15s;
-    animation: customizebottomanimation .4s;
+    animation: customizebottomanimation .5s;
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
+    top: -15px;
+    font-size: 24px !important;
 }
 
 /* Customize Button Hover */
 #customizeButton:hover, div#customizeButton:hover {
     transition-duration: .15s;
-    animation: customizebottomanimation .4s;
     background: var(--menu-hover-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
@@ -2623,7 +2686,6 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
 /* Customize Button Active */
 #customizeButton:active, div#customizeButton:active {
     transition-duration: .15s;
-    animation: customizebottomanimation .4s;
     background: var(--menu-active-btn-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
@@ -2639,7 +2701,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
 /* Team Switch Cent */
 .sliderCent {
     background-color: #a8a8a8;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* ^Before */
@@ -2648,7 +2710,7 @@ div > .chatItem > span.chatMsg[style*="color:#fc03ec"],
     width: 25px;
     left: 4px;
     background-color: #fff;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* ^Before + Checked */
@@ -2662,7 +2724,7 @@ input:checked+.sliderCent:before {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV6_RC) !important;
 }
 
 /* Host Game/Server Browser/Ranked/Invite/Join Hover Button */
@@ -2671,7 +2733,7 @@ input:checked+.sliderCent:before {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV6_RC) !important;
 }
 
 /* Host Game/Server Browser/Ranked/Invite/Join Active Button */
@@ -2680,7 +2742,7 @@ input:checked+.sliderCent:before {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV6_RC) !important;
 }
 
 /* Xp Bar V Text */
@@ -2697,7 +2759,7 @@ input:checked+.sliderCent:before {
 .verticalSeparatorInline {
     background: rgb(255 255 255 / 60%) !important;
     width: 5px !important;
-    border-radius: 100px !important;
+    border-radius: var(--LV1_RC) !important;
     height: 22px !important;
     transform: translate(0px) translateY(-2px) !important;
 }
@@ -2733,7 +2795,7 @@ input:checked+.sliderCent:before {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transition-duration: .2s;
 }
 
@@ -2743,7 +2805,7 @@ input:checked+.sliderCent:before {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transform: scale(0.97);
 }
 
@@ -2753,13 +2815,14 @@ input:checked+.sliderCent:before {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transform: scale(0.95);
 }
 
 /* Twitch Text */
 .dropsActive {
     text-shadow: none !important;
+    color: #cfb5ff;
 }
 
 /* Watch(link) your favorite... , Event Timer */
@@ -2783,7 +2846,7 @@ input:checked+.sliderCent:before {
 
 /* Drop Cards */
 .dropCard {
-    border-radius: 15px;
+    border-radius: var(--LV3_RC);
     background-color: rgb(66 66 66);
 }
 
@@ -2793,7 +2856,7 @@ input:checked+.sliderCent:before {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
@@ -2826,7 +2889,7 @@ input:checked+.sliderCent:before {
 /* Game Quick Search */
 div.purejscarousel-btn {
     background: rgb(0 0 0 / 50%) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     backdrop-filter: blur(var(--LV4_Blur));
     transition-duration: .2s;
 }
@@ -2851,14 +2914,14 @@ div.purejscarousel-btn:active {
 
 /* Slide Image */
 .slideImg {
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     border: none !important;
     box-shadow: none !important;
 }
 
 /* ^Slide Image Hover */
 .slideImg:hover {
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     filter: brightness(0.7);
 }
 
@@ -2898,7 +2961,7 @@ div.purejscarousel-btn:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
@@ -2909,7 +2972,7 @@ div.purejscarousel-btn:active {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgb(255 142 142 / 25%);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transition-duration: .15s;
 }
 
@@ -2924,7 +2987,7 @@ div.purejscarousel-btn:active {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgb(142 147 255 / 25%);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transition-duration: .15s;
 }
 
@@ -2934,7 +2997,7 @@ div.purejscarousel-btn:active {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* PLAY NOW Active */
@@ -2943,7 +3006,7 @@ div.purejscarousel-btn:active {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Vouch Popup */
@@ -2952,7 +3015,7 @@ div.purejscarousel-btn:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
@@ -2994,14 +3057,16 @@ div.purejscarousel-btn:active {
 
 #bundlePop,
 
-.eventPop
+.eventPop,
+
+#premiumPop
 
 {
     background: var(--popupBgColor);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
@@ -3011,7 +3076,7 @@ div.purejscarousel-btn:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
@@ -3050,7 +3115,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background-color: #0000 !important;
     background: rgba(57, 57, 64, 0.9) !important;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
-    border-radius: 5px !important;
+    border-radius: var(--LV9_RC) !important;
 }
 
 /* Progress Bar Inner */
@@ -3058,12 +3123,13 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background-image: linear-gradient(to right,rgba(0 0 0 / 0%),rgba(0 0 0 / 0%),94%,rgba(0 0 0 / 0%)) !important;
     background: rgba(131, 140, 188, 0.9) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 4px !important;
+    border-radius: var(--LV10_RC) !important;
 }
 
 /* Home Shop Cards */
 #shopMainSellB, #shopSideSellB, #shopBundlB {
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
+    border: 4px solid #0000;
 }
 
 /* Home Shop Side Card */
@@ -3083,7 +3149,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 
 /* Home Premium Shop Ben Card */
 #shopPremBen {
-    border-radius: 0px 10px 10px 0px;
+    border-radius: var(--None_RC) var(--LV4_RC) var(--LV4_RC) var(--None_RC);
 }
 
 /* Creator Code Input */
@@ -3092,7 +3158,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* Save Button */
@@ -3101,7 +3167,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     transition-duration: .1s;
 }
 
@@ -3175,7 +3241,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     text-align: left;
     padding-left: 9px;
     border: 4px solid rgb(0 0 0 / 10%) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     text-shadow: none !important;
     width: 206px;
     color: rgb(255 255 255 / 90%) !important;
@@ -3204,7 +3270,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     padding-left: 9px;
     width: 298px !important;
     border: none !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     text-shadow: none !important;
     color: rgb(255 255 255 / 90%) !important;
     background-size: 110%;
@@ -3245,7 +3311,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 
 {
     border: 4px solid rgb(0 0 0 / 10%) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* XX KR/Sold Out/Claim in Prize Wheels, XXX KR in Home */
@@ -3261,7 +3327,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 /* Spin Info */
 #spinInfo {
     background-color: rgb(0 0 0 / 50%);
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .5s;
     animation: rightanimation .5s;  
 }
@@ -3269,7 +3335,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 /* [Count] KR in Spin */
 #spinKR {
     background-color: rgb(0 0 0 / 50%);
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .5s;
     animation: leftanimation .5s;
 }
@@ -3279,7 +3345,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: rgb(0 0 0 / 0.5) !important;
     box-shadow: none !important;
     border: none !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Spin History */
@@ -3287,7 +3353,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     background: rgb(255 255 255 / 0.1) !important;
     box-shadow: none !important;
     border: none !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Spin Preview Icon */
@@ -3295,7 +3361,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border-color: transparent !important;
     background-color: rgb(0 0 0 / 50%);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .2s;
     animation: topanimation .5s;
 }
@@ -3323,7 +3389,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 #itemViewPop, #itemPurcPop {
     border: none !important;
     background: rgb(0 0 0 / 50%);
-    border-radius: 15px;
+    border-radius: var(--LV3_RC);
     transition-duration: .2s !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
 }
@@ -3334,7 +3400,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     backdrop-filter: blur(var(--LV4_Blur));
     border-bottom-left-radius: 0px;
     border-top-right-radius: 0px;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     bottom: 28.5px;
     left: 25px;
 }
@@ -3371,12 +3437,12 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 .spinSprayDiv {
     border-color: #0000 !important;
     background: rgb(0 0 0 / 0.5);
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* Spin ColCub */
 .colCub {
-    border-radius: 5px;
+    border-radius: var(--LV9_RC);
 }
 
 /* MI1. Main ================================================================================== */
@@ -3411,14 +3477,14 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: 1px solid rgba(225, 225, 225, 0.1) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV1_Blur));
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* Comp Stat Bar P */
 #cmpStatBarP {
     background-image: linear-gradient(to right,#0000,#0000,94%,#0000);
     background: rgba(131, 140, 188, 1) !important;
-    border-radius: 5px;
+    border-radius: var(--LV9_RC);
 }
 
 /* Comp Bottom Menu Button */
@@ -3427,7 +3493,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Join Team */
@@ -3436,13 +3502,13 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Comp Class Item */
 .compClassPItm, .compClassPIcn {
     border: none;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Comp Players Icon */
@@ -3517,7 +3583,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV5_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     animation: rightanimation .4s;
     transition-duration: .4s;
 }
@@ -3539,6 +3605,13 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     bottom: 21px;
 }
 
+/* Voice on Death Screen */
+#uiBase.onDeathScrn #voiceDisplay {
+    left: 15px;
+    bottom: 20px;
+    animation: none !important;
+}
+
 /* "Killed By" Card Holder */
 #killCardHolder {
     animation: killcardanimation .3s;
@@ -3550,7 +3623,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Kill Card Info Scores */
@@ -3581,7 +3654,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: 1px solid rgba(225, 225, 225, 0.1) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     width: 450px;
     height: 30px !important;
     left: calc(50% - 236px);
@@ -3603,7 +3676,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     animation: leader_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
@@ -3681,7 +3754,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 /* Health Color */
 #healthBar > div > div {
     background: rgba(131, 140, 188) !important;
-    border-radius: 6px;
+    border-radius: var(--LV8_RC);
 }
 
 /* Timer Icon */
@@ -3695,7 +3768,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     animation: timing_aniamt 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
@@ -3723,7 +3796,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 /* Profile Icon Holder */
 #bottomLeftHolder {
     position: fixed;
-    left: calc(100% - 115px);
+    left: calc(100% - 120px);
     bottom: 0px;
 }
 
@@ -3734,7 +3807,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: none !important;
     position: fixed;
     left: calc(50% - 80px);
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     padding: 0;
     bottom: 65px;
     height: 7px;
@@ -3788,7 +3861,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 /* Speed Run Point */
 .sriAct {
     background-color: rgb(180 180 180 / 0.5) !important;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* Speed Run Box, Reset Key */
@@ -3797,7 +3870,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Network Lag, Vote Kick, Team Scores Display */
@@ -3806,7 +3879,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     animation: timing_aniamt 450ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 450ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
@@ -3816,7 +3889,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV5_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 4px;
@@ -3829,7 +3902,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     bottom: -9px;
     left: -20px;
     width: calc(150% - 35px) !important;
-    border-radius: 0px !important;
+    border-radius: var(--None_RC) !important;
 }
 
 /* In Game XP Bar Prog */
@@ -3913,7 +3986,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     animation: fadein .2s;
     transition-duration: .2s;
 }
@@ -3952,7 +4025,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Kill Card Level */
@@ -3966,7 +4039,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* Speed Run Info/Item */
@@ -3980,7 +4053,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV3_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     animation: fadein .2s;
     transition-duration: .2s;
 }
@@ -3998,7 +4071,7 @@ th, tr {
 
 /* New LeaderBoard Team Tab */
 .newLeaderTeam {
-    border-radius: 0px !important;
+    border-radius: var(--None_RC) !important;
     background-color: rgba(0,0,0,.5) !important;
 }
 
@@ -4023,7 +4096,7 @@ th, tr {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     animation: fadein .2s;
 }
 
@@ -4033,8 +4106,54 @@ th, tr {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     animation: fadein .2s;
+}
+
+/* Death UI Moveup */
+@keyframes death-ui-moveup {
+    0% {
+        bottom: -300px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+/* Death UI Bottom */
+.death-ui-bottom-empty, .death-ui-bottom {
+    bottom: 0px;
+    animation: death-ui-moveup 1s ease;
+}
+
+/* Death Message Colum */
+.death-column {
+    color: rgb(255 255 255 / 95%);
+}
+
+/* Death Row Texts */
+.death-row-kills, 
+.death-row-weapon-text,
+.death-row-user-text, .death-row-user-stat,
+.death-stats-row,
+.death-row-center, .death-row-center-bottom, .death-row-center-self
+{
+    color: rgb(255 255 255 / 95%) !important;
+    filter: none !important;
+}
+
+/* lvl 1 */
+.death-row-class-level {
+    color: rgb(255 255 255 / 95%);
+    text-shadow: none !important;
+}
+
+/* Death Row Card */
+div.death-row-bottom {
+    outline: 2px solid rgb(0 0 0 / 0%);
+    filter: none;
+    border-radius: var(--LV4_RC);
 }
 
 /* IG1. In Game ================================================================================== */
@@ -4061,7 +4180,7 @@ th, tr {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     animation: spectimer_animat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
@@ -4072,7 +4191,7 @@ th, tr {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     animation: team1_animat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
@@ -4098,7 +4217,7 @@ th, tr {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     animation: team2_animat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
@@ -4118,7 +4237,7 @@ th, tr {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     animation: spectating_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
@@ -4128,7 +4247,7 @@ th, tr {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     animation: spec_contr_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
@@ -4148,7 +4267,7 @@ th, tr {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     animation: fadein 100ms 0ms linear forwards;
     transition-duration: .2s;
 }
@@ -4159,7 +4278,7 @@ th, tr {
     border: 1px solid rgba(225, 225, 225, 0.1);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* Level Box */
@@ -4168,7 +4287,7 @@ th, tr {
     border: 1px solid rgba(225, 225, 225, 0.1) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 5px !important;
+    border-radius: var(--LV9_RC) !important;
 }
 
 /* Verified in Spectate Stats */
@@ -4181,7 +4300,7 @@ th, tr {
     background-color: rgba(31, 31, 31, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.1) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Spec Stat HP Value */
@@ -4194,7 +4313,7 @@ th, tr {
 /* Spec Stat HP Bar */
 #spectHPBI {
     background-color: #838CBC !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* SUSPECT */
@@ -4209,7 +4328,7 @@ th, tr {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* KPD Contr Interact */
@@ -4258,7 +4377,7 @@ th, tr {
 /* What's available... Event Title */
 .twitchEventT {
     background-color: #6e6092;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     border: none;
     box-shadow: none;
     color: #cfc2f5;
@@ -4283,14 +4402,14 @@ th, tr {
 .twitchEventLink {
     background: #6e6092;
     font-size: 20px;
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     box-shadow: none !important;
     transition-duration: .15s;
 }
 
 /* Drops Card */
 .twitchCard, .twitchCardFooter, .twitchCardHeader {
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     background-color: #674c9d;
     animation: DropCardAnimation .8s;
 }
@@ -4354,7 +4473,7 @@ th, tr {
     background: var(--main-bg-color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     transition-duration: 400ms !important;
 }
 
@@ -4382,7 +4501,7 @@ th, tr {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     animation: EndAd_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
     transition-duration: 400ms;
 }
@@ -4404,7 +4523,7 @@ th, tr {
     background: #878787 !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.3)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     animation: VoteMatch_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
     transition-duration: 400ms !important;
 }
@@ -4478,7 +4597,7 @@ th, tr {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     animation: EndChal_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
     transition-duration: 400ms;
 }
@@ -4515,7 +4634,7 @@ th, tr {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     animation: teamTotals_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
     transition-duration: 400ms;
 }
@@ -4543,20 +4662,20 @@ th, tr {
     
 /* Match End Ad Container */
 #endAContainer {
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
 }
 
 /* Tab Holder */
 #tabHolder {
     background-color: rgb(0 0 0 / 15%) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Tab Selected */
 .tabHeader.selected {
     border-bottom: none !important;
     background: rgb(0 0 0 / 25%) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     cursor: default;
     color: white !important;
     transition-duration: .2s;
@@ -4566,14 +4685,14 @@ th, tr {
 .tabHeader:hover {
     border-bottom: none !important;
     background: rgb(0 0 0 / 35%) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .2s;
 }
 
 /* Tab Active */
 .tabHeader:active {
     background: rgb(0 0 0 / 50%) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* Match Ended Leaderboard */
@@ -4581,7 +4700,7 @@ th, tr {
 
 /* ...etc */
 .endSection, .gfSection, #endTabbedView > div > div.tabBody > div {
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* +Count KR */
@@ -4619,7 +4738,7 @@ th, tr {
     background-image: linear-gradient(to right,#0000,#0000,94%,#0000);
     background: #838CBC !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 5px !important;
+    border-radius: var(--LV9_RC) !important;
 }
 
 /* End Round XP Bar B */
@@ -4655,7 +4774,7 @@ th, tr {
     background: rgba(57, 57, 64, 0.9) !important;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     margin-right: -10px !important;
 }
 
@@ -4675,7 +4794,7 @@ th, tr {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     animation: Return2Krunk_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
     transition-duration: .2s;
 }
@@ -4714,7 +4833,7 @@ th, tr {
     color: rgba(255,255,255,.5);
     background-color: rgba(255,255,255,.05);
     padding: 15px;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     border: 4px solid rgba(0 0 0 / 0%);
 }
 
@@ -4722,7 +4841,7 @@ th, tr {
 #kdLayout {
     color: rgba(255,255,255,.5);
     background-color: rgba(255,255,255,.05);
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     border: 4px solid rgba(0 0 0 / 0%);
 }
 
@@ -4743,7 +4862,7 @@ th, tr {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* Loadout Select */
@@ -4751,7 +4870,7 @@ th, tr {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transition-duration: .2s;
 }
 
@@ -4760,7 +4879,7 @@ th, tr {
     background: rgba(200, 200, 210, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* ^Loadout Select Active */
@@ -4768,7 +4887,7 @@ th, tr {
     background: rgba(139, 140, 150, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.15) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* Select Random */
@@ -4786,7 +4905,7 @@ th, tr {
 #itemSearch {
     height: 50px;
     font-size: 18px;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
     backdrop-filter: blur(var(--LV2_Blur));
@@ -4798,7 +4917,7 @@ th, tr {
     background: rgba(0, 0, 0, 0.3) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     display: inline-flex !important;
     margin: 5px;
     width: 200px !important;
@@ -4832,7 +4951,7 @@ th, tr {
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* Side Box Selector Active */
@@ -4841,7 +4960,7 @@ th, tr {
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* Primary: "Gun Name" */
@@ -4860,7 +4979,7 @@ th, tr {
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     text-shadow: none;
     transition-duration: .15s;
 }
@@ -4876,7 +4995,7 @@ th, tr {
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* Loadout Box Active */
@@ -4885,7 +5004,7 @@ th, tr {
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* Set Name */
@@ -4900,7 +5019,7 @@ th, tr {
     box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur));
     margin-left: 7px !important;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     transition-duration: .15s;
 }
 
@@ -4911,7 +5030,7 @@ th, tr {
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur));
     margin-left: 7px !important;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* Load..Buttons Active */
@@ -4921,7 +5040,7 @@ th, tr {
     box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur));
     margin-left: 7px !important;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* Back Button */
@@ -4981,7 +5100,7 @@ th, tr {
     background: rgba(0, 0, 0, 0.3) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     text-shadow: none !important;
     transition-duration: .2s;
 }
@@ -4991,7 +5110,7 @@ th, tr {
     background: rgba(0, 0, 0, 0.4) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Items Active */
@@ -4999,7 +5118,7 @@ th, tr {
     background: rgba(0, 0, 0, 0.55) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Item Image */
@@ -5024,7 +5143,7 @@ th, tr {
     background: rgba(0, 0, 0, 0.3) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     text-shadow: none !important;
     text-align: left;
     padding-left: 12px;
@@ -5037,7 +5156,7 @@ th, tr {
     background: rgba(0, 0, 0, 0.4) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Streak Card Active */
@@ -5045,7 +5164,7 @@ th, tr {
     background: rgba(0, 0, 0, 0.55) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Slot XXX | XXX kills */
@@ -5085,7 +5204,7 @@ th, tr {
     box-shadow: 0px 0px 20px rgb(80 80 80 / 50%) !important;
     padding: 100px;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     padding-top: 65px !important;
     padding-left: 46px !important;
 }
@@ -5128,7 +5247,7 @@ th, tr {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     color: rgb(194 197 255) !important;
     text-shadow: none !important;
     animation: toolTip_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
@@ -5240,7 +5359,7 @@ body > div.tooltip > div:nth-child(4) > span
     padding: 65px;
     padding-left: 55px;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* ^Locked Icon */
@@ -5288,7 +5407,7 @@ body > div.tooltip > div:nth-child(4) > span
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgb(0 0 0 / 5%) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transition-duration: .2s;
 }
 
@@ -5309,7 +5428,7 @@ body > div.tooltip > div:nth-child(4) > span
     background: rgba(0, 0, 0, 0.3) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     text-shadow: none !important;
     transition-duration: .2s;
 }
@@ -5319,7 +5438,7 @@ body > div.tooltip > div:nth-child(4) > span
     background: rgba(0, 0, 0, 0.4) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* ^No Button Card Active */
@@ -5327,7 +5446,7 @@ body > div.tooltip > div:nth-child(4) > span
     background: rgba(0, 0, 0, 0.55) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Select Delete Button */
@@ -5362,7 +5481,7 @@ body > div.tooltip > div:nth-child(4) > span
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
     filter: none !important;
     text-align: left !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     transition-duration: .2s;
 }
 
@@ -5434,14 +5553,14 @@ body > div.tooltip > div:nth-child(4) > span
     background-color: #0000 !important;
     background: rgba(57, 57, 64, 0.9) !important;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
-    border-radius: 5px !important;
+    border-radius: var(--LV9_RC) !important;
 }
 
 /* Class XP Bar C */
 .clsXPBarC {
     background: rgba(131, 140, 188, 0.9) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 4px !important;
+    border-radius: var(--LV10_RC) !important;
 }
 
 /* 0 / 1111 */
@@ -5484,7 +5603,7 @@ body > div.tooltip > div:nth-child(4) > span
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgb(0 0 0 / 5%) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     font-size: 16px;
 }
 
@@ -5495,7 +5614,7 @@ body > div.tooltip > div:nth-child(4) > span
     box-shadow: 0px 0px 30px rgba(201, 197, 224, 0.25);
     text-shadow: none !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     padding: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -5541,7 +5660,7 @@ body > div.tooltip > div:nth-child(4) > span
 
 /* Server Type Button */
 .serverHostOp {
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     transition-duration: .2s;
     text-shadow: none;
     border: none !important;
@@ -5612,7 +5731,7 @@ div#hostCMapPickT {
     backdrop-filter: blur(var(--LV3_Blur));
     padding-left: 20px;
     padding-top: 75px;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     text-shadow: none !important;
     transition-duration: .3s;
 }
@@ -5649,7 +5768,7 @@ div#hostCMapPickT:active {
 
 /* Default Maps Button */
 .hostMap {
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     border: 1px solid rgba(225, 225, 225, 0.1) !important;
     box-shadow: none !important;
     transition-duration: .15s;
@@ -5667,7 +5786,7 @@ div#hostCMapPickT:active {
 
 /* Change Game Overlay Hover */
 .segSugIH {
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     background-color: rgb(0 0 0 / 50%);
     backdrop-filter: blur(var(--LV4_Blur));
     transition-duration: .15s;
@@ -5766,7 +5885,7 @@ input:hover+.optCheck {
 
 /* Change Game */
 .sugBoxSelCus {
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     border: none;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2) !important;
     backdrop-filter: blur(var(--LV5_Blur));
@@ -5789,7 +5908,7 @@ input:hover+.optCheck {
 #startServBtn, div#startServBtn {
     filter: hue-rotate(20deg) brightness(1.2) brightness(0.9);
     transition-duration: .15s;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* ^ */
@@ -5816,7 +5935,7 @@ input:hover+.optCheck {
 
 {
     border: 3px solid rgb(0 0 0 / 0%) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     background: rgb(0 0 0 / 35%) !important;
 }
 
@@ -5828,7 +5947,7 @@ input:hover+.optCheck {
 
 /* Server Card (+Image) */
 .serverCard, .serverCardI {
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* Server Card Hover */
@@ -5847,7 +5966,7 @@ input:hover+.optCheck {
 
 /* Server Card Info */
 .serverCardInfo {
-    border-radius: 0px 0px 10px 10px;
+    border-radius: var(--None_RC) var(--None_RC) var(--LV4_RC) var(--LV4_RC);
     backdrop-filter: blur(var(--LV4_Blur));
     background: rgb(54 55 66 / 80%);
 }
@@ -5880,19 +5999,19 @@ input:hover+.optCheck {
 /* --- CM1. Mouse Click Icon --- */
 
 /* Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=7q6wSbbCPhm6xavgfvsfIkt9JWYlVoH6);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=AabOCZJ67pFwT1bvJBYEt5eI33BrCAiy);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/click.png);
     opacity: 0.9;
 }
 
 /* Middle Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=7q6wSbbCPhm6xavgfvsfIkt9JWYlVoH6);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=AabOCZJ67pFwT1bvJBYEt5eI33BrCAiy);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/middleclick.png);
     opacity: 0.9;
 }
 
 /* Right Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=7q6wSbbCPhm6xavgfvsfIkt9JWYlVoH6);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=AabOCZJ67pFwT1bvJBYEt5eI33BrCAiy);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/rightclick.png);
     opacity: 0.9;
 }
@@ -5904,7 +6023,7 @@ input:hover+.optCheck {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Settings Tab Layout */
@@ -5913,7 +6032,7 @@ input:hover+.optCheck {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     transition-duration: .15s;
 }
 
@@ -5926,7 +6045,7 @@ input:hover+.optCheck {
 .settingTab.tabANew {
     border-bottom: none !important;
     background: rgba(50, 50, 50, 0.4) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .2s;
 }
 
@@ -5934,7 +6053,7 @@ input:hover+.optCheck {
 .settingTab.tabANew:hover {
     border-bottom: none !important;
     background: rgba(50, 50, 50, 0.2) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .15s;
 }
 
@@ -5942,7 +6061,7 @@ input:hover+.optCheck {
 .settingTab.tabANew:active {
     border-bottom: none !important;
     background: rgba(50, 50, 50, 0.6) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .15s;
 }
 
@@ -5950,7 +6069,7 @@ input:hover+.optCheck {
 .settingTab:hover {
     border-bottom: none !important;
     background: rgba(50, 50, 50, 0.2) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .15s;
 }
 
@@ -5958,7 +6077,7 @@ input:hover+.optCheck {
 .settingTab:active {
     border-bottom: none !important;
     background: rgba(50, 50, 50, 0.6) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .15s;
 }
 
@@ -5968,7 +6087,7 @@ input:hover+.optCheck {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transition-duration: .2s;
 }
 
@@ -5992,7 +6111,7 @@ input:hover+.optCheck {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(166, 175, 255, 0.25) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transition-duration: .2s;
 }
 
@@ -6016,7 +6135,7 @@ input:hover+.optCheck {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     padding: 3px;
 }
 
@@ -6071,7 +6190,7 @@ div.openCollection {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transition-duration: .2s;
 }
 
@@ -6096,7 +6215,7 @@ input[type="color" i] {
     border: 4px solid rgba(33, 35, 43, 0.9) !important;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 5px !important;
+    border-radius: var(--LV9_RC) !important;
     transition-duration: .2s;
 }
 
@@ -6114,7 +6233,7 @@ input[type="color" i]:active {
 .keyIcon {
     background-color: rgb(0 0 0 / 30%) !important;
     padding: 8px 10px !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     border-left: none !important;
     border-right: none !important;
     border-top: none !important;
@@ -6173,7 +6292,7 @@ input[type="color" i]:active {
     height: 20px;
     transform: translateY(10px);
     background-color: rgba(255,255,255,.3);
-    border-radius: 100px;
+    border-radius: var(--LV1_RC);
 }
 
 /* KeyBind Settings Toggle */
@@ -6181,7 +6300,7 @@ input[type="color" i]:active {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgb(0 0 0 / 5%) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transition-duration: .2s;
 }
 
@@ -6199,7 +6318,7 @@ input[type="color" i]:active {
 
 /* Advanced Toggle */
 .advancedSlider {
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* Slider Background */
@@ -6207,7 +6326,7 @@ input[type="color" i]:active {
     background: linear-gradient(180deg, rgba(209, 208, 227, 0.3) 0%, rgba(197, 196, 218, 0.3) 100%), rgba(223, 223, 240, 0.8);
     box-shadow: 0px 0px 20px rgba(223, 223, 240, 0.2);
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     padding-top: 0.7px;
     padding-bottom: 0.7px;
     transition-duration: .2s;
@@ -6231,7 +6350,7 @@ input[type="color" i]:active {
     background: linear-gradient(180deg, rgba(235, 233, 255, 0.3) 0%, rgba(229, 227, 255, 0.3) 100%), rgba(255, 255, 255, 0.9) !important;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 5px;
+    border-radius: var(--LV9_RC);
     padding: 9px;
     transition-duration: .2s;
 }
@@ -6254,7 +6373,7 @@ input[type="color" i]:active {
     border: 3px solid rgba(225, 225, 225, 0.25) !important;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 9px !important;
+    border-radius: var(--LV5_RC) !important;
     font-size: 16.5px;
     padding: 4px;
     transition-duration: .2s;
@@ -6333,7 +6452,7 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
 .mapActionOvrl {
     backdrop-filter: blur(var(--LV4_Blur));
     background: rgb(0 0 0 / 50%);
-    border-radius: 10px 10px 0px 0px;
+    border-radius: var(--LV4_RC) 10px 0px 0px;
 }
 
 /* ^Hover */
@@ -6361,7 +6480,7 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
 /* Map Info List Item */
 .mapListItem {
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* [Count] online */
@@ -6379,7 +6498,7 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
 
 /* Map Thumb */
 .mapListThumb {
-    border-radius: 10px 10px 0px 0px;
+    border-radius: var(--LV4_RC) 10px 0px 0px;
     transition-duration: .15s;
 }
 
@@ -6395,7 +6514,7 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
     color: rgb(255 255 255 / 0.9) !important;
     font-size: 15px;
     transform: translate(-10px,10px);
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Map Name Link */
@@ -6406,28 +6525,28 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
 /* Map List Cat */
 .mapListCat {
     background-image: linear-gradient(to right,rgb(0 0 0 / 0%),rgb(0 0 0 / 0%)) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* Create your own game... */
 [style="margin-left:20px;background:#0b0b0b;display:inline-block;width:580px;vertical-align:top;"] {
     background: rgb(0 0 0 / 0.5) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* ^Info */
 .biMFeatInfH {
     background: rgb(0 0 0 / 0.1) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* ^Open Editor...Button */
 .biMFeatInfB {
     background: rgb(0 0 0 / 0.1) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     border: 1px solid rgb(255 255 255 / 0.1);
     transition-duration: .15s;
 }
@@ -6436,7 +6555,7 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
 .biMFeatInfB:hover {
     background: rgb(255 255 255 / 30%) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     border: 1px solid rgb(255 255 255 / 0.1) !important;
 }
 
@@ -6444,14 +6563,14 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
 .biMFeatInfB:active {
     background: rgb(134 134 134 / 30%) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     border: 1px solid rgb(255 255 255 / 0.1) !important;
     transform: scale(0.9);
 }
 
 /* Featured Game Top */
 .bigMFeatHold {
-    border-radius: 15px;
+    border-radius: var(--LV3_RC);
 }
 
 /* GA1. Games ================================================================================== */
@@ -6463,19 +6582,19 @@ input:checked+.slider:active, input:checked+.advancedSlider:active {
 /* Search Button */
 .searchBtn {
     background: var(--main-bg-color) !important;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* --- Mod Loader --- */
 
 /* Drop mod file here or click */
 #modDropper {
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* Paste Mod Url Input */
 .accountInput {
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* --- Mod Loader --- */
@@ -6533,7 +6652,7 @@ div#customizeButton span {
 /* Mail Card */
 .mailObj {
     border: none !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: 350ms;
     animation: mailObjanimat 350ms;
 }
@@ -6545,14 +6664,14 @@ div.followBack, div.followBack:hover {
 
 /* XXX has commented on your Post...etc */
 .mailText {
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     background: rgb(0 0 0 / 30%)
 }
 
 /* XXX Challenges */
 .challHeadrI {
     border: none !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* Challenges Can't Use */
@@ -6560,7 +6679,7 @@ div.challHeadrBlck {
     color: #ffe1e1 !important;
     background: rgb(0 0 0 / 0.5);
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
 }
 
 /* Challenge Image C */
@@ -6573,7 +6692,7 @@ div.challHeadrBlck {
 /* Challenge XP Value */
 .chalXPVal {
     text-shadow: none !important;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* Challenge XP Bar */
@@ -6586,7 +6705,7 @@ div.challHeadrBlck {
     background: rgb(145 155 254);
     height: 85%;
     transform: translateY(2.5px) translateX(2px);
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* Challenge Rew Skn */
@@ -6621,7 +6740,7 @@ div.challHeadrBlck {
 .challMapPrg {
     background: rgb(0 0 0 / 50%);
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     transform: translate(-10px , -10px);
 }
 
@@ -6685,7 +6804,7 @@ div#bidPrevBtn, div#bidPrevBtn:hover {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* ^Place Bid Hover */
@@ -6694,7 +6813,7 @@ div#bidPrevBtn, div#bidPrevBtn:hover {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Place Bid Active */
@@ -6703,7 +6822,7 @@ div#bidPrevBtn, div#bidPrevBtn:hover {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV2_Blur)) !important;
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Enter Server Password to Join Popup */
@@ -6712,7 +6831,7 @@ div#bidPrevBtn, div#bidPrevBtn:hover {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
     transition-duration: .2s !important;
@@ -6723,12 +6842,12 @@ div#bidPrevBtn, div#bidPrevBtn:hover {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
     backdrop-filter: blur(var(--LV2_Blur));
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* Sign-in to apply for K.P.D */
 #policePopC > div:nth-child(4) {
-    color: rgb(255 255 255 / 0.95);
+    color: rgb(255 255 255 / 0.95) !important;
 }
 
 /* Offline Status */
@@ -6739,19 +6858,19 @@ div#bidPrevBtn, div#bidPrevBtn:hover {
 /* Enter KR Amount */
 #clanFundsIn {
     border: none !important;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
 }
 
 /* [Withdraw] [Deposit] */
 .clanFndB {
     background: rgb(0 0 0 / 30%) !important;
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
 }
 
 /* Decline All */
 #clanDeclineAll {
     background: rgb(0 0 0 / 30%) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .2s;
 }
 
@@ -6890,14 +7009,14 @@ div#rentServBtn:active {
 .logVersionHed {
     color: rgb(255 255 255 / 0.95) !important;
     border: 6px solid #fff0;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     text-shadow: none;
 }
 
 /* View All Updates */
 .viewAllUpdates {
     color: rgb(255 255 255 / 95%) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     background: rgba(0 0 0 / 20%);
     border: 4px solid rgba(0 0 0 / 0%);
     transition-duration: .15s;
@@ -6906,7 +7025,7 @@ div#rentServBtn:active {
 /* View All Updates Hover */
 .viewAllUpdates:hover {
     color: rgb(255 255 255 / 95%) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     background: rgba(0 0 0 / 35%);
     border: 4px solid rgba(0 0 0 / 0%);
     transform: scale(0.98);
@@ -6915,7 +7034,7 @@ div#rentServBtn:active {
 /* View All Updates Active */
 .viewAllUpdates:active {
     color: rgb(255 255 255 / 95%) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     background: rgba(0 0 0 / 50%);
     border: 4px solid rgba(0 0 0 / 0%);
     transform: scale(0.95);
@@ -6948,7 +7067,7 @@ div#rentServBtn:active {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgb(142 147 255 / 25%);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transition-duration: .15s;
 }
 
@@ -6958,7 +7077,7 @@ div#rentServBtn:active {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Link Metamask Active */
@@ -6967,7 +7086,7 @@ div#rentServBtn:active {
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25);
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Logout, Logout of all Sessions Line */
@@ -6982,7 +7101,7 @@ div#rentServBtn:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgb(142 147 255 / 25%) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transition-duration: .15s;
 }
 
@@ -6992,7 +7111,7 @@ div#rentServBtn:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
     transform: scale(1) !important;
     opacity: 1 !important;
     cursor: pointer;
@@ -7004,7 +7123,7 @@ div#rentServBtn:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Image Tab */
@@ -7019,7 +7138,7 @@ div#rentServBtn:active {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 50px rgb(0 0 0 / 10%) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     transition-duration: .15s;
 }
 
@@ -7027,7 +7146,7 @@ div#rentServBtn:active {
 .tabAIMG {
     border-bottom: 5px solid rgb(0 0 0 / 0%) !important;
     background: rgba(50, 50, 50, 0.4) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .2s;
 }
 
@@ -7035,7 +7154,7 @@ div#rentServBtn:active {
 .tabAIMG:hover {
     border-bottom: 5px solid rgb(0 0 0 / 0%) !important;
     background: rgba(50, 50, 50, 0.2) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .15s;
 }
 
@@ -7043,7 +7162,7 @@ div#rentServBtn:active {
 .tabAIMG:active {
     border-bottom: 5px solid rgb(0 0 0 / 0%) !important;
     background: rgba(50, 50, 50, 0.6) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .15s;
 }
 
@@ -7051,7 +7170,7 @@ div#rentServBtn:active {
 .imageTab:hover {
     border-bottom: 5px solid rgb(0 0 0 / 0%) !important;
     background: rgba(50, 50, 50, 0.2) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .15s;
 }
 
@@ -7059,26 +7178,26 @@ div#rentServBtn:active {
 .imageTab:active {
     border-bottom: 5px solid rgb(0 0 0 / 0%) !important;
     background: rgba(50, 50, 50, 0.6) !important;
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     transition-duration: .15s;
 }
 
 /* Image List Item */
 .imageListItem {
     background-color: rgb(0 0 0 / 50%) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Image List Thumb */
 .imageListThumbH {
-    border-radius: 10px 10px 0px 0px;
+    border-radius: var(--LV4_RC) 10px 0px 0px;
 }
 
 /* Image Action Overlay */
 .imageActionOvrl {
     background: rgba(0 0 0 / 50%) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 10px 10px 0px 0px;
+    border-radius: var(--LV4_RC) 10px 0px 0px;
 }
 
 /* Must be at least [Bid level] to Submit a Bid. */
@@ -7093,7 +7212,7 @@ div#rentServBtn:active {
 
 /* Bid Image */
 [style="width:100%;margin-top:0px;object-position:0px -50px;margin-bottom:20px;border-radius:6px;height:260px;object-fit:cover;"] {
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Success/Fail Message Text */
@@ -7132,7 +7251,7 @@ div#rentServBtn:active {
     background: rgba(0, 0, 0, 0.5) !important;
     border: 0.5px solid rgba(225, 225, 225, 0.2) !important;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     width: 280px !important;
     transition-duration: .2s;
 }
@@ -7225,7 +7344,7 @@ div#rentServBtn:active {
 
 /* ^Button */
 .tSubCheck {
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     background-color: rgb(0 0 0 / 30%);
     transition: .15s;
 }
@@ -7254,7 +7373,7 @@ input:disabled+.tSubCheck {
 
 /* ^Button */
 .tDecCheck {
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     background-color: rgb(0 0 0 / 30%);
     transition: .15s;
 }
@@ -7290,7 +7409,7 @@ input:disabled+.tDecCheck {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur));
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     transform: translateX(-100px) translateY(-115px);
     padding: 10px;
     width: 310px;
@@ -7319,7 +7438,7 @@ input:disabled+.tDecCheck {
     font-size: 15px;
     background-color: rgba(0,0,0,.4);
     border: none !important;
-    border-radius: 5px !important;
+    border-radius: var(--LV9_RC) !important;
 }
 
 /* Search Item Trade Input */
@@ -7327,7 +7446,7 @@ input:disabled+.tDecCheck {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 7px !important;
+    border-radius: var(--LV7_RC) !important;
 }
 
 /* Uncommon */
@@ -7377,12 +7496,12 @@ input:disabled+.tDecCheck {
 .tItemHolder {
     animation: fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, tradeItemHolder_Animat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
     transition: .15s;
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
 }
 
 /* Trade Item Locked */
 .tItemBound {
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     background-color: rgb(0 0 0 / 80%);
     backdrop-filter: blur(var(--LV7_Blur));
     filter: grayscale(1) opacity(0.95);
@@ -7392,7 +7511,7 @@ input:disabled+.tDecCheck {
 .badgeBound {
     background-color: rgb(0 0 0 / 0.5) !important;
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     padding-left: 138px;
     padding-bottom: 22px;
     animation: fadein .2s;
@@ -7403,7 +7522,7 @@ input:disabled+.tDecCheck {
 .badgeCard {
     color: rgb(255 255 255 / 0.95) !important;
     background-color: rgba(0,0,0,.3) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     text-shadow: none !important;
     transition: .15s;
 }
@@ -7463,7 +7582,7 @@ input:disabled+.tDecCheck {
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV4_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
     transition-duration: .2s !important;
@@ -7484,6 +7603,7 @@ input:disabled+.tDecCheck {
 #twoFAmsg {
     font-size: 20px;
     filter: brightness(1.35) opacity(0.95);
+    color: rgb(255 255 255 / 95%) !important;
 }
 
 /* ^or */
@@ -7493,10 +7613,27 @@ input:disabled+.tDecCheck {
 
 /* ^Submit */
 #twoFAbtn {
-    border-radius: 8px;
+    border-radius: var(--LV6_RC);
     font-size: 20px;
     color: rgb(255 255 255 / 0.95);
     background-color: rgb(0 0 0 / 30%);
+}
+
+/* 2FA Img */
+#twoFAqr > img {
+    border-radius: var(--LV4_RC);
+}
+
+/* 2FA Input */
+.twoFAIn {
+    border: 2px solid rgb(0 0 0 / 0%) !important;
+    border-radius: var(--LV4_RC) !important;
+    color: rgb(255 255 255 / 95%) !important;
+}
+
+/* Authy/Google Auth */
+[style="color:#9c9c9c"] {
+    color: rgb(255 255 255 / 70%) !important;
 }
 
 /* ---EV1. Events--- */
@@ -7508,7 +7645,7 @@ input:disabled+.tDecCheck {
     transform: scale(0.85);
     background: rgb(0 0 0 / 0.5);
     backdrop-filter: blur(var(--LV5_Blur));
-    border-radius: 20px;
+    border-radius: var(--LV2_RC);
 }
 
 .daily-reward:hover {
@@ -7612,7 +7749,7 @@ div.buttonG:active
 
 .custSubContainer {
     padding: 0px !important;
-    border-radius: 7px;
+    border-radius: var(--LV7_RC);
     background-color: rgb(0 0 0 / 0.2) !important;
     border-left: 3px solid rgb(0 0 0/ 0%) !important;
     border-bottom: 3px solid rgb(0 0 0 / 0%) !important;
@@ -7638,7 +7775,7 @@ div.buttonG:active
 }
 
 #spinHistoryPop {
-    border-radius: 10px;
+    border-radius: var(--LV4_RC);
     box-shadow: none !important;
     background-color: #0000 !important;
     animation: fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, SpinHistoryAnimat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
@@ -7696,8 +7833,214 @@ div.buttonG:active
 
 /* [24/7] Tag */
 .slideTag {
-    border-radius: 5px;
+    border-radius: var(--LV9_RC);
     color: #ffffff;
     background-color: rgb(0 0 0 / 50%);
     text-shadow: none !important;
+}
+
+/* Menu Store Ad Animation */
+@keyframes homeStoreAd_Animat {
+    from {
+        transform: translate(-400px, 0px);
+        z-index: 0;
+        opacity: 1;
+    }
+    to {
+        transform: translate(0px, 0px);
+        z-index: 0;
+        opacity: 1;
+    }
+}
+
+/* Menu Store Ad */
+#homeStoreAd {
+    background: rgba(0,0,0,.0);
+    width: calc(100% - 20px);
+    height: 170px;
+    margin-top: 20px;
+    min-width: 300px;
+    margin-left: -130px;
+    border-radius: var(--LV3_RC);
+    animation: homeStoreAd_Animat .6s !important;
+}
+
+/* Menu Store Ad Content */
+#homeStoreAdC {
+    border-radius: var(--LV6_RC);
+    width: 107%;
+    margin-left: -5px;
+}
+
+/* Left Ad Board */
+#tlInfHold {
+    left: 139px;
+}
+
+/* Menu Store Ad Title */
+#homeStoreAdTx {
+    color: rgb(255 255 255 / 95%);
+    filter: drop-shadow(0px 0px 1px black);
+}
+
+/* $5.99...etc Menu Store Ad Price */
+#bundleQuickBuyB {
+    text-align: right;
+    color: rgb(255 255 255 / 95%);
+    background: #0000;
+    filter: drop-shadow(0px 0px 1px black);
+}
+
+/* Map Info Hld */
+#mapInfoHld {
+    pointer-events: all;
+    padding-left: 7px;
+    margin-bottom: -15px;
+    color: #fff;
+    font-size: 20px;
+    border-bottom: 0px solid #00000000;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+/* Remove Customized Item */
+.custClear {
+    background-color: rgb(0 0 0 / 30%);
+}
+
+/* Buy, Save */
+div.bundlPopBuyS, div.bundlPopBuyC, #bundlCreatorCodeBtn, #premiumCreatorCodeBtn, #battlepassCreatorCodeBtn, .bundleItmBtn {
+    background: rgb(188 204 255 / 50%) !important;
+}
+
+/* Bundle Card */
+.bundleCrd {
+    background: rgb(21 21 21 / 50%);
+}
+
+/* Read All */
+.readAll {
+    background: var(--main-bg-color);
+    border: none !important;
+    box-shadow: none !important;
+    padding-top: 9px;
+    padding-bottom: 5px;
+    padding-left: 11px;
+    padding-right: 11px;
+    top: -5px;
+    border-radius: var(--LV6_RC);
+}
+
+/* Twtich Drop watch Link */
+[style="color: #9661f7!important;text-decoration: underline;"] {
+    color: #c3d3ff !important;
+    filter: brightness(1.5);
+}
+
+/* Twitch Drop Title */
+.popHeader, .dropsPopHeader {
+    color: #fff !important;
+    margin-bottom: 15px!important;
+    border-bottom: none !important;
+    background-color: #0000;
+    box-shadow: none !important;
+    padding-bottom: 0px;
+    border-color: #0000 !important;
+}
+
+[style="color:#2196F3"], [style="color:#E040FB"] {
+    filter: brightness(0.65);
+}
+
+[style="font-size: 24px;margin-bottom:20px;background:#000;width:100%;text-align:center;padding-bottom:10px;padding-top:10px;"] {
+    background: transparent !important;
+    text-align: left !important;
+    margin-left: 15px;
+}
+
+/* Store Bundle Slider Btn */
+.bundleSliderBtn {
+    border: 2px solid rgba(255,255,255,.0);
+    background: rgba(0,0,0,.5);
+    border-radius: var(--LV4_RC);
+}
+
+/* Store Bundle Slider Btn */
+.bundleSliderBtn:hover {
+    border: 2px solid rgba(255,255,255,.0);
+}
+
+/* Register to... */
+[style="color:#31caec"] {
+    color: #fff !important;
+}
+
+/* Free Prize ============================================================== */
+.genericprompt .prompt-content {
+    background: rgb(0 0 0 / 30%);
+    border: 1.5px solid #00000000;
+    box-shadow: none;
+    border-radius: var(--LV6_RC);
+    animation: fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, SpookEventAnimat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+}
+
+.genericprompt .frvr-button {
+    background: rgb(255 255 255 / 10%);
+    border: 3px solid #0000 !important;
+    border-radius: var(--LV6_RC);
+    text-shadow: none;
+}
+
+.genericprompt .frvr-button-text {
+    color: rgb(255 255 255 / 95%);
+}
+
+#frvrMenuMobile > div.mobPopPrompt.genericprompt > div > div > div > div.buttons > div:nth-child(1) > span > img {
+    display: none;
+}
+
+.genericprompt .genericPromptBackground:before {
+    border-radius: var(--LV6_RC);
+}
+/* Free Prize ============================================================== */
+
+#bubbleContainer {
+    top: calc(50% - 200px);
+    right: 270px;
+}
+
+div#acpButtonHolder > div:nth-child(1) {
+    filter: grayscale(1);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+}
+
+[style="color:#fc038d;border: 4px solid;text-shadow: 0px 0px 30px rgb(0 0 0);width:293px;height: 202px;background: rgba(0, 0, 0, 0.4);"] {
+    color: #0000 !important;
+    border-radius: var(--LV4_RC);
+}
+
+/* Current Date Range: [DATE] */
+.spinHistoryTime {
+    color: #c3c7ff;
+}
+
+/* Stats in Spin */
+div.spinHistoryStats {
+    background-color: #0000 !important;
+    color: rgb(255 255 255 / 95%);
+    margin-left: 580px;
+    margin-right: -640px;
+}
+
+/* Junkard NEW Rc */
+.crftNewRc {
+    bottom: 5px;
+    font-size: 15px;
+    color: rgb(255 255 255 / 95%);
+    background-image: none;
+}
+
+/* Complete with... */
+div.bundlPopBuyS {
+    width: 360px !important;
 }

@@ -1,12 +1,67 @@
 /* Flusothg - Krunker Editor */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2023/02/01 */
+/* 2023/04/05 */
 
 
 /* CF1. Configs ================================================================================== */
 
 :root {
+
+  /* BC1. Blur Configs ================================================================= */
+
+    /* None Blur */
+     --None_Blur: 0px;
+
+    /* Level 1 blur (highest level) */
+     --LV1_Blur: 40px;
+
+    /* Level 2 blur */
+     --LV2_Blur: 20px;
+
+    /* Level 3 blur */
+     --LV3_Blur: 10px;
+    
+    /* Level 4 blur */
+     --LV4_Blur: 5px;
+
+    /* Level 5 blur */
+     --LV5_Blur: 3px;
+
+    /* Level 6 blur (lowest level) */
+     --LV6_Blur: 3px;
+    
+  /* BC1. Blur Configs ================================================================= */
+
+
+
+  /* RC1. Rounded Corners Configs ================================================================= */
+
+    /* None Rounded Corners */
+     --None_RC: 0px;
+
+    /* Level 1 Rounded Corners (highest level) */
+     --LV1_RC: 15px;
+
+    /* Level 2 Rounded Corners */
+     --LV2_RC: 10px;
+
+    /* Level 3 Rounded Corners */
+     --LV3_RC: 9px;
+    
+    /* Level 4 Rounded Corners */
+     --LV4_RC: 8px;
+
+    /* Level 5 Rounded Corners */
+     --LV5_RC: 7px;
+
+    /* Level 6 Rounded Corners */
+     --LV6_RC: 5px;
+
+    /* Level 7 Rounded Corners (lowest level) */
+     --LV7_RC: 3px;
+
+  /* RC1. Rounded Corners Configs ================================================================= */
 
     /* Dark Background Color */
      --dark-bg-color: linear-gradient(180deg, rgba(41, 42, 46, 0.3) 0%, rgba(34, 34, 39, 0.3) 100%), rgba(0, 0, 0, 0.45) !important;
@@ -135,13 +190,13 @@
     from {
         background: linear-gradient(180deg, rgba(41, 42, 46, 0.1) 0%, rgba(34, 34, 39, 0.1) 100%), rgba(0, 0, 0, 0.1);
         opacity: 0;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(var(--LV3_Blur));
         transition-duration: .2s;
     }
     to {
         background: linear-gradient(180deg, rgba(41, 42, 46, 0.3) 0%, rgba(34, 34, 39, 0.3) 100%), rgba(0, 0, 0, 0.45);
         opacity: 1;
-        backdrop-filter: blur(40px);
+        backdrop-filter: blur(var(--LV1_Blur));
         transition-duration: .2s;
     }
 }
@@ -163,7 +218,7 @@
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     transition-duration: .2s;
-    border-radius: 10px !important;
+    border-radius: var(--LV2_RC) !important;
 }
 
 /* Scrollbar Thumb Hover */
@@ -172,7 +227,7 @@
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     transition-duration: .2s;
-    border-radius: 10px !important;
+    border-radius: var(--LV2_RC) !important;
 }
 
 /* Scrollbar Thumb Active */
@@ -181,7 +236,7 @@
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     transition-duration: .2s;
-    border-radius: 10px !important;
+    border-radius: var(--LV2_RC) !important;
 }
 
 /* Scrollbar Track */
@@ -190,7 +245,7 @@
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     transition-duration: .2s;
-    border-radius: 10px !important;
+    border-radius: var(--LV2_RC) !important;
 }
 
 /* Texts */
@@ -203,7 +258,7 @@ div.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: -4px 0px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV3_Blur)) !important;
 }
 
 /* Right Panel */
@@ -211,7 +266,7 @@ div.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 4px 0px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV3_Blur)) !important;
 }
 
 /* Hot Top Bar */
@@ -219,7 +274,7 @@ div.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px -5px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV3_Blur)) !important;
 }
 
 /* Header */
@@ -245,7 +300,7 @@ div.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .
 
 /* Tool Bar */
 .toolbarItem:hover, .toolbarDropDownItem:hover, .toolbarDropDownItem:hover, .eButton:hover, .publishAsset:hover {
-    border-radius: 5px;
+    border-radius: var(--LV6_RC);
     background-color: rgb(130 130 130 / 0.4);
 }
 
@@ -258,7 +313,7 @@ div.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .
 input:checked+.slider {
     background: linear-gradient(180deg, rgba(69, 69, 94, 0.3) 0%, rgba(64, 65, 89, 0.3) 100%), rgba(33, 35, 43, 0.8) !important;
     box-shadow: 0px 0px 25px rgba(33, 35, 43, 0.3) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV4_Blur));
     transition-duration: .2s;
 }
 
@@ -293,24 +348,24 @@ input[type=range]::-moz-range-thumb {
 #canvasAdd {
     background: linear-gradient(180deg, rgba(169, 171, 217, 0.3) 0%, rgba(161, 169, 208, 0.3) 100%), rgba(151, 148, 171, 0.7);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(5px);
-    border-radius: 7px;
+    backdrop-filter: blur(var(--LV4_Blur));
+    border-radius: var(--LV5_RC);
 }
 
 /* Delete, Duplicate Button */
 #canvasObjEdit .eButton {
     background: linear-gradient(180deg, rgba(169, 171, 217, 0.3) 0%, rgba(161, 169, 208, 0.3) 100%), rgba(151, 148, 171, 0.7);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(5px);
-    border-radius: 7px;
+    backdrop-filter: blur(var(--LV4_Blur));
+    border-radius: var(--LV5_RC);
 }
 
 /* Spawn...Objects Info */
 #canvasInfo {
     background: linear-gradient(180deg, rgba(169, 171, 217, 0.3) 0%, rgba(161, 169, 208, 0.3) 100%), rgba(151, 148, 171, 0.7);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(5px);
-    border-radius: 7px;
+    backdrop-filter: blur(var(--LV4_Blur));
+    border-radius: var(--LV5_RC);
 }
 
 /* ^Texts */
@@ -322,8 +377,8 @@ input[type=range]::-moz-range-thumb {
 #canvasUI .eButton {
     background: linear-gradient(180deg, rgba(176, 178, 230, 0.3) 0%, rgba(184, 192, 236, 0.3) 100%), rgba(164, 160, 185, 0.7);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(5px);
-    border-radius: 7px;
+    backdrop-filter: blur(var(--LV4_Blur));
+    border-radius: var(--LV5_RC);
     transition-duration: .15s;
 }
 
@@ -331,26 +386,26 @@ input[type=range]::-moz-range-thumb {
 .toolbarDropDown, div.toolbarDropDown {
     transform: translateY(3px);
     box-shadow: none;
-    border-radius: 7px;
+    border-radius: var(--LV5_RC);
     animation: fadeintoolbar .2s;
     background: rgb(0 0 0 / 0.75) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV3_Blur)) !important;
 }
 
 /* ^Sub */
 .toolbarSubDropDown, div.toolbarSubDropDown {
     transform: translateX(1.5px);
     box-shadow: none;
-    border-radius: 7px;
+    border-radius: var(--LV5_RC);
     animation: fadeintoolbarsub .2s;
     background: rgb(0 0 0 / 0.75) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(var(--LV3_Blur)) !important;
 }
 
 .toolbarChunkSubDropDown, div.toolbarChunkSubDropDown {
     transform: translateX(1.5px);
     box-shadow: none;
-    border-radius: 7px;
+    border-radius: var(--LV5_RC);
     animation: fadeintoolbarsub .2s;
     background-color: rgb(0 0 0 / 0) !important;
 }
@@ -360,8 +415,8 @@ div#menuWindow, .loginPop, .importPop {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(10px) !important;
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV3_Blur)) !important;
+    border-radius: var(--LV2_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
     transform: scale3d(1) translate(-50%,-50%);
@@ -372,8 +427,8 @@ div#menuWindow, .loginPop, .importPop {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(10px) !important;
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV3_Blur)) !important;
+    border-radius: var(--LV2_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
     transform: scale3d(1) translate(-50%,-50%);
@@ -394,8 +449,8 @@ div#menuWindow, .loginPop, .importPop {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(10px) !important;
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV3_Blur)) !important;
+    border-radius: var(--LV2_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
     transform: scale3d(1) translate(-50%,-50%);
@@ -412,8 +467,8 @@ div#menuWindow, .loginPop, .importPop {
     background: var(--Btn1Color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(5px);
-    border-radius: 7px;
+    backdrop-filter: blur(var(--LV4_Blur));
+    border-radius: var(--LV5_RC);
 }
 
 /* Button Hover */
@@ -421,8 +476,8 @@ div#menuWindow, .loginPop, .importPop {
     background: var(--Btn1_HoverColor) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(5px);
-    border-radius: 7px !important;
+    backdrop-filter: blur(var(--LV4_Blur));
+    border-radius: var(--LV5_RC) !important;
 }
 
 /* Button Active */
@@ -430,14 +485,14 @@ div#menuWindow, .loginPop, .importPop {
     background: var(--Btn1_ActiveColor) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(5px);
-    border-radius: 7px !important;
+    backdrop-filter: blur(var(--LV4_Blur));
+    border-radius: var(--LV5_RC) !important;
 }
 
 /* Popup Background */
 #instructionHolder, #popupBack {
     background: var(--dark-bg-color);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(var(--LV1_Blur));
     animation: blurswitch .2s;
     transition-duration: .2s;
 }
@@ -467,7 +522,7 @@ div#menuWindow, .loginPop, .importPop {
 /* Panel Label */
 .panelLabel {
     background: rgb(82 79 97 / 71%);
-    border-radius: 0px 0px 10px 0px;
+    border-radius: var(--None_RC) var(--None_RC) var(--LV2_RC) var(--None_RC);
 }
 
 /* Panel Button */
@@ -479,16 +534,16 @@ div#menuWindow, .loginPop, .importPop {
 .inlineInput {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
-    backdrop-filter: blur(20px) !important;
-    border-radius: 5px !important;
+    backdrop-filter: blur(var(--LV2_Blur)) !important;
+    border-radius: var(--LV6_RC) !important;
 }
 
 /* Select Mod...etc */
 .eButton, .publishAsset {
     background: rgb(0 0 0 / 30%);
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(20px);
-    border-radius: 7px;
+    backdrop-filter: blur(var(--LV2_Blur));
+    border-radius: var(--LV5_RC);
 }
 
 /* import btn */
@@ -500,7 +555,7 @@ div#menuWindow, .loginPop, .importPop {
 .mapAgeD {
     background: rgb(255 255 255 / 0.8) !important;
     color: rgb(0 0 0 / 0.9) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV2_Blur));
 }
 
 /* Sub Header */
@@ -532,8 +587,8 @@ hr {
 /* Quick */
 .qs_main, div.qs_main {
     background-color: rgb(0 0 0 / 50%) !important;
-    border-radius: 7px;
-    backdrop-filter: blur(5px);
+    border-radius: var(--LV5_RC);
+    backdrop-filter: blur(var(--LV4_Blur));
 }
 
 /* Quick */
@@ -544,13 +599,13 @@ hr {
 /* Quick Title */
 .qs_title_bar, div.qs_title_bar {
     background-color: rgb(0 0 0 / 50%) !important;
-    border-radius: 7px 7px 0px 0px;
+    border-radius: var(--LV5_RC) 7px 0px 0px;
 }
 
 /* Quick JSON Text Area */
 .qs_textarea {
     background-color: rgb(36 36 36) !important;
-    border-radius: 3px;
+    border-radius: var(--LV7_RC);
     color: rgb(240 240 240) !important;
 }
 
@@ -620,8 +675,8 @@ hr {
 .chatItem {
     background: linear-gradient(180deg, rgba(169, 171, 217, 0.3) 0%, rgba(161, 169, 208, 0.3) 100%), rgba(151, 148, 171, 0.7) !important;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15) !important;
-    backdrop-filter: blur(5px);
-    border-radius: 7px;
+    backdrop-filter: blur(var(--LV4_Blur));
+    border-radius: var(--LV5_RC);
     transition-duration: .15s;
     animation: popup_opacity_animat 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
 }
@@ -655,7 +710,7 @@ hr {
 /* Map Test Popup */
 .mapTestPop {
     padding: 7px;
-    border-radius: 15px;
+    border-radius: var(--LV1_RC);
     border: solid 2px rgb(0 0 0 / 0%);
     background-color: rgb(12 12 13);
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
@@ -663,15 +718,15 @@ hr {
 
 /* ^Frame */
 #mapTestFrame, .mapTestFrame {
-    border-radius: 10px;
+    border-radius: var(--LV2_RC);
 }
 
 .publishGamePop, .publishPop {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(10px) !important;
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV3_Blur)) !important;
+    border-radius: var(--LV2_RC) !important;
     transition-duration: .2s !important;
     transform: scale3d(1) translate(-50%,-50%);
 }
@@ -691,16 +746,16 @@ input:checked+.slider2 {
 
 .publishLeft {
     border: 4px solid #0000;
-    border-radius: 10px;
+    border-radius: var(--LV2_RC);
 }
 
 #gameThumbnailPrev {
-    border-radius: 10px;
+    border-radius: var(--LV2_RC);
 }
 
 .changeThumb {
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
+    border-radius: var(--LV2_RC);
+    backdrop-filter: blur(var(--LV3_Blur));
 }
 
 #gameThumbnailSize {
@@ -727,7 +782,7 @@ input:checked+.slider2 {
 /* 2FA Popup Background */
 #twoFAPop {
     background: rgb(0 0 0 / 0.6);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(var(--LV1_Blur));
     animation: blurswitch .2s;
     transition-duration: .2s;
 }
@@ -737,8 +792,8 @@ input:checked+.slider2 {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV3_Blur)) !important;
+    border-radius: var(--LV2_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
     transition-duration: .2s !important;
@@ -764,7 +819,7 @@ input:checked+.slider2 {
 
 /* ^Submit */
 #twoFAbtn {
-    border-radius: 8px;
+    border-radius: var(--LV4_RC);
     font-size: 20px;
     color: rgb(255 255 255 / 0.95);
     background-color: rgb(0 0 0 / 30%);
@@ -772,13 +827,13 @@ input:checked+.slider2 {
 
 /* For lost Passwords/Accounts... */
 [style="width:100%;text-align:center;margin-top:10px;background-color:rgba(0,0,0,0.3);padding-top:10px;padding-bottom:20px;"] {
-    border-radius: 10px;
+    border-radius: var(--LV2_RC);
 }
 
 /* Login */
 #referralHeader {
     background-color: rgb(0 0 0 / 0.4);
-    border-radius: 10px;
+    border-radius: var(--LV2_RC);
 }
 
 /* Popup Message */
@@ -789,7 +844,7 @@ input:checked+.slider2 {
 /* Menu Background */
 .menuTabsNew {
     background-color: rgba(0 0 0 / 10%);
-    border-radius: 10px !important;
+    border-radius: var(--LV2_RC) !important;
     transition: .15s;
 }
 
@@ -797,7 +852,7 @@ input:checked+.slider2 {
 .tabANew {
     box-shadow: inset 0 -5px #0000;
     background: rgba(0 0 0 / 25%);
-    border-radius: 10px !important;
+    border-radius: var(--LV2_RC) !important;
     transition: .15s;
 }
 
@@ -815,7 +870,7 @@ input:checked+.slider2 {
 .menuTabNew:hover, .menuShortTabNew:hover {
     box-shadow: inset 0 -5px #0000 !important;
     background: rgba(0 0 0 / 15%);
-    border-radius: 10px !important;
+    border-radius: var(--LV2_RC) !important;
     transition: .15s;
 }
 
@@ -823,7 +878,7 @@ input:checked+.slider2 {
 .menuTabNew:active, .menuShortTabNew:active {
     box-shadow: inset 0 -5px #0000 !important;
     background: rgba(0 0 0 / 40%);
-    border-radius: 10px !important;
+    border-radius: var(--LV2_RC) !important;
 }
 
 /* Search Button */
@@ -835,8 +890,8 @@ input:checked+.slider2 {
 .sliderM {
     background: linear-gradient(180deg, rgb(169 167 184 / 30%) 0%, rgb(172 170 191 / 30%) 100%), rgb(98 99 108 / 0.7);
     box-shadow: 0px 0px 20px rgba(223, 223, 240, 0.2);
-    backdrop-filter: blur(5px);
-    border-radius: 7px;
+    backdrop-filter: blur(var(--LV4_Blur));
+    border-radius: var(--LV5_RC);
     padding-top: 0.7px;
     padding-bottom: 0.7px;
     transition-duration: .2s;
@@ -847,8 +902,8 @@ input:checked+.slider2 {
     background-color: #0000 !important;
     background: linear-gradient(180deg, rgb(176 173 195 / 30%) 0%, rgb(228 226 255 / 30%) 100%), rgb(255 255 255 / 90%) !important;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    border-radius: 5px;
+    backdrop-filter: blur(var(--LV4_Blur));
+    border-radius: var(--LV6_RC);
     padding: 9px;
     transition-duration: .2s;
 }
@@ -858,8 +913,8 @@ input:checked+.slider2 {
     background: rgb(0 0 0 / 0.3) !important;
     border: 3px solid rgba(225, 225, 225, 0.25) !important;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2) !important;
-    backdrop-filter: blur(5px);
-    border-radius: 9px !important;
+    backdrop-filter: blur(var(--LV4_Blur));
+    border-radius: var(--LV3_RC) !important;
     font-size: 16.5px;
     padding: 4px;
     transition-duration: .2s;
@@ -873,4 +928,34 @@ input:checked+.slider2 {
 /* Slider Value Active */
 .sliderVal:active {
     filter: brightness(0.55);
+}
+
+/* Select */
+select {
+    border-radius: var(--LV5_RC);
+    background-color: #f0f0f0;
+}
+
+/* Asset Item */
+.assetItem {
+    transition: .15s;
+}
+
+/* Color Picker */
+div.pcr-app, div.pcr-app.visible {
+    background: rgb(0 0 0 / 75%) !important;
+    border-radius: var(--LV2_RC);
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%) !important;
+    backdrop-filter: blur(var(--LV5_Blur));
+}
+
+.pcr-app[data-theme=nano] .pcr-selection .pcr-color-palette .pcr-palette::before,
+.pcr-app[data-theme=nano] .pcr-selection .pcr-color-palette .pcr-palette {
+    border-radius: var(--LV2_RC) !important;
+}
+
+/* 2FA Input */
+.twoFAIn {
+    border-radius: var(--LV2_RC);
+    color: rgb(255 255 255 / 95%);
 }

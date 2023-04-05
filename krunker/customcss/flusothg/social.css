@@ -1,15 +1,67 @@
 /* Flusothg - Krunker Hub */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2023/02/01 */
+/* 2023/04/05 */
 
 
 /* CF1. Configs ================================================================================== */
 
 :root {
     
-    /* Card Blur */
+  /* BC1. Blur Configs ================================================================= */
+
+    /* None Blur */
+     --None_Blur: 0px;
+
+    /* Card Blur (similar to Level 1 blur) */
      --CardBlur: blur(40px) !important;
+    
+    /* Level 1 blur (highest level) */
+     --LV1_Blur: 40px;
+
+    /* Level 2 blur */
+     --LV2_Blur: 30px;
+
+    /* Level 3 blur */
+     --LV3_Blur: 20px;
+    
+    /* Level 4 blur */
+     --LV4_Blur: 10px;
+
+    /* Level 5 blur */
+     --LV5_Blur: 7px;
+
+    /* Level 6 blur */
+     --LV6_Blur: 5px;
+
+    /* Level 7 blur (lowest level) */
+     --LV7_Blur: 2px;
+    
+  /* BC1. Blur Configs ================================================================= */
+
+
+
+  /* RC1. Rounded Corners Configs ================================================================= */
+
+    /* None Rounded Corners */
+     --None_RC: 0px;
+
+    /* Level 1 Rounded Corners (highest level) */
+     --LV1_RC: 10px;
+
+    /* Level 2 Rounded Corners */
+     --LV2_RC: 8px;
+
+    /* Level 3 Rounded Corners */
+     --LV3_RC: 7px;
+    
+    /* Level 4 Rounded Corners */
+     --LV4_RC: 5px;
+
+    /* Level 5 Rounded Corners (lowest level) */
+     --LV5_RC: 4px;
+
+  /* RC1. Rounded Corners Configs ================================================================= */
 
     /* Profile Bottom Button Color */
      --ProfileBottomBtn: rgba(255, 255, 255, 0.95) !important;
@@ -153,12 +205,12 @@
 @keyframes blurswitch {
     from {
         background-color: rgb(0 0 0 / 0.1);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(var(--LV4_Blur));
         transition-duration: .2s;
     }
     to {
         background-color: rgb(0 0 0 / 0.6);
-        backdrop-filter: blur(30px);
+        backdrop-filter: blur(var(--LV2_Blur));
         transition-duration: .2s;
     }
 }
@@ -276,7 +328,7 @@
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     transition-duration: .2s;
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
 }
 
 /* Scrollbar Thumb Hover */
@@ -285,7 +337,7 @@
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     transition-duration: .2s;
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
 }
 
 /* Scrollbar Thumb Active */
@@ -294,7 +346,7 @@
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     transition-duration: .2s;
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
 }
 
 /* Scrollbar Track */
@@ -303,7 +355,7 @@
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     transition-duration: .2s;
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
 }
 
 /* Background Image Holder */
@@ -354,7 +406,7 @@
 #captcha-holder {
     animation: fadein .2s;
     background-color: rgb(0 0 0 / 10%) !important;
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(var(--LV2_Blur));
     z-index: 10000000000000000000000000 !important;
 }
 
@@ -380,8 +432,8 @@
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV1_Blur)) !important;
+    border-radius: var(--LV1_RC) !important;
     padding: 5px;
     transition-duration: .2s;
 }
@@ -449,8 +501,8 @@
 #searchPInput {
     background: rgba(245, 246, 255, 0.8) !important;
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05) !important;
-    backdrop-filter: blur(20px) !important;
-    border-radius: 5px !important;
+    backdrop-filter: blur(var(--LV3_Blur)) !important;
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Search Button */
@@ -462,23 +514,23 @@
     content: url(https://i.imgur.com/ifR2sCz.png) !important;
     background: var(--Btn1Color);
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px);
-    border-radius: 5px !important;
+    backdrop-filter: blur(var(--LV3_Blur));
+    border-radius: var(--LV4_RC) !important;
     transition-duration: .2s;
 }
 
 /* Search Hover Button */
 #searchBtn:hover {
     background: var(--Btn1_HoverColor);
-    backdrop-filter: blur(20px);
-    border-radius: 5px !important;
+    backdrop-filter: blur(var(--LV3_Blur));
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Search Active Button */
 #searchBtn:active {
     background: var(--Btn1_ActiveColor);
-    backdrop-filter: blur(20px);
-    border-radius: 8px !important;
+    backdrop-filter: blur(var(--LV3_Blur));
+    border-radius: var(--LV2_RC) !important;
 }
 
 /* Disabled Follow (Followed) */
@@ -498,7 +550,7 @@
     color: rgb(0 0 0 / 90%) !important;
     background-color: rgb(255 255 255 / 90%) !important;
     border: none !important;
-    border-radius: 5px !important;
+    border-radius: var(--LV4_RC) !important;
     width: 551px !important;
     backdrop-filter: var(--CardBlur);
 }
@@ -613,7 +665,7 @@
 
 /* Send Button on Trade Chat */
 #chatBoxButton {
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
     background-color: rgb(157 159 198) !important;
     transition-duration: .15s;
 }
@@ -649,7 +701,7 @@
     backdrop-filter: var(--CardBlur) !important;
     height: 350px;
     max-height: 400px;
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
 }
 
 /* Krunker News Message Box */
@@ -658,7 +710,7 @@
     background-color: rgb(0 0 0 / 0.25) !important;
     border: 3px solid rgb(0 0 0 / 0%) !important;
     color: rgb(255 255 255 / 95%) !important;
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
 }
 
 /* Krunker News Header */
@@ -702,7 +754,7 @@
     height: 47px;
     width: 136px;
     margin-top: -1px;
-    border-radius: 5px;
+    border-radius: var(--LV4_RC);
     line-height: 50px;
     background: #b1b0c0 !important;
     transition-duration: .15s;
@@ -796,7 +848,7 @@
 
 /* Follow Button */
 .reqFollB {
-    border-radius: 5px;
+    border-radius: var(--LV4_RC);
     border: 3px solid #0000 !important;
     margin-left: 3px;
     margin-top: 6px;
@@ -910,8 +962,8 @@
     background: var(--Btn1Color) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 7px;
+    backdrop-filter: blur(var(--LV1_Blur));
+    border-radius: var(--LV3_RC);
     transition-duration: .2s;
 }
 
@@ -920,8 +972,8 @@ div.button:hover {
     background: var(--Btn1_HoverColor) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 7px;
+    backdrop-filter: blur(var(--LV1_Blur));
+    border-radius: var(--LV3_RC);
     transform: scale(.9);
 }
 
@@ -930,8 +982,8 @@ div.button:active {
     background: var(--Btn1_ActiveColor) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 7px;
+    backdrop-filter: blur(var(--LV1_Blur));
+    border-radius: var(--LV3_RC);
     transform: scale(.8);
 }
 
@@ -995,8 +1047,8 @@ div.button:active {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV1_Blur)) !important;
+    border-radius: var(--LV1_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
@@ -1004,7 +1056,7 @@ div.button:active {
 /* Popup Background */
 #popupBack {
     background-color: rgb(0 0 0 / 0.6);
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(var(--LV2_Blur));
     top: -150px !important;
     width: 150% !important;
     height: 150% !important;
@@ -1022,7 +1074,7 @@ div.button:active {
 .accountButton {
     color: rgba(255,255,255) !important;
     background-color: rgb(33 150 243);
-    border-radius: 5px;
+    border-radius: var(--LV4_RC);
 }
 
 /* Popup Content */
@@ -1030,8 +1082,8 @@ div.button:active {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV1_Blur)) !important;
+    border-radius: var(--LV1_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
     transform: scale3d(1) translate(-50%,-50%);
@@ -1047,8 +1099,8 @@ div.button:active {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV1_Blur)) !important;
+    border-radius: var(--LV1_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
     transform: scale3d(1) translate(-50%,-50%);
@@ -1075,12 +1127,12 @@ div.button:active {
 #leftBox {
     background-color: rgb(156 157 191 / 70%) !important;
     backdrop-filter: var(--CardBlur) !important;
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
 }
 
 /* New Feed Tabs */
 #feedTabs {
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
     background-color: rgb(156 157 191 / 70%) !important;
     backdrop-filter: var(--CardBlur);
 } 
@@ -1154,7 +1206,7 @@ div.button:active {
 }
 
 /* Center Holder */
-.centerHolder, #adBox {
+.centerHolder, #aBox {
     animation: centerholderanimat 0.4s;
     transition-duration: 0.4s;
 }
@@ -1179,7 +1231,7 @@ div.button:active {
 /* Search Button */
 div#marketSearchB, div#invSortB {
     background: linear-gradient(180deg, rgb(178 179 214) 0%, rgb(171 179 223) 100%), rgb(152 149 171) !important;
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
 }
 
 /* Filter/Sort Popup */
@@ -1187,8 +1239,8 @@ div#marketSearchB, div#invSortB {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV1_Blur)) !important;
+    border-radius: var(--LV1_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
@@ -1207,7 +1259,7 @@ div#marketSearchB, div#invSortB {
 }
 
 .sliderSml2 {
-    border-radius: 5px;
+    border-radius: var(--LV4_RC);
     width: 30px;
     left: -10px;
     height: 20px;
@@ -1216,21 +1268,21 @@ div#marketSearchB, div#invSortB {
 
 input:checked+.sliderSml2 {
     background-color: #e2ecff;
-    border-radius: 5px;
+    border-radius: var(--LV4_RC);
     width: 30px;
     left: -10px;
     height: 20px;
 }
 
 #marketFiltTxt, #invSortTxt {
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
     background: rgb(255 255 255 / 0.9);
     border: none !important;
 }
 
 /* SortFilt */
 #sortFilt, #seaFilt, #seaSort {
-    border-radius: 4px;
+    border-radius: var(--LV5_RC);
     background: rgb(255 255 255 / 0.9);
     border: none !important;
 }
@@ -1278,7 +1330,7 @@ input:checked+.sliderSml2 {
 .declineAll {
     color: #fff;
     background: rgb(160 162 203) !important;
-    border-radius: 8px;
+    border-radius: var(--LV2_RC);
 }
 
 /* TD1. Trade ================================================================================== */
@@ -1320,7 +1372,7 @@ input:checked+.sliderSml2 {
 /* Feat Games (+ Video Preview) */
 .bigMFeatHold, 
 #mapsHolder > div.bigMFeatVid > iframe, .bigMFeatVid {
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
 }
 
 /* Home */
@@ -1333,8 +1385,8 @@ div#bigMFeatPBtn {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 7px;
+    backdrop-filter: blur(var(--LV1_Blur));
+    border-radius: var(--LV3_RC);
     transition-duration: .2s;
 }
 
@@ -1351,7 +1403,7 @@ div#bigMFeatPBtn:active {
 /* Search Button */
 .searchListBtn {
     background: rgb(255 255 255 / 0.3) !important;
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
 }
 
 /* Mao List Cat */
@@ -1362,7 +1414,7 @@ div#bigMFeatPBtn:active {
 
 /* Action, Parkour...etc */
 .mapLICat {
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
     color: rgb(255 255 255 / 0.95);
     text-shadow: none;
 }
@@ -1397,7 +1449,7 @@ div#bigMFeatPBtn:active {
 /* Publish */
 #modsHolder > div:nth-child(1) > div > div:nth-child(6) {
     background: linear-gradient(180deg, rgb(165 167 216) 0%, rgb(171 179 223) 100%), rgb(152 149 171) !important;
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
 }
 
 /* Publish Mod Popup */
@@ -1405,8 +1457,8 @@ div#bigMFeatPBtn:active {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV1_Blur)) !important;
+    border-radius: var(--LV1_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
@@ -1418,19 +1470,19 @@ div#bigMFeatPBtn:active {
 
 /* Thumbnail Preview */
 .publishLeft {
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
     border: 4px solid #0000;
 }
 
 /* Thumbnail Image */
 #modThumbPrev {
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
 }
 
 /* Select Thumbnail */
 .changeThumb {
-    border-radius: 10px;
-    backdrop-filter: blur(20px);
+    border-radius: var(--LV1_RC);
+    backdrop-filter: blur(var(--LV3_Blur));
 }
 
 /* Name */
@@ -1441,7 +1493,7 @@ div#bigMFeatPBtn:active {
 /* Select */
 .fileSelect {
     border: none;
-    border-radius: 5px;
+    border-radius: var(--LV4_RC);
 }
 
 /* MD1. Mods ================================================================================== */
@@ -1453,7 +1505,8 @@ div#bigMFeatPBtn:active {
 /* Category...etc Select, Search Item Input */
 #itemsListNav>select, #itemsListNav>input {
     backdrop-filter: var(--CardBlur);
-    background-color: rgb(255 255 255 / 0.8) !important;
+    background-color: rgb(255 255 255 / 80%) !important;
+    border-radius: var(--LV2_RC);
 }
 
 /* IL1. Item List ================================================================================== */
@@ -1467,8 +1520,8 @@ div#bigMFeatPBtn:active {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV1_Blur)) !important;
+    border-radius: var(--LV1_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
     transform: scale3d(1) translate(-50%,-50%);
@@ -1478,8 +1531,8 @@ div#bigMFeatPBtn:active {
 .sliderM {
     background: linear-gradient(180deg, rgba(209, 208, 227, 0.3) 0%, rgba(197, 196, 218, 0.3) 100%), rgba(223, 223, 240, 0.8);
     box-shadow: 0px 0px 20px rgba(223, 223, 240, 0.2);
-    backdrop-filter: blur(5px);
-    border-radius: 7px;
+    backdrop-filter: blur(var(--LV6_Blur));
+    border-radius: var(--LV3_RC);
     padding-top: 0.5px;
     padding-bottom: 0.5px;
     transition-duration: .2s;
@@ -1502,8 +1555,8 @@ div#bigMFeatPBtn:active {
     background-color: #0000 !important;
     background: linear-gradient(180deg, rgba(235, 233, 255, 0.3) 0%, rgba(229, 227, 255, 0.3) 100%), rgba(255, 255, 255, 0.9) !important;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    border-radius: 5px;
+    backdrop-filter: blur(var(--LV6_Blur));
+    border-radius: var(--LV4_RC);
     padding: 8px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -1531,7 +1584,7 @@ div#bigMFeatPBtn:active {
 input:checked+.slider {
     background: linear-gradient(180deg, rgba(69, 69, 94, 0.3) 0%, rgba(64, 65, 89, 0.3) 100%), rgba(33, 35, 43, 0.8) !important;
     box-shadow: 0px 0px 25px rgba(33, 35, 43, 0.3) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV6_Blur));
     transition-duration: .2s;
 }
 
@@ -1553,7 +1606,7 @@ input:checked+.slider:active {
 .slider {
     background: linear-gradient(180deg, rgba(189, 188, 206, 0.3) 0%, rgba(178, 177, 198, 0.3) 100%), rgba(186, 188, 209, 0.8) !important;
     box-shadow: 0px 0px 25px rgb(135 125 177 / 30%) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV6_Blur));
     transition-duration: .2s;
     transform: scale(0.95);
 }
@@ -1578,7 +1631,7 @@ input:checked+.slider:active {
 .slider:before {
     background: linear-gradient(180deg, rgba(235, 233, 255, 0.3) 0%, rgba(229, 227, 255, 0.3) 100%), rgba(255, 255, 255, 0.9) !important;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1) !important;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV6_Blur));
 }
 
 /* Collection Btn */
@@ -1587,7 +1640,7 @@ input:checked+.slider:active {
 }
 
 /* Manage Ad Preferences */
-#settHolder > div:nth-child(10) {
+#settHolder > div:nth-child(14) {
     background: linear-gradient(180deg, #54596e 0%, #54596e 100%), #54596e !important;
     transition: .15s;
 }
@@ -1614,29 +1667,29 @@ input:checked+.slider:active {
     background: rgba(29, 29, 29, 0.6) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV3_Blur));
 }
 
 /* On Status */
 .onStatus {
     border: 5px solid rgb(190 190 190 / 90%) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV3_Blur));
 }
 
 /* Online Status Green */
 [style="background:#27ab32"] {
     background: rgba(51, 255, 84, 0.6) !important;
     box-shadow: 0px 0px 20px rgba(101, 255, 126, 0.15);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV3_Blur));
 }
 
 /* HACKER Card */
 #hackText {
     background: linear-gradient(180deg, rgba(255, 185, 185, 0.3) 0%, rgba(255, 171, 165, 0.3) 100%), rgba(171, 149, 154, 0.5) !important;
     box-shadow: 0px 0px 30px rgba(255, 95, 131, 0.5) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV1_Blur));
+    border-radius: var(--LV1_RC) !important;
     z-index: 0 !important;
     font-size: 0 !important;
 }
@@ -1661,8 +1714,8 @@ input:checked+.slider:active {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV1_Blur));
+    border-radius: var(--LV1_RC) !important;
     transition-duration: .2s;
     animation: page01animat .3s;
 }
@@ -1738,7 +1791,7 @@ input:checked+.slider:active {
     top: -9.5px;
     left: 13px;
     width: 98.2%;
-    border-radius: 10px 10px 10px 10px !important;
+    border-radius: var(--LV1_RC) var(--LV1_RC) var(--LV1_RC) var(--LV1_RC) !important;
     transition-duration: .2s;
 }
 
@@ -1756,21 +1809,21 @@ input:checked+.slider:active {
 .pTabA {
     box-shadow: none !important;
     background: rgba(50, 50, 50, 0.4) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
 }
 
 /* Profile Tab Hover */ 
 .profileTab:hover {
     box-shadow: none !important;
     background: rgba(50, 50, 50, 0.2) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
 }
 
 /* Profile Tab Active */ 
 .profileTab:active {
     box-shadow: none !important;
     background: rgba(50, 50, 50, 0.6) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
 }
 
 /* Overall Status Box */
@@ -1778,8 +1831,8 @@ input:checked+.slider:active {
     width: 123px !important;
     background: rgba(88, 86, 102, 0.9) !important;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 7px !important;
+    backdrop-filter: blur(var(--LV1_Blur));
+    border-radius: var(--LV3_RC) !important;
     text-shadow: none !important;
     border: none !important;
     color: rgba(255, 255, 255, 0.9) !important;
@@ -1816,8 +1869,8 @@ input:checked+.slider:active {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV1_Blur)) !important;
+    border-radius: var(--LV1_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
     transform: scale3d(1) translate(-50%,-50%);
@@ -1869,8 +1922,8 @@ input:checked+.slider:active {
     background: linear-gradient(180deg, rgba(184, 187, 241, 0.3) 0%, rgba(193, 203, 253, 0.3) 100%), rgba(201, 197, 224, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 7px !important;
+    backdrop-filter: blur(var(--LV1_Blur));
+    border-radius: var(--LV3_RC) !important;
 }
 
 /* ^Hover */
@@ -1890,8 +1943,8 @@ input:checked+.slider:active {
     background: linear-gradient(180deg, rgba(157, 159, 207, 0.3) 0%, rgba(142, 150, 190, 0.3) 100%), rgba(153, 150, 172, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 7px !important;
+    backdrop-filter: blur(var(--LV1_Blur));
+    border-radius: var(--LV3_RC) !important;
 }
 
 /* ^^Active */
@@ -1911,8 +1964,8 @@ input:checked+.slider:active {
     background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 7px !important;
+    backdrop-filter: blur(var(--LV1_Blur));
+    border-radius: var(--LV3_RC) !important;
 }
 
 /* Followers/Following BHold */ 
@@ -1933,8 +1986,8 @@ input:checked+.slider:active {
 /* Xp Bar */
 .xpBar {
     background: rgba(88, 86, 102, 0.9) !important;
-    backdrop-filter: blur(40px) !important;
-    border-radius: 7px !important;
+    backdrop-filter: blur(var(--LV1_Blur)) !important;
+    border-radius: var(--LV3_RC) !important;
 }
 
 /* Xp Bar Text */
@@ -1951,8 +2004,8 @@ input:checked+.slider:active {
 /* Xp Bar B */
 .xpBarB {
     background: #838CBC !important;
-    backdrop-filter: blur(20px) !important;
-    border-radius: 7px !important;
+    backdrop-filter: blur(var(--LV3_Blur)) !important;
+    border-radius: var(--LV3_RC) !important;
 }
 
 /* Report, Share, Flag Button */
@@ -1977,7 +2030,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 
 /* Profile Badge Bound */
 .badgeBound {
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(var(--LV5_Blur));
 }
 
 /* Feed Verified Icon In Profile */
@@ -1990,8 +2043,8 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV1_Blur)) !important;
+    border-radius: var(--LV1_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
 }
@@ -2006,8 +2059,8 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV1_Blur)) !important;
+    border-radius: var(--LV1_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
 }
@@ -2016,7 +2069,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 #reportBtn {
     background: rgb(0 0 0 / 20%) !important;
     color: rgb(255 255 255 / 95%) !important;
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
     transition: .15s;
 }
 
@@ -2024,14 +2077,14 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 #reportBtn:hover {
     background: rgb(0 0 0 / 30%) !important;
     color: rgb(255 255 255 / 95%) !important;
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
 }
 
 /* Report Active Button */
 #reportBtn:active {
     background: rgb(0 0 0 / 40%) !important;
     color: rgb(255 255 255 / 95%) !important;
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
 }
 
 /* Badge Card */
@@ -2053,8 +2106,8 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 .rangeSelect {
     background: rgba(245, 246, 255, 0.8);
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(20px);
-    border-radius: 7px !important;
+    backdrop-filter: blur(var(--LV3_Blur));
+    border-radius: var(--LV3_RC) !important;
     color: rgba(0, 0, 0, 0.9) !important;
     transition-duration: .15s;
 }
@@ -2063,32 +2116,32 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 .rangeSelect:hover {
     background: rgba(200, 200, 210, 0.8);
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(20px);
-    border-radius: 7px;
+    backdrop-filter: blur(var(--LV3_Blur));
+    border-radius: var(--LV3_RC);
 }
 
 /* ^^Active */
 .rangeSelect:active {
     background: rgba(139, 140, 150, 0.8);
     box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(20px);
-    border-radius: 7px;
+    backdrop-filter: blur(var(--LV3_Blur));
+    border-radius: var(--LV3_RC);
 }
 
 /* Market Sales */
 .graphHeader {
     background: rgba(88, 86, 102, 0.9) !important;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV4_Blur));
+    border-radius: var(--LV1_RC) !important;
 }
 
 /* ^Chart */
 .chartjs-render-monitor {
     background: rgb(0 0 0 / 0.65);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
+    backdrop-filter: blur(var(--LV4_Blur));
+    border-radius: var(--LV1_RC);
     filter: grayscale(1) brightness(3.2);
 }
 
@@ -2096,8 +2149,8 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 .classCard {
     background: rgba(88, 86, 102, 0.9) !important;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV1_Blur));
+    border-radius: var(--LV1_RC) !important;
     text-shadow: none !important;
 }
 
@@ -2105,8 +2158,8 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 .classImg {
     background: rgba(29, 29, 29, 0.6) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(20px);
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV3_Blur));
+    border-radius: var(--LV1_RC) !important;
 }
 
 /* Class Level */
@@ -2129,15 +2182,15 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 /* Class XP Bar */
 .classXPBar {
     background: rgba(47, 46, 53, 0.45) !important;
-    backdrop-filter: blur(40px);
-    border-radius: 5px !important;
+    backdrop-filter: blur(var(--LV1_Blur));
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Class XP Bar C */
 .clsXPBarC {
     background: rgba(131, 140, 188, 1) !important;
-    backdrop-filter: blur(20px);
-    border-radius: 5px !important;
+    backdrop-filter: blur(var(--LV3_Blur));
+    border-radius: var(--LV4_RC) !important;
 }
 
 /* Class XP Bar Text */
@@ -2153,20 +2206,20 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 /* Sale Card Actions */
 .cardActions {
     background: rgb(0 0 0 / 50%);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV3_Blur));
 }
 
 /* Tabs */
 .bigMenTabs {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
 }
 
 /* Tab Selected */
 .bigMenTabA {
     border-bottom: none;
     backdrop-filter: brightness(0.75);
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
     transition-duration: .2s;
 }
 
@@ -2174,7 +2227,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 .bigMenTab:hover {
     border-bottom: none;
     backdrop-filter: brightness(0.59);
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
     transition-duration: .2s;
 }
 
@@ -2182,7 +2235,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 .bigMenTab:active {
     border-bottom: none;
     backdrop-filter: brightness(0.4);
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
 }
 
 /* Creation Tabs */
@@ -2195,7 +2248,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 .creationTabA {
     border-color: transparent !important;
     background: rgba(50, 50, 50, 0.4) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
 }
 
 /* Creation Tab */
@@ -2207,22 +2260,22 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 /* Creation Tab */
 .creationTab:hover {
     background: rgba(50, 50, 50, 0.2) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
 }
 
 /* Creation Tab */
 .creationTab:active {
     background: rgba(50, 50, 50, 0.6) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
 }
 
 .profileNav {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(var(--LV1_Blur));
     margin-top: 0px;
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
     transition-duration: .2s;
     animation: page01animat .3s;
 }
@@ -2273,7 +2326,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 /* MenuSelector Hover */
 .menuSelector:hover {
     background: rgba(0,0,0,.3);
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
     padding-left: 12px;
     padding-right: 12px;
 }
@@ -2281,7 +2334,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 /* MenuSelector Active */
 .menuSelector:active {
     background: rgba(0,0,0,.5);
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
     padding-left: 12px;
     padding-right: 12px;
 }
@@ -2295,13 +2348,13 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 /* Map List Item */
 .mapListItem {
     background: rgb(0 0 0 / 0.3) !important;
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
     width: 375px !important;
 }
 
 /* Map Thumb Holder */
 .mapListThumbHolder {
-    border-radius: 10px 10px 0px 0px;
+    border-radius: var(--LV1_RC) var(--LV1_RC) var(--None_RC) var(--None_RC);
 }
 
 /* Creation Maps List */
@@ -2314,20 +2367,20 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 
 {
     height: 98px !important;
-    border-radius: 7px 7px 0px 0px;
+    border-radius: var(--LV3_RC) var(--LV3_RC) var(--None_RC) var(--None_RC);
 }
 
 /* Map Info */
 .mapListCrdI {
     background: rgb(0 0 0 / 0.3) !important;
-    backdrop-filter: blur(20px);
-    border-radius: 0px 0px 10px 10px;
+    backdrop-filter: blur(var(--LV3_Blur));
+    border-radius: var(--None_RC) var(--None_RC) var(--LV1_RC) var(--LV1_RC);
 }
 
 /* Map Age D */
 .mapAgeD {
     background: rgb(0 0 0 / 50%) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
 }
 
 /* GMP1. Game Map Page ================================================================================== */
@@ -2393,7 +2446,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 /* Market Card */
 .marketCard {
     border: 5px solid #0000 !important;
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
 }
 
 /* Search User */
@@ -2418,7 +2471,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 
 /* Enter KR Amount */
 #mapFundsInp {
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
 }
 
 /* Play, Share */
@@ -2428,19 +2481,19 @@ div.buttonS, div.buttonH {
 
 /* Play/Share Button Bg */
 .mapPagePlB {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(var(--LV6_Blur));
 }
 
 /* Map Likes */
 .mapText {
     color: rgb(255 255 255 / 0.85) !important;
     background: rgb(0 0 0 / 0.6);
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
     padding: 5px;
     transform: translate(7px , -20px);
     transition-duration: .15s;
     text-shadow: none !important;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(var(--LV7_Blur));
 }
 
 #mapProfile > div > div:nth-child(3) > div.mapText > span {
@@ -2452,7 +2505,7 @@ div.buttonS, div.buttonH {
 .creationAction.edit, .creationAction.del {
     color: rgb(255 255 255 / 0.9) !important;
     filter: none;
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
     padding: 5px;
     transition-duration: .15s;
 }
@@ -2462,10 +2515,10 @@ div.buttonS, div.buttonH {
     color: rgb(255 255 255 / 0.9) !important;
     filter: none;
     background: rgb(0 0 0 / 0.5);
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
     padding: 5px;
     transition-duration: .15s;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(var(--LV7_Blur));
 }
 
 /* Edit Button Hover */
@@ -2495,8 +2548,8 @@ div.buttonS, div.buttonH {
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(40px) !important;
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV1_Blur)) !important;
+    border-radius: var(--LV1_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transition-duration: .2s !important;
 }
@@ -2518,7 +2571,7 @@ div.buttonS, div.buttonH {
 
 /* Amount Select */
 #quickSellSelect {
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
 }
 
 /* Item Name */
@@ -2536,7 +2589,7 @@ div.buttonS, div.buttonH {
 #itemViewPop {
     border: none !important;
     background: rgb(0 0 0 / 0.3);
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
 }
 
@@ -2554,7 +2607,7 @@ div.buttonS, div.buttonH {
 /* 3D */
 .popupImgInfo {
     background: rgb(0 0 0 / 30%);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(var(--LV3_Blur));
 }
 
 /* White */
@@ -2585,7 +2638,7 @@ a {
 /* Referral Header */
 #referralHeader {
     background-color: rgba(0 0 0 / 50%);
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
 }
 
 /* Success/Fail Icon */
@@ -2621,8 +2674,8 @@ a {
     background: rgba(29, 29, 29, 0.6) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(5px);
-    border-radius: 7px;
+    backdrop-filter: blur(var(--LV6_Blur));
+    border-radius: var(--LV3_RC);
     color: rgb(194 197 255) !important;
     text-shadow: none !important;
     animation: toolTip2_Animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
@@ -2656,8 +2709,8 @@ a {
     background: rgba(29, 29, 29, 0.6) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(5px);
-    border-radius: 7px;
+    backdrop-filter: blur(var(--LV6_Blur));
+    border-radius: var(--LV3_RC);
     color: rgb(194 197 255) !important;
     text-shadow: none !important;
     animation: toolTip_Animat 300ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 300ms 0ms cubic-bezier(0.42,0,0,1) forwards;
@@ -2722,7 +2775,7 @@ div#chatBoxInputH {
 .mapListItem2 {
     background: rgb(0 0 0 / 30%) !important;
     border: 3px solid rgba(0 0 0 / 0%) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
 }
 
 /* Prfoile Info */
@@ -2762,11 +2815,11 @@ div.mapsVotes
 /* Maps Votes */
 .mapsVotes {
     background: rgb(0 0 0 / 0.5);
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
     padding: 5px;
     transform: translateY(-13px);
     transition-duration: .15s;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(var(--LV7_Blur));
 }
 
 /* KR */
@@ -2801,7 +2854,7 @@ div.mapsVotes
 
 /* Profile Gift Button */
 .pGiftButton {
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
     background: rgb(0 0 0 / 20%);
     transition: .15s;
 }
@@ -2820,7 +2873,7 @@ div.mapsVotes
 #giftIn, #giftMsg {
     border: none !important;
     background: rgb(255 255 255 / 95%) !important;
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
 }
 
 /* Creator Skin Item */
@@ -2832,7 +2885,7 @@ div.mapsVotes
 /* Creator Skin Image */
 .creationSkinImg {
     background-color: rgb(0 0 0 / 0.3);
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
 }
 
 /* Creator Skin Name */
@@ -2866,14 +2919,14 @@ div.mapsVotes
     font-size: 18px;
     color: rgb(255 255 255 / 95%);
     text-align: left;
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
 }
 
 /* Submit Offer */
 .tSubOffer {
     color: rgb(255 255 255 / 0.95);
     background-color: rgb(0 0 0 / 0.3);
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
 }
 
 /* ^Hover */
@@ -2904,7 +2957,7 @@ div.mapsVotes
     padding: 15px;
     background-color: rgb(0 0 0 / 50%);
     animation: fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, tItemAnimat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
 }
 
 /* Trade Item Locked */
@@ -2915,7 +2968,7 @@ div.mapsVotes
     left: 0px;
     background: rgb(0 0 0 / 90%) !important;
     backdrop-filter: blur(2.5px);
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
 }
 
 /* Trade Item Name */
@@ -2935,7 +2988,7 @@ div.mapsVotes
 /* Trade Message, Trade Search */
 #tMsg , .tSearch {
     background-color: rgb(0 0 0 / 0.5);
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
     color: rgb(255 255 255 / 95%) !important;
     border: none !important;
 }
@@ -2943,13 +2996,13 @@ div.mapsVotes
 /* YES Button */
 #confirmBtn {
     background-color: rgb(255 255 255 / 30%) !important;
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
 }
 
 /* NO Button */
 #declineBtn {
     background-color: rgb(255 255 255 / 30%) !important;
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
 }
 
 /* Uncommon */
@@ -3008,7 +3061,7 @@ div.mapsVotes
 /* Black Market Done */
 .blackMDone {
     background: rgb(0 0 0 / 50%);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(var(--LV4_Blur));
 }
 
 /* Done Icon */
@@ -3045,7 +3098,7 @@ div.mapsVotes
 /* 2FA Popup Background */
 #twoFAPop {
     background: rgb(0 0 0 / 0.6);
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(var(--LV1_Blur));
     animation: blurswitch .2s;
     transition-duration: .2s;
 }
@@ -3055,8 +3108,8 @@ div.mapsVotes
     background: linear-gradient(180deg, rgba(178, 204, 255, 0.3) 0%, rgba(194, 204, 255, 0.3) 100%), rgba(104, 105, 130, 0.7);
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(10px) !important;
-    border-radius: 10px !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
+    border-radius: var(--LV1_RC) !important;
     animation: popup_width_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_width_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_1 250ms 0ms cubic-bezier(0.42,0,0,1) forwards, popup_height_animat_2 203ms 250ms cubic-bezier(0.42,0,0,1) forwards, fadein 250ms 0ms cubic-bezier(0.42,0,0.021025641025640973,0.9846153846153847) forwards;
     transform: scale3d(1) translate(-50%,-50%);
     transition-duration: .2s !important;
@@ -3082,7 +3135,7 @@ div.mapsVotes
 
 /* ^Submit */
 #twoFAbtn {
-    border-radius: 8px;
+    border-radius: var(--LV2_RC);
     font-size: 20px;
     color: rgb(255 255 255 / 0.95);
     background-color: rgb(0 0 0 / 30%);
@@ -3105,7 +3158,7 @@ div.mapsVotes
     background-size: 108% !important;
     background-position: center;
     text-shadow: none !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
     transition: .15s;
 }
 
@@ -3144,7 +3197,7 @@ div.mapsVotes
 /* Report Select */
 #reportSelect {
     border: none !important;
-    border-radius: 4px;
+    border-radius: var(--LV5_RC);
 }
 
 /* Post/Reply/PostProfile Pfp */
@@ -3161,13 +3214,13 @@ div.mapsVotes
 
 /* Krunk TV (Twitch) */
 #recEmbed {
-    border-radius: 7px;
+    border-radius: var(--LV3_RC);
 }
 
 /* Map Tabs P */
 #mapTabsP {
     background-color: rgb(0 0 0 / 15%);
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
 }
 
 /* Active Tab */
@@ -3175,7 +3228,7 @@ div.mapsVotes
     box-shadow: inset 0 -5px rgb(0 0 0 / 0%) !important;
     color: rgb(255 255 255 / 0.95);
     background: rgb(0 0 0 / 20%);
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
     transition: .15s;
 }
 
@@ -3183,7 +3236,7 @@ div.mapsVotes
 .mapTabP:hover {
     box-shadow: inset 0 -5px rgb(0 0 0 / 0%) !important;
     background: rgb(0 0 0 / 30%);
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
     transition: .15s;
 }
 
@@ -3191,18 +3244,18 @@ div.mapsVotes
 .mapTabP:active {
     box-shadow: inset 0 -5px rgb(0 0 0 / 0%) !important;
     background: rgb(0 0 0 / 50%);
-    border-radius: 10px;
+    border-radius: var(--LV1_RC);
 }
 
 /* Map/Mods Desc */
 #mapDescr, #mapVid, #modDescr, #modVid, #mapLeaders, #activeGames {
     background-color: rgb(0 0 0 / 30%) !important;
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
 }
 
 /* Map Youtube Vid */
 #mapVid > iframe {
-    border-radius: 10px !important;
+    border-radius: var(--LV1_RC) !important;
 }
 
 /* Active Servers (Games) */
@@ -3223,4 +3276,46 @@ div.mapsVotes
 [style="background-color:#2b2b2b"] {
     background-color: rgb(0 0 0 / 20%) !important;
     opacity: 0.7;
+}
+
+.setPopHeader, .filterPopHeader, .popHeader {
+    font-size: 27px;
+    margin-top: -15px!important;
+    margin-left: 3px;
+    border-bottom: none;
+    background-color: #0000;
+    box-shadow: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+input:checked+.filterSlider {
+    background-color: #424557;
+}
+
+/* Input Grey */
+.inputGrey2 {
+    background: rgb(243 243 243);
+    border-radius: var(--LV3_RC);
+}
+
+/* OpenSea */
+.buyBtnOS {
+    color: rgb(255 255 255 / 95%);
+    border-radius: var(--LV1_RC);
+    background-color: rgb(0 0 0 / 35%);
+    filter: grayscale(1);
+}
+
+/* Tab Selected in Item Sales */
+.menuTabNew {
+    color: rgb(255 255 255 / 95%);
+}
+
+/* 2FA Input */
+.twoFAIn {
+    border-radius: var(--LV1_RC);
+    color: rgb(255 255 255 / 95%);
 }
