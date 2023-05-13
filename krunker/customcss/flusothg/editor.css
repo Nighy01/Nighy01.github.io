@@ -1,7 +1,7 @@
 /* Flusothg - Krunker Editor */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2023/04/05 */
+/* 2023/05/13 */
 
 
 /* CF1. Configs ================================================================================== */
@@ -389,6 +389,7 @@ input[type=range]::-moz-range-thumb {
     border-radius: var(--LV5_RC);
     animation: fadeintoolbar .2s;
     background: rgb(0 0 0 / 0.75) !important;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%) !important;
     backdrop-filter: blur(var(--LV3_Blur)) !important;
 }
 
@@ -399,6 +400,7 @@ input[type=range]::-moz-range-thumb {
     border-radius: var(--LV5_RC);
     animation: fadeintoolbarsub .2s;
     background: rgb(0 0 0 / 0.75) !important;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%) !important;
     backdrop-filter: blur(var(--LV3_Blur)) !important;
 }
 
@@ -888,8 +890,8 @@ input:checked+.slider2 {
 
 /* Slider Background */
 .sliderM {
-    background: linear-gradient(180deg, rgb(169 167 184 / 30%) 0%, rgb(172 170 191 / 30%) 100%), rgb(98 99 108 / 0.7);
-    box-shadow: 0px 0px 20px rgba(223, 223, 240, 0.2);
+    background: linear-gradient(180deg, rgb(68 62 92 / 30%) 0%, rgb(87 85 104 / 30%) 100%), rgb(109 111 122 / 70%);
+    box-shadow: 0px 0px 20px rgb(223 223 240 / 0%);
     backdrop-filter: blur(var(--LV4_Blur));
     border-radius: var(--LV5_RC);
     padding-top: 0.7px;
@@ -958,4 +960,72 @@ div.pcr-app, div.pcr-app.visible {
 .twoFAIn {
     border-radius: var(--LV2_RC);
     color: rgb(255 255 255 / 95%);
+}
+
+/* Select a Texture */
+.popHeader {
+    font-size: 25px;
+    color: rgb(255 255 255 / 95%);
+    border-bottom: none;
+    background-color: rgb(0 0 0 / 35%);
+    backdrop-filter: blur(var(--LV3_Blur));
+    box-shadow: none;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Search Item */
+#skinSearch {
+    background-color: rgb(255 255 255 / 80%);
+    border-radius: var(--LV5_RC);
+    backdrop-filter: blur(var(--LV4_Blur));
+}
+
+/* Section */
+.section {
+    font-size: 13px;
+}
+
+/* Asset List */
+#assetList {
+    color: rgb(255 255 255 / 95%) !important;
+}
+
+/* Icon Button */
+.iconButton {
+    background-color: rgb(0 0 0 / 35%);
+    border-radius: var(--LV5_RC);
+}
+
+/* Asset Item */
+.assetItem {
+    border-radius: var(--LV5_RC);
+    border: 3px solid rgb(0 0 0 / 0%);
+    width: 180px;
+}
+
+/* Asset Item Holder */
+.assetItemHolder {
+    height: 145px;
+    width: 181px;
+    border-radius: var(--LV5_RC);
+}
+
+/* Asset Item Thumb */
+.assetItemThumb {
+    border-radius: var(--LV5_RC);
+}
+
+/* Asset Item Name */
+.assetItemName {
+    color: rgb(255 255 255 / 95%);
+    height: 25px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(0 0 0 / 50%) 100%);
+    border-radius: var(--None_RC) var(--None_RC) var(--LV5_RC) var(--LV5_RC);
+}
+
+/* Asset Item Info Text */
+.assetItemText {
+    text-shadow: none !important;
 }

@@ -1,7 +1,7 @@
 /* Flusothg - Krunker Hub */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2023/04/05 */
+/* 2023/05/13 */
 
 
 /* CF1. Configs ================================================================================== */
@@ -739,6 +739,11 @@
     transition-duration: .15s;
 }
 
+/* Post not found */
+#singlePostH > div {
+    color: rgb(255 255 255 / 95%);
+}
+
 /* Search Results */
 #searchInfo > div {
     color: rgb(255 255 255 / 80%);
@@ -756,18 +761,18 @@
     margin-top: -1px;
     border-radius: var(--LV4_RC);
     line-height: 50px;
-    background: #b1b0c0 !important;
+    background: rgb(0 0 0 / 25%) !important;
     transition-duration: .15s;
 }
 
 /* Post Scroll Reply Hover Button */
 .replyBtn:hover {
-    background-color: #706f7b !important;
+    background-color: rgb(0 0 0 / 40%) !important;
 }
 
 /* Post Scroll Reply Active Button */
 .replyBtn:active {
-    background-color: #44444b !important;
+    background-color: rgb(0 0 0 / 60%) !important;
 }
 
 /* Post Scroll Reply */
@@ -815,8 +820,9 @@
 /* Feed Post Content */
 .postContent {
     border-bottom: 1px solid rgb(0 0 0 / 0%) !important;
-    background-color: rgb(255 255 255 / 30%) !important;
+    background-color: rgb(0 0 0 / 20%) !important;
     border: 3px solid rgb(0 0 0 / 0%) !important;
+    border-radius: 10px;
 }
 
 /* Feed Post Content Text */
@@ -858,7 +864,8 @@
 
 /* Share Button */
 .shareBtnHol {
-    background-color: rgb(175 175 175 / 80%);
+    background-color: rgb(162 162 199 / 80%);
+    border-radius: var(--LV4_RC);
 }
 
 /* Feed Post Username Clan */
@@ -901,14 +908,16 @@
 /* Share Hover Button */ 
 .shareBtnHol:hover {
     opacity: 999;
-    background-color: rgb(136 136 136 / 80%);
+    background-color: rgb(110 110 133 / 80%);
+    border-radius: var(--LV4_RC);
     transition: .15s;
 }
 
 /* Share Active Button */ 
 .shareBtnHol:active {
     opacity: 999;
-    background-color: rgb(84 84 84 / 80%);
+    background-color: rgb(61 61 74 / 80%);
+    border-radius: var(--LV4_RC);
 }
 
 /* Back Hover Button on Post */ 
@@ -921,29 +930,32 @@
     color: rgb(170 170 170 / 0.8) !important;
 }
    
-/* Comment Button on Feed Post */ 
+/* Comment Button on Feed Post Hover */ 
 #postHolder > div > div.likesHolder > span:nth-child(3):hover {
     color: rgb(255 255 255 / 0.8) !important;
 }
 
-/* Comment Button on Feed Post */ 
+/* Comment Button on Feed Post Active */ 
 #postHolder > div > div.likesHolder > span:nth-child(3):active {
     color: rgb(175 175 175 / 0.8) !important;
 }
 
 /* Giveaway Posts Follow Button */
 .follBtnGiv {
-    background-color: rgb(175 175 175 / 80%);
+    background-color: rgb(162 162 199 / 80%);
+    border-radius: var(--LV4_RC);
 }
 
 /* Giveaway Posts Follow Hover Button */
 .follBtnGiv:hover {
-    background-color: rgb(136 136 136 / 80%);
+    background-color: rgb(110 110 133 / 80%);
+    border-radius: var(--LV4_RC);
 }
 
 /* Giveaway Posts Follow Active Button */
 .follBtnGiv:active {
-    background-color: rgb(84 84 84 / 80%);
+    background-color: rgb(61 61 74 / 80%);
+    border-radius: var(--LV4_RC);
 }
 
 /* Follow and Like to Enter */
@@ -1188,6 +1200,8 @@ div.button:active {
 .krGivPost {
     text-shadow: none;
     filter: grayscale(1) brightness(1.2) opacity(0.95);
+    border-radius: 10px;
+    background: rgb(0 0 0 / 25%);
 }
 
 /* Giveaway KR Text Post Feed */
@@ -1247,7 +1261,7 @@ div#marketSearchB, div#invSortB {
 
 /* Toggle Button */
 #filterTog, #sortTog {
-    background: #b6bac8 !important;
+    background: rgb(161 163 213) !important;
 }
 
 .sliderSml2:before {
@@ -1296,7 +1310,7 @@ input:checked+.sliderSml2 {
 }
 
 #filterRBtn, #resetFBtn {
-    background: #b6bac8 !important;
+    background: rgb(0 0 0 / 30%) !important;
 }
 
 /* MP1. MarketPlace ================================================================================== */
@@ -3318,4 +3332,10 @@ input:checked+.filterSlider {
 .twoFAIn {
     border-radius: var(--LV1_RC);
     color: rgb(255 255 255 / 95%);
+}
+
+/* AD Box */
+#aContainer {
+    background-color: rgb(0 0 0 / 30%);
+    border-radius: 6px;
 }
