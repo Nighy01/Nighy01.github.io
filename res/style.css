@@ -1,4 +1,4 @@
-/* 2023/02/27 */
+/* 2023/05/14 */
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -9,6 +9,9 @@
     --navbarShadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
     --navbarselection1: rgb(40 40 40 / 0.8);
     --navSelections: rgb(40 40 40 / 0.8);
+    --texts: rgb(40 40 40 / 90%);
+    --texts2: rgb(40 40 40 / 80%);
+    --dlm: 0;
 }
 
 .dark {
@@ -17,6 +20,9 @@
     --navbarShadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
     --navbarselection1: rgb(255 255 255 / 0.8);
     --navSelections: rgb(255 255 255 / 0.8);
+    --texts: rgb(255 255 255 / 90%);
+    --texts2: rgb(255 255 255 / 80%);
+    --dlm: 10;
 }
 
 * {
@@ -46,48 +52,54 @@ body {
 
 /* Moblie */
 @media (max-width: 850px) {
-    .exhibit_box2 {
+
+    .exhibit_box2,
+    .FL_exhibit_box2 {
         background-position-y: -40px !important;
         background-position-x: 100px !important;
         background-size: 90% !important;
     }
 
-    .exhibit_f2_sub {
+    .exhibit_f2_sub,
+    .FL_exhibit_f2_sub {
         margin-left: 510px !important;
     }
 
     .exhibit_f1_sub {
         margin-left: 30px !important;
     }
-    
-    #exhibitDis_1 > div.exhibit_f1_sub > h1 {
+
+    #exhibitDis_1>div.exhibit_f1_sub>h1 {
         left: 570px !important;
         font-size: 35px !important;
     }
 
-    #exhibitDis_1 > div.exhibit_f1_sub > p {
+    #exhibitDis_1>div.exhibit_f1_sub>p {
         top: 90px !important;
         left: 570px !important;
     }
 
-    .navbar_moblie {
-        display: block !important;
+    .TitleMain_1,
+    .CTMainContectSub_1 {
+        margin-left: 450px !important;
     }
 
-    .navbar {
-        display: none;
-    }
 }
 
 /* MW_1 */
 @media (min-width: 850px) and (max-width: 1000px) {
-    .exhibit_box2 {
+
+    .exhibit_box2,
+    .FL_exhibit_box2 {
         background-position-y: -40px !important;
         background-position-x: 100px !important;
         background-size: 90% !important;
     }
 
-    .exhibit_f2_sub {
+    .exhibit_f2_sub,
+    .FL_exhibit_f2_sub,
+    .TitleMain_1,
+    .CTMainContectSub_1 {
         margin-left: 350px !important;
     }
 
@@ -99,50 +111,67 @@ body {
 
 /* MW_2 */
 @media (min-width: 1000px) and (max-width: 1100px) {
-    .exhibit_f2_sub {
+
+    .exhibit_f2_sub,
+    .FL_exhibit_f2_sub,
+    .TitleMain_1,
+    .CTMainContectSub_1 {
         margin-left: 270px !important;
     }
 
     .exhibit_f1_sub {
         margin-left: 30px !important;
     }
-    
+
 }
 
 /* MW_3 */
 @media (min-width: 1100px) and (max-width: 1280px) {
-    .exhibit_f2_sub {
+
+    .exhibit_f2_sub,
+    .FL_exhibit_f2_sub,
+    .TitleMain_1,
+    .CTMainContectSub_1 {
         margin-left: 220px !important;
     }
 
     .exhibit_f1_sub {
         margin-left: 30px !important;
     }
-    
+
 }
 
 /* MW_4 */
 @media (min-width: 1280px) and (max-width: 1310px) {
-    .exhibit_f2_sub {
+
+    .exhibit_f2_sub,
+    .FL_exhibit_f2_sub,
+    .TitleMain_1,
+    .CTMainContectSub_1 {
         margin-left: 100px !important;
     }
 
     .exhibit_f1_sub {
         margin-left: 30px !important;
     }
-    
+
 }
 
 /* MW_5 */
 @media (min-width: 1310px) and (max-width: 1460px) {
-    .exhibit_f2_sub {
+
+    .exhibit_f2_sub,
+    .FL_exhibit_f2_sub,
+    .TitleMain_1,
+    .CTMainContectSub_1 {
         margin-left: 95px !important;
     }
 
-    .exhibit_f2_sub {
+    .exhibit_f2_sub,
+    .FL_exhibit_f2_sub {
         margin-left: 95px !important;
     }
-    
+
 }
 
 .mainCls_1 {
@@ -184,13 +213,11 @@ a {
     transition: .15s;
 }
 
-#navbar_selection_emp, 
+#navbar_selection_emp,
 #navbar_selection,
 #navbar_selection_home,
 #navbar_selection_projects,
-#navbar_selection_contact
-
-{
+#navbar_selection_contact {
     float: left;
 }
 
@@ -202,13 +229,11 @@ a {
     float: right;
 }
 
-#navbar_selection_emp a, 
+#navbar_selection_emp a,
 #navbar_selection a,
 #navbar_selection_home a,
 #navbar_selection_projects a,
-#navbar_selection_contact a
-
-{
+#navbar_selection_contact a {
     display: block;
     color: var(--navSelections);
     text-align: center;
@@ -219,7 +244,8 @@ a {
     transition: .15s;
 }
 
-#navbar_selection_1 a , #navbar_selection_1 button {
+#navbar_selection_1 a,
+#navbar_selection_1 button {
     display: block;
     color: var(--navbarselection1);
     text-align: center;
@@ -234,14 +260,12 @@ a {
     background: transparent !important;
 }
 
-#navbar_selection a:hover:not(.active), 
+#navbar_selection a:hover:not(.active),
 #navbar_selection_home a:hover:not(.active),
 #navbar_selection_projects a:hover:not(.active),
 #navbar_selection_contact a:hover:not(.active),
 
-#navbar_selection_1 button:hover:not(.active)
-
-{
+#navbar_selection_1 button:hover:not(.active) {
     background: rgb(170 170 170 / 0.3);
     border-radius: 10px;
     transition: .15s;
@@ -249,10 +273,19 @@ a {
 
 /* Dark/Light Mode */
 #navbar_selection_1 button {
-    background: transparent;
+    background: rgb(0 0 0 / 0%);
+    position: relative;
     border: none;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
+}
+
+/* Dark/Light Mode Image */
+#navbar_selection_1 > button > img {
+    transform: scale(2);
+    margin-top: 5px;
+    height: 15px;
+    filter: brightness(var(--dlm)) opacity(0.8);
 }
 
 .DLMode:hover {
@@ -260,7 +293,7 @@ a {
 }
 
 /* Moblie */
-.navbar_moblie {
+/* .navbar_moblie {
 
     display: none;
 
@@ -297,17 +330,17 @@ a {
     text-decoration: none;
     border-radius: 10px;
     transition: .15s;
-}
+} */
 
 .empty_1 {
     background: transparent !important;
 }
 
-#MoblieNavbar_selection a:hover:not(.active) {
+/* #MoblieNavbar_selection a:hover:not(.active) {
     background: rgb(170 170 170 / 7%);
     border-radius: 10px;
     transition: .15s;
-}
+} */
 
 .active_navbar {
     background: rgb(105 105 105 / 40%);
@@ -315,7 +348,8 @@ a {
     transition: .15s;
 }
 
-#exhibitDis_2, .exhibitDis_2 {
+#exhibitDis_2,
+.exhibitDis_2 {
     font-family: 'Rubik', sans-serif;
 }
 
@@ -336,7 +370,7 @@ a {
     text-align: left;
 }
 
-#exhibitDis_1 > div.exhibit_f1_sub > h1 {
+#exhibitDis_1>div.exhibit_f1_sub>h1 {
     font-size: 50px;
     position: absolute;
     left: 495px;
@@ -344,21 +378,13 @@ a {
     color: rgb(255 255 255 / 90%);
 }
 
-#exhibitDis_1 > div.exhibit_f1_sub > p {
+#exhibitDis_1>div.exhibit_f1_sub>p {
     font-size: 21px;
     position: absolute;
     left: 600px;
     top: 115px;
     color: rgb(255 255 255 / 70%);
 }
-
-
-
-
-
-
-
-
 
 .exhibit_box2 {
     width: 1600px;
@@ -405,6 +431,11 @@ a {
     position: absolute;
     left: 80px;
     top: 185px;
+    transition: .15s;
+}
+
+#f1_download:hover {
+    filter: brightness(0.7);
 }
 
 #f1_learnMore {
@@ -421,3 +452,229 @@ a {
 #f1_learnMore:hover {
     text-decoration: underline;
 }
+
+#f1_or {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 8px;
+    border-radius: 10px;
+    position: absolute;
+    left: 275px;
+    top: 180px;
+    font-size: 25px;
+    transition: .15s;
+}
+
+#f1_notion {
+    content: url('./img/notionLogo.png');
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 8px;
+    border-radius: 10px;
+    position: absolute;
+    left: 290px;
+    top: 183px;
+    transition: .15s;
+}
+
+#f1_notion:hover {
+    opacity: 0.6;
+}
+
+/* Projects============================================================== */
+
+.titlemain_box1 {
+    width: 1600px;
+    height: 50px;
+    background: transparent;
+    position: relative;
+    border-radius: 10px;
+}
+
+.TitleMain_1 {
+    resize: none;
+    position: absolute;
+    width: 250%;
+    top: 1px;
+    margin-left: 30px;
+    text-align: left;
+}
+
+#exhibitDis_1>div.TitleMain_1>h1 {
+    font-size: 50px;
+    position: absolute;
+    left: 150px;
+    top: 15px;
+    color: var(--texts);
+}
+
+#PJ_exhibit_box2 {
+    width: 1200px;
+    height: 300px;
+    background: linear-gradient(89.95deg, rgb(0 0 0 / 50%) 39.6%, rgb(255 255 255 / 15%) 99.96%), url('./img/FlusothgNotionCam.png');
+    background-size: 100%;
+    background-position-y: -100px;
+    background-position-x: 0px;
+    margin-left: -5px;
+    bottom: -10px;
+    margin-bottom: 50px;
+    position: relative;
+    border-radius: 10px;
+    transition: .15s;
+}
+
+.PJ_exhibit_f2_sub {
+    resize: none;
+    position: absolute;
+    width: 150%;
+    top: 100px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+#PJ_f1_title {
+    font-size: 50px;
+    position: absolute;
+    left: 470px;
+    top: 115px;
+    color: rgb(255 255 255 / 90%);
+}
+
+#PJ_FlusothgIntro {
+    background: transparent;
+    text-decoration: none;
+    color: rgb(0 0 0 / 90%);
+    padding: 100px 200px 200px 1000px;
+    border-radius: 10px;
+    position: absolute;
+    left: -25px;
+    top: 64px;
+    transition: .15s;
+}
+
+#PJ_FlusothgIntro:hover {
+    background: rgb(0 0 0 / 10%);
+}
+
+/* Projects============================================================== */
+
+
+/* Contact============================================================== */
+
+#CTMainContectBox_1 {
+    width: 1200px;
+    height: 300px;
+    background: #0000;
+    background-size: 100%;
+    background-position-y: -100px;
+    background-position-x: 0px;
+    margin-left: -5px;
+    bottom: -10px;
+    margin-bottom: 50px;
+    position: relative;
+    border-radius: 10px;
+    transition: .15s;
+}
+
+.CTMainContectSub_1 {
+    resize: none;
+    position: absolute;
+    width: 150%;
+    top: 100px;
+    margin-left: 0px;
+    text-align: left;
+}
+
+#CTMainContect_Text1 {
+    font-size: 30px;
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    color: var(--texts2);
+}
+
+/* Contact============================================================== */
+
+
+/* Flusothg============================================================== */
+
+#FL_exhibitDis_2 {
+    height: 500px;
+}
+
+.FL_exhibit_box2 {
+    width: 1600px;
+    height: 450px;
+    background: linear-gradient(89.95deg, rgb(0 0 0 / 50%) 39.6%, rgb(255 255 255 / 15%) 99.96%), url('./img/FlusothgNotionCam.png');
+    background-size: 115%;
+    background-position-y: -180px;
+    background-position-x: 0px;
+    position: relative;
+    border-radius: 10px;
+    bottom: -50px;
+}
+
+.FL_exhibit_f2_sub {
+    resize: none;
+    position: absolute;
+    width: 150%;
+    top: 130px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+#FL_f1_title {
+    font-size: 50px;
+    position: absolute;
+    left: 80px;
+    top: 15px;
+    color: rgb(255 255 255 / 90%);
+}
+
+#FL_f1_content {
+    font-size: 21px;
+    position: absolute;
+    left: 80px;
+    top: 115px;
+    color: rgb(255 255 255 / 70%);
+}
+
+#FL_f1_download {
+    background: rgb(255 255 255 / 90%);
+    text-decoration: none;
+    color: rgb(0 0 0 / 90%);
+    padding: 8px;
+    border-radius: 10px;
+    position: absolute;
+    left: 80px;
+    top: 185px;
+    transition: .15s;
+}
+
+#FL_f1_download:hover {
+    filter: brightness(0.7);
+}
+
+#FL_f1_notion {
+    content: url('./img/notionLogo.png');
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 8px;
+    border-radius: 10px;
+    position: absolute;
+    left: 190px;
+    top: 183px;
+    transition: .15s;
+}
+
+#FL_f1_notion:hover {
+    opacity: 0.6;
+}
+
+/* Flusothg============================================================== */
