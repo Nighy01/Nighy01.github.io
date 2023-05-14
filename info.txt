@@ -2,7 +2,6 @@
 krunker
 
 ===Website===
-contact
 projects
 res
 index.html
