@@ -1,25 +1,25 @@
 /* Flusothg - Krunker */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2023/05/13 */
+/* 2023/05/27 */
 
 
 /* (in STG1. Settings) CM1. Mouse Click Icon ================================================================================== */
 
 /* Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=deKaleSMJElomahkyFko4kHjbTT56VVg);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=cslYWbH2pCUPSZm3v43Rvd3yRm7Twckf);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/click.png);
     opacity: 0.9;
 }
 
 /* Middle Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=deKaleSMJElomahkyFko4kHjbTT56VVg);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=cslYWbH2pCUPSZm3v43Rvd3yRm7Twckf);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/middleclick.png);
     opacity: 0.9;
 }
 
 /* Right Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=deKaleSMJElomahkyFko4kHjbTT56VVg);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=cslYWbH2pCUPSZm3v43Rvd3yRm7Twckf);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/rightclick.png);
     opacity: 0.9;
 }
@@ -1983,9 +1983,73 @@ input:checked+.sliderSml:active:after {
     background-color: rgb(22 22 22 / 50%);
 }
 
-/* Settings Button in Server */
+/* Settings Button in Server Finder */
 #hostMenuBtn {
-    background: var(--main-bg-color) !important;
+    background: var(--actionBtn-Color) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(142, 147, 255, 0.25) !important;
+    backdrop-filter: blur(var(--LV5_Blur));
+    border-radius: var(--LV6_RC) !important;
+    transition-duration: .2s;
+}
+
+/* Settings Hover Button in Server Finder */
+#hostMenuBtn:hover {
+    background: var(--actionBtn-HoverColor) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(153, 150, 172, 0.25) !important;
+    transform: scale(0.9);
+}
+
+/* Settings Active Button in Server Finder */
+#hostMenuBtn:active {
+    background: linear-gradient(180deg, rgba(64, 65, 85, 0.3) 0%, rgba(69, 72, 90, 0.3) 100%), rgba(55, 51, 75, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 0px 30px rgba(55, 51, 75, 0.25) !important;
+    transform: scale(0.88);
+}
+
+/* Hide Full */
+#hideFull > span {
+    color: rgb(255 255 255 / 0.95);
+}
+
+/* Hide Full Toggle */
+.slider2 {
+    background: linear-gradient(180deg, rgba(189, 188, 206, 0.3) 0%, rgba(178, 177, 198, 0.3) 100%), rgba(186, 188, 209, 0.8) !important;
+    box-shadow: 0px 0px 25px rgb(135 125 177 / 30%) !important;
+    backdrop-filter: blur(var(--LV5_Blur));
+    transition-duration: .2s;
+}
+
+/* Hide Full Toggle Hover */
+.slider2:hover {
+    background: linear-gradient(180deg, rgba(162, 160, 194, 0.3) 0%, rgba(162, 159, 192, 0.3) 100%), rgba(146, 149, 182, 0.8) !important;
+    box-shadow: 0px 0px 30px rgb(135 125 177 / 65%) !important;
+    transform: scale(1.1);
+    filter: brightness(0.9);
+}
+
+/* Hide Full Toggle Active */
+.slider2:active {
+    background: linear-gradient(180deg, rgba(106, 104, 137, 0.3) 0%, rgba(107, 105, 138, 0.3) 100%), rgba(133, 136, 163, 0.8) !important;
+    box-shadow: 0px 0px 30px rgb(97 103 152 / 80%) !important;
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+/* Hide Full Toggle White Box */
+.slider2:before {
+    background: linear-gradient(180deg, rgba(235, 233, 255, 0.3) 0%, rgba(229, 227, 255, 0.3) 100%), rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(var(--LV5_Blur));
+}
+
+/* Server Search (Search: FFA, SYD, Burg) */
+#serverSearch {
+    color: rgb(255 255 255 / 95%);
+    background-color: rgb(0 0 0 / 40%);
+    border-radius: var(--LV5_RC);
 }
 
 /* Quick Join Active Button */
@@ -2010,7 +2074,7 @@ input:checked+.sliderSml:active:after {
 input:checked+.slider2 {
     background: linear-gradient(180deg, rgba(36, 35, 57, 0.3) 0%, rgba(40, 41, 62, 0.3) 100%), rgba(31, 29, 42, 0.8) !important;
     box-shadow: 0px 0px 25px rgba(109, 108, 124, 0.3) !important;
-    backdrop-filter: blur(var(--LV2_Blur));
+    backdrop-filter: blur(var(--LV5_Blur));
 }
 
 /* Settings Header */
@@ -3421,7 +3485,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 
 /* Bundl Pop Curncs */
 .bundlPopCurncs {
-    background-color: rgb(0 0 0 / 30%);
+    background-color: rgb(0 0 0 / 40%);
     backdrop-filter: blur(var(--LV4_Blur));
     border-bottom-left-radius: 0px;
     border-top-right-radius: 0px;
@@ -4340,6 +4404,25 @@ div.death-row-bottom {
     outline: 2px solid rgb(0 0 0 / 0%);
     filter: none;
     border-radius: var(--LV4_RC);
+}
+
+/* XX KS */
+.weapStreakHolder {
+    background-color: rgb(0 0 0 / 40%);
+    padding: 4px 8px;
+    border-radius: var(--LV7_RC);
+    color: rgb(255 255 255 / 95%);
+    animation: fadein .15s;
+}
+
+/* "XX" KS */
+.weapStreak {
+    color: rgb(255 255 255 / 95%);
+}
+
+/* XX "KS" */
+#weapItem_0 > div > span:nth-child(2) {
+    color: rgb(203 198 255 / 90%) !important;
 }
 
 /* IG1. In Game ================================================================================== */
