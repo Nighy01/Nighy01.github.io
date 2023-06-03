@@ -1,25 +1,25 @@
 /* Flusothg - Krunker */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2023/05/27 */
+/* 2023/06/03 */
 
 
 /* (in STG1. Settings) CM1. Mouse Click Icon ================================================================================== */
 
 /* Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=cslYWbH2pCUPSZm3v43Rvd3yRm7Twckf);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=1Nwlee3tksrGsvnuneJVqFVOhWdcAQHE);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/click.png);
     opacity: 0.9;
 }
 
 /* Middle Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=cslYWbH2pCUPSZm3v43Rvd3yRm7Twckf);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=1Nwlee3tksrGsvnuneJVqFVOhWdcAQHE);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/middleclick.png);
     opacity: 0.9;
 }
 
 /* Right Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=cslYWbH2pCUPSZm3v43Rvd3yRm7Twckf);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=1Nwlee3tksrGsvnuneJVqFVOhWdcAQHE);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/rightclick.png);
     opacity: 0.9;
 }
@@ -1229,7 +1229,7 @@ div#streamContainer, div.youNewDiv {
     transition-duration: .2s !important;
     animation: youNew_Animat 1s !important;
     opacity: 0;
-    max-width: 300px;
+    max-width: 1000px;
 }
 
 /* New to Krunker? Div Hover */
@@ -8369,3 +8369,4 @@ div.bundlPopBuyS {
     background-color: rgb(123 62 212);
     transform: scale(.95);
 }
+
