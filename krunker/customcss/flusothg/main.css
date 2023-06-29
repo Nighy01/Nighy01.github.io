@@ -1,25 +1,25 @@
 /* Flusothg - Krunker */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2023/06/03 */
+/* 2023/06/29 */
 
 
 /* (in STG1. Settings) CM1. Mouse Click Icon ================================================================================== */
 
 /* Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=1Nwlee3tksrGsvnuneJVqFVOhWdcAQHE);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=9o6wWLLX0eKRvjPi0MMtxoZo5VXZBsaF);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/click.png);
     opacity: 0.9;
 }
 
 /* Middle Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=1Nwlee3tksrGsvnuneJVqFVOhWdcAQHE);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=9o6wWLLX0eKRvjPi0MMtxoZo5VXZBsaF);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/middleclick.png);
     opacity: 0.9;
 }
 
 /* Right Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=1Nwlee3tksrGsvnuneJVqFVOhWdcAQHE);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=9o6wWLLX0eKRvjPi0MMtxoZo5VXZBsaF);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/rightclick.png);
     opacity: 0.9;
 }
@@ -376,7 +376,7 @@
         background: linear-gradient(180deg, rgba(165, 167, 216, 0.1) 0%, rgba(171, 179, 223, 0.1) 100%), rgba(149, 156, 171, 0.3);
     }
     100% {
-        transform: translateY(-1%);
+        transform: translateY(-2%);
         z-index: 0;
         background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(149, 156, 171, 0.8);
     }
@@ -479,14 +479,14 @@
     }
 }
 
-/* Profile Icon Holder Animation */
-@keyframes pfp_pic_animat {
+/* Weap Item Animation */
+@keyframes weapitem_animat {
     from {
-        transform: translateX(180px);
+        left: 50px;
     }
 
     to {
-        transform: translateX(0px);
+        left: 0px;
     }
 }
 
@@ -524,9 +524,9 @@
 }
 
 /* Health Bar Animation */
-@keyframes health_bar_animat {
+@keyframes ingamePlayerInfo_animat {
     from {
-        transform: translateY(25px);
+        transform: translateY(100px);
     }
 
     to {
@@ -1426,6 +1426,14 @@ div.youNewDiv:hover {
     transition-duration: .15s;
 }
 
+/* KPD Button Icon */
+#policeButton > img {
+    content: url("https://nighy01.github.io/krunker/customcss/flusothg/icons/kpd_police.png");
+    width: 42px;
+    height: 40px;
+     -webkit-user-drag: none; /* that official one can be dragged xD */
+}
+
 /* KPD Hover Button */
 #policeButton:hover {
     color: #fff;
@@ -1567,7 +1575,7 @@ div.youNewDiv:hover {
     border-radius: var(--LV6_RC);
     transition-duration: .3s !important;
     min-height: 45px;
-    transform: translateY(-1%);
+    transform: translateY(-2%);
     animation: chatlistanimation .3s !important;
 }
 
@@ -1578,13 +1586,16 @@ div.youNewDiv:hover {
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV4_Blur));
     border-radius: var(--LV6_RC);
+    width: 380px;
+    display: inline-grid;
+    grid-template-columns: auto 280px auto;
     transition-duration: 0.2s !important;
 }
 
 /* Chat Input */
 #chatInput {
     border-radius: var(--LV6_RC) !important;
-    width: 274px !important;
+    width: 268px !important;
 }
 
 /* Voice KeyBind */
@@ -2344,18 +2355,22 @@ input:checked+.slider2 {
     transition: .2s;
 }
 
+#chatSwitch {
+    transform: translate(6px, 0px);
+}
+
 /* Chat Switch Hover */
 #chatSwitch:hover {
     transition-duration: .2s;
     color: #d8d8d8;
-    transform: scale(1.35);
+    transform: scale(1.35) translate(5px, 0px);
 }
 
 /* Chat Switch Active */
 #chatSwitch:active {
     transition-duration: .2s;
     color: #343434;
-    transform: scale(0.85);
+    transform: scale(0.85) translate(5px, 0px);
 }
 
 /* Business... etc of TermsInfo Button */
@@ -2405,6 +2420,10 @@ input:checked+.slider2 {
     padding-top: 10px;
     border: none;
     transition-duration: 0.2s !important;
+}
+
+#voiceIcon {
+    transform: translate(-3px, 3px);
 }
 
 /* Voice On */
@@ -3751,6 +3770,70 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 
 /* IG1. In Game ================================================================================== */
 
+/* Game Match Info */
+#matchInfo {
+    text-align: left;
+    text-shadow: none;
+    font-size: 15px !important;
+    animation: gameinfo_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+}
+
+/* Timer Display */
+#timerHolder {
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(var(--LV2_Blur)) !important;
+    border-radius: var(--LV7_RC) !important;
+    padding: 12px;
+    animation: timing_aniamt 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+}
+
+/* ^Inner */
+#timerInner.topLeftOld {
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: #0000;
+}
+
+/* Timer Icon */
+#timerIcon {
+    display: none !important;
+}
+
+/* 00:00 Timer */
+#timerVal {
+    color: rgb(255 255 255 / 95%);
+    text-align: left;
+    text-shadow: none;
+    font-size: 30px !important;
+}
+
+/* FPS/Ping Info */
+.debugInfo {
+    text-align: left;
+    margin-left: 5px;
+}
+
+/* Ping Text */
+#pingText{
+    text-align: left;
+    color: rgba(255,255,255, 0.9) !important;
+}
+
+/* Ping/FPS Display and Ping Icon */
+#pingDisplay, #pingIcon, #fpsDisplay,
+.packetInfo {
+    color: rgba(255,255,255, 0.8) !important;
+    animation: ping_fps_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+}
+
+/* In Game FPS Text */
+#ingameFPS {
+    text-align: left;
+    color: rgb(255,255,255, 0.9) !important;
+}
+
 /* Ranked Icon */
 /* Old LeaderBoard */ #leaderContainer > div > img,
 /* New LeaderBoard */ #ingameTable > tbody > tr > td > div > img {
@@ -3773,8 +3856,8 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     color: rgb(255 255 255 / 0.85) !important;
 }
 
-/* Kill Feed Item */
-.kfItem, div.kfItem {
+/* Kill Feed */
+.killfeedItem {
     padding: 8px 13px 8px 13px !important;
     background: rgba(29, 29, 29, 0.4) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
@@ -3783,6 +3866,13 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border-radius: var(--LV7_RC) !important;
     animation: rightanimation .4s;
     transition-duration: .4s;
+}
+
+/* ^Msg */
+.killfeedMsg {
+    background-color: #0000;
+    margin: 0px;
+    padding: 0px;
 }
 
 /* Death, KDR, Star Icons */
@@ -3829,8 +3919,8 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 }
 
 /* Health Bar Seg */
-.healthBarSeg, div.healthBarSeg {
-    width: 450px !important;
+.nHealthBarSeg {
+    width: 43.5px !important;
     height: 30px;
     margin: 0 -1px;
     margin-right: -10px !important;
@@ -3839,36 +3929,51 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 }
 
 /* Health Blocks Seg */
-.hpBSeg {
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    box-shadow: none !important;
+.nHpBSeg {
+    background-color: rgb(205 200 255) !important;
 }
 
-/* Health Bar */
-#healthBar, div#healthBar {
-    background: rgba(31, 31, 31, 0.7) !important;
-    border: 1px solid rgba(225, 225, 225, 0.1) !important;
+/* New LeaderBoard */
+#centerLeaderDisplay {
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7);
+    border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(var(--LV2_Blur));
+    backdrop-filter: blur(var(--LV3_Blur));
     border-radius: var(--LV4_RC);
-    width: 450px;
-    height: 30px !important;
-    left: calc(50% - 236px);
-    bottom: 150px;
-    padding: 10px;
-    padding-top: 8px;
-    padding-bottom: 7px;
-    padding-left: 7px;
-    padding-right: 17px;
-    display: inline-flex;
-    position: fixed;
+    animation: fadein .2s;
     transition-duration: .2s;
-    animation: health_bar_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+}
+
+/* ^Name,Score... */
+th, tr {
+     border-bottom: none !important;
+}
+
+/* New LeaderBoard Container */
+.centerLeaderContainer {
+    background-color: rgb(0 0 0 / 0%);
+}
+
+/* New LeaderBoard ContainerInner */
+.centerLeaderContainerInner {
+    background-color: #0000;
+}
+
+/* New LeaderBoard Team Tab */
+.newLeaderTeam, div.newLeaderTeam {
+    border-radius: var(--LV8_RC) !important;
+    background-color: rgba(0,0,0,.35) !important;
+    width: 99.5% !important;
+    margin-left: -8.5px;
+}
+
+/* New LeaderBoard Enemy Text Color */
+.newLeaderName {
+    color: var(--enemyText);
 }
 
 /* LeaderBoard */
-#leaderDisplay, div#leaderDisplay {
+#leaderboardHolder {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
@@ -3881,6 +3986,11 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 .leaderItem {
     font-size: 16px !important;
     padding-bottom: 2px;
+}
+
+/* LeaderBoard Container */
+#leaderContainer {
+    background-color: transparent;
 }
 
 /* Kill Count Holder */
@@ -3909,8 +4019,8 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 }
 
 /* Unselected Weapon */
-[style="opacity: 0.7;"], [style="opacity: 0.7; margin-right: 25px;"] {
-    filter: brightness(0.75) blur(1.5px);
+[style="opacity: 0.5;"], [style="opacity: 0.5; margin-right: 25px;"] {
+    filter: brightness(0.8) opacity(0.5) blur(1.5px);
 }
 
 /* Weap Key */
@@ -3921,20 +4031,6 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 /* Health [+] Icon */
 #challIcon {
     display: none;
-}
-
-/* Health Value Holder */
-#healthValueHolder, div#healthValueHolder {
-    background-color: #0000 !important;
-    left: calc(50% - 220px);
-    bottom: 159px;
-    border: none !important;
-    padding: 0;
-    position: fixed;
-    margin: 0;
-    z-index: 5;
-    box-shadow: none !important;
-    animation: health_bar_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
 /* Health Value */
@@ -3954,51 +4050,35 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border-radius: var(--LV8_RC);
 }
 
-/* Timer Icon */
-#timerIcon {
-    display: none;
-}
-
-/* Timer Display */
-#timerDisplay {
-    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(var(--LV2_Blur)) !important;
-    border-radius: var(--LV7_RC) !important;
-    animation: timing_aniamt 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
-}
-
-/* Ping Text */
-#pingText{
-    color: rgba(255,255,255, 0.9) !important;
-}
-
-/* Ping/FPS Display and Ping Icon */
-#pingDisplay, #pingIcon, #fpsDisplay {
-    color: rgba(255,255,255, 0.8) !important;
-    animation: ping_fps_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
-}
-
-/* In Game FPS Text */
-#ingameFPS {
-    color: rgb(255,255,255, 0.9) !important;
-}
-
-/* Game Info */
-#curGameInfo {
-    animation: gameinfo_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
-}
-
 /* Profile Icon Holder */
 #bottomLeftHolder {
     position: fixed;
-    left: calc(100% - 120px);
-    bottom: 0px;
+    left: calc(50% - 211px);
+    bottom: 96px;
 }
 
-/* Ammo Display */
-#ammoDisplay, div#ammoDisplay {
+/* InGame Player Profile Image */
+#bottomLeftPlayerLeft {
+    height: 99px;
+}
+
+/* InGame Player Info */
+#bottomLeftPlayer {
+    border-radius: 10px;
+    border: 1px solid rgba(225, 225, 225, 0.40);
+    background: linear-gradient(180deg, rgba(165, 167, 216, 0.30) 0%, rgba(171, 179, 223, 0.30) 100%), rgba(152, 149, 171, 0.70);
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    animation: ingamePlayerInfo_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+}
+
+/* HP Icon */
+.challIconHP {
+    filter: grayscale(1) brightness(999) opacity(0.95);
+}
+
+/* Ammo Holder */
+#ammoHolder {
     background-color: transparent !important;
     box-shadow: none !important;
     border: none !important;
@@ -4011,6 +4091,7 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     width: 150px;
     transform: unset;
     margin: 0;
+    animation: ammo_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
 /* Ammo Icon */
@@ -4081,17 +4162,22 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 }
 
 /* Kills, Deaths, Scores..etc Count Icon */
-.countIcon, div.countIcon {
+.statIcon {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV5_Blur)) !important;
     border-radius: var(--LV7_RC) !important;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 6px;
-    padding-bottom: 6px;
     font-size: 18px;
+    padding-top: 0px;
+    padding-left: 3px;
+    padding-bottom: 0px;
+    padding-right: 3px;
+}
+
+/* Star Score Count */
+#scoreCount > div > i {
+    color: rgb(255 255 255 / 95%) !important;
 }
 
 /* In Game XP Bar */
@@ -4110,24 +4196,12 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 
 /* Ammo Value */
 #ammoVal {
-    color: rgba(150, 141, 255, 0.9);
-    font-size: 30px;
-    display: inline-block;
-    position: fixed;
-    left: calc(50% + -80px);
-    bottom: 75px;
-    animation: ammo_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    color: rgb(209 205 255 / 90%);
 }
 
 /* Ammo Max */
 #ammoMax {
-    color: rgba(186, 180, 255, 0.8);
-    font-size: 30px;
-    display: inline-block;
-    position: fixed;
-    left: calc(50% + 1px);
-    bottom: 75px;
-    animation: ammo_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    color: rgb(180 174 255 / 80%);
 }
 
 /* Reload Message Animation */
@@ -4188,15 +4262,6 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     transition-duration: .2s;
 }
 
-/* Profile Icon */
-#hudClassIcon, div#hudClassIcon {
-    background: rgba(29, 29, 29, 0.55) !important;
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 30px rgb(0 0 0 / 25%) !important;
-    backdrop-filter: blur(var(--LV4_Blur)) !important;
-    animation: pfp_pic_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
-}
-
 /* "[Key]" to Report */
 #killCardKick > span {
     color: rgb(213 209 255 / 95%) !important;
@@ -4244,39 +4309,6 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     border-bottom: none !important;
 }
 
-/* New LeaderBoard */
-#newLeaderDisplay {
-    background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7);
-    border: 1px solid rgba(225, 225, 225, 0.4) !important;
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25) !important;
-    backdrop-filter: blur(var(--LV3_Blur));
-    border-radius: var(--LV4_RC);
-    animation: fadein .2s;
-    transition-duration: .2s;
-}
-
-/* ^Name,Score... */
-th, tr {
-     border-bottom: none !important;
-}
-
-/* New LeaderBoard Container */
-.newLeaderContainer, div.newLeaderContainer {
-    background: transparent !important;
-    box-shadow: none !important;
-}
-
-/* New LeaderBoard Team Tab */
-.newLeaderTeam {
-    border-radius: var(--None_RC) !important;
-    background-color: rgba(0,0,0,.5) !important;
-}
-
-/* New LeaderBoard Enemy Text Color */
-.newLeaderName {
-    color: var(--enemyText);
-}
-
 /* Kr Tag Holder */
 #krTagHolder {
     margin-right: 72px;
@@ -4297,6 +4329,11 @@ th, tr {
     animation: fadein .2s;
 }
 
+/* ^Inner */
+.killStreakItemInner {
+    background-color: transparent !important;
+}
+
 /* Perk Item */
 .perkItem {
     background-color: rgba(29, 29, 29, 0.6) !important;
@@ -4305,6 +4342,11 @@ th, tr {
     backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: var(--LV4_RC);
     animation: fadein .2s;
+}
+
+/* ^Inner */
+.perkItemInner {
+    background-color: transparent !important;
 }
 
 /* --------------------------------Comp In Game */
@@ -4410,9 +4452,16 @@ div.death-row-bottom {
 .weapStreakHolder {
     background-color: rgb(0 0 0 / 40%);
     padding: 4px 8px;
+    right: 150px;
+    top: 20px;
     border-radius: var(--LV7_RC);
     color: rgb(255 255 255 / 95%);
     animation: fadein .15s;
+}
+
+/* XX KS Inner */
+.weapStreakInner {
+    background-color: rgb(0 0 0 / 0%);
 }
 
 /* "XX" KS */
@@ -4421,8 +4470,50 @@ div.death-row-bottom {
 }
 
 /* XX "KS" */
-#weapItem_0 > div > span:nth-child(2) {
+#weapItem_0 > div > div > div > span:nth-child(2),
+#weapItem_1 > div > div.weapStreakHolder > div > span:nth-child(2),
+#weapItem_2 > div > div.weapStreakHolder > div > span:nth-child(2),
+#weapItem_3 > div > div.weapStreakHolder > div > span:nth-child(2),
+#weapItem_4 > div > div.weapStreakHolder > div > span:nth-child(2)
+{
     color: rgb(203 198 255 / 90%) !important;
+}
+
+/* Weap Item */
+.weapItem {
+    color: rgb(255 255 255 / 95%);
+    border-radius: 7px;
+    border: 1px solid rgba(225, 225, 225, 0.40);
+    background: rgba(29, 29, 29, 0.60);
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    animation: weapitem_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+}
+
+/* ^Inner */
+.weapItemInner {
+    background-color: #0000 !important;
+}
+
+/* Weap Name */
+.weapSkin {
+    background-color: #0000;
+    font-size: 10px;
+    color: rgb(255 255 255 / 95%);
+}
+
+/* Weap Holder */
+#weapHolder {
+    bottom: 25px;
+    row-gap: 24px;
+}
+
+/* Mini Map Overlay */
+#miniMapOverlay {
+    display: none !important;
+    border-radius: 20px;
+    opacity: 0.9;
+    animation: spectating_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
 /* IG1. In Game ================================================================================== */
@@ -4512,11 +4603,11 @@ div.death-row-bottom {
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(var(--LV4_Blur));
     border-radius: var(--LV4_RC);
-    animation: spectating_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    animation: spectating_animat 450ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 450ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
 /* Spectate Contr */
-#specContr {
+#specControlHolder {
     background: rgba(29, 29, 29, 0.6);
     border: 1px solid rgba(225, 225, 225, 0.4);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
@@ -4526,7 +4617,7 @@ div.death-row-bottom {
 }
 
 /* [LM]... Spec Contr KeyBinds */
-[style="color:#fbc02d;float:right"] {
+.specControlKey {
     color: rgba(213, 209, 255, 0.9) !important;
 }
 
@@ -4544,6 +4635,11 @@ div.death-row-bottom {
     border-radius: var(--LV4_RC);
     animation: fadein 100ms 0ms linear forwards;
     transition-duration: .2s;
+}
+
+/* Spec Inner */
+#specStatsInner {
+    background-color: #0000;
 }
 
 /* Spectate Profile Icon */
@@ -4580,8 +4676,8 @@ div.death-row-bottom {
 /* Spec Stat HP Value */
 #spectHPV {
     text-shadow: none;
-    left: 108px;
-    top: 55px;
+    left: 110px;
+    top: 59px;
 }
 
 /* Spec Stat HP Bar */
@@ -8370,3 +8466,8 @@ div.bundlPopBuyS {
     transform: scale(.95);
 }
 
+.greyInner, .greyInlineInner {
+    margin: 3px;
+    background-color: #0000 !important;
+    padding: 5px;
+}
