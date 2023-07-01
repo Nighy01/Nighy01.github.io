@@ -1,7 +1,7 @@
 /* Flusothg - Krunker Editor */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2023/05/13 */
+/* 2023/07/01 */
 
 
 /* CF1. Configs ================================================================================== */
@@ -201,6 +201,36 @@
     }
 }
 
+/* Left Panel Animation */
+@keyframes leftpanel_animat {
+    from {
+        transform: translateX(-300px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+/* Right Panel Animation */
+@keyframes rightpanel_animat {
+    from {
+        transform: translateX(300px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+/* Top Bar Animation */
+@keyframes hotbar_animat {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
 /* KF1. KeyFrames ================================================================================== */
 
 
@@ -259,6 +289,7 @@ div.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: -4px 0px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV3_Blur)) !important;
+    animation: fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, leftpanel_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
 /* Right Panel */
@@ -267,14 +298,17 @@ div.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 4px 0px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV3_Blur)) !important;
+    animation: fadein 350ms 0ms cubic-bezier(0.42,0,0,1) forwards, rightpanel_animat 350ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
-/* Hot Top Bar */
+/* Top Bar */
 #hotbar {
     background: linear-gradient(180deg, rgba(165, 167, 216, 0.3) 0%, rgba(171, 179, 223, 0.3) 100%), rgba(152, 149, 171, 0.7) !important;
     border: 1px solid rgba(225, 225, 225, 0.4) !important;
     box-shadow: 0px -5px 30px rgba(0, 0, 0, 0.25) !important;
     backdrop-filter: blur(var(--LV3_Blur)) !important;
+    animation: fadein 500ms 0ms cubic-bezier(0.42,0,0,1) forwards, hotbar_animat 500ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+    transition-duration: 500ms;
 }
 
 /* Header */
@@ -295,13 +329,14 @@ div.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .
 
 /* Play,Host,Expore Bar */
 #playbar>div {
-    border-color: #5550 !important;
+    border-color: #0000 !important;
 }
 
 /* Tool Bar */
 .toolbarItem:hover, .toolbarDropDownItem:hover, .toolbarDropDownItem:hover, .eButton:hover, .publishAsset:hover {
     border-radius: var(--LV6_RC);
-    background-color: rgb(130 130 130 / 0.4);
+    background-color: rgb(112 112 112 / 50%);
+    transition: .2s;
 }
 
 /* [<] [>] Button */
@@ -902,7 +937,7 @@ input:checked+.slider2 {
 /* Slider Box */
 .sliderM::-webkit-slider-thumb {
     background-color: #0000 !important;
-    background: linear-gradient(180deg, rgb(176 173 195 / 30%) 0%, rgb(228 226 255 / 30%) 100%), rgb(255 255 255 / 90%) !important;
+    background: linear-gradient(180deg, rgb(230 227 255 / 30%) 0%, rgb(228 226 255 / 30%) 100%), rgb(255 255 255 / 90%) !important;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(var(--LV4_Blur));
     border-radius: var(--LV6_RC);
@@ -982,11 +1017,6 @@ div.pcr-app, div.pcr-app.visible {
     backdrop-filter: blur(var(--LV4_Blur));
 }
 
-/* Section */
-.section {
-    font-size: 13px;
-}
-
 /* Asset List */
 #assetList {
     color: rgb(255 255 255 / 95%) !important;
@@ -1027,5 +1057,43 @@ div.pcr-app, div.pcr-app.visible {
 
 /* Asset Item Info Text */
 .assetItemText {
+    font-size: 12px;
     text-shadow: none !important;
+}
+
+/* Name Input */
+.mapInput {
+    background: rgb(255 255 255 / 80%);
+}
+
+/* Loading... , Missing Required Assets */
+#gameUpResp {
+    color: rgb(255 255 255 / 80%) !important;
+}
+
+/* Menu Window All Comp */
+#menuWindow * {
+    font-family: gamefont;
+}
+
+/* Window header */
+.windowHeader {
+    margin-bottom: 17px;
+    font-size: 24px;
+}
+
+/* ---White Mode Fix--- */
+
+/* Play, Host...etc Icon */
+#playbar > div:nth-child(1) > i,
+#playbar > div:nth-child(2) > i,
+#playbar > div:nth-child(3) > i
+{
+    color: white !important;
+}
+
+/* ---White Mode Fix--- */
+
+.mapListName, div.mapListName, div.assetItemName {
+    font-size: 15px !important;
 }

@@ -1,7 +1,7 @@
 /* Flusothg - Krunker Hub */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2023/05/13 */
+/* 2023/07/01 */
 
 
 /* CF1. Configs ================================================================================== */
@@ -1147,7 +1147,7 @@ div.button:active {
     border-radius: var(--LV3_RC);
     background-color: rgb(156 157 191 / 70%) !important;
     backdrop-filter: var(--CardBlur);
-} 
+}
 
 /* Feed Tab */
 .feedTab {
@@ -1164,20 +1164,20 @@ div.button:active {
 /* Settings Hover Icon Button */
 #navTitle > div.material-icons.terms:hover {
     text-decoration: none;
-    transform: translate(60px,0px) !important;
+    transform: translate(65px,0px) !important;
     font-size: 50px !important;
     margin-top: 6px !important;
-    color: var(--Btn1_HoverColor) !important;
+    color: rgb(188 180 243 / 95%) !important;
     transition-duration: .2s;
 }
 
 /* Settings Active Icon Button */
 #navTitle > div.material-icons.terms:active {
     text-decoration: none;
-    transform: translate(60px,0px) !important;
+    transform: translate(63px,0px) !important;
     font-size: 45px !important;
     margin-top: 9px !important;
-    color: var(--Btn1_ActiveColor) !important;
+    color: rgb(62 58 84 / 95%) !important;
     transition-duration: .2s;
 }
 
@@ -1228,6 +1228,11 @@ div.button:active {
 /* [X] Icon */
 [style="font-size:80px;color:#e33b3b"] {
     color: rgb(255 255 255 / 0.9) !important;
+}
+
+/* Reply Input */
+.replyInput {
+    background-color: rgb(255 255 255 / 80%) !important;
 }
 
 /* MI1. Main(Feed) ================================================================================== */
@@ -1383,6 +1388,25 @@ input:checked+.sliderSml2 {
     top: 88px;
 }
 
+/* Games Holder Animation */
+@keyframes gamesholder_animat {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Games/Mods Holder */
+#mapList, #mapsHolder > div.bigMFeatVid, #mapsHolder > div.bigMFeatHold, #mapsHolder > div.setBodH,
+#modList, #modsHolder > div.mapListCat, #modsHolder > div.bigMFeatVid, #modsHolder > div.bigMFeatHold
+{
+    animation: gamesholder_animat 350ms;
+}
+
 /* Feat Games (+ Video Preview) */
 .bigMFeatHold, 
 #mapsHolder > div.bigMFeatVid > iframe, .bigMFeatVid {
@@ -1414,13 +1438,29 @@ div#bigMFeatPBtn:active {
     background: var(--Btn1_ActiveColor) !important;
 }
 
+/* Game/Mod Search */
+#mpSrch, #mdSrch {
+    border-radius: 12px;
+}
+
+/* Loading... in Game/Mod Search */
+#searchResultsMA, #searchResultsMO {
+    color: rgb(255 255 255 / 95%) !important;
+    animation: gamesholder_animat 350ms;
+}
+
+/* Game Cat */
+#mpCat {
+    border-radius: 12px;
+}
+
 /* Search Button */
 .searchListBtn {
     background: rgb(255 255 255 / 0.3) !important;
-    border-radius: var(--LV3_RC);
+    border-radius: 10px;
 }
 
-/* Mao List Cat */
+/* Map List Cat */
 .mapListCat {
     color: rgb(255 255 255 / 0.9);
     background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0));
@@ -2447,6 +2487,18 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
     background: rgb(152 154 187);
 }
 
+/* Find Hover Button */
+.buyBtn:hover {
+    background: rgb(104 105 128);
+    opacity: 999;
+}
+
+/* Find Active Button */
+.buyBtn:active {
+    background: rgb(62 63 76);
+    opacity: 999;
+}
+
 /* Green(Up) */
 [style="background-color: rgb(126, 214, 51);"], [style="background-color:#41c300"] {
     background-color: rgb(186 255 216 / 50%) !important;
@@ -3238,7 +3290,7 @@ div.mapsVotes
 }
 
 /* Active Tab */
-.activeTab {
+.activeTab, .tabANew {
     box-shadow: inset 0 -5px rgb(0 0 0 / 0%) !important;
     color: rgb(255 255 255 / 0.95);
     background: rgb(0 0 0 / 20%);
@@ -3247,7 +3299,7 @@ div.mapsVotes
 }
 
 /* Map Tab P Hover */
-.mapTabP:hover {
+.mapTabP:hover, .menuTabNew:hover {
     box-shadow: inset 0 -5px rgb(0 0 0 / 0%) !important;
     background: rgb(0 0 0 / 30%);
     border-radius: var(--LV1_RC);
@@ -3255,7 +3307,7 @@ div.mapsVotes
 }
 
 /* Map Tab P Active */
-.mapTabP:active {
+.mapTabP:active, .menuTabNew:active {
     box-shadow: inset 0 -5px rgb(0 0 0 / 0%) !important;
     background: rgb(0 0 0 / 50%);
     border-radius: var(--LV1_RC);
@@ -3338,4 +3390,9 @@ input:checked+.filterSlider {
 #aContainer {
     background-color: rgb(0 0 0 / 30%);
     border-radius: 6px;
+}
+
+/* Login Button Box */
+[style="width:100%;text-align:center;margin-top:10px;background-color:rgba(0,0,0,0.3);padding-top:10px;padding-bottom:20px;"] {
+    border-radius: 7px;
 }
