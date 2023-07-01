@@ -1,7 +1,7 @@
 /* Flusothg - Krunker Hub */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2023/07/01 */
+/* 2023/07/02 */
 
 
 /* CF1. Configs ================================================================================== */
@@ -319,6 +319,10 @@
 /* Texts */
 * {
     -webkit-text-stroke: 0.1px !important;
+}
+
+/* UI Base */
+#uiBase {
     transition-duration: .2s;
 }
 

@@ -1,7 +1,7 @@
 /* Flusothg - Krunker Editor */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2023/07/01 */
+/* 2023/07/02 */
 
 
 /* CF1. Configs ================================================================================== */
@@ -1096,4 +1096,14 @@ div.pcr-app, div.pcr-app.visible {
 
 .mapListName, div.mapListName, div.assetItemName {
     font-size: 15px !important;
+}
+
+#welcomeTitle, .learnMorLnk, #welcomeSubTitle {
+    font-size: 25px;
+}
+
+#editInfoBody div, div.editInHedr, .editInAvl,
+.editInfoItem .edInfHeader, .editInfoItem .edInfBody
+{
+    font-size: 17px !important;
 }

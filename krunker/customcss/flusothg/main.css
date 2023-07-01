@@ -1,7 +1,7 @@
 /* Flusothg - Krunker */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2023/07/01 */
+/* 2023/07/02 */
 
 
 /* (in STG1. Settings) CM1. Mouse Click Icon ================================================================================== */
@@ -9249,3 +9249,8 @@ div.bundlPopBuyS {
     border-radius: var(--None_RC) var(--LV4_RC) var(--LV4_RC) var(--None_RC);
 }
 /* ---Twitch Video Iframe--- */
+
+/* Unknown1 Badge */
+#endTable > tbody > tr > td:nth-child(2) > img:nth-child(5) {
+    filter: grayscale(1);
+}
