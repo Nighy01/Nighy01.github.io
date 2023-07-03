@@ -2554,6 +2554,11 @@ input:checked+.slider2 {
     background-color: var(--transparentColor) !important;
 }
 
+/* Chat Message Item */
+.chatItem {
+    max-width: 350px;
+}
+
 /* Chat Msg Content */
 .chatMsg {
     color: rgb(255 255 255 / 80%);
@@ -3963,7 +3968,7 @@ div.shopActionSep, div.shopSubActionSep {
 /* ^Timer Inner */
 #timerInner.topLeftOld {
     padding: 0px 0px 0px 0px !important;
-    margin: 0px -1px 0px 0px !important;
+    margin: 0px 12px 0px 12px !important;
     background-color: var(--transparentColor);
 }
 
@@ -3971,7 +3976,7 @@ div.shopActionSep, div.shopSubActionSep {
 #timerHolder.topLeftOld, div#timerHolder.topLeftOld {
     text-align: center !important;
     padding: 12px 0px 12px 0px !important;
-    margin: 0px 35px 10px 0px !important;
+    margin: 0px 0px 10px 0px !important;
 }
 
 /* Timer Icon */
@@ -4584,6 +4589,16 @@ th, tr {
     }
 }
 
+/* Perk Item Animation */
+@keyframes perk_animat {
+    from {
+        transform: translateX(25px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
 /* Streak Item */
 .killStreakItem {
     background-color: rgba(29, 29, 29, 0.6) !important;
@@ -4621,6 +4636,11 @@ th, tr {
     border-radius: var(--LV7_RC);
 }
 
+/* Kill Streak Icon */
+#krTagHolder > div > div > img {
+    filter: grayscale(1) brightness(1.2) opacity(0.9);
+}
+
 /* Perk Item */
 .perkItem {
     background-color: rgba(29, 29, 29, 0.6) !important;
@@ -4628,12 +4648,25 @@ th, tr {
     box-shadow: var(--blackShadow_2) !important;
     backdrop-filter: blur(var(--LV4_Blur)) !important;
     border-radius: var(--LV4_RC);
-    animation: fadein .2s;
+    width: 85px !important;
+    height: 85px !important;
+    animation: perk_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
-/* ^Inner */
+/* ^Perk Item Inner */
 .perkItemInner {
     background-color: var(--transparentColor) !important;
+}
+
+/* Perk Item Icon */
+#perkHolder > div > di > img {
+    filter: grayscale(1);
+}
+
+/* Perk Item Counts */
+.perkCnt {
+    text-shadow: none !important;
+    color: var(--whiteColor_1);
 }
 
 /* --------------------------------Comp In Game */
@@ -4728,6 +4761,11 @@ th, tr {
     text-shadow: none !important;
 }
 
+/* Username on Customized Player Card */
+.death-row-user {
+    z-index: 0;
+}
+
 /* Death Row Card */
 div.death-row-bottom {
     outline: 2px solid var(--transparentColor);
@@ -4818,6 +4856,45 @@ div.death-row-bottom {
     border-radius: var(--LV2_RC);
     opacity: 0.9;
     animation: minimapOverlay_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+}
+
+/* You are hidden (Stalker Mode) Animation */
+@keyframes stalkerHide_animat {
+    from {
+        transform: translate(-50%,-10%);
+    }
+
+    to {
+        transform: translate(-50%,-50%);
+    }
+}
+
+/* You are hidden (Stalker Mode) */
+#hiddenMsg {
+    transform: translate(-50%,-50%);
+    color: var(--whiteColor_1);
+    animation: stalkerHide_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+}
+
+/* ^Hidden Icon */
+#hiddenMsg > i {
+    margin-top: -15px !important;
+}
+
+/* Bighead FFA Img Animation */
+@keyframes bhHolder_animat {
+    from {
+        margin-bottom: -50px;
+    }
+
+    to {
+        margin-bottom: -4px;
+    }
+}
+
+/* Bighead FFA Img */
+#bhHolder {
+    animation: bhHolder_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
 }
 
 /* IG1. In Game ================================================================================== */
@@ -4917,7 +4994,7 @@ div#specNames.topLeftOld, div#specStats.topLeftOld {
 }
 
 /* Spectate Contr */
-#specControlHolder {
+#specControlHolder, #propControlHolder {
     background: rgba(29, 29, 29, 0.6);
     border: var(--whiteBorder_1);
     box-shadow: var(--blackShadow_2);
@@ -4927,7 +5004,7 @@ div#specNames.topLeftOld, div#specStats.topLeftOld {
 }
 
 /* [LM]... Spec Contr KeyBinds */
-.specControlKey {
+.specControlKey, .propControlKey {
     color: rgba(213, 209, 255, 0.9) !important;
 }
 
