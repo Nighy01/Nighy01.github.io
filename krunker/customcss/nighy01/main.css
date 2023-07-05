@@ -1,11 +1,31 @@
-/* 
- Update Note:
-  Because They are Too Many Default UI Updates, So I may need to rework this project 
-  But I have New One, So I will specialize in the new CSS 
-*/
+/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
+/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
+/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
+
+/* -------------------------------------------The End------------------------------------------- */
+#jumpSVIDHolder {
+    display: block !important;
+    transform: translateY(-20%);
+    padding-top: 1000px;
+    padding-left: 10px;
+    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
+}
+
+#jumpSVIDHolder::before {
+    content: 'Due to drastic changes in Krunker UI updates, this CSS project has been dropped for maintenance. Please use another CSS project instead.';
+    -webkit-user-drag: auto;
+    font-size: 40px;
+    color: #ffffffba !important;
+    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
+}
+
+body > canvas, #menuHolder, #aHider {
+    display: none !important;
+}
+/* -------------------------------------------The End------------------------------------------- */
 
 /* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2021/07/29 */
+/* Updated: 2023/07/05 */
 
 /* Variables */
 :root {
@@ -1710,6 +1730,7 @@ input:checked + .optCheck:hover {
 /* Unknown */
 #termsInfo {
     background-color: rgba(0, 0, 0, 0) !important;
+    display: none !important;
 }
 
 /* Unknown */
@@ -2169,12 +2190,12 @@ a:hover {
 
 /* Unknown */
 #instructionHolder {
-    display: none;
+    display: none !important;
 }
 
 /* Unknown */
 #chatUI {
-    display: none;
+    display: none !important;
 }
 
 /* Donate Button */
@@ -3936,13 +3957,6 @@ input:checked+.sliderSml:active:after {
     border-bottom: 7px solid rgba(255 255 255 / 0%)!important;
 }
 
-/* Left Of "Advertise" Button */
-#termsInfo::before { /* Show "Made By Nighy01" Text */
-    content: 'Made By Nighy01';
-    font-size: 16px;
-    color: #ffffffba !important;
-}
-
 /* Item SearchH */
 #itemSearchH {
     background-color: #0000 !important;
@@ -4451,3 +4465,7 @@ input:checked+.sliderSml:active:after {
     Match Ended Leaderboard: https://i.imgur.com/vy2NAmz.png
 
 */
+
+/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
+/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
+/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */

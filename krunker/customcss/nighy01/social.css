@@ -1,11 +1,27 @@
-/* 
- Update Note:
-  Because They are Too Many Default UI Updates, So I may need to rework this project 
-  But I have New One, So I will specialize in the new CSS 
-*/
+/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
+/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
+/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
+
+/* -------------------------------------------The End------------------------------------------- */
+#backgroundImage {
+    background: #000;
+    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
+}
+
+#backgroundImage::before {
+    content: 'Due to drastic changes in Krunker UI updates, this CSS project has been dropped for maintenance. Please use another CSS project instead.';
+    font-size: 23px;
+    color: #ffffffba !important;
+    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
+}
+
+#leftAHol, #rightAHol, #feedHolder, #editrDB, #aHolder, #uiBase {
+    display: none !important;
+}
+/* -------------------------------------------The End------------------------------------------- */
 
 /* This is Nighy01's Krunker Hub Custom CSS */
-/* Updated: 2021/07/29 */
+/* Updated: 2023/07/05 */
 
 /* Variables */
 :root {
@@ -97,6 +113,7 @@ a:hover {
 /* Krunker Hub Top Buttons */
 #navBar {
     background-color: rgba(0, 0, 0, 0) !important;
+    display: none !important;
 }
 
 /* Unknown */
@@ -1519,7 +1536,7 @@ input:checked + .slider2::before {
 /* Unknown */
 #backgroundImage {
     opacity: 0.7;
-    background-image: url("https://i.imgur.com/Xpbxmd6.png");
+    background: #000 !important;
 }
 
 /* Unknown */
@@ -2476,3 +2493,7 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
     Social Profile Page: https://i.imgur.com/0FwiaXm.png
 
 */
+
+/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
+/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
+/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
