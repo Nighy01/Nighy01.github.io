@@ -1,7 +1,7 @@
 /* Flusothg - Krunker */
 /* Made by Nighy Riy (Nighy01) */
 
-/* 2023/07/05 */
+/* 2023/07/08 */
 
 
 /* (in STG1. Settings) CM1. Mouse Click Icon ================================================================================== */
@@ -1001,6 +1001,18 @@
     }
 }
 
+/* Game Message (Ex. waiting for players, infection in 00:00...etc) Animation */
+@keyframes gameMsgDisplay {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}
+
 /* -----------------In Game Animation----------------- */
 
 
@@ -1192,6 +1204,16 @@
 
     to {
         transform: translate(0%, 0%);
+    }
+}
+
+/* waiting for players, Infection in 00:00 in Spectate Animation */
+@keyframes specGM_animat {
+    from {
+        top: -10px;
+    }
+    to {
+        top: 85px;
     }
 }
 
@@ -2558,6 +2580,7 @@ input:checked+.sliderSml:active:after {
 /* Streaming Now! Streamer Name */
 .streamName {
     color: var(--whiteColor_1);
+    margin-left: 3px;
 }
 
 /* Streaming Now! Streamer Name Hover */
@@ -2577,7 +2600,11 @@ input:checked+.sliderSml:active:after {
 }
 
 /* Streamer Items */
-#streamItem0,#streamItem1,#streamItem2,#streamItem3{
+#streamItem0,#streamItem1,#streamItem2,#streamItem3,
+
+/* Friend Items */
+#friendCon > div:nth-child(2), #friendCon > div:nth-child(3), #friendCon > div:nth-child(4), #friendCon > div:nth-child(5)
+{
     margin-top: 7px;
     padding-left: 7px;
     background: var(--blackColor_7);
@@ -2585,13 +2612,32 @@ input:checked+.sliderSml:active:after {
 }
 
 /* Streamer Items Hover */
-#streamItem0:hover, #streamItem1:hover, #streamItem2:hover, #streamItem3:hover {
-    background: var(--blackColor_1);
+#streamItem0:hover, #streamItem1:hover, #streamItem2:hover, #streamItem3:hover,
+
+/* Friend Items Hover */
+#friendCon > div:nth-child(2):hover, #friendCon > div:nth-child(3):hover, #friendCon > div:nth-child(4):hover, #friendCon > div:nth-child(5):hover
+{
+    background: var(--blackColor_4);
 }
 
 /* Streamer Items Active */
-#streamItem0:active, #streamItem1:active, #streamItem2:active, #streamItem3:active {
-    background: var(--blackColor_5);
+#streamItem0:active, #streamItem1:active, #streamItem2:active, #streamItem3:active,
+
+/* Friend Items Active */
+#friendCon > div:nth-child(2):active, #friendCon > div:nth-child(3):active, #friendCon > div:nth-child(4):active, #friendCon > div:nth-child(5):active
+{
+    background: var(--blackColor_1);
+}
+
+/* Active Friends in Stream Con */
+#friendCon > div:nth-child(1) {
+    cursor: default !important;
+}
+
+/* Friend Quick Join Icon */
+#friendCon > div:nth-child(2) > div:nth-child(3) > div > span, #friendCon > div:nth-child(3) > div:nth-child(3) > div > span, #friendCon > div:nth-child(4) > div:nth-child(3) > div > span, #friendCon > div:nth-child(5) > div:nth-child(3) > div > span {
+    width: 302px;
+    opacity: 0 !important;
 }
 
 /* Host Game/Server Browser/Ranked/Invite/Join Button */
@@ -2897,7 +2943,7 @@ div#uiBase.onDeathScrn #chatList {
 
 /* Voice Icon */
 #voiceIcon {
-    transform: translate(-3.2px, 3px);
+    transform: translate(-3.5px, 3px);
 }
 
 /* Voice On */
@@ -2926,6 +2972,7 @@ div#uiBase.onDeathScrn #chatList {
 
 /* Chat Message Text */
 .chatMsg, .chatItem, .chatTextOutline {
+    user-select: text;
     animation: chatmsganimat 0.5s;
     transition-duration: 0.2s !important;
     background-color: var(--transparentColor) !important;
@@ -2940,10 +2987,12 @@ div#uiBase.onDeathScrn #chatList {
 .chatMsg {
     color: rgb(255 255 255 / 80%);
     filter: brightness(0.95);
+    user-select: text;
 }
 
 /* Your Team Chat Color */
 [style="color:#9eeb56"] {
+    user-select: text;
     color: var(--yourTeamText) !important;
 }
 
@@ -5304,9 +5353,11 @@ th, tr {
 
 /* --------------------------------Comp In Game */
 
-/* Waiting for players, Next Round in 00:00 */
+/* waiting for players, Infection in 00:00, Next Round in 00:00...etc in Game */
 #gameMessage, #roundMessage {
-    animation: roundsDisplay 0.35s;
+    font-size: 25px !important;
+    transform: translateY(10px);
+    animation: gameMsgDisplay 0.35s;
 }
 
 /* Death UI Bottom */
@@ -5356,13 +5407,15 @@ div.death-row-bottom {
 
 /* XX KS */
 .weapStreakHolder {
-    background-color: var(--blackColor_3);
+    background-color: rgba(29, 29, 29, 0.6);
+    border: var(--whiteBorder_1);
+    box-shadow: var(--blackShadow_2);
+    backdrop-filter: blur(var(--LV5_Blur));
+    border-radius: var(--LV7_RC);
+    color: var(--whiteColor_1);
     padding: 4px 8px;
     right: -5px;
     top: -15px;
-    border-radius: var(--LV7_RC);
-    color: var(--whiteColor_1);
-    backdrop-filter: blur(var(--LV5_Blur));
     animation: fadein .15s;
 }
 
@@ -5417,7 +5470,7 @@ div.death-row-bottom {
 
 /* Mini Map Overlay */
 #miniMapOverlay {
-    display: none !important;
+    display: none !important; /* You can remove it if you want, except it will cover Spectating and Spectate Player Stats Box */
     border-radius: var(--LV2_RC);
     opacity: 0.9;
     animation: minimapOverlay_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
@@ -5645,6 +5698,11 @@ div#specNames.topLeftOld, div#specStats.topLeftOld {
     animation: fadein .2s;
 }
 
+/* waiting for players, Infection in 00:00 in Spectate */
+#specGMessage {
+    animation: specGM_animat 400ms 0ms cubic-bezier(0.42,0,0,1) forwards, fadein 400ms 0ms cubic-bezier(0.42,0,0,1) forwards;
+}
+
 /* IS1. In Spec ================================================================================== */
 
 
@@ -5769,17 +5827,24 @@ div#specNames.topLeftOld, div#specStats.topLeftOld {
 
 /* Enemy Color Profile Link and Red Color */
 [style="color:#eb5656"] {
+    user-select: text;
     color: var(--enemyText) !important;
 }
 
 /* You Color Profile Link */
 [style="color:#fff"] {
     color: var(--whiteColor) !important;
+    user-select: text;
 }
 
 /* Team Color Profile Link */
 [style="color:rgba(255,255,255,0.6)"] {
     color: rgba(255,255,255,0.6) !important;
+}
+
+/* unboxed [CLICK] */
+.click {
+    user-select: text;
 }
 
 /* Team Totals ( [Team1] [Scores] | [Team2] [Scores] ) (Only TDM,DOM,Infected(Custom)...etc Team Modes) */
@@ -5886,13 +5951,15 @@ div#specNames.topLeftOld, div#specStats.topLeftOld {
 
 /* End Round XP Bar */
 .xpEndBar {
-    background-color: var(--blackColor_3);
+    background-color: var(--blackColor_5) !important;
+    border-radius: var(--LV7_RC);
 }
 
 /* End Round XP Bar B */
 .xpEndBarB {
     background-image: linear-gradient(to right,var(--transparentColor),var(--transparentColor),94%,var(--transparentColor)) !important;
-    background: rgba(131, 140, 188, 0.9) !important;
+    background: rgba(131, 140, 188, 1) !important;
+    border-radius: var(--LV7_RC);
 }
 
 /* Mode Layout in Performance */
