@@ -2,7 +2,7 @@
 /* Made by Nighy Riy (Nighy01) */
 
 /* #SaveKrunker */
-/* 2023/07/11 */
+/* 2023/07/24 */
 
 /* (in STG1. Settings) CM1. Mouse Click Icon ================================================================================== */
 
@@ -259,6 +259,18 @@
     }
     to {
         transform: translate(0px, 15px);
+        z-index: 1;
+    }
+}
+
+/* Top Right Ad Animation */
+@keyframes TopRightAd_Animat {
+    from {
+        transform: translateY(330px) translateX(800px);
+        z-index: 0;
+    }
+    to {
+        transform: translateY(330px) translateX(325px);
         z-index: 1;
     }
 }
@@ -1846,6 +1858,19 @@ div#streamContainer, div.youNewDiv {
     animation: StreamContainer_Animat .5s;
 }
 
+/* Top Right Ad  */
+#topRightAdHolder {
+    background: var(--main-bg-color) !important;
+    border: var(--whiteBorder_1) !important;
+    box-shadow: var(--blackShadow_2) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
+    border-radius: var(--LV6_RC);
+    transform: translateY(330px) translateX(325px);
+    transition-duration: 0.2s !important;
+    transition-duration: .5s !important;
+    animation: TopRightAd_Animat .5s;
+}
+
 /* New to Krunker? Div */
 .youNewDiv, div.youNewDiv {
     transform: translate(0px, 15px);
@@ -2529,8 +2554,11 @@ input:checked+.sliderSml:active:after {
 
 /* Menu Class Icon */
 #menuClassIcn {
+    background: rgba(29, 29, 29, 0.6);
+    border: var(--whiteBorder_1);
+    box-shadow: var(--blackShadow_2);
+    backdrop-filter: blur(var(--LV4_Blur));
     border-radius: var(--LV4_RC);
-    border: 4px solid rgb(255 255 255/ 0%);
     margin-bottom: 12px;
     transition-duration: .5s;
     animation: menuClassSubNameAnimation .5s;
