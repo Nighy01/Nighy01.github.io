@@ -2936,6 +2936,11 @@ div.buttonG:active {
     display: none !important;
 }
 
+/* Grey Inline Inner Mid */
+.greyInlineInnerMid {
+    background: var(--transparentColor) !important;
+}
+
 /* Chat */
 #chatHolder {
     left: 15px;
@@ -3952,12 +3957,12 @@ input:checked+.slider2 {
     color: rgb(255 255 255 / 0.7) !important;
 }
 
-/* [X] Icon Popup Content */
+/* [X](Fail) Icon Popup Content */
 [style="font-size:80px;color:#e33b3b"] {
     text-shadow: 0px 0px 20px rgba(255, 0, 0, 0.15);
 }
 
-/* [V] Icon Popup Content */
+/* [V](Success) Icon Popup Content */
 [style="font-size:80px;color:#3be354"] {
     text-shadow: 0px 0px 20px rgba(0, 255, 117, 0.15);
 }
@@ -6135,7 +6140,7 @@ div#specNames.topLeftOld, div#specStats.topLeftOld {
 .crStat {
     text-align: center;
     color: rgba(255,255,255,.5);
-    background-color: rgba(255,255,255,.05);
+    background-color: rgba(0 0 0 / 20%);
     padding: 15px;
     border-radius: var(--LV7_RC);
     border: 4px solid var(--transparentColor);
@@ -6144,7 +6149,7 @@ div#specNames.topLeftOld, div#specStats.topLeftOld {
 /* Kill Death Layout */
 #kdLayout {
     color: rgba(255,255,255,.5);
-    background-color: rgba(255,255,255,.05);
+    background-color: rgba(0 0 0 / 20%);
     border-radius: var(--LV7_RC);
     border: 4px solid var(--transparentColor);
 }
@@ -8679,6 +8684,9 @@ div#rentServBtn:active {
     box-shadow: 0px 0px 50px var(--blackColor_9) !important;
     backdrop-filter: blur(var(--LV5_Blur));
     border-radius: var(--LV4_RC) !important;
+    text-align: center !important;
+    padding-left: 0px !important;
+    padding-top: 0px !important;
     transition-duration: .15s;
 }
 
@@ -8726,6 +8734,9 @@ div#rentServBtn:active {
 .imageListItem {
     background-color: var(--blackColor_1) !important;
     border-radius: var(--LV4_RC) !important;
+    text-align: left !important;
+    padding-left: 0px !important;
+    padding-top: 0px !important;
 }
 
 /* Image List Thumb */
@@ -9310,8 +9321,9 @@ input:disabled+.tDecCheck {
 }
 
 /* Error...etc Message */
-#genericPop > div > div:nth-child(2) {
+#genericPop > div > div:nth-child(2), [style="font-size:20px;color:rgba(255,255,255,0.5)"] {
     color: var(--whiteColor_1) !important;
+    user-select: text;
 }
 
 /* BPP limit will not increase */
