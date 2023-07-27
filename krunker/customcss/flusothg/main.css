@@ -2,7 +2,7 @@
 /* Made by Nighy Riy (Nighy01) */
 
 /* #SaveKrunker */
-/* 2023/07/24 */
+/* 2023/07/27 */
 
 /* (in STG1. Settings) CM1. Mouse Click Icon ================================================================================== */
 
@@ -272,6 +272,44 @@
     to {
         transform: translateY(330px) translateX(325px);
         z-index: 1;
+    }
+}
+
+/* Top Left Ad Animation */
+@keyframes TopLeftAd_Animat {
+    from {
+        transform: translateY(0px) translateX(-500px);
+        z-index: 0;
+    }
+    to {
+        transform: translateY(0px) translateX(-136px);
+        z-index: 1;
+    }
+}
+
+/* Expert Mode Button */
+@keyframes ExpertMode_Btn {
+    from {
+        bottom: 15px;
+        left: -180px;
+        opacity: 0.1;
+    }
+    to {
+        bottom: 15px;
+        left: 15px;
+        opacity: 1;
+    }
+}
+
+/* Let you login to unlock the other features... */
+@keyframes BeginnersUnlock {
+    from {
+        transform: translate(-50%,-70%);
+        opacity: 0.1;
+    }
+    to {
+        transform: translate(-50%,-50%);
+        opacity: 1;
     }
 }
 
@@ -1867,8 +1905,19 @@ div#streamContainer, div.youNewDiv {
     border-radius: var(--LV6_RC);
     transform: translateY(330px) translateX(325px);
     transition-duration: 0.2s !important;
-    transition-duration: .5s !important;
     animation: TopRightAd_Animat .5s;
+}
+
+/* Top Left Ad  */
+#topLeftAdHolder {
+    background: var(--main-bg-color) !important;
+    border: var(--whiteBorder_1) !important;
+    box-shadow: var(--blackShadow_2) !important;
+    backdrop-filter: blur(var(--LV4_Blur)) !important;
+    border-radius: var(--LV6_RC);
+    transform: translateY(0px) translateX(-136px);
+    transition-duration: 0.2s !important;
+    animation: TopLeftAd_Animat .5s;
 }
 
 /* New to Krunker? Div */
@@ -2096,7 +2145,7 @@ div.youNewDiv:active {
     box-shadow: var(--blackShadow_2);
     backdrop-filter: blur(var(--LV4_Blur)) !important;
     transition-duration: .4s;
-    animation: topanimation .4s;
+    animation: topanimation .4s, fadein .4s;
     border-radius: var(--LV6_RC);
     transform: translate(12px);
 }
@@ -3056,10 +3105,24 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
     top: 5px !important;
 }
 
-/* Login or Register to unlock the full experience! */
+/* Beginners Unlock */
+#frvrFTUEVideoHolder {
+    transform: translate(-50%,-50%);
+    color: rgb(255 255 255 / 90%);
+    transition-duration: .1s !important;
+    animation: BeginnersUnlock .5s;
+}
+
+/* [Login or Register] to unlock the full experience! */
 .frvrFTUEText {
     color: var(--whiteColor);
     filter: none;
+    padding-left: 355px;
+}
+
+/* a Beginners Guide Video */
+#frvrFTUEVideoHolder>iframe {
+    transform: translateY(20px);
 }
 
 /* Active Friends */
@@ -3086,6 +3149,15 @@ div.buttonR, div.buttonR:hover, div.buttonR:active {
 .unreadBtnM {
     background: rgb(105 106 124) !important;
     animation: fadein .15s;
+}
+
+/* Expert Mode */
+div#expertModeBtn {
+    bottom: 15px;
+    left: 15px;
+    border: 4px solid var(--transparentColor) !important;
+    transition-duration: .1s !important;
+    animation: ExpertMode_Btn .5s;
 }
 
 /* MN1. Menu ====================================================== */
@@ -9518,8 +9590,14 @@ div.bundlPopBuyS:active, div.bundlPopBuyC:active, #bundlCreatorCodeBtn:active, #
     right: 270px;
 }
 
-div#acpButtonHolder > div:nth-child(1) {
+/* Register */
+div#acpButtonHolder > div:nth-child(1), [style="border: 2px solid var(--yellow) !important"] {
     filter: grayscale(1);
+    border: var(--whiteBorder_1) !important;
+}
+
+/* Acp (in Tried of watching these Ads?: Register/I like Ads) Button */
+div.acpButton, div.acpButton:hover, div.acpButton:active {
     border: var(--whiteBorder_1) !important;
 }
 
