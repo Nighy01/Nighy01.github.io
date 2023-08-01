@@ -2,7 +2,7 @@
 /* Made by Nighy Riy (Nighy01) */
 
 /* #SaveKrunker */
-/* 2023/07/27 */
+/* 2023/08/01 */
 
 /* CF1. Configs ================================================================================== */
 
@@ -837,7 +837,7 @@ body::-webkit-scrollbar {
     background-color: rgb(0 0 0 / 25%) !important;
     color: rgb(255 255 255 / 90%) !important;
     border-radius: 10px;
-    user-select: text;
+    user-select: text !important;
 }
 
 /* Comment Holder */
@@ -871,12 +871,15 @@ body::-webkit-scrollbar {
 /* Feed Post Content Text */
 #postHolder > div > div.postHead > div.postContent > div, #postHolder > div > div.postHead > div.postContent > div > div, #pTabContent_activity > div > div.postHead > div.postContent > div > div, #singlePostH > div > div > div.postContent > div > div {
     color: rgb(255 255 255 / 0.95) !important;
+    user-select: text;
 }
 
 /* Img Text O */
-.imgTextO {
+div.imgTextO, .imgTextO {
     font-size: 35px !important;
     width: 75%;
+    text-shadow: none !important;
+    user-select: none !important;
 }
 
 /* "Count" Followers, "time(like 1s, 2m, 3d... etc)" ago */
@@ -913,8 +916,9 @@ body::-webkit-scrollbar {
 }
 
 /* Feed Post Username Clan */
-#postHolder > div > div.postHead > div.postInfo > div > span > span, #pTabContent_activity > div > div.postHead > div.postInfo > div > span > span:nth-child(2), #singlePostH > div > div > div.postInfo > div > span > span:nth-child(2), #comHolderH > div > div > div > span.postLink > span {
+#postHolder > div > div.postHead > div.postInfo > div > span > span, #pTabContent_activity > div > div.postHead > div.postInfo > div > span > span:nth-child(2), #singlePostH > div > div > div.postInfo > div > span > span:nth-child(2), #comHolderH > div > div > div > span.postLink > span, #singlePostH > div > div > div.postInfo > div > span > span:nth-child(2) {
     color: rgb(255 255 255 / 70%) !important;
+    user-select: text !important;
 }
 
 /* Developer, Streamer, Map Maker... etc */
@@ -1149,7 +1153,7 @@ div.button:active {
 [style="font-size:20px;color:rgba(255,255,255,0.5)"] {
     color: rgb(255 255 255 / 0.9) !important;
     font-size: 17px !important;
-    user-select: text;
+    user-select: text !important;
 }
 
 /* Image Collection Popup */
@@ -1257,6 +1261,7 @@ div.button:active {
 /* LeaderBoard Kr Count Post Feed */
 #postGameRes > tbody > tr > td > span {
     color: #fff !important;
+    user-select: text !important;
 }
 
 /* Profile Kr */
@@ -1273,7 +1278,8 @@ div.button:active {
 }
 
 /* Giveaway KR Text Post Feed */
-#postHolder > div > div.postHead > div.postContent > div > div > span {
+#postHolder > div > div.postHead > div.postContent > div > div > span, #singlePostH > div > div > div.postContent > div > div > span {
+    user-select: text !important;
     color: rgb(255 255 255 / 0.5) !important;
 }
 
@@ -1284,6 +1290,7 @@ div.button:active {
 /* Verified */ #postHolder > div > div.postHead > div.postInfo > div > span > i {
 
     color: rgba(242, 242, 255, 0.9) !important;
+    user-select: none !important;
 
 }
 
@@ -1513,7 +1520,8 @@ div#bigMFeatPBtn:active {
 }
 
 /* Loading... in Game/Mod Search */
-#searchResultsMA, #searchResultsMO {
+#searchResultsMA, #searchResultsMO,
+#searchResultsMA > div, #searchResultsMO > div {
     color: rgb(255 255 255 / 95%) !important;
     animation: gamesholder_animat 350ms;
 }
@@ -1873,21 +1881,25 @@ input:checked+.slider:active {
 /* Since */
 .leftMidHolder {
     color: rgba(220, 220, 233, 0.9) !important;
+    user-select: text;
 }
 
 /* Since Date */
 #rightProfile > div.leftMidHolder > span {
     color: rgba(250, 250, 255, 0.95) !important;
+    user-select: text;
 }
 
 /* Followers/Following Text */
 .follCount {
     color: rgba(220, 220, 233, 0.9) !important;
+    user-select: text;
 }
 
 /* Followers/Following Counts */
 .follL {
     color: rgba(250, 250, 255, 0.95) !important;
+    user-select: text;
 }
 
 /* Partner, Premium, Verified Icon */ 
@@ -1933,6 +1945,12 @@ input:checked+.slider:active {
 /* Profile Premium Display Name Switch */ 
 #nameSwitch {
     color: rgb(255 255 255 / 90%);
+    user-select: text;
+}
+
+/* Profile User Name Clan */
+#rightProfile > div.leftTopHolder > a {
+    user-select: text;
 }
 
 /* Profile Tabs */
@@ -1960,6 +1978,7 @@ input:checked+.slider:active {
     box-shadow: none !important;
     background: rgba(50, 50, 50, 0.4) !important;
     border-radius: var(--LV1_RC) !important;
+    user-select: text;
 }
 
 /* Profile Tab Hover */ 
@@ -1985,18 +2004,26 @@ input:checked+.slider:active {
     border-radius: var(--LV3_RC) !important;
     text-shadow: none !important;
     border: none !important;
+    user-select: text;
     color: rgba(255, 255, 255, 0.9) !important;
 }
 
 /* Overall Stats Count */
 .pSt strong {
     color: rgba(255, 255, 255, 0.82) !important;
+    user-select: text;
 }
 
 /* Scroll Item Head(Overall Stats, Class Stats, Sales) */
-.scrollItemHead, #pTabContent_about > div > div.material-icons.toggleView {
+.scrollItemHead {
     color: white !important;
-} 
+    user-select: text;
+}
+
+/* ^Toggle View */
+#pTabContent_about > div > div.material-icons.toggleView {
+    color: white !important;
+}
 
 /* No Market Listings! */
 #pTabContent_listings > div > div {
@@ -2149,6 +2176,7 @@ input:checked+.slider:active {
     font-size: 12px;
     text-shadow: none !important;
     color: rgba(255, 255, 255, 0.98) !important;
+    user-select: text;
 }
 
 /* Xp Bar B */
@@ -2260,6 +2288,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
     border-radius: var(--LV3_RC) !important;
     color: rgba(0, 0, 0, 0.9) !important;
     transition-duration: .15s;
+    user-select: text;
 }
 
 /* ^Hover */
@@ -2302,6 +2331,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
     backdrop-filter: blur(var(--LV1_Blur));
     border-radius: var(--LV1_RC) !important;
     text-shadow: none !important;
+    cursor: default;
 }
 
 /* Class Image */
@@ -2317,16 +2347,20 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
     top: 55px !important;
     left: 50px !important;
     color: rgba(255, 255, 255, 0.95) !important;
+    user-select: text;
 }
 
 /* Class Name (ex. Hunter) */
 .className {
     color: rgba(255, 255, 255, 0.95) !important;
+    user-select: text;
 }
 
 /* Class Weapon (ex. Sniper Rifle) */
 .classWeap {
     color: rgba(255, 255, 255, 0.8) !important;
+    text-align: left;
+    user-select: text;
 }
 
 /* Class XP Bar */
@@ -2351,6 +2385,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
     left: 1px;
     font-size: 12px;
     color: rgba(255, 255, 255, 0.9) !important;
+    user-select: text;
 }
 
 /* Sale Card Actions */
@@ -2371,6 +2406,7 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
     backdrop-filter: brightness(0.75);
     border-radius: var(--LV1_RC) !important;
     transition-duration: .2s;
+    user-select: text;
 }
 
 /* Tab Hover */
@@ -2531,6 +2567,13 @@ span#reprtBtn:active, span#shareBtn:active, #twitchBtn:active, span#flagBtn:acti
 .mapAgeD {
     background: rgb(0 0 0 / 50%) !important;
     backdrop-filter: blur(var(--LV4_Blur));
+}
+
+/* Map Name        6.9k Plays */
+#mapList > div > div > div.mapListItem > div.mapListThumbHolder > div.mapListCrdI > a, #mapList > div > div > div.mapListItem > div.mapListThumbHolder > div.mapListCrdI > span, #mapList > div > div > div.mapListItem > div.mapListThumbHolder > div.mapListCrdI > span > span,
+#mapList > div > div.mapListItem > div.mapListThumbHolder > div.mapListCrdI > a, #mapList > div > div.mapListItem > div.mapListThumbHolder > div.mapListCrdI > span, #mapList > div > div.mapListItem > div.mapListThumbHolder > div.mapListCrdI > span > span
+{
+    user-select: text;
 }
 
 /* GMP1. Game Map Page ================================================================================== */
@@ -3372,7 +3415,7 @@ div.mapsVotes
     border-radius: var(--LV5_RC);
 }
 
-/* Post/Reply/PostProfile Pfp */
+/* Post/Reply/Post Profile Pfp */
 .postPFP, .replyPfp, #postProf {
     background-color: rgba(0,0,0,.1) !important;
     border: 3px solid #00000000 !important;
@@ -3423,6 +3466,11 @@ div.mapsVotes
 #mapDescr, #mapVid, #modDescr, #modVid, #mapLeaders, #activeGames {
     background-color: rgb(0 0 0 / 30%) !important;
     border-radius: var(--LV1_RC) !important;
+}
+
+/* Map Desc, Map Info Sub, Map Info Sub Item */
+#mapDescr, #mapDescr > div > div > b, .mapSubItm {
+    user-select: text;
 }
 
 /* Map Youtube Vid */
@@ -3514,6 +3562,12 @@ input:checked+.filterSlider {
     border-radius: 10px;
 }
 
+/* Post Image */
+.postIMG {
+    background-color: rgb(0 0 0 / 35%) !important;
+    border: 3px solid rgb(0 0 0 / 0%) !important;
+}
+
 /* Post Leaderboard Box */
 #postGameRes {
     background: rgb(0 0 0 / 0.3);
@@ -3524,12 +3578,14 @@ input:checked+.filterSlider {
 .postResRo {
     color: rgb(255 255 255 / 95%);
     border-bottom: 3px solid rgb(0 0 0 / 0%) !important;
+    user-select: text !important;
 }
 
 /* Post Leaderboard Ranks */
 .postResRoD {
     max-width: 250px;
     border-bottom: 3px solid rgb(0 0 0 / 0%) !important;
+    user-select: text !important;
 }
 
 /* Single Post */
@@ -3648,4 +3704,34 @@ input:checked+.filterSlider {
     background: var(--blackColor_1) !important;
     backdrop-filter: blur(10px);
     border-radius: var(--LV1_RC) 10px 0px 0px;
+}
+
+/* User Name, Clan, Post Time/Post Giveaways Ends Time, User Name in Single/Comment Post, Giveways Ends Time in Single/Comment Post(it bugged lol), Post Time in Single Post */
+#postHolder > div > div.postHead > div.postInfo > div > span > a,
+#postHolder > div > div.postHead > div.postInfo > div > span > span:nth-child(2),
+#postHolder > div > div.postHead > div.postInfo > div > span > span.postTime, #postHolder > div > div.postHead > div.postInfo > div > span > span.postTime > span,
+#singlePostH > div > div > div.postInfo > div > span > a, #comHolderH > div > div > div > span.postLink > a,
+#singlePostH > div > div > div.postInfo > div > span > span.postTime > span, #comHolderH > div > div > div > span.postTime,
+#singlePostH > div > div > div.postInfo > div > span > span:nth-child(3),
+
+/* Post User Name, Post Time in Profile Page */
+#pTabContent_activity > div > div.postHead > div.postInfo > div > span > a,
+#pTabContent_activity > div > div.postHead > div.postInfo > div > span > span.postTime,
+
+/* Feature Maps in Games Home */
+#bigMFeatName, #bigMFeatDesc
+
+{
+    user-select: text !important;
+}
+
+/* Data Range */
+#pTabContent_about > div:nth-child(4) > div:nth-child(3) > span {
+    color: rgb(255 255 255 / 0.8) !important;
+    user-select: text;
+}
+
+/* Market Sales          0 KR */
+.graphHeaderTxt, .graphHeaderTotal, #totalSalesHeader > span {
+    user-select: text;
 }

@@ -2,24 +2,24 @@
 /* Made by Nighy Riy (Nighy01) */
 
 /* #SaveKrunker */
-/* 2023/07/27 */
+/* 2023/08/01 */
 
 /* (in STG1. Settings) CM1. Mouse Click Icon ================================================================================== */
 
 /* Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=9o6wWLLX0eKRvjPi0MMtxoZo5VXZBsaF);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=egh9QTeIptdMdJIrIKaFXvKz9fCqj0mt);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/click.png);
     opacity: 0.9;
 }
 
 /* Middle Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=9o6wWLLX0eKRvjPi0MMtxoZo5VXZBsaF);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=egh9QTeIptdMdJIrIKaFXvKz9fCqj0mt);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/middleclick.png);
     opacity: 0.9;
 }
 
 /* Right Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=9o6wWLLX0eKRvjPi0MMtxoZo5VXZBsaF);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=egh9QTeIptdMdJIrIKaFXvKz9fCqj0mt);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/rightclick.png);
     opacity: 0.9;
 }
@@ -1838,9 +1838,10 @@ div#aHolder {
     display: none !important;
 }
 
-/* Menu FPS Display */
-#menuFPS {
+/* Menu FPS/Ping Text Display */
+#menuFPS, #menuPingText {
     color: var(--whiteColor) !important;
+    user-select: none !important;
 }
 
 /* Menu Ping Icon */
@@ -2496,6 +2497,7 @@ input:checked+.sliderSml:active:after {
     padding: 10px;
     margin-bottom: 30px;
     margin-right: 1px;
+    user-select: none !important;
 }
 
 /* Mod Vote */
@@ -3163,6 +3165,11 @@ div#expertModeBtn {
     border: 4px solid var(--transparentColor) !important;
     transition-duration: .1s !important;
     animation: ExpertMode_Btn .5s;
+}
+
+/* Season [0-7...etc] */
+#battlepassAd > div.helpTxtHol > div:nth-child(1) {
+    user-select: none !important;
 }
 
 /* MN1. Menu ====================================================== */
@@ -6163,6 +6170,11 @@ div#specNames.topLeftOld, div#specStats.topLeftOld {
 /* Unknown1 Badge */
 #endTable > tbody > tr > td:nth-child(2) > img:nth-child(5) {
     filter: grayscale(1);
+}
+
+/* Match Ended Leaderboard users */
+#endTable > tbody > tr > td:nth-child(1), #endTable > tbody > tr> td:nth-child(2) > a, #endTable > tbody > tr > td:nth-child(2) > a > span {
+    user-select: none !important;
 }
 
 /* ME1. Match Ended ================================================================================== */
