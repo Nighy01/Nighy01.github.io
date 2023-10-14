@@ -1,26 +1,4 @@
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-
-/* -------------------------------------------The End------------------------------------------- */
-#backgroundImage {
-    background: #000;
-    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
-}
-
-#backgroundImage::before {
-    content: 'Due to drastic changes in Krunker UI updates, this CSS project has been dropped for maintenance. Please use another CSS project instead.';
-    font-size: 23px;
-    color: #ffffffba !important;
-    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
-}
-
-#leftAHol, #rightAHol, #feedHolder, #editrDB, #aHolder, #uiBase {
-    display: none !important;
-}
-/* -------------------------------------------The End------------------------------------------- */
-
-/* This is Nighy01's Krunker Hub Custom CSS */
+/* Nighy01's Krunker Hub Custom CSS */
 /* Updated: 2023/07/05 */
 
 /* Variables */
@@ -57,17 +35,12 @@
 
 /* Main Text */
 * {
-    color: rgb(0, 0, 0);
+    color: rgb(255 255 255 / 50%);
 }
 
 /* Main Link Text */
 a {
     color: rgb(0, 0, 0);
-}
-
-/* Main Link Hover Text */
-a:hover {
-    color: rgb(0 0 0);
 }
 
 /* "By" Text */
@@ -76,18 +49,8 @@ a:hover {
 }
 
 /* Unknown */
-.mapSubItm {
-    color: rgb(0, 0, 0) !important;
-}
-
-/* Unknown */
 [style="color: rgba(0, 0, 0, 0.6);"] {
     color: #232323 !important;
-}
-
-/* Unknown */
-#mapDescr, #mapVid, #modDescr, #modVid {
-    color: rgb(0, 0, 0);
 }
 
 /* Unknown */
@@ -101,26 +64,18 @@ a:hover {
 }
 
 /* Unknown */
-.follCount {
-    color: rgb(0, 0, 0) !important;
-}
-
-/* Unknown */
 .mapSubDesc {
     border-top: 5px solid rgb(0, 0, 0) !important;
 }
 
 /* Krunker Hub Top Buttons */
 #navBar {
-    background-color: rgba(0, 0, 0, 0) !important;
-    display: none !important;
+    background-color: rgb(0 0 0 / 20%) !important;
 }
 
 /* Unknown */
 .scrollItem {
     max-height: calc(100% - 30px);
-    background-color: rgb(78 78 78 / 90%);
-    box-shadow: rgba(78 78 78 / 90%) 0px 7px 0px 0px !important;
 }
 
 /* Unknown */
@@ -182,7 +137,7 @@ a:hover {
 
 /* Unknown */
 #popupBack {
-    background-color: rgba(0, 0, 0, 0) !important;
+    background-color: rgb(0 0 0 / 20%) !important;
 }
 
 /* Unknown */
@@ -356,11 +311,6 @@ html, body { /* Change To Very Clean Background */
 /* XP Bar Of Overall Stats On Profile Page */
 .xpBarB { /* rgb(248 96 96) Background Color */
     background-color: rgb(248 96 96) !important;
-}
-
-/* Unknown */
-.pSt strong {
-    color: rgb(0, 0, 0) !important;
 }
 
 /* "Publish/Update" Hover Button On Publish Game Popup */
@@ -799,12 +749,6 @@ img:hover {
 }
 
 /* Unknown */
-.button:hover {
-    background-color: rgb(255, 255, 255) !important;
-    box-shadow: rgb(172, 172, 172) 0px -7px 0px 0px inset !important;
-}
-
-/* Unknown */
 [style="margin-bottom:4px;width:39px;image-rendering:auto;"] {
     display: none;
 }
@@ -901,12 +845,6 @@ img:hover {
 }
 
 /* Unknown */
-.socPost {
-    background-color: rgba(255, 255, 255, 0.64) !important;
-    box-shadow: rgba(255, 255, 255, 0.47) 0px 7px 0px 0px !important;
-}
-
-/* Unknown */
 [style="margin-bottom:3px;font-size:25px;color:#40C4FF;vertical-align:middle"] {
     color: var(--vic) !important;
 }
@@ -924,47 +862,6 @@ img:hover {
 /* Unknown */
 [style="color: rgba(0, 0, 0, 0.6); font-size: 20px; margin-bottom: 10px;"] {
     color: rgb(0, 0, 0) !important;
-}
-
-/* Unknown */
-#rightABox {
-    background-color: rgba(255, 255, 255, 0.64) !important;
-    box-shadow: rgba(255, 255, 255, 0.47) 0px 7px 0px 0px !important;
-}
-
-/* Unknown */
-#leftAdHol {
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.64) !important;
-    box-shadow: rgba(255, 255, 255, 0.47) 0px 7px 0px 0px !important;
-}
-
-/* Unknown */
-#rightFollBox {
-    background-color: rgba(255, 255, 255, 0.64) !important;
-    box-shadow: rgba(255, 255, 255, 0.47) 0px 7px 0px 0px !important;
-}
-
-/* Unknown */
-.sideBarHeader {
-    border-bottom: none;
-    color: rgb(0, 0, 0) !important;
-}
-
-/* Unknown */
-[style="color:rgba(255,255,255,0.4);font-size:12px"] {
-    color: rgb(49, 49, 49) !important;
-}
-
-/* Unknown */
-.sideBarItem {
-    background-color: rgba(0, 0, 0, 0.05);
-    margin-bottom: 5px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    color: rgba(0, 0, 0, 0.73) !important;
 }
 
 /* [Follow] Hover Buttons On "Who to Follow" Popup */
@@ -993,11 +890,6 @@ img:hover {
 /* Reply Hover Button */
 [style="font-size:33px;vertical-align:middle;margin-top:-4px;margin-right:20px"]:hover { /* White Icon Color */
     color: #ffffff !important;
-}
-
-/* Unknown */
-.postTime {
-    color: rgba(0, 0, 0, 0.6);
 }
 
 /* Unknown */
@@ -1033,37 +925,6 @@ img:hover {
 /* Unknown */
 #postTopBar {
     border-bottom: none;
-}
-
-/* Unknown */
-.scrollItemNew {
-    background-color: rgba(255, 255, 255, 0.64) !important;
-    box-shadow: rgba(255, 255, 255, 0.47) 0px 7px 0px 0px !important;
-}
-
-/* Unknown */
-.profileTabs {
-    background-color: rgba(255, 255, 255, 0.64) !important;
-    box-shadow: rgba(255, 255, 255, 0.47) 0px 7px 0px 0px !important;
-}
-
-/* Unknown */
-.profileTab:hover {
-    box-shadow: none;
-    color: white !important;
-}
-
-/* Unknown */
-.pTabA:hover {
-    box-shadow: none;
-    color: white !important;
-}
-
-/* Unknown */
-.pTabA {
-    cursor: default;
-    box-shadow: none;
-    color: white !important;
 }
 
 /* Unknown */
@@ -1168,9 +1029,7 @@ img:hover {
 
 /* FeedTab */
 .feedTab {
-    background-color: rgba(255, 255, 255, 0.64) !important;
     padding: 5px;
-    color: black !important;
 }
 
 /* "Verify" "Unverify" Hover Button On Profile Page */
@@ -1239,6 +1098,7 @@ img:hover {
     height: 20px;
     color: rgb(255, 255, 255);
     background-color: rgb(248 96 96) !important;
+    border: 3px solid #0000;
 }
 
 /* "Follow" Button On Profile Page */
@@ -1433,16 +1293,6 @@ input:checked + .slider:hover { /* rgb(164 64 64) Background Color */
     background-color: #949494;
 }
 
-/* Settings of "Region Stats" "UI Scale" "Disable Rarity Animations" "Show Profile Pictures" "Master Volume" Text */
-.settName, .settNameSmall {
-    color: rgb(0 0 0) !important;
-}
-
-/* Unknown */
-.postSubInfo {
-    color: rgba(0, 0, 0, 0.74) !important;
-}
-
 /* Slider Sml2 Hover Input In Settings Page */
 .sliderSml2:hover {
     background-color: rgb(113, 113, 113) !important;
@@ -1535,8 +1385,8 @@ input:checked + .slider2::before {
 
 /* Unknown */
 #backgroundImage {
-    opacity: 0.7;
-    background: #000 !important;
+    opacity: 0.5;
+    background-image: url("https://i.imgur.com/Xpbxmd6.png") !important;
 }
 
 /* Unknown */
@@ -1589,38 +1439,6 @@ input:checked + .slider2::before {
 /* Unknown */
 [style="margin-left:103px"] {
     margin-left: 0px !important;
-}
-
-/* Unknown */
-#postProf {
-    width: 50px;
-    height: 50px;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-/* Unknown */
-#postInput {
-    margin-top: 10px;
-    padding: 10px;
-    vertical-align: top;
-    width: 580px;
-    height: 26px;
-    border-radius: 4px;
-}
-
-/* Unknown */
-.postCFoll {
-    margin-right: 5px;
-    font-size: 16px;
-}
-
-/* Unknown */
-#postButton {
-    margin-top: 5px;
-    margin-bottom: 3px;
-    height: 35px;
-    width: 200px;
 }
 
 /* Unknown */
@@ -1890,11 +1708,6 @@ input:checked + .slider2::before {
 }
 
 /* Unknown */
-#postKR {
-    width: 575px;
-}
-
-/* Unknown */
 .krGivFol {
     color: rgb(0, 0, 0) !important;
 }
@@ -1998,26 +1811,6 @@ input:checked + .slider2::before {
     color: #fff !important;
 }
 
-/* "You will be charged a 10% KR Fee to post make a Giveaway Post" Message On Say something Page */
-#krInptHol > div { /* Full Black Color */
-    color: #000 !important;
-}
-
-/* [CLAN] Text */
-#postHolder > div > div.postHead > div.postInfo > div > span > span:nth-child(2) { /* #424242 Color */
-    color: #424242 !important;
-}
-
-/* [CLAN] Text On Activity Page */
-#pTabContent_activity > div > div.postHead > div.postInfo > div > span > span:nth-child(2) { /* #424242 Color */
-    color: #424242 !important;
-}
-
-/* "Manage Preferences" Button */
-#ot-sdk-btn-floating .ot-floating-button__front { /* Hide "Manage Preferences" Button */
-    display: none !important;
-}
-
 /* "Share" Button In Post */
 .shareBtnHol { /* rgb(248 96 96) Background Color */
     background-color: rgb(248 96 96) !important;
@@ -2027,11 +1820,6 @@ input:checked + .slider2::before {
 .shareBtnHol:hover { /* rgb(164 64 64) Background Color */
     background-color: rgb(164 64 64) !important;
     opacity: 999;
-}
-
-/* "[Count] Members" Text */
-#clanRoster > div > div > span { /* Black Text Color */
-    color: black !important;
 }
 
 /* Market Sales Of "Count" KR */
@@ -2109,36 +1897,9 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
     background-color: var(--mhb) !important;
 }
 
-/* [Share] Button On Map Info Page */
-.button { 
-    background-color: rgb(255 255 255) !important;
-    box-shadow: inset 0 -7px 0 0 rgb(255 255 255) !important;
-    color: #000 !important;
-    border: 3px solid #000;
-}
-
-/* [Host] Button On Map Info Page */
-.buttonH { 
-    background-color:rgb(255 255 255) !important;
-    box-shadow: inset 0 -7px 0 0 rgb(255 255 255) !important;
-}
-
-/* [Play] Button On Map Info Page */
-.buttonS { 
-    background-color: rgb(255 255 255) !important;
-    box-shadow: inset 0 -7px 0 0 rgb(255 255 255) !important;
-    color: #9eeb56 !important;
-}
-
-/* [Report] Button On Map Info Page */
-.buttonR { 
-    background-color: rgb(255 255 255) !important;
-    box-shadow: inset 0 -7px rgb(255 255 255) !important;
-}
-
 /* "No active servers" Text On Map Info Page Of Servers Tab */
-#activeGames > div > div { /* Black Text Color */
-    color: black !important;
+#activeGames > div > div {
+    color: rgb(255 255 255 / 50%) !important;
 }
 
 /* "Publish/Update" Button On Publish Game Popup */
@@ -2216,16 +1977,6 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
     color: white !important;
 }
 
-/* Since */
-.leftMidHolder { /* Black Text */
-    color: rgb(0 0 0) !important;
-}
-
-/* "by" Clans Leaderboard */
-#leaderList > div > div > span { /* Black Text */
-    color: #000 !important
-}
-
 /* Rank Icon */
 .rnkIcon { /* Hide */
     display: none !important;
@@ -2241,11 +1992,6 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
     background-color: rgb(164 64 64) !important;
     opacity: 999 !important;
     color: white !important;
-}
-
-/* by Text In Clan Info Page */
-#clanInfo > div > div.clanInfH > span:nth-child(2) { /* Black Text */
-    color: #000 !important;
 }
 
 /* Unfollow Button Active */
@@ -2344,29 +2090,6 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
     background-color: rgb(248 96 96) !important;
 }
 
-/* Feed Tab Icons */
-.feedTabIcon {
-    color: rgb(0 0 0 / 90%) !important;
-}
-
-/* Post Content Text */
-#postHolder > div > div.postHead > div.postContent > div, #postHolder > div > div.postHead > div.postContent > div > div {
-    color: #000 !important;
-}
-
-/* Likes Holder */
-.likesHolder {
-    padding: 5px;
-    color: rgba(255,255,255,.4);
-    background: rgb(0 0 0 / 50%);
-    border-radius: 5px;
-}
-
-/* Post TopBar Text */
-#postTopBar > b, #postTopBar > span.material-icons.likeBtn {
-    color: #000 !important;
-}
-
 /* Comment Hover Button */
 #postTopStat > div > span:nth-child(3):hover, #postHolder > div > div.likesHolder > span:nth-child(3):hover, #pTabContent_activity > div > div.likesHolder > span:nth-child(3):hover {
     color: #00bdff !important;
@@ -2422,16 +2145,6 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
     color: #fff !important;
 }
 
-/* Map Name...etc */
-#mapProfile > div > div:nth-child(3) > div:nth-child(1), #mapProfile > div > div:nth-child(3) > div:nth-child(2) > a, #mapProfile > div > div:nth-child(3) > div:nth-child(2), #mapProfile > div > div:nth-child(3) > div:nth-child(3), #mapDescr > div > div > b, #mapProfile > div > div:nth-child(3) > div:nth-child(3) > span:nth-child(2), #mapProfile > div > div:nth-child(3) > div:nth-child(3) > b:nth-child(1), #mapProfile > div > div:nth-child(3) > div:nth-child(3) > span:nth-child(5), #totalOnline {
-    color: #000 !important;
-}
-
-/* Leaderboard Players in Map Info */
-#mapLeaders > div:nth-child(1), #mapLeaders > div:nth-child(1) > span {
-    color: #000 !important;
-}
-
 /* Big Map Featured Play Button */
 #bigMFeatPBtn {
     border: 3px solid #fff !important;
@@ -2475,16 +2188,23 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
     color: #fff !important;
 }
 
-/* Profile Post Feed */
-#pTabContent_activity > div > div.postHead > div.postInfo > div > span > a, #pTabContent_activity > div > div.postHead > div.postContent > div {
-    color: #000 !important;
+/* Settings/Gift KR - Top Header */
+.setPopHeader, .popHeader {
+    border-bottom: 4px solid #00000000;
+    background-color: rgb(0 0 0 / 50%);
+    box-shadow: none !important;
 }
 
-/* Feed Profile Name */
-#postHolder > div > div.postHead > div.postInfo > div > span > a {
-    color: #000 !important;
+/* Image Collection, Add Image in Image Collection */
+div.openCollection, div.imageListAdd {
+    background-color: rgb(248, 96, 96) !important;
 }
 
+/* Manage Ad Preferences */
+[style="background-color: #994cd1!important;font-size: 17px;padding: 5px;border-radius: 4px;text-align: center;margin-top: 10px;color: rgba(255, 255, 255, 1) !important;"] {
+    background: rgb(248 96 96) !important;
+    filter: hue-rotate(76deg);
+}
 
 /*
 
@@ -2493,7 +2213,3 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
     Social Profile Page: https://i.imgur.com/0FwiaXm.png
 
 */
-
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */

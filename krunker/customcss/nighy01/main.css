@@ -1,31 +1,5 @@
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-
-/* -------------------------------------------The End------------------------------------------- */
-#jumpSVIDHolder {
-    display: block !important;
-    transform: translateY(-20%);
-    padding-top: 1000px;
-    padding-left: 10px;
-    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
-}
-
-#jumpSVIDHolder::before {
-    content: 'Due to drastic changes in Krunker UI updates, this CSS project has been dropped for maintenance. Please use another CSS project instead.';
-    -webkit-user-drag: auto;
-    font-size: 40px;
-    color: #ffffffba !important;
-    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
-}
-
-body > canvas, #menuHolder, #aHider {
-    display: none !important;
-}
-/* -------------------------------------------The End------------------------------------------- */
-
-/* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2023/07/05 */
+/* Nighy01's Krunker Custom CSS */
+/* Updated: 2023/10/13 */
 
 /* Variables */
 :root {
@@ -43,7 +17,7 @@ body > canvas, #menuHolder, #aHider {
     --home-menu-text-color: rgb(255, 255, 255);
     
     /* Unknown */
-    --topbar-background-color: rgba(0, 0, 0, 0.5);
+    --topbar-background-color: rgb(0 0 0 / 10%);
     
     /* Unknown */
     --topbar-text-color: rgb(255, 255, 255);
@@ -238,7 +212,7 @@ body > canvas, #menuHolder, #aHider {
     --leaderboard-team-color: rgba(255, 255, 255, 0.6);
     
     /* Unknown */
-    --leaderboard-enemy-color: rgb(255, 0, 0);
+    --leaderboard-enemy-color: rgb(255 102 102);
     
     /* Premium Icon Color */
     --premium-color: rgb(255 166 33);
@@ -247,7 +221,7 @@ body > canvas, #menuHolder, #aHider {
     --verified-color: rgb(38 169 255);
     
     /* Unknown */
-    --enemy-score-color: rgb(255, 0, 0);
+    --enemy-score-color: rgb(255 81 81);
     
     /* Unknown */
     --team-score-color: rgb(255, 255, 255);
@@ -313,7 +287,7 @@ body > canvas, #menuHolder, #aHider {
     --chat-team-color: rgb(123, 255, 0);
     
     /* Unknown */
-    --chat-enemy-color: rgb(255, 0, 0);
+    --chat-enemy-color: rgb(255 61 61);
     
     /* Unknown */
     --chat-leave-text-color: rgb(3, 159, 252);
@@ -343,15 +317,13 @@ body > canvas, #menuHolder, #aHider {
     --class-hp-unit-color: rgb(255, 147, 147);
     
     /* Unknown */
-    --class-level-color: rgb(248, 96, 96);
+    --class-level-color: rgb(255 255 255);
     
     /* Unknown */
     --class-progress-bar-color: rgb(248, 96, 96);
     
     /* Unknown */
-    --class-progress-bar-background-color: rgb(36, 36, 36);
-
-}
+    --class-progress-bar-background-color: rgb(36, 36, 36);}
 
 /* Main Texts */
 * {
@@ -364,12 +336,20 @@ body > canvas, #menuHolder, #aHider {
     box-shadow: inset 0 -7px 0 0 var(--main-button-shadow-color) !important;
     color: var(--main-button-text-color) !important;
     border-radius: var(--main-button-corner-roundness) !important;
+    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
+    border: none !important;
 }
 
 /* Main Hover Buttons */
 .button:hover {
     background-color: var(--main-button-hover-color) !important;
     box-shadow: inset 0 -7px 0 0 var(--main-button-hover-shadow-color) !important;
+    border: none !important;
+}
+
+/* KPD Button */
+#policeButton {
+    border: none !important;
 }
 
 /* "Register" & "Login" Button */
@@ -471,6 +451,7 @@ body > canvas, #menuHolder, #aHider {
     background-color: var(--secondary-button) !important;
     color: var(--secondary-button-text) !important;
     border-radius: var(--secondary-button-roundness) !important;
+    border: 4px solid #0000;
 }
 
 /* "Quick Join" Hover Button */
@@ -540,7 +521,7 @@ body > canvas, #menuHolder, #aHider {
 
 /* Unknown */
 .sliderM {
-    background-color: rgb(138, 138, 138) !important;
+    background-color: rgb(168 168 168) !important;
 }
 
 /* Unknown */
@@ -549,7 +530,7 @@ body > canvas, #menuHolder, #aHider {
 }
 
 /* Unknown */
-input:checked + .slider {
+input:checked + .slider, input:checked+.advancedSlider {
     background-color: var(--input) !important;
 }
 
@@ -705,8 +686,9 @@ a:active {
     transition-duration: 0.2s;
 }
 
-/* Unknown */
+/* Enter Message */
 #chatInput {
+    background-color: var(--chat-input-background-color) !important;
     border-radius: var(--chat-input-roundness);
     color: var(--chat-text-color) !important;
 }
@@ -768,13 +750,6 @@ a:active {
 }
 
 /* Unknown */
-#chatInput {
-    background-color: var(--chat-input-background-color) !important;
-    width: 76%;
-    margin-left: 1px;
-}
-
-/* Unknown */
 .chatMsg span[style*="color:#eb5656"] {
     color: var(--chat-enemy-color) !important;
 }
@@ -787,11 +762,6 @@ a:active {
 /* Unknown */
 .chatMsg span[style*="color:#fff"] {
     color: var(--chat-you-color) !important;
-}
-
-/* Unknown */
-.headerBar {
-    background-color: var(--topbar-background-color) !important;
 }
 
 /* Unknown */
@@ -917,11 +887,6 @@ a:active {
 }
 
 /* Unknown */
-.settName, .settNameSmall, span[style*="color: rgba(0, 0, 0, 0.5)"], #accResp, #requiresRestart {
-    color: rgba(0, 0, 0, 0.76) !important;
-}
-
-/* Unknown */
 .hpBSeg, .healthBarSeg {
     border-radius: var(--health-bar-roundness);
 }
@@ -939,13 +904,11 @@ a:active {
 /* Unknown */
 #uiBase.onMenu #chatHolder {
     left: 15px;
-    transition-duration: 0.2s !important;
 }
 
 /* Unknown */
 #uiBase.onGame #chatHolder {
     left: 15px;
-    transition-duration: 0.2s !important;
 }
 
 /* Unknown */
@@ -995,7 +958,7 @@ a:active {
 
 /* Unknown */
 .headerBar {
-    background: rgba(0, 0, 0, 0) !important;
+    background-color: var(--topbar-background-color) !important;
     box-shadow: rgba(0, 0, 0, 0.11) 60px 0px 120px inset !important;
 }
 
@@ -1005,14 +968,9 @@ a:active {
     box-shadow: none !important;
 }
 
-/* Unknown */
-#mainLogo {
+/* KRUNKER Logo */
+#mainLogo, #mainLogoFace {
     display: none;
-}
-
-/* Unknown */
-#menuWindow {
-    background-color: rgba(255, 255, 255, 0.77) !important;
 }
 
 /* Unknown */
@@ -1027,22 +985,6 @@ a:active {
     color: rgba(255, 255, 255, 0) !important;
 }
 
-/* Unknown */
-.settingsHeader {
-    background-color: rgba(255, 255, 255, 0) !important;
-}
-
-/* Unknown */
-#merchImg {
-    display: none;
-    animation: 0s ease 0s 1 normal none running none;
-}
-
-/* Unknown */
-#gameUI {
-    opacity: 0.8;
-}
-
 /* Chal Prog */
 .chalProg {
     color: #fff !important;
@@ -1052,18 +994,21 @@ a:active {
 .buttonP {
     background-color: rgb(248, 96, 96) !important;
     box-shadow: rgb(164, 64, 64) 0px -7px 0px 0px inset !important;
+    border: none !important;
 }
 
 /* "Servers" Button */
 .buttonR {
     background-color: rgb(248, 96, 96) !important;
     box-shadow: rgb(164, 64, 64) 0px -7px 0px 0px inset !important;
+    border: none !important;
 }
 
 /* "Ranked" Button */
 .buttonG {
     background-color: rgb(255, 96, 96) !important;
     box-shadow: rgb(164, 64, 64) 0px -7px 0px 0px inset !important;
+    border: none !important;
 }
 
 /* Unknown */
@@ -1084,7 +1029,7 @@ a:active {
 
 /* Unknown */
 #popupBack {
-    background-color: rgba(0, 0, 0, 0) !important;
+    background-color: rgb(0 0 0 / 50%) !important;
 }
 
 /* Unknown */
@@ -1107,23 +1052,17 @@ a:active {
 }
 
 /* Unknown */
-#purchaseSelector {
-    border-radius: 10px;
-    background-color: rgba(213, 213, 213, 0.89) !important;
-}
-
-/* Unknown */
 .redVouchBtn:hover {
     background-color: rgb(164, 64, 64) !important;
 }
 
 /* Unknown */
-input:checked + .slider:hover {
+input:checked + .slider:hover, input:checked+.advancedSlider:hover {
     background-color: rgb(164, 64, 64) !important;
 }
 
 /* Unknown */
-.slider:hover {
+.slider:hover, .advancedSlider:hover {
     background-color: rgb(130, 130, 130) !important;
 }
 
@@ -1215,7 +1154,7 @@ input:checked + .slider2:hover {
 }
 
 /* Server Search */
-#serverSearch { /* Black Text */
+#serverSearch { 
     color: rgb(0 0 0) !important;
 }
 
@@ -1284,18 +1223,32 @@ input:checked + .sliderSml:hover {
 
 /* Unknown */
 .readAll {
-    color: rgb(255, 255, 255) !important;
+    background-color: var(--main-button-color) !important;
+    box-shadow: none !important;
+    color: var(--main-button-text-color) !important;
+    border-radius: var(--main-button-corner-roundness) !important;
+    text-shadow: none !important;
+    border: none !important;
 }
 
 /* Unknown */
 .readAll:hover {
-    opacity: 999;
-    background-color: rgb(228, 0, 0) !important;
+    background-color: var(--main-button-color) !important;
+    box-shadow: none !important;
+    color: var(--main-button-text-color) !important;
+    border-radius: var(--main-button-corner-roundness) !important;
+    text-shadow: none !important;
+    border: none !important;
 }
 
 /* Unknown */
-.readAll:active {
-    background-color: rgb(169, 0, 0) !important;
+div.readAll:active {
+    background-color: var(--main-button-color) !important;
+    box-shadow: none !important;
+    color: var(--main-button-text-color) !important;
+    border-radius: var(--main-button-corner-roundness) !important;
+    text-shadow: none !important;
+    border: none !important;
 }
 
 /* Unknown */
@@ -1451,20 +1404,24 @@ input:checked + .sliderSml:hover {
     margin-left: 10px;
 }
 
-/* Unknown */
+/* Menu KR Count */
 #menuKRCount {
     font-size: 16px;
-    color: rgb(255, 255, 255) !important;
+}
+
+/* Menu "KR" Count */
+#menuKRCount > span {
+    color: rgb(248, 96, 96) !important;
+}
+
+/* Menu Junk Count Icon */
+#menuJNKCount > span {
+    color: rgb(248, 96, 96) !important;
 }
 
 /* Unknown */
 .verticalSeparator {
-    background-color: rgb(255, 255, 255) !important;
-}
-
-/* Unknown */
-#mLevelCont {
-    display: none;
+    background-color: rgb(255 255 255 / 50%) !important;
 }
 
 /* Unknown */
@@ -1730,7 +1687,6 @@ input:checked + .optCheck:hover {
 /* Unknown */
 #termsInfo {
     background-color: rgba(0, 0, 0, 0) !important;
-    display: none !important;
 }
 
 /* Unknown */
@@ -1787,8 +1743,8 @@ input:checked + .sliderSml {
     background-image: url("https://i.imgur.com/ERgSXBN.png");
 }
 
-/* Unknown */
-[style="color:#2196F3;font-size:33px;vertical-align:bottom;"] {
+/* Verified, Partner, Premium */
+[style="color:#2196F3;font-size:33px;vertical-align:bottom;"], [style="color:#993299;font-size:33px;vertical-align:bottom;"], [style="color:#FBC02D;font-size:33px;vertical-align:bottom;"] {
     display: none !important;
 }
 
@@ -1881,22 +1837,9 @@ a:hover {
     text-decoration: none;
 }
 
-/* Unknown */
-#policePopC {
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.85) !important;
-}
-
-/* Unknown */
-.polApplc {
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.1) !important;
-    color: black !important;
-}
-
-/* Unknown */
-[style="font-size:30px;margin-bottom:20px"] {
-    display: none;
+/* KPD Desc */
+#policePopC > div:nth-child(2) {
+    color: rgb(255 255 255 / 50%) !important;
 }
 
 /* Unknown */
@@ -2138,11 +2081,6 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.63) !important;
 }
 
-/* Unknown */
-[style="color:#fff;font-size:20px;position:relative;"] {
-    color: black !important;
-}
-
 /* Like & Dislike Buttons */
 .material-icons.vote {
     color: rgb(255, 255, 255) !important;
@@ -2190,12 +2128,12 @@ a:hover {
 
 /* Unknown */
 #instructionHolder {
-    display: none !important;
+    display: none;
 }
 
 /* Unknown */
 #chatUI {
-    display: none !important;
+    display: none;
 }
 
 /* Donate Button */
@@ -2218,18 +2156,24 @@ a:hover {
     background-image: url("https://i.imgur.com/WZM3hj0.png") !important;
 }
 
-/* Unknown */
-#menuItemContainer {
+/* Menu Container */
+#menuItemContainer, div#menuItemContainer {
     width: fit-content;
     height: min-content;
     top: 5px;
     left: 50%;
     transform: translateX(-50%);
     flex-direction: row;
+    background-color: transparent;
 }
 
-/* Unknown */
-.menuItem {
+/* Menu Icon */
+.menBtnIcn {
+    display: none !important;
+}
+
+/* Menu Item */
+.menuItem, div.menuItem {
     align-items: center;
     background: transparent;
     pointer-events: none;
@@ -2241,20 +2185,20 @@ a:hover {
 }
 
 /* Unknown */
-.menuItem:hover {
+.menuItem:hover, div.menuItem:hover {
     background: rgba(255, 255, 255, 0);
     color: rgb(255, 255, 255);
     border-left: none;
 }
 
 /* Unknown */
-.menuItem:active {
+.menuItem:active, div.menuItem:active {
     background: transparent;
     color: rgb(255, 255, 255);
 }
 
 /* Unknown */
-.menuItem .menuItemTitle {
+.menuItem .menuItemTitle, div.menuItemTitle {
     margin-top: -6px;
     text-transform: var(--text-transform);
     pointer-events: all;
@@ -2271,8 +2215,8 @@ a:hover {
     box-shadow: rgb(164, 64, 64) 0px -7px 0px 0px inset !important;
 }
 
-/* Unknown */
-.menuItemTitle:hover {
+/* Menu Button */
+.menuItemTitle:hover, div.menuItemTitle:hover {
     margin-top: -6px;
     text-transform: var(--text-transform);
     pointer-events: all;
@@ -2289,8 +2233,8 @@ a:hover {
     box-shadow: rgb(172, 172, 172) 0px -7px 0px 0px inset !important;
 }
 
-/* Unknown */
-.menuItemTitle:active {
+/* Menu Button */
+.menuItemTitle:active, div.menuItemTitle:active {
     margin-top: -6px;
     text-transform: var(--text-transform);
     pointer-events: all;
@@ -2392,24 +2336,28 @@ a:active {
 .buttonG:active {
     background-color: rgb(172, 172, 172) !important;
     box-shadow: rgb(125, 125, 125) 0px -7px 0px 0px inset !important;
+    border: none !important;
 }
 
 /* Unknown */
 .buttonP:active {
     background-color: rgb(172, 172, 172) !important;
     box-shadow: rgb(125, 125, 125) 0px -7px 0px 0px inset !important;
+    border: none !important;
 }
 
 /* Unknown */
 .buttonPI:active {
     background-color: rgb(172, 172, 172) !important;
     box-shadow: rgb(125, 125, 125) 0px -7px 0px 0px inset !important;
+    border: none !important;
 }
 
 /* Unknown */
 .buttonR:active {
     background-color: rgb(172, 172, 172) !important;
     box-shadow: rgb(125, 125, 125) 0px -7px 0px 0px inset !important;
+    border: none !important;
 }
 
 /* Unknown */
@@ -2589,11 +2537,6 @@ a:active {
 }
 
 /* Unknown */
-[style="margin-top:10px;font-size:15px;color:rgba(255,255,255,0.4)"] {
-    color: black !important;
-}
-
-/* Unknown */
 #instructionsUpdateCredit {
     text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000;
 }
@@ -2606,8 +2549,6 @@ a:active {
 /* "GAME UPDATING" Card */
 #instructionsUpdate {
     border-radius: 10px;
-    background-color: rgb(255 255 255 / 82%) !important;
-    color: black !important;
 }
 
 /* Unknown */
@@ -2618,12 +2559,6 @@ a:active {
 /* Unknown */
 [style="color:rgba(0,0,0,0.6);margin-bottom:20px"] {
     color: black !important;
-}
-
-/* Unknown */
-#referralHeader {
-    text-shadow: none;
-    color: rgb(0, 0, 0) !important;
 }
 
 /* "Killed By" & "You Died" Text */
@@ -2667,8 +2602,8 @@ a:active {
 }
 
 /* Enter Server Password Input */
-input, textarea:hover { /* White Background Color */
-    background-color: rgb(255 255 255) !important;
+input, textarea:hover {
+    background-color: #e3e3e3 !important;
 }
 
 /* Unknown */
@@ -2817,120 +2752,15 @@ input:hover + .tSubCheck {
 }
 
 /* "Featured Creators/Streaming Now!/Now Live" etc Creator Ads */
-#streamContainer { /* White Text Color, 0px Left, Transparent Background Color, 63px Top, 1 z-index */
+#streamContainer { 
     color: rgb(255, 255, 255) !important;
     margin-left: -135px;
-    background-color: rgb(0 0 0 / 0%) !important;
-    margin-top: -15px;
     z-index: 1;
 }
 
 /* Unknown */
 #instructionsUpdateCredit:active {
     color: rgb(149 149 149) !important;
-}
-
-/* Terms Popup Background */
-.onetrust-pc-dark-filter {
-    background: rgb(0 0 0 / 0%) !important;
-}
-
-/* Terms Popup */
-#onetrust-consent-sdk #onetrust-banner-sdk {
-    border-radius: 10px;
-    background-image: url(https://i.imgur.com/8c03JdV.png);
-}
-
-/* Cookies Settings Button */
-#onetrust-consent-sdk #onetrust-pc-btn-handler {
-    color: rgb(255 255 255) !important;
-    border-color: rgb(248 96 96) !important;
-    background-color: rgb(248 96 96) !important;
-    border-radius: 5px;
-}
-
-/* Cookies Settings Hover Button */
-#onetrust-consent-sdk #onetrust-pc-btn-handler:hover {
-    background-color: rgb(164 64 64) !important;
-    border-color: rgb(164 64 64) !important;
-    opacity: 999 !important;
-}
-
-/* Accept All Cookies Button */
-#onetrust-consent-sdk #onetrust-accept-btn-handler, #onetrust-banner-sdk #onetrust-reject-all-handler {
-    background-color: rgba(248 96 96) !important;
-    border-color: rgba(248 96 96) !important;
-    border-radius: 5px;
-}
-
-/* Accept All Cookies Hover Button */
-#onetrust-consent-sdk #onetrust-accept-btn-handler, #onetrust-banner-sdk #onetrust-reject-all-handler:hover {
-    background-color: rgba(164 64 64) !important;
-    border-color: rgba(164 64 64) !important;
-    opacity: 999 !important;
-}
-
-/* Unknown */
-#onetrust-banner-sdk .ot-sdk-button:hover, #onetrust-banner-sdk :not(.ot-leg-btn-container)>button:hover, #onetrust-banner-sdk input[type="submit"]:hover, #onetrust-banner-sdk input[type="reset"]:hover, #onetrust-banner-sdk input[type="button"]:hover, #onetrust-banner-sdk .ot-sdk-button:focus, #onetrust-banner-sdk :not(.ot-leg-btn-container)>button:focus, #onetrust-banner-sdk input[type="submit"]:focus, #onetrust-banner-sdk input[type="reset"]:focus, #onetrust-banner-sdk input[type="button"]:focus, #onetrust-pc-sdk .ot-sdk-button:hover, #onetrust-pc-sdk :not(.ot-leg-btn-container)>button:hover, #onetrust-pc-sdk input[type="submit"]:hover, #onetrust-pc-sdk input[type="reset"]:hover, #onetrust-pc-sdk input[type="button"]:hover, #onetrust-pc-sdk .ot-sdk-button:focus, #onetrust-pc-sdk :not(.ot-leg-btn-container)>button:focus, #onetrust-pc-sdk input[type="submit"]:focus, #onetrust-pc-sdk input[type="reset"]:focus, #onetrust-pc-sdk input[type="button"]:focus, #ot-sdk-cookie-policy .ot-sdk-button:hover, #ot-sdk-cookie-policy :not(.ot-leg-btn-container)>button:hover, #ot-sdk-cookie-policy input[type="submit"]:hover, #ot-sdk-cookie-policy input[type="reset"]:hover, #ot-sdk-cookie-policy input[type="button"]:hover, #ot-sdk-cookie-policy .ot-sdk-button:focus, #ot-sdk-cookie-policy :not(.ot-leg-btn-container)>button:focus, #ot-sdk-cookie-policy input[type="submit"]:focus, #ot-sdk-cookie-policy input[type="reset"]:focus, #ot-sdk-cookie-policy input[type="button"]:focus {
-    opacity: 999 !important;
-}
-
-/* Unknown */
-#onetrust-consent-sdk #onetrust-pc-sdk, #onetrust-consent-sdk #search-container, #onetrust-consent-sdk #onetrust-pc-sdk .ot-switch.ot-toggle, #onetrust-consent-sdk #onetrust-pc-sdk group-toggle .checkbox, #onetrust-consent-sdk #onetrust-pc-sdk #pc-title:after {
-    background-color: #ffffffd9 !important;
-    border-radius: 5px;
-}
-
-/* Unknown */
-#onetrust-pc-sdk.ot-fade-in, .onetrust-pc-dark-filter.ot-fade-in {
-    animation-name: none !important;
-    animation-duration: 0s !important;
-    animation-timing-function: none !important;
-}
-
-/* Unknown */
-#onetrust-consent-sdk #onetrust-pc-sdk button:not(#clear-filters-handler):not(.ot-close-icon):not(#filter-btn-handler):not(.ot-remove-objection-handler):not(.ot-obj-leg-btn-handler), #onetrust-consent-sdk #onetrust-pc-sdk .ot-leg-btn-container .ot-active-leg-btn {
-    background-color: rgb(248 96 96) !important;
-    border-color: rgb(248 96 96) !important;
-    border-radius: 5px;
-}
-
-/* Unknown */
-#onetrust-consent-sdk #onetrust-pc-sdk button:not(#clear-filters-handler):not(.ot-close-icon):not(#filter-btn-handler):not(.ot-remove-objection-handler):not(.ot-obj-leg-btn-handler), #onetrust-consent-sdk #onetrust-pc-sdk .ot-leg-btn-container .ot-active-leg-btn:hover {
-    background-color: rgba(164 64 64) !important;
-    border-color: rgba(164 64 64) !important;
-}
-
-/* Unknown */
-#onetrust-consent-sdk #onetrust-pc-sdk .privacy-notice-link, #onetrust-consent-sdk #onetrust-pc-sdk .category-vendors-list-handler, #onetrust-consent-sdk #onetrust-pc-sdk .category-vendors-list-handler + a, #onetrust-consent-sdk #onetrust-pc-sdk .category-host-list-handler, #onetrust-consent-sdk #onetrust-pc-sdk .vendor-privacy-notice, #onetrust-consent-sdk #onetrust-pc-sdk #hosts-list-container .host-title a, #onetrust-consent-sdk #onetrust-pc-sdk #hosts-list-container .accordion-header .host-view-cookies, #onetrust-consent-sdk #onetrust-pc-sdk #hosts-list-container .vendor-host a {
-    color: rgb(248 96 96) !important;
-}
-
-/* Unknown */
-#onetrust-pc-sdk #cookie-preferences .ot-always-active {
-    color: rgb(248 96 96) !important;
-}
-
-/* Unknown */
-#onetrust-pc-sdk .switch-checkbox:checked+.ot-switch-label .ot-switch-nob {
-    background-color: rgb(255 255 255) !important;
-    border-color: rgb(248 96 96 / 0%) !important;
-}
-
-/* Unknown */
-#onetrust-pc-sdk .ot-switch-inner:before {
-    background-color: #f86060 !important;
-}
-
-/* Unknown */
-#onetrust-pc-sdk .accordion-text .ot-switch-inner, #onetrust-pc-sdk .ot-accordion-layout.category-item .ot-switch-inner {
-    background-color: #a8a8a8 !important;
-}
-
-/* Unknown */
-#onetrust-pc-sdk .ot-switch-nob {
-    background: #ffffff !important;
-    border: 2px solid #ffffff00 !important;
 }
 
 /* Match Ended Win Icon */
@@ -3161,18 +2991,8 @@ input:hover + .tSubCheck {
 }
 
 /* "We are discontinuing this version of the Krunker Client as we are preparing for the steam release. If you want to update your client to the latest version. Please download and install the new client" Text Of Notice Client Popup */
-#clientPop { /* Black Background */
+#clientPop {
     background-color: rgba(0, 0, 0, 0.5) !important;
-}
-
-/* "No Messages" In Inbox Page */
-#mailList { /* Full Black Color */
-    color: rgb(0, 0, 0) !important;
-}
-
-/* "By" Text On Games/Mods Page */
-.mapByTxt { /* Full Black Color */
-    color: rgb(0 0 0) !important;
 }
 
 /* "Count" Views/Youtuber Text */
@@ -3227,15 +3047,27 @@ input:hover + .tSubCheck {
     padding-left: 9px;
 }
 
-/* "Create Games on the Krunker Editor" Hover Button */
-#editorBtnM:hover { /* No Animation, No Opacity */
-    transform: scale(1);
-    opacity: 999;
+/* Editor Button */
+#editorBtnM, img#editorBtnM {
+    margin-left: 12px !important;
+    margin-right: 0px !important;
+    margin-top: 0px !important;
+    height: 48px !important;
+    display: block !important;
 }
 
-/* "Create Games on the Krunker Editor" Button */
-#editorBtnM { /* Hide "Create Games on the Krunker Editor" Button */
-    display: none;
+/* Download Client Button */
+[src="./img/client.png"] {
+    content: url(https://i.imgur.com/XkDeUPp.png) !important;
+    transform: translate(-3px) !important;
+    transition-duration: .15s;
+}
+
+/* Krunker Editor Button */
+[src="./img/editor.png"] {
+    transform: translate(-1px) !important;
+    content: url(https://i.imgur.com/5VlCJ7l.png) !important;
+    transition-duration: .15s;
 }
 
 /* "* timeframes are estimates" Text */
@@ -3430,16 +3262,6 @@ input:hover + .tSubCheck {
     background-size: 101% !important;
 }
 
-/* Shop Page Premium Tab of Time Remaining */
-#premTime { /* Black Color */
-    color: rgb(0 0 0) !important;
-}
-
-/* By purchasing you agree to the Terms. Consider Support your favorite Content Creator by using a Creator Code */
-#menuWindow > div:nth-child(2) > div:nth-child(1) { /* Black Text Color */
-    color: white !important;
-}
-
 /* Not Selected */
 #menuWindow > div.bigMenTabs > div:nth-child(1) {
     color: rgba(255,255,255,.7) !important;
@@ -3468,16 +3290,19 @@ input:hover + .tSubCheck {
 /* Games Page Host/Play Button */
 #bigMFeatHBtn, #bigMFeatPBtn {
     background-color: rgb(66 66 66) !important;
+    border: none;
 }
 
 /* Games Page Host/Play Button */
 #bigMFeatHBtn:hover, #bigMFeatPBtn:hover {
     background-color: rgb(146 146 146) !important;
+    border: none !important;
 }
 
 /* Games Page Host/Play Button */
 #bigMFeatHBtn:active, #bigMFeatPBtn:active {
     background-color: rgb(105 105 105) !important;
+    border: none !important;
 }
 
 /* Game/Mod Page Home Button */
@@ -3515,21 +3340,6 @@ input:hover + .tSubCheck {
     color: #fff !important;
 }
 
-/* Redeem Vouchers from certain Streamers & Events */
-#menuWindow > div:nth-child(5) > div:nth-child(1) { /* White Text Color */
-    color: white !important;
-}
-
-/* Reversing a payment can result in the termination of your krunker account. */
-#purchaseSelector > div:nth-child(2) { /* Black Text Color */
-    color: black !important;
-}
-
-/* By purchasing you agree to the Terms & Conditions */
-[style="color:rgba(255,255,255,0.4);font-size:19px;margin-top:10px;width:100%;text-align:center;"]{
-    color: black !important;
-}
-
 /* Select a Server Type */
 .serverHostOp { /* White Text Color */
     color: #fff !important;
@@ -3545,14 +3355,14 @@ input:hover + .tSubCheck {
 }
 
 /* Premium Star Icon */
-.premText i { /* Hide */
-    color: #fff0 !important;
+.premText i {
+    color: #0000 !important;
 }
 
-/* [Golden Badge...etc] Text */
-.premText { /* -43px Margin Left */
-    color: #000 !important;
-    margin-left: -43px;
+/* Reduced Ads (are u sure?), Golden Badge on Profile...etc Texts */
+.premText {
+    margin-left: -20px;
+    border-bottom: 3px solid rgb(0 0 0 / 0%);
 }
 
 /* "Success! Share the link" Text */
@@ -3633,21 +3443,6 @@ input:hover + .tSubCheck {
     color: #fff !important;
 }
 
-/* Server Cost */
-#hostActionH > span, #hCustCost { /* rgba(0, 0, 0, 0.76) Text Color */
-    color: rgba(0, 0, 0, 0.76) !important;
-}
-
-/* Comp Server Setup Info */
-#krRewardsInfo > div > div > span { /* Black Text Color */
-    color: black !important;
-}
-
-/* Select Server Type */
-.serverHostOpH { /* Hide */
-    display: none !important;
-}
-
 /* Comp Server Setup etc */
 #menuWindow > div.settName.b { /* Hide */
     display: none !important;
@@ -3661,16 +3456,6 @@ input:hover + .tSubCheck {
 /* Team 1/2 Hover Slider */
 .sliderCent:hover {
     background-color: rgb(144 144 144) !important;
-}
-
-/* Mod Dropper Border */
-#modDropper { /* rgb(67 67 67) Border Color */
-    border: 4px dashed rgb(67 67 67) !important;
-}
-
-/* drop mod file here or click */
-#modDropper p { /* rgb(67 67 67) Text Color */
-    color: rgb(67 67 67) !important;
 }
 
 /* Settings Active Button In Servers Browser Page */
@@ -3711,8 +3496,8 @@ input:hover + .tSubCheck {
 }
 
 /* Enter Text Input */
-.accountInput { /* White Background Color, Black Text Color */
-    background-color: rgb(255 255 255) !important;
+.accountInput { 
+    background-color: rgb(188 188 188) !important;
     color: #000 !important;
 }
 
@@ -3854,23 +3639,6 @@ input:checked+.sliderSml:active:after {
     background-color: #525252;
 }
 
-/* Selector Item */
-.selectorItem {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    height: 142px;
-    width: 130px;
-    background-color: #999999;
-    border-radius: 5px;
-    margin-top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    filter: none;
-    transition: .1s;
-    cursor: pointer;
-}
-
 /* Selector Item/Icon */
 .selectorItem .selectorIcon {
     filter: none;
@@ -3916,20 +3684,11 @@ input:checked+.sliderSml:active:after {
     color: white !important;
 }
 
-/* Unknown */
-[style="font-size:19px;margin-bottom:10px;color:rgba(255,255,255,0.4)"] {
-    color: #000 !important;
-}
-
-/* Menu Window Dark Div */
-#menuWindow.dark div {
-    color: #000;
-}
-
 /* Estimated Views Count */
 #menuWindow > div:nth-child(9) > div:nth-child(6) > span {
     color: #fff !important;
 }
+
 /* You have... */
 #menuWindow > div:nth-child(4) > div {
     color: #000 !important;
@@ -3955,6 +3714,13 @@ input:checked+.sliderSml:active:after {
 /* Dark TabANew */
 .dark .tabANew {
     border-bottom: 7px solid rgba(255 255 255 / 0%)!important;
+}
+
+/* Left Of "Advertise" Button */
+#termsInfo::before { 
+    content: 'Reborn Step 1 - Main UI';
+    font-size: 16px;
+    color: #ffffffba !important;
 }
 
 /* Item SearchH */
@@ -3986,8 +3752,7 @@ input:checked+.sliderSml:active:after {
 
 /* Window Background */
 #windowHolder.popupWin {
-    background-color: rgb(0 0 0 / 10%) !important;
-    transition-duration: 0.2s;
+    background-color: rgb(0 0 0 / 50%) !important;
 }
 
 /* Selector Container */
@@ -4057,32 +3822,9 @@ input:checked+.sliderSml:active:after {
     background-color: rgb(106 106 106) !important;
 }
 
-/* Settings Header */
-.setHed {
-    border: 4px solid rgb(255 255 255 / 0%) !important;
-    background-color: rgb(179 179 179) !important;
-    color: #fff !important;
-}
-
-/* Chat Input Holder */
-#chatInputHolder {
-    width: 115% !important;
-    transition-duration: 0.2s;
-}
-
-/* Chat Switch */
-#chatSwitch {
-    margin-left: -40px !important;
-}
-
 /* Hover Chat Switch */
 #chatSwitch:hover {
     color: rgb(170 170 170) !important;
-}
-
-/* Chat Holder */
-#chatHolder {
-    transition-duration: 0.2s;
 }
 
 /* Watch on Twitch */
@@ -4102,24 +3844,9 @@ input:checked+.sliderSml:active:after {
     color: rgba(255,255,255,.7) !important;
 }
 
-/* Custom Server Setup */
-#menuWindow > div.hostHeader {
-    display: none !important;
-}
-
 /* Offical Host Map Text */
 .hostMapName, .hostMapYear, .hostMapVersion  {
     color: #fff !important;
-}
-
-/* Community...etc */
-.setBodH {
-    background-color: rgb(179 179 179) !important;
-}
-
-/* Big Tabs */
-.bigMenTabs {
-    background-color: rgb(171 171 171) !important;
 }
 
 /* Hover BigTabA */
@@ -4331,11 +4058,6 @@ input:checked+.sliderSml:active:after {
     content: url(https://i.imgur.com/VxLGDy7.png);
 }
 
-/* Login & Register */
-#referralHeader { /* Hide */
-    display: none !important;
-}
-
 /* Reticle Cards */
 .noBtnCard {
     color: #fff !important;
@@ -4352,13 +4074,8 @@ input:checked+.sliderSml:active:after {
     background-color: rgb(85 85 85) !important;
 }
 
-/* Unknown */
-#serverHolder > div:nth-child(1) {
-    color: black !important;
-}
-
-/* New to... */
-.youNewDiv, #twitchDropsAd, #newUserGuide, #tlInfHold > div:nth-child(3) {
+/* Home Store Ad, New to Krunker?, Season [SEASON_NUM] */
+.youNewDiv, #twitchDropsAd, #newUserGuide, #tlInfHold > div:nth-child(3), #homeStoreAd {
     margin-left: -132px !important;
 }
 
@@ -4439,6 +4156,142 @@ input:checked+.sliderSml:active:after {
     color: rgba(255,255,255,.5) !important;
 }
 
+/* Top Right Ad  */
+#topRightAdHolder {
+    transform: translateY(285px) translateX(325px);
+}
+
+/* Now Playing: [GAME] */
+#mapInfoHld {
+    border-bottom: 5px solid rgb(255 255 255 / 20%);
+}
+
+/* Levels */
+#mLevelCont {
+    background-color: rgb(0 0 0 / 20%);
+}
+
+/* Import Button in Import Settings */
+.mapFndB {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(248, 96, 96) !important;
+}
+
+/* Home, Promo Codes */
+#menuWindow > div.bigMenTabs > div:nth-child(1) > span, #menuWindow > div.bigMenTabs > div:nth-child(6) > span {
+    color: rgb(248 ,96, 96) !important;
+}
+
+/* Home, Promo Codes Selected */
+#menuWindow > div.bigMenTabs > div.bigMenTab.bigMenTabA > span {
+    color: white !important;
+}
+
+/* Clan Create/Sumbit */
+.clanSubmitBtn {
+    background-color: rgb(248, 96, 96);
+}
+
+/* Clan Create/Sumbit Hover Button */
+.clanSubmitBtn:hover {
+    background-color: rgb(171 67 67);
+}
+
+/* Purchase "KR" */
+#shopHeader > div.bigMenTabs > div:nth-child(4) > span {
+    color: rgb(248, 96, 96) !important;
+}
+
+/* ? Select Info */
+.selctInfoBtn {
+    background-color: rgb(248, 96, 96);
+}
+
+/* ? Select Info Hover */
+.selctInfoBtn:hover {
+    background-color: rgb(171 67 67);
+}
+
+/* New to Krunker? - "Check the Guide" , Season [SEASON_NUM] - "New Battle Pass" */
+.helpGuidOpn, #battlepassAd > div.helpTxtHol > div:nth-child(2) {
+    color: rgb(248, 96, 96) !important;
+}
+
+/* Start Game */
+#startServBtn, div#startServBtn {
+    background: rgb(248 96 96) !important;
+    filter: hue-rotate(135deg);
+}
+
+/* Join Button */
+.joinBtn {
+    background-color: rgb(248, 96, 96);
+}
+
+/* to unlock the full experience! */
+.frvrFTUEText {
+    color: rgb(255 255 255 / 90%);
+    filter: none;
+}
+
+/* Click to Play Button (New Users Only) */
+.c2pBtn {
+    background-color: rgb(248, 96, 96);
+}
+
+/* Top Left Ad  */
+#topLeftAdHolder {
+    transform: translateY(0px) translateX(-136px);
+}
+
+/* Expert Mode */
+div#expertModeBtn {
+    left: 15px;
+    border-radius: 4px;
+    padding: 5px 14px 17px;
+    color: rgb(255, 255, 255) !important;
+    font-size: 18px !important;
+    background-color: rgb(248, 96, 96) !important;
+    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
+    box-shadow: rgb(164, 64, 64) 0px -7px 0px 0px inset !important;
+    border: none !important;
+}
+
+/* Expert Mode Hover */
+div#expertModeBtn:hover {
+    left: 15px;
+    border-radius: 4px;
+    padding: 5px 14px 17px;
+    color: rgb(255, 255, 255) !important;
+    font-size: 18px !important;
+    background-color: rgb(255, 255, 255) !important;
+    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
+    box-shadow: rgb(172, 172, 172) 0px -7px 0px 0px inset !important;
+    border: none !important;
+}
+
+/* Expert Mode Active */
+div#expertModeBtn:active {
+    left: 15px;
+    border-radius: 4px;
+    padding: 5px 14px 17px;
+    color: rgb(255, 255, 255) !important;
+    font-size: 18px !important;
+    background-color: rgb(172, 172, 172) !important;
+    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
+    box-shadow: rgb(125, 125, 125) 0px -7px 0px 0px inset !important;
+    border: none !important;
+}
+
+/* Whats new? - "Update vx.x.x" */
+#updateAdVersion {
+    color: rgb(248, 96, 96);
+}
+
+/* Image Collection, Add Image in Image Collection */
+div.openCollection, div.imageListAdd {
+    background-color: rgb(248, 96, 96) !important;
+}
 
 /*
 
@@ -4465,7 +4318,3 @@ input:checked+.sliderSml:active:after {
     Match Ended Leaderboard: https://i.imgur.com/vy2NAmz.png
 
 */
-
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */

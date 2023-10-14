@@ -1,26 +1,4 @@
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-
-/* -------------------------------------------The End------------------------------------------- */
-#uiBase {
-    background: #000;
-    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
-}
-
-#uiBase::before {
-    content: 'Due to drastic changes in Krunker UI updates, this CSS project has been dropped for maintenance. Please use another CSS project instead.';
-    font-size: 29px;
-    color: #ffffffba !important;
-    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
-}
-
-#view {
-    display: none !important;
-}
-/* -------------------------------------------The End------------------------------------------- */
-
-/* This is Nighy01's Krunker Editor Custom CSS */
+/* Nighy01's Krunker Editor Custom CSS */
 /* Updated: 2023/07/05 */
 
 /* Variables */
@@ -37,7 +15,6 @@
 #hotbar, .panel, .toolbarDropDown, .toolbarSubDropDown, .qs_textarea, .qs_title_bar, #menuWindow { /* Changed Background Color rgb(53 53 53 / 82%), Box Shadow 1px 0px 20px 0px rgba(0,0,0,.5) */
     background-color: rgb(53 53 53 / 82%) !important;
     box-shadow: none !important;
-    display: none !important;
 }
 
 /* "Spawn Points" etc Map Stat */
@@ -664,7 +641,3 @@ input:checked+.slider2 { /* rgb(248 96 96) Background Color */
      Editor Mods Popup: https://i.imgur.com/GYJbp6R.png
 
 */
-
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
