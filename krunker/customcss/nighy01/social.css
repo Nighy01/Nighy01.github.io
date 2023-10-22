@@ -1,74 +1,53 @@
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
+/* RedFance Krunker Hub CSS */
+/* By Nighy Riy (Nighy01) */
 
-/* -------------------------------------------The End------------------------------------------- */
-#backgroundImage {
-    background: #000;
-    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
-}
+/* 2023/10/22 */
 
-#backgroundImage::before {
-    content: 'Due to drastic changes in Krunker UI updates, this CSS project has been dropped for maintenance. Please use another CSS project instead.';
-    font-size: 23px;
-    color: #ffffffba !important;
-    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
-}
 
-#leftAHol, #rightAHol, #feedHolder, #editrDB, #aHolder, #uiBase {
-    display: none !important;
-}
-/* -------------------------------------------The End------------------------------------------- */
+/* Variables ==================================================================================================== */
 
-/* This is Nighy01's Krunker Hub Custom CSS */
-/* Updated: 2023/07/05 */
-
-/* Variables */
 :root {
 
     /* Main Buttons */
-    --mb: rgb(248 96 96);
+    --main-buttons: rgb(248 96 96);
 
     /* Main Hover Buttons */
-    --mhb: rgb(164 64 64);
+    --main-hover-buttons: rgb(164 64 64);
 
     /* Verified Icon Color */
-    --vic: rgb(0, 154, 255);
+    --verified-icon-color: rgb(248 96 96);
 
     /* Premium Icon Color */
-    --pic: rgb(255, 153, 0);
+    --premium-icon-color: rgb(248 96 96);
 
     /* Profile Page Buttons Color */
-    --ppbc: rgb(248 96 96);
+    --profile-page-buttons-color: rgb(248 96 96);
 
     /* Profile Page Buttons Hover Color */
-    --ppbhc: rgb(164 64 64);
+    --profile-page-buttons-hover-color: rgb(164 64 64);
 
-    /* XP Bars Color On Profile Page */
-    --xpbcopp: rgb(248 96 96);
+    /* XP Bar Color On Profile Page */
+    --xp-bar-color-on-profilepg: rgb(248 96 96);
 
     /* Slider Input Color */
-    --sic: rgb(248 96 96);
+    --slider-input-color: rgb(248 96 96);
 
     /* Slider Hover Input Color */
-    --shic: rgb(164 64 64);
+    --slider-hover-input-color: rgb(164 64 64);
 
 }
 
-/* Main Text */
-* {
-    color: rgb(0, 0, 0);
-}
+/* Variables ==================================================================================================== */
 
-/* Main Link Text */
-a {
-    color: rgb(0, 0, 0);
-}
 
-/* Main Link Hover Text */
-a:hover {
-    color: rgb(0 0 0);
-}
+
+/* OT1. Others ==================================================================================================== */
+
+
+
+/* OT1. Others ==================================================================================================== */
+
+
 
 /* "By" Text */
 [style="margin-top:1px;display: block;color: rgba(0,0,0,0.2);font-size: 15px;text-align: left;"] {
@@ -76,18 +55,8 @@ a:hover {
 }
 
 /* Unknown */
-.mapSubItm {
-    color: rgb(0, 0, 0) !important;
-}
-
-/* Unknown */
 [style="color: rgba(0, 0, 0, 0.6);"] {
     color: #232323 !important;
-}
-
-/* Unknown */
-#mapDescr, #mapVid, #modDescr, #modVid {
-    color: rgb(0, 0, 0);
 }
 
 /* Unknown */
@@ -100,27 +69,14 @@ a:hover {
     color: black !important;
 }
 
-/* Unknown */
-.follCount {
-    color: rgb(0, 0, 0) !important;
-}
-
-/* Unknown */
-.mapSubDesc {
-    border-top: 5px solid rgb(0, 0, 0) !important;
-}
-
 /* Krunker Hub Top Buttons */
 #navBar {
-    background-color: rgba(0, 0, 0, 0) !important;
-    display: none !important;
+    background-color: rgb(0 0 0 / 20%) !important;
 }
 
 /* Unknown */
 .scrollItem {
     max-height: calc(100% - 30px);
-    background-color: rgb(78 78 78 / 90%);
-    box-shadow: rgba(78 78 78 / 90%) 0px 7px 0px 0px !important;
 }
 
 /* Unknown */
@@ -136,6 +92,7 @@ a:hover {
     background-color: rgba(0, 0, 0, 0) !important;
     color: rgb(255, 255, 255) !important;
 }
+
 
 /* Unknown */
 .leaderBtn2 {
@@ -154,7 +111,7 @@ a:hover {
 
 /* Unknown */
 .leaderBtn2:hover {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgb(255 255 255 / 30%);
 }
 
 /* Market Item Card */
@@ -180,9 +137,9 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.76) !important;
 }
 
-/* Unknown */
+/* Popup Background */
 #popupBack {
-    background-color: rgba(0, 0, 0, 0) !important;
+    background-color: rgb(0 0 0 / 50%) !important;
 }
 
 /* Unknown */
@@ -200,18 +157,6 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.64) !important;
 }
 
-/* Old Black Market Background */
-.darkBG { /* Change to Krunker Origin Background */
-    padding: 0px;
-    background-image: url("https://assets.krunker.io/textures/wall_0.png");
-    background-repeat: repeat;
-    background-size: 300px 300px;
-    image-rendering: pixelated;
-    overflow: hidden;
-    margin: 0px;
-    background-color: rgb(109, 109, 109) !important;
-}
-
 /* Unknown */
 #followPop {
     background-color: rgba(213, 213, 213, 0.8) !important;
@@ -220,30 +165,6 @@ a:hover {
 /* Unknown */
 .material-icons.mic1:hover {
     color: rgba(255, 255, 255, 0.61) !important;
-}
-
-/* Krunker Hub Background */
-html, body { /* Change To Very Clean Background */
-    background-color: rgb(109, 109, 109);
-    padding: 0px;
-    background-image: url("https://imgur.com/cgNsmPT");
-    background-repeat: repeat;
-    background-size: 300px 300px;
-    image-rendering: pixelated;
-    overflow: hidden;
-    margin: 0px;
-}
-
-/* Old Black Market Background */
-.darkBG { /* Change To Very Clean Background */
-    padding: 0px;
-    background-image: url("https://imgur.com/cgNsmPT");
-    background-repeat: repeat;
-    background-size: 300px 300px;
-    image-rendering: pixelated;
-    overflow: hidden;
-    margin: 0px;
-    background-color: rgb(109, 109, 109) !important;
 }
 
 /* Unknown */
@@ -294,13 +215,13 @@ html, body { /* Change To Very Clean Background */
 .accountButton { /* 3px Border Radius, White Text Color, rgb(248 96 96) Background Color */
     border-radius: 3px;
     color: rgb(255, 255, 255) !important;
-    background-color: var(--mb) !important;
+    background-color: var(--main-buttons) !important;
 }
 
 /* "Login" Hover Button In Login Account Popup */
 .accountButton:hover { /* White Text Color, rgb(164 64 64) Background Color */
     color: rgb(255, 255, 255) !important;
-    background-color: var(--mhb) !important;
+    background-color: var(--main-hover-buttons) !important;
 }
 
 /* Unknown */
@@ -334,8 +255,8 @@ html, body { /* Change To Very Clean Background */
 }
 
 /* Class Stats XP Bars On Profile Page */
-.clsXPBarC { /* rgb(248 96 96) Background Color */
-    background-color: var(--xpbcopp) !important; /* Variables To XP Bars Color On Profile Page */
+.clsXPBarC {
+    background-image: linear-gradient(to right,rgb(248 96 96),rgb(248 96 96));
 }
 
 /* Unknown */
@@ -344,28 +265,18 @@ html, body { /* Change To Very Clean Background */
 }
 
 /* Unknown */
-.clsXPBarV {
-    color: rgb(0 0 0) !important;
-}
-
-/* Unknown */
 .xpBar {
     background-color: rgb(195, 195, 195) !important;
 }
 
 /* XP Bar Of Overall Stats On Profile Page */
-.xpBarB { /* rgb(248 96 96) Background Color */
-    background-color: rgb(248 96 96) !important;
-}
-
-/* Unknown */
-.pSt strong {
-    color: rgb(0, 0, 0) !important;
+.xpBarB {
+    background-image: linear-gradient(to right,rgb(248 96 96),rgb(248 96 96));
 }
 
 /* "Publish/Update" Hover Button On Publish Game Popup */
 #pubGame:hover { /* rgb(164 64 64) Background Color */
-    background-color: var(--mhb) !important;
+    background-color: var(--main-hover-buttons) !important;
 }
 
 /* Unknown */
@@ -498,12 +409,12 @@ img:hover {
 
 /* Unknown */
 [style="margin-right:5px;font-size:26px;color:#40C4FF"] {
-    color: var(--vic) !important;
+    color: var(--verified-icon-color) !important;
 }
 
 /* Unknown */
 [style="color:#fbc02d"] {
-    color: var(--pic) !important;
+    color: var(--premium-icon-color) !important;
 }
 
 /* Unknown */
@@ -529,17 +440,17 @@ img:hover {
 
 /* Unknown */
 [style="margin-right:-2px;font-size:32px;color:#FBC02D;vertical-align:middle;margin-top:-6px;"] {
-    color: var(--pic) !important;
+    color: var(--premium-icon-color) !important;
 }
 
 /* Unknown */
 [style="margin-right:1px;font-size:32px;color:#40C4FF;vertical-align:middle;margin-top:-6px;"] {
-    color: var(--vic) !important;
+    color: var(--verified-icon-color) !important;
 }
 
 /* Unknown */
 [style="color:#FBC02D"] {
-    color: var(--pic) !important;
+    color: var(--premium-icon-color) !important;
 }
 
 /* Unknown */
@@ -580,26 +491,12 @@ img:hover {
 
 /* Unknown */
 [style="color:#FBC02D;margin-top:-8px;font-size:28px;vertical-align:middle;"] {
-    color: var(--pic) !important;
+    color: var(--premium-icon-color) !important;
 }
 
 /* Unknown */
 [style="color:#40C4FF;margin-top:-8px;margin-right: 4px;font-size:28px;vertical-align:middle;"] {
-    color: var(--vic) !important;
-}
-
-/* Unknown */
-.button.lgn {
-    text-shadow: none;
-    padding: 3px 8px;
-    top: -8px;
-    margin-left: 5px;
-    left: -20px;
-    border-radius: 4px;
-    box-shadow: none !important;
-    width: 82px !important;
-    background-color: rgba(255, 255, 255, 0.64) !important;
-    color: black !important;
+    color: var(--verified-icon-color) !important;
 }
 
 /* "Enter Username" "Enter Password" Input In Login Popup */
@@ -619,22 +516,8 @@ img:hover {
 }
 
 /* Unknown */
-.button.lgn:hover {
-    transform: scale(1);
-    transition: none 0s ease 0s;
-    background-color: rgba(255, 255, 255, 0.4) !important;
-    box-shadow: none !important;
-}
-
-/* Unknown */
-#profileLogin {
-    transform: scale(1);
-    transition: none 0s ease 0s;
-}
-
-/* Unknown */
 [style="color:#40C4FF;margin-top:4px;margin-right: 4px;font-size:28px;vertical-align:baseline;"] {
-    color: var(--vic) !important;
+    color: var(--verified-icon-color) !important;
 }
 
 /* Old "HACKER" Text On Hacker Account Profile */
@@ -644,7 +527,7 @@ img:hover {
 
 /* Unknown */
 [style="margin-right:2px;font-size:26px;color:#40C4FF"] {
-    color: var(--vic) !important;
+    color: var(--verified-icon-color) !important;
 }
 
 /* Unknown */
@@ -799,12 +682,6 @@ img:hover {
 }
 
 /* Unknown */
-.button:hover {
-    background-color: rgb(255, 255, 255) !important;
-    box-shadow: rgb(172, 172, 172) 0px -7px 0px 0px inset !important;
-}
-
-/* Unknown */
 [style="margin-bottom:4px;width:39px;image-rendering:auto;"] {
     display: none;
 }
@@ -891,7 +768,7 @@ img:hover {
 /* [Post] Hover Button On Feed Page */
 #postButton:hover { /* No Filter, rgb(164 64 64) Background Color, No Opacity */
     filter: none;
-    background-color: var(--mhb) !important;
+    background-color: var(--main-hover-buttons) !important;
     opacity: 999 !important;
 }
 
@@ -901,14 +778,8 @@ img:hover {
 }
 
 /* Unknown */
-.socPost {
-    background-color: rgba(255, 255, 255, 0.64) !important;
-    box-shadow: rgba(255, 255, 255, 0.47) 0px 7px 0px 0px !important;
-}
-
-/* Unknown */
 [style="margin-bottom:3px;font-size:25px;color:#40C4FF;vertical-align:middle"] {
-    color: var(--vic) !important;
+    color: var(--verified-icon-color) !important;
 }
 
 /* Unknown */
@@ -924,47 +795,6 @@ img:hover {
 /* Unknown */
 [style="color: rgba(0, 0, 0, 0.6); font-size: 20px; margin-bottom: 10px;"] {
     color: rgb(0, 0, 0) !important;
-}
-
-/* Unknown */
-#rightABox {
-    background-color: rgba(255, 255, 255, 0.64) !important;
-    box-shadow: rgba(255, 255, 255, 0.47) 0px 7px 0px 0px !important;
-}
-
-/* Unknown */
-#leftAdHol {
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.64) !important;
-    box-shadow: rgba(255, 255, 255, 0.47) 0px 7px 0px 0px !important;
-}
-
-/* Unknown */
-#rightFollBox {
-    background-color: rgba(255, 255, 255, 0.64) !important;
-    box-shadow: rgba(255, 255, 255, 0.47) 0px 7px 0px 0px !important;
-}
-
-/* Unknown */
-.sideBarHeader {
-    border-bottom: none;
-    color: rgb(0, 0, 0) !important;
-}
-
-/* Unknown */
-[style="color:rgba(255,255,255,0.4);font-size:12px"] {
-    color: rgb(49, 49, 49) !important;
-}
-
-/* Unknown */
-.sideBarItem {
-    background-color: rgba(0, 0, 0, 0.05);
-    margin-bottom: 5px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    color: rgba(0, 0, 0, 0.73) !important;
 }
 
 /* [Follow] Hover Buttons On "Who to Follow" Popup */
@@ -996,18 +826,13 @@ img:hover {
 }
 
 /* Unknown */
-.postTime {
-    color: rgba(0, 0, 0, 0.6);
-}
-
-/* Unknown */
 [style="margin-bottom:5px;font-size:25px;color:#FBC02D;vertical-align:middle;margin-left:-2px"] {
-    color: var(--pic) !important;
+    color: var(--premium-icon-color) !important;
 }
 
 /* Unknown */
 [style="margin-bottom:5px;font-size:25px;color:#40C4FF;vertical-align:middle;margin-left:-2px"] {
-    color: var(--vic) !important;
+    color: var(--verified-icon-color) !important;
 }
 
 /* [Reply] Hover Button */
@@ -1036,37 +861,6 @@ img:hover {
 }
 
 /* Unknown */
-.scrollItemNew {
-    background-color: rgba(255, 255, 255, 0.64) !important;
-    box-shadow: rgba(255, 255, 255, 0.47) 0px 7px 0px 0px !important;
-}
-
-/* Unknown */
-.profileTabs {
-    background-color: rgba(255, 255, 255, 0.64) !important;
-    box-shadow: rgba(255, 255, 255, 0.47) 0px 7px 0px 0px !important;
-}
-
-/* Unknown */
-.profileTab:hover {
-    box-shadow: none;
-    color: white !important;
-}
-
-/* Unknown */
-.pTabA:hover {
-    box-shadow: none;
-    color: white !important;
-}
-
-/* Unknown */
-.pTabA {
-    cursor: default;
-    box-shadow: none;
-    color: white !important;
-}
-
-/* Unknown */
 .classCard {
     cursor: default;
 }
@@ -1079,15 +873,15 @@ img:hover {
 /* [Gift KR] Button */
 #giftBtn { /* White Text Color, rgb(248 96 96) Background/Border Color */
     color: white !important;
-    background: var(--ppbc) !important; /* Variables To Profile Page Buttons Color */
-    border-color: var(--ppbc) !important; /* Variables To Profile Page Buttons Color */
+    background: var(--profile-page-buttons-color) !important; /* Variables To Profile Page Buttons Color */
+    border-color: var(--profile-page-buttons-color) !important; /* Variables To Profile Page Buttons Color */
 }
 
 /* [Gift KR] Hover Button */
 #giftBtn:hover { /* No Animation, rgb(164 64 64) Background/Border Color */
-    border-color: var(--ppbhc) !important;
+    border-color: var(--profile-page-buttons-hover-color) !important;
     transform: scale(1);
-    background-color: var(--ppbhc) !important;
+    background-color: var(--profile-page-buttons-hover-color) !important;
 }
 
 /* Unknown */
@@ -1100,7 +894,7 @@ img:hover {
     transition: none 0s ease 0s;
     transform: scale(1);
     color: rgb(255, 255, 255) !important;
-    background: var(--ppbhc) !important;
+    background: var(--profile-page-buttons-hover-color) !important;
 }
 
 /* Unknown */
@@ -1108,7 +902,7 @@ img:hover {
     transition: none 0s ease 0s;
     transform: scale(1);
     color: rgb(255, 255, 255) !important;
-    background: var(--ppbhc) !important;
+    background: var(--profile-page-buttons-hover-color) !important;
 }
 
 /* Report Button On Profile Page */
@@ -1118,7 +912,7 @@ img:hover {
     padding: 1px 10px;
     border-radius: 5px;
     margin-right: 5px;
-    background: var(--ppbc) !important; /* Variables To Profile Page Buttons Color */
+    background: var(--profile-page-buttons-color) !important; /* Variables To Profile Page Buttons Color */
     color: rgb(255, 255, 255) !important;
 }
 
@@ -1129,7 +923,7 @@ img:hover {
     padding: 1px 10px;
     border-radius: 5px;
     font-size: 31.8px;
-    background: var(--ppbc) !important; /* Variables To Profile Page Buttons Color */
+    background: var(--profile-page-buttons-color) !important; /* Variables To Profile Page Buttons Color */
     color: rgb(255, 255, 255) !important;
 }
 
@@ -1140,50 +934,48 @@ img:hover {
 
 /* "Trade" Button On Profile Page */
 #tradeBtn { /* rgb(248 96 96) Background/Border Color, White Text Color */
-    background: var(--ppbc) !important;
-    border-color: var(--ppbc) !important;
+    background: var(--profile-page-buttons-color) !important;
+    border-color: var(--profile-page-buttons-color) !important;
     color: white !important;
 }
 
 /* "Trade" Hover Button On Profile Page */
 #tradeBtn:hover { /* No Animation, rgb(164 64 64) Background/Border Color */
     transform: scale(1);
-    background-color: var(--ppbhc) !important;
-    border-color: var(--ppbhc) !important;
+    background-color: var(--profile-page-buttons-hover-color) !important;
+    border-color: var(--profile-page-buttons-hover-color) !important;
 }
 
 /* "Unfollow" Button On Profile Page */
 .unfollow { /* White Text Color, rgb(248 96 96) Background/Border Color */
     color: white !important;
-    border-color: var(--ppbc) !important;
-    background: var(--ppbc) !important;
+    border-color: var(--profile-page-buttons-color) !important;
+    background: var(--profile-page-buttons-color) !important;
 }
 
 /* "Unfollow" Hover Button On Profile Page */
 .unfollow:hover { /* No Animation, rgb(164 64 64) Background/Border Color */
     transform: scale(1);
-    background-color: var(--ppbhc) !important;
-    border-color: var(--ppbhc) !important;
+    background-color: var(--profile-page-buttons-hover-color) !important;
+    border-color: var(--profile-page-buttons-hover-color) !important;
 }
 
 /* FeedTab */
 .feedTab {
-    background-color: rgba(255, 255, 255, 0.64) !important;
     padding: 5px;
-    color: black !important;
 }
 
 /* "Verify" "Unverify" Hover Button On Profile Page */
 #verifyBtn:hover { /* rgb(164 64 64) Background/Border Color, White Text Color */
-    background: var(--ppbhc) !important;
-    border-color: var(--ppbhc) !important;
+    background: var(--profile-page-buttons-hover-color) !important;
+    border-color: var(--profile-page-buttons-hover-color) !important;
     color: white !important;
 }
 
 /* "Verify" "Unverify" Button On Profile Page */
 #verifyBtn { /* rgb(248 96 96) Background/Border Color, White Text Color */
-    background: var(--ppbc) !important;
-    border-color: var(--ppbc) !important;
+    background: var(--profile-page-buttons-color) !important;
+    border-color: var(--profile-page-buttons-color) !important;
     color: white !important;
 }
 
@@ -1205,7 +997,7 @@ img:hover {
     padding: 1px 10px;
     border-radius: 5px;
     margin-right: 5px;
-    background: var(--ppbc) !important;
+    background: var(--profile-page-buttons-color) !important;
     color: rgb(255, 255, 255) !important;
     transform: scale(1) !important;
 }
@@ -1213,7 +1005,7 @@ img:hover {
 /* Flag Hover Button On Profile Page */
 #flagBtn:hover { /* White Icon Color, rgb(164 64 64) Background Color */
     color: rgb(255, 255, 255) !important;
-    background: var(--ppbhc) !important;
+    background: var(--profile-page-buttons-hover-color) !important;
 }
 
 /* Unknown */
@@ -1239,20 +1031,21 @@ img:hover {
     height: 20px;
     color: rgb(255, 255, 255);
     background-color: rgb(248 96 96) !important;
+    border: 3px solid #0000;
 }
 
 /* "Follow" Button On Profile Page */
 .follow { /* White Text Color, rgb(248 96 96) Background/Border Color */
     color: white !important;
-    background: var(--ppbc) !important;
-    border-color: var(--ppbc) !important;
+    background: var(--profile-page-buttons-color) !important;
+    border-color: var(--profile-page-buttons-color) !important;
 }
 
 /* "Follow" Hover Button On Profile Page */
 .follow:hover { /* No Animation, rgb(164 64 64) Background/Border Color */
     transform: scale(1);
-    background: var(--ppbhc) !important;
-    border-color: var(--ppbhc) !important;
+    background: var(--profile-page-buttons-hover-color) !important;
+    border-color: var(--profile-page-buttons-hover-color) !important;
 }
 
 /* Unknown */
@@ -1315,7 +1108,7 @@ img:hover {
 
 /* Custom Display Name(Premium) Text */
 [style="color: rgb(251, 192, 45);"] {
-    color: var(--pic) !important;
+    color: var(--premium-icon-color) !important;
 }
 
 /* Unknown */
@@ -1390,12 +1183,12 @@ img:hover {
 
 /* Slider Input Checked In Settings Popup */
 input:checked + .slider { /* rgb(248 96 96) Background Color */
-    background-color: var(--sic) !important;
+    background-color: var(--slider-input-color) !important;
 }
 
 /* Slider Hover Input Checked In Settings Popup */
 input:checked + .slider:hover { /* rgb(164 64 64) Background Color */
-    background-color: var(--shic) !important;
+    background-color: var(--slider-hover-input-color) !important;
 }
 
 /* Slider Hover Input In Settings Popup */
@@ -1405,7 +1198,7 @@ input:checked + .slider:hover { /* rgb(164 64 64) Background Color */
 
 /* Slider Val Hover Input In Settings Popup */
 .sliderVal:hover { /* rgb(164 64 64) Background Color */
-    background: var(--shic) !important;
+    background: var(--slider-hover-input-color) !important;
 }
 
 /* Unknown */
@@ -1420,27 +1213,17 @@ input:checked + .slider:hover { /* rgb(164 64 64) Background Color */
 
 /* Slider Val In Settings Popup */
 .sliderVal { /* rgb(248 96 96) Background Color */
-    background: var(--sic) !important;
+    background: var(--slider-input-color) !important;
 }
 
 /* Slider M Input Thumb In Settings Popup */
 .sliderM::-webkit-slider-thumb { /* rgb(248 96 96) Background Color */
-    background-color: var(--sic) !important;
+    background-color: var(--slider-input-color) !important;
 }
 
 /* Slider M Input In Settings Popup */
 .sliderM { /* #949494 Background Color */
     background-color: #949494;
-}
-
-/* Settings of "Region Stats" "UI Scale" "Disable Rarity Animations" "Show Profile Pictures" "Master Volume" Text */
-.settName, .settNameSmall {
-    color: rgb(0 0 0) !important;
-}
-
-/* Unknown */
-.postSubInfo {
-    color: rgba(0, 0, 0, 0.74) !important;
 }
 
 /* Slider Sml2 Hover Input In Settings Page */
@@ -1450,7 +1233,7 @@ input:checked + .slider:hover { /* rgb(164 64 64) Background Color */
 
 /* Slider Sml2 Hover Input Checked In Settings Page */
 input:checked + .sliderSml2:hover { /* rgb(164 64 64) Background Color */
-    background: var(--shic) !important;
+    background: var(--slider-hover-input-color) !important;
 }
 
 /* Unknown */
@@ -1478,12 +1261,12 @@ input:checked + .sliderSml2:hover { /* rgb(164 64 64) Background Color */
 
 /* Slider2 Hover Checked Input In Publish Game Popup */
 input:checked + .slider2:hover { /* rgb(164 64 64) Background Color */
-    background-color: var(--shic) !important;
+    background-color: var(--slider-hover-input-color) !important;
 }
 
 /* Slider2 Checked Input In Publish Game Popup */
 input:checked+.slider2 { /* rgb(248 96 96) Background Color */
-    background-color: var(--sic) !important;
+    background-color: var(--slider-input-color) !important;
 }
 
 /* Slider2 Hover In Publish Game Popup */
@@ -1534,12 +1317,6 @@ input:checked + .slider2::before {
 }
 
 /* Unknown */
-#backgroundImage {
-    opacity: 0.7;
-    background: #000 !important;
-}
-
-/* Unknown */
 #searchInput, #searchInputMO {
     background-color: rgba(255, 255, 255, 0.78) !important;
 }
@@ -1563,7 +1340,7 @@ input:checked + .slider2::before {
 
 /* Unknown */
 [style="color:#F8C55C"] {
-    color: rgb(255, 180, 23) !important;
+    color: rgb(248 96 96) !important;
 }
 
 /* Unknown */
@@ -1589,38 +1366,6 @@ input:checked + .slider2::before {
 /* Unknown */
 [style="margin-left:103px"] {
     margin-left: 0px !important;
-}
-
-/* Unknown */
-#postProf {
-    width: 50px;
-    height: 50px;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-/* Unknown */
-#postInput {
-    margin-top: 10px;
-    padding: 10px;
-    vertical-align: top;
-    width: 580px;
-    height: 26px;
-    border-radius: 4px;
-}
-
-/* Unknown */
-.postCFoll {
-    margin-right: 5px;
-    font-size: 16px;
-}
-
-/* Unknown */
-#postButton {
-    margin-top: 5px;
-    margin-bottom: 3px;
-    height: 35px;
-    width: 200px;
 }
 
 /* Unknown */
@@ -1693,17 +1438,6 @@ input:checked + .slider2::before {
 }
 
 /* Unknown */
-#searchBtn {
-    color: rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.64) !important;
-}
-
-/* Unknown */
-#searchBtn:hover {
-    background-color: rgba(161, 161, 161, 0.72) !important;
-}
-
-/* Unknown */
 #chatScroller {
     background-color: rgba(0, 0, 0, 0) !important;
 }
@@ -1730,36 +1464,26 @@ input:checked + .slider2::before {
 }
 
 /* Unknown */
-#chatWithHead {
-    color: rgb(0, 0, 0) !important;
-}
-
-/* Unknown */
-[style="margin-right:30px;font-size:28px;color:#fff"] {
-    color: rgb(0, 0, 0) !important;
-}
-
-/* Unknown */
 [style="margin-right:30px;font-size:28px;color:#fff"]:hover {
     color: white !important;
 }
 
 /* [Send] Button On Trade Chat Page */
 #chatBoxButton { /* rgb(248 96 96) Background Color, 5px Border Radius */
-    background-color: var(--mb) !important;
+    background-color: var(--main-buttons) !important;
     border-radius: 5px;
 }
 
 /* "Enter Message" Input On Trade Chat Page */
-#chatBoxInput { /* rgba(0, 0, 0, 0.18) Background Color, Black Text Color */
+#chatBoxInput {
     background-color: rgba(0, 0, 0, 0.18) !important;
     color: black !important;
 }
 
 /* [Send] Hover Button On Trade Chat Page */
-#chatBoxButton:hover { /* No Opacity, rgb(164 64 64) Background Color */
+#chatBoxButton:hover {
     opacity: 999;
-    background-color: var(--mhb) !important;
+    background-color: var(--main-hover-buttons) !important;
 }
 
 /* Unknown */
@@ -1846,13 +1570,13 @@ input:checked + .slider2::before {
     color: white !important;
 }
 
-/* Unknown */
+/* Terms */
 .terms {
     text-decoration: none;
     color: rgb(255, 255, 255) !important;
 }
 
-/* Unknown */
+/* Terms Hover */
 .terms:hover {
     text-decoration: none;
     color: rgb(162, 162, 162) !important;
@@ -1875,28 +1599,18 @@ input:checked + .slider2::before {
 
 /* KR Giveaway Button */
 #givaButton { /* rgb(248 96 96) Background Color */
-    background-color: var(--mb) !important;
+    background-color: var(--main-buttons) !important;
 }
 
 /* KR Giveaway Hover Button */
 #givaButton:hover { /* rgb(164 64 64) Background Color, No Opacity */
-    background-color: var(--mhb) !important;
+    background-color: var(--main-hover-buttons) !important;
     opacity: 999 !important;
 }
 
 /* Unknown */
 #postKR:hover {
     background-color: rgba(0, 0, 0, 0.18) !important;
-}
-
-/* Unknown */
-#postKR {
-    width: 575px;
-}
-
-/* Unknown */
-.krGivFol {
-    color: rgb(0, 0, 0) !important;
 }
 
 /* "[Follow] and Like to Enter" Text of [Follow] Hover Button */
@@ -1919,29 +1633,14 @@ input:checked + .slider2::before {
     color: #000 !important;
 }
 
-/* "-Copyrighted Materials" Text Of Report Map/Mod Popup */
-[style="color:rgba(255,255,255,0.6);margin-top:10px;"] {
-    color: #fff !important;
-}
-
-/* "-Gambling" Text Of Report Map/Mod Popup */
-[style="color:rgba(255,255,255,0.6);"] {
-    color: #fff !important;
-}
-
-/* "-Scamming" Text Of Report Map/Mod Popup */
-[style="color:rgba(255,255,255,0.6)"] {
-    color: #fff !important;
-}
-
 /* "Wishlist it on STEAM" Hover Message */
-#steamDB:hover { /* Adjusted To No Animation Effect And Never Transparent On Hover */
+#steamDB:hover {
     transform: scale(1);
     opacity: 999;
 }
 
 /* "Wishlist it on STEAM" Message */
-#steamDB { /* Hide "Wishlist it On STEAM" Message */
+#steamDB {
     display: none !important;
 }
 
@@ -1951,13 +1650,13 @@ input:checked + .slider2::before {
 }
 
 /* "3D" Button */
-.popupImgInfo:hover { /* Full White Color And Underline Decoration */
+.popupImgInfo:hover {
     color: rgb(255 255 255) !important;
     text-decoration: underline;
 }
 
 /* "Find" Button */
-.buyBtn:hover { /* Full White Color And Underline Decoration */
+.buyBtn:hover {
     color: rgb(255 255 255) !important;
     text-decoration: underline;
 }
@@ -1978,7 +1677,7 @@ input:checked + .slider2::before {
     transform: scale(1);
     padding: 3px 13px;
     border-radius: 5px;
-    background: var(--ppbc) !important; /* Variables To Profile Page Buttons Color */
+    background: var(--profile-page-buttons-color) !important; /* Variables To Profile Page Buttons Color */
     margin-right: 4px !important;
     content: url("https://i.imgur.com/Mhf6jkd.png");
 }
@@ -1990,32 +1689,12 @@ input:checked + .slider2::before {
     filter: none;
     -webkit-filter: contrast(1);
     opacity: 999 !important;
-    background-color: var(--ppbhc) !important;
+    background-color: var(--profile-page-buttons-hover-color) !important;
 }
 
 /* "LOADING" Message */
 #loadMessage > div > div:nth-child(2) { /* Full White Color */
     color: #fff !important;
-}
-
-/* "You will be charged a 10% KR Fee to post make a Giveaway Post" Message On Say something Page */
-#krInptHol > div { /* Full Black Color */
-    color: #000 !important;
-}
-
-/* [CLAN] Text */
-#postHolder > div > div.postHead > div.postInfo > div > span > span:nth-child(2) { /* #424242 Color */
-    color: #424242 !important;
-}
-
-/* [CLAN] Text On Activity Page */
-#pTabContent_activity > div > div.postHead > div.postInfo > div > span > span:nth-child(2) { /* #424242 Color */
-    color: #424242 !important;
-}
-
-/* "Manage Preferences" Button */
-#ot-sdk-btn-floating .ot-floating-button__front { /* Hide "Manage Preferences" Button */
-    display: none !important;
 }
 
 /* "Share" Button In Post */
@@ -2027,11 +1706,6 @@ input:checked + .slider2::before {
 .shareBtnHol:hover { /* rgb(164 64 64) Background Color */
     background-color: rgb(164 64 64) !important;
     opacity: 999;
-}
-
-/* "[Count] Members" Text */
-#clanRoster > div > div > span { /* Black Text Color */
-    color: black !important;
 }
 
 /* Market Sales Of "Count" KR */
@@ -2071,17 +1745,17 @@ input:checked + .slider2::before {
 
 /* [Toggle] Button On Search Market Popup */
 #filterTog, #sortTog { /* rgb(248 96 96) Background Color */
-    background-color: var(--mb) !important;
+    background-color: var(--main-buttons) !important;
 }
 
 /* [Toggle] Hover Button On Search Market Popup */
 #filterTog:hover { /* rgb(164 64 64) Background Color */
-    background-color: var(--mhb) !important;
+    background-color: var(--main-hover-buttons) !important;
 }
 
 /* Slider Sml2 Input Checked In Search Market Popup */
 input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
-    background-color: var(--sic) !important;
+    background-color: var(--slider-input-color) !important;
 }
 
 /* Season Of Hover Select */
@@ -2096,54 +1770,27 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
 
 /* [Post] Button On Feed Page */
 #postButton { /* rgb(248 96 96) Background Color */
-    background-color: var(--mb) !important;
+    background-color: var(--main-buttons) !important;
 }
 
 /* [Sort] Button On Market Page */
 #invSortB { /* rgb(248 96 96) Background Color */
-    background-color: var(--mb) !important;
+    background-color: var(--main-buttons) !important;
 }
 
 /* [Sort] Hover Button On Market Page */
 #invSortB:hover { /* rgb(164 64 64) Background Color */
-    background-color: var(--mhb) !important;
-}
-
-/* [Share] Button On Map Info Page */
-.button { 
-    background-color: rgb(255 255 255) !important;
-    box-shadow: inset 0 -7px 0 0 rgb(255 255 255) !important;
-    color: #000 !important;
-    border: 3px solid #000;
-}
-
-/* [Host] Button On Map Info Page */
-.buttonH { 
-    background-color:rgb(255 255 255) !important;
-    box-shadow: inset 0 -7px 0 0 rgb(255 255 255) !important;
-}
-
-/* [Play] Button On Map Info Page */
-.buttonS { 
-    background-color: rgb(255 255 255) !important;
-    box-shadow: inset 0 -7px 0 0 rgb(255 255 255) !important;
-    color: #9eeb56 !important;
-}
-
-/* [Report] Button On Map Info Page */
-.buttonR { 
-    background-color: rgb(255 255 255) !important;
-    box-shadow: inset 0 -7px rgb(255 255 255) !important;
+    background-color: var(--main-hover-buttons) !important;
 }
 
 /* "No active servers" Text On Map Info Page Of Servers Tab */
-#activeGames > div > div { /* Black Text Color */
-    color: black !important;
+#activeGames > div > div {
+    color: rgb(255 255 255 / 50%) !important;
 }
 
 /* "Publish/Update" Button On Publish Game Popup */
 #pubGame { /* rgb(248 96 96) Background Color */
-    background-color: var(--mb) !important;
+    background-color: var(--main-buttons) !important;
 }
 
 /* "Loading..." Text */
@@ -2183,22 +1830,22 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
 
 /* Search Button */
 #filterRBtn { /* rgb(248 96 96) Background Color */
-    background-color: var(--mb) !important;
+    background-color: var(--main-buttons) !important;
 }
 
 /* Reset Button */
 #resetFBtn { /* rgb(248 96 96) Background Color */
-    background-color: var(--mb) !important;
+    background-color: var(--main-buttons) !important;
 }
 
 /* Search Hover Button */
 #filterRBtn:hover { /* rgb(164 64 64) Background Color */
-    background-color: var(--mhb) !important;
+    background-color: var(--main-hover-buttons) !important;
 }
 
 /* Reset Hover Button */
 #resetFBtn:hover { /* rgb(164 64 64) Background Color */
-    background-color: var(--mhb) !important;
+    background-color: var(--main-hover-buttons) !important;
 }
 
 /* Category */
@@ -2214,16 +1861,6 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
 /* Like/Plays/Persons Icon Map/Mod */
 [style="margin-left: 5px;color:rgba(255, 255, 255, 0.5);vertical-align: middle;margin-top: -3px;font-size: 18px;"], [style="margin-left: 8px;color:rgba(255, 255, 255, 0.5);vertical-align: middle;margin-top: -3px;font-size: 18px;"], [style="margin-right: 8px;color:rgba(255, 255, 255, 0.5);vertical-align: middle;margin-top: -3px;font-size: 18px;"] { /* White Icon */
     color: white !important;
-}
-
-/* Since */
-.leftMidHolder { /* Black Text */
-    color: rgb(0 0 0) !important;
-}
-
-/* "by" Clans Leaderboard */
-#leaderList > div > div > span { /* Black Text */
-    color: #000 !important
 }
 
 /* Rank Icon */
@@ -2243,11 +1880,6 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
     color: white !important;
 }
 
-/* by Text In Clan Info Page */
-#clanInfo > div > div.clanInfH > span:nth-child(2) { /* Black Text */
-    color: #000 !important;
-}
-
 /* Unfollow Button Active */
 #deleteFollow:active { /* #444444 Text Color */
     color: #444444 !important;
@@ -2260,7 +1892,6 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
 
 /* Send Gift Popup */
 #giftPop { /* #353535d1 Background Color, No Box Shadow */
-    background-color: #353535d1;
     box-shadow: none !important;
 }
 
@@ -2280,7 +1911,7 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
 }
 
 /* Big Tab */
-.bigMenTab { /* #ffffff96 Text Color(Not using !important) */
+.bigMenTab {
     color: #ffffff96;
 }
 
@@ -2289,9 +1920,14 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
     color: #fff !important;
 }
 
+/* Editor, Sandbox Icon */
+#mapsHolder > div:nth-child(1) > div > div:nth-child(8) > span, #mapsHolder > div:nth-child(1) > div > div:nth-child(9) > span {
+    padding-right: 11px;
+}
+
 /* Item List Select */
 #itemsListNav>select, #itemsListNav>input { /* White Background Color */
-    background-color: #fff !important;
+    background-color: #949494 !important;
 }
 
 /* Item List Hover Select */
@@ -2344,29 +1980,6 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
     background-color: rgb(248 96 96) !important;
 }
 
-/* Feed Tab Icons */
-.feedTabIcon {
-    color: rgb(0 0 0 / 90%) !important;
-}
-
-/* Post Content Text */
-#postHolder > div > div.postHead > div.postContent > div, #postHolder > div > div.postHead > div.postContent > div > div {
-    color: #000 !important;
-}
-
-/* Likes Holder */
-.likesHolder {
-    padding: 5px;
-    color: rgba(255,255,255,.4);
-    background: rgb(0 0 0 / 50%);
-    border-radius: 5px;
-}
-
-/* Post TopBar Text */
-#postTopBar > b, #postTopBar > span.material-icons.likeBtn {
-    color: #000 !important;
-}
-
 /* Comment Hover Button */
 #postTopStat > div > span:nth-child(3):hover, #postHolder > div > div.likesHolder > span:nth-child(3):hover, #pTabContent_activity > div > div.likesHolder > span:nth-child(3):hover {
     color: #00bdff !important;
@@ -2375,16 +1988,6 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
 /* Comment Button */
 #postTopStat > div > span:nth-child(3), #postHolder > div > div.likesHolder > span:nth-child(3) {
     color: #ffffff !important;
-}
-
-/* Name, Post Content */
-#singlePostH > div:nth-child(2) > div > div.postInfo > div > span > a, #singlePostH > div:nth-child(2) > div > div.postContent > div > div {
-    color: #000 !important;
-}
-
-/* Reply Input */
-.replyInput {
-    color: #000 !important;
 }
 
 /* Home Button */
@@ -2412,24 +2015,9 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
     background-color: rgb(0 0 0 / 60%) !important;
 }
 
-/* Mod Name...etc */
-#modProfile > div > div:nth-child(3) > div:nth-child(1), #modProfile > div > div:nth-child(3) > div:nth-child(3) > div:nth-child(1), #modProfile > div > div:nth-child(3) > div:nth-child(3) > div:nth-child(1) > b, #modProfile > div > div:nth-child(3) > div:nth-child(3) > div:nth-child(2), #modProfile > div > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > b, #modProfile > div > div:nth-child(3) > div:nth-child(2), #modProfile > div > div:nth-child(3) > div:nth-child(2) > a {
-    color: #000 !important;
-}
-
 /* Play...etc */
 .button.mod {
     color: #fff !important;
-}
-
-/* Map Name...etc */
-#mapProfile > div > div:nth-child(3) > div:nth-child(1), #mapProfile > div > div:nth-child(3) > div:nth-child(2) > a, #mapProfile > div > div:nth-child(3) > div:nth-child(2), #mapProfile > div > div:nth-child(3) > div:nth-child(3), #mapDescr > div > div > b, #mapProfile > div > div:nth-child(3) > div:nth-child(3) > span:nth-child(2), #mapProfile > div > div:nth-child(3) > div:nth-child(3) > b:nth-child(1), #mapProfile > div > div:nth-child(3) > div:nth-child(3) > span:nth-child(5), #totalOnline {
-    color: #000 !important;
-}
-
-/* Leaderboard Players in Map Info */
-#mapLeaders > div:nth-child(1), #mapLeaders > div:nth-child(1) > span {
-    color: #000 !important;
 }
 
 /* Big Map Featured Play Button */
@@ -2475,16 +2063,46 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
     color: #fff !important;
 }
 
-/* Profile Post Feed */
-#pTabContent_activity > div > div.postHead > div.postInfo > div > span > a, #pTabContent_activity > div > div.postHead > div.postContent > div {
-    color: #000 !important;
+/* Settings/Gift KR - Top Header */
+.setPopHeader, .popHeader {
+    border-bottom: 4px solid #00000000;
+    background-color: rgb(0 0 0 / 50%);
+    box-shadow: none !important;
 }
 
-/* Feed Profile Name */
-#postHolder > div > div.postHead > div.postInfo > div > span > a {
-    color: #000 !important;
+/* Image Collection, Add Image in Image Collection */
+div.openCollection, div.imageListAdd {
+    background-color: rgb(248, 96, 96) !important;
 }
 
+/* Manage Ad Preferences */
+[style="background-color: #994cd1!important;font-size: 17px;padding: 5px;border-radius: 4px;text-align: center;margin-top: 10px;color: rgba(255, 255, 255, 1) !important;"] {
+    background: rgb(248 96 96) !important;
+    filter: hue-rotate(76deg);
+}
+
+/* Verified/Premium/Partner Icon */
+[style="margin-right:1px;font-size:32px;color:#40C4FF;vertical-align:middle;margin-top:-14px;"], [style="margin-right:-2px;font-size:32px;color:#993299;vertical-align:middle;margin-top:-14px;"], [style="margin-right:-2px;font-size:32px;color:#FBC02D;vertical-align:middle;margin-top:-14px;"] {
+    color: var(--verified-icon-color) !important;
+}
+
+/* Market Search Slider */
+input:checked+.filterSlider {
+    background-color: rgb(248 96 96);
+}
+
+#quickSellBtn, #declineBtn {
+    background-color: rgb(248 96 96);
+}
+
+#quickSellBtn:hover, #declineBtn:hover {
+    background-color: rgb(177 70 70);
+}
+
+/* Open Editor DB */
+#editrDB {
+    display: none;
+}
 
 /*
 
@@ -2493,7 +2111,3 @@ input:checked+.sliderSml2 { /* rgb(248 96 96) Background Color */
     Social Profile Page: https://i.imgur.com/0FwiaXm.png
 
 */
-
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */

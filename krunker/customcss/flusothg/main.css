@@ -4,7 +4,7 @@
 /* #SaveKrunker */
 /* #GetRidFRVR */
 
-/* 2023/10/12 */
+/* 2023/10/22 */
 
 /* (in STG1. Settings) CM1. Mouse Click Icon ================================================================================== */
 
@@ -1783,6 +1783,11 @@ div#aHolder {
     position: relative;
 }
 
+/* Menu Hide (New Users Only) */
+.mIH {
+    opacity: 1;
+}
+
 /* Click To Play Background */
 #instructionHolder {
     background: var(--dark-bg-color);
@@ -3410,6 +3415,11 @@ div#expertModeBtn {
 /* Home Button on Map/Mods Window */
 #menuWindow > div > div > div.bigMenTab.bigMenTabA > span, #menuWindow > div > div > div.bigMenTab.bigMenTab > span {
     color: var(--whiteColor) !important;
+}
+
+/* Editor, Sandbox Icon */
+#menuWindow > div:nth-child(1) > div > div:nth-child(8) > span, #menuWindow > div:nth-child(1) > div > div:nth-child(9) > span {
+    margin-right: 12px;
 }
 
 /* FaceIT Icon */
@@ -7354,7 +7364,7 @@ input:hover+.optCheck:active {
 
 /* Start Game Button */
 #startServBtn, div#startServBtn {
-    filter: hue-rotate(35deg) brightness(1.2) brightness(0.9);
+    filter: hue-rotate(35deg);
     transition-duration: .15s;
     border-radius: var(--LV4_RC) !important;
 }
@@ -7367,12 +7377,12 @@ input:hover+.optCheck:active {
 
 /* Start Game Hover Button */
 #startServBtn:hover {
-    filter: hue-rotate(35deg) brightness(1.2) brightness(0.8);
+    filter: hue-rotate(35deg) brightness(0.8);
 }
 
 /* Start Game Active Button */
 #startServBtn:active {
-    filter: hue-rotate(35deg) brightness(1.2) brightness(0.7);
+    filter: hue-rotate(35deg) brightness(0.7);
 }
 
 /* Enabling Default Settings allows for storing Player Progress and Highscores */

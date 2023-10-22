@@ -4,7 +4,7 @@
 /* #SaveKrunker */
 /* #GetRidFRVR */
 
-/* 2023/10/12 */
+/* 2023/10/22 */
 
 /* CF1. Configs ================================================================================== */
 
@@ -895,11 +895,6 @@ div.imgTextO, .imgTextO {
     max-height: 320px;
 }
 
-/* Follow Hover Button */
-.reqFollB:hover {
-    background-color: rgb(0 0 0 / 30%) !important;
-}
-
 /* Follow Button */
 .reqFollB {
     background: rgb(255 255 255 / 15%);
@@ -909,6 +904,34 @@ div.imgTextO, .imgTextO {
     margin-top: 6px;
     padding: 10px;
     height: 22px;
+}
+
+/* Follow Button */
+.reqFollB {
+    border: 3px solid #0000 !important;
+    margin-left: 3px;
+    margin-top: 6px;
+    padding: 10px;
+    height: 22px;
+    background: var(--Btn1Color);
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25) !important;
+    backdrop-filter: blur(var(--LV3_Blur));
+    border-radius: var(--LV2_RC) !important;
+    transition-duration: .2s;
+}
+
+/* Follow Hover Button */
+.reqFollB:hover {
+    background: var(--Btn1_HoverColor);
+    backdrop-filter: blur(var(--LV3_Blur));
+    border-radius: var(--LV4_RC) !important;
+}
+
+/* Follow Active Button */
+.reqFollB:active {
+    background: var(--Btn1_ActiveColor);
+    backdrop-filter: blur(var(--LV3_Blur));
+    border-radius: var(--LV2_RC) !important;
 }
 
 /* Share Button */
@@ -3736,4 +3759,9 @@ input:checked+.filterSlider {
 /* Market Sales          0 KR */
 .graphHeaderTxt, .graphHeaderTotal, #totalSalesHeader > span {
     user-select: text;
+}
+
+/* Editor, Sandbox Icon */
+#mapsHolder > div:nth-child(1) > div > div:nth-child(8) > span, #mapsHolder > div:nth-child(1) > div > div:nth-child(9) > span {
+    margin-right: 10px;
 }

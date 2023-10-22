@@ -1,33 +1,11 @@
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
+/* RedFance - Krunker Main CSS */
+/* By Nighy Riy (Nighy01) */
 
-/* -------------------------------------------The End------------------------------------------- */
-#jumpSVIDHolder {
-    display: block !important;
-    transform: translateY(-20%);
-    padding-top: 1000px;
-    padding-left: 10px;
-    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
-}
+/* 2023/10/22 */
 
-#jumpSVIDHolder::before {
-    content: 'Due to drastic changes in Krunker UI updates, this CSS project has been dropped for maintenance. Please use another CSS project instead.';
-    -webkit-user-drag: auto;
-    font-size: 40px;
-    color: #ffffffba !important;
-    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
-}
 
-body > canvas, #menuHolder, #aHider {
-    display: none !important;
-}
-/* -------------------------------------------The End------------------------------------------- */
+/* Variables ==================================================================================================== */
 
-/* This is Nighy01's Krunker Custom CSS */
-/* Updated: 2023/07/05 */
-
-/* Variables */
 :root {
 
     /* Terms Link Text Color */
@@ -36,22 +14,22 @@ body > canvas, #menuHolder, #aHider {
     /* Menu Background Color */
     --menu-background-color: rgba(0, 0, 0, 0.75);
     
-    /* Unknown */
+    /* Menu Hover Background Color */
     --menu-hover-background-color: rgb(248 96 96);
     
-    /* Unknown */
+    /* Home Menu Text Color */
     --home-menu-text-color: rgb(255, 255, 255);
     
-    /* Unknown */
-    --topbar-background-color: rgba(0, 0, 0, 0.5);
+    /* Top Bar Background Color */
+    --topbar-background-color: rgb(0 0 0 / 10%);
     
-    /* Unknown */
+    /* Top Bar Text Color */
     --topbar-text-color: rgb(255, 255, 255);
     
-    /* Unknown */
+    /* Top Bar Light Text Color */
     --topbar-light-text-color: rgba(255, 255, 255, 0.6);
     
-    /* Unknown */
+    /* Top Bar Roundness */
     --top-bar-roundness: 8px;
     
     /* Main Menu FPS Text Color */
@@ -60,28 +38,25 @@ body > canvas, #menuHolder, #aHider {
     /* Main Menu Ping Text Color */
     --menu-ping-color: rgb(255 255 255);
     
-    /* Unknown */
+    /* Top Bar Counters Text Color */
     --topbar-counters-text-color: rgba(255, 255, 255, 0.75);
     
-    /* Unknown */
+    /* Home Progress Bar */
     --home-progress-bar: rgb(33, 150, 243);
     
-    /* Unknown */
+    /* Home Progress Bar Background */
     --home-progress-bar-background: rgba(0, 0, 0, 0.75);
     
     /* "Map" Text Color On Left Bottom */
     --mapinfo-color: rgb(255, 255, 255);
     
-    /* Unknown */
-    --mapinfo-display: block;
-    
     /* Advertise Text Color */
     --advertise-color: rgb(248, 96, 96);
     
-    /* Unknown */
+    /* Legal Links Display */
     --legal-links-display: block;
     
-     /* Unknown */
+    /* Menu Player Name Color */
     --menu-player-name-color: rgb(255, 255, 255);
     
     /* Main Menu Premium Icon Color */
@@ -90,7 +65,7 @@ body > canvas, #menuHolder, #aHider {
     /* Main Menu Verified Icon Color */
     --home-verified-color: rgb(0, 154, 255);
     
-    /* Unknown */
+    /* Instructions Color */
     --instructions-color: rgba(255, 255, 255, 0.8);
     
     /* Show KRUNKER Logo */
@@ -99,67 +74,67 @@ body > canvas, #menuHolder, #aHider {
     /* KRUNKER Logo Size */
     --logo-size: 225px;
     
-    /* Unknown */
+    /* Show Menu Profile Picture */
     --show-menu-profile-pic: block;
     
-    /* Unknown */
+    /* Level Icon Display */
     --level-icon-display: block;
-    
-    /* Unknown */
+
+    /* Buy KR Button Diplay */
     --buy-kr-button-display: block;
     
-    /* Unknown */
+    /* Social Buttons Diplay */
     --social-buttons-display: block;
     
-    /* Unknown */
+    /* Active Streams Display */
     --active-streams-display: block;
     
     /* "FREE KR" Button Display */
     --free-kr-display: block;
     
-    /* Unknown */
+    /* Merch Button Display */
     --merch-button-display: block;
     
-    /* Unknown */
+    /* Menu Background */
     --menu-background: rgb(255, 255, 255);
 
-    /* Unknown */
+    /* Menu Shadow */
     --menu-shadow: rgb(203, 203, 203);
     
-    /* Unknown */
+    /* Menu Roundness */
     --menu-roundness: 9.53103px;
     
     /* Menu Text Color */
     --menu-text-color: rgb(53, 53, 53);
     
-    /* Unknown */
+    /* Menu Light Text Color */
     --menu-light-text-color: rgba(0, 0, 0, 0.5); 
     
-    /* Unknown */
+    /* Slider Background */
     --slider-background: rgb(194, 194, 194);
     
-    /* Unknown */
+    /* Slider Thumb Color */
     --slider-thumb-color: rgb(248 96 96 / 1);
     
-    /* Unknown */
+    /* Switch Thumb */
     --switch-thumb: rgb(255, 255, 255);
     
-    /* Unknown */
+    /* Input Text */
     --input-text: rgb(255, 255, 255);
     
-    /* Unknown */
+    /* Input Field */
     --input-field: rgb(221, 221, 221);
     
-    /* Unknown */
+    /* Input Field Placeholder */
     --input-field-placeholder: rgb(0 0 0 / 60%);
     
-    /* Unknown */
+    /* Input Field Text */
     --input-field-text: rgb(0, 0, 0);
     
-    /* Unknown */
+    /* Scrollbar */
     --scrollbar: rgb(113, 113, 113);
     
-    /* Unknown */
+    /* Scrollbar Track */
     --scrollbar-track: rgba(255, 255, 255, 0.55);
     
     /* Main Links */
@@ -177,43 +152,43 @@ body > canvas, #menuHolder, #aHider {
     /* "UnReady" Shadow Button On Ranked Page */
     --ranked-unready-shadow: rgb(164 64 64);
     
-    /* Unknown */
+    /* Ranked Ready Border Color */
     --ranked-ready-border-color: rgb(50, 205, 50);
     
-    /* Unknown */
+    /* Ranked Unready Border Color */
     --ranked-unready-border-color: rgba(0, 0, 0, 0.2);
     
-    /* Unknown */
+    /* Ranked Text */
     --ranked-text: rgb(255, 255, 255);
     
-    /* Unknown */
+    /* Presets Display */
     --presets-display: inline-block;
     
-    /* Unknown */
+    /* Input */
     --input: #F86060;
     
-    /* Unknown */
+    /* Profile Tabs Background Color */
     --profile-tabs-background-color: rgb(0 0 0 / 17%);
     
-    /* Unknown */
+    /* Profile Tabs Selected Highlight Color */
     --profile-tabs-selected-highlight-color: rgba(255, 255, 255, 0);
     
-    /* Unknown */
+    /* Profile Tabs Selected Hover Color */
     --profile-tabs-selected-hover-color: rgb(0 0 0 / 0%);
     
-    /* Unknown */
+    /* Progress Bar Filled */
     --progress-bar-filled: rgb(248, 96, 96);
     
-    /* Unknown */
-    --progress-bar-unfilled: rgb(128 128 128);
+    /* Progress Bar Unfilled */
+    --progress-bar-unfilled: rgb(150 150 150);
     
-    /* Unknown */
-    --progress-bar-text: rgb(255 255 255);
+    /* Progress Bar Text */
+    --progress-bar-text: rgb(38 38 38);
     
-    /* Unknown */
+    /* Timer Icon Display */
     --timer-icon-display: none;
     
-    /* Unknown */
+    /* Health Icon Display */
     --health-icon-display: none;
     
     /* Ammo Icon */
@@ -222,23 +197,23 @@ body > canvas, #menuHolder, #aHider {
     /* Background Color Hud */
     --hud-background-color: rgb(0 0 0 / 0.14);
     
-    /* Unknown */
+    /* Hud Text Color */
     --hud-text-color: rgba(255, 255, 255, 0.7);
     
-    /* Unknown */
+    /* Hud Bold Text Color */
     --hud-bold-text-color: rgb(255, 255, 255);
     
-    /* Unknown */
+    /* Hud Roundness */
     --hud-roundness: 10px;
     
-    /* Unknown */
+    /* Leaderboard Me Color */
     --leaderboard-me-color: rgb(255, 255, 255);
     
-    /* Unknown */
+    /* Leaderboard Team Color */
     --leaderboard-team-color: rgba(255, 255, 255, 0.6);
     
-    /* Unknown */
-    --leaderboard-enemy-color: rgb(255, 0, 0);
+    /* Leaderboard Enemy Color */
+    --leaderboard-enemy-color: rgb(255 102 102);
     
     /* Premium Icon Color */
     --premium-color: rgb(255 166 33);
@@ -246,143 +221,1886 @@ body > canvas, #menuHolder, #aHider {
     /* Verified Icon Color */
     --verified-color: rgb(38 169 255);
     
-    /* Unknown */
-    --enemy-score-color: rgb(255, 0, 0);
+    /* Enemy Score Color */
+    --enemy-score-color: rgb(255 81 81);
     
-    /* Unknown */
+    /* Team Score Color */
     --team-score-color: rgb(255, 255, 255);
     
     /* FPS Text Color */
-    --fps-color: rgb(255 255 255);
+    --fps-color: rgb(255 160 160);
     
     /* Ping Text Color */
-    --ping-color: rgb(255 255 255);
+    --ping-color: rgb(255 160 160);
     
-    /* Unknown */
+    /* Votekick Keys Color */
     --votekick-keys-color: rgb(248 96 96);
     
-    /* Unknown */
+    /* Health Bar Roundness */
     --health-bar-roundness: 5px;
     
-    /* Unknown */
+    /* Main Button Color */
     --main-button-color: rgb(248 96 96);
     
-    /* Unknown */
+    /* Main Button Shadow Color */
     --main-button-shadow-color: rgb(164 64 64);
     
-    /* Unknown */
+    /* Main Button Hover Color */
     --main-button-hover-color: rgb(255, 255, 255);
     
-    /* Unknown */
+    /* Main Button Hover Shadow Color */
     --main-button-hover-shadow-color: rgb(179, 179, 179);
     
-    /* Unknown */
+    /* Main Button Text Color */
     --main-button-text-color: rgb(255, 255, 255);
     
-    /* Unknown */
+    /* Main Button Corner Roundness */
     --main-button-corner-roundness: 4px;
     
-    /* Unknown */
+    /* Secondary Buttton */
     --secondary-button: rgb(248 96 96 / 1);
 
-    /* Unknown */
+    /* Secondary Buttton Hover */
     --secondary-button-hover: rgb(164 64 64 / 1);
     
-    /* Unknown */
+    /* Secondary Button Text */
     --secondary-button-text: rgb(255, 255, 255);
     
-    /* Unknown */
+    /* Secondary Button Roundness */
     --secondary-button-roundness: 5px;
     
-    /* Unknown */
+    /* Chat Background Color */
     --chat-background-color: rgba(0, 0, 0, 0.2);
     
-    /* Unknown */
+    /* Chat Input Background Color */
     --chat-input-background-color: rgb(0 0 0 / 0.40);
     
     /* Chat Messages Text Color */
     --chat-text-color: rgb(255 255 255);
     
-    /* Unknown */
+    /* Chat Bold Text Color */
     --chat-bold-text-color: rgb(255, 255, 255);
     
     /* "Killed You" & "Find You" etc You "Text" Color On Chat */
     --chat-you-color: rgb(255, 255, 255);
     
-    /* Unknown */
+    /* Chat Team Color */
     --chat-team-color: rgb(123, 255, 0);
     
-    /* Unknown */
-    --chat-enemy-color: rgb(255, 0, 0);
+    /* Chat Enemy Color */
+    --chat-enemy-color: rgb(255 61 61);
     
-    /* Unknown */
+    /* Chat Leave Text Color */
     --chat-leave-text-color: rgb(3, 159, 252);
     
-    /* Unknown */
+    /* Chat Mic Display */
     --chat-mic-display: block;
     
-    /* Unknown */
+    /* Chat Roundness */
     --chat-roundness: 8px;
     
-    /* Unknown */
+    /* Chat Input Roundness */
     --chat-input-roundness: 8px;
     
-    /* Unknown */
+    /* Chat Animate */
     --chat-animate: none;
     
-    /* Unknown */
+    /* Class Name Color */
     --class-name-color: rgb(255, 255, 255);
     
-    /* Unknown */
+    /* Class Weapon Color */
     --class-weapon-color: rgba(255, 255, 255, 0.7);
     
-    /* Unknown */
+    /* Classs HP Value Color */
     --class-hp-value-color: rgb(255, 255, 255);
     
-    /* Unknown */
+    /* Class HP Unit Color */
     --class-hp-unit-color: rgb(255, 147, 147);
     
-    /* Unknown */
-    --class-level-color: rgb(248, 96, 96);
+    /* Class Level Color */
+    --class-level-color: rgb(255 255 255);
     
-    /* Unknown */
+    /* Class Progress Bar Color */
     --class-progress-bar-color: rgb(248, 96, 96);
     
-    /* Unknown */
+    /* Class Progress Bar Background Color */
     --class-progress-bar-background-color: rgb(36, 36, 36);
-
 }
 
-/* Main Texts */
-* {
-    color: rgb(0 0 0);
+/* Variables ==================================================================================================== */
+
+
+
+/* Keyframes ==================================================================================================== */
+
+/* Death UI Moveup */
+@keyframes death-ui-moveup {
+    0% {
+        bottom: -300px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
 }
 
-/* Main Buttons */
-.button {
+/* Keyframes ==================================================================================================== */
+
+
+
+/* ME1. Menu ==================================================================================================== */
+
+/* Loading Ring */
+.lds-ring:after {
+    content: "a Legacy is back...";
+    font-size: 5px;
+}
+
+/* Top Menu Part ================================================== */
+
+/* Game Name Holder */
+#gameNameHolder {
+    display: var(--show-logo) !important;
+}
+
+/* Main Logo */
+#mainLogo {
+    height: var(--logo-size);
+}
+
+/* KRUNKER Logo, a Face in KRUNKER Logo */
+#mainLogo, #mainLogoFace {
+    display: none;
+}
+
+/* "Season 7!" Text In Main Menu Top Krunker Logo */
+#seasonLabel {
+    display: none !important;
+}
+
+/* Top Bar */
+div.headerBar, .headerBar {
+    background-color: var(--topbar-background-color) !important;
+    box-shadow: rgba(0, 0, 0, 0.11) 60px 0px 120px inset !important;
+}
+
+/* Top Bar Text */
+.headerBar div {
+    color: var(--topbar-text-color);
+}
+
+/* Top Bar Left */
+.headerBarLeft {
+    border-radius: 0 0 var(--top-bar-roundness) 0;
+}
+
+/* Signed Out Top Bar Container */
+div#signedOutHeaderBar > div {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+/* Login Person Icon */
+.button.lgn .material-icons {
+    display: none;
+}
+
+/* Menu Signed Profile Picture */
+#menuMiniProfilePic {
+    display: none;
+}
+
+/* Menu Account Username */
+#menuAccountUsername {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+/* Menu KR Count */
+#menuKRCount {
+    font-size: 16px;
+    color: var(--topbar-light-text-color);
+}
+
+/* Menu "KR" Count */
+#menuKRCount > span {
+    color: rgb(248, 96, 96) !important;
+}
+
+/* Menu Junk Count Icon */
+#menuJNKCount > span {
+    color: rgb(248, 96, 96) !important;
+}
+
+/* Your Notifications (Mail) Icon */
+#mailIcon {
+    transition: none 0s ease 0s;
+}
+
+/* Your Notifications (Mail) Icon Hover */
+#mailIcon:hover {
+    transition: none 0s ease 0s;
+    transform: scale(1);
+    opacity: 999;
+    color: rgb(172, 172, 172) !important;
+}
+
+/* Your Notifications (Mail) Inbox Count */
+#mailCount {
+    text-shadow: none;
+    color: rgb(0, 0, 0) !important;
+    background-color: rgb(194, 194, 194) !important;
+}
+
+/* Progress (XP) Bar */
+.progressBar {
+    background-color: var(--home-progress-bar-background) !important;
+}
+
+/* Progress (XP) Bar Inner */
+.progressBarInner {
+    background: var(--class-progress-bar-color) !important;
+}
+
+/* Levels */
+div#mLevelCont {
+    background-color: rgb(0 0 0 / 20%);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0) !important;
+}
+
+/* Menu Container */
+#menuItemContainer, div#menuItemContainer {
+    width: fit-content;
+    height: min-content;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Menu Item */
+.menuItem, div.menuItem {
+    align-items: center;
+    background: transparent !important;
+    box-shadow: none !important;
+    pointer-events: none;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 14px 5px 12px;
+}
+
+/* Menu Item Hover */
+.menuItem:hover, div.menuItem:hover {
+    background: transparent;
+    color: rgb(255, 255, 255);
+    border-left: none;
+}
+
+/* Menu Item Active */
+.menuItem:active, div.menuItem:active {
+    background: transparent;
+    color: rgb(255, 255, 255);
+}
+
+/* Hidden Buttons for New Users */
+div.mIH {
+    opacity: 1 !important;
+}
+
+/* Menu Icon */
+.menBtnIcn {
+    display: none !important;
+}
+
+/* Profile & Friends Text */
+#menuBtnProfile{
+    font-size: 0px !important;
+}
+
+/* ^to Profile Text */
+#menuBtnProfile::after {
+    content: "Profile";
+    font-size: 18px;
+}
+
+/* Menu Buttons */
+.menuItemTitle, div.menuItemTitle {
+    margin-top: -6px !important;
+    text-transform: var(--text-transform);
+    pointer-events: all;
+    transition: all 0.1s ease 0s;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 5px 18px 17px;
+    color: rgb(255, 255, 255) !important;
+    font-size: 18px !important;
+    background-color: rgb(248, 96, 96) !important;
+    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
+    box-shadow: rgb(164, 64, 64) 0px -7px 0px 0px inset !important;
+}
+
+/* Menu Buttons Hover */
+.menuItemTitle:hover, div.menuItemTitle:hover {
+    margin-top: -6px;
+    text-transform: var(--text-transform);
+    pointer-events: all;
+    transform: scale(0.95);
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 5px 18px 17px;
+    color: rgb(255, 255, 255) !important;
+    font-size: 18px !important;
+    background-color: rgb(255, 255, 255) !important;
+    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
+    box-shadow: rgb(172, 172, 172) 0px -7px 0px 0px inset !important;
+}
+
+/* Menu Buttons Active */
+.menuItemTitle:active, div.menuItemTitle:active {
+    margin-top: -6px;
+    text-transform: var(--text-transform);
+    pointer-events: all;
+    transform: scale(0.9);
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 5px 18px 17px;
+    color: white !important;
+    font-size: 18px !important;
+    background-color: rgb(172, 172, 172) !important;
+    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
+    box-shadow: rgb(125, 125, 125) 0px -7px 0px 0px inset !important;
+}
+
+/* Top Bar Right */
+.headerBarRight {
+    border-radius: 0 0 0 var(--top-bar-roundness);
+}
+
+/* Menu FPS, Menu Ping Display */
+#menuFPSDisplay, #menuPingText {
+    color: var(--topbar-counters-text-color);
+}
+
+/* FPS in Menu */
+#menuFPS {
+    color: var(--menu-fps-color) !important;
+}
+
+/* Ping Icon in Menu */
+#menuPingIcon {
+    color: var(--menu-ping-color) !important;
+}
+
+/* Vertical Separator */
+.verticalSeparator {
+    background-color: rgb(255 255 255 / 50%) !important;
+}
+
+/* Editor Button */
+#editorBtnM, img#editorBtnM {
+    margin-left: 12px !important;
+    margin-right: 0px !important;
+    margin-top: 0px !important;
+    height: 48px !important;
+    display: block !important;
+}
+
+/* Download Client Button */
+[src="./img/client.png"] {
+    content: url(https://i.imgur.com/XkDeUPp.png) !important;
+    transform: translate(-3px) !important;
+}
+
+/* Download Client Hover utton */
+[src="./img/client.png"]:hover {
+    transform: translate(-3px) scale(.9) !important;
+}
+
+/* Krunker Editor Button */
+[src="./img/editor.png"] {
+    transform: translate(-1px) !important;
+    content: url(https://i.imgur.com/5VlCJ7l.png) !important;
+}
+
+/* Krunker Editor Hover Button */
+[src="./img/editor.png"]:hover {
+    transform: translate(-1px) scale(.9) !important;
+}
+
+/* Top Menu Part ================================================== */
+
+
+
+/* Top Guide + Event + Ad + Promo's Menu ================================================== */
+
+/* Left -------------------------------------------------- */
+
+/* Top Left Ad  */
+#topLeftAdHolder {
+    transform: translateY(0px) translateX(-132px);
+    background-color: rgb(0 0 0 / 0.50) !important;
+    box-shadow: none !important;
+}
+
+/* Home Store Ad, Twitch Drops (dying...), New to Krunker?, Season [SEASON_NUM] Battle Pass */
+div.youNewDiv, div#twitchDropsAd, div#newUserGuide, #tlInfHold > div:nth-child(3), div#tlInfHold > div:nth-child(3), div#homeStoreAd {
+    margin-left: -132px !important;
+}
+
+/* Home Store Ad */
+div#homeStoreAd {
+    width: calc(150% - 20px) !important;
+}
+
+/* New to Krunker? - "Check the Guide" , Season [SEASON_NUM] - "New Battle Pass" */
+.helpGuidOpn, #battlepassAd > div.helpTxtHol > div:nth-child(2) {
+    color: rgb(248, 96, 96) !important;
+}
+
+/* You New Div */
+.youNewDiv, #homeStoreAd {
+    min-width: 295px !important;
+    max-width: 295px;
+}
+
+/* Whats new? - "Update vx.x.x" */
+#updateAdVersion {
+    color: rgb(248, 96, 96);
+}
+
+/* 2x XP Icon */
+.doubleXPIcon {
+    width: 65px;
+    height: 65px;
+    margin-left: -5px;
+    margin-bottom: -40px;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 5px;
+    background-position-x: -7px;
+    background-position-y: 0px;
+}
+
+/* 2x Class XP Weekend */
+#doubleClassXPAd > div.helpTxtHol {
+    margin-left: 72px !important;
+    margin-top: -24px;
+}
+
+/* Donate */
+.voteHint {
     background-color: var(--main-button-color) !important;
     box-shadow: inset 0 -7px 0 0 var(--main-button-shadow-color) !important;
     color: var(--main-button-text-color) !important;
     border-radius: var(--main-button-corner-roundness) !important;
+    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
+    border: none !important;
+    padding: 12px;
+    padding-top: 5px;
+    line-height: 26px;
+}
+
+/* Donate Hover Button */
+.voteHint:hover {
+    background-color: var(--main-button-hover-color) !important;
+    box-shadow: inset 0 -7px 0 0 var(--main-button-hover-shadow-color) !important;
+    border: none !important;
+}
+
+/* Donate Active Button */
+div.voteHint:active {
+    background-color: rgb(172, 172, 172) !important;
+    box-shadow: rgb(125, 125, 125) 0px -7px 0px 0px inset !important;
+    border: none !important;
+}
+
+/* Like & Dislike Buttons */
+.material-icons.vote {
+    color: rgb(255, 255, 255) !important;
+}
+
+/* Like & Dislike Hover Buttons */
+.material-icons.vote:hover {
+    transform: scale(1.2);
+    color: rgb(185, 185, 185) !important;
+}
+
+/* Left -------------------------------------------------- */
+
+
+/* Right -------------------------------------------------- */
+
+/* "Featured Creators/Streaming Now!/Now Live" etc Creator Ads */
+#streamContainer, div#streamContainer { 
+    color: rgb(255, 255, 255) !important;
+    margin-left: -135px;
+    z-index: 1;
+    background-color: rgb(0 0 0 / 0.50) !important;
+    box-shadow: none !important;
+}
+
+/* Top Right Ad  */
+#topRightAdHolder {
+    opacity: 0;
+    transform: translateY(285px) translateX(325px);
+}
+
+/* Right -------------------------------------------------- */
+
+/* Top Guide + Event + Ad + Promo's Menu ================================================== */
+
+
+
+/* Instructions Popup Part ================================================== */
+
+/* GAME UPDATING...etc Card */
+#instructionsUpdate {
+    background-color: #353535;
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+/* Lost Connection...etc Header */
+.instructionsHeader {
+    background-color: rgb(74 74 74);
+    border-bottom: 4px solid rgb(255 255 255 / 0%);
+    box-shadow: none;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Instructions Tabs */
+.instructionsTabs {
+    background-color: rgb(74 74 74);
+    box-shadow: none !important;
+    border-radius: 0px 0px 10px 10px;
+}
+
+/* Find a Game | Servers | Settings | Changelog */
+.instructionsTab {
+    border-top: 4px solid rgb(255 255 255 / 0%);
+}
+
+/* Instructions Tab Hover */
+.instructionsTab:hover {
+    border-top: 4px solid #0000;
+    color: white;
+}
+
+/* Instructions Popup Part ================================================== */
+
+
+
+/* CLICK TO PLAY/SPECTATE Part ================================================== */
+
+/* Instruction Holder */
+#instructionHolder {
+    background-color: rgb(0 0 0 / 40%);
+}
+
+/* Spectate Slider */
+.sliderSml, #spectButton > span {
+    visibility: hidden;
+    transition-duration: .1s;
+}
+
+/* Spectate Slider Hover */
+.sliderSml:hover, #spectButton > span {
+    visibility: hidden;
+    transform: scale(.95) translate(-7%,-10%);
+    transition-duration: .1s;
+}
+
+/* Spectate Slider Active */
+.sliderSml:active, #spectButton > span {
+    visibility: hidden;
+    transform: scale(.9) translate(-20%,-10%);
+    transition-duration: .1s;
+}    
+
+/* Spectate Slider to Button */
+.sliderSml:after {
+    position: absolute;
+    right: -3px;
+    background: rgb(0 0 0 / 0%) !important;
+    border-radius: 15px;
+    top: -70px;
+    padding: 20px;
+    padding-left: 16px;
+    padding-top: 15px;
+    width: 95px;
+    height: 95px;
+    transform: scale(0.4);
+    visibility: visible;
+    content: url('https://i.imgur.com/YgGRvy6.png');
+    transition-duration: .1s;
+}
+
+/* Selected Spectate Slider to Button */
+input:checked+.sliderSml:after {
+    position: absolute;
+    right: -3px;
+    background: rgb(0 0 0 / 0%) !important;
+    border-radius: 15px;
+    top: -70px;
+    padding: 20px;
+    padding-left: 16px;
+    padding-top: 15px;
+    width: 95px;
+    height: 95px;
+    transform: scale(0.4);
+    visibility: visible;
+    content: url('https://i.imgur.com/5ZlgfOk.png');
+    transition-duration: .1s;
+}
+
+/* Old Spectate Slider Hover */
+.sliderSml:hover {
+    background-color: rgb(114, 114, 114) !important;
+}
+
+/* Old Selected Spectate Slider */
+input:checked + .sliderSml {
+    background-color: rgb(248, 96, 96) !important;
+}
+
+/* Old Selected Spectate Slider Hover */
+input:checked + .sliderSml:hover {
+    background-color: rgb(164, 64, 64) !important;
+}
+
+/* CLICK TO PLAY/SPECTATE */
+#instructions {
+    animation: 0s ease 0s 1 normal none running none;
+    color: rgb(255, 255, 255) !important;
+}
+
+/* CLICK TO PLAY Button (New Users Only) */
+.c2pBtn {
+    background-color: rgb(248, 96, 96);
+}
+
+/* CLICK TO PLAY Part ================================================== */
+
+
+
+/* Menu Class Preview + Customize ================================================== */
+
+/* Bubble Container (Welcome Back!...etc) */
+#bubbleContainer {
+    top: calc(50% - 60px);
+    right: 372px;
+}
+
+/* Menu Class Selector Container */
+#menuClassContainer {
+    bottom: calc(50% - 180px);
+    transition: .2s;
+}
+
+/* Menu Class Name Tag */
+#menuClassNameTag {
+    display: block !important;
+    font-size: 15px;
+    margin-top: -230px;
+    width: 730px;
+    text-align: center;
+}
+
+/* Class Preview */
+#classPreviewCanvas {
+    margin-bottom: -200px;
+    margin-right: -190px;
+    transform: scale(0.6);
+}
+
+/* Menu Class Name/Sub */
+#menuClassContainer > div:nth-child(5) {
+    display: block !important;
+    position: fixed !important;
+    width: 725px;
+    transform: translateY(-55px);
+    text-align: center;
+}
+
+/* Menu Class Sub Text */
+#menuClassSubtext {
+    font-size: 15px;
+    text-align: center;
+}
+
+/* Menu Class Name */
+#menuClassName {
+    font-size: 25px;
+    text-align: center;
+}
+
+/* Menu Classs Icon */
+#menuClassIcn {
+    display: none;
+}
+
+/* Customize */
+div#customizeButton {
+    width: 220px;
+    right: 75px;
+    font-size: 18px !important;
+    line-height: 30px;
+}
+
+/* Menu Class Preview + Customize ================================================== */
+
+
+
+/* Chat on Menu ================================================== */
+
+/* Chat UI */
+#chatUI {
+    display: none;
+}
+
+/* Chat Holder on Menu */
+#uiBase.onMenu #chatHolder {
+    left: 15px;
+}
+
+/* Chat List [User: Test Message] */
+#chatList {
+    background-color: #0000;
+    min-height: 45px;
+    max-width: 410px;
+    border-radius: 7px;
+}
+
+/* Chat Message Item */
+.chatItem {
+    border-radius: var(--chat-roundness);
+    color: var(--chat-bold-text-color) !important;
+    max-width: 392px;
+    padding: 7px;
+    padding-left: 11px;
+    padding-right: 11px;
+    margin: 5px;
+    background-color: rgb(0 0 0 / 35%) !important;
+}
+
+/* Chat Message, Chat Item */
+.chatMsg, .chatMsg > span, .chatItem, .chatItem > span {
+    user-select: text;
+}
+
+/* System Chat */
+[style="color:#fc03ec"] {
+    color: rgb(248 96 96) !important;
+    text-shadow: none;
+}
+
+/* Chat You Text */
+.chatMsg span[style*="color:#fff"] {
+    color: var(--chat-you-color) !important;
+}
+
+/* Chat Team Text */
+.chatMsg span[style*="color: #9eeb56"] {
+    color: var(--chat-team-color) !important;
+}
+
+/* Chat Enemy Text */
+.chatMsg span[style*="color:#eb5656"] {
+    color: var(--chat-enemy-color) !important;
+}
+
+/* Chat Player Leave Text */
+.chatMsg[style*="color: #fc03ec"] {
+    color: var(--chat-leave-text-color) !important;
+}
+
+/* Chat Input Holder */
+div#chatInputHolder {
+    width: 413px;
+    border-radius: 7px;
+    background-color: rgb(0 0 0 / 30%) !important;
+    display: inline-grid;
+    grid-template-columns: auto 295px auto;
+    box-shadow: none !important;
+}
+
+/* Chat Input Holder Grid */
+div#chatInputHolder > div {
+    background-color: transparent !important;
+}
+
+/* Enter Message */
+#chatInput {
+    background-color: var(--chat-input-background-color) !important;
+    border-radius: var(--chat-input-roundness);
+    color: var(--chat-text-color) !important;
+    width: 300px;
+    transform: translateX(-7px);
+}
+
+/* Vocie On */
+.voiceOn:after {
+    color: rgb(248 96 96);
+}
+
+/* Voice [V] Key */
+#recTimer {
+    display: none;
+}
+
+/* Chat on Menu ================================================== */
+
+
+
+/* Bottom Menu Part ================================================== */
+
+/* Now Playing: [GAME] */
+#mapInfoHld {
+    border-bottom: 5px solid rgb(255 255 255 / 0%);
+}
+
+/* [GAME] = Free for All on [MAP] */
+#mapInfo {
+    color: var(--mapinfo-color) !important;
+}
+
+/* Donate Button (.voteHint) on "Top Guide + Event + Ad + Promo's Menu => Left" */
+
+/* Like & Dislike Buttons (.material-icons.vote) on "Top Guide + Event + Ad + Promo's Menu => Left" */
+
+/* Main Buttons */
+div.button, .button {
+    background-color: var(--main-button-color) !important;
+    box-shadow: inset 0 -7px 0 0 var(--main-button-shadow-color) !important;
+    color: var(--main-button-text-color) !important;
+    border-radius: var(--main-button-corner-roundness) !important;
+    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
+    border: none !important;
 }
 
 /* Main Hover Buttons */
-.button:hover {
+div.button:hover, .button:hover {
     background-color: var(--main-button-hover-color) !important;
     box-shadow: inset 0 -7px 0 0 var(--main-button-hover-shadow-color) !important;
+    border: none !important;
 }
 
-/* "Register" & "Login" Button */
-.accountButton {
-    background-color: var(--secondary-button) !important;
-    color: var(--secondary-button-text) !important;
-    border-radius: var(--secondary-button-roundness) !important;
+/* Main Active Buttons */
+div.button:active, .button:active {
+    background-color: rgb(172, 172, 172) !important;
+    box-shadow: rgb(125, 125, 125) 0px -7px 0px 0px inset !important;
+    border: none !important;
 }
 
-/* "Register" & "Login" Hover Button */
-.accountButton:hover {
-    background-color: var(--secondary-button-hover) !important;
+/* KPD Button */
+#policeButton {
+    border: none !important;
 }
+
+/* Bottom Menu Part ================================================== */
+
+
+
+/* Terms Part ================================================== */
+
+/* Contact | Experiments... */
+div#termsInfo, #termsInfo {
+    background-color: rgba(0, 0, 0, 0) !important;
+    box-shadow: none !important;
+}
+
+/* Left Of "Advertise" Button */
+/*
+#termsInfo::before { 
+    content: 'Made by Nighy Riy';
+    font-size: 16px;
+    color: #ffffffba !important;
+}
+
+/* Standout Highlight (Contact) */
+.standout {
+    color: var(--advertise-color) !important;
+}
+
+/* Vertical Separator on Terms */
+.verticalSeparatorInline {
+    border-left: 4px solid rgba(255, 255, 255, 0) !important;
+}
+
+/* | Experiments | Terms | Changelog */
+.terms {
+    color: var(--terms-color) !important;
+}
+
+/* Terms Hover */
+.terms:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255) !important;
+}
+
+/* Terms Active */
+.terms:active {
+    text-decoration: none;
+    color: rgb(125, 125, 125) !important;
+}
+
+/* Terms Part ================================================== */
+
+/* to unlock the full experience! */
+.frvrFTUEText {
+    color: rgb(255 255 255 / 90%);
+    filter: none;
+}
+
+/* Expert Mode */
+div#expertModeBtn {
+    left: 15px;
+    border-radius: 4px;
+    padding: 5px 14px 17px;
+    color: rgb(255, 255, 255) !important;
+    font-size: 18px !important;
+    background-color: rgb(248, 96, 96) !important;
+    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
+    box-shadow: rgb(164, 64, 64) 0px -7px 0px 0px inset !important;
+    border: none !important;
+}
+
+/* Expert Mode Hover */
+div#expertModeBtn:hover {
+    left: 15px;
+    border-radius: 4px;
+    padding: 5px 14px 17px;
+    color: rgb(255, 255, 255) !important;
+    font-size: 18px !important;
+    background-color: rgb(255, 255, 255) !important;
+    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
+    box-shadow: rgb(172, 172, 172) 0px -7px 0px 0px inset !important;
+    border: none !important;
+}
+
+/* Expert Mode Active */
+div#expertModeBtn:active {
+    left: 15px;
+    border-radius: 4px;
+    padding: 5px 14px 17px;
+    color: rgb(255, 255, 255) !important;
+    font-size: 18px !important;
+    background-color: rgb(172, 172, 172) !important;
+    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
+    box-shadow: rgb(125, 125, 125) 0px -7px 0px 0px inset !important;
+    border: none !important;
+}
+
+/* ME1. Menu ==================================================================================================== */
+
+
+
+/* CG1. Comp Game Menu ==================================================================================================== */
+
+/* Alpha Join/Leave Team Button */
+#compPlListL > div.compSwpTmB {
+    background-color: rgb(235 64 52);
+    box-shadow: inset 0 -7px 0 0 rgb(147 41 33);
+    color: var(--main-button-text-color) !important;
+    border-radius: var(--main-button-corner-roundness) !important;
+    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
+    border: none !important;
+}
+
+/* Bravo Join/Leave Team Button */
+#compPlListR > div.compSwpTmB {
+    background-color: rgb(52 137 235);
+    box-shadow: inset 0 -7px 0 0 rgb(38 95 162);
+    color: var(--main-button-text-color) !important;
+    border-radius: var(--main-button-corner-roundness) !important;
+    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
+    border: none !important;
+}
+
+/* Krunker Competitve Info */
+#cmpDatBox {
+    border-left: none;
+    padding-left: 15px;
+    left: 15px;
+    bottom: 9px;
+    font-size: 30px;
+    color: #fff;
+}
+
+/* Main Comp Game Buttons */
+div.compMenBtnS, .compMenBtnS {
+    background-color: var(--main-button-color) !important;
+    box-shadow: inset 0 -7px 0 0 var(--main-button-shadow-color) !important;
+    color: var(--main-button-text-color) !important;
+    border-radius: var(--main-button-corner-roundness) !important;
+    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
+    border: none !important;
+}
+
+/* Main Comp Game Hover Buttons */
+div.compMenBtnS:hover, .compMenBtnS:hover, div.compSwpTmB:hover {
+    background-color: var(--main-button-hover-color) !important;
+    box-shadow: inset 0 -7px 0 0 var(--main-button-hover-shadow-color) !important;
+    border: none !important;
+}
+
+/* Main Comp Game Active Buttons */
+div.compMenBtnS:active, .compMenBtnS:active, div.compSwpTmB:active {
+    background-color: rgb(172, 172, 172) !important;
+    box-shadow: rgb(125, 125, 125) 0px -7px 0px 0px inset !important;
+    border: none !important;
+}
+
+/* Main Comp Game Icon Buttons */
+div.compMenBtnS > span, .compMenBtnS > span {
+    transform: scale(0.9) translateY(-7px);
+}
+
+/* CG1. Comp Game Menu ==================================================================================================== */
+
+
+
+/* IG1. In Game ==================================================================================================== */
+
+/* ---------------------------------- In Game Test ---------------------------------- */
+
+/* ↓ Remove /* if you want test */
+/*
+#menuHolder, #aHider, #termsInfo, div#termsInfo, #instructionHolder {
+    display: none !important;
+}
+
+#inGameUI {
+    display: block !important;
+}
+
+/* ---------------------------------- In Game Test ---------------------------------- */
+
+/* Nuke Flash */
+#imgFlash {
+    background-color: rgb(248 96 96 / 30%) !important;
+}
+
+/* Timer Display */
+#timerHolder {
+    padding: 12px;
+}
+
+/* ^Timer Inner */
+#timerInner.topLeftOld {
+    padding: 0px 0px 0px 0px !important;
+    margin: 0px 12px 0px 12px !important;
+    background-color: transparent;
+}
+
+/* Old Timer Display */
+#timerHolder.topLeftOld, div#timerHolder.topLeftOld {
+    background-color: rgb(0 0 0 / 45%);
+    text-align: center !important;
+    padding: 12px 0px 12px 0px !important;
+    margin: 0px 0px 10px 0px !important;
+    border-radius: 7px;
+}
+
+/* 00:00 Timer */
+#timerVal {
+    color: white;
+    text-align: left;
+    text-shadow: none;
+    font-size: 30px !important;
+}
+
+/* LeaderBoard */
+#leaderboardHolder {
+    border-radius: 7px;
+    background-color: rgb(0 0 0 / 45%);
+}
+
+/* LeaderBoard Container */
+#leaderContainer {
+    background-color: transparent;
+}
+
+/* Reload Message */
+#reloadMsg {
+    position: absolute;
+    margin-right: -50%;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    bottom: 45%;
+    font-size: 20px;
+    line-height: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: transparent !important;
+    border: 2px solid transparent;
+    text-shadow: rgb(0, 0, 0) 0px 0px 1px, rgb(0, 0, 0) 0px 0px 3px;
+    z-index: 2 !important;
+}
+
+/* Weapon Select Inner */
+.weapItemInner {
+    background-color: transparent !important;
+}
+
+/* Kills, Deaths, Scores..etc Count Icon */
+.statIcon {
+    font-size: 18px;
+    padding-top: 0px;
+    padding-left: 3px;
+    padding-bottom: 0px;
+    padding-right: 3px;
+}
+
+/* Bottom Left Player */
+#bottomLeftPlayer {
+    background-color: transparent;
+}
+
+/* InGame Player Info Left */
+#bottomLeftPlayerLeft {
+    width: 150px;
+    background-color: transparent;
+}
+
+/* InGame Player Info Image Left */
+#bottomLeftClassImg {
+    display: none;
+}
+
+/* Team Holder */
+#bottomLeftTeamHolder {
+    display: none;
+}
+
+/* Health Icon */
+#bottomLeftChallIcon {
+    display: none;
+}
+
+/* Health Value */
+#bottomLeftHealth {
+    transform: translateX(-7px) translateY(-7px);
+    margin-left: -740px;
+    margin-bottom: 50px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 7px;
+    background-color: rgb(0 0 0 / 40%);
+}
+
+/* Health Bar */
+#bottomLeftHealthBar {
+    transform: translateX(-97px) translateY(24px);
+    column-gap: 0px;
+    width: 385px;
+    padding: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 7px;
+    background-color: rgb(0 0 0 / 40%);
+}
+
+/* Bottom Left Player Mid */
+#bottomLeftPlayerMid {
+    grid-gap: 0px;
+    padding: 0px;
+    margin-left: -62px;
+    margin-right: -90px;
+}
+
+/* Bottom Left Player Right */
+#bottomLeftPlayerRight {
+    padding: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+/* Health Bar Seg */
+.nHealthBarSeg {
+    margin: 0px 0px 0px -2px !important;
+    margin-right: -3.5px !important;
+    background: transparent;
+}
+
+/* Health Bar Box Seg */
+.nHpBSeg {
+    background-color: rgb(248 96 96) !important;
+    color: rgb(248 96 96) !important;
+}
+
+/* LeaderBoard -------------------------------------------------- */
+
+/* New LeaderBoard */
+#centerLeaderDisplay {
+    background: rgb(0 0 0 / 50%);
+}
+
+/* New LeaderBoard Container */
+.centerLeaderContainer {
+    background-color: transparent;
+}
+
+/* New LeaderBoard ContainerInner */
+.centerLeaderContainerInner {
+    background-color: transparent;
+}
+
+/* LeaderBoard -------------------------------------------------- */
+
+
+
+/* Chat In Game -------------------------------------------------- */
+
+/* Chat Holder on Game */
+#uiBase.onGame #chatHolder {
+    left: 15px;
+}
+
+/* Chat In Game -------------------------------------------------- */
+
+
+
+/* Death Screen ================================================== */
+
+/* Death Row Bottom */
+div.death-row-bottom, .death-row-bottom-bg {
+    outline: 2px solid rgb(0 0 0 / 0%);
+    filter: none;
+    border-radius: 12px !important;
+}
+
+/* Chat List on Death Screen */
+div#uiBase.onDeathScrn #chatList {
+    max-height: 500px !important;
+}
+
+/* Chat on Death Screen */
+#uiBase.onDeathScrn #chatHolder {
+    left: 15px;
+    bottom: 20px;
+    animation: none !important;
+}
+
+/* Death UI Bottom */
+.death-ui-bottom-empty, .death-ui-bottom {
+    bottom: 0px;
+    animation: death-ui-moveup 1s ease;
+}
+
+/* Death Screen ================================================== */
+
+
+
+/* Match Ended ================================================== */
+
+/* Round End Timer */
+#endTimer {
+    color: rgb(255, 255, 255) !important;
+}
+
+/* Match Ended Tab */
+.tabHeader {
+    color: rgb(255, 255, 255) !important;
+}
+
+/* Match Ended Active Tab */
+.tabHeader:active {
+    color: rgb(149 149 149) !important;
+}
+
+/* Chat Holder on Match Ended */
+#uiBase.onEndScrn #chatHolder {
+    left: 15px;
+    bottom: 20px;
+}
+
+/* XP Bar In Match Ended */
+div.xpEndBarB, div.xpEndBPBarB {
+    background-image: linear-gradient(to right,rgb(248 96 96),rgb(248 96 96)) !important;
+}
+
+/* Report Button */
+.reportBut {
+    font-size: 14px;
+    padding: 4px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(248, 96, 96) !important;
+}
+
+/* Report Button Hover */
+.reportBut:hover {
+    transform: none;
+    background: rgb(169, 69, 69) !important;
+}
+
+/* Report Button Active */
+.reportBut:active {
+    background-color: rgb(125, 67, 67) !important;
+}
+
+/* Match End Card */
+.endCard {
+    background-color: rgba(0, 0, 0, 0.23);
+    border-radius: 8px;
+}
+
+/* Match Ended Selected Tab */
+.tabHeader.selected { /* rgb(153 153 153) Text Color, No Border */
+    color: rgb(153, 153, 153) !important;
+    border-bottom: 4px solid rgba(172, 172, 172, 0) !important;
+}
+
+/* Match Ended KR Count */
+#endTable > tbody > tr > td > span {
+    color: rgb(248, 96, 96) !important;
+}
+
+/* Unknown Game Mode Icon */
+.unknownModeIcon {
+    color: rgb(248 96 96) !important;
+}
+
+/* VICTORY/DEFEAT/DRAW In Match Ended */
+.modeStatus { /* White Text Color */
+    color: #fff !important;
+}
+
+/* +[Count]KR/NONE Text In Match Ended */
+.fundsVal { /* White Text Color */
+    color: rgb(255, 255, 255) !important;
+}
+
+/* Score etc In Match Ended Display */
+.crLabel { /* White Text Color */
+    color: rgb(255, 255, 255) !important;
+}
+
+/* Count XP Level In Match Ended */
+.xpLvl { /* White Text Color */
+    color: rgb(255, 255, 255) !important;
+}
+
+/* Proifle Link in Round End Table Hover */
+.endTableN:hover {
+    text-decoration: none;
+}
+
+/* Match Ended Win Icon */
+div.teamWin0, div.teamWin1 {
+    color: rgb(255 140 140) !important;
+}
+
+/* Match Ended Hover Tab */
+.tabHeader:hover {
+    color: rgba(180, 180, 180, 1) !important;
+    border-bottom: 4px solid rgba(255, 255, 255, 0) !important;
+}
+
+/* Match Ended Selected Hover Tab */
+.tabHeader.selected:hover {
+    color: rgb(153, 153, 153) !important;
+    border-bottom: 4px solid rgba(172, 172, 172, 0) !important;
+}
+
+/* +[Count] KR Text In Match Ended */
+#fundsLayout > div > span {
+    color: #fff !important;
+}
+
+/* Party Mode */
+[style="border: 4px solid #ffb600;box-shadow: 0 0 20px #ffb6009c;"] {
+    border: 4px solid transparent !important;
+    box-shadow: 0 0 20px transparent !important;
+}
+
+/* PARTY */
+.matchVoteModifier {
+    background: rgb(248 96 96) !important;
+}
+
+/* Premium, Badge Icon */
+#endTable > tbody > tr > td > i, #endTable > tbody > tr > td> img:nth-child(5) {
+    filter: hue-rotate(295deg);
+}
+
+/* Match Ended ================================================== */
+
+/* Stat Icon */
+.statIcon {
+    background-color: rgb(0 0 0 / 45%);
+}
+
+/* Kill Feed */
+.killfeedItem {
+    padding: 8px 13px 8px 13px !important;
+    background: rgb(0 0 0 / 50%) !important;
+}
+
+/* ^Msg */
+.killfeedMsg {
+    background-color: var(--transparentColor);
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Press [G] to XXX */
+#interactMsg {
+    color: #f1f1f1;
+    border: 2px solid transparent !important;
+    border-radius: 10px;
+    background-color: rgb(0 0 0 / 50%);
+}
+
+/* ^ [G] Key */
+#interactMsg > span:nth-child(1) {
+    color: rgb(255 140 140) !important;
+}
+
+/* Weapon Streak Holder */
+.weapStreakHolder {
+    background-color: rgb(0 0 0 / 40%) !important;
+    top: 12px;
+    border-radius: 7px !important;
+}
+
+/* Weapon Streak Inner */
+.weapStreakInner {
+    background-color: transparent !important;
+}
+
+/* KS */
+#weapItem_0 > div > div > div > span:nth-child(2),
+#weapItem_1 > div > div > div > span:nth-child(2), 
+#weapItem_2 > div > div > div > span:nth-child(2) {
+    color: rgb(248 96 96) !important;
+}
+
+/* Mini Map Overlay */
+#miniMapOverlay {
+    display: none !important;
+    border-radius: 12px;
+    opacity: 0.9;
+}
+
+/* Weapon Selection Holder */
+#weapHolder {
+    right: 20px;
+    bottom: 75px;
+    row-gap: 0px;
+}
+
+/* Weapon Selection Item */
+.weapItem {
+    background-color: rgb(0 0 0 / 0%);
+}
+
+/* Weapon Selection Skin Name */
+.weapSkin {
+    display: none;
+}
+
+/* Weapon Selection Key */
+.weapKey {
+    background-color: transparent;
+    left: 120px;
+    top: 5px;
+}
+
+/* Ammo Holder */
+#ammoHolder {
+    border-radius: 7px;
+    background: rgb(0 0 0 / 45%);
+}
+
+/* IG1. In Game ==================================================================================================== */
+
+
+
+
+
+/* SPEC1. Spectate ==================================================================================================== */
+
+/* Spectating, Spectate Player Stats Old */
+div#specNames.topLeftOld, div#specStats.topLeftOld {
+    top: 20px !important;
+}
+
+/* Spectating */
+#specNames {
+    top: 20px !important;
+}
+
+/* Spectate Player Stats */
+#specStats {
+    top: 20px !important;
+}
+
+/* Spectate Control Key */
+.specControlKey {
+    color: rgb(248 96 96) !important;
+}
+
+/* Spectate KeyBinds Text */
+#specContr > div > span {
+    color: #fff !important;
+}
+
+/* Voice Icon on Death/Spectate Screen */
+#uiBase.onDeathScrn #voiceDisplay, #uiBase.onSpect #voiceDisplay {
+    left: 360px !important;
+    bottom: 25px !important;
+    transition-duration: 0.2s;
+}
+
+/* "waiting for players" Message In Spectate Mode */
+#specGMessage { /* Full White Color And Some Bigger Font */
+    color: rgb(255 255 255) !important;
+    font-size: 15px;
+}
+
+/* "Free for All" etc Current Game Mode Text In Spectate Mode */
+#specGameInfo { /* Changed To Full White Color */
+    color: white !important;
+}
+
+/* Spectate Control Holder */
+#specControlHolder {
+    background-color: rgb(0 0 0 / 40%);
+}
+
+/* SPEC1. Spectate ==================================================================================================== */
+
+
+
+/* MWD1. Menu Window ==================================================================================================== */
+
+
+/* Profile ================================================== */
+
+/* Profile Picture in Profile & Friends - Home, Change Picture (why Krunker Premium uses USD?) */
+#profilePicM, .pfpAction {
+    border: 4px solid #0000 !important;
+    border-radius: 10px;
+}
+
+/* Profile Logout Separator */
+[style="height:15px;margin-top:30px;border-top:4px solid rgba(255, 255, 255, 0.8);"] {
+    border-top: 4px solid rgb(255 255 255 / 20%) !important;
+}
+
+/* Profile Name Link */
+#menuWindow > div.setBodH > div:nth-child(1) > a {
+    color: var(--link);
+}
+
+/* Twitch linking creates a permanent connection to this Krunker account regardless of unlinking */
+[style="margin-bottom: 20px;margin-top:10px;text-align: center;color: var(--yellow);font-size: 19px;"] {
+    color: white !important;
+}
+
+/* Profile ================================================== */
+
+
+
+/* Shop ================================================== */
+
+/* Checkout the Battle Pass...etc in Shop */
+#shopMainSellB {
+    width: 750px !important;
+}
+
+/* Invalid Creator Code click here and try again!, Please wait 5 seconds click here and try again!...etc Purchase Message */
+#purchaseRespH {
+    width: 706px;
+    text-align: center;
+    color: rgb(255 255 255) !important;
+    background-color: rgb(0 0 0 / 70%) !important;
+    border-radius: 10px;
+}
+
+/* Shop ================================================== */
+
+
+
+/* Challenges ================================================== */
+
+/* Challenge XP Bar C */
+.chalXPBarC {
+    background-image: linear-gradient(to right,rgb(248 96 96),rgb(248 96 96));
+}
+
+/* Challenge Image C */
+.chalImgC {
+    filter: hue-rotate(305deg);
+}
+
+/* KR, Junk Icon on Challenge */
+#menuWindow > div > div > div.chalRews > div:nth-child(1) > span:nth-child(2), #menuWindow > div > div > div.chalRews > div:nth-child(2) > span.material-icons, #menuWindow > div:nth-child(5) > div > div.chalRews > div:nth-child(3) > span.material-icons {
+    color: rgb(248 96 96) !important;
+}
+
+/* Complete all XXX challenges Card */
+[style="margin-top:0px;box-shadow: 0 0 14px #ffa000;background:rgb(79 50 0 / 40%);border:4px solid #ff9c00;"], [style="margin-top:20px;box-shadow: 0 0 14px #ffa000;background:rgb(79 50 0 / 40%);border:4px solid #ff9c00;"] {
+    box-shadow: 0px 0px 15px rgb(248 96 96) !important;
+    background: rgb(248 96 96 / 15%) !important;
+    border: 4px solid rgb(0 0 0 / 0%) !important;
+}
+
+/* Complete all XXX challenges Line */
+[style="border-left: 3px solid #ff9c00;"] {
+    border: 3px solid rgb(0 0 0 / 0%) !important;
+}
+
+/* Challenges ================================================== */
+
+
+
+/* Games ================================================== */
+
+/* Editor, Sandbox Icon */
+#menuWindow > div:nth-child(1) > div > div:nth-child(8) > span, #menuWindow > div:nth-child(1) > div > div:nth-child(9) > span {
+    display: none;
+}
+
+/* UPDATED, NEW! */
+.mapAgeD {
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-bottom-left-radius: 0px;
+    border-radius: 5px;
+    background: rgb(255 140 140 / 70%) !important;
+}
+
+/* Games ================================================== */
+
+
+
+/* Mods ================================================== */
+
+
+
+/* Mods ================================================== */
+
+
+
+/* Settings ================================================== */
+
+/* Selected Advanced Slider */
+input:checked + .slider, input:checked+.advancedSlider {
+    background-color: var(--input) !important;
+}
+
+/* Selected Advanced Slider Hover */
+input:checked + .slider:hover, input:checked+.advancedSlider:hover {
+    background-color: rgb(164, 64, 64) !important;
+}
+
+/* Advanced Slider Hover */
+.slider:hover, .advancedSlider:hover {
+    background-color: rgb(130, 130, 130) !important;
+}
+
+/* Advanced Settings Selected */
+[style="background-color: rgb(33, 150, 243);"] {
+    background-color: rgb(164 64 64) !important;
+}
+
+/* Advanced Settings Select */
+.advancedToggle {
+    color: #fff !important;
+}
+
+/* Advanced Settings Button */
+.advancedToggle {
+    background-color: rgb(248 96 96) !important;
+}
+
+/* Advanced Settings Hover Button */
+.advancedToggle:hover {
+    background-color: rgb(164 64 64) !important;
+}
+
+/* Advanced Settings Hover Button */
+.advancedToggle:active {
+    background-color: rgb(125 67 67) !important;
+}
+
+/* Settings Select Toggle */
+.setToggle {
+    background-color: rgb(255 255 255 / 90%) !important;
+}
+
+/* Settings Select Toggle Hover */
+.setToggle:hover {
+    background-color: rgb(255 255 255 / 70%) !important;
+}
+
+/* Import Settings -------------------------------------------------- */
+
+/* Import Settings Popup */
+.importPop {
+    box-shadow: none;
+}
+
+/* Import Button in Import Settings */
+.mapFndB {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(248, 96, 96) !important;
+}
+
+/* Import Settings -------------------------------------------------- */
+
+/* Settings ================================================== */
+
+
+/* MWD1. Menu Window ==================================================================================================== */
+
+
+
+/* OT1. Others ==================================================================================================== */
+
+/* BPP Text */
+.bpXPText > span {
+    color: rgb(248 96 96) !important;
+}
+
+/* Battle Pass XP Bar */
+.bpXPBar {
+    background-color: rgb(248 96 96);
+}
+
+/* ToolTip */
+.tooltip {
+    background: rgb(0 0 0 / 70%);
+    border: none;
+}
+
+/* ToolTip Title */
+div.tooltip > div:nth-child(1) > span {
+    color: rgb(248 96 96) !important;
+}
+
+/* ToolTip Arrow */
+.tooltip:before {
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid rgb(0 0 0 / 70%);
+}
+
+/* Spin History Button */
+div#spinHistoryBtn {
+    background-color: var(--main-button-color) !important;
+    box-shadow: inset 0 -7px 0 0 var(--main-button-shadow-color) !important;
+    color: var(--main-button-text-color) !important;
+    border-radius: var(--main-button-corner-roundness) !important;
+    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
+    border: none !important;
+}
+
+/* Spin History Button Hover */
+div#spinHistoryBtn:hover {
+    background-color: var(--main-button-hover-color) !important;
+    box-shadow: inset 0 -7px 0 0 var(--main-button-hover-shadow-color) !important;
+    border: none !important;
+}
+
+/* Spin Info [?] */
+div#spinInfoBtn.button {
+    background-color: var(--main-button-color) !important;
+    box-shadow: inset 0 -7px 0 0 var(--main-button-shadow-color) !important;
+}
+
+/* Recent Items */
+.spinHistoryHeader {
+    border-bottom: 4px solid #98989800;
+    box-shadow: 0 10px 10px #00000000, 0 0 0 #0000;
+}
+
+/* Stats, Load More */
+div.spinHistoryStats, div.spinHistoryClear  {
+    background-color: var(--main-button-color) !important;
+}
+
+/* New to Krunker? Guide Window Background */
+#guidePopupH {
+    background-color: rgb(0 0 0 / 50%);
+    z-index: 21474836 !important;
+}
+
+/* Guide Popup Yellow Texts */
+#guidePopup > div > div.guideInfoT > span { /* rgb(248 96 96) Text Color */
+    color: rgb(248 96 96) !important;
+}
+
+/* Check the Guide Link Button of the New to Krunker? */
+#helpGuidOpn { /* rgb(248 96 96) Text Color */
+    color: rgb(248 96 96) !important;
+}
+
+/* Check the Guide Link Hover Button of the New to Krunker? */
+#helpGuidOpn:hover { /* White Text Color */
+    color: rgb(255 255 255) !important;
+}
+
+/* New to Krunker? Box */
+#youNewDiv { /* -132px Margin Left, -6px Margin Top, transparent Background Color */
+    margin-top: -6px;
+    background-color: rgb(255 255 255 / 0%) !important;
+    margin-left: -132px !important;
+}
+
+/* [ALT] Text of Guide Popup */
+#guidePopup > div > div > span > span { /* rgb(248 96 96) Text Color */
+    color: rgb(248 96 96) !important;
+}
+
+/* "Krunker is a Move...etc" Text of Guide Popup */
+.guideInfoT { /* White Text Color */
+    color: rgb(255 255 255) !important;
+}
+
+/* "Ping can be...etc" Text of Guide Popup */
+.guideStepV { /* White Text Color */
+    color: rgb(255 255 255) !important;
+}
+
+/* Battle Pass Background */
+.bpBG {
+    background: linear-gradient(0deg,rgb(0 0 0/50%),rgb(0 0 0/50%)) !important;
+    filter: none !important;
+}
+
+/* View All Updates */
+.viewAllUpdates {
+    background-color: rgba(255,255,255,.15);
+    border: 4px solid rgb(255 255 255 / 0%);
+    border-radius: 7px;
+}
+
+/* View All Updates */
+.viewAllUpdates:hover {
+    border: 4px solid rgb(255 255 255 / 0%);
+}
+
+/* OT1. Others ==================================================================================================== */
+
+
+
+/* UN1. Unknown ==================================================================================================== */
 
 /* Unknown */
 .updDisN {
@@ -465,20 +2183,6 @@ body > canvas, #menuHolder, #aHider {
     background-color: var(--secondary-button-hover) !important;
 }
 
-/* "Quick Join" Button */
-.quickJoin {
-    text-shadow: none;
-    background-color: var(--secondary-button) !important;
-    color: var(--secondary-button-text) !important;
-    border-radius: var(--secondary-button-roundness) !important;
-}
-
-/* "Quick Join" Hover Button */
-.quickJoin:hover {
-    transform: scale(1);
-    background-color: var(--secondary-button-hover) !important;
-}
-
 /* Unknown */
 .searchBtn {
     background-color: var(--secondary-button) !important;
@@ -540,16 +2244,11 @@ body > canvas, #menuHolder, #aHider {
 
 /* Unknown */
 .sliderM {
-    background-color: rgb(138, 138, 138) !important;
+    background-color: rgb(168 168 168) !important;
 }
 
 /* Unknown */
 .sliderM::-webkit-slider-thumb {
-    background-color: var(--input) !important;
-}
-
-/* Unknown */
-input:checked + .slider {
     background-color: var(--input) !important;
 }
 
@@ -570,18 +2269,13 @@ input:checked + .optCheck {
 
 /* Unknown */
 .xpBarB {
-    background-color: var(--progress-bar-filled) !important;
+    background-image: linear-gradient(to right,var(--progress-bar-filled),var(--progress-bar-filled));
 }
 
 /* Unknown */
 .xpBarV {
     color: var(--progress-bar-text) !important;
-}
-
-/* Country Flag etc Input */
-.inputGrey2  { /* White Background, Black Text */
-    background: rgb(255 255 255) !important;
-    color: var(--input-field-text) !important;
+    text-shadow: none;
 }
 
 /* Unknown */
@@ -678,11 +2372,6 @@ input:checked + .optCheck {
 }
 
 /* Unknown */
-a {
-    color: var(--link);
-}
-
-/* Unknown */
 a:visited {
     color: var(--link);
 }
@@ -690,30 +2379,6 @@ a:visited {
 /* Unknown */
 a:active {
     color: var(--link);
-}
-
-/* Unknown */
-.chatItem {
-    border-radius: var(--chat-roundness);
-    color: var(--chat-bold-text-color) !important;
-}
-
-/* Voice Icon */
-#voiceDisplay {
-    bottom: 24px !important;
-    left: 365px !important;
-    transition-duration: 0.2s;
-}
-
-/* Unknown */
-#chatInput {
-    border-radius: var(--chat-input-roundness);
-    color: var(--chat-text-color) !important;
-}
-
-/* Unknown */
-.chatMsg[style*="color: #fc03ec"] {
-    color: var(--chat-leave-text-color) !important;
 }
 
 /* Unknown */
@@ -732,27 +2397,6 @@ a:active {
 }
 
 /* Unknown */
-.countIcon, #leaderDisplay, #ammoDisplay, #timerDisplay, #teamScores, #voteToKick, #hudClassIcon, #healthValueHolder {
-    border-radius: var(--hud-roundness);
-    background-color: var(--hud-background-color) !important;
-}
-
-/* Unknown */
-#ammoVal, #curGameInfo, #timerVal, #healthValue, #reloadMsg {
-    color: var(--hud-bold-text-color) !important;
-}
-
-/* "AmmoMax" etc Display */
-#ammoMax, .weapKey, #pingDisplay, #fpsDisplay, #ingressDisplay, #egressDisplay, #pingText, #ingressPacketCount, #ingressDataSize, #egressPacketCount, #egressDataSize, #curGameInfo div, .tScoreT, #voteKickNum, #voteKickName, #voteKickKeys, #maxHP {
-    color: var(--hud-text-color) !important;
-}
-
-/* FPS Display InGame */
-#ingameFPS { /* White Text Color */
-    color: var(--fps-color) !important;
-}
-
-/* Unknown */
 #voteKickKeys span {
     color: var(--votekick-keys-color) !important;
 }
@@ -768,76 +2412,6 @@ a:active {
 }
 
 /* Unknown */
-#chatInput {
-    background-color: var(--chat-input-background-color) !important;
-    width: 76%;
-    margin-left: 1px;
-}
-
-/* Unknown */
-.chatMsg span[style*="color:#eb5656"] {
-    color: var(--chat-enemy-color) !important;
-}
-
-/* Unknown */
-.chatMsg span[style*="color: #9eeb56"] {
-    color: var(--chat-team-color) !important;
-}
-
-/* Unknown */
-.chatMsg span[style*="color:#fff"] {
-    color: var(--chat-you-color) !important;
-}
-
-/* Unknown */
-.headerBar {
-    background-color: var(--topbar-background-color) !important;
-}
-
-/* Unknown */
-#instructions {
-    animation: 0s ease 0s 1 normal none running none;
-    color: rgb(255, 255, 255) !important;
-}
-
-/* Unknown */
-.progressBar {
-    background-color: var(--home-progress-bar-background) !important;
-}
-
-/* FPS GameUI */
-#menuFPS { /* White Text Color */
-    color: var(--menu-fps-color) !important;
-}
-
-/* Unknown */
-#mapInfo {
-    margin-bottom: -5px;
-    color: var(--mapinfo-color) !important;
-    display: var(--mapinfo-display) !important;
-}
-
-/* Unknown */
-.terms {
-    color: var(--terms-color) !important;
-}
-
-/* Unknown */
-.standout {
-    color: var(--advertise-color) !important;
-}
-
-/* Ping Icon GameUI */
-#menuPingIcon { /* White Text Color */
-    color: var(--menu-ping-color) !important;
-}
-
-/* Ping Icon InGame */
-#pingIcon { /* White Text Color */
-    color: var(--ping-color) !important;
-}
-
-/* Unknown */
 .tScoreC {
     background-color: var(--enemy-score-color) !important;
 }
@@ -845,16 +2419,6 @@ a:active {
 /* Unknown */
 .tScoreC.you {
     background-color: var(--team-score-color) !important;
-}
-
-/* Unknown */
-#menuMiniProfilePic {
-    display: none;
-}
-
-/* Unknown */
-#gameNameHolder {
-    display: var(--show-logo) !important;
 }
 
 /* Unknown */
@@ -917,55 +2481,13 @@ a:active {
 }
 
 /* Unknown */
-.settName, .settNameSmall, span[style*="color: rgba(0, 0, 0, 0.5)"], #accResp, #requiresRestart {
-    color: rgba(0, 0, 0, 0.76) !important;
-}
-
-/* Unknown */
 .hpBSeg, .healthBarSeg {
     border-radius: var(--health-bar-roundness);
 }
 
 /* Unknown */
-.headerBarRight {
-    border-radius: 0 0 0 var(--top-bar-roundness);
-}
-
-/* Unknown */
-.headerBarLeft {
-    border-radius: 0 0 var(--top-bar-roundness) 0;
-}
-
-/* Unknown */
-#uiBase.onMenu #chatHolder {
-    left: 15px;
-    transition-duration: 0.2s !important;
-}
-
-/* Unknown */
-#uiBase.onGame #chatHolder {
-    left: 15px;
-    transition-duration: 0.2s !important;
-}
-
-/* Unknown */
-#mainLogo {
-    height: var(--logo-size);
-}
-
-/* Unknown */
 .menuClassPlayerName {
     color: var(--menu-player-name-color);
-}
-
-/* Leaderboard Premium Icon */
-#leaderContainer i[style*="color:#FBC02D"] {
-    color: var(--premium-color) !important;
-}
-
-/* Leaderboard Verified Icon */
-#leaderContainer i[style*="color:#40C4FF"] {
-    color: var(--verified-color) !important;
 }
 
 /* Unknown */
@@ -976,43 +2498,6 @@ a:active {
 /* Unknown */
 .menuClassPlayerVerified {
     color: var(--home-verified-color) !important;
-}
-
-/* Unknown */
-#menuPingText, #menuFPSDisplay {
-    color: var(--topbar-counters-text-color);
-}
-
-/* Unknown */
-.headerBar div {
-    color: var(--topbar-text-color);
-}
-
-/* Unknown */
-#menuKRCount {
-    color: var(--topbar-light-text-color);
-}
-
-/* Unknown */
-.headerBar {
-    background: rgba(0, 0, 0, 0) !important;
-    box-shadow: rgba(0, 0, 0, 0.11) 60px 0px 120px inset !important;
-}
-
-/* Unknown */
-.menuItem {
-    background: rgba(0, 0, 0, 0) !important;
-    box-shadow: none !important;
-}
-
-/* Unknown */
-#mainLogo {
-    display: none;
-}
-
-/* Unknown */
-#menuWindow {
-    background-color: rgba(255, 255, 255, 0.77) !important;
 }
 
 /* Unknown */
@@ -1028,77 +2513,18 @@ a:active {
 }
 
 /* Unknown */
-.settingsHeader {
-    background-color: rgba(255, 255, 255, 0) !important;
-}
-
-/* Unknown */
-#merchImg {
-    display: none;
-    animation: 0s ease 0s 1 normal none running none;
-}
-
-/* Unknown */
-#gameUI {
-    opacity: 0.8;
-}
-
-/* Chal Prog */
-.chalProg {
-    color: #fff !important;
-}
-
-/* "Host Game" Button */
-.buttonP {
-    background-color: rgb(248, 96, 96) !important;
-    box-shadow: rgb(164, 64, 64) 0px -7px 0px 0px inset !important;
-}
-
-/* "Servers" Button */
-.buttonR {
-    background-color: rgb(248, 96, 96) !important;
-    box-shadow: rgb(164, 64, 64) 0px -7px 0px 0px inset !important;
-}
-
-/* "Ranked" Button */
-.buttonG {
-    background-color: rgb(255, 96, 96) !important;
-    box-shadow: rgb(164, 64, 64) 0px -7px 0px 0px inset !important;
-}
-
-/* Unknown */
-.standout {
-    color: rgb(248, 96, 96) !important;
-}
-
-/* Ban Players Button (Host/Mod Only) */
-.punishButton.ban {
-    background-color: rgb(248, 96, 96) !important;
-    color: rgb(255, 255, 255) !important;
-}
-
-/* Unknown */
 #purchaseHolder {
     background-color: rgba(0, 0, 0, 0) !important;
 }
 
 /* Unknown */
 #popupBack {
-    background-color: rgba(0, 0, 0, 0) !important;
+    background-color: rgb(0 0 0 / 50%) !important;
 }
 
 /* Unknown */
 #popupContent {
     background-color: rgba(0, 0, 0, 0.82) !important;
-}
-
-/* "Register" & "Login" Button 2 */
-.accountButton {
-    color: rgb(255, 255, 255) !important;
-}
-
-#pubPfp:hover {
-    background-color: rgb(28, 127, 208) !important;
 }
 
 /* Unknown */
@@ -1107,24 +2533,8 @@ a:active {
 }
 
 /* Unknown */
-#purchaseSelector {
-    border-radius: 10px;
-    background-color: rgba(213, 213, 213, 0.89) !important;
-}
-
-/* Unknown */
 .redVouchBtn:hover {
     background-color: rgb(164, 64, 64) !important;
-}
-
-/* Unknown */
-input:checked + .slider:hover {
-    background-color: rgb(164, 64, 64) !important;
-}
-
-/* Unknown */
-.slider:hover {
-    background-color: rgb(130, 130, 130) !important;
 }
 
 /* Unknown */
@@ -1162,11 +2572,6 @@ input:checked + .slider:hover {
 /* Unknown */
 .setHed:active {
     color: rgb(125, 125, 125) !important;
-}
-
-/* Search Input Hover In Settings Page */
-#settSearch:hover { /* rgb(152 152 152) Color */
-    background-color: rgb(152 152 152) !important;
 }
 
 /* Unknown */
@@ -1213,22 +2618,6 @@ input:checked + .slider2:hover {
 #serverSearch:hover {
     background-color: rgb(146, 146, 146) !important;
 }
-
-/* Server Search */
-#serverSearch { /* Black Text */
-    color: rgb(0 0 0) !important;
-}
-
-/* "Enter Username" & "Enter Password" Input */
-.accountInput:hover {
-    background-color: rgb(156 156 156) !important;
-}
-
-/* "Current Password" "New Password" "Repeat Password" Input */
-.smlInput:hover {
-    background-color: rgb(152 152 152) !important;
-}
-
 /* Unknown */
 #rankedPartyKey:hover {
     background-color: rgb(175, 175, 175) !important;
@@ -1237,16 +2626,6 @@ input:checked + .slider2:hover {
 /* Unknown */
 #queueRegionSelect:hover {
     background-color: rgb(175, 175, 175) !important;
-}
-
-/* Unknown */
-.sliderSml:hover {
-    background-color: rgb(114, 114, 114) !important;
-}
-
-/* Unknown */
-input:checked + .sliderSml:hover {
-    background-color: rgb(164, 64, 64) !important;
 }
 
 /* Unknown */
@@ -1283,22 +2662,6 @@ input:checked + .sliderSml:hover {
 }
 
 /* Unknown */
-.readAll {
-    color: rgb(255, 255, 255) !important;
-}
-
-/* Unknown */
-.readAll:hover {
-    opacity: 999;
-    background-color: rgb(228, 0, 0) !important;
-}
-
-/* Unknown */
-.readAll:active {
-    background-color: rgb(169, 0, 0) !important;
-}
-
-/* Unknown */
 .spinVal {
     background-color: rgba(0, 0, 0, 0) !important;
 }
@@ -1312,18 +2675,6 @@ input:checked + .sliderSml:hover {
 /* Unknown */
 .termsBtn {
     border-radius: 10px;
-}
-
-/* Match Ended Selected Tab */
-.tabHeader.selected { /* rgb(153 153 153) Text Color, No Border */
-    color: rgb(153, 153, 153) !important;
-    border-bottom: 4px solid rgba(172, 172, 172, 0) !important;
-}
-
-/* Unknown */
-.endCard {
-    background-color: rgba(0, 0, 0, 0.23);
-    border-radius: 8px;
 }
 
 /* Unknown */
@@ -1360,26 +2711,6 @@ input:checked + .sliderSml:hover {
     transform: scale(1);
 }
 
-/* Download Offical Krunker.io Client Hover Button */
-.downloadClient:hover {
-    background-image: url("https://i.imgur.com/2mbnFWc.png");
-}
-
-/* Join Krunker.io Offical Discord Server Hover Button */
-.discordSocial:hover {
-    background-image: url("https://i.imgur.com/qeja8BT.png");
-}
-
-/* Follow Krunker.io Offical Reddit Hover Button */
-.redditSocial:hover {
-    background-image: url("https://i.imgur.com/r81NvBU.png");
-}
-
-/* Follow Twitter Offical Krunker.io Hover Button */
-.twitterSocial:hover {
-    background-image: url("https://i.imgur.com/yUtgLJe.png");
-}
-
 /* Unknown */
 .mapInfoB:hover {
     background-color: rgb(199, 199, 199) !important;
@@ -1414,11 +2745,6 @@ input:checked + .sliderSml:hover {
 }
 
 /* Unknown */
-#recTimer {
-    display: none;
-}
-
-/* Unknown */
 [style="color:#2196F3;font-size:33px;vertical-align:bottom;"] {
     color: rgb(0, 142, 255) !important;
 }
@@ -1426,50 +2752,6 @@ input:checked + .sliderSml:hover {
 /* Unknown */
 #customizeButton .material-icons {
     display: none;
-}
-
-/* Unknown */
-.button.lgn .material-icons {
-    display: none;
-}
-
-/* Host Game Text */
-#menuBtnHost { /* Hide "Host Game" Text */
-    font-size: 0px !important;
-}
-
-/* Host Text */
-#menuBtnHost::after { /* "Host Game" Text Change To "Host" Text */
-    content: "Host";
-    text-transform: var(--text-transform);
-    font-size: 22px !important;
-}
-
-/* Unknown */
-#menuAccountUsername {
-    font-size: 16px;
-    margin-left: 10px;
-}
-
-/* Unknown */
-#menuKRCount {
-    font-size: 16px;
-    color: rgb(255, 255, 255) !important;
-}
-
-/* Unknown */
-.verticalSeparator {
-    background-color: rgb(255, 255, 255) !important;
-}
-
-/* Unknown */
-#mLevelCont {
-    display: none;
-}
-
-/* Unknown */
-.progressBarInner {
-    background: var(--class-progress-bar-color) !important;
 }
 
 /* Unknown */
@@ -1519,12 +2801,6 @@ input:checked + .optCheck:hover {
     border-radius: 10px;
 }
 
-/* Match Ended Hover Tab */
-.tabHeader:hover { /* rgb(180, 180, 180, 1) Text Color, No Border */
-    color: rgba(180, 180, 180, 1) !important;
-    border-bottom: 4px solid rgba(255, 255, 255, 0) !important;
-}
-
 /* Unknown */
 [style="width:300px;margin-right:0px;padding-top:3px;padding-bottom:15px;"] {
     width: 263px !important;
@@ -1533,17 +2809,6 @@ input:checked + .optCheck:hover {
 /* Unknown */
 .pfpAction {
     background: rgba(0, 0, 0, 0.32) !important;
-    color: rgb(255, 255, 255) !important;
-}
-
-/* Match Ended Selected Hover Tab */
-.tabHeader.selected:hover { /* rgb(153 153 153) Text Color, No Border */
-    color: rgb(153, 153, 153) !important;
-    border-bottom: 4px solid rgba(172, 172, 172, 0) !important;
-}
-
-/* Unknown */
-#endTimer {
     color: rgb(255, 255, 255) !important;
 }
 
@@ -1569,11 +2834,6 @@ input:checked + .optCheck:hover {
 }
 
 /* Unknown */
-.chalXPBarC {
-    background-color: rgb(243, 202, 33) !important;
-}
-
-/* Unknown */
 .settingTab:hover {
     border-bottom: none;
     color: rgb(255, 255, 255) !important;
@@ -1581,6 +2841,7 @@ input:checked + .optCheck:hover {
 
 /* Unknown */
 .settingTab {
+    color: rgb(255 255 255 / 50%) !important;
     background-color: rgba(0, 0, 0, 0.17) !important;
 }
 
@@ -1597,11 +2858,6 @@ input:checked + .optCheck:hover {
 /* Unknown */
 [style="margin-top: 10px; color: rgba(255, 0, 0, 0.6);"] {
     color: rgb(255, 0, 0) !important;
-}
-
-/* "Choose a Display name & more with Krunker Premium" Text On Profile Page */
-[style="color:rgba(0,0,0,0.3);margin-top:-5px;margin-bottom:10px"] { /* Hide Krunker Premium Message On Profile Page */
-    display: none;
 }
 
 /* Unknown */
@@ -1666,16 +2922,6 @@ input:checked + .optCheck:hover {
     color: rgb(255, 255, 255) !important;
 }
 
-/* "Count" Games */
-#menuWindow > div:nth-child(3) > span {
-    color: rgb(0 0 0);
-}
-
-/* Unknown */
-[style="font-size:25px"] {
-    display: none;
-}
-
 /* Unknown */
 [style="color:rgba(0,0,0,0.3)"] {
     color: rgb(0, 0, 0) !important;
@@ -1728,36 +2974,6 @@ input:checked + .optCheck:hover {
 }
 
 /* Unknown */
-#termsInfo {
-    background-color: rgba(0, 0, 0, 0) !important;
-    display: none !important;
-}
-
-/* Unknown */
-.verticalSeparatorInline {
-    border-left: 4px solid rgba(255, 255, 255, 0) !important;
-}
-
-/* "Using Brave may cause performance issues" Text On Bottom */
-#braveWarning { /* Hide "Using Brave may cause performance issues" Text */
-    font-size: 0px;
-    color: white !important;
-}
-
-/* "Using Brave may cause performance issues" Text On Bottom After */
-#braveWarning:after { /* "Using Brave may cause performance issues" Changed To "Using Other Browser may cause performance issues" Text */
-    content: "Using Other Browser may cause performance issues";
-    text-transform: var(--text-transform);
-    font-size: 18px !important;
-    color: white !important;
-}
-
-/* Unknown */
-input:checked + .sliderSml {
-    background-color: rgb(248, 96, 96) !important;
-}
-
-/* Unknown */
 .iconProfile {
     background-image: url("https://i.imgur.com/uc753SJ.png");
 }
@@ -1788,11 +3004,6 @@ input:checked + .sliderSml {
 }
 
 /* Unknown */
-[style="color:#2196F3;font-size:33px;vertical-align:bottom;"] {
-    display: none !important;
-}
-
-/* Unknown */
 input[type="color"] {
     border: 4px solid rgb(248, 96, 96) !important;
 }
@@ -1813,41 +3024,10 @@ input[type="color"] {
     background: rgb(199, 199, 199) !important;
 }
 
-/* Unknown */
-.settText {
-    color: rgb(248, 96, 96) !important;
-}
-
-/* Unknown */
-[style="color:#2196F3"] {
-    color: rgb(248, 96, 96) !important;
-}
-
-/* Unknown */
-[style="color:#2196F3"]:hover {
-    color: rgb(255, 255, 255) !important;
-}
 
 /* Unknown */
 input:checked + .slider2 {
     background-color: rgb(248, 96, 96) !important;
-}
-
-/* Unknown */
-.terms:hover {
-    text-decoration: none;
-    color: rgb(255, 255, 255) !important;
-}
-
-/* Unknown */
-.settText:hover {
-    text-decoration: none;
-    color: rgb(255, 255, 255) !important;
-}
-
-/* Skin/Hair/Chat Name Color Add Icon Hover Buttons */
-.premiumSkinCol:hover {
-    color: rgb(148 96 96) !important;
 }
 
 /* Unknown */
@@ -1874,29 +3054,6 @@ a:hover {
 /* Unknown */
 .mailFrom {
     color: rgb(248, 96, 96) !important;
-}
-
-/* Unknown */
-.endTableN:hover {
-    text-decoration: none;
-}
-
-/* Unknown */
-#policePopC {
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.85) !important;
-}
-
-/* Unknown */
-.polApplc {
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.1) !important;
-    color: black !important;
-}
-
-/* Unknown */
-[style="font-size:30px;margin-bottom:20px"] {
-    display: none;
 }
 
 /* Unknown */
@@ -1946,21 +3103,6 @@ a:hover {
 /* Unknown */
 [style="background-color:#dd4a42"]:hover {
     background-color: rgb(192, 10, 0) !important;
-}
-
-/* Unknown */
-#reloadMsg {
-    position: absolute;
-    margin-right: -50%;
-    left: 50%;
-    transform: translate(-50%, 0px);
-    bottom: 45%;
-    font-size: 20px;
-    line-height: 0;
-    padding-left: 0px;
-    padding-right: 0px;
-    text-shadow: rgb(0, 0, 0) 0px 0px 1px, rgb(0, 0, 0) 0px 0px 3px;
-    z-index: 2 !important;
 }
 
 /* Unknown */
@@ -2033,18 +3175,6 @@ a:hover {
     background: rgba(0, 0, 0, 0) !important;
 }
 
-/* "SUSPECT" Text */
-#specSUS { /* Changed White Color And It Has Background Also Less Width */
-    color: white !important;
-    background-color: rgba(0,0,0,.3) !important;
-    width: 138px;
-}
-
-/* Unknown */
-#imgFlash {
-    background-color: rgba(255, 255, 255, 0.27) !important;
-}
-
 /* Unknown */
 #androidPayB:hover {
     opacity: 100;
@@ -2064,11 +3194,6 @@ a:hover {
 /* Unknown */
 [style="font-size:20px;color:rgba(255,255,255,0.5)"] {
     color: rgb(255, 255, 255) !important;
-}
-
-/* Unknown */
-.reqWTxt {
-    color: rgb(0, 0, 0) !important;
 }
 
 /* Unknown */
@@ -2098,37 +3223,6 @@ a:hover {
 }
 
 /* Unknown */
-.changeText {
-    color: rgb(0, 0, 0) !important;
-}
-
-/* Unknown */
-#mailIcon {
-    transition: none 0s ease 0s;
-}
-
-/* Unknown */
-#mailIcon:hover {
-    transition: none 0s ease 0s;
-    transform: scale(1);
-    opacity: 999;
-    color: rgb(172, 172, 172) !important;
-}
-
-/* Inbox Count */
-#mailCount { /* No Text Shadow, Black Texr Color, rgb(194 194 194) Background Color */
-    text-shadow: none;
-    color: rgb(0, 0, 0) !important;
-    background-color: rgb(194, 194, 194) !important;
-}
-
-/* Unknown */
-.reportBut:hover {
-    transform: none;
-    background: rgb(169, 69, 69) !important;
-}
-
-/* Unknown */
 .lds-ring.sm {
     display: none;
 }
@@ -2136,16 +3230,6 @@ a:hover {
 /* Unknown */
 #gameCodePop {
     background-color: rgba(255, 255, 255, 0.63) !important;
-}
-
-/* Unknown */
-[style="color:#fff;font-size:20px;position:relative;"] {
-    color: black !important;
-}
-
-/* Like & Dislike Buttons */
-.material-icons.vote {
-    color: rgb(255, 255, 255) !important;
 }
 
 /* Unknown */
@@ -2164,165 +3248,13 @@ a:hover {
 }
 
 /* Unknown */
-.setToggle {
-    background-color: rgba(0, 0, 0, 0.1) !important;
-}
-
-/* Unknown */
-.setToggle:hover {
-    background-color: rgba(0, 0, 0, 0.33) !important;
-}
-
-/* Unknown */
 .polApplc:hover {
     background-color: rgba(0, 0, 0, 0.33) !important;
 }
 
 /* Unknown */
-.reportBut {
-    font-size: 14px;
-    padding: 4px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    color: rgb(255, 255, 255) !important;
-    background-color: rgb(248, 96, 96) !important;
-}
-
-/* Unknown */
-#instructionHolder {
-    display: none !important;
-}
-
-/* Unknown */
-#chatUI {
-    display: none !important;
-}
-
-/* Donate Button */
-.voteHint {
-    background-color: rgb(255, 255, 255) !important;
-}
-
-/* Donate Hover Button */
-.voteHint:hover {
-    background-color: rgb(172, 172, 172) !important;
-}
-
-/* "For lost Passwords/Accounts contact recovery@yendis.ch" Text On Login Page */
-[style="margin-top:10px;font-size:18px;color:rgba(0,0,0,0.5);"] {
-    font-size: 0px !important; /* Hide Then */
-}
-
-/* Unknown */
 .menuItem:hover .iconSocial {
     background-image: url("https://i.imgur.com/WZM3hj0.png") !important;
-}
-
-/* Unknown */
-#menuItemContainer {
-    width: fit-content;
-    height: min-content;
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    flex-direction: row;
-}
-
-/* Unknown */
-.menuItem {
-    align-items: center;
-    background: transparent;
-    pointer-events: none;
-    position: relative;
-    display: inline-block;
-    box-sizing: border-box;
-    border-radius: 4px;
-    padding: 14px 5px 12px;
-}
-
-/* Unknown */
-.menuItem:hover {
-    background: rgba(255, 255, 255, 0);
-    color: rgb(255, 255, 255);
-    border-left: none;
-}
-
-/* Unknown */
-.menuItem:active {
-    background: transparent;
-    color: rgb(255, 255, 255);
-}
-
-/* Unknown */
-.menuItem .menuItemTitle {
-    margin-top: -6px;
-    text-transform: var(--text-transform);
-    pointer-events: all;
-    transition: all 0.1s ease 0s;
-    position: relative;
-    display: inline-block;
-    box-sizing: border-box;
-    border-radius: 4px;
-    padding: 5px 18px 17px;
-    color: rgb(255, 255, 255) !important;
-    font-size: 18px !important;
-    background-color: rgb(248, 96, 96) !important;
-    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
-    box-shadow: rgb(164, 64, 64) 0px -7px 0px 0px inset !important;
-}
-
-/* Unknown */
-.menuItemTitle:hover {
-    margin-top: -6px;
-    text-transform: var(--text-transform);
-    pointer-events: all;
-    transform: scale(0.95);
-    position: relative;
-    display: inline-block;
-    box-sizing: border-box;
-    border-radius: 4px;
-    padding: 5px 18px 17px;
-    color: rgb(255, 255, 255) !important;
-    font-size: 18px !important;
-    background-color: rgb(255, 255, 255) !important;
-    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
-    box-shadow: rgb(172, 172, 172) 0px -7px 0px 0px inset !important;
-}
-
-/* Unknown */
-.menuItemTitle:active {
-    margin-top: -6px;
-    text-transform: var(--text-transform);
-    pointer-events: all;
-    transform: scale(0.95);
-    position: relative;
-    display: inline-block;
-    box-sizing: border-box;
-    border-radius: 4px;
-    padding: 5px 18px 17px;
-    color: white !important;
-    font-size: 18px !important;
-    background-color: rgb(172, 172, 172) !important;
-    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
-    box-shadow: rgb(125, 125, 125) 0px -7px 0px 0px inset !important;
-}
-
-/* Unknown */
-.menuItem .menuItemIcon {
-    position: relative;
-    width: 100%;
-    height: 45%;
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    display: none;
-}
-
-/* Voice Icon */
-#uiBase.onMenu #voiceDisplay {
-    left: 360px !important;
-    bottom: 25px !important;
-    transition-duration: 0.2s;
 }
 
 /* Unknown */
@@ -2383,45 +3315,10 @@ a:active {
     color: white !important;
 }
 
-/* "Register" & "Login" Active Button */
-.accountButton:active {
-    background-color: rgb(125, 67, 67) !important;
-}
-
-/* Unknown */
-.buttonG:active {
-    background-color: rgb(172, 172, 172) !important;
-    box-shadow: rgb(125, 125, 125) 0px -7px 0px 0px inset !important;
-}
-
-/* Unknown */
-.buttonP:active {
-    background-color: rgb(172, 172, 172) !important;
-    box-shadow: rgb(125, 125, 125) 0px -7px 0px 0px inset !important;
-}
-
-/* Unknown */
-.buttonPI:active {
-    background-color: rgb(172, 172, 172) !important;
-    box-shadow: rgb(125, 125, 125) 0px -7px 0px 0px inset !important;
-}
-
-/* Unknown */
-.buttonR:active {
-    background-color: rgb(172, 172, 172) !important;
-    box-shadow: rgb(125, 125, 125) 0px -7px 0px 0px inset !important;
-}
-
 /* Unknown */
 .setHed:active {
     border-radius: 5px;
     color: rgb(125, 125, 125) !important;
-}
-
-/* Unknown */
-#policeButton:active {
-    background-color: rgb(172, 172, 172) !important;
-    box-shadow: rgb(125, 125, 125) 0px -7px 0px 0px inset !important;
 }
 
 /* Unknown */
@@ -2431,11 +3328,6 @@ a:active {
 
 /* Unknown */
 .hostPresetBtn:active {
-    background-color: rgb(125, 67, 67) !important;
-}
-
-/* Unknown */
-.reportBut:active {
     background-color: rgb(125, 67, 67) !important;
 }
 
@@ -2466,12 +3358,6 @@ a:active {
 }
 
 /* Unknown */
-.terms:active {
-    text-decoration: none;
-    color: rgb(125, 125, 125) !important;
-}
-
-/* Unknown */
 .menuTabNew:active {
     color: rgb(125, 125, 125) !important;
 }
@@ -2479,11 +3365,6 @@ a:active {
 /* Unknown */
 .mailObj:active {
     background-color: rgba(0, 0, 0, 0.25) !important;
-}
-
-/* Unknown */
-a:active {
-    color: rgb(125, 125, 125) !important;
 }
 
 /* Unknown */
@@ -2589,11 +3470,6 @@ a:active {
 }
 
 /* Unknown */
-[style="margin-top:10px;font-size:15px;color:rgba(255,255,255,0.4)"] {
-    color: black !important;
-}
-
-/* Unknown */
 #instructionsUpdateCredit {
     text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000;
 }
@@ -2601,13 +3477,6 @@ a:active {
 /* Unknown */
 #instructionsUpdateCredit:hover {
     color: rgb(179, 179, 179) !important;
-}
-
-/* "GAME UPDATING" Card */
-#instructionsUpdate {
-    border-radius: 10px;
-    background-color: rgb(255 255 255 / 82%) !important;
-    color: black !important;
 }
 
 /* Unknown */
@@ -2618,17 +3487,6 @@ a:active {
 /* Unknown */
 [style="color:rgba(0,0,0,0.6);margin-bottom:20px"] {
     color: black !important;
-}
-
-/* Unknown */
-#referralHeader {
-    text-shadow: none;
-    color: rgb(0, 0, 0) !important;
-}
-
-/* "Killed By" & "You Died" Text */
-#killCardBy { /* Hide "Killed By" & "You Died" Text */
-    display: none;
 }
 
 /* Unknown */
@@ -2661,22 +3519,6 @@ a:active {
     color: rgb(255, 255, 255) !important;
 }
 
-/* "Killed By" Card */
-#killCardHolder {
-    bottom: 422px;
-}
-
-/* Enter Server Password Input */
-input, textarea:hover { /* White Background Color */
-    background-color: rgb(255 255 255) !important;
-}
-
-/* Unknown */
-.material-icons.vote:hover {
-    transform: scale(1.2);
-    color: rgb(185, 185, 185) !important;
-}
-
 /* Unknown */
 .tListN.inv {
     background-color: rgb(248, 96, 96) !important;
@@ -2690,12 +3532,12 @@ input, textarea:hover { /* White Background Color */
 }
 
 /* Unknown */
-#tDecName { /* No Text Shadow */
+#tDecName {
     text-shadow: none;
 }
 
 /* Unknown */
-#tSubName { /* No Text Shadow */
+#tSubName {
     text-shadow: none;
 }
 
@@ -2801,28 +3643,8 @@ input:hover + .tSubCheck {
 }
 
 /* Unknown */
-#trustProgHD {
-    text-shadow: none;
-    color: rgb(0, 0, 0) !important;
-}
-
-/* Unknown */
-[style="color:inherit"] {
-    color: white !important;
-}
-
-/* Unknown */
 [style="color:#fff;font-size:40px;vertical-align:middle;margin-top:-5px"] {
     display: none;
-}
-
-/* "Featured Creators/Streaming Now!/Now Live" etc Creator Ads */
-#streamContainer { /* White Text Color, 0px Left, Transparent Background Color, 63px Top, 1 z-index */
-    color: rgb(255, 255, 255) !important;
-    margin-left: -135px;
-    background-color: rgb(0 0 0 / 0%) !important;
-    margin-top: -15px;
-    z-index: 1;
 }
 
 /* Unknown */
@@ -2830,112 +3652,195 @@ input:hover + .tSubCheck {
     color: rgb(149 149 149) !important;
 }
 
-/* Terms Popup Background */
-.onetrust-pc-dark-filter {
-    background: rgb(0 0 0 / 0%) !important;
+/* UN1. Unknown ==================================================================================================== */
+
+/* "Register" & "Login" Button */
+.accountButton {
+    background-color: var(--secondary-button) !important;
+    color: var(--secondary-button-text) !important;
+    border-radius: var(--secondary-button-roundness) !important;
 }
 
-/* Terms Popup */
-#onetrust-consent-sdk #onetrust-banner-sdk {
-    border-radius: 10px;
-    background-image: url(https://i.imgur.com/8c03JdV.png);
+/* "Register" & "Login" Hover Button */
+.accountButton:hover {
+    background-color: var(--secondary-button-hover) !important;
 }
 
-/* Cookies Settings Button */
-#onetrust-consent-sdk #onetrust-pc-btn-handler {
-    color: rgb(255 255 255) !important;
-    border-color: rgb(248 96 96) !important;
-    background-color: rgb(248 96 96) !important;
-    border-radius: 5px;
+/* "Quick Join" Button */
+.quickJoin {
+    text-shadow: none;
+    background-color: var(--secondary-button) !important;
+    color: var(--secondary-button-text) !important;
+    border-radius: var(--secondary-button-roundness) !important;
+    border: 4px solid #0000;
 }
 
-/* Cookies Settings Hover Button */
-#onetrust-consent-sdk #onetrust-pc-btn-handler:hover {
-    background-color: rgb(164 64 64) !important;
-    border-color: rgb(164 64 64) !important;
-    opacity: 999 !important;
+/* "Quick Join" Hover Button */
+.quickJoin:hover {
+    transform: scale(1);
+    background-color: var(--secondary-button-hover) !important;
 }
 
-/* Accept All Cookies Button */
-#onetrust-consent-sdk #onetrust-accept-btn-handler, #onetrust-banner-sdk #onetrust-reject-all-handler {
-    background-color: rgba(248 96 96) !important;
-    border-color: rgba(248 96 96) !important;
-    border-radius: 5px;
+/* Country Flag etc Input */
+.inputGrey2  { /* White Background, Black Text */
+    background: rgb(255 255 255) !important;
+    color: var(--input-field-text) !important;
 }
 
-/* Accept All Cookies Hover Button */
-#onetrust-consent-sdk #onetrust-accept-btn-handler, #onetrust-banner-sdk #onetrust-reject-all-handler:hover {
-    background-color: rgba(164 64 64) !important;
-    border-color: rgba(164 64 64) !important;
-    opacity: 999 !important;
+/* Count Icon...etc */
+div.countIcon, #leaderDisplay, div#ammoDisplay, div#timerDisplay, div#teamScores, div#voteToKick, div#hudClassIcon, div#healthValueHolder {
+    border-radius: var(--hud-roundness);
+    background-color: var(--hud-background-color) !important;
 }
 
-/* Unknown */
-#onetrust-banner-sdk .ot-sdk-button:hover, #onetrust-banner-sdk :not(.ot-leg-btn-container)>button:hover, #onetrust-banner-sdk input[type="submit"]:hover, #onetrust-banner-sdk input[type="reset"]:hover, #onetrust-banner-sdk input[type="button"]:hover, #onetrust-banner-sdk .ot-sdk-button:focus, #onetrust-banner-sdk :not(.ot-leg-btn-container)>button:focus, #onetrust-banner-sdk input[type="submit"]:focus, #onetrust-banner-sdk input[type="reset"]:focus, #onetrust-banner-sdk input[type="button"]:focus, #onetrust-pc-sdk .ot-sdk-button:hover, #onetrust-pc-sdk :not(.ot-leg-btn-container)>button:hover, #onetrust-pc-sdk input[type="submit"]:hover, #onetrust-pc-sdk input[type="reset"]:hover, #onetrust-pc-sdk input[type="button"]:hover, #onetrust-pc-sdk .ot-sdk-button:focus, #onetrust-pc-sdk :not(.ot-leg-btn-container)>button:focus, #onetrust-pc-sdk input[type="submit"]:focus, #onetrust-pc-sdk input[type="reset"]:focus, #onetrust-pc-sdk input[type="button"]:focus, #ot-sdk-cookie-policy .ot-sdk-button:hover, #ot-sdk-cookie-policy :not(.ot-leg-btn-container)>button:hover, #ot-sdk-cookie-policy input[type="submit"]:hover, #ot-sdk-cookie-policy input[type="reset"]:hover, #ot-sdk-cookie-policy input[type="button"]:hover, #ot-sdk-cookie-policy .ot-sdk-button:focus, #ot-sdk-cookie-policy :not(.ot-leg-btn-container)>button:focus, #ot-sdk-cookie-policy input[type="submit"]:focus, #ot-sdk-cookie-policy input[type="reset"]:focus, #ot-sdk-cookie-policy input[type="button"]:focus {
-    opacity: 999 !important;
+/* LeaderBoard Display */
+div#leaderDisplay {
+    border-radius: var(--hud-roundness) !important;
+    background-color: var(--hud-background-color) !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
-/* Unknown */
-#onetrust-consent-sdk #onetrust-pc-sdk, #onetrust-consent-sdk #search-container, #onetrust-consent-sdk #onetrust-pc-sdk .ot-switch.ot-toggle, #onetrust-consent-sdk #onetrust-pc-sdk group-toggle .checkbox, #onetrust-consent-sdk #onetrust-pc-sdk #pc-title:after {
-    background-color: #ffffffd9 !important;
-    border-radius: 5px;
+/* Ammo Value...etc */
+#ammoVal, #curGameInfo, #timerVal, #healthValue, #reloadMsg {
+    color: var(--hud-bold-text-color) !important;
 }
 
-/* Unknown */
-#onetrust-pc-sdk.ot-fade-in, .onetrust-pc-dark-filter.ot-fade-in {
-    animation-name: none !important;
-    animation-duration: 0s !important;
-    animation-timing-function: none !important;
+/* "AmmoMax" etc Display */
+#ammoMax, .weapKey, #pingDisplay, #fpsDisplay, #ingressDisplay, #egressDisplay, #pingText, #ingressPacketCount, #ingressDataSize, #egressPacketCount, #egressDataSize, #curGameInfo div, .tScoreT, #voteKickNum, #voteKickName, #voteKickKeys, #maxHP {
+    color: var(--hud-text-color) !important;
 }
 
-/* Unknown */
-#onetrust-consent-sdk #onetrust-pc-sdk button:not(#clear-filters-handler):not(.ot-close-icon):not(#filter-btn-handler):not(.ot-remove-objection-handler):not(.ot-obj-leg-btn-handler), #onetrust-consent-sdk #onetrust-pc-sdk .ot-leg-btn-container .ot-active-leg-btn {
-    background-color: rgb(248 96 96) !important;
-    border-color: rgb(248 96 96) !important;
-    border-radius: 5px;
+/* FPS Display InGame */
+#ingameFPS {
+    color: var(--fps-color) !important;
 }
 
-/* Unknown */
-#onetrust-consent-sdk #onetrust-pc-sdk button:not(#clear-filters-handler):not(.ot-close-icon):not(#filter-btn-handler):not(.ot-remove-objection-handler):not(.ot-obj-leg-btn-handler), #onetrust-consent-sdk #onetrust-pc-sdk .ot-leg-btn-container .ot-active-leg-btn:hover {
-    background-color: rgba(164 64 64) !important;
-    border-color: rgba(164 64 64) !important;
+/* Ping Icon InGame */
+#pingIcon {
+    color: var(--ping-color) !important;
 }
 
-/* Unknown */
-#onetrust-consent-sdk #onetrust-pc-sdk .privacy-notice-link, #onetrust-consent-sdk #onetrust-pc-sdk .category-vendors-list-handler, #onetrust-consent-sdk #onetrust-pc-sdk .category-vendors-list-handler + a, #onetrust-consent-sdk #onetrust-pc-sdk .category-host-list-handler, #onetrust-consent-sdk #onetrust-pc-sdk .vendor-privacy-notice, #onetrust-consent-sdk #onetrust-pc-sdk #hosts-list-container .host-title a, #onetrust-consent-sdk #onetrust-pc-sdk #hosts-list-container .accordion-header .host-view-cookies, #onetrust-consent-sdk #onetrust-pc-sdk #hosts-list-container .vendor-host a {
-    color: rgb(248 96 96) !important;
+/* Leaderboard Premium Icon */
+#leaderContainer i[style*="color:#FBC02D"] {
+    color: var(--premium-color) !important;
 }
 
-/* Unknown */
-#onetrust-pc-sdk #cookie-preferences .ot-always-active {
-    color: rgb(248 96 96) !important;
+/* Leaderboard Verified Icon */
+#leaderContainer i[style*="color:#40C4FF"] {
+    color: var(--verified-color) !important;
 }
 
-/* Unknown */
-#onetrust-pc-sdk .switch-checkbox:checked+.ot-switch-label .ot-switch-nob {
-    background-color: rgb(255 255 255) !important;
-    border-color: rgb(248 96 96 / 0%) !important;
+/* Chal Prog */
+.chalProg {
+    color: #fff !important;
 }
 
-/* Unknown */
-#onetrust-pc-sdk .ot-switch-inner:before {
-    background-color: #f86060 !important;
+/* Ban Players Button (Host/Mod Only) */
+.punishButton.ban {
+    background-color: rgb(248, 96, 96) !important;
+    color: rgb(255, 255, 255) !important;
 }
 
-/* Unknown */
-#onetrust-pc-sdk .accordion-text .ot-switch-inner, #onetrust-pc-sdk .ot-accordion-layout.category-item .ot-switch-inner {
-    background-color: #a8a8a8 !important;
+/* "Register" & "Login" Button 2 */
+.accountButton {
+    color: rgb(255, 255, 255) !important;
 }
 
-/* Unknown */
-#onetrust-pc-sdk .ot-switch-nob {
-    background: #ffffff !important;
-    border: 2px solid #ffffff00 !important;
+/* PubPfp Hover */
+#pubPfp:hover {
+    background-color: rgb(28, 127, 208) !important;
 }
 
-/* Match Ended Win Icon */
-.teamWin1 {
-    color: #ffbc00 !important;
+/* Search Input Hover In Settings Page */
+#settSearch:hover { /* rgb(152 152 152) Color */
+    background-color: rgb(152 152 152) !important;
+}
+
+/* Server Search */
+#serverSearch { 
+    color: rgb(0 0 0) !important;
+}
+
+/* "Enter Username" & "Enter Password" Input */
+.accountInput:hover {
+    background-color: rgb(156 156 156) !important;
+}
+
+/* "Current Password" "New Password" "Repeat Password" Input */
+.smlInput:hover {
+    background-color: rgb(152 152 152) !important;
+}
+
+/* Download Offical Krunker.io Client Hover Button */
+.downloadClient:hover {
+    background-image: url("https://i.imgur.com/2mbnFWc.png");
+}
+
+/* Join Krunker.io Offical Discord Server Hover Button */
+.discordSocial:hover {
+    background-image: url("https://i.imgur.com/qeja8BT.png");
+}
+
+/* Follow Krunker.io Offical Reddit Hover Button */
+.redditSocial:hover {
+    background-image: url("https://i.imgur.com/r81NvBU.png");
+}
+
+/* Follow Twitter Offical Krunker.io Hover Button */
+.twitterSocial:hover {
+    background-image: url("https://i.imgur.com/yUtgLJe.png");
+}
+
+/* "Count" Games */
+#menuWindow > div:nth-child(3) > span {
+    color: rgb(0 0 0);
+}
+
+/* Using Brave may cause performance issues */
+#braveWarning {
+    display: none !important;
+}
+
+/* Verified, Partner, Premium */
+[style="color:#2196F3;font-size:33px;vertical-align:bottom;"], [style="color:#993299;font-size:33px;vertical-align:bottom;"], [style="color:#FBC02D;font-size:33px;vertical-align:bottom;"] {
+    display: none !important;
+}
+
+/* KPD Desc */
+#policePopC > div:nth-child(2) {
+    color: rgb(255 255 255 / 50%) !important;
+}
+
+/* "For lost Passwords/Accounts contact recovery@yendis.ch" Text On Login Page */
+[style="margin-top:10px;font-size:18px;color:rgba(0,0,0,0.5);"] {
+    font-size: 0px !important; /* Hide Then */
+}
+
+/* "Register" & "Login" Active Button */
+.accountButton:active {
+    background-color: rgb(125, 67, 67) !important;
+}
+
+/* "Killed By" & "You Died" Text */
+#killCardBy {
+    display: none;
+}
+
+/* "Killed By" Card */
+#killCardHolder {
+    bottom: 422px;
+}
+
+/* Enter Server Password Input */
+input, textarea:hover {
+    background-color: #e3e3e3 !important;
+}
+
+/* 0/0 Helpful Reports */
+#trustProgHD {
+    text-shadow: none;
+    color: rgb(0 0 0 / 50%) !important;
 }
 
 /* "Login Required" to Login Active Button */
@@ -2951,11 +3856,6 @@ input:hover + .tSubCheck {
 /* Donate Active Button */
 .voteHint:active {
     background-color: rgb(132 132 132) !important;
-}
-
-/* Krunker News */
-#newsHolder { /* Hide News */
-    display: none !important;
 }
 
 /* Premium Icon On Clan Page */
@@ -3080,11 +3980,6 @@ input:hover + .tSubCheck {
     color: rgb(255 255 255) !important;
 }
 
-/* "Season 4!" Text In Main Menu Top Krunker Logo */
-#seasonLabel { /* Hide "Season 4!" Text */
-    display: none !important;
-}
-
 /* "Disable Adblock to Support Krunker" Text */
 #supportKrunker { /* Changed The Full White Color */
     color: rgb(255 255 255) !important;
@@ -3124,11 +4019,6 @@ input:hover + .tSubCheck {
     text-shadow: -1px -1px 0 #202020, 1px -1px 0 #202020, -1px 1px 0 #202020, 1px 1px 0 #202020, -2px -2px 0 #202020, 2px -2px 0 #202020, -2px 2px 0 #202020, 2px 2px 0 #202020 !important;
 }
 
-/* "Free for All" etc Current Game Mode Text In Spectate Mode */
-#specGameInfo { /* Changed To Full White Color */
-    color: white !important;
-}
-
 /* "Prev[LM]" etc Text */
 .specContrI { /* Changed To Full White Color */
     color: rgb(255 255 255) !important;
@@ -3137,12 +4027,6 @@ input:hover + .tSubCheck {
 /* "NO [N]" "YES[Y]" Text In Was this report helpful Popup */
 .specKPDContrI { /* Changed To Full White Color */
     color: rgb(255 255 255) !important;
-}
-
-/* "waiting for players" Message In Spectate Mode */
-#specGMessage { /* Full White Color And Some Bigger Font */
-    color: rgb(255 255 255) !important;
-    font-size: 15px;
 }
 
 /* "More Information" Hover Button */
@@ -3161,18 +4045,8 @@ input:hover + .tSubCheck {
 }
 
 /* "We are discontinuing this version of the Krunker Client as we are preparing for the steam release. If you want to update your client to the latest version. Please download and install the new client" Text Of Notice Client Popup */
-#clientPop { /* Black Background */
+#clientPop {
     background-color: rgba(0, 0, 0, 0.5) !important;
-}
-
-/* "No Messages" In Inbox Page */
-#mailList { /* Full Black Color */
-    color: rgb(0, 0, 0) !important;
-}
-
-/* "By" Text On Games/Mods Page */
-.mapByTxt { /* Full Black Color */
-    color: rgb(0 0 0) !important;
 }
 
 /* "Count" Views/Youtuber Text */
@@ -3201,13 +4075,13 @@ input:hover + .tSubCheck {
 }
 
 /* "[FPS]FPS" Text */
-#fpsDisplay { /* White Text Color */
+#fpsDisplay, #pingDisplay {
     color: rgb(255 255 255) !important;
 }
 
 /* "[Ping]ms" Text */
-#pingText { /* White Text Color */
-    color: rgba(255,255,255) !important;
+#pingText {
+    color: var(--ping-color) !important;
 }
 
 /* "[M1] Change Prop" etc Text */
@@ -3225,22 +4099,6 @@ input:hover + .tSubCheck {
     padding: 4px;
     padding-right: 8px;
     padding-left: 9px;
-}
-
-/* "Create Games on the Krunker Editor" Hover Button */
-#editorBtnM:hover { /* No Animation, No Opacity */
-    transform: scale(1);
-    opacity: 999;
-}
-
-/* "Create Games on the Krunker Editor" Button */
-#editorBtnM { /* Hide "Create Games on the Krunker Editor" Button */
-    display: none;
-}
-
-/* "* timeframes are estimates" Text */
-#menuWindow > div:nth-child(1) > span { /* Black Text Color */
-    color: #000 !important;
 }
 
 /* 2021 Krunker Roadmap Vis */
@@ -3284,11 +4142,6 @@ input:hover + .tSubCheck {
     color: #000;
 }
 
-/* KeyBind Shoot Key */
-#contshoot {
-    color: rgb(248 96 96) !important;
-}
-
 /* "Time Remaining" Text */
 #tiBBbid, #tiBBbid > span { /* Black Text Color */
     color: #000 !important;
@@ -3328,11 +4181,6 @@ input:hover + .tSubCheck {
     background-color: rgb(194, 194, 194) !important;
 }
 
-/* "[B] to Reset" Text Message Of "[B]" Key Text */
-#speedRunRstKey { /* White Text Color */
-    color: #fff !important;
-}
-
 /* "[B] to Reset" Text Message */
 #speedRunReset { /* rgb(0 0 0 / .3 ) Background Color */
     background-color: rgba(0,0,0,.3) !important;
@@ -3344,8 +4192,8 @@ input:hover + .tSubCheck {
 }
 
 /* "Point [Count]" Text Message */
-.sriAct { /* rgb(255 255 255 / 50%) Background Color */
-    background-color: rgb(255 255 255 / 50%) !important;
+.sriAct {
+    background-color: rgb(248 96 96 / 90%) !important;
 }
 
 /* Speed Run Box */
@@ -3430,64 +4278,33 @@ input:hover + .tSubCheck {
     background-size: 101% !important;
 }
 
-/* Shop Page Premium Tab of Time Remaining */
-#premTime { /* Black Color */
-    color: rgb(0 0 0) !important;
-}
-
-/* By purchasing you agree to the Terms. Consider Support your favorite Content Creator by using a Creator Code */
-#menuWindow > div:nth-child(2) > div:nth-child(1) { /* Black Text Color */
-    color: white !important;
-}
-
 /* Not Selected */
 #menuWindow > div.bigMenTabs > div:nth-child(1) {
-    color: rgba(255,255,255,.7) !important;
+    color: rgba(255,255,255,.7);
 }
 
 /* Not Selected Hover */
 #menuWindow > div.bigMenTabs > div:nth-child(1):hover {
     color: rgb(255 255 255) !important;
-}
-
-/* "Count" Hours */
-#menuWindow > div:nth-child(5) > div > div {
-    color: #fff !important;
-}
-
-/* +[Count] "USD" Text */
-#menuWindow > div:nth-child(5) > div > div > div > span {
-    color: #fff !important;
-}
-
-/* +"Count" USD */
-.refAnot {
-    color: #fff !important;
+    filter: brightness(999);
 }
 
 /* Games Page Host/Play Button */
 #bigMFeatHBtn, #bigMFeatPBtn {
     background-color: rgb(66 66 66) !important;
+    border: none;
 }
 
 /* Games Page Host/Play Button */
 #bigMFeatHBtn:hover, #bigMFeatPBtn:hover {
     background-color: rgb(146 146 146) !important;
+    border: none !important;
 }
 
 /* Games Page Host/Play Button */
 #bigMFeatHBtn:active, #bigMFeatPBtn:active {
     background-color: rgb(105 105 105) !important;
-}
-
-/* Game/Mod Page Home Button */
-#menuWindow > div:nth-child(1) > div > div.bigMenTab.bigMenTabA > span, #menuWindow > div:nth-child(4) > div > div.bigMenTab.bigMenTabA > span, #menuWindow > div:nth-child(4) > div > div:nth-child(1) > span, #menuWindow > div:nth-child(1) > div > div:nth-child(1) > span {
-    color: white !important;
-}
-
-/* Game/Mod Page Home Hover Button */
-#menuWindow > div:nth-child(1) > div > div.bigMenTab.bigMenTabA > span:hover, #menuWindow > div:nth-child(4) > div > div.bigMenTab.bigMenTabA > span:hover, #menuWindow > div:nth-child(4) > div > div:nth-child(1) > span:hover, #menuWindow > div:nth-child(1) > div > div:nth-child(1) > span:hover {
-    color: #7c7c7c !important;
+    border: none !important;
 }
 
 /* Play Arrow */
@@ -3498,36 +4315,6 @@ input:hover + .tSubCheck {
 /* Fun on... */
 .mFeatSepar {
     color: #fff !important;
-}
-
-/* Count Mods */
-#menuWindow > div:nth-child(3) > span {
-    color: #fff !important;
-}
-
-/* Every hour... */
-#menuWindow > div:nth-child(3) {
-    color: #fff !important;
-}
-
-/* Referred... */
-#menuWindow > div.setHed > span {
-    color: #fff !important;
-}
-
-/* Redeem Vouchers from certain Streamers & Events */
-#menuWindow > div:nth-child(5) > div:nth-child(1) { /* White Text Color */
-    color: white !important;
-}
-
-/* Reversing a payment can result in the termination of your krunker account. */
-#purchaseSelector > div:nth-child(2) { /* Black Text Color */
-    color: black !important;
-}
-
-/* By purchasing you agree to the Terms & Conditions */
-[style="color:rgba(255,255,255,0.4);font-size:19px;margin-top:10px;width:100%;text-align:center;"]{
-    color: black !important;
 }
 
 /* Select a Server Type */
@@ -3545,107 +4332,14 @@ input:hover + .tSubCheck {
 }
 
 /* Premium Star Icon */
-.premText i { /* Hide */
-    color: #fff0 !important;
+.premText i {
+    color: #0000 !important;
 }
 
-/* [Golden Badge...etc] Text */
-.premText { /* -43px Margin Left */
-    color: #000 !important;
-    margin-left: -43px;
-}
-
-/* "Success! Share the link" Text */
-#hostGameMsg { /* rgba(0, 0, 0, 0.76) Text Color */
-    color: rgba(0, 0, 0, 0.76) !important;
-}
-
-/* Guide Popup Yellow Texts */
-#guidePopup > div > div.guideInfoT > span { /* rgb(248 96 96) Text Color */
-    color: rgb(248 96 96) !important;
-}
-
-/* Check the Guide Link Button of the New to Krunker? */
-#helpGuidOpn { /* rgb(248 96 96) Text Color */
-    color: rgb(248 96 96) !important;
-}
-
-/* Check the Guide Link Hover Button of the New to Krunker? */
-#helpGuidOpn:hover { /* White Text Color */
-    color: rgb(255 255 255) !important;
-}
-
-/* New to Krunker? Box */
-#youNewDiv { /* -132px Margin Left, -6px Margin Top, transparent Background Color */
-    margin-top: -6px;
-    background-color: rgb(255 255 255 / 0%) !important;
-    margin-left: -132px !important;
-}
-
-/* New to Krunker? Picture Icon */
-#helpPIcon { /* Hide */
-    display: none !important;
-}
-
-/* New to Krunker? Text Box */
-#helpTxtHol { /* -1px Margin Left */
-    margin-left: -1px;
-}
-
-/* New to Krunker? Text Hover Box */
-#helpTxtHol:hover { /* No Opacity */
-    opacity: 999;
-}
-
-/* Guide Popup */
-#guidePopupH { /* Transparent Background */
-    background-color: rgb(0 0 0 / 0%) !important;
-}
-
-/* [ALT] Text of Guide Popup */
-#guidePopup > div > div > span > span { /* rgb(248 96 96) Text Color */
-    color: rgb(248 96 96) !important;
-}
-
-/* "Krunker is a Move...etc" Text of Guide Popup */
-.guideInfoT { /* White Text Color */
-    color: rgb(255 255 255) !important;
-}
-
-/* Guide Popup */
-#guidePopup { /* 790px Height, rgb(73 73 73 / 90%) Background Color */
-    height: 790px;
-    background-color: rgb(73 73 73 / 90%);
-}
-
-/* "Ping can be...etc" Text of Guide Popup */
-.guideStepV { /* White Text Color */
-    color: rgb(255 255 255) !important;
-}
-
-/* XP Bar In Match Ended */
-.xpEndBarB { /* White Background Color */
-    background-color: #ffffff !important;
-}
-
-/* +[Count] KR Text In Match Ended */
-#fundsLayout > div > span { /* rgb(248 96 96) Text Color */
-    color: #fff !important;
-}
-
-/* Server Cost */
-#hostActionH > span, #hCustCost { /* rgba(0, 0, 0, 0.76) Text Color */
-    color: rgba(0, 0, 0, 0.76) !important;
-}
-
-/* Comp Server Setup Info */
-#krRewardsInfo > div > div > span { /* Black Text Color */
-    color: black !important;
-}
-
-/* Select Server Type */
-.serverHostOpH { /* Hide */
-    display: none !important;
+/* Reduced Ads (are u sure?), Golden Badge on Profile...etc Texts */
+.premText {
+    margin-left: -20px;
+    border-bottom: 3px solid rgb(0 0 0 / 0%);
 }
 
 /* Comp Server Setup etc */
@@ -3663,16 +4357,6 @@ input:hover + .tSubCheck {
     background-color: rgb(144 144 144) !important;
 }
 
-/* Mod Dropper Border */
-#modDropper { /* rgb(67 67 67) Border Color */
-    border: 4px dashed rgb(67 67 67) !important;
-}
-
-/* drop mod file here or click */
-#modDropper p { /* rgb(67 67 67) Text Color */
-    color: rgb(67 67 67) !important;
-}
-
 /* Settings Active Button In Servers Browser Page */
 #hostMenuBtn:active { /* No Animation, rgb(125 67 67) Background Color */
     -webkit-transform: scale(1);
@@ -3685,157 +4369,15 @@ input:hover + .tSubCheck {
     color: rgb(56, 56, 56) !important;
 }
 
-/* Match Ended KR Count */
-#endTable > tbody > tr > td > span { /* White Text Color */
-    color: rgb(255, 255, 255) !important;
-}
-
-/* VICTORY/DEFEAT/DRAW In Match Ended */
-.modeStatus { /* White Text Color */
-    color: #fff !important;
-}
-
-/* +[Count]KR/NONE Text In Match Ended */
-.fundsVal { /* White Text Color */
-    color: rgb(255, 255, 255) !important;
-}
-
-/* Score etc In Match Ended Display */
-.crLabel { /* White Text Color */
-    color: rgb(255, 255, 255) !important;
-}
-
-/* Count XP Level In Match Ended */
-.xpLvl { /* White Text Color */
-    color: rgb(255, 255, 255) !important;
-}
-
 /* Enter Text Input */
-.accountInput { /* White Background Color, Black Text Color */
-    background-color: rgb(255 255 255) !important;
+.accountInput { 
+    background-color: rgb(188 188 188) !important;
     color: #000 !important;
 }
 
 /* K/D Count */
 #killsVal, #deathsVal, #streakVal, #myScoreVal, #kdVal { /* White Text Color */
     color: rgba(255,255,255) !important;
-}
-
-/* Match Ended Tab */
-.tabHeader { /* White Text Color */
-    color: rgb(255, 255, 255) !important;
-}
-
-/* Match Ended Active Tab */
-.tabHeader:active { /* rgb(149 149 149) Text Color */
-    color: rgb(149 149 149) !important;
-}
-
-/* [UPDATED] Map */
-[style="background-color:#5699EB"] { /* White Background, Black Text */
-    background-color: rgb(255, 255, 255) !important;
-    color: black !important;
-}
-
-/* [NEW] Map */
-[style="background-color:#E040FB"] { /* White Background, Black Text */
-    background-color: rgb(255 255 255) !important;
-    color: black !important;
-}
-
-/* Spectate Slider to Text */
-.sliderSml, #spectButton > span {
-    visibility: hidden;
-    transition-duration: .1s;
-}
-
-/* Spectate After Button */
-.sliderSml:after {
-    position: relative;
-    right: 87px;
-    color: black;
-    background-color: rgb(233 233 233 / 90%);
-    border-radius: 5px;
-    padding: 5px;
-    top: -10px;
-    visibility: visible;
-    content:'Spectate';
-    transition-duration: 0.2s;
-}
-
-/* Spectate Hover After Button */
-.sliderSml:hover:after {
-    position: relative;
-    right: 87px;
-    color: black;
-    background-color: rgb(156 156 156/ 90%);
-    border-radius: 5px;
-    padding: 5px;
-    top: -10px;
-    visibility: visible;
-    content:'Spectate';
-    transition-duration: 0.2s;
-}
-
-/* Spectate Active After Button */
-.sliderSml:active:after {
-    position: relative;
-    right: 87px;
-    color: black;
-    background-color: rgb(129 129 129 / 90%);
-    visibility: visible;
-    border-radius: 5px;
-    padding: 5px;
-    top: -10px;
-    content:'Spectate';
-    transition-duration: 0.2s;
-}
-
-/* Spectate SliderSml */
-input:checked+.sliderSml {
-    visibility: hidden;
-}
-
-/* Spectate SliderSml After */
-input:checked+.sliderSml:after {
-    position: relative;
-    right: 87px;
-    visibility: visible;
-    content:'Spectate';
-    color: white;
-    background-color: rgb(246 96 96 / 90%);
-    border-radius: 5px;
-    padding: 5px;
-    top: -10px;
-    transition-duration: 0.3s;
-}
-
-/* Spectate SliderSml Hover After */
-input:checked+.sliderSml:hover:after {
-    position: relative;
-    right: 87px;
-    border-radius: 5px;
-    padding: 5px;
-    top: -10px;
-    visibility: visible;
-    content:'Spectate';
-    color: white;
-    background-color: rgb(164 64 64/ 90%);
-    transition-duration: 0.3s;
-}
-
-/* Spectate SliderSml Active After */
-input:checked+.sliderSml:active:after {
-    position: relative;
-    right: 87px;
-    border-radius: 5px;
-    padding: 5px;
-    top: -10px;
-    visibility: visible;
-    content:'Spectate';
-    color: white;
-    background-color: rgb(133 53 53/ 90%);
-    transition-duration: 0.3s;
 }
 
 /* Pick Weapon */
@@ -3852,23 +4394,6 @@ input:checked+.sliderSml:active:after {
 /* Selector Item Active */
 .selectorItem:active {
     background-color: #525252;
-}
-
-/* Selector Item */
-.selectorItem {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    height: 142px;
-    width: 130px;
-    background-color: #999999;
-    border-radius: 5px;
-    margin-top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    filter: none;
-    transition: .1s;
-    cursor: pointer;
 }
 
 /* Selector Item/Icon */
@@ -3902,7 +4427,7 @@ input:checked+.sliderSml:active:after {
 
 /* Dark TabANew Hover */
 .dark .tabANew:hover {
-    border-bottom: rgb(0 0 0 / 0%) !important;
+    border-bottom: 7px solid rgb(0 0 0 / 0%) !important;
     color: #fff !important;
 }
 
@@ -3916,23 +4441,9 @@ input:checked+.sliderSml:active:after {
     color: white !important;
 }
 
-/* Unknown */
-[style="font-size:19px;margin-bottom:10px;color:rgba(255,255,255,0.4)"] {
-    color: #000 !important;
-}
-
-/* Menu Window Dark Div */
-#menuWindow.dark div {
-    color: #000;
-}
-
 /* Estimated Views Count */
 #menuWindow > div:nth-child(9) > div:nth-child(6) > span {
     color: #fff !important;
-}
-/* You have... */
-#menuWindow > div:nth-child(4) > div {
-    color: #000 !important;
 }
 
 /* Dark Menu TabANew Hover */
@@ -3986,8 +4497,7 @@ input:checked+.sliderSml:active:after {
 
 /* Window Background */
 #windowHolder.popupWin {
-    background-color: rgb(0 0 0 / 10%) !important;
-    transition-duration: 0.2s;
+    background-color: rgb(0 0 0 / 50%) !important;
 }
 
 /* Selector Container */
@@ -4057,32 +4567,9 @@ input:checked+.sliderSml:active:after {
     background-color: rgb(106 106 106) !important;
 }
 
-/* Settings Header */
-.setHed {
-    border: 4px solid rgb(255 255 255 / 0%) !important;
-    background-color: rgb(179 179 179) !important;
-    color: #fff !important;
-}
-
-/* Chat Input Holder */
-#chatInputHolder {
-    width: 115% !important;
-    transition-duration: 0.2s;
-}
-
-/* Chat Switch */
-#chatSwitch {
-    margin-left: -40px !important;
-}
-
 /* Hover Chat Switch */
 #chatSwitch:hover {
     color: rgb(170 170 170) !important;
-}
-
-/* Chat Holder */
-#chatHolder {
-    transition-duration: 0.2s;
 }
 
 /* Watch on Twitch */
@@ -4097,29 +4584,35 @@ input:checked+.sliderSml:active:after {
     text-decoration: underline #332252 !important;
 }
 
-/* Big Tab */
-.bigMenTab {
-    color: rgba(255,255,255,.7) !important;
+/* Home Icon in Shop */
+#shopHeader > div.bigMenTabs > div:nth-child(1) > span {
+    color: rgb(248 96 96) !important;
 }
 
-/* Custom Server Setup */
-#menuWindow > div.hostHeader {
-    display: none !important;
+/* Big Tab */
+.bigMenTab {
+    color: rgb(255 255 255 / 50%) !important;
+}
+
+/* Big Tab Icon */
+.bigMenTab > span {
+    color: rgb(255 255 255 / 50%) !important;
+}
+
+/* Big Tab Icon Hover */
+.bigMenTab > span:hover {
+    color: rgb(255 255 255) !important;
+    filter: brightness(999);
+}
+
+/* Big Tab Selected Icon */
+.bigMenTabA > span {
+    color: rgb(255 255 255) !important;
 }
 
 /* Offical Host Map Text */
 .hostMapName, .hostMapYear, .hostMapVersion  {
     color: #fff !important;
-}
-
-/* Community...etc */
-.setBodH {
-    background-color: rgb(179 179 179) !important;
-}
-
-/* Big Tabs */
-.bigMenTabs {
-    background-color: rgb(171 171 171) !important;
 }
 
 /* Hover BigTabA */
@@ -4131,29 +4624,14 @@ input:checked+.sliderSml:active:after {
 .bigMenTab:hover {
     border-bottom: none !important;
     color: #fff !important;
+    filter: opacity(999) brightness(999);
 }
 
 /* BigTabA */
 .bigMenTabA {
     border-bottom: none !important;
     color: #fff !important;
-}
-
-/* Voice Not Holding Icon */
-[style="opacity: 0.5;"] {
-    transition-duration: 0.2s;
-}
-
-/* Voice Holding Icon */
-[style="opacity: 0.9;"] {
-    transition-duration: 0.2s;
-}
-
-/* InGame Voice Icon */
-#uiBase.onGame #voiceDisplay {
-    left: 360px !important;
-    bottom: 155px !important;
-    transition-duration: 0.2s;
+    filter: brightness(999);
 }
 
 /* Match End Voice Icon */
@@ -4179,11 +4657,6 @@ input:checked+.sliderSml:active:after {
     color: white;
 }
 
-/* Spin KR Count Text Button */
-.spinVal {
-    color: #ffc147 !important;
-}
-
 /* Slider Val */
 .sliderVal {
     border: none !important;
@@ -4192,27 +4665,6 @@ input:checked+.sliderSml:active:after {
 /* New Follower...etc */
 .mailSubj {
     color: rgb(255 255 255) !important;
-}
-
-/* Kills..etc Icon */
-#killsIcon, #deathsIcon, #streakIcon, #kdIcon {
-    width: 35px !important;
-    height: 35px !important;
-}
-
-/* Count Icon */
-.countIcon {
-    font-size: 25px !important;
-}
-
-/* Score Count */
-#scoreCount > i {
-    font-size: 35px !important;
-}
-
-/* KR Count */
-.floatR {
-    color: rgb(255 255 255);
 }
 
 /* Chal Desc */
@@ -4228,7 +4680,7 @@ input:checked+.sliderSml:active:after {
 /* Chal Card */
 .chalCard {
     text-shadow: none !important;
-    border: none !important;
+    border: 4px solid #767676;
     background-color: rgb(89 89 89) !important;
 }
 
@@ -4240,8 +4692,6 @@ input:checked+.sliderSml:active:after {
 /* Account Settings HedS */
 .setHedS {
     border: none !important;
-    background-color: rgb(138 138 138) !important;
-    color: #fff !important;
 }
 
 /* Delete Account Desc */
@@ -4274,21 +4724,9 @@ input:checked+.sliderSml:active:after {
     color: #ff8100 !important;
 }
 
-/* Voice Icon on Death/Spectate Screen */
-#uiBase.onDeathScrn #voiceDisplay, #uiBase.onSpect #voiceDisplay {
-    left: 360px !important;
-    bottom: 25px !important;
-    transition-duration: 0.2s;
-}
-
 /* Big Feat Name */
 #bigMFeatName {
     color: #fff !important;
-}
-
-/* Fortune Seller, Krunker Esports */
-#menuWindow > div:nth-child(4) > div, #menuWindow > div:nth-child(4) > div:nth-child(2) {
-    color: white !important;
 }
 
 /* Join Queue Hover Button */
@@ -4331,11 +4769,6 @@ input:checked+.sliderSml:active:after {
     content: url(https://i.imgur.com/VxLGDy7.png);
 }
 
-/* Login & Register */
-#referralHeader { /* Hide */
-    display: none !important;
-}
-
 /* Reticle Cards */
 .noBtnCard {
     color: #fff !important;
@@ -4352,24 +4785,10 @@ input:checked+.sliderSml:active:after {
     background-color: rgb(85 85 85) !important;
 }
 
-/* Unknown */
-#serverHolder > div:nth-child(1) {
-    color: black !important;
-}
-
-/* New to... */
-.youNewDiv, #twitchDropsAd, #newUserGuide, #tlInfHold > div:nth-child(3) {
-    margin-left: -132px !important;
-}
-
-/* Advanced Settings Selected */
-[style="background-color: rgb(33, 150, 243);"] {
-    background-color: rgb(164 64 64) !important;
-}
-
-/* Advanced Settings Select */
-.advancedToggle {
-    color: #fff !important;
+/* KR Discount Ad */
+#krDiscountAd {
+    animation-name: none !important;
+    animation-duration: 0s !important;
 }
 
 /* Slide Name */
@@ -4385,26 +4804,6 @@ input:checked+.sliderSml:active:after {
 /* Server Browser Game Select Active */
 .settNameIn:active {
     background-color: rgb(0 0 0 / 55%) !important;
-}
-
-/* Advanced Settings Button */
-.advancedToggle {
-    background-color: rgb(248 96 96) !important;
-}
-
-/* Advanced Settings Hover Button */
-.advancedToggle:hover {
-    background-color: rgb(164 64 64) !important;
-}
-
-/* Advanced Settings Hover Button */
-.advancedToggle:active {
-    background-color: rgb(125 67 67) !important;
-}
-
-/* Spectate KeyBinds Text */
-#specContr > div > span {
-    color: #fff !important;
 }
 
 /* Player List Host Icon */
@@ -4439,23 +4838,209 @@ input:checked+.sliderSml:active:after {
     color: rgba(255,255,255,.5) !important;
 }
 
+/* Home, Promo Codes */
+#menuWindow > div.bigMenTabs > div:nth-child(1) > span, #menuWindow > div.bigMenTabs > div:nth-child(6) > span {
+    color: rgb(248 ,96, 96) !important;
+}
 
-/*
+/* Home, Promo Codes Hover */
+#menuWindow > div.bigMenTabs > div:nth-child(1) > span:hover, #menuWindow > div.bigMenTabs > div:nth-child(6) > span:hover {
+    color: rgb(255 255 255) !important;
+}
 
-   2021/2/3:
-     Note:
-       This CSS file It's Not Recommended use Krunker Steam Version, Because It has Display Issue.
-       You Can use Browser or Other Krunker Client(If Possible)
+/* Home, Promo Codes Selected */
+#menuWindow > div.bigMenTabs > div.bigMenTab.bigMenTabA > span {
+    color: white !important;
+}
 
-     Example:
-       GameUI: https://i.imgur.com/gknMPDP.jpg
-       InGame: https://i.imgur.com/A5FF74Z.jpg
-   -------------------------------------------------------------------------------------------------------
-    2021/2/6:
-       Later, a solution was made for the CSS display problem in the Steam version of the Krunker Client
-       Solution Link: https://docs.google.com/document/d/1RnUtWzaGzzciuRcJAuOmMrYd_8xqSHw8DklOD9s0kFo
+/* Clan Create/Sumbit */
+.clanSubmitBtn {
+    background-color: rgb(248, 96, 96);
+}
 
-*/
+/* Clan Create/Sumbit Hover Button */
+.clanSubmitBtn:hover {
+    background-color: rgb(171 67 67);
+}
+
+/* Purchase "KR", Junk Icon */
+#shopHeader > div.bigMenTabs > div:nth-child(4) > span, #shopHeader > div.bigMenTabs > div:nth-child(7) > span {
+    color: rgb(248, 96, 96) !important;
+}
+
+/* Selected Purchase "KR", Junk Icon */
+#shopHeader > div.bigMenTabs > div.bigMenTab.bigMenTabA > span {
+    color: rgb(255 255 255) !important;
+}
+
+/* ? Select Info */
+.selctInfoBtn {
+    background-color: rgb(248, 96, 96);
+}
+
+/* ? Select Info Hover */
+.selctInfoBtn:hover {
+    background-color: rgb(171 67 67);
+}
+
+/* Start Game */
+#startServBtn, div#startServBtn {
+    filter: hue-rotate(135deg);
+}
+
+/* Join Button */
+.joinBtn {
+    background-color: rgb(248, 96, 96);
+}
+
+/* Image Collection, Add Image in Image Collection */
+div.openCollection, div.imageListAdd {
+    background-color: rgb(248, 96, 96) !important;
+}
+
+/* Add Image in Image Collection */
+div.imageListAdd:hover {
+    background-color: rgb(164 64 64) !important;
+    cursor: pointer
+}
+
+/* Host Icon */
+#playerListH > table > tbody > tr > td.pListName > i {
+    color: #bdbdbd;
+}
+
+/* Set Header */
+.setHed {
+    border: 4px solid rgba(255,255,255,0);
+    background-color: rgb(74 74 74);
+}
+
+/* [KR] Rewards */
+.krIconHost {
+    border: 3px solid rgb(248 96 96);
+    background-color: rgb(0 0 0 / 30%);
+    text-shadow: none;
+}
+
+/* [6] Reset to Start */
+#speedRunRstKey, #speedRunRstLKey {
+    color: rgb(248 96 96);
+}
+
+/* Game Mode Icon */
+.modeIcon {
+    filter: hue-rotate(320deg);
+}
+
+/* Custom Game Setup */
+div.hostHeader {
+    border-bottom: 4px solid transparent;
+    box-shadow: none;
+}
+
+/* Server Cost          None */
+div#stickyHostH {
+    border-top: 4px solid transparent;
+    box-shadow: none;
+}
+
+/* Response Popup (Ex. Success) */
+.responsePop {
+    transform: translate(-50%,-50%);
+    box-shadow: none;
+    background-color: rgb(0 0 0 / 70%) !important;
+    width: 350px;
+}
+
+/* Skin/Hair/Chat Name Color Add Icon Hover Buttons */
+.premiumSkinCol:hover {
+    color: rgb(148 96 96) !important;
+}
+
+/* "SUSPECT" Text */
+#specSUS { /* Changed White Color And It Has Background Also Less Width */
+    color: white !important;
+    background-color: rgba(0,0,0,.3) !important;
+    width: 138px;
+}
+
+/* CLAIM KR */
+div.buttonCL {
+    filter: hue-rotate(75deg);
+    background-color: rgb(180 71 255) !important;
+    box-shadow: none !important;
+    border-radius: var(--main-button-corner-roundness) !important;
+    text-shadow: rgb(32, 32, 32) -1px -1px 0px, rgb(32, 32, 32) 1px -1px 0px, rgb(32, 32, 32) -1px 1px 0px, rgb(32, 32, 32) 1px 1px 0px, rgb(32, 32, 32) -2px -2px 0px, rgb(32, 32, 32) 2px -2px 0px, rgb(32, 32, 32) -2px 2px 0px, rgb(32, 32, 32) 2px 2px 0px, rgb(32, 32, 32) -3px -3px 0px, rgb(32, 32, 32) 3px -3px 0px, rgb(32, 32, 32) -3px 3px 0px, rgb(32, 32, 32) 3px 3px 0px !important;
+    border: none !important;
+}
+
+/* Image Tab */
+div.imageTab, .imageTab {
+    color: rgb(255 255 255 / 50%);
+    background: rgb(0 0 0 / 68%) !important;
+}
+div.imageTab:hover, .imageTab:hover {
+    color: white;
+    border-bottom: 5px solid rgb(0 0 0 / 0%) !important;
+}
+div.tabAIMG, .tabAIMG {
+    color: white;
+    border-bottom: 5px solid rgb(0 0 0 / 0%) !important;
+}
+div.tabAIMG:hover, .tabAIMG:hover {
+    border-bottom: 5px solid rgb(0 0 0 / 0%) !important;
+}
+
+/* Popup Header */
+.popHeader, .dropsPopHeader {
+    border-bottom: 4px solid transparent;
+    box-shadow: none;
+}
+
+/* Grey Inner */
+div.greyInner, div.greyInlineInner, div.greyInlineInnerMid {
+    background-color: transparent;
+}
+
+/* a Link Active */
+a:active {
+    color: rgb(125, 125, 125) !important;
+}
+
+/* a Link */
+a {
+    color: var(--link);
+}
+
+/* Read All Button Inbox */
+div.readAll {
+    background-color: var(--main-button-color) !important;
+    box-shadow: none !important;
+    color: var(--main-button-text-color) !important;
+    border-radius: var(--main-button-corner-roundness) !important;
+    text-shadow: none !important;
+    border: none !important;
+}
+
+/* Read All Button Inbox Hover */
+div.readAll:hover {
+    background-color: var(--main-button-color) !important;
+    box-shadow: none !important;
+    color: var(--main-button-text-color) !important;
+    border-radius: var(--main-button-corner-roundness) !important;
+    text-shadow: none !important;
+    border: none !important;
+}
+
+/* Read All Button Inbox Active */
+div.readAll:active {
+    background-color: var(--main-button-color) !important;
+    box-shadow: none !important;
+    color: var(--main-button-text-color) !important;
+    border-radius: var(--main-button-corner-roundness) !important;
+    text-shadow: none !important;
+    border: none !important;
+}
 
 /* 
 
@@ -4465,7 +5050,3 @@ input:checked+.sliderSml:active:after {
     Match Ended Leaderboard: https://i.imgur.com/vy2NAmz.png
 
 */
-
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */

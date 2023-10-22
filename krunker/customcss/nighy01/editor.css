@@ -1,29 +1,11 @@
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
+/* RedFance - Krunker Editor CSS */
+/* By Nighy Riy (Nighy01) */
 
-/* -------------------------------------------The End------------------------------------------- */
-#uiBase {
-    background: #000;
-    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
-}
+/* 2023/10/22 */
 
-#uiBase::before {
-    content: 'Due to drastic changes in Krunker UI updates, this CSS project has been dropped for maintenance. Please use another CSS project instead.';
-    font-size: 29px;
-    color: #ffffffba !important;
-    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 !important;
-}
 
-#view {
-    display: none !important;
-}
-/* -------------------------------------------The End------------------------------------------- */
+/* Variables ==================================================================================================== */
 
-/* This is Nighy01's Krunker Editor Custom CSS */
-/* Updated: 2023/07/05 */
-
-/* Variables */
 :root {
 
     /* Main Color */
@@ -33,56 +15,67 @@
     --mainhover: rgb(164 64 64);
 }
 
+/* Variables ==================================================================================================== */
+
+
+
+/* MI1. Main ==================================================================================================== */
+
 /* Top Bar, Left/Right Panels etc */
-#hotbar, .panel, .toolbarDropDown, .toolbarSubDropDown, .qs_textarea, .qs_title_bar, #menuWindow { /* Changed Background Color rgb(53 53 53 / 82%), Box Shadow 1px 0px 20px 0px rgba(0,0,0,.5) */
+#hotbar, .panel, .toolbarDropDown, .toolbarSubDropDown, .qs_textarea, .qs_title_bar, #menuWindow {
     background-color: rgb(53 53 53 / 82%) !important;
     box-shadow: none !important;
-    display: none !important;
-}
-
-/* "Spawn Points" etc Map Stat */
-#canvasInfo .statTitle { /* Changed Full White Color */
-    color: #fff !important;
-}
-
-/* Slider Checked Buttons */
-input:checked+.slider { /* Changed rgb(248 96 96) Color */
-    background: rgb(248 96 96) !important;
-}
-
-/* Slider Hover Buttons */
-.slider:hover { /* Changed #757575 Color */
-    background-color: #757575 !important;
-}
-
-/* Slider Checked Hover Buttons */
-input:checked+.slider:hover { /* Changed rgb(164 64 64) Color */
-    background-color: rgb(164 64 64) !important;
 }
 
 /* Main Button */
-.button { /* Background Color Changed rgb(248 96 96) */
+.button {
     background-color: rgb(248 96 96) !important;
 }
 
 /* Main Hover Button */
-.button:hover { /* Background Color Changed rgb(164 64 64) */
+.button:hover {
     background-color: rgb(164 64 64) !important;
 }
 
-/* Pages Background */
-#instructionHolder { /* Changed Full Transparent */
-    background-color: rgb(0 0 0 / 0%) !important;
+/* Slider Checked Buttons */
+input:checked+.slider {
+    background: rgb(248 96 96) !important;
 }
+
+/* Slider Hover Buttons */
+.slider:hover {
+    background-color: #757575 !important;
+}
+
+/* Slider Checked Hover Buttons */
+input:checked+.slider:hover {
+    background-color: rgb(164 64 64) !important;
+}
+
+/* MI1. Main ==================================================================================================== */
+
+
+
+/* TB1. Top Bar Part ==================================================================================================== */
+
+
+
+/* TB1. Top Bar Part ==================================================================================================== */
+
+
+
+/* LP1. Left Panel Part ==================================================================================================== */
+
+
+
+/* LP1. Left Panel Part ==================================================================================================== */
+
+
+
+/* ED1. Editing Area Part ==================================================================================================== */
 
 /* "translate" "rotat" "scale" Buttons */
 #canvasUI .button {
-    background-color: rgb(0 0 0 / .5) !important;
-    box-shadow: none !important;
-}
-
-/* "Delete" "Duplicate" Buttons */
-#canvasObjEdit .button {
     background-color: rgb(0 0 0 / .5) !important;
     box-shadow: none !important;
 }
@@ -93,10 +86,45 @@ input:checked+.slider:hover { /* Changed rgb(164 64 64) Color */
     box-shadow: none !important;
 }
 
+/* "Delete" "Duplicate" Buttons */
+#canvasObjEdit .button {
+    background-color: rgb(0 0 0 / .5) !important;
+    box-shadow: none !important;
+}
+
 /* "Delete" "Duplicate" Hover Buttons */
 #canvasObjEdit .button:hover {
     background-color: rgb(167 167 167) !important;
     box-shadow: none !important;
+}
+
+/* ED1. Editing Area Part ==================================================================================================== */
+
+
+
+/* RP1. Right Panel Part ==================================================================================================== */
+
+
+
+/* RP1. Right Panel Part ==================================================================================================== */
+
+
+
+/* OT1. Others ==================================================================================================== */
+
+
+
+/* OT1. Others ==================================================================================================== */
+
+
+/* "Spawn Points" etc Map Stat */
+#canvasInfo .statTitle {
+    color: #fff !important;
+}
+
+/* Pages Background */
+#instructionHolder {
+    background-color: rgb(0 0 0 / 50%) !important;
 }
 
 /* Slider-Thumb */
@@ -105,7 +133,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 /* Arrow Icon Buttons */
-.qs_title_bar, .header>i, .subheader>i, .hide>i, .restore>i { /* Changed Whiter Color */
+.qs_title_bar, .header>i, .subheader>i, .hide>i, .restore>i {
     color: #ffffff !important;
 }
 
@@ -135,117 +163,117 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 /* All Mains Text etc */
-.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .header>a, .subheader>a, .qs_textarea, #versionTxt, .windowHeader>div, .menuTabsNew>div, .inlineLabel, .mapListItem>*>a { /* Changed Full White Color */
+.material-icons, .toolbarItem, .toolbarDropDownItem, .panelLabel, .section, .header>a, .subheader>a, .qs_textarea, #versionTxt, .windowHeader>div, .menuTabsNew>div, .inlineLabel, .mapListItem>*>a {
     color: #ffffff !important;
 }
 
 /* "File" etc Top Hover Buttons */
-.toolbarItem:hover, .toolbarDropDownItem:hover, .toolbarDropDownItem:hover, .publishAsset:hover {  /* #919191 Color */
+.toolbarItem:hover, .toolbarDropDownItem:hover, .toolbarDropDownItem:hover, .publishAsset:hover {
     background-color: #919191 !important;
 }
 
 /* "Spawn Points" etc Text Page */
-#canvasInfo { /* No Box Shadow, rgb(0 0 0 / .5) Background Color */
+#canvasInfo {
     box-shadow: none !important;
     background-color: rgb(0 0 0 / .5) !important;
 }
 
 /* "Yendis Entertainment" Text */
-#versionTxt > span { /* White Color */
+#versionTxt > span {
     color: #fff !important;
 }
 
 /* "Play" "Host" Buttons On Top Bar */
-.playbarItemL:hover, .playbarItemR:hover { /* rgb(167 167 167) Background Color */
+.playbarItemL:hover, .playbarItemR:hover {
     background-color: rgb(167 167 167) !important;
 }
 
 /* by"Made" Text */
-a:visited { /* White Color */
+a:visited {
     color: #ffffff !important;
 }
 
 /* by"Made" Text */
-a { /* White Color */
+a {
     color: #ffffff !important;
 }
 
 /* "by" Text */
-#modList > div > div > span { /* White Color */
+#modList > div > div > span {
     color: #fff !important;
 }
 
 /* "Search" Button */
-.searchBtn { /* rgb(248 96 96) Background Color */
+.searchBtn {
     background-color: rgb(248 96 96) !important;
 }
 
 /* "Search" Hover Button */
-.searchBtn:hover { /* rgb(164 64 64) Background Color */
+.searchBtn:hover {
     filter: none;
     -webkit-filter: none;
     background-color: rgb(164 64 64) !important;
 }
 
 /* "Import" etc Buttons On Templates Popup */
-.editInfoI:hover { /* .6 Opacity #616161 Background Color */
+.editInfoI:hover {
     opacity: .6;
     background-color: #616161 !important;
 }
 
 /* Quick GUI Menu */
-.qs_main { /* No Box Shadow */
+.qs_main {
     box-shadow: none !important;
     background-color: rgb(53 53 53 / 82%) !important;
 }
 
 /* "Use these templates to Quickstart your Project" Text */
-#menuWindow > div { /* White Color */
+#menuWindow > div {
     color: #ffffff !important
 }
 
 /* Horizontal Rule */
-hr { /* Hide Horizontal Rule */
+hr {
     border-color: rgb(0 0 0 / 0) !important;
 }
 
 /* Input Text */
-.inlineInput { /* White Background Color */
-    background-color: #fff !important;
+.inlineInput {
+    background-color: rgb(255 255 255 / 80%) !important;
 }
 
 /* Input Hover Text */
-.inlineInput:hover { /* #a3a3a3 Color */
+.inlineInput:hover {
     background-color: #a3a3a3 !important;
 }
 
 /* Slider Val */
-.sliderVal { /* rgb(248 96 96) Background Color */
+.sliderVal {
     background: rgb(248 96 96) !important;
 }
 
 /* Slider Hover Val */
-.sliderVal:hover { /* rgb(164 64 64) Background Color */
+.sliderVal:hover {
     background: rgb(164 64 64) !important;
 }
 
 /* SliderM Hover */
-.sliderM:hover { /* #888 Background Color */
+.sliderM:hover {
     background-color: #888 !important;
 }
 
 /* SliderM */
-.sliderM { /* White Background Color */
+.sliderM {
     background-color: #fff !important;
 }
 
 /* Select */
-select { /* White Background Color */
+select {
     background-color: #fff !important;
 }
 
 /* Select Hover */
-select:hover { /* #888 Background Color */
+select:hover {
     background-color: #888 !important;
 }
 
@@ -255,246 +283,247 @@ select:hover { /* #888 Background Color */
 }
 
 /* Quick Add Buttons */
-.previewDesc { /* White Transparent 50% Background Color */
+.previewDesc {
     background-color: rgb(255 255 255 / 50%) !important;
 }
 
 /* Quick Add Hover Buttons */
-.previewDesc div { /* Black Text Color */
+.previewDesc div {
     color: #000 !important;
 }
 
 /* Quick Add Button */
-#canvasAdd { /* rgb(0 0 0 / .5) Background Color And No Box Shadow */
+#canvasAdd {
     background-color: rgb(0 0 0 / .5) !important;
     box-shadow: none;
 }
+
 /* Quick Add Hover Button */
-#canvasAdd:hover { /* rgb(167 167 167) Background Color */
+#canvasAdd:hover {
     background-color: rgb(167 167 167) !important;
 }
 
 /* Assets "Clutter" etc Text */
-#assetList > div > div > span { /* White Text Color */
+#assetList > div > div > span {
     color: white !important;
 }
 
 /* Assets "by" Text */
-#assetList > div > div { /* White Text Color */
+#assetList > div > div {
     color: white;
 }
 
 /* "by" Text Assets Search Results */
-#searchResultsA > div > div > span { /* White Text Color */
+#searchResultsA > div > div > span {
     color: white !important;
 }
 
 /* "Clutter" etc Text Assets Search Results */
-#searchResultsA > div > div { /* White Text Color */
+#searchResultsA > div > div {
     color: white;
 }
 
 /* "Loading..." On Search Assets Page */
-[style="color:rgba(0,0,0,0.5);margin-top:10px"] { /* White Text Color */
+[style="color:rgba(0,0,0,0.5);margin-top:10px"] {
     color: white !important;
 }
 
 /* "Loading..." On My Assets Page */
-.loadMoreW { /* White Text Color */
+.loadMoreW {
     color: rgb(255 255 255) !important;
 }
 
 /* "by" Text On Mods Page */
-#searchResultsM > div > div > span { /* White Text Color */
+#searchResultsM > div > div > span {
     color: white !important;
 }
 
 /* "Loading..." On Mods Page */
-[style="color:rgba(0,0,0,0.5);margin-top:10px"] { /* White Text Color */
+[style="color:rgba(0,0,0,0.5);margin-top:10px"] {
     color: white !important;
 }
 
 /* "Reset All" Hover Button In Settings Page */
-[style="cursor:pointer;margin-top:5px;font-size:14px;float:right;color:#FFF;user-select:none"]:hover { /* #888 Text Color */
+[style="cursor:pointer;margin-top:5px;font-size:14px;float:right;color:#FFF;user-select:none"]:hover {
     color: #888 !important;
 }
 
 /* "Position" "Rotation" Input */
-.vector3 input[type=number] { /* White Color */
+.vector3 input[type=number] {
     background-color: #fff !important;
 }
 
 /* "Position" "Rotation" Input Hover */
-.vector3 input[type=number]:hover { /* #a3a3a3 Color */
+.vector3 input[type=number]:hover {
     background-color: #a3a3a3 !important;
 }
 
 /* "Mod/Asset Name" Hover Input */
-.smlInput:hover { /* rgb(154 154 154) Background Color */
+.smlInput:hover {
     background-color: rgb(154 154 154) !important;
 }
 
 /* "Mod/Asset Name" Input */
-.smlInput { /* White Background Color Black Text Color */
+.smlInput {
     background-color: rgb(255 255 255) !important;
     color: black !important;
 }
 
 /* "Publish" Button In Assets Page */
-.publishAsset { /* White Color */
+.publishAsset {
     color: rgb(255 255 255) !important;
 }
 
 /* Quick GUI Title */
-.qs_title_bar { /* rgb(0 0 0 / .5) Background Color */
+.qs_title_bar {
     background-color: rgb(53 53 53 / 0%) !important;
 }
 
 /* Quick GUI Container  */
-.qs_container { /* rgb(0 0 0 / .5) Background Color */
+.qs_container {
     background-color: rgb(53 53 53 / 0%) !important;
 }
 
 /* Quick GUI Content */
-.qs_content { /* rgb(0 0 0 / .5) Background Color */
+.qs_content {
     background-color: rgb(53 53 53 / 0%) !important;
 }
 
 /* Welcome Popup */
-#menuWindow > div:nth-child(3) { /* rgb(34 34 34 / 0.9) Background Color */
+#menuWindow > div:nth-child(3) {
     background-color: rgb(34 34 34 / 0.9) !important;
 }
 
 /* Welcome Popup Video */
-#welcomeVideoHolder { /* rgb(0 0 0 / 90%) Background Color */
+#welcomeVideoHolder {
     background-color: rgb(0 0 0 / 90%) !important;
 }
 
 /* Quick Start etc Button of Welcome Popup */
-.welcomeButton:hover, .welcomeButton { /* No Hover Animation */
+.welcomeButton:hover, .welcomeButton {
     transform: scale(1) !important;
     transition: none !important;
 }
 
 /* [The Krunker Editor allows... etc] Info Background */
-#menuWindow > div:nth-child(4) { /* rgb(23 23 23 / 0.95) Background Color */
+#menuWindow > div:nth-child(4) {
     background-color: rgb(23 23 23 / 0.95) !important;
 }
 
 /* [Plan and... etc] Text */
-.editInfoItem .edInfBody { /* White Text Color */
+.editInfoItem .edInfBody {
     color: rgb(255 255 255) !important;
 }
 
 /* [The Krunker Editor allows... etc] Text */
-#editInfoBody div { /* rgb(255 255 255 / 68%) Text Color */
+#editInfoBody div {
     color: rgb(255 255 255 / 68%) !important;
 }
 
 /* Join Now! Link */
-.popupLink { /* rgb(248 96 96) Text Color, No Text Decoration */
+.popupLink {
     color: rgb(248 96 96) !important;
     text-decoration: none;
 }
 
 /* Join Now! Hover Link */
-.popupLink:hover { /* White Text Color, No Text Decoration */
+.popupLink:hover {
     color: rgb(255 255 255) !important;
     text-decoration: none;
 }
 
 /* Join Now! Active Link */
-.popupLink:active { /* rgb(125 125 125) Text Color, No Text Decoration */
+.popupLink:active {
     color: rgb(125, 125, 125) !important;
     text-decoration: none;
 }
 
 /* Popup Background */
-#popupBack { /* Transparent Background */
-    background-color: rgb(0 0 0 / 0%) !important;
+#popupBack {
+    background-color: rgb(0 0 0 / 50%) !important;
 }
 
 /* Login Hover Button */
-.accountButton:hover { /* White Text Color, rgb(164 64 64) Background Color */
+.accountButton:hover {
     color: rgb(255, 255, 255) !important;
     background-color: var(--mainhover) !important;
 }
 
 /* Login Button */
-.accountButton { /* 3px Border Radius, White Text Color, rgb(248 96 96) Background Color */
+.accountButton {
     border-radius: 3px;
     color: rgb(255, 255, 255) !important;
     background-color: var(--main) !important;
 }
 
 /* Success Popup Icon */
-[style="font-size:80px;color:#3be354!important;"] { /* Hide */
+[style="font-size:80px;color:#3be354!important;"] {
     display: none !important;
 }
 
 /* Popup Content */
-#popupContent > div > div:nth-child(2) { /* White Text Color */
+#popupContent > div > div:nth-child(2) {
     color: #fff !important;
 }
 
 /* Error Popup Icon */
-[style="font-size:80px;color:#e33b3b!important;"] { /* Hide */
+[style="font-size:80px;color:#e33b3b!important;"] {
     display: none !important;
 }
 
 /* Popup */
-#popupContent { /* rgba(0, 0, 0, 0.76) Background Color */
+#popupContent {
     background-color: rgba(0, 0, 0, 0.76) !important;
 }
 
 /* Restore Hover Buttons */
-.restore:hover { /* No Box Shadow, rgb(167 167 167) Background Color */
+.restore:hover {
     background-color: rgb(167 167 167) !important;
     box-shadow: none !important;
 }
 
 /* Restore Buttons */
-.restore { /* rgb(0 0 0 / .5) Background Color */
+.restore {
     background-color: rgb(0 0 0 / .5) !important;
 }
 
 /* Publish or Updated Game/Asset */
-#publishPop > div > div:nth-child(1) { /* Hide */
+#publishPop > div > div:nth-child(1) {
     display: none !important;
 }
 
 /* Publish Game/Asset Popup */
-#publishPop { /* rgb(213 213 213 / 89%) Background Color */
+#publishPop {
     background-color: rgb(213 213 213 / 89%);
 }
 
 /* Publish/Update Hover Button */
-#pubGame:hover { /* rgb(164 64 64) Background Color */
+#pubGame:hover {
     background-color: rgb(164 64 64) !important;
 }
 
 /* Publish/Update Button */
-#pubGame { /* rgb(248 96 96) Background Color */
+#pubGame {
     background-color: rgb(248 96 96) !important;
 }
 
 /* Category */
-#gameCategoryH { /* rgb(47 47 47) Text Color */
+#gameCategoryH {
     color: rgb(47 47 47) !important;
 }
 
 /* Type, Private */
-#publishAsset > div { /* rgb(47 47 47) Text Color */
+#publishAsset > div {
     color: rgb(47 47 47) !important;
 }
 
 /* Thumbnail (.png) - Max 150KB */
-#gameThumbName { /* rgb(47 47 47) Text Color */
+#gameThumbName {
     color: rgb(47 47 47) !important;
 }
 
 /* Category/Post to Hub */
-#publishGame > div { /* rgb(47 47 47) Text Color */
+#publishGame > div {
     color: rgb(47 47 47) !important;
 }
 
@@ -504,7 +533,7 @@ select:hover { /* #888 Background Color */
 }
 
 /* Slider2 Before In Publish Game Popup */
-.slider2::before { /* Better View */
+.slider2::before {
     height: 20px;
     width: 22px;
     left: 5px;
@@ -512,115 +541,116 @@ select:hover { /* #888 Background Color */
 }
 
 /* Switch2 Button */
-.switch2 { /* 50px Width, 29px Height */
+.switch2 {
     width: 50px;
     height: 29px;
 }
 
 /* Slider2 Checked Before */
-input:checked+.slider2:before { /* Better Transform View */
+input:checked+.slider2:before {
     -webkit-transform: translateX(22px);
     -ms-transform: translateX(22px);
     transform: translateX(22px);
 }
 
 /* Slider2 Hover Checked Input In Publish Game Popup */
-input:checked + .slider2:hover { /* rgb(164 64 64) Background Color */
+input:checked + .slider2:hover {
     background-color: var(--mainhover) !important;
 }
 
 /* Slider2 Checked Input In Publish Game Popup */
-input:checked+.slider2 { /* rgb(248 96 96) Background Color */
+input:checked+.slider2 {
     background-color: var(--main) !important;
 }
 
 /* Slider2 Hover In Publish Game Popup */
-.slider2:hover { /* rgb(113 113 113) Background Color */
+.slider2:hover {
     background-color: rgb(113, 113, 113) !important;
 }
 
 /* Slider2 In Publish Game Popup */
-.slider2 { /* -4px Left */
+.slider2 {
     left: -4px;
 }
 
 /* Loading.../Must be lvl 20 */
-#gameUpResp { /* rgb(47 47 47) Text Color */
+#gameUpResp {
     color: rgb(47 47 47) !important;
 }
 
 /* Diffuse...etc */
-[style="color:rgba(0,0,0,0.4);margin-left:10px;font-size: 14px;"] { /* rgb(47 47 47) Text Color */
+[style="color:rgba(0,0,0,0.4);margin-left:10px;font-size: 14px;"] {
     color: rgb(47 47 47) !important;
 }
 
 /* Select Hover Buttons */
-#thumbBtn:hover, #lightmapBtn:hover, #iconBtn:hover, #modelBtn:hover, #alphaBtn:hover, #specularBtn:hover, #normalBtn:hover, #diffuseBtn:hover, #emissiveBtn:hover, #soundBtn:hover, #textureBtn:hover { /* rgb(163 163 163) Background Color */
+#thumbBtn:hover, #lightmapBtn:hover, #iconBtn:hover, #modelBtn:hover, #alphaBtn:hover, #specularBtn:hover, #normalBtn:hover, #diffuseBtn:hover, #emissiveBtn:hover, #soundBtn:hover, #textureBtn:hover {
     background-color: rgb(163 163 163) !important;
 }
 
 /* Paste Data...etc Hover Input */
-.mapInput:hover { /* rgb(163 163 163) Background Color */
+.mapInput:hover {
     background: rgb(163 163 163) !important;
 }
 
 /* Active Tab */
-.activeTab { /* White Text Color, No Box Shadow */
+.activeTab {
     color: #fff !important;
     box-shadow: none !important;
 }
 
 /* Hover"Text" of Publish Game/Asset */
-.pubTabP:hover { /* No Box Shadow, White Text Color */
+.pubTabP:hover {
     box-shadow: none !important;
     color: #fff !important;
 }
 
 /* [UPDATED] Map */
-[style="background-color:#5699EB"] { /* White Background, Black Text */
+[style="background-color:#5699EB"] {
     background-color: rgb(255, 255, 255) !important;
     color: black !important;
 }
 
 /* [NEW] Map */
-[style="background-color:#E040FB"] { /* White Background, Black Text */
+[style="background-color:#E040FB"] {
     background-color: rgb(255 255 255) !important;
     color: black !important;
 }
 
 /* Hover SubHeader */
-.subheader:hover { /* White(50% Non Transparent) Background Color */
+.subheader:hover {
     background-color: rgba(255, 255, 255, 50%) !important;
 }
 
 /* SubHeader */
-.subheader { /* White(25% Non Transparent) Background Color */
+.subheader {
     background-color: rgb(255 255 255 / 25%) !important;
 }
 
 /* Hover Header */
-.header:hover { /* White(50% Non Transparent) Background Color */
+.header:hover {
     background-color: rgb(255 255 255 / 50%) !important;
 }
 
 /* Header */
-.header { /* White(25% Non Transparent) Background Color */
+.header {
     background-color: rgb(255 255 255 / 25%) !important;
 }
 
 /* Done Icon Popup */
-#popupContent > div > div:nth-child(1) > i { /* Hide */
+#popupContent > div > div:nth-child(1) > i {
     display: none !important;
 }
 
 /* Customize Hover Button */
-#toglEditBtn:hover { /* #bbb Background Color, No underline text */
+#toglEditBtn:hover {
    background-color: #bbb !important;
    text-decoration: none !important;
 }
 
 /* Customize Button */
-#toglEditBtn { /* 3px Margin Top, 5px Padding, 5px Border Radius, White Background */
+div#toglEditBtn {
+    color: #757575 !important;
     margin-top: 3px;
     padding: 5px;
     border-radius: 5px;
@@ -628,33 +658,54 @@ input:checked+.slider2 { /* rgb(248 96 96) Background Color */
 }
 
 /* Thumbnail... */
-#gameLightmapH > div, #gameThumbnailH > div { /* rgb(47 47 47) Text Color */
+#gameLightmapH > div, #gameThumbnailH > div {
     color: rgb(47 47 47) !important;
 }
 
 /* Size 0/250KB,500KB */
-#gameLightmapSize, #gameThumbnailSize { /* rgb(47 47 47) Text Color */
+#gameLightmapSize, #gameThumbnailSize {
     color: rgb(47 47 47) !important;
 }
 
 /* Thumbnail... Publish Asset Popup */
-#gameThumbH > div, #gameDiffuseH > div, #gameEmissiveH > div, #gameNormalH > div, #gameSpecularH > div, #gameAlphaH > div, #gameModelH > div, #gameIconH > div { /* rgb(47 47 47) Text Color */
+#gameThumbH > div, #gameDiffuseH > div, #gameEmissiveH > div, #gameNormalH > div, #gameSpecularH > div, #gameAlphaH > div, #gameModelH > div, #gameIconH > div {
     color: rgb(47 47 47) !important;
 }
 
 /* Size 0/100KB,250KB,10MB Publish Asset Popup */
-#gameThumbSize, #gameDiffuseSize, #gameEmissiveSize, #gameNormalSize, #gameSpecularSize, #gameAlphaSize, #gameIconSize, #gameSize { /* rgb(47 47 47) Text Color */
+#gameThumbSize, #gameDiffuseSize, #gameEmissiveSize, #gameNormalSize, #gameSpecularSize, #gameAlphaSize, #gameIconSize, #gameSize {
     color: rgb(47 47 47) !important;
 }
 
 /* Remove Hover Button On Quick Add Edit Page */
-.previewDeleteIcon i:hover { /* #828282 Text Color */
+.previewDeleteIcon i:hover {
     color: #828282 !important;
 }
 
 /* Remove Active Button On Quick Add Edit Page */
-.previewDeleteIcon i:active { /* #575757 Text Color */
+.previewDeleteIcon i:active {
     color: #575757 !important;
+}
+
+/* Tool Bar Hover Button */
+.toolbarItem:hover, .toolbarDropDownItem:hover, .toolbarDropDownItem:hover, .eButton:hover, .publishAsset:hover {
+    background-color: rgb(255 255 255 / 20%);
+}
+
+/* Import Button */
+.mapFndB {
+    background-color: rgb(248, 96, 96) !important;
+}
+
+/* Editor's Main Button */
+#canvasUI .eButton, #canvasObjEdit .eButton {
+    background-color: rgb(0 0 0 / .5);
+    box-shadow: none;
+}
+
+/* Script Saved...etc */
+.chatItem {
+    box-shadow: none;
 }
 
 /*
@@ -664,7 +715,3 @@ input:checked+.slider2 { /* rgb(248 96 96) Background Color */
      Editor Mods Popup: https://i.imgur.com/GYJbp6R.png
 
 */
-
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
-/* !!!IMPORTANT!!!      This CSS project has been abandoned for maintenance.        !!!IMPORTANT!!! */
