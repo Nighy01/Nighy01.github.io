@@ -1,7 +1,7 @@
 /* RedFance - Krunker Main CSS */
 /* By Nighy Riy (Nighy01) */
 
-/* 2023/10/22 */
+/* 2023/10/28 */
 
 
 /* Variables ==================================================================================================== */
@@ -986,8 +986,8 @@ div#customizeButton {
     color: var(--chat-bold-text-color) !important;
     max-width: 392px;
     padding: 7px;
-    padding-left: 11px;
-    padding-right: 11px;
+    padding-left: 10px;
+    padding-right: 8px;
     margin: 5px;
     background-color: rgb(0 0 0 / 35%) !important;
 }
