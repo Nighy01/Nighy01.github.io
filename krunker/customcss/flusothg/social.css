@@ -404,7 +404,7 @@ body::-webkit-scrollbar {
 /* Background Image Holder */
 #backImgHoldr {
     background: linear-gradient(180deg, rgba(41, 42, 46, 0.3) 0%, rgba(34, 34, 39, 0.3) 100%), rgba(0, 0, 0, 0.3) !important;
-    filter: blur(50px) !important;
+    filter: var(--LV1_Blur) !important;
 }
 
 /* LOADING */
