@@ -4,24 +4,24 @@
 /* #SaveKrunker */
 /* #GetRidFRVR */
 
-/* 2023/10/22 */
+/* 2023/11/14 */
 
 /* (in STG1. Settings) CM1. Mouse Click Icon ================================================================================== */
 
 /* Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=eMIJbq85RXDcyWqfWMdtNM5f7TFYXptB);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10001.png?build=0gOt5DRACbucbdYs6TB50Z7PtRiqp8pC);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/click.png);
     opacity: 0.9;
 }
 
 /* Middle Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=eMIJbq85RXDcyWqfWMdtNM5f7TFYXptB);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10002.png?build=0gOt5DRACbucbdYs6TB50Z7PtRiqp8pC);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/middleclick.png);
     opacity: 0.9;
 }
 
 /* Right Click */
-[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=eMIJbq85RXDcyWqfWMdtNM5f7TFYXptB);"] {
+[style="background-image: url(https://assets.krunker.io/img/mouse/10003.png?build=0gOt5DRACbucbdYs6TB50Z7PtRiqp8pC);"] {
     content: url(https://nighy01.github.io/krunker/customcss/flusothg/icons/rightclick.png);
     opacity: 0.9;
 }
@@ -3078,6 +3078,11 @@ div#uiBase.onDeathScrn #chatList {
 .chatMsg {
     color: rgb(255 255 255 / 80%);
     filter: brightness(0.95);
+    user-select: text;
+}
+
+/* Chat Message, Chat Item */
+.chatMsg, .chatMsg > span, .chatItem, .chatItem > span {
     user-select: text;
 }
 
