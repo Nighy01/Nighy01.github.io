@@ -1,7 +1,7 @@
 /* RedFance - Krunker Main CSS */
 /* By Nighy Riy (Nighy01) */
 
-/* 2023/10/28 */
+/* 2023/11/25 */
 
 
 /* Variables ==================================================================================================== */
@@ -60,10 +60,10 @@
     --menu-player-name-color: rgb(255, 255, 255);
     
     /* Main Menu Premium Icon Color */
-    --home-premium-color: rgb(255, 153, 0);
+    --home-premium-color: rgb(248, 96, 96);
     
     /* Main Menu Verified Icon Color */
-    --home-verified-color: rgb(0, 154, 255);
+    --home-verified-color: rgb(248, 96, 96);
     
     /* Instructions Color */
     --instructions-color: rgba(255, 255, 255, 0.8);
@@ -216,10 +216,10 @@
     --leaderboard-enemy-color: rgb(255 102 102);
     
     /* Premium Icon Color */
-    --premium-color: rgb(255 166 33);
+    --premium-color: rgb(248, 96, 96);
     
     /* Verified Icon Color */
-    --verified-color: rgb(38 169 255);
+    --verified-color: rgb(248, 96, 96);
     
     /* Enemy Score Color */
     --enemy-score-color: rgb(255 81 81);
@@ -694,6 +694,11 @@ div#homeStoreAd {
 #doubleClassXPAd > div.helpTxtHol {
     margin-left: 72px !important;
     margin-top: -24px;
+}
+
+/* Double Raid Drops Weekend...etc */
+.helpTxtHol {
+    width: 200px;
 }
 
 /* Donate */
@@ -1633,7 +1638,7 @@ div.teamWin0, div.teamWin1 {
 
 /* Premium, Badge Icon */
 #endTable > tbody > tr > td > i, #endTable > tbody > tr > td> img:nth-child(5) {
-    filter: hue-rotate(295deg);
+    filter: hue-rotate(305deg);
 }
 
 /* Match Ended ================================================== */
@@ -4365,8 +4370,8 @@ input, textarea:hover {
 }
 
 /* Must be at least lvl 20/10 In Create/Join, "LOADING" Clan Page */
-#clanErr { /* rgb(56 56 56) Text Color */
-    color: rgb(56, 56, 56) !important;
+#clanErr {
+    color: rgb(255 255 255 / 50%) !important;
 }
 
 /* Enter Text Input */
