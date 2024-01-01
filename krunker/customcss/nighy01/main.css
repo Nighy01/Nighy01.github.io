@@ -1,7 +1,7 @@
 /* RedFance - Krunker Main CSS */
 /* By Nighy Riy (Nighy01) */
 
-/* 2023/11/25 */
+/* 2024/01/01 */
 
 
 /* Variables ==================================================================================================== */
@@ -414,6 +414,7 @@ div#signedOutHeaderBar > div {
 #menuAccountUsername {
     font-size: 16px;
     margin-left: 10px;
+    transform: translateY(4px);
 }
 
 /* Menu KR Count */
@@ -604,6 +605,9 @@ div.mIH {
 /* Vertical Separator */
 .verticalSeparator {
     background-color: rgb(255 255 255 / 50%) !important;
+    width: 6px;
+    height: 35px !important;
+    transform: translateY(-2px) translateX(1px);
 }
 
 /* Editor Button */
@@ -972,6 +976,11 @@ div#customizeButton {
     display: none;
 }
 
+/* Chat Holder (Ex. in Spin Wheels UI...etc) */
+#chatHolder {
+    left: 15px;
+}
+
 /* Chat Holder on Menu */
 #uiBase.onMenu #chatHolder {
     left: 15px;
@@ -1030,11 +1039,11 @@ div#customizeButton {
 
 /* Chat Input Holder */
 div#chatInputHolder {
-    width: 413px;
+    width: 350px;
     border-radius: 7px;
     background-color: rgb(0 0 0 / 30%) !important;
     display: inline-grid;
-    grid-template-columns: auto 295px auto;
+    grid-template-columns: auto 230px auto;
     box-shadow: none !important;
 }
 
@@ -1043,13 +1052,19 @@ div#chatInputHolder > div {
     background-color: transparent !important;
 }
 
+/* Chat Voice Holder Part */
+#chatInputHolder > div:nth-child(3) {
+    margin: 0px;
+    padding: 0px;
+}
+
 /* Enter Message */
 #chatInput {
     background-color: var(--chat-input-background-color) !important;
     border-radius: var(--chat-input-roundness);
     color: var(--chat-text-color) !important;
-    width: 300px;
-    transform: translateX(-7px);
+    width: 280px;
+    transform: translateX(-12px);
 }
 
 /* Vocie On */
@@ -1060,6 +1075,11 @@ div#chatInputHolder > div {
 /* Voice [V] Key */
 #recTimer {
     display: none;
+}
+
+/* Voice Icon */
+#voiceIcon {
+    transform: translate(50px, 10px);
 }
 
 /* Chat on Menu ================================================== */
@@ -1138,7 +1158,9 @@ div#termsInfo, #termsInfo {
 
 /* Vertical Separator on Terms */
 .verticalSeparatorInline {
-    border-left: 4px solid rgba(255, 255, 255, 0) !important;
+    border-left: 6px solid rgb(255 255 255 / 50%) !important;
+    height: 35px;
+    transform: translateY(2px);
 }
 
 /* | Experiments | Terms | Changelog */
@@ -1720,8 +1742,16 @@ div.teamWin0, div.teamWin1 {
 /* Weapon Selection Key */
 .weapKey {
     background-color: transparent;
-    left: 120px;
+    left: 117px;
     top: 5px;
+}
+
+/* Weapon Selection Key (Restore Previous) */
+.weapKey::before {
+    content: "[";
+}
+.weapKey::after {
+    content: "]";
 }
 
 /* Ammo Holder */
@@ -1954,6 +1984,37 @@ input:checked + .slider:hover, input:checked+.advancedSlider:hover {
     background-color: rgb(255 255 255 / 70%) !important;
 }
 
+/* Settings Button */
+.settingsBtn {
+    color: rgb(248 96 96) !important;
+    background-color: rgb(0 0 0 / 0%) !important;
+}
+
+/* Settings Button Hover */
+.settingsBtn:hover {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(0 0 0 / 0%) !important;
+}
+
+/* Settings Button Active */
+.settingsBtn:active {
+    color: rgb(125, 125, 125) !important;
+    background-color: rgb(0 0 0 / 0%) !important;
+}
+
+/* Settings Search Bar */
+#settSearch {
+    color: #fff;
+    border-bottom: 5px solid rgb(255 255 255 / 30%);
+    background: #0000 !important;
+}
+
+/* Settings Search Bar */
+#settSearch:hover {
+    border-bottom: 5px solid rgb(255 255 255 / 30%);
+    background: #0000 !important;
+}
+
 /* Import Settings -------------------------------------------------- */
 
 /* Import Settings Popup */
@@ -2121,19 +2182,6 @@ div.spinHistoryStats, div.spinHistoryClear  {
 }
 
 /* Unknown */
-.subPassChg {
-    background-color: var(--secondary-button) !important;
-    color: var(--secondary-button-text) !important;
-    border-radius: 5px !important;
-}
-
-/* Unknown */
-.subPassChg:hover {
-    transform: none;
-    background-color: var(--secondary-button-hover) !important;
-}
-
-/* Unknown */
 .creatorCodeBtn {
     color: var(--secondary-button-text);
     background-color: var(--secondary-button) !important;
@@ -2245,16 +2293,6 @@ div.spinHistoryStats, div.spinHistoryClear  {
 .sliderVal {
     color: var(--input-text) !important;
     background: var(--input) !important;
-}
-
-/* Unknown */
-.sliderM {
-    background-color: rgb(168 168 168) !important;
-}
-
-/* Unknown */
-.sliderM::-webkit-slider-thumb {
-    background-color: var(--input) !important;
 }
 
 /* Unknown */
@@ -2427,11 +2465,6 @@ a:active {
 }
 
 /* Unknown */
-.classCard {
-    color: var(--class-name-color) !important;
-}
-
-/* Unknown */
 .classWeap {
     color: var(--class-weapon-color) !important;
 }
@@ -2550,18 +2583,6 @@ a:active {
 /* Unknown */
 .sliderVal:hover {
     background: rgb(164, 64, 64) !important;
-}
-
-/* Unknown */
-.settingsBtn:hover {
-    color: rgb(255, 255, 255) !important;
-    background-color: rgb(164, 64, 64) !important;
-}
-
-/* Unknown */
-.settingsBtn {
-    color: rgb(255, 255, 255) !important;
-    background-color: rgb(248, 96, 96) !important;
 }
 
 /* Unknown */
@@ -3119,32 +3140,6 @@ a:hover {
 }
 
 /* Unknown */
-#twoFAPop {
-    background-color: rgba(0, 0, 0, 0) !important;
-}
-
-/* Unknown */
-#twoFAWindow {
-    color: rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.85);
-}
-
-/* Unknown */
-#twoFAbtn {
-    background-color: rgb(248, 96, 96) !important;
-}
-
-/* Unknown */
-#twoFAbtn:hover {
-    background-color: rgb(164, 64, 64) !important;
-}
-
-/* Unknown */
-#twoFAmsg {
-    color: rgb(0, 0, 0) !important;
-}
-
-/* Unknown */
 #loadingBg {
     color: rgb(255, 255, 255) !important;
 }
@@ -3353,11 +3348,6 @@ a:active {
 }
 
 /* Unknown */
-.settingsBtn:active {
-    background-color: rgb(125, 67, 67) !important;
-}
-
-/* Unknown */
 #mailIcon:active {
     color: rgb(125, 125, 125) !important;
 }
@@ -3379,11 +3369,6 @@ a:active {
 
 /* Unknown */
 #declineBtn:active {
-    background-color: rgb(125, 67, 67) !important;
-}
-
-/* Unknown */
-.subPassChg:active {
     background-color: rgb(125, 67, 67) !important;
 }
 
@@ -3678,18 +3663,25 @@ input:hover + .tSubCheck {
     color: var(--secondary-button-text) !important;
     border-radius: var(--secondary-button-roundness) !important;
     border: 4px solid #0000;
+    transform: translateY(5px);
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 /* "Quick Join" Hover Button */
 .quickJoin:hover {
     transform: scale(1);
     background-color: var(--secondary-button-hover) !important;
+    transform: translateY(5px);
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 /* Country Flag etc Input */
-.inputGrey2  { /* White Background, Black Text */
-    background: rgb(255 255 255) !important;
+.inputGrey2  {
+    background: rgb(238 238 238) !important;
     color: var(--input-field-text) !important;
+    border-radius: 6px;
 }
 
 /* Count Icon...etc */
@@ -3757,14 +3749,17 @@ div#leaderDisplay {
     background-color: rgb(28, 127, 208) !important;
 }
 
-/* Search Input Hover In Settings Page */
-#settSearch:hover { /* rgb(152 152 152) Color */
-    background-color: rgb(152 152 152) !important;
+/* Server Search Bar */
+#serverSearch {
+    color: rgb(255 255 255) !important;
+    border-bottom: 5px solid rgb(255 255 255 / 30%);
+    background: transparent !important;
 }
 
-/* Server Search */
-#serverSearch { 
-    color: rgb(0 0 0) !important;
+/* Server Search Bar Hover */
+#serverSearch:hover {
+    border-bottom: 5px solid rgb(255 255 255 / 30%);
+    background: transparent !important;
 }
 
 /* "Enter Username" & "Enter Password" Input */
@@ -4508,6 +4503,25 @@ input, textarea:hover {
 /* Selector Container */
 #selectorContainer {
     background-color: rgb(0 0 0 / 0%) !important;
+    display: grid;
+    width: 0px;
+    top: 5px;
+    margin-bottom: -440px;
+}
+
+/* Selector Item */
+.selectorItem {
+    height: 120px;
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+/* Customize Container */
+#customizeContainer {
+    height: 550px;
+    width: inherit;
+    transform: scale(0.82) translate(113px, -75px);
+    display: table;
 }
 
 /* Skin Card */
@@ -4699,11 +4713,6 @@ input, textarea:hover {
     border: none !important;
 }
 
-/* Delete Account Desc */
-[style="font-size:21px;color:rgba(255,255,255,0.4);margin-top:5px"] {
-    color: white !important;
-}
-
 /* Host Map By */
 .hostMapBy {
     color: #fff !important;
@@ -4868,6 +4877,11 @@ input, textarea:hover {
     background-color: rgb(171 67 67);
 }
 
+/* Clan Create/Sumbit Active Button */
+.clanSubmitBtn:active {
+    color: #fff !important;
+}
+
 /* Purchase "KR", Junk Icon */
 #shopHeader > div.bigMenTabs > div:nth-child(4) > span, #shopHeader > div.bigMenTabs > div:nth-child(7) > span {
     color: rgb(248, 96, 96) !important;
@@ -5029,7 +5043,7 @@ div.readAll {
 
 /* Read All Button Inbox Hover */
 div.readAll:hover {
-    background-color: var(--main-button-color) !important;
+    background-color: rgb(190 74 74) !important;
     box-shadow: none !important;
     color: var(--main-button-text-color) !important;
     border-radius: var(--main-button-corner-roundness) !important;
@@ -5039,12 +5053,176 @@ div.readAll:hover {
 
 /* Read All Button Inbox Active */
 div.readAll:active {
-    background-color: var(--main-button-color) !important;
+    background-color: rgb(146 57 57) !important;
     box-shadow: none !important;
     color: var(--main-button-text-color) !important;
     border-radius: var(--main-button-corner-roundness) !important;
     text-shadow: none !important;
     border: none !important;
+}
+
+/* Menu Window */
+#menuWindow.dark {
+    background-color: #353535;
+    box-shadow: rgb(88 88 88) 0px 10px 0px 0px !important;
+}
+
+/* Slider */
+.sliderM {
+    background-color: rgb(168 168 168) !important;
+}
+
+/* SliderM Thumb */
+.sliderM::-webkit-slider-thumb {
+    background-color: var(--input) !important;
+    border-radius: 5px;
+    width: 17px;
+    height: 32px;
+}
+
+/* Settings Suggest Box */
+.setSugBox2 {
+    border: 4px solid rgb(255 255 255 / 0%);
+    background-color: rgba(0,0,0,.4);
+    border-radius: 10px;
+}
+
+/* Settings Suggest Box Hover */
+.setSugBox2:hover {
+    border: 4px solid rgb(255 255 255 / 0%);
+    background-color: transparent !important;
+}
+
+/* ^ToolTip */
+.segSugIH {
+    background-color: rgb(255 255 255 / 60%);
+    border-radius: 10px;
+}
+
+/* ^ToolTip Text */
+.setSugInf {
+    color: #353535 !important;
+    font-size: 22px;
+}
+
+/* Hide Full */
+.slider2, .slider2:before {
+    border-radius: 100px;
+}
+
+/* Promoto Server Icon */
+#serverHolder > div.setBodH > div > span {
+    color: rgb(255 130 130) !important;
+}
+
+/* 24/7 Server, KR Reward Server...etc Mark, 24/7 Server Slide Tag */
+.krIcon, .slideTag {
+    background-color: rgb(248 96 96) !important;
+}
+
+/* Loading...etc Popup */
+#genericPop {
+    background-color: rgb(0 0 0 / 70%) !important;
+    box-shadow: 2px 2px 8px rgb(0 0 0/ 0%) !important;
+    border: 2px solid rgb(0 0 0 / 0%) !important;
+}
+
+/* Class Card */
+.classCard {
+    color: var(--class-name-color) !important;
+    text-shadow: -1px -1px 0 #202020, 1px -1px 0 #202020, -1px 1px 0 #202020, 1px 1px 0 #202020, -2px -2px 0 #202020, 2px -2px 0 #202020, -2px 2px 0 #202020, 2px 2px 0 #202020, -3px -3px 0 #202020, 3px -3px 0 #202020, -3px 3px 0 #202020, 3px 3px 0 #202020;
+    box-shadow: 0 0 0.5rem #0000;
+    background-color: rgb(74 74 74) !important;
+}
+
+/* Current Date Range: [DATE], Data only tracks back to April 2020 */
+.spinHistoryTime, .spinHistoryWarning {
+    color: rgb(248 96 96);
+}
+
+/* 2FA Popup Background */
+#twoFAPop {
+    background-color: rgb(0 0 0 / 50%) !important;
+}
+
+/* 2FA Popup */
+#twoFAWindow {
+    background-color: rgb(51 51 51);
+    box-shadow: none;
+}
+
+/* 2-Factor Authentication */
+.twoFAHeader {
+    color: #fff;
+    border-bottom: 4px solid #0000;
+    background-color: #111;
+    box-shadow: 0 10px 10px #0000, 0 0 0 #0000;
+}
+
+/* Submit Button */
+#twoFAbtn {
+    background-color: rgb(248, 96, 96) !important;
+}
+
+/* Submit Button Hover */
+#twoFAbtn:hover {
+    background-color: rgb(164, 64, 64) !important;
+}
+
+/* Scan QR code with... Enter Verification Code, Authy "or" Google... */
+#twoFAmsg, #twoFAmsg > div {
+    color: rgb(255 255 255) !important;
+}
+
+/* 2FA Input */
+.twoFAIn {
+    border: 2px solid rgb(0 0 0 / 0%);
+    color: #000;
+}
+
+/* Security Submit, Enable Button */
+.subPassChg {
+    background-color: var(--secondary-button) !important;
+    color: var(--secondary-button-text) !important;
+    border-radius: 5px !important;
+    width: 193px;
+}
+
+/* Security Submit, Enable Button Hover */
+.subPassChg:hover {
+    transform: none;
+    background-color: var(--secondary-button-hover) !important;
+}
+
+/* Security Submit, Enable Button Active */
+.subPassChg:active {
+    background-color: rgb(125, 67, 67) !important;
+}
+
+/* Rent Server Button */
+div#rentServBtn {
+    background-color: var(--secondary-button) !important;
+    color: var(--secondary-button-text) !important;
+}
+
+/* Rent Server Button Hover */
+div#rentServBtn:hover {
+    background-color: var(--secondary-button-hover) !important;
+}
+
+/* Rent Server Button Active */
+div#rentServBtn:active {
+    background-color: rgb(125, 67, 67) !important;
+}
+
+/* BPPs, *BPP limit will not increase* */
+#menuWindow > div:nth-child(4) > div.bpTopH > div.bpLevelH > div.bpInfoBalloon > div:nth-child(2) > span, #genericPop > div.bp-generic-text > div.bp-generic-info > div {
+    color: rgb(248 96 96) !important;
+}
+
+/* Save Creator Code */
+#bundlCreatorCodeBtn, #premiumCreatorCodeBtn, #battlepassCreatorCodeBtn {
+    background: rgb(248 96 96) !important;
 }
 
 /* 
