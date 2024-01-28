@@ -4,7 +4,7 @@
 /* #SaveKrunker */
 /* #GetRidFRVR */
 
-/* 2023/11/14 */
+/* 2024/01/01 */
 
 /* (in STG1. Settings) CM1. Mouse Click Icon ================================================================================== */
 
@@ -4084,7 +4084,7 @@ input:checked+.slider2 {
 
 /* Star/Lock Icon in Server Browser */
 #serverHolder > div.setBodH > div > span {
-    color: rgb(255 255 255 / 0.9) !important;
+    color: #c3d3ff !important;
 }
 
 /* Higher Ping in Server Browser */
@@ -7213,17 +7213,17 @@ div#hostCMapPickT:active {
 
 /* "Remove" Icon */
 #hostGameNameHolder > span:nth-child(1) > i {
-    color: var(--whiteColor_1) !important;
+    color: rgb(255 170 170 / 95%) !important;
 }
 
 /* "Remove" Hover Icon */
 #hostGameNameHolder > span:nth-child(1) > i:hover {
-    color: rgb(210 210 210 / 95%) !important;
+    color: rgb(255 170 170 / 70%) !important;
 }
 
 /* "Remove" Active Icon */
 #hostGameNameHolder > span:nth-child(1) > i:active {
-    color: rgb(151 151 151 / 95%) !important;
+    color: rgb(255 170 170 / 50%) !important;
 }
 
 /* Select Modes Box Texts */
@@ -8368,6 +8368,8 @@ div.challHeadrBlck {
 /* Play Now, Host Server */
 #bigMFeatPBtn, #bigMFeatHBtn {
     border: 3px solid var(--transparentColor) !important;
+    backdrop-filter: var(--LV3_Blur) !important;
+    background-color: rgb(0 0 0 / 50%);
 }
 
 /* Play Now, Host Server Hover */

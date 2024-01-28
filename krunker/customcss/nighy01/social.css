@@ -1,7 +1,7 @@
 /* RedFance Krunker Hub CSS */
 /* By Nighy Riy (Nighy01) */
 
-/* 2023/10/28 */
+/* 2024/01/03 */
 
 
 /* Variables ==================================================================================================== */
@@ -207,31 +207,26 @@
 }
 
 /* "Global Stats" Text On Global Stats Card */
-#clanwarsStats > div:nth-child(1) { /* rgb(248 96 96) Text Color */
+#clanwarsStats > div:nth-child(1) {
     color: rgb(248 96 96) !important;
 }
 
 /* "Login" Button In Login Account Popup */
-.accountButton { /* 3px Border Radius, White Text Color, rgb(248 96 96) Background Color */
+.accountButton {
     border-radius: 3px;
     color: rgb(255, 255, 255) !important;
     background-color: var(--main-buttons) !important;
 }
 
 /* "Login" Hover Button In Login Account Popup */
-.accountButton:hover { /* White Text Color, rgb(164 64 64) Background Color */
+.accountButton:hover {
     color: rgb(255, 255, 255) !important;
     background-color: var(--main-hover-buttons) !important;
 }
 
 /* Unknown */
 #profileName:hover {
-    color: rgba(255, 255, 255, 0.61) !important;
-}
-
-/* Top Profile Image(If you logged in) */
-#profileImg { /* Hide Top Profile Image */
-    display: none !important;
+    color: rgba(255, 255, 255, 0.6) !important;
 }
 
 /* Unknown */
@@ -454,18 +449,6 @@ img:hover {
 }
 
 /* Unknown */
-.buttonG:hover {
-    background-color: rgb(255, 255, 255) !important;
-    box-shadow: rgb(177, 177, 177) 0px -7px 0px 0px inset !important;
-}
-
-/* Unknown */
-.buttonR:hover {
-    background-color: rgb(255, 255, 255) !important;
-    box-shadow: rgb(177, 177, 177) 0px -7px 0px 0px inset !important;
-}
-
-/* Unknown */
 .buttonF:hover {
     background-color: rgb(255, 255, 255) !important;
     box-shadow: rgb(177, 177, 177) 0px -7px 0px 0px inset !important;
@@ -528,11 +511,6 @@ img:hover {
 /* Unknown */
 [style="margin-right:2px;font-size:26px;color:#40C4FF"] {
     color: var(--verified-icon-color) !important;
-}
-
-/* Unknown */
-#profileKR {
-    color: rgb(255, 255, 255) !important;
 }
 
 /* Unknown */
@@ -798,8 +776,9 @@ img:hover {
 }
 
 /* [Follow] Hover Buttons On "Who to Follow" Popup */
-.reqFollB:hover { /* rgb(164 64 64) Background Color */
+.reqFollB:hover {
     background-color: rgb(164 64 64) !important;
+    box-shadow: none !important;
 }
 
 /* Unknown */
@@ -1020,9 +999,8 @@ img:hover {
 }
 
 /* [Follow] Buttons On "Who to Follow" Popup */
-.reqFollB { /* 4px Border Radius, 53px Width, 14px Marign Left, 13px Font Size, Center Text Align, 10px Padding, 20px Line Height, 20px Height, White Text Color, rgb(248 96 96) Background Color */
+.reqFollB {
     border-radius: 4px;
-    width: 53px;
     margin-left: 14px;
     font-size: 13px;
     text-align: center;
@@ -1068,6 +1046,15 @@ img:hover {
 #hubBox {
     background-color: rgb(248 96 96) !important;
     color: white !important;
+    font-size: 0px;
+}
+
+/* "Hub" Text On Top */
+#hubBox::after {
+    background-color: rgb(248 96 96) !important;
+    color: white !important;
+    content: "Hub";
+    font-size: 30px;
 }
 
 /* Unknown */
@@ -2102,6 +2089,23 @@ input:checked+.filterSlider {
 /* Open Editor DB */
 #editrDB {
     display: none;
+}
+
+/* Profile KR */
+#profileKR {
+    color: rgb(255 255 255 / 50%) !important;
+}
+
+/* Map Tab */
+.mapTabP {
+    color: rgb(255 255 255 / 50%);
+}
+
+/* Market Search */
+.filterPopHeader {
+    border-bottom: 4px solid #00000000;
+    background-color: #111;
+    box-shadow: 0 10px 10px #00000000, 0 0 0 #0000;
 }
 
 /*

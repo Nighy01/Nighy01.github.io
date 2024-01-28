@@ -1,7 +1,7 @@
 /* RedFance - Krunker Main CSS */
 /* By Nighy Riy (Nighy01) */
 
-/* 2024/01/01 */
+/* 2024/01/03 */
 
 
 /* Variables ==================================================================================================== */
@@ -677,6 +677,11 @@ div#homeStoreAd {
     max-width: 295px;
 }
 
+/* Battle Pass AD */
+#battlepassAd {
+    display: none;
+}
+
 /* Whats new? - "Update vx.x.x" */
 #updateAdVersion {
     color: rgb(248, 96, 96);
@@ -1088,14 +1093,38 @@ div#chatInputHolder > div {
 
 /* Bottom Menu Part ================================================== */
 
+/* Sub Buttom Part */
+#subLogoButtons {
+    width: 103%;
+}
+
 /* Now Playing: [GAME] */
 #mapInfoHld {
     border-bottom: 5px solid rgb(255 255 255 / 0%);
+    text-align: center;
+    font-size: 0px;
+    width: 102%;
+    transform: translate(0px, 45px);
+    position: fixed;
+    left: calc(50% - 230px);
 }
 
 /* [GAME] = Free for All on [MAP] */
 #mapInfo {
     color: var(--mapinfo-color) !important;
+    width: 16%;
+}
+
+/* Map Vote */
+#mapVote {
+    transform: translate(0px, 55px);
+    position: fixed;
+    left: calc(50% - -20px);
+}
+
+/* Sub Bottom Buttons */
+#subLogoButtons>.button {
+    left: calc(50% - 382px);
 }
 
 /* Donate Button (.voteHint) on "Top Guide + Event + Ad + Promo's Menu => Left" */
@@ -1580,7 +1609,7 @@ div.xpEndBarB, div.xpEndBPBarB {
 
 /* Match End Card */
 .endCard {
-    background-color: rgba(0, 0, 0, 0.23);
+    background-color: rgb(0 0 0 / 40%);
     border-radius: 8px;
 }
 
@@ -1661,6 +1690,11 @@ div.teamWin0, div.teamWin1 {
 /* Premium, Badge Icon */
 #endTable > tbody > tr > td > i, #endTable > tbody > tr > td> img:nth-child(5) {
     filter: hue-rotate(305deg);
+}
+
+/* Battle Pass Part */
+.endBPNext, #endBPLayout {
+    display: none;
 }
 
 /* Match Ended ================================================== */
@@ -5223,6 +5257,16 @@ div#rentServBtn:active {
 /* Save Creator Code */
 #bundlCreatorCodeBtn, #premiumCreatorCodeBtn, #battlepassCreatorCodeBtn {
     background: rgb(248 96 96) !important;
+}
+
+/* Server Top Bar */
+#menuWindow > div.serverHeader > div {
+    background-color: rgb(0 0 0 / 65%);
+}
+
+/* setSuggest Box Text */
+div.setSugBox.sugBoxSelCus.blackShad {
+    text-shadow: none;
 }
 
 /* 

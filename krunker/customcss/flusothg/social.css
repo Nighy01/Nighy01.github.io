@@ -4,7 +4,7 @@
 /* #SaveKrunker */
 /* #GetRidFRVR */
 
-/* 2023/11/02 */
+/* 2024/01/01 */
 
 /* CF1. Configs ================================================================================== */
 
@@ -668,7 +668,7 @@ body::-webkit-scrollbar {
 
 /* Count Followers/Following */
 .postCFoll {
-    color: rgb(255 255 255 / 80%) !important;
+    color: rgb(255 255 255 / 50%) !important;
 }
 
 /* Chat Box */
@@ -1285,13 +1285,13 @@ div.button:active {
 
 /* LeaderBoard Kr Count Post Feed */
 #postGameRes > tbody > tr > td > span {
-    color: #fff !important;
+    color: rgb(188 180 243 / 95%) !important;
     user-select: text !important;
 }
 
 /* Profile Kr */
 #profileKR {
-    color: #ffffffc7;
+    color: rgb(255 255 255 / 50%);
 }
 
 /* Giveaway Post Feed */
