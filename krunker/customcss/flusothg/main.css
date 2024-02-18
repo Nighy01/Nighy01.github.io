@@ -1,10 +1,14 @@
 /* Flusothg - Krunker */
 /* Made by Nighy Riy (Nighy01) */
 
-/* #SaveKrunker */
-/* #GetRidFRVR */
+/*
+    I don't know when which day Krunker.io will become unusable... 
+    Maybe it still works if Krunker.io still exists...
+    
+    #SaveKrunker #GetRidFRVR
+*/
 
-/* 2024/01/01 */
+/* 2024/02/18 */
 
 /* (in STG1. Settings) CM1. Mouse Click Icon ================================================================================== */
 
@@ -4416,22 +4420,22 @@ div.purejscarousel-btn:active {
 /* Buy KR Cards */
 
 /* 300 KR */
-#purchaseInfoTable > div:nth-child(2),
+#purchaseInfoTable > div:nth-child(1),
 
 /* 600 KR */
-#purchaseInfoTable > div:nth-child(3),
+#purchaseInfoTable > div:nth-child(2),
 
 /* 2600 KR */
-#purchaseInfoTable > div:nth-child(4),
+#purchaseInfoTable > div:nth-child(3),
 
 /* 7000 KR */
-#purchaseInfoTable > div:nth-child(5),
+#purchaseInfoTable > div:nth-child(4),
 
 /* 20000 KR */
-#purchaseInfoTable > div:nth-child(6),
+#purchaseInfoTable > div:nth-child(5),
 
 /* 60000 KR */
-#purchaseInfoTable > div:nth-child(7)
+#purchaseInfoTable > div:nth-child(6)
 
 {
     text-align: left;
@@ -9679,4 +9683,14 @@ div.bundlPopBuyS {
 .abTestsPop>table {
     border-radius: 7px;
     background-color: rgb(0 0 0 / 35%);
+}
+
+/* Why P2W? */
+/* Premium Required to use Both */
+#customizeContainer > div > div.custPremReq.blackShad > div:nth-child(1) {
+    color: rgb(255 193 178) !important;
+}
+/* Remove Hat/Body */
+#customizeContainer > div > div.custPremReq.blackShad > div:nth-child(2) {
+    color: rgb(255 193 178) !important;
 }

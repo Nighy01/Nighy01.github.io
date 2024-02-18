@@ -1,7 +1,14 @@
 /* RedFance - Krunker Main CSS */
 /* By Nighy Riy (Nighy01) */
 
-/* 2024/01/03 */
+/*
+    I don't know when which day Krunker.io will become unusable... 
+    Maybe it still works if Krunker.io still exists...
+    
+    #SaveKrunker #GetRidFRVR
+*/
+
+/* 2024/02/18 */
 
 
 /* Variables ==================================================================================================== */
@@ -5267,6 +5274,16 @@ div#rentServBtn:active {
 /* setSuggest Box Text */
 div.setSugBox.sugBoxSelCus.blackShad {
     text-shadow: none;
+}
+
+/* Class XP Bar V in Profile */
+.clsStatXPBarV {
+    text-shadow: none;
+}
+
+/* Class XP Bar C in Profile */
+.clsStatXPBarC {
+    background-image: linear-gradient(to right,var(--progress-bar-filled),var(--progress-bar-filled));
 }
 
 /* 
