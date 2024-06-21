@@ -5,10 +5,12 @@
     I don't know when which day Krunker.io will become unusable... 
     Maybe it still works if Krunker.io still exists...
     
+    Btw, Sidney got fired from FRVR, and we may not directly decide the future of Krunker.io
+
     #SaveKrunker #GetRidFRVR
 */
 
-/* 2024/02/18 */
+/* 2024/06/21 */
 
 /* (in STG1. Settings) CM1. Mouse Click Icon ================================================================================== */
 
@@ -1918,6 +1920,7 @@ div#streamContainer, div.youNewDiv {
     transform: translateY(330px) translateX(325px);
     transition-duration: 0.2s !important;
     animation: TopRightAd_Animat .5s;
+    display: none !important;
 }
 
 /* Top Left Ad  */
@@ -4955,11 +4958,11 @@ div.shopActionSep, div.shopSubActionSep {
 
 /* New LeaderBoard */
 #centerLeaderDisplay {
-    background: var(--main-bg-color);
+    background: rgba(29, 29, 29, 0.6) !important;
     border: var(--whiteBorder_1) !important;
     box-shadow: var(--blackShadow_2) !important;
     backdrop-filter: blur(var(--LV3_Blur));
-    border-radius: var(--LV4_RC);
+    border-radius: var(--LV4_RC) !important;
     animation: fadein .2s;
     transition-duration: .2s;
 }
@@ -9693,4 +9696,9 @@ div.bundlPopBuyS {
 /* Remove Hat/Body */
 #customizeContainer > div > div.custPremReq.blackShad > div:nth-child(2) {
     color: rgb(255 193 178) !important;
+}
+
+/* buttonP: Register */
+.buttonP, .buttonP:hover, .buttonP:active {
+    border: var(--whiteBorder_1) !important;
 }
