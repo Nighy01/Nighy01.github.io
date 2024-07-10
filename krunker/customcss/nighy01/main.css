@@ -10,7 +10,7 @@
     #SaveKrunker #GetRidFRVR
 */
 
-/* 2024/02/18 */
+/* 2024/07/10 */
 
 
 /* Variables ==================================================================================================== */
@@ -1698,7 +1698,7 @@ div.teamWin0, div.teamWin1 {
 
 /* Premium, Badge Icon */
 #endTable > tbody > tr > td > i, #endTable > tbody > tr > td> img:nth-child(5) {
-    filter: hue-rotate(305deg);
+    filter: hue-rotate(200deg);
 }
 
 /* Battle Pass Part */
