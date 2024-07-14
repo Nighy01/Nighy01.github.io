@@ -10,7 +10,7 @@
     #SaveKrunker #GetRidFRVR
 */
 
-/* 2024/06/21 */
+/* 2024/07/14 */
 
 /* (in STG1. Settings) CM1. Mouse Click Icon ================================================================================== */
 
@@ -5158,17 +5158,19 @@ th, tr {
     filter: grayscale(1) brightness(999) opacity(0.95);
 }
 
-/* Ammo Holder */
+/* Ammo Holder (Reload bar) */
 #ammoHolder {
     background-color: var(--transparentColor) !important;
     box-shadow: none !important;
     border: none !important;
     position: fixed;
     left: calc(50% - 70px);
+    top: calc(100% - 83px);
     border-radius: var(--LV7_RC);
     padding: 0;
+    padding-bottom: 55px;
     bottom: 65px;
-    height: 7px;
+    height: 10px;
     width: 150px;
     transform: unset;
     margin: 0;
@@ -5182,7 +5184,7 @@ th, tr {
 
 /* Ammo Display Background */
 .UIB {
-    background-color: var(--transparentColor);
+    background-color: #var(--transparentColor);
 }
 
 /* Vote Kick Key Text */
