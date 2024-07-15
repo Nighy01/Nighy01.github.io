@@ -10,7 +10,7 @@
     #SaveKrunker #GetRidFRVR
 */
 
-/* 2024/07/14 */
+/* 2024/07/15 */
 
 /* (in STG1. Settings) CM1. Mouse Click Icon ================================================================================== */
 
@@ -5184,7 +5184,7 @@ th, tr {
 
 /* Ammo Display Background */
 .UIB {
-    background-color: #var(--transparentColor);
+    background-color: var(--transparentColor);
 }
 
 /* Vote Kick Key Text */
@@ -7112,7 +7112,7 @@ div.serverHostOp-small {
 
 /* Host Map Ing Checked */
 input:checked+.hostMapImg {
-    filter: brightness(0.9);
+    filter: brightness(0.5) grayscale(0.5);
 }
 
 /* Host Maps Image Hover Button */
