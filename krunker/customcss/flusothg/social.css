@@ -1,16 +1,7 @@
 /* Flusothg - Krunker Hub */
 /* Made by Nighy Riy (Nighy01) */
 
-/*
-    I don't know when which day Krunker.io will become unusable... 
-    Maybe it still works if Krunker.io still exists...
-    
-    Btw, Sidney got fired from FRVR, and we may not directly decide the future of Krunker.io
-
-    #SaveKrunker #GetRidFRVR
-*/
-
-/* 2024/06/21 */
+/* 2025/02/28 */
 
 /* CF1. Configs ================================================================================== */
 
@@ -1083,6 +1074,7 @@ div.button:active {
     height: 60px !important;
     width: 60px !important;
     margin-right: -20px;
+    margin-left: 30px;
     content: url(https://i.imgur.com/x1kHvsK.png) !important;
     background-color: #0000 !important;
 }
@@ -1119,7 +1111,7 @@ div.button:active {
 
 /* Terms Link */
 .terms {
-    transform: translate(60px,0px) !important;
+    transform: translate(50px,0px) !important;
     color: #fff !important;
 }
 
@@ -1267,9 +1259,6 @@ div.button:active {
 /* Settings Hover Icon Button */
 #navTitle > div.material-icons.terms:hover {
     text-decoration: none;
-    transform: translate(65px,0px) !important;
-    font-size: 50px !important;
-    margin-top: 6px !important;
     color: rgb(188 180 243 / 95%) !important;
     transition-duration: .2s;
 }
@@ -1277,9 +1266,6 @@ div.button:active {
 /* Settings Active Icon Button */
 #navTitle > div.material-icons.terms:active {
     text-decoration: none;
-    transform: translate(63px,0px) !important;
-    font-size: 45px !important;
-    margin-top: 9px !important;
     color: rgb(62 58 84 / 95%) !important;
     transition-duration: .2s;
 }

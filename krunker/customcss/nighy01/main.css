@@ -1,17 +1,7 @@
 /* RedFance - Krunker Main CSS */
 /* By Nighy Riy (Nighy01) */
 
-/*
-    I don't know when which day Krunker.io will become unusable... 
-    Maybe it still works if Krunker.io still exists...
-    
-    Btw, Sidney got fired from FRVR, and we may not directly decide the future of Krunker.io
-
-    #SaveKrunker #GetRidFRVR
-*/
-
-/* 2024/07/10 */
-
+/* 2025/01/13 */
 
 /* Variables ==================================================================================================== */
 
@@ -1639,22 +1629,22 @@ div.xpEndBarB, div.xpEndBPBarB {
 }
 
 /* VICTORY/DEFEAT/DRAW In Match Ended */
-.modeStatus { /* White Text Color */
+.modeStatus {
     color: #fff !important;
 }
 
 /* +[Count]KR/NONE Text In Match Ended */
-.fundsVal { /* White Text Color */
+.fundsVal {
     color: rgb(255, 255, 255) !important;
 }
 
 /* Score etc In Match Ended Display */
-.crLabel { /* White Text Color */
+.crLabel {
     color: rgb(255, 255, 255) !important;
 }
 
 /* Count XP Level In Match Ended */
-.xpLvl { /* White Text Color */
+.xpLvl {
     color: rgb(255, 255, 255) !important;
 }
 
@@ -1698,7 +1688,7 @@ div.teamWin0, div.teamWin1 {
 
 /* Premium, Badge Icon */
 #endTable > tbody > tr > td > i, #endTable > tbody > tr > td> img:nth-child(5) {
-    filter: hue-rotate(200deg);
+    filter: hue-rotate(170deg);
 }
 
 /* Battle Pass Part */
@@ -2058,6 +2048,18 @@ input:checked + .slider:hover, input:checked+.advancedSlider:hover {
     background: #0000 !important;
 }
 
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    box-shadow: none;
+    border-radius: 0px 4px 0px 0px;
+    background-color: var(--scrollbar-track) !important;
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar) !important;
+}
+
 /* Import Settings -------------------------------------------------- */
 
 /* Import Settings Popup */
@@ -2151,39 +2153,39 @@ div.spinHistoryStats, div.spinHistoryClear  {
 }
 
 /* Guide Popup Yellow Texts */
-#guidePopup > div > div.guideInfoT > span { /* rgb(248 96 96) Text Color */
+#guidePopup > div > div.guideInfoT > span { 
     color: rgb(248 96 96) !important;
 }
 
 /* Check the Guide Link Button of the New to Krunker? */
-#helpGuidOpn { /* rgb(248 96 96) Text Color */
+#helpGuidOpn { 
     color: rgb(248 96 96) !important;
 }
 
 /* Check the Guide Link Hover Button of the New to Krunker? */
-#helpGuidOpn:hover { /* White Text Color */
+#helpGuidOpn:hover { 
     color: rgb(255 255 255) !important;
 }
 
 /* New to Krunker? Box */
-#youNewDiv { /* -132px Margin Left, -6px Margin Top, transparent Background Color */
+#youNewDiv {
     margin-top: -6px;
     background-color: rgb(255 255 255 / 0%) !important;
     margin-left: -132px !important;
 }
 
 /* [ALT] Text of Guide Popup */
-#guidePopup > div > div > span > span { /* rgb(248 96 96) Text Color */
+#guidePopup > div > div > span > span {
     color: rgb(248 96 96) !important;
 }
 
 /* "Krunker is a Move...etc" Text of Guide Popup */
-.guideInfoT { /* White Text Color */
+.guideInfoT {
     color: rgb(255 255 255) !important;
 }
 
 /* "Ping can be...etc" Text of Guide Popup */
-.guideStepV { /* White Text Color */
+.guideStepV {
     color: rgb(255 255 255) !important;
 }
 
@@ -2423,18 +2425,6 @@ input:checked + .optCheck {
 /* Unknown */
 .sliderM::-webkit-slider-thumb {
     background-color: var(--slider-thumb-color) !important;
-}
-
-/* Unknown */
-::-webkit-scrollbar-track {
-    box-shadow: none;
-    border-radius: 0px;
-    background-color: var(--scrollbar-track) !important;
-}
-
-/* Unknown */
-::-webkit-scrollbar-thumb {
-    background: var(--scrollbar) !important;
 }
 
 /* Unknown */
@@ -4108,12 +4098,12 @@ input, textarea:hover {
 }
 
 /* "Make sure you use Offical Client or Chrome at 60 FPS" In "Network Lag Detected!" Popup */
-#networkLag>div { /* White Text Color */
+#networkLag>div {
     color: rgb(255 255 255) !important;
 }
 
 /* "Network Lag Detected!" Text On Left Top */
-#networkLagHed { /* rgb(248 96 96) Text Color */
+#networkLagHed { 
     color: rgb(248 96 96) !important;
 }
 
@@ -4128,7 +4118,7 @@ input, textarea:hover {
 }
 
 /* "[M1] Change Prop" etc Text */
-#propInstruct > span { /* rgb(248 96 96) Text Color */
+#propInstruct > span { 
     color: rgb(248 96 96) !important;
 }
 
@@ -4171,66 +4161,66 @@ input, textarea:hover {
 }
 
 /* "Count" Text */
-#hiBBbid { /* Black Text Color */
+#hiBBbid {
     color: #000 !important;
 }
 
 /* "KR" Text In Advertise Page */
-#hiBBbid > span { /* Black Text Color */
+#hiBBbid > span {
     color: #000 !important;
 }
 
 /* Estimated Views Text */
-#menuWindow > div:nth-child(11) > span, #menuWindow > div:nth-child(11) > span > span { /* Black Text Color */
+#menuWindow > div:nth-child(11) > span, #menuWindow > div:nth-child(11) > span > span {
     color: #000;
 }
 
 /* "Time Remaining" Text */
-#tiBBbid, #tiBBbid > span { /* Black Text Color */
+#tiBBbid, #tiBBbid > span {
     color: #000 !important;
 }
 
 /* "Minimum Bid" Text */
-#miBBbid, #miBBbid > span { /* Black Text Color */
+#miBBbid, #miBBbid > span {
     color: #000 !important;
 }
 
 /* "Your Last Bid" Text */
-#yBBbid, #yBBbid > span { /* Black Text Color */
+#yBBbid, #yBBbid > span {
     color: #000 !important;
 }
 
 /* "Get Vouchers from certain Streamers & Events" On Purchase KR Tab Page */
-[style="color:rgba(0,0,0,0.3);font-size:19px;margin-bottom:5px;margin-top: 15px;"] { /* Black Text Color */
+[style="color:rgba(0,0,0,0.3);font-size:19px;margin-bottom:5px;margin-top: 15px;"] {
     color: #000 !important;
 }
 
 /* Settings Hover Button In Servers Browser Page */
-#hostMenuBtn:hover { /* No Hover Animation, rgb(164 64 64) Background Color */
+#hostMenuBtn:hover {
     -webkit-transform: scale(1);
     transform: scale(1);
     background-color: rgb(164 64 64) !important;
 }
 
 /* Settings Button In Servers Browser Page */
-#hostMenuBtn { /* rgb(248 96 96) Background Color */
+#hostMenuBtn {
     background-color: rgb(248 96 96) !important;
 }
 
 /* Unread Icon In Inbox Page */
-.unreadBtnM { /* No Text Shadow, Black Texr Color, rgb(194 194 194) Background Color */
+.unreadBtnM {
     text-shadow: none;
     color: rgb(0, 0, 0) !important;
     background-color: rgb(194, 194, 194) !important;
 }
 
 /* "[B] to Reset" Text Message */
-#speedRunReset { /* rgb(0 0 0 / .3 ) Background Color */
+#speedRunReset {
     background-color: rgba(0,0,0,.3) !important;
 }
 
 /* Speed Run Timer */
-#speedRunTimer { /* White Text Color */
+#speedRunTimer {
     color: white !important;
 }
 
@@ -4240,83 +4230,83 @@ input, textarea:hover {
 }
 
 /* Speed Run Box */
-#speedRunBox { /* rgb(0 0 0 / .3 ) Background Color */
+#speedRunBox {
     background-color: rgba(0,0,0,.3) !important;
 }
 
 /* "No Score Zones" Text */
-#speedRunList > div { /* White Text Color */
+#speedRunList > div {
     color: #fff !important;
 }
 
 /* "By [Default/Req lvl [Count]/Krunker.io... etc]" Text */
-.itemOwn { /* White Color */
+.itemOwn {
     color: rgb(255, 255, 255) !important;
 }
 
 /* "Season [1/2/3/4... etc]" Text */
-.itemSea { /* White Color */
+.itemSea {
     color: rgb(255, 255, 255) !important;
 }
 
 /* "KR" Text In Shop Page */
-#menuWindow > div.limitedSplit > div > div.saleTag > span, #limitedList > div > div.saleTag > span { /* Black Text Color */
+#menuWindow > div.limitedSplit > div > div.saleTag > span, #limitedList > div > div.saleTag > span {
     color: #000 !important;
 }
 
 /* Limited Of Arrow Button */
-.limitedArrowH { /* rgb(113 113 113 / 80%) Background Color */
+.limitedArrowH {
     background-color: rgb(113 113 113 / 80%) !important;
 }
 
 /* Items Vaulted in [Days]d [Hours]h [Minutes]m Bar */
-#limitedBarProg { /* rgb(248 96 96) Background Color */
+#limitedBarProg {
     background-color: rgb(248 96 96) !important;
 }
 
 /* Limited Card */
-.limitedSplit .skinCard, #limitedList .skinCard { /* No Background Image */
+.limitedSplit .skinCard, #limitedList .skinCard {
     background-image: none !important;
 }
 
 /* [Weapon/Skin...etc] Text */
-#itemPurcPop > div.itemViewName { /* White Text Color */
+#itemPurcPop > div.itemViewName {
     color: white !important;
 }
 
 /* View/Purchase Weapon/Skin...etc Popup */
-#itemViewPop, #itemPurcPop { /* No Background Image, rgb(156 156 156 / 97%) Background Color */
+#itemViewPop, #itemPurcPop {
     background-image: none !important;
     background-color: rgb(156 156 156 / 97%) !important;
 }
 
 /* Limited Of Arrow Hover Button */
-.limitedArrowH:hover { /* rgb(59 59 59 / 80%) Background Color */
+.limitedArrowH:hover {
     background-color: rgb(59 59 59 / 80%) !important;
 }
 
 /* Limited Of Arrow Hover Button */
-.limitedArrowH:active { /* rgb(40 40 40 / 80%) Background Color */
+.limitedArrowH:active {
     background-color: rgb(40 40 40 / 80%) !important;
 }
 
 /* Limited Items Card Image */
-.limitedSplit .skinCard img, #limitedList .skinCard img, .skinImg { /* No Animation */
+.limitedSplit .skinCard img, #limitedList .skinCard img, .skinImg {
     animation: none !important;
 }
 
 /* [VSS, Dummy Grenade...etc] Text */
-#menuWindow > div.limitedSplit > div { /* White Text Color */
+#menuWindow > div.limitedSplit > div {
     color: #fff !important;
 }
 
 /* Try your luck and spin for a chance to win some new skins! */
-[style="color:rgba(0,0,0,0.3);"] { /* Black Text Color */
+[style="color:rgba(0,0,0,0.3);"] {
     color: #000 !important;
 }
 
 /* Spin Cards */
-.shopCard, .shopCard:hover { /* No Hover Animation */
+.shopCard, .shopCard:hover {
     transition: none !important;
     background-size: 101% !important;
 }
@@ -4351,7 +4341,7 @@ input, textarea:hover {
 }
 
 /* Play Arrow */
-#bigMFeatPBtn > span{
+#bigMFeatPBtn > span {
     color: white !important;
 }
 
@@ -4361,7 +4351,7 @@ input, textarea:hover {
 }
 
 /* Select a Server Type */
-.serverHostOp { /* White Text Color */
+.serverHostOp {
     color: #fff !important;
 }
 
@@ -4391,7 +4381,7 @@ input, textarea:hover {
 }
 
 /* Team 1/2 Link */
-#teamLink1, #teamLink2 { /* Black Text Color */
+#teamLink1, #teamLink2 {
     color: black !important;
 }
 
@@ -4419,7 +4409,7 @@ input, textarea:hover {
 }
 
 /* K/D Count */
-#killsVal, #deathsVal, #streakVal, #myScoreVal, #kdVal { /* White Text Color */
+#killsVal, #deathsVal, #streakVal, #myScoreVal, #kdVal {
     color: rgba(255,255,255) !important;
 }
 
