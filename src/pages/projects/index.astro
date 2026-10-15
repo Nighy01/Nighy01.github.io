@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Banner from '../../components/Banner.astro';
+---
+<Layout title="Projects - Nighy Riy" active="projects">
+  <h1 class="page-title">Projects</h1>
+
+  <div class="cards">
+    <Banner
+      title="Flusothg"
+      image="/res/img/FlusothgNotionCam.png"
+      position="right center"
+    fit="auto 105%"
+    bg="rgb(27 28 33)"
+    fade
+      href="/projects/krunkercss/flusothg/"
+    />
+    <Banner
+      variant="redfance"
+      title="RedFance"
+      image="/res/img/RedFance.png"
+      position="center 35%"
+      href="/projects/krunkercss/redfance/"
+    >
+      <a class="btn btn--game" href="/projects/krunkercss/redfance/">Learn More</a>
+    </Banner>
+  </div>
+</Layout>

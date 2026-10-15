@@ -1,0 +1,37 @@
+---
+interface Props {
+  active?: 'home' | 'projects' | 'contact';
+}
+const { active } = Astro.props;
+
+const links = [
+  { key: 'home', label: 'Home', href: '/' },
+  { key: 'projects', label: 'Projects', href: '/projects/' },
+  { key: 'contact', label: 'Contact', href: '/contact/' },
+] as const;
+---
+<nav class="nav" aria-label="Main">
+  <ul class="nav__links">
+    {links.map(({ key, label, href }) => (
+      <li>
+        <a
+          class:list={['nav__item', { 'nav__item--active': active === key }]}
+          href={href}
+          aria-current={active === key ? 'page' : undefined}
+        >{label}</a>
+      </li>
+    ))}
+  </ul>
+  <div class="nav__tools">
+    <button class="nav__item nav__icon" type="button" data-action="toggle-theme" aria-label="Toggle dark mode">
+      <img src="/res/img/DLM.png" alt="" />
+    </button>
+    <a
+      class="nav__item nav__icon"
+      href="https://github.com/Nighy01/Nighy01.github.io"
+      target="_blank"
+      rel="noopener"
+      aria-label="GitHub"
+    ><img src="/res/img/Github.png" alt="" /></a>
+  </div>
+</nav>

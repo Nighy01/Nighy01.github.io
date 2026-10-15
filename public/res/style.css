@@ -1,0 +1,267 @@
+/* ---------- Fonts ---------- */
+@font-face {
+    font-family: gamefont;
+    src: url('/projects/krunkercss/redfance/oldkrunkerfont.ttf');
+}
+
+/* ---------- Tokens ---------- */
+:root {
+    --bg: #c7c7d0;
+    --nav-bg: rgb(255 255 255 / 60%);
+    --nav-text: rgb(40 40 40 / 80%);
+    --text: rgb(40 40 40 / 90%);
+    --text-muted: rgb(40 40 40 / 80%);
+    --icon-brightness: 0;
+    --radius: 10px;
+    --content-width: 1200px;
+    --gutter: 16px;
+}
+
+:root.dark {
+    --bg: #131317;
+    --nav-bg: rgb(53 53 53 / 60%);
+    --nav-text: rgb(255 255 255 / 80%);
+    --text: rgb(255 255 255 / 90%);
+    --text-muted: rgb(255 255 255 / 80%);
+    --icon-brightness: 10;
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: min(var(--content-width), 100% - 2 * var(--gutter));
+    margin: 0 auto;
+    padding: 96px 0 48px;
+}
+
+.page-title {
+    align-self: flex-start;
+    margin: 0;
+    font-size: clamp(32px, 6vw, 50px);
+}
+
+/* ---------- Navbar ---------- */
+.nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px;
+    background: var(--nav-bg);
+    box-shadow: 0 0 50px rgb(0 0 0 / 30%);
+    backdrop-filter: blur(10px);
+}
+
+.nav__links, .nav__tools {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav__item {
+    display: block;
+    margin: 6px;
+    padding: 10px 16px;
+    font: inherit;
+    font-size: 15px;
+    color: var(--nav-text);
+    background: transparent;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background .15s;
+    -webkit-user-drag: none;
+}
+
+.nav__item:hover { background: rgb(154 154 154 / 30%); }
+
+.nav__item--active, .nav__item--active:hover { background: rgb(105 105 105 / 40%); }
+
+.nav__icon { padding: 8px 12px; line-height: 0; }
+
+.nav__icon img {
+    height: 28px;
+    filter: brightness(var(--icon-brightness)) opacity(0.8);
+    -webkit-user-drag: none;
+}
+
+/* ---------- Banner ---------- */
+.banner {
+    --banner-overlay: linear-gradient(90deg, rgb(0 0 0 / 78%) 0%, rgb(0 0 0 / 55%) 50%, rgb(255 255 255 / 12%) 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    min-height: 300px;
+    padding: 40px clamp(24px, 6vw, 80px);
+    color: rgb(255 255 255 / 90%);
+    text-align: left;
+    background: var(--banner-overlay), var(--banner-image) var(--banner-pos, center) / var(--banner-fit, cover) no-repeat var(--banner-bg, #1b1b1f);
+    border-radius: var(--radius);
+}
+
+.banner--lg { min-height: 450px; }
+
+/* Image is anchored right at a fixed height; fade its left edge into --banner-bg. */
+.banner--fade {
+    --fade-from: 430px;
+    --fade-to: 590px;
+    --banner-overlay:
+        linear-gradient(to left, transparent var(--fade-from), var(--banner-bg) var(--fade-to)),
+        linear-gradient(90deg, rgb(0 0 0 / 30%), rgb(255 255 255 / 10%));
+}
+
+.banner--fade.banner--lg { --fade-from: 690px; --fade-to: 890px; }
+
+.banner__title {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: clamp(30px, 5vw, 50px);
+}
+
+.banner__text {
+    max-width: 420px;
+    margin: 12px 0 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: clamp(16px, 2vw, 21px);
+    color: rgb(255 255 255 / 70%);
+}
+
+.banner__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.banner__actions:empty { display: none; }
+
+/* Stretched link: makes the whole card clickable; buttons sit above it. */
+.banner__link {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    transition: background .15s;
+}
+
+.banner__link:hover { background: rgb(255 255 255 / 8%); }
+
+.banner__actions > * { position: relative; z-index: 1; }
+
+.banner--redfance {
+    --banner-overlay: linear-gradient(89.95deg, rgb(100 100 100 / 25%) 39.6%, rgb(248 96 96 / 30%) 99.96%);
+    font-family: gamefont, sans-serif;
+    border-radius: 4px;
+    box-shadow: 0 10px 0 rgb(164 64 64 / 60%);
+}
+
+.banner--redfance .banner__title,
+.banner--redfance .banner__text { font-family: inherit; }
+
+.banner--redfance .banner__title { font-size: clamp(28px, 4vw, 40px); }
+.banner--redfance .banner__text { font-size: clamp(14px, 1.6vw, 17px); }
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    font: inherit;
+    border-radius: var(--radius);
+    transition: all .15s;
+    -webkit-user-drag: none;
+}
+
+.btn--light { color: rgb(0 0 0 / 90%); background: rgb(255 255 255 / 90%); }
+.btn--light:hover { filter: brightness(0.7); }
+
+.btn--text { color: rgb(255 255 255 / 90%); }
+.btn--text:hover { text-decoration: underline; }
+
+.btn--game {
+    padding: 12px 16px;
+    font-family: gamefont, sans-serif;
+    color: #fff;
+    background: rgb(248 96 96);
+    border-radius: 4px;
+    box-shadow: inset 0 -7px 0 0 rgb(164 64 64);
+    text-shadow:
+        -1px -1px 0 #202020, 1px -1px 0 #202020, -1px 1px 0 #202020, 1px 1px 0 #202020,
+        -2px -2px 0 #202020, 2px -2px 0 #202020, -2px 2px 0 #202020, 2px 2px 0 #202020,
+        -3px -3px 0 #202020, 3px -3px 0 #202020, -3px 3px 0 #202020, 3px 3px 0 #202020;
+    transition: all .1s ease;
+}
+
+.btn--game:hover {
+    background: #fff;
+    box-shadow: inset 0 -7px 0 0 rgb(179 179 179);
+    transform: scale(0.95);
+}
+
+.btn--game:active {
+    background: rgb(172 172 172);
+    box-shadow: inset 0 -7px 0 0 rgb(125 125 125);
+    transform: scale(0.9);
+}
+
+.sep { font-size: 25px; color: rgb(255 255 255 / 90%); }
+
+.icon-link { display: inline-flex; padding: 8px; transition: opacity .15s; }
+.icon-link:hover { opacity: 0.6; }
+.icon-link img { width: 25px; height: 25px; }
+
+/* ---------- Pages ---------- */
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.contact-mail { align-self: flex-start; margin: 0; font-size: clamp(18px, 3vw, 30px); color: var(--text-muted); }
+.contact-mail a:hover { text-decoration: underline; }
+
+.screenshot { width: 100%; height: auto; border-radius: var(--radius); }
+
+/* RedFance detail page */
+.theme-redfance {
+    color: #fff;
+    background:
+        linear-gradient(89.95deg, rgb(100 100 100 / 25%) 39.6%, rgb(248 96 96 / 25%) 99.96%),
+        url('/res/img/RedFance.png') center -90px / cover fixed;
+    font-family: gamefont, sans-serif;
+}
+
+.theme-redfance .page { min-height: 100vh; justify-content: center; text-align: center; }
+.theme-redfance .nav { --nav-text: rgb(255 255 255 / 80%); }
+
+.game-intro { display: flex; flex-direction: column; align-items: center; gap: 16px; font-size: 18px; }
+.game-intro h1 { margin: 0; font-size: clamp(32px, 5vw, 40px); }
+.game-intro p { margin: 0; font-size: 17px; color: rgb(255 255 255 / 70%); }
+
+@media (max-width: 600px) {
+    .sep { display: none; }
+}

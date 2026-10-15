@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Banner from '../components/Banner.astro';
+---
+<Layout title="Nighy Riy" active="home">
+  <Banner
+    size="lg"
+    title="For Nighy Riy's Projects"
+    description="Hi! we have some cool projects to you!"
+    image="/res/img/AboutNighyRiy.png"
+  />
+
+  <div class="cards">
+    <Banner
+      title="Flusothg"
+      description="It can brings you better visual on Krunker CSS"
+      image="/res/img/FlusothgNotionCam.png"
+      position="right center"
+    fit="auto 105%"
+    bg="rgb(27 28 33)"
+    fade
+    >
+      <a class="btn btn--light" href="/projects/krunkercss/flusothg/Flusothg.zip">Download</a>
+      <a class="btn btn--text" href="/projects/krunkercss/flusothg/">Learn more</a>
+      <span class="sep">|</span>
+      <a class="icon-link" href="https://nighyriy01.notion.site/Flusothg-279c48678ddb4af99ba0d1c016d874f6" aria-label="Notion">
+        <img src="/res/img/notionLogo.png" alt="" />
+      </a>
+    </Banner>
+
+    <Banner
+      variant="redfance"
+      title="RedFance"
+      description="a Legacy is back..."
+      image="/res/img/RedFance.png"
+      position="center 35%"
+    >
+      <a class="btn btn--game" href="/projects/krunkercss/redfance/RedFance.zip">Download</a>
+      <a class="btn btn--game" href="/projects/krunkercss/redfance/">Learn more</a>
+    </Banner>
+  </div>
+</Layout>

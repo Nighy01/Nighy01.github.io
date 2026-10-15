@@ -1,0 +1,24 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  image: string;
+  variant?: 'default' | 'redfance';
+  size?: 'lg' | 'md';
+  href?: string;
+  position?: string;
+  fit?: string;
+  bg?: string;
+  fade?: boolean;
+}
+const { title, description, image, variant = 'default', size = 'md', href, position, fit, bg, fade } = Astro.props;
+const style = `--banner-image: url(${image});` + (position ? ` --banner-pos: ${position};` : '') +
+  (fit ? ` --banner-fit: ${fit};` : '') +
+  (bg ? ` --banner-bg: ${bg};` : '');
+---
+<section class:list={['banner', `banner--${variant}`, `banner--${size}`, { 'banner--fade': fade }]} style={style}>
+  <h1 class="banner__title">{title}</h1>
+  {description && <p class="banner__text">{description}</p>}
+  <div class="banner__actions"><slot /></div>
+  {href && <a class="banner__link" href={href} aria-label={title}></a>}
+</section>
