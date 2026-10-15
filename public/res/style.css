@@ -252,6 +252,7 @@ a { color: inherit; text-decoration: none; }
     background:
         linear-gradient(89.95deg, rgb(100 100 100 / 25%) 39.6%, rgb(248 96 96 / 25%) 99.96%),
         url('/res/img/RedFance.png') center -90px / cover fixed;
+    background-color: #5a3b3b;
     font-family: gamefont, sans-serif;
 }
 
@@ -264,4 +265,42 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 600px) {
     .sep { display: none; }
+}
+
+@media (max-width: 600px) {
+    :root { --gutter: 12px; }
+
+    .nav { padding: 0 2px; }
+    .nav__item { margin: 4px 2px; padding: 8px 10px; font-size: 14px; }
+    .nav__icon { padding: 6px 8px; }
+    .nav__icon img { height: 24px; }
+
+    .page { padding-top: 80px; }
+
+    .banner { min-height: 240px; padding: 28px 20px; }
+    .banner--lg { min-height: 280px; }
+
+    /* Text sits over screenshots on narrow screens: darken for legibility. */
+    .banner--fade {
+        --banner-overlay: linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 / 60%));
+        background-size: auto, cover !important;
+        background-position: center !important;
+    }
+    .banner--redfance { --banner-overlay: linear-gradient(rgb(0 0 0 / 45%), rgb(0 0 0 / 45%)); }
+
+    .banner__text { max-width: none; }
+
+    /* iOS ignores background-attachment: fixed; paint the image on a fixed layer instead. */
+    .theme-redfance {
+        background: #5a3b3b;
+    }
+    .theme-redfance::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background:
+            linear-gradient(89.95deg, rgb(100 100 100 / 25%) 39.6%, rgb(248 96 96 / 25%) 99.96%),
+            url('/res/img/RedFance.png') center / cover no-repeat;
+    }
 }
